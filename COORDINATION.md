@@ -17,9 +17,9 @@ Session ID: `session-3f9a2c41` (this session).
 - Files: README.md only ("ChinaFun1"). No existing data, docs, or site.
 - Tools available: bash/git/gh, web_search, fetch_page, write/edit/read tools. Outbound hosts: github.com, registry.npmjs.org, pypi.org, etc.
 - Verification policy: every table row needs a source link; unverifiable values left blank + flagged in Flagged-for-Review page.
-| T2 | Data: hotels (price, location, amenities, private bath, queen bed) + Michelin density within 1h subway/bus | in progress | session-3f9a2c41 | data/hotels.md |
-| T3 | Data: Michelin restaurants (star vs listed, costs for 2 adults) | in progress | session-3f9a2c41 | data/restaurants.md |
-| T4 | Data: activities with days open/hours/exceptions + links | in progress | session-3f9a2c41 | data/activities.md |
+| T2 | Data: hotels (price, location, amenities, private bath, queen bed) + Michelin density within 1h subway/bus | done | session-3f9a2c41 | data/hotels.md |
+| T3 | Data: Michelin restaurants (star vs listed, costs for 2 adults) | done | session-3f9a2c41 | data/restaurants.md |
+| T4 | Data: activities with days open/hours/exceptions + links | done | session-3f9a2c41 | data/activities.md |
 | T5 | Site: landing page | unclaimed | — | site/index.html |
 | T6 | Site: hotels subpage + table | unclaimed | — | site/hotels.html |
 | T7 | Site: restaurants subpage + table | unclaimed | — | site/restaurants.html |
