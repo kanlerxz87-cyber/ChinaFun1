@@ -392,7 +392,7 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 | I2 | Cross-plan decision dashboard (landing + subpages) | done | `integration-2027/index.html`, `assets/**`, `tools/**` | Every cross-plan number traced to a source already logged by its owning plan; no new estimate |
 | I3 | Verified social-review index for listed venues | done | `integration-2027/data/social.json` | Only platform pages actually fetched and read are entered; search-result URLs are never counted as evidence |
 | I4 | Consolidated questions / suggestions / flags | done | `integration-2027/data/*.json` | Inherited flags keep their original source links; new blanks flagged explicitly |
-| I5 | Build, link check, documentation | done | `integration-2027/`, README section | Zero broken local links; generator output diffed against data |
+| I5 | Build, link check, documentation | done | `integration-2027/`, its local README | Zero broken local links; generator output diffed against data |
 | I6 | Integration + GitHub Pages publish | in progress | `main` via PR | Additive subtree only; root landing untouched; merged site pages must return HTTP 200 |
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here. Requests to change another session's data must be logged here, not applied.
@@ -404,7 +404,7 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 
 ### Verification performed by `815c7943`
 
-- 19 YouTube watch pages were fetched and read; 19 entered the social index, 2 were recorded as excluded on `sources.html` (a private video and an unidentifiable branch).
+- 19 YouTube watch pages were fetched, read and entered in the social index; 2 more were read and logged as exclusions on `sources.html` (a private video and an unidentifiable branch).
 - Official MICHELIN King's Joy entry and the official Shanghai Museum homepage were fetched and read; the museum's current hours were used as a cross-check against the inherited Shanghai plan.
 - `python3 integration-2027/tools/build.py` regenerates 7 pages; `python3 integration-2027/tools/check.py` reports 0 broken local links, 0 empty hrefs, and a source field on every data row.
 - Every price row links to a dated Booking.com query recorded by its owning session; none was re-quoted in this pass.
