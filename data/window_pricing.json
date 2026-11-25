@@ -1,0 +1,77 @@
+[
+ {
+  "window_id": "W1",
+  "checkin": "2027-02-15",
+  "checkout": "2027-02-22",
+  "total_usd": 1114,
+  "per_night_usd": 159,
+  "note": "Lowest publicly bookable rate, Superior Room (1 double or 2 twins). Junior Suite (1 queen) $1,116.",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World, 15–22 Feb 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "type": "booking",
+   "note": "",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "window_id": "W2",
+  "checkin": "2027-02-22",
+  "checkout": "2027-03-01",
+  "total_usd": 1295,
+  "per_night_usd": 185,
+  "note": "Lowest publicly bookable rate (Genius member price shown by Booking was $1,165 — excluded).",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World, 22 Feb–1 Mar 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD",
+   "type": "booking",
+   "note": "",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "window_id": "W3",
+  "checkin": "2027-03-01",
+  "checkout": "2027-03-08",
+  "total_usd": 1485,
+  "per_night_usd": 212,
+  "note": "Lowest publicly bookable rate (Genius member price $1,337 excluded).",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World, 1–8 Mar 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD",
+   "type": "booking",
+   "note": "",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "window_id": "W4",
+  "checkin": "2027-03-08",
+  "checkout": "2027-03-15",
+  "total_usd": 1560,
+  "per_night_usd": 223,
+  "note": "Lowest publicly bookable rate; Junior Suite $1,526.",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World, 8–15 Mar 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD",
+   "type": "booking",
+   "note": "",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "window_id": "W5",
+  "checkin": "2027-03-15",
+  "checkout": "2027-03-22",
+  "total_usd": 1565,
+  "per_night_usd": 224,
+  "note": "Lowest publicly bookable rate; Junior Suite $1,531.",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World, 15–22 Mar 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "type": "booking",
+   "note": "",
+   "checked": "2026-11-25"
+  }
+ }
+]

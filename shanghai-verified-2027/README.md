@@ -3,10 +3,13 @@
 A source-verified trip plan for **2 adults, 7–14 nights, Shanghai**, inside the window **15 Feb – 23 Mar 2027**
 (preferred start 15 Feb 2027).
 
-**Live site:** https://kanlerxz87-cyber.github.io/ChinaFun1/
-(GitHub Pages, already enabled on `main` at the root path. Pages publish when this branch is merged.)
+**Live site:** https://kanlerxz87-cyber.github.io/ChinaFun1/shanghai-verified-2027/
+(GitHub Pages serves `main` from the repository root, so this plan lives at its own path. Three other plans are
+published alongside it — Beijing at `/`, and two further Shanghai studies at `/docs/` and `/shanghai-2027/`.
+See the repository [README](../README.md) for the comparison.)
 
-Local preview: `python3 -m http.server 8080 --bind 0.0.0.0` then open `/`.
+Local preview from the repository root: `python3 -m http.server 8080 --bind 0.0.0.0` then open
+`/shanghai-verified-2027/`.
 
 ---
 

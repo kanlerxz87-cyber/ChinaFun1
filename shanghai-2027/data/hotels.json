@@ -1,0 +1,348 @@
+[
+  {
+    "id": "H01",
+    "name": "Radisson Blu Hotel Shanghai New World",
+    "area": "Huangpu — People's Square",
+    "address": "88 Nanjing West Road, Huangpu, 200003 Shanghai",
+    "lat": 31.2364079,
+    "lon": 121.4684659,
+    "geo_source": "OpenStreetMap via Photon geocoder (osm_type R / 17096526)",
+    "booking_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": 9.2,
+    "review_count": 10162,
+    "location_score": 9.8,
+    "room_verified": "Superior Room — 1 queen bed available, private bathroom with bath + shower, 323 ft²",
+    "bed_requirement": "PASS — queen bed selectable",
+    "bathroom_requirement": "PASS — private/attached bathroom stated",
+    "amenities": "Indoor swimming pool, fitness centre, sauna, massage, private parking, free WiFi, 5 dining outlets, Sky Dome Bar (47F). NOTE: spa listed as temporarily closed on the Booking.com page captured 2026-11-25.",
+    "transit_note": "Booking.com: ~1-minute walk from People's Square Subway Station (Lines 1, 2 and 8).",
+    "transit_source": "Booking.com property description",
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 922,
+        "per_night_usd": 132,
+        "room": "Superior Room (queen option)",
+        "terms": "Free cancellation, no prepayment. $922 requires free Genius sign-in; list price without sign-in is $1,025.",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-18 → 2027-02-25",
+        "nights": 7,
+        "total_usd": 1013,
+        "per_night_usd": 132,
+        "room": "Superior Room (queen option)",
+        "terms": "Free cancellation, no prepayment. $1,013 requires Genius sign-in; list price $1,125.20.",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-22 → 2027-03-01",
+        "nights": 7,
+        "total_usd": 1191,
+        "per_night_usd": 155,
+        "room": "Superior Room (queen option)",
+        "terms": "Free cancellation, no prepayment",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-03-01 → 2027-03-08",
+        "nights": 7,
+        "total_usd": 1367,
+        "per_night_usd": 177,
+        "room": "Superior Room (queen option)",
+        "terms": "Free cancellation, no prepayment",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-03-15 → 2027-03-22",
+        "nights": 7,
+        "total_usd": 1440,
+        "per_night_usd": 187,
+        "room": "Superior Room (queen option)",
+        "terms": "Free cancellation, no prepayment",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": 922,
+    "cheapest_window": "2027-02-15 → 2027-02-22",
+    "price_status": "verified (Booking.com, USD, 7 nights, 2 adults) — dynamic, re-check before booking",
+    "notes": "Best value of the verified shortlist. Prices shown exclude 6.6% VAT and 10% service charge."
+  },
+  {
+    "id": "H02",
+    "name": "Grand Central Hotel Shanghai",
+    "area": "Huangpu — Nanjing Road / The Bund",
+    "address": "505 Jiujiang Road, Huangpu, 200002 Shanghai",
+    "lat": 31.2370564,
+    "lon": 121.4769667,
+    "geo_source": "OpenStreetMap via Photon geocoder (osm_type W / 137191549)",
+    "booking_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": null,
+    "review_count": null,
+    "location_score": null,
+    "room_verified": "Deluxe Business Double Room — 1 king bed, private bathroom with bath, shower and bidet, 377 ft²",
+    "bed_requirement": "PASS — king bed (larger than queen)",
+    "bathroom_requirement": "PASS — private/attached bathroom stated",
+    "amenities": "City view rooms, soundproofing, minibar. Full amenity list not captured — see Booking.com page.",
+    "transit_note": "Not captured from an official source — flag for verification.",
+    "transit_source": null,
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 1007,
+        "per_night_usd": 144,
+        "room": "Deluxe Business Double (king)",
+        "terms": "Free cancellation before 2027-02-14; pay property before arrival",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 1175,
+        "per_night_usd": 168,
+        "room": "Deluxe Business Double (king), breakfast included",
+        "terms": "Free cancellation before 2027-02-14",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": 1007,
+    "cheapest_window": "2027-02-15 → 2027-02-22",
+    "price_status": "verified (Booking.com, USD, 7 nights, 2 adults) — dynamic, re-check before booking",
+    "notes": "Breakfast rated 7.6 by guests — lowest of the shortlist. Only one date window captured."
+  },
+  {
+    "id": "H03",
+    "name": "Pullman Shanghai Jing'an",
+    "area": "Jing'an",
+    "address": "Jing'an, Shanghai (Booking.com listing)",
+    "lat": null,
+    "lon": null,
+    "geo_source": null,
+    "booking_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": 8.9,
+    "review_count": 1097,
+    "location_score": null,
+    "room_verified": "Superior King Room — 1 king bed, private bathroom with shower, 334 ft²",
+    "bed_requirement": "PASS — king bed",
+    "bathroom_requirement": "PASS — private/attached bathroom stated",
+    "amenities": "Sustainability certification, 8.9 guest score. Full amenity list not captured — see Booking.com page.",
+    "transit_note": "Booking.com tags the property 'Subway Access' and lists it 1.6 miles from downtown. Specific station walking time not published.",
+    "transit_source": "Booking.com search result label",
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 708,
+        "per_night_usd": 92,
+        "room": "Superior King Room",
+        "terms": "Free cancellation",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 815,
+        "per_night_usd": 106,
+        "room": "Superior King Room, breakfast included",
+        "terms": "Free cancellation before 6:00 PM 2027-02-14",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": 708,
+    "cheapest_window": "2027-02-15 → 2027-02-22",
+    "price_status": "verified (Booking.com, USD, 7 nights, 2 adults) — dynamic, re-check before booking",
+    "notes": "Cheapest verified 7-night total with a king bed and private bathroom. Coordinates not verified, so not included in the distance model."
+  },
+  {
+    "id": "H04",
+    "name": "The Langham, Shanghai, Xintiandi",
+    "area": "Huangpu — Xintiandi",
+    "address": "99 Madang Road, Huangpu, 200021 Shanghai",
+    "lat": 31.2237257,
+    "lon": 121.4698926,
+    "geo_source": "OpenStreetMap via Photon geocoder (osm_type W / 372180396)",
+    "booking_url": "https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": 9.1,
+    "review_count": 1296,
+    "location_score": null,
+    "room_verified": null,
+    "bed_requirement": "UNVERIFIED — room inventory not captured",
+    "bathroom_requirement": "UNVERIFIED — room inventory not captured",
+    "amenities": "Spa and wellness centre, heated pool, sauna, sustainability certification. Houses T'ang Court (2★) on the 5th floor.",
+    "transit_note": "Booking.com tags 'Subway Access'. No official walking time captured.",
+    "transit_source": "Booking.com search result label",
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": null,
+        "per_night_usd": null,
+        "room": "—",
+        "terms": "UNAVAILABLE on Booking.com for these dates",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-13 → 2027-02-20",
+        "nights": 7,
+        "total_usd": null,
+        "per_night_usd": null,
+        "room": "—",
+        "terms": "Booking.com showed 4–6 night alternatives from $932.96 (4 nights) / $1,176 (5 nights) / $1,419.04 (6 nights). No 7-night quote available.",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": null,
+    "cheapest_window": null,
+    "price_status": "UNVERIFIED — no 7-night availability for the preferred window",
+    "notes": "Strategically strong (contains a 2★ restaurant) but cannot be priced for a 7-night stay on the preferred dates."
+  },
+  {
+    "id": "H05",
+    "name": "Waldorf Astoria Shanghai on the Bund",
+    "area": "Huangpu — The Bund",
+    "address": "No. 2 East Zhongshan No. 1 Road, Huangpu, 200002 Shanghai",
+    "lat": 31.2357915,
+    "lon": 121.4865459,
+    "geo_source": "OpenStreetMap via Photon geocoder (osm_type N / 14321547002)",
+    "booking_url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": null,
+    "review_count": null,
+    "location_score": 9.7,
+    "room_verified": "Deluxe King Room — 1 king bed, marble bathroom with separate bathtub and shower, 538 ft²",
+    "bed_requirement": "PASS — king bed",
+    "bathroom_requirement": "PASS — private marble bathroom with separate tub and shower",
+    "amenities": "Indoor heated pool, fitness centre, spa, Long Bar, free WiFi, parking.",
+    "transit_note": "Booking.com: 5-minute drive to Nanjing Road or Yu Garden, 10-minute drive to People's Square. No subway walking time published.",
+    "transit_source": "Booking.com property description",
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 2361,
+        "per_night_usd": 307,
+        "room": "Deluxe King Room",
+        "terms": "NON-REFUNDABLE, pay online",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 2638,
+        "per_night_usd": 343,
+        "room": "Deluxe King, breakfast included",
+        "terms": "NON-REFUNDABLE, pay online",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 2951,
+        "per_night_usd": 383,
+        "room": "Deluxe King Room",
+        "terms": "Free cancellation before 2027-02-15; no prepayment",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 3298,
+        "per_night_usd": 428,
+        "room": "Deluxe King, breakfast included",
+        "terms": "Free cancellation before 2027-02-15; no prepayment",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": 2361,
+    "cheapest_window": "2027-02-15 → 2027-02-22",
+    "price_status": "verified (Booking.com, USD, 7 nights, 2 adults) — dynamic, re-check before booking",
+    "notes": "Cheapest rate is non-refundable. Refundable rate is $2,951 for the same room."
+  },
+  {
+    "id": "H06",
+    "name": "The Peninsula Shanghai",
+    "area": "Huangpu — The Bund",
+    "address": "No. 32 East Zhongshan No. 1 Road, Huangpu, 200002 Shanghai",
+    "lat": 31.2432569,
+    "lon": 121.4847583,
+    "geo_source": "OpenStreetMap via Photon geocoder (osm_type W / 177929887)",
+    "booking_url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": null,
+    "review_count": null,
+    "location_score": 9.7,
+    "room_verified": "Deluxe Double or Twin Room — 1 king bed, private bathroom with spa bathtub, separate shower and TV, 581 ft²",
+    "bed_requirement": "PASS — king bed",
+    "bathroom_requirement": "PASS — private bathroom with spa bathtub and separate shower",
+    "amenities": "Indoor pool, spa, sauna, massage, fitness centre, free parking, free WiFi. Houses Yi Long Court (1★) and Sir Elly's (MICHELIN Selected).",
+    "transit_note": "Booking.com: 50-minute drive from Pudong Airport, 30-minute drive from Hongqiao Airport. No subway walking time published.",
+    "transit_source": "Booking.com property description",
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 3351,
+        "per_night_usd": 435,
+        "room": "Deluxe Double or Twin (king)",
+        "terms": "Free cancellation before 2027-02-14; pay property before arrival",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": 3697,
+        "per_night_usd": 480,
+        "room": "Deluxe Double or Twin, breakfast included",
+        "terms": "Free cancellation before 2027-02-14; pay property before arrival",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": 3351,
+    "cheapest_window": "2027-02-15 → 2027-02-22",
+    "price_status": "verified (Booking.com, USD, 7 nights, 2 adults) — dynamic, re-check before booking",
+    "notes": "Highest price of the shortlist. The 1★ Yi Long Court is inside the hotel, so travel time to it is zero."
+  },
+  {
+    "id": "H07",
+    "name": "Capella Shanghai, Jian Ye Li",
+    "area": "Xuhui — Huaihai Road",
+    "address": "Xuhui, Shanghai (Booking.com listing)",
+    "lat": null,
+    "lon": null,
+    "geo_source": null,
+    "booking_url": "https://www.booking.com/hotel/cn/shang-hai-jian-ye-li-jia-pei-le-jiu-dian-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&group_children=0&selected_currency=USD",
+    "review_score": 9.6,
+    "review_count": 125,
+    "location_score": null,
+    "room_verified": null,
+    "bed_requirement": "UNVERIFIED — room inventory not captured",
+    "bathroom_requirement": "UNVERIFIED — room inventory not captured",
+    "amenities": "Spa and wellness centre, hot tub, bicycle rental, sustainability certification.",
+    "transit_note": "Booking.com tags 'Subway Access'. No official walking time captured.",
+    "transit_source": "Booking.com search result label",
+    "prices": [
+      {
+        "window": "2027-02-15 → 2027-02-22",
+        "nights": 7,
+        "total_usd": null,
+        "per_night_usd": null,
+        "room": "—",
+        "terms": "UNAVAILABLE on Booking.com for these dates",
+        "captured": "2026-11-25"
+      },
+      {
+        "window": "2027-02-13 → 2027-02-19",
+        "nights": 6,
+        "total_usd": null,
+        "per_night_usd": null,
+        "room": "—",
+        "terms": "Booking.com showed 4–6 night alternatives from $3,572.63 (4 nights) / $4,465.79 (5 nights) / $5,403.75 (6 nights). No 7-night quote.",
+        "captured": "2026-11-25"
+      }
+    ],
+    "cheapest_total_usd": null,
+    "cheapest_window": null,
+    "price_status": "UNVERIFIED — no 7-night availability for the preferred window",
+    "notes": "Not priceable for a 7-night stay. Only 125 reviews — thin evidence base."
+  }
+]

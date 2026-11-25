@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Ranking by MICHELIN Cluster — Shanghai 2027</title>
+<meta name="description" content="Hotels ranked by how many MICHELIN-starred restaurants are reachable within one hour, with a published method.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/nav.js"></script>
+</head>
+<body>
+<div id="nav"></div>
+
+<main id="main" class="wrap">
+
+  <h1>Hotels ranked by MICHELIN cluster access</h1>
+  <p class="lede">
+    This is the ranking you asked for: which hotel puts the most starred restaurants inside a
+    one-hour transit budget. The method is published in full below, and the code that produced these
+    numbers is in the repository, so you can check or re-run it.
+  </p>
+
+  <div class="callout warn">
+    <strong>Honesty first: these minutes are modelled, not routed.</strong>
+    No live transit-routing engine was reachable from this environment. The figures come from
+    straight-line distance between independently verified coordinates, converted to a transit time using
+    declared assumptions. Treat every minute as <strong>±10 minutes</strong>. A real journey planner will
+    give you the true figure. What this model <em>does</em> do reliably is rank the hotels relative to
+    each other, because the same assumptions are applied to all of them.
+  </div>
+
+  <h2>The result</h2>
+  <p class="scrollhint">→ Swipe sideways on a phone.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Hotel</th>
+          <th class="num">Starred restaurants &lt; 1 h</th>
+          <th class="num">Total stars reachable</th>
+          <th>Nearest starred table</th>
+          <th class="num">Mean modelled time</th>
+          <th class="num">7-night total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>#1</strong></td>
+          <td><strong>The Langham, Shanghai, Xintiandi</strong></td>
+          <td class="num">5 of 5</td>
+          <td class="num"><strong>11</strong></td>
+          <td class="small">T'ang Court (2★) — 0.47 km</td>
+          <td class="num">12.8 min</td>
+          <td class="num"><span class="badge warn">no rate</span></td>
+        </tr>
+        <tr>
+          <td><strong>#2</strong></td>
+          <td><strong>Radisson Blu Hotel Shanghai New World</strong> <span class="badge ok">recommended</span></td>
+          <td class="num">5 of 5</td>
+          <td class="num"><strong>11</strong></td>
+          <td class="small">T'ang Court (2★) — 1.72 km</td>
+          <td class="num">14.8 min</td>
+          <td class="num"><strong>$922</strong></td>
+        </tr>
+        <tr>
+          <td>#3</td>
+          <td>Grand Central Hotel Shanghai</td>
+          <td class="num">5 of 5</td>
+          <td class="num">11</td>
+          <td class="small">8 ½ Otto e Mezzo Bombana (2★) — 1.20 km</td>
+          <td class="num">17.8 min</td>
+          <td class="num">$1,007</td>
+        </tr>
+        <tr>
+          <td>#4</td>
+          <td>Waldorf Astoria Shanghai on the Bund</td>
+          <td class="num">5 of 5</td>
+          <td class="num">11</td>
+          <td class="small">8 ½ Otto e Mezzo Bombana (2★) — 0.74 km</td>
+          <td class="num">18.8 min</td>
+          <td class="num">$2,361</td>
+        </tr>
+        <tr>
+          <td>#5</td>
+          <td>The Peninsula Shanghai</td>
+          <td class="num">5 of 5</td>
+          <td class="num">11</td>
+          <td class="small">8 ½ Otto e Mezzo Bombana (2★) — 0.32 km</td>
+          <td class="num">19.4 min</td>
+          <td class="num">$3,351</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout ok">
+    <strong>The most useful thing this table tells you.</strong>
+    Every hotel clears the one-hour bar for <em>all five</em> verifiable starred restaurants. The
+    constraint you were worried about — being stuck far from dinner — <strong>does not bind in central
+    Shanghai</strong>. That means hotel choice should be driven by price and comfort, not by
+    restaurant access. The gap between best and worst here is 6.6 minutes of modelled time.
+  </div>
+
+  <h2>What "5 of 5" actually covers</h2>
+  <p>
+    Only five of Shanghai's fifty starred restaurants have coordinates published by MICHELIN in a form
+    that could be extracted. The other forty-five could not be placed on a map from a primary source, so
+    they are excluded rather than guessed at. The five are:
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Restaurant</th><th>Stars</th><th class="num">Latitude</th><th class="num">Longitude</th><th>Coordinate source</th></tr></thead>
+      <tbody>
+        <tr><td>Taian Table</td><td><span class="badge star">★★★</span></td><td class="num mono">31.22205</td><td class="num mono">121.43291</td><td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/taian-table" target="_blank" rel="noopener">MICHELIN page map link</a></td></tr>
+        <tr><td>8 ½ Otto e Mezzo Bombana</td><td><span class="badge star">★★</span></td><td class="num mono">31.242347</td><td class="num mono">121.487921</td><td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana" target="_blank" rel="noopener">MICHELIN page map link</a></td></tr>
+        <tr><td>Fu He Hui</td><td><span class="badge star">★★</span></td><td class="num mono">31.21875</td><td class="num mono">121.42979</td><td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-he-hui" target="_blank" rel="noopener">MICHELIN page map link</a></td></tr>
+        <tr><td>T'ang Court</td><td><span class="badge star">★★</span></td><td class="num mono">31.2217958</td><td class="num mono">121.4742971</td><td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/t-ang-court-506725" target="_blank" rel="noopener">MICHELIN page map link</a></td></tr>
+        <tr><td>Ji Pin Court</td><td><span class="badge star">★★</span></td><td class="num mono">31.20628</td><td class="num mono">121.44867</td><td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ji-pin-court" target="_blank" rel="noopener">MICHELIN page map link</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Per-hotel detail</h2>
+
+  <h3>#2 Radisson Blu — the recommended hotel</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Restaurant</th><th class="num">Stars</th><th class="num">Distance</th><th class="num">Modelled transit</th><th>Inside 1 h?</th></tr></thead>
+      <tbody>
+        <tr><td>T'ang Court</td><td class="num">★★</td><td class="num">1.72 km</td><td class="num">10 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>8 ½ Otto e Mezzo Bombana</td><td class="num">★★</td><td class="num">1.96 km</td><td class="num">11 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Taian Table</td><td class="num">★★★</td><td class="num">3.74 km</td><td class="num">15 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Ji Pin Court</td><td class="num">★★</td><td class="num">3.84 km</td><td class="num">16 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Fu He Hui</td><td class="num">★★</td><td class="num">4.17 km</td><td class="num">22 min</td><td><span class="badge ok">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="sub">Mean modelled transit across all five restaurants: <strong>14.8 min</strong>. Stars reachable within 1 hour: <strong>11</strong>.</p>
+
+  <h3>#1 The Langham — best base, but unbookable on your dates</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Restaurant</th><th class="num">Stars</th><th class="num">Distance</th><th class="num">Modelled transit</th><th>Inside 1 h?</th></tr></thead>
+      <tbody>
+        <tr><td>T'ang Court</td><td class="num">★★</td><td class="num">0.47 km</td><td class="num">7 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>8 ½ Otto e Mezzo Bombana</td><td class="num">★★</td><td class="num">2.69 km</td><td class="num">13 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Ji Pin Court</td><td class="num">★★</td><td class="num">2.80 km</td><td class="num">13 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Taian Table</td><td class="num">★★★</td><td class="num">3.52 km</td><td class="num">15 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Fu He Hui</td><td class="num">★★</td><td class="num">3.85 km</td><td class="num">16 min</td><td><span class="badge ok">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="sub">Mean modelled transit across all five restaurants: <strong>12.8 min</strong>. Stars reachable within 1 hour: <strong>11</strong>.</p>
+
+  <h3>#3 Grand Central Hotel</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Restaurant</th><th class="num">Stars</th><th class="num">Distance</th><th class="num">Modelled transit</th><th>Inside 1 h?</th></tr></thead>
+      <tbody>
+        <tr><td>8 ½ Otto e Mezzo Bombana</td><td class="num">★★</td><td class="num">1.20 km</td><td class="num">9 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>T'ang Court</td><td class="num">★★</td><td class="num">1.72 km</td><td class="num">10 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Ji Pin Court</td><td class="num">★★</td><td class="num">4.35 km</td><td class="num">23 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Taian Table</td><td class="num">★★★</td><td class="num">4.51 km</td><td class="num">23 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Fu He Hui</td><td class="num">★★</td><td class="num">4.93 km</td><td class="num">24 min</td><td><span class="badge ok">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="sub">Mean modelled transit across all five restaurants: <strong>17.8 min</strong>. Stars reachable within 1 hour: <strong>11</strong>.</p>
+
+  <h3>#4 Waldorf Astoria</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Restaurant</th><th class="num">Stars</th><th class="num">Distance</th><th class="num">Modelled transit</th><th>Inside 1 h?</th></tr></thead>
+      <tbody>
+        <tr><td>8 ½ Otto e Mezzo Bombana</td><td class="num">★★</td><td class="num">0.74 km</td><td class="num">8 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>T'ang Court</td><td class="num">★★</td><td class="num">1.94 km</td><td class="num">11 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Ji Pin Court</td><td class="num">★★</td><td class="num">4.87 km</td><td class="num">24 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Taian Table</td><td class="num">★★★</td><td class="num">5.32 km</td><td class="num">25 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Fu He Hui</td><td class="num">★★</td><td class="num">5.72 km</td><td class="num">26 min</td><td><span class="badge ok">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="sub">Mean modelled transit across all five restaurants: <strong>18.8 min</strong>. Stars reachable within 1 hour: <strong>11</strong>.</p>
+
+  <h3>#5 The Peninsula</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Restaurant</th><th class="num">Stars</th><th class="num">Distance</th><th class="num">Modelled transit</th><th>Inside 1 h?</th></tr></thead>
+      <tbody>
+        <tr><td>8 ½ Otto e Mezzo Bombana</td><td class="num">★★</td><td class="num">0.32 km</td><td class="num">7 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>T'ang Court</td><td class="num">★★</td><td class="num">2.59 km</td><td class="num">12 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Ji Pin Court</td><td class="num">★★</td><td class="num">5.36 km</td><td class="num">25 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Taian Table</td><td class="num">★★★</td><td class="num">5.46 km</td><td class="num">26 min</td><td><span class="badge ok">Yes</span></td></tr>
+        <tr><td>Fu He Hui</td><td class="num">★★</td><td class="num">5.89 km</td><td class="num">27 min</td><td><span class="badge ok">Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="sub">Mean modelled transit across all five restaurants: <strong>19.4 min</strong>. Stars reachable within 1 hour: <strong>11</strong>.</p>
+
+  <p class="sub" style="margin-top:-6px">
+    Note the model has a floor: because it always assumes a 6-minute walk to a station, a restaurant
+    0.32 km away still scores 7 minutes. Real walking time would be shorter. This is why the ranking is
+    only meaningful <em>between</em> hotels, not as an absolute travel time.
+  </p>
+
+  <h2>The method, in full</h2>
+  <div class="card">
+    <ol class="tight">
+      <li><strong>Coordinates.</strong> Restaurants: taken from the map link embedded on each MICHELIN
+        Guide restaurant page. Hotels: taken from OpenStreetMap via the Photon geocoder. Restaurants
+        whose coordinates could not be verified were excluded, not estimated.</li>
+      <li><strong>Distance.</strong> Great-circle (haversine) distance between the two points, on a
+        6,371.0088 km sphere.</li>
+      <li><strong>Transit conversion.</strong> The assumed model is:
+        <ul class="tight">
+          <li>6-minute walk from hotel door to metro entrance;</li>
+          <li>rail distance = straight-line distance × 1.25 detour factor;</li>
+          <li>average speed 30 km/h including stops;</li>
+          <li>+6 minutes if straight-line distance exceeds 4 km (assumed line change).</li>
+        </ul>
+      </li>
+      <li><strong>Ranking rule.</strong> Primary key: total stars reachable within 60 minutes. Secondary:
+        count of starred restaurants within 60 minutes. Tie-break: lower mean modelled time across all
+        five restaurants.</li>
+    </ol>
+    <p class="sub" style="margin-bottom:0">
+      Source code: <code>tools/proximity_model.py</code> · Output: <a href="data/hotel-ranking.json">data/hotel-ranking.json</a>
+    </p>
+  </div>
+
+  <h2>Two hotels deliberately left out of the ranking</h2>
+  <div class="callout">
+    <strong>Pullman Shanghai Jing'an</strong> (cheapest at $708) and <strong>Capella Shanghai</strong>:
+    neither could be geocoded to a verified building location. Geocoding returned a district centroid
+    for the Pullman, which would have put it in a plausible-looking but wrong place and produced a
+    confident-looking but false ranking. Rows are blank rather than invented. Resolving this is
+    <a href="questions.html">Q6</a>.
+  </div>
+
+</main>
+
+<footer class="site"><div class="inner">
+  Modelled estimates generated by tools/proximity_model.py using MICHELIN-published restaurant
+  coordinates and OpenStreetMap hotel coordinates. Not a live routing result. Method and assumptions
+  are disclosed above in full.
+</div></footer>
+</body>
+</html>

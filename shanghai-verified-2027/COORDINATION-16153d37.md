@@ -107,7 +107,11 @@ Every entry: source URL + date checked + result. `data/` holds the machine-reada
 - `sources.html` carries the complete register: **27 official sources, 7 dated OTA rate quotes, 9 secondary sources, 8 social links**, each with its type, fetch date and a plain statement of what it proves.
 
 **T11 — integration**
-- Pages confirmed already enabled on `main` at the root path with HTTPS enforced; site URL https://kanlerxz87-cyber.github.io/ChinaFun1/. The pages appear once this branch is merged — no configuration change was needed or made.
+- Pages confirmed already enabled on `main` at the root path with HTTPS enforced — **no configuration change was needed or made.**
+- **Integration outcome (updated after merge).** By the time this branch pushed, `main` had advanced to `b78b61f` and held three other published plans: a Beijing dashboard at the repository **root** (`fac6d965`), a Shanghai study in `docs/` (`68e13071`) and a second Shanghai study in `shanghai-2027/` (`3b27db6c`). Publishing at the root would have overwritten `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `suggestions.html`, `flagged.html` and both files in `assets/`. All of this session's work was therefore relocated to `shanghai-verified-2027/` (commit `6078d49`) before merging, exactly as `3b27db6c` documented for the same collision.
+- **Published URL:** https://kanlerxz87-cyber.github.io/ChinaFun1/shanghai-verified-2027/ — the root continues to serve the Beijing plan.
+- **Shared-file resolution:** `.gitignore` merged as a **union** of both sides (nothing discarded). `README.md` **extended, not replaced** — this plan's row was added to the plan table and a section appended, with the header count corrected from “two” to “four” plans. The root `COORDINATION.md` was likewise extended with a session `16153d37` section; this file is retained as the detailed per-task log.
+- **Verified after merge:** all 17 other-session files compared byte-for-byte against `origin/main` are **identical**; only `.gitignore`, `README.md` and `COORDINATION.md` differ, by design. All four plans serve HTTP 200 (`/`, `/docs/`, `/shanghai-2027/`, `/shanghai-verified-2027/`). This plan re-checked after relocation: 11 pages, 38 tables, 449 rows, **0 broken relative links, 0 unbalanced tags**.
 - README.md rewritten from the placeholder to a full index of the four answers, the verification rules, the page map, the layout, the findings that change the plan, and what is deliberately not answered.
 
 ## Irregularities
