@@ -1,0 +1,52 @@
+*:box-sizing:border-box;html{scroll-behavior:smooth}
+body{margin:0;background:#f5f7fa;color:#14263d;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:#0a63b8;text-decoration:none}a:hover{text-decoration:underline}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:#102a43;color:#fff;position:sticky;top:0;z-index:10}
+.brand{font-weight:800;font-size:18px;color:#fff}.brand span{font-weight:400;opacity:.7}
+#navtoggle{background:#234e75;color:#fff;border:0;border-radius:8px;padding:8px 12px;font:inherit;cursor:pointer}
+nav{background:#173e63;display:flex;gap:4px;overflow-x:auto;padding:6px 10px;white-space:nowrap}
+nav a{color:#d8e8f7;padding:8px 11px;border-radius:7px;font-size:14px}
+nav a.active{background:#fff;color:#102a43;font-weight:700}
+main{max-width:1180px;margin:0 auto;padding:18px 14px 60px}
+h1{font-size:clamp(25px,5vw,38px);line-height:1.15;margin:.2em 0 .4em}
+h2{font-size:21px;margin-top:1.6em}.eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:12px;color:#4d6b8a;font-weight:700;margin:0}
+.lede{font-size:17px;max-width:70ch;color:#34506d}
+.hero,.card{background:#fff;border:1px solid #dce5ee;border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 2px 8px #102a430a}
+.pagehead{background:#fff;border:1px solid #dce5ee;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
+.stats div{background:#eef4fa;border-radius:10px;padding:12px}.stats strong{display:block;font-size:27px;color:#0b4f8a}.stats span{font-size:12px;color:#42637f}
+.findings{padding-left:20px}.findings li{margin:8px 0}
+.callouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.callout{display:block;border:1px solid #c9dbeb;border-radius:10px;padding:14px;background:#f8fbfe;color:#14263d}
+.callout strong,.callout span{display:block}.callout span{font-size:13px;color:#4a6580;margin-top:4px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card.warn{border-left:5px solid #d99027;background:#fffaf0}
+.note{background:#eef4fa;border-radius:10px;padding:14px;margin-top:18px;font-size:14px}
+.tablewrap{overflow-x:auto;background:#fff;border:1px solid #dce5ee;border-radius:12px;margin:12px 0 22px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:#e9f0f7;color:#244760;text-align:left;padding:11px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+td{padding:11px;border-top:1px solid #e6edf4;vertical-align:top}
+td:nth-child(1){min-width:190px}td:nth-child(5){min-width:230px}
+tr:nth-child(even){background:#fbfdff}
+.meta{margin-top:5px;color:#54708a;font-size:12px}
+.chip,.ptag,.status{display:inline-block;border-radius:999px;padding:2px 8px;font-size:11px;background:#e8eef5;color:#33526e;margin:2px 3px 2px 0}
+.chip.star,.ptag.official{background:#fff2d6;color:#82540a;font-weight:700}
+.chip.muted{background:#eef1f5;color:#607083}
+.flag{color:#a04b17;background:#fff4e8;border-radius:6px;padding:2px 5px;font-size:13px}
+.flag small{font-size:10px;text-transform:uppercase;letter-spacing:.04em}
+.socline{margin-bottom:6px;line-height:1.35}.ptag{display:inline-block}
+.filter{width:100%;max-width:360px;padding:10px 12px;border:1px solid #bdd0e1;border-radius:9px;font:inherit;margin:10px 0}
+.none{color:#8a9bad}
+footer{background:#102a43;color:#b9cfe4;padding:20px;text-align:center;font-size:13px}
+code{background:#e9f0f7;border-radius:4px;padding:1px 4px;font-size:12px}
+@media(max-width:760px){
+ nav{display:none;flex-direction:column;gap:2px}nav.open{display:flex}
+ header.top{padding:12px}main{padding:12px 9px 40px}
+ .hero,.card,.pagehead{padding:15px;border-radius:11px}
+ table,thead,tbody,tr,td{display:block;width:100%}
+ thead{display:none}tr{border:1px solid #dbe5ef;border-radius:9px;margin:9px 0;padding:8px;background:#fff}
+ td{border:0;padding:7px 8px;display:grid;grid-template-columns:34% 1fr;gap:8px;font-size:14px}
+ td:before{content:attr(data-label);font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:#58748f;font-weight:700;padding-top:3px}
+ td:first-child{grid-template-columns:1fr}td:first-child:before{display:none}
+ td:nth-child(5){min-width:0}
+}

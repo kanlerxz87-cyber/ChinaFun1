@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions · China 2027 social &amp; hours audit</title>
+<link rel="stylesheet" href="assets/style.css"></head>
+<body><header class="top"><a class="brand" href="index.html">China 2027 <span>· audit</span></a>
+<button id="navtoggle" aria-label="Toggle navigation" aria-expanded="false">☰ Menu</button></header>
+<nav id="nav"><a href="index.html" >Overview</a><a href="beijing-restaurants.html" >Beijing dining</a><a href="shanghai-restaurants.html" >Shanghai dining</a><a href="activities.html" >Activities</a><a href="hotel-plans.html" >Hotel plans</a><a href="questions.html" class="active">Questions</a><a href="suggestions.html" >Suggestions</a><a href="flagged.html" >Flagged &amp; blanks</a><a href="sources.html" >Sources</a><a href="verification.html" >Verification log</a></nav>
+<main><section class="pagehead"><p class="eyebrow">Decisions before booking</p>
+<h1>Questions, information &amp; answers</h1><p>Each row states what is known, what is missing, and the concrete step that would close it.
+Nothing in this section is a recommendation to book.</p>
+<input class="filter" type="search" placeholder="Filter questions…" aria-label="Filter questions"></section>
+<div class="tablewrap"><table><thead><tr><th>Question</th><th>Information we already have</th><th>Answer / status</th><th>How to discover what is missing</th></tr></thead>
+<tbody><tr id="q1"><td data-label="Question"><strong>Which city should the trip be in?</strong></td>
+<td data-label="Information we have">The brief does not say.<div class="meta"><small>Four plans exist: one Beijing, three Shanghai. They optimise different things and disagree with each other.</small></div></td>
+<td data-label="Answer / status"><span class="status">Not decidable from the evidence.</span></td>
+<td data-label="How to close it">Ask the traveller to rank three priorities: star count, flight cost, or hotel value; then select the owning plan. No new research needed.</td></tr><tr id="q2"><td data-label="Question"><strong>Do the dates work?</strong></td>
+<td data-label="Information we have">15–18 Feb 2027 is the preferred window; the brief also asks for 1–2 weeks.<div class="meta"><small>Three nights vs one to two weeks. All plans use 15–22 Feb 2027 (seven nights).</small></div></td>
+<td data-label="Answer / status"><span class="status">No — the preferred window is too short.</span></td>
+<td data-label="How to close it">Decide whether 15 Feb is a fixed arrival date or merely a preferred start; if fixed, Monday closures apply on day one. See q3.</td></tr><tr id="q3"><td data-label="Question"><strong>Is 15 Feb 2027 a Monday, and does it matter?</strong></td>
+<td data-label="Information we have">Yes — computed with the standard calendar.<div class="meta"><small>Palace Museum, Yu Garden, Shanghai Museum (People&#x27;s Square) and T&#x27;ang Court publish Monday closure; Da Vittorio shows Monday closed.</small></div></td>
+<td data-label="Answer / status"><span class="status">Yes: the first day cannot be a museum/garden day.</span></td>
+<td data-label="How to close it">Rebuild the day-one plan around an open venue, or arrive a day earlier.</td></tr><tr id="q4"><td data-label="Question"><strong>Which hotel is genuinely cheapest for the exact week?</strong></td>
+<td data-label="Information we have">Not answered by this session.<div class="meta"><small>Other plans quote $696, $922 and $1,116 seven-night totals for different room types.</small></div></td>
+<td data-label="Answer / status"><span class="status">Unresolved — do not treat any one figure as final.</span></td>
+<td data-label="How to close it">Re-quote the same room type on each hotel&#x27;s own booking engine for 15–22 Feb 2027, with taxes shown.</td></tr><tr id="q5"><td data-label="Question"><strong>Does the cheapest room meet &#x27;queen bed or larger, private bathroom&#x27;?</strong></td>
+<td data-label="Information we have">Partially.<div class="meta"><small>One plan explicitly flags its cheapest $652 room as twin beds and excludes it. Others name a queen room with attached bath.</small></div></td>
+<td data-label="Answer / status"><span class="status">Needs a room-type check at booking.</span></td>
+<td data-label="How to close it">Capture a screenshot of the room page showing bed and bathroom before comparing prices.</td></tr><tr id="q6"><td data-label="Question"><strong>Are the star statuses current?</strong></td>
+<td data-label="Information we have">Partly.<div class="meta"><small>Beijing rows use the 2027 Beijing/Tianjin selection; Shanghai rows use the 2026 Shanghai/Jiangsu/Zhejiang edition. The 2027 Shanghai edition was not published at the time of this audit.</small></div></td>
+<td data-label="Answer / status"><span class="status">No for Shanghai 2027.</span></td>
+<td data-label="How to close it">Recheck the MICHELIN guide after the 2027 Shanghai release and update status fields.</td></tr><tr id="q7"><td data-label="Question"><strong>How many starred restaurants are within one hour of each hotel by subway or bus?</strong></td>
+<td data-label="Information we have">Not answered.<div class="meta"><small>One plan publishes a modelled estimate with disclosed constants; another refuses to model and leaves the field blank. No routed journey time was fetched in this session.</small></div></td>
+<td data-label="Answer / status"><span class="status">Unanswered.</span></td>
+<td data-label="How to close it">Run the same origin–destination set through Amap or Baidu Maps at the hour of travel and store the route URL with each result.</td></tr><tr id="q8"><td data-label="Question"><strong>What will dinner cost for two?</strong></td>
+<td data-label="Information we have">Four totals published; the rest blank.<div class="meta"><small>T&#x27;ang Court ¥888 / ¥2,288 for two; Yu Garden and Palace Museum totals are calculated from published tariffs; TRB Hutong calculated from its menu. MICHELIN ¥ bands are not prices.</small></div></td>
+<td data-label="Answer / status"><span class="status">Mostly unknown.</span></td>
+<td data-label="How to close it">Request current menus by email or check each restaurant&#x27;s own menu PDF; record the date of the quote.</td></tr><tr id="q9"><td data-label="Question"><strong>Which venues publish opening days, hours and exceptions?</strong></td>
+<td data-label="Information we have">12 of 83 confirmed here.<div class="meta"><small>The rest have no fetched official hours statement. Where a plan carried hours but this session could not refetch them, the value is blank and flagged.</small></div></td>
+<td data-label="Answer / status"><span class="status">Insufficient for scheduling.</span></td>
+<td data-label="How to close it">Re-check each restaurant&#x27;s own site and MICHELIN page in the week before travel; record a source URL per cell.</td></tr><tr id="q10"><td data-label="Question"><strong>Are there reliable social-review links?</strong></td>
+<td data-label="Information we have">63 links across 29 venues.<div class="meta"><small>13 candidate links were rejected: search-result pages, wrong-city/wrong-business accounts and false matches.</small></div></td>
+<td data-label="Answer / status"><span class="status">Coverage is 29/83 venues.</span></td>
+<td data-label="How to close it">Search official operator accounts first, then fetch each candidate and match the venue name before adding it.</td></tr><tr id="q11"><td data-label="Question"><strong>Can the TikTok/Instagram links be used during the trip?</strong></td>
+<td data-label="Information we have">Not assumed.<div class="meta"><small>Links were collected as research aids. Mainland China restricts these platforms.</small></div></td>
+<td data-label="Answer / status"><span class="status">Not verified for on-trip use.</span></td>
+<td data-label="How to close it">Use official restaurant/museum websites and WeChat channels while travelling.</td></tr><tr id="q12"><td data-label="Question"><strong>Are creator-quoted prices usable as budget data?</strong></td>
+<td data-label="Information we have">No.<div class="meta"><small>Review videos mention menu prices for Taian Table, Fu He Hui, Canton 8 and Da Vittorio. None is an official price.</small></div></td>
+<td data-label="Answer / status"><span class="status">Rejected as evidence.</span></td>
+<td data-label="How to close it">Ignore them; use operator menus only.</td></tr><tr id="q13"><td data-label="Question"><strong>Is the 2027 Chinese New Year holiday period confirmed by an official notice?</strong></td>
+<td data-label="Information we have">Not in this session.<div class="meta"><small>Plans cite secondary sources that disagree on 5–11 Feb vs 5–13 Feb and a make-up working day.</small></div></td>
+<td data-label="Answer / status"><span class="status">Unverified.</span></td>
+<td data-label="How to close it">Locate the State Council holiday notice on gov.cn and link it before treating any date as a holiday.</td></tr><tr id="q14"><td data-label="Question"><strong>Do museums require advance booking?</strong></td>
+<td data-label="Information we have">Yes for People&#x27;s Square; no for Museum East individuals.<div class="meta"><small>The People&#x27;s Square visit page requires advance booking via WeChat Mini Program (trip.com for overseas visitors). Museum East permits walk-in with valid ID; two galleries still need reservations.</small></div></td>
+<td data-label="Answer / status"><span class="status">Answered for these two venues.</span></td>
+<td data-label="How to close it">Keep this distinction when building the itinerary.</td></tr><tr id="q15"><td data-label="Question"><strong>What is the total trip cost?</strong></td>
+<td data-label="Information we have">Not calculable.<div class="meta"><small>Hotel totals exist in other plans; flights, visas and most dinners have no verified price.</small></div></td>
+<td data-label="Answer / status"><span class="status">Unknown.</span></td>
+<td data-label="How to close it">Price flights and the three chosen dinners, then add one hotel total from a re-quote.</td></tr></tbody></table></div></main>
+<footer>Verified 25 Nov 2026 by session <code>c2067093</code>. Every social link was fetched; every blank is flagged.
+This study audits the four plans already in this repository; it does not overwrite them.</footer>
+<script src="assets/app.js"></script></body></html>

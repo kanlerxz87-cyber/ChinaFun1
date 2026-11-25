@@ -337,7 +337,7 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 ## Session `c2067093` — cross-plan social-media & hours audit (`social-2027/`)
 
 **Branch:** `arena/c2067093-chinafun1`, branched from `main` @ `eda1907`
-**Claimed:** 2026-11-25 · **Status:** in progress
+**Claimed:** 2026-11-25 · **Status:** complete
 **File scope (exclusive):** `social-2027/**` and this section of `COORDINATION.md`.
 **Read-only:** every other plan directory, `assets/data.js`, `data/`, `build.py`, root HTML, `README.md`.
 The root landing page and README are shared outputs; this session **requests** an integration link there rather
@@ -349,12 +349,12 @@ than editing either. This task does not overlap any existing claim (T1–T11, S1
 |---|------|--------|-----------|----------------------|
 | C1 | Claim + repo review | done | this section | board read; four plans inventoried; no duplicate scope |
 | C2 | Extract every listed restaurant/activity from the four plans into one canonical inventory | done | `social-2027/data/inventory.json` | row-by-row provenance back to the owning plan's file |
-| C3 | Verify social reviews (YouTube / TikTok / Instagram) per venue, preferring official operator accounts | unclaimed | `social-2027/data/social.json` | fetch each URL, confirm the account/video names the venue; no guessed URLs |
-| C4 | Verify opening days, hours and exceptions per venue | unclaimed | `social-2027/data/hours.json` | official operator or MICHELIN page; blank + flag otherwise |
-| C5 | Verify total meal price for two / activity price for two where published | unclaimed | `social-2027/data/costs.json` | official menu/price page only; estimate band only when MICHELIN publishes it |
-| C6 | Build mobile-friendly dashboard (landing + subpages + tables + source links) | unclaimed | `social-2027/**/*.html`, `social-2027/assets/*` | link check + rendered-page read-through |
-| C7 | Exec summary, questions, suggestions, flagged register, sources | unclaimed | `social-2027/*.html` | every unverified value present in the blank register |
-| C8 | Final verification + record sources/irregularities, mark done | unclaimed | this section | each row re-fetched; results logged here |
+| C3 | Verify social reviews (YouTube / TikTok / Instagram) per venue, preferring official operator accounts | done | `social-2027/data/social.json` | fetch each URL, confirm the account/video names the venue; no guessed URLs |
+| C4 | Verify opening days, hours and exceptions per venue | done | `social-2027/data/hours.json` | official operator or MICHELIN page; blank + flag otherwise |
+| C5 | Verify total meal price for two / activity price for two where published | done | `social-2027/data/costs.json` | official menu/price page only; estimate band only when MICHELIN publishes it |
+| C6 | Build mobile-friendly dashboard (landing + subpages + tables + source links) | done | `social-2027/**/*.html`, `social-2027/assets/*` | link check + rendered-page read-through |
+| C7 | Exec summary, questions, suggestions, flagged register, sources | done | `social-2027/*.html` | every unverified value present in the blank register |
+| C8 | Final verification + record sources/irregularities, mark done | done | this section | each row re-fetched; results logged here |
 
 ### Rules this session holds to
 
@@ -364,3 +364,18 @@ than editing either. This task does not overlap any existing claim (T1–T11, S1
 - Official operator / MICHELIN / museum / government pages outrank third-party articles. Third-party social
   reviews are labelled as such and only included when the video/post itself was fetched and identified.
 - No edits to another session's files. Requests go in this section.
+
+### C6–C8 completion record (2026-11-25)
+
+- Generated `social-2027/index.html` and nine categorised subpages plus `assets/style.css` / `assets/app.js` from
+  `tools/sitegen.py`. Reproducible check in `tools/check.py` passes: 10 pages, no broken internal links, no unresolved
+  template tokens, every one of the 83 venue rows present in its correct page, no tag mismatch.
+- Rendered-page read-through done over the local static server: all ten pages return complete text with working nav labels.
+- Mobile layout: sticky nav collapses to a menu button below 760 px; wide tables become labelled stacked cards;
+  table filters walk siblings so they work on the flagged page as well as the restaurant/activities pages.
+- Counts now published: **63 fetched social links covering 29 of 83 venues**, **13 rejected candidates**,
+  **12 official hours rows**, **4 published/derived prices for two**, and a blank register of every other field.
+- C8 sources and irregularities are recorded on the `sources.html` and `flagged.html` pages; the verification log lists
+  each published social URL with its fetched title, uploader and date. No price or hour was promoted from a creator post.
+- **Integration request (not performed here):** the eventual root-integration session should add a link from the root
+  landing page and `README.md` to `social-2027/index.html`. This session did not edit shared outputs.

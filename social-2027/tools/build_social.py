@@ -66,6 +66,43 @@ REJECTED = [
 ("BJ-R07","YouTube search URL","https://www.youtube.com/results?search_query=Lu+Shang+Lu+Beijing+Shandong+michelin","Result page only; none of the visible results names Lu Shang Lu. No direct review verified."),
 ("DOC-A01","YouTube search URL","https://www.youtube.com/results?search_query=the+bund+shanghai+walking+tour","Result page only; two direct walks mined and verified instead."),
 ]
+# Added after a second search pass; each fetched 2026-11-25.
+V += [
+("BJ-R27","YouTube","https://www.youtube.com/watch?v=VX4upQGsXHI","You Can't Miss Georg Jenson's New Design House In Beijing","Black Buddha","2018-03-06","restaurant feature",False,"Description names The Georg, Georg Jensen's restaurant concept in Beijing."),
+("BJ-R29","Instagram","https://www.instagram.com/trb_cn/","TRB Hutong (@trb_cn)","TRB Hutong","","official account",True,"Bio links to trbhutong.com/reservations; recent posts name TRB Hutong, Beijing and One MICHELIN Star."),
+("BJ-A02","Instagram","https://www.instagram.com/mutianyu_greatwall_official/","Mutianyu Great Wall Official (@mutianyu_greatwall_official)","Mutianyu Great Wall","","official account",True,"Bio links to en.mutianyugreatwall.com; posts are Great Wall notices and scenery."),
+("BJ-R06","Instagram","https://www.instagram.com/lamdre_beijing/","Lamdre 兰斋 (@lamdre_beijing)","Lamdre","","official account",True,"Bio: Chinese plant-based, Two MICHELIN Stars, +86-010-85978888; posts confirm 2027 stars retained."),
+("BJ-A06","YouTube","https://www.youtube.com/watch?v=z_nuVZBmmFY","Beijing Lama Temple & Historic Hutongs | 4K Walking Tour","Ambient Explorers","2025-05-23","walking tour",False,"Description names Lama Temple (Yonghe Temple), Beijing."),
+("BJ-A07","YouTube","https://www.youtube.com/watch?v=crrMxi9W8-c","Explore 798 Art Zone in Beijing | Walking Tour in Industrial Ruins","Travel with Shawn and Dani","2025-07-02","walking tour",False,"Description and route name 798 Art Zone and 751 D Park, Beijing."),
+("BJ-A10","YouTube","https://www.youtube.com/watch?v=kW5vv-o5Ed8","Unmissable Jingshan Park Walking Tour: Forbidden City Views","Miao-Travel","2025-01-28","walking tour",False,"Description and transcript name Jingshan Park, Beijing."),
+("DOC-R06","Instagram","https://www.instagram.com/fuhehui/","福和慧FU HE HUI (@fuhehui)","Fu He Hui","","official account",True,"Bio gives YuYuan Rd No 1037, Shanghai, +862139809188 and two MICHELIN stars."),
+("DOC-R03","YouTube","https://www.youtube.com/watch?v=6zxepoFgqJk","Two Michelin Star restaurant Shanghai - Bao Li Xuan in Bvlgari Hotel Shanghai","pop rainbow","2019-03-29","review",False,"Description names Bao Li Xuan at Bvlgari Hotel Shanghai; 2019 video."),
+("DOC-A03","TikTok","https://www.tiktok.com/@traveltomtom/video/7282390862808517920","Follow me up to the observation deck of the 2nd tallest building in the world","@traveltomtom","2023-09-24","activity POV",False,"Fetched post describes the Shanghai Tower 118F deck; its 180 RMB figure is creator-reported."),
+("DOC-A04","Instagram","https://www.instagram.com/theshanghaimuseum/","The Shanghai Museum (@theshanghaimuseum)","The Shanghai Museum","","official account",True,"Bio: 'A museum of, and beyond, ancient Chinese art.' Posts cover both branches."),
+]
+REJECTED += [
+("BJ-A01","Instagram (stale search result)","https://www.instagram.com/palace_museum/","Search snippet showed a bio, but fetching returned HTTP 404. Not published."),
+("BJ-A09","Instagram (stale search result)","https://www.instagram.com/nationalmuseumofchina/","Search snippet claimed an official account, but fetching returned HTTP 404. Not published."),
+("DOC-R12","Instagram (wrong city)","https://www.instagram.com/tangcourthk/","T'ang Court @ The Langham, Hong Kong (three stars) is a different restaurant from Shanghai's two-star venue."),
+("DOC-R03","YouTube (false match)","https://www.youtube.com/watch?v=hNDCCVEb8bA","Fetched video is about Bund House in Jakarta; 'first restaurant in Shanghai' is a passing mention."),
+("DOC-R05","Instagram (unrelated person)","https://www.instagram.com/fredericjaros/","A chef who formerly worked at Da Vittorio Shanghai; not the restaurant's account or a review."),
+("DOC-R04","Instagram (wrong city)","https://www.instagram.com/canton8cambodia/","Account is Canton 8 Cambodia, not the Shanghai restaurant."),
+]
+
+# Third search pass, fetched 2026-11-25.
+V += [
+("BJ-A03","YouTube","https://www.youtube.com/watch?v=wf1GfQbXXqw","Temple of Heaven Walk, Beijing, China | 4K Walking Tour","Ambient Explorers","2025-07-04","walking tour",False,"Description and transcript walk the Circular Mound Altar and Hall of Prayer for Good Harvests in Beijing."),
+("BJ-A03","Instagram","https://www.instagram.com/visitbeijingofficial/","visitbeijingofficial (@visitbeijingofficial)","Beijing Municipal Bureau of Culture and Tourism","","official city tourism account",True,"Bio states it is the official account of Beijing Municipal Bureau of Culture and Tourism; posts cover city sights."),
+("BJ-A04","YouTube","https://www.youtube.com/watch?v=P_PBlU2QGTY","The Summer Palace: Imperial Garden Walk | 4K Walking Tour","Ambient Explorers","2025-06-23","walking tour",False,"Description names Summer Palace (颐和园), Beijing; route includes Kunming Lake and Longevity Hill."),
+("BJ-A05","YouTube","https://www.youtube.com/watch?v=U0QEroS58iU","Tiananmen Square & Forbidden City in Autumn | Beijing China in 4K","Col Wanders","2024-09-28","walking tour",False,"Description starts at Tiananmen Square, Beijing, and lists landmarks along the route."),
+("BJ-A09","YouTube","https://www.youtube.com/watch?v=U0QEroS58iU","Tiananmen Square & Forbidden City in Autumn | Beijing China in 4K","Col Wanders","2024-09-28","walking tour",False,"Description and chapter 19:27 explicitly identify the National Museum of China on the walking route."),
+("VER-A02","YouTube","https://www.youtube.com/watch?v=bqU3WbL6xac","Shanghai Museum East Branch reopens","Shanghai Let's Meet","2024-06-25","local media clip",False,"Fetched title, uploader, date and description identify Shanghai Museum East's reopening; no hours or prices claimed."),
+("DOC-A05","YouTube","https://www.youtube.com/watch?v=EtE3zNAEQEo","SHANGHAI 4K: Lost in a Maze of Secret Alleys & Lanes | Tianzifang Walk","Pathfinder CN","2026-02-22","walking tour",False,"Description and transcript name Tianzifang, 210 Taikang Road, Shanghai."),
+]
+REJECTED += [
+("BJ-A04","Instagram (wrong venue)","https://www.instagram.com/summerpalacesg/","The bio describes an authentic Cantonese restaurant in Singapore, not Beijing's imperial garden."),
+]
+
 payload = {
  "checked": "2026-11-25", "session": "c2067093",
  "method": "Each URL was fetched; title, uploader and date copied from the fetched page. Search-result URLs are rejected. Creator-reported prices are never treated as official prices.",

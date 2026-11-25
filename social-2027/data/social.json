@@ -502,7 +502,7 @@
       "venue_id": "BJ-R27",
       "platform": "YouTube",
       "url": "https://www.youtube.com/watch?v=VX4upQGsXHI",
-      "title": "You Can’t Miss Georg Jenson’s New Design House In Beijing",
+      "title": "You Can't Miss Georg Jenson's New Design House In Beijing",
       "creator": "Black Buddha",
       "published": "2018-03-06",
       "kind": "restaurant feature",
@@ -518,7 +518,7 @@
       "published": "",
       "kind": "official account",
       "official_account": true,
-      "note": "Bio links to trbhutong.com/reservations; recent posts name TRB Hutong, Beijing and One MICHELIN Star. Fetched 2026-11-25."
+      "note": "Bio links to trbhutong.com/reservations; recent posts name TRB Hutong, Beijing and One MICHELIN Star."
     },
     {
       "venue_id": "BJ-A02",
@@ -529,7 +529,51 @@
       "published": "",
       "kind": "official account",
       "official_account": true,
-      "note": "Bio links to en.mutianyugreatwall.com; posts are Great Wall notices and scenery. Fetched 2026-11-25."
+      "note": "Bio links to en.mutianyugreatwall.com; posts are Great Wall notices and scenery."
+    },
+    {
+      "venue_id": "BJ-R06",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/lamdre_beijing/",
+      "title": "Lamdre 兰斋 (@lamdre_beijing)",
+      "creator": "Lamdre",
+      "published": "",
+      "kind": "official account",
+      "official_account": true,
+      "note": "Bio: Chinese plant-based, Two MICHELIN Stars, +86-010-85978888; posts confirm 2027 stars retained."
+    },
+    {
+      "venue_id": "BJ-A06",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=z_nuVZBmmFY",
+      "title": "Beijing Lama Temple & Historic Hutongs | 4K Walking Tour",
+      "creator": "Ambient Explorers",
+      "published": "2025-05-23",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description names Lama Temple (Yonghe Temple), Beijing."
+    },
+    {
+      "venue_id": "BJ-A07",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=crrMxi9W8-c",
+      "title": "Explore 798 Art Zone in Beijing | Walking Tour in Industrial Ruins",
+      "creator": "Travel with Shawn and Dani",
+      "published": "2025-07-02",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description and route name 798 Art Zone and 751 D Park, Beijing."
+    },
+    {
+      "venue_id": "BJ-A10",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=kW5vv-o5Ed8",
+      "title": "Unmissable Jingshan Park Walking Tour: Forbidden City Views",
+      "creator": "Miao-Travel",
+      "published": "2025-01-28",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description and transcript name Jingshan Park, Beijing."
     },
     {
       "venue_id": "DOC-R06",
@@ -540,18 +584,18 @@
       "published": "",
       "kind": "official account",
       "official_account": true,
-      "note": "Bio gives YuYuan Rd No 1037, Shanghai, +862139809188 and two MICHELIN stars. Fetched 2026-11-25."
+      "note": "Bio gives YuYuan Rd No 1037, Shanghai, +862139809188 and two MICHELIN stars."
     },
     {
       "venue_id": "DOC-R03",
       "platform": "YouTube",
       "url": "https://www.youtube.com/watch?v=6zxepoFgqJk",
-      "title": "Two Michelin Star restaurant Shanghai - Bao Li Xuan in Bvlgari Hotel Shanghai 宝丽轩中餐厅",
+      "title": "Two Michelin Star restaurant Shanghai - Bao Li Xuan in Bvlgari Hotel Shanghai",
       "creator": "pop rainbow",
       "published": "2019-03-29",
       "kind": "review",
       "official_account": false,
-      "note": "Description names Bao Li Xuan at Bvlgari Hotel Shanghai; 2019 video, older star wording."
+      "note": "Description names Bao Li Xuan at Bvlgari Hotel Shanghai; 2019 video."
     },
     {
       "venue_id": "DOC-A03",
@@ -562,7 +606,7 @@
       "published": "2023-09-24",
       "kind": "activity POV",
       "official_account": false,
-      "note": "Fetched post describes the Shanghai Tower 118F deck. Its 180 RMB ticket figure is creator-reported, NOT an official price."
+      "note": "Fetched post describes the Shanghai Tower 118F deck; its 180 RMB figure is creator-reported."
     },
     {
       "venue_id": "DOC-A04",
@@ -573,7 +617,84 @@
       "published": "",
       "kind": "official account",
       "official_account": true,
-      "note": "Bio: 'A museum of, and beyond, ancient Chinese art.' Posts cover both branches. Fetched 2026-11-25."
+      "note": "Bio: 'A museum of, and beyond, ancient Chinese art.' Posts cover both branches."
+    },
+    {
+      "venue_id": "BJ-A03",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=wf1GfQbXXqw",
+      "title": "Temple of Heaven Walk, Beijing, China | 4K Walking Tour",
+      "creator": "Ambient Explorers",
+      "published": "2025-07-04",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description and transcript walk the Circular Mound Altar and Hall of Prayer for Good Harvests in Beijing."
+    },
+    {
+      "venue_id": "BJ-A03",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/visitbeijingofficial/",
+      "title": "visitbeijingofficial (@visitbeijingofficial)",
+      "creator": "Beijing Municipal Bureau of Culture and Tourism",
+      "published": "",
+      "kind": "official city tourism account",
+      "official_account": true,
+      "note": "Bio states it is the official account of Beijing Municipal Bureau of Culture and Tourism; posts cover city sights."
+    },
+    {
+      "venue_id": "BJ-A04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=P_PBlU2QGTY",
+      "title": "The Summer Palace: Imperial Garden Walk | 4K Walking Tour",
+      "creator": "Ambient Explorers",
+      "published": "2025-06-23",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description names Summer Palace (颐和园), Beijing; route includes Kunming Lake and Longevity Hill."
+    },
+    {
+      "venue_id": "BJ-A05",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=U0QEroS58iU",
+      "title": "Tiananmen Square & Forbidden City in Autumn | Beijing China in 4K",
+      "creator": "Col Wanders",
+      "published": "2024-09-28",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description starts at Tiananmen Square, Beijing, and lists landmarks along the route."
+    },
+    {
+      "venue_id": "BJ-A09",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=U0QEroS58iU",
+      "title": "Tiananmen Square & Forbidden City in Autumn | Beijing China in 4K",
+      "creator": "Col Wanders",
+      "published": "2024-09-28",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description and chapter 19:27 explicitly identify the National Museum of China on the walking route."
+    },
+    {
+      "venue_id": "VER-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=bqU3WbL6xac",
+      "title": "Shanghai Museum East Branch reopens",
+      "creator": "Shanghai Let's Meet",
+      "published": "2024-06-25",
+      "kind": "local media clip",
+      "official_account": false,
+      "note": "Fetched title, uploader, date and description identify Shanghai Museum East's reopening; no hours or prices claimed."
+    },
+    {
+      "venue_id": "DOC-A05",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=EtE3zNAEQEo",
+      "title": "SHANGHAI 4K: Lost in a Maze of Secret Alleys & Lanes | Tianzifang Walk",
+      "creator": "Pathfinder CN",
+      "published": "2026-02-22",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description and transcript name Tianzifang, 210 Taikang Road, Shanghai."
     }
   ],
   "rejected": [
@@ -617,31 +738,43 @@
       "venue_id": "BJ-A01",
       "platform": "Instagram (stale search result)",
       "url": "https://www.instagram.com/palace_museum/",
-      "reason": "Search snippet showed an account bio, but fetching the URL returned HTTP 404. Not published."
+      "reason": "Search snippet showed a bio, but fetching returned HTTP 404. Not published."
+    },
+    {
+      "venue_id": "BJ-A09",
+      "platform": "Instagram (stale search result)",
+      "url": "https://www.instagram.com/nationalmuseumofchina/",
+      "reason": "Search snippet claimed an official account, but fetching returned HTTP 404. Not published."
     },
     {
       "venue_id": "DOC-R12",
       "platform": "Instagram (wrong city)",
       "url": "https://www.instagram.com/tangcourthk/",
-      "reason": "Fetch/search identify T'ang Court @ The Langham, Hong Kong (three stars) — a different restaurant from the Shanghai two-star venue. Rejected."
+      "reason": "T'ang Court @ The Langham, Hong Kong (three stars) is a different restaurant from Shanghai's two-star venue."
     },
     {
       "venue_id": "DOC-R03",
-      "platform": "YouTube search result (false match)",
+      "platform": "YouTube (false match)",
       "url": "https://www.youtube.com/watch?v=hNDCCVEb8bA",
-      "reason": "Fetched video is about Bund House in Jakarta, Indonesia. The phrase 'first restaurant in Shanghai' is a passing mention. Rejected."
+      "reason": "Fetched video is about Bund House in Jakarta; 'first restaurant in Shanghai' is a passing mention."
     },
     {
       "venue_id": "DOC-R05",
       "platform": "Instagram (unrelated person)",
       "url": "https://www.instagram.com/fredericjaros/",
-      "reason": "Search result is a pastry chef who formerly worked at Da Vittorio Shanghai; not the restaurant's account or a review. Rejected."
+      "reason": "A chef who formerly worked at Da Vittorio Shanghai; not the restaurant's account or a review."
     },
     {
       "venue_id": "DOC-R04",
       "platform": "Instagram (wrong city)",
       "url": "https://www.instagram.com/canton8cambodia/",
-      "reason": "Account is Canton 8 Cambodia, not the Shanghai restaurant. Rejected."
+      "reason": "Account is Canton 8 Cambodia, not the Shanghai restaurant."
+    },
+    {
+      "venue_id": "BJ-A04",
+      "platform": "Instagram (wrong venue)",
+      "url": "https://www.instagram.com/summerpalacesg/",
+      "reason": "The bio describes an authentic Cantonese restaurant in Singapore, not Beijing's imperial garden."
     }
   ]
 }
