@@ -1,0 +1,511 @@
+{
+  "compiled": "2026-11-25",
+  "rule": "A social link is entered only after its YouTube watch page was fetched and read in this session. YouTube search-result pages, guessed deep links and private/deleted videos are never counted. Every row carries an official venue/Guide source link; the social links are third-party coverage, not affiliated with the venue.",
+  "rows": [
+    {
+      "id": "S01",
+      "venue": "Chao Shang Chao (Chaoyang)",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "3 MICHELIN Stars, 2027 edition",
+      "official_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "official_label": "MICHELIN Guide — Beijing all-starred listing",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "not published on the official page read",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=SQ9JzAqNpjY",
+          "title": "What it Takes to Earn 3 Michelin Stars in China",
+          "channel": "The Drunken Sommelier Food Show",
+          "uploaded": "2026-01-16",
+          "length": "16:42",
+          "scope": "Chef interview about this Beijing restaurant; not a full meal review",
+          "evidence": "Description: 'His restaurant, Chao Shang Chao, is located in Beijing.'"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=tIBbLQB8Ueo",
+          "title": "Chao Shan Restaurant | Shanghai China",
+          "channel": "Xellow Travel",
+          "uploaded": "2025-05-24",
+          "length": "2:17",
+          "scope": "Beijing CBD visit and meal review",
+          "evidence": "Description: 'Chao Shang Chao is the newest member of the three-Michelin-star club in China. It is located in Beijing's Central Business District'; menu price ¥1,888 mentioned by the narrator."
+        }
+      ],
+      "flags": [
+        "Video is an interview, not a tasting review.",
+        "Video title says Shanghai but its description locates the restaurant in Beijing; scope judged from the description."
+      ]
+    },
+    {
+      "id": "S02",
+      "venue": "Xin Rong Ji (Xinyuan South Road)",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "3 MICHELIN Stars, 2027 edition",
+      "official_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "official_label": "MICHELIN Guide — Beijing all-starred listing",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "not published on the official page read",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=6SvqIT2SW7M",
+          "title": "Must Visit 3-Michelin Stars Restaurant 'Xin Rong Ji' in Beijing",
+          "channel": "Ana Loh",
+          "uploaded": "2025-02-03",
+          "length": "3:01",
+          "scope": "Beijing branch, short visit/review",
+          "evidence": "Title and description name the Beijing three-star location; viewer note says reservations are by WeChat or phone."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=iKhz-w8cPY8",
+          "title": "WE HAD DINNER AT ONE OF THE BEST RESTAURANTS IN CHINA",
+          "channel": "TheGrefg",
+          "uploaded": "2025-10-20",
+          "length": "26:23",
+          "scope": "Beijing branch, full meal review",
+          "evidence": "Transcript: 'This restaurant is located in the capital of China, in the city of Pekin' and names Xin Rongji."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=T-vm41LO6AA",
+          "title": "Inside China's Michelin Star Factory...",
+          "channel": "Blondie in China",
+          "uploaded": "2026-06-19",
+          "length": "24:59",
+          "scope": "Brand/chain feature filmed mainly in Taizhou; mentions the Beijing three-star branch but is not a review of it",
+          "evidence": "Description: 'Welcome to Xin Rong Ji, China's Michelin star empire... 20 locations across China'; transcript discusses seafood shipped to Beijing."
+        }
+      ],
+      "flags": [
+        "Third video is about the group and its Taizhou supply chain, not the Beijing booking decision."
+      ]
+    },
+    {
+      "id": "S03",
+      "venue": "King's Joy",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "2 MICHELIN Stars, 2027 edition",
+      "official_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/king-s-joy",
+      "official_label": "MICHELIN Guide — King's Joy entry (fetched this session)",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "no opening-hours block found on the fetched Guide page; a 2026 snapshot on the Beijing plan lists Mon–Sun 11:00–22:00 but was not re-fetched here",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=zbi8tSPRDvs",
+          "title": "Is Beijing's 3 Michelin Star Vegetarian Restaurant Worth It? \"King's Joy\"",
+          "channel": "UA Eats",
+          "uploaded": "2024-06-11",
+          "length": "42:01",
+          "scope": "Full meal review at 2 Wudaoying Hutong",
+          "evidence": "Description gives the address and reviews the set menus; the video calls it three-star, which was true in 2024 but not in the current Guide."
+        }
+      ],
+      "flags": [
+        "Star count spoken in the video (3) is out of date; current Guide lists 2 stars."
+      ]
+    },
+    {
+      "id": "S04",
+      "venue": "Lamdre",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "2 MICHELIN Stars, 2027 edition",
+      "official_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "official_label": "MICHELIN Guide — Beijing all-starred listing",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "not published on the official page read",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=2Rsj9Q81qAE",
+          "title": "Inside Asia's Hottest New Restaurant: Lamdre in Beijing",
+          "channel": "The 50 (official 50 Best channel)",
+          "uploaded": "2024-03-04",
+          "length": "2:40",
+          "scope": "Interview and kitchen visit",
+          "evidence": "Description: 'Join us inside Lamdre and meet owner Zhao Jia and head chef Dai Jun'; channel says it is the official 50 Best YouTube channel."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=rj5Erb_3gIo",
+          "title": "A Taste Of Lamdre - Beijing",
+          "channel": "The 50 (official 50 Best channel)",
+          "uploaded": "2024-03-05",
+          "length": "0:58",
+          "scope": "Single-dish feature",
+          "evidence": "Description: 'get a taste of plant-forward culinary excellence and explore one of Lamdre's mouthwatering signature dishes - Tofu!'"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "id": "S05",
+      "venue": "Trb Hutong",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "1 MICHELIN Star, 2027 edition",
+      "official_url": "https://www.trbhutong.com/menu",
+      "official_label": "Trb Hutong — official menu page",
+      "hours": "Mon–Sun 11:30–14:30, 17:30–22:00 (2026 Beijing-plan snapshot)",
+      "hours_exceptions": "",
+      "hours_status": "inherited from the Beijing plan's official-site read; not re-fetched this session",
+      "cost_two": "¥3,882 total for two on the seasonal menu",
+      "cost_basis": "¥1,688 per person + 15% service, from the restaurant's official menu page (inherited, not re-fetched)",
+      "social": [],
+      "flags": [
+        "No new social link verified this session; the Beijing plan links a 2018 CNN video, which was not re-fetched."
+      ]
+    },
+    {
+      "id": "S06",
+      "venue": "Blackswan",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "2 MICHELIN Stars, 2027 edition",
+      "official_url": "https://www.restaurantblackswan.com/",
+      "official_label": "Blackswan — official site (linked from the Beijing plan)",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [],
+      "flags": [
+        "No qualifying review page found in this session; the Beijing plan's link is a YouTube search, not a video."
+      ]
+    },
+    {
+      "id": "S07",
+      "venue": "Jingji",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "2 MICHELIN Stars, 2027 edition",
+      "official_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "official_label": "MICHELIN Guide — Beijing all-starred listing",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [],
+      "flags": [
+        "No qualifying review page found; search results led to hotel videos and to other Beijing restaurants."
+      ]
+    },
+    {
+      "id": "S08",
+      "venue": "Lu Shang Lu",
+      "city": "Beijing",
+      "kind": "Restaurant",
+      "distinction": "2 MICHELIN Stars, 2027 edition",
+      "official_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "official_label": "MICHELIN Guide — Beijing all-starred listing",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [],
+      "flags": [
+        "No qualifying review page found in this session."
+      ]
+    },
+    {
+      "id": "S09",
+      "venue": "Taian Table",
+      "city": "Shanghai",
+      "kind": "Restaurant",
+      "distinction": "3 MICHELIN Stars, 2026 Shanghai/Jiangsu/Zhejiang edition",
+      "official_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/taian-table",
+      "official_label": "MICHELIN Guide — Taian Table entry (from the verified Shanghai plan)",
+      "hours": "",
+      "hours_exceptions": "Official Menu No.55 states the 10-course degustation is fixed and mandatory.",
+      "hours_status": "no hours published on the official pages read",
+      "cost_two": "",
+      "cost_basis": "Core degustation price not published; add-ons only (¥388 / ¥218 / ¥188) per the official menu PDF",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=RYsEUZJSrN8",
+          "title": "IN-DEPTH REVIEW Of Shanghai's ONLY 3 MICHELIN-STAR Restaurant",
+          "channel": "Alexander On The Road",
+          "uploaded": "2026-07-16",
+          "length": "30:08",
+          "scope": "Full in-depth review, Shanghai",
+          "evidence": "Description: 'We visit the city's only 3 Michelin-starred restaurant, Taian Table'; chapter 'Dinner at Taian Table' at 5:14."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=YyhXAggluco",
+          "title": "Tai'an Table 泰安门 | Michelin 3 Star Restaurant in Shanghai, China",
+          "channel": "Go Find Alice",
+          "uploaded": "2022-02-27",
+          "length": "6:13",
+          "scope": "Full meal vlog at Zhenning Road address",
+          "evidence": "Description gives 'No.161, Lane 465, Zhenning Road, Shanghai' and links the restaurant's official site."
+        }
+      ],
+      "flags": [
+        "2022 video describes two 3-star Shanghai restaurants; the current Guide shows one. Star status itself is unchanged."
+      ]
+    },
+    {
+      "id": "S10",
+      "venue": "Fu 1088",
+      "city": "Shanghai",
+      "kind": "Restaurant",
+      "distinction": "1 MICHELIN Star, 2026 edition",
+      "official_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-1088",
+      "official_label": "MICHELIN Guide — Fu 1088 entry (from the verified Shanghai plan)",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "not published on the official pages read",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=TFhzGhR9RNw",
+          "title": "人均1000+还有性价比？最贵的全好评餐厅？半透明的红烧肉？— 上海 福1088",
+          "channel": "特厨隋坡 (Chef SuiiPo)",
+          "uploaded": "2025-09-02",
+          "length": "4:19",
+          "scope": "On-site meal review at the Shanghai restaurant",
+          "evidence": "Title contains '上海 福1088'; transcript names 'Shanghai local cuisine, Fu one zero eight eight' and lists dish prices."
+        }
+      ],
+      "flags": [
+        "Dish prices spoken in the video are not treated as an official menu price for two."
+      ]
+    },
+    {
+      "id": "S11",
+      "venue": "Da Dong (Xuhui)",
+      "city": "Shanghai",
+      "kind": "Restaurant",
+      "distinction": "1 MICHELIN Star, 2026 edition",
+      "official_url": "https://guide.michelin.com/kr/en/shanghai-municipality/shanghai/restaurant/da-dong-xuhui",
+      "official_label": "MICHELIN Guide — Da Dong (Xuhui) entry (from the verified Shanghai plan)",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "not published on the official pages read",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Hlnav3Bwktg",
+          "title": "Famous Da Dong Peking Roast Duck, Shanghai, China",
+          "channel": "Zacc Foodie",
+          "uploaded": "2023-10-08",
+          "length": "6:15",
+          "scope": "Shanghai meal review; exact branch not stated in the video metadata",
+          "evidence": "Title says Shanghai, China; description reviews the roast duck and cooking method."
+        }
+      ],
+      "flags": [
+        "Branch not confirmed; do not assume it is the Xuhui iapm location listed by MICHELIN."
+      ]
+    },
+    {
+      "id": "S12",
+      "venue": "T'ang Court (Shanghai)",
+      "city": "Shanghai",
+      "kind": "Restaurant",
+      "distinction": "2 MICHELIN Stars, 2026 edition",
+      "official_url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+      "official_label": "The Langham Shanghai — official T'ang Court page",
+      "hours": "Lunch 11:30–14:00; dinner 17:30–21:00 (official hotel page, inherited)",
+      "hours_exceptions": "Closed Monday; reserved tables held 15 minutes; smart casual (official hotel page, inherited).",
+      "hours_status": "inherited from the verified Shanghai plan's official-site read; not re-fetched this session",
+      "cost_two": "¥888 classic dim sum lunch for two, or ¥2,288 all-day set menu for two",
+      "cost_basis": "Official Langham set-menu PDF, stated inclusive of service and taxes (inherited, not re-fetched)",
+      "social": [],
+      "flags": [
+        "Search results for 'T'ang Court review' resolve to the Hong Kong three-star branch; no Shanghai-specific video was verified, so this cell is blank."
+      ]
+    },
+    {
+      "id": "S13",
+      "venue": "Palace Museum (Forbidden City)",
+      "city": "Beijing",
+      "kind": "Activity",
+      "distinction": "Attraction",
+      "official_url": "https://intl.dpm.org.cn/visit.html",
+      "official_label": "Palace Museum — official visit page",
+      "hours": "Tue–Sun 08:30–16:30, last entry 15:30, 1 Nov–31 Mar (inherited)",
+      "hours_exceptions": "Closed Mondays except national holidays; no same-day tickets; daily cap 40,000 (inherited).",
+      "hours_status": "inherited from the Beijing plan's official-site read; not re-fetched this session",
+      "cost_two": "¥80 total (2 × ¥40 low-season ticket)",
+      "cost_basis": "¥40 low season 1 Nov–31 Mar per the official visit page, inherited from the Beijing plan",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=yHYT3_xpOSU",
+          "title": "BEIJING 4K: Exploring the 9,999 Room Palace | Forbidden City Walk",
+          "channel": "Pathfinder CN",
+          "uploaded": "2026-03-13",
+          "length": "1:39:19",
+          "scope": "Walking tour with a 'Visitor Tips (Tickets & Hours)' chapter",
+          "evidence": "Description: 'Step inside China's 600 year-old Forbidden City in stunning 4K'; chapter list names the Palace Museum and ticket tips."
+        }
+      ],
+      "flags": [
+        "The video's ticket commentary is not used as a source for hours or price."
+      ]
+    },
+    {
+      "id": "S14",
+      "venue": "Mutianyu Great Wall",
+      "city": "Beijing",
+      "kind": "Activity",
+      "distinction": "Attraction",
+      "official_url": "https://en.mutianyugreatwall.com/",
+      "official_label": "Mutianyu Great Wall — official site",
+      "hours": "Off-season 16 Nov–15 Mar: 08:00–17:30; ticket sales end 16:30 (inherited)",
+      "hours_exceptions": "Check-in 08:00–17:00 in off-season (inherited).",
+      "hours_status": "inherited from the Beijing plan's official-site read; not re-fetched this session",
+      "cost_two": "",
+      "cost_basis": "Ticket and cable-car prices not published on the official English page read by the Beijing plan",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=3HJkn0BRHlk",
+          "title": "GREAT WALL OF CHINA (MUTIANYU): Watch This Before You Go!",
+          "channel": "Greta's Travels",
+          "uploaded": "2024-06-18",
+          "length": "6:31",
+          "scope": "Planning guide and visit report",
+          "evidence": "Description: 'We visited the Mutianyu section of the Great Wall'; transcript covers transport, shuttle and cable car."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ozIZAd5YZuA",
+          "title": "MUTIANYU Great Wall China FULL TOUR REVIEW",
+          "channel": "DRelicious Story 4K",
+          "uploaded": "2026-01-10",
+          "length": "38:55",
+          "scope": "Full 4K tour filmed July 2025",
+          "evidence": "Title and description both name Mutianyu, Beijing."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=z49wo_Zki4U",
+          "title": "Unbelievable Toboggan Ride Down the Great Wall of China",
+          "channel": "Yao Hui",
+          "uploaded": "2025-07-23",
+          "length": "8:33",
+          "scope": "On-site toboggan ride at Mutianyu",
+          "evidence": "Description: 'POV ride on the famous toboggan slide at the Mutianyu section'; hashtag #Mutianyu."
+        }
+      ],
+      "flags": [
+        "Videos were filmed in other seasons; winter operating conditions must be checked against the official site."
+      ]
+    },
+    {
+      "id": "S15",
+      "venue": "Summer Palace (Yiheyuan)",
+      "city": "Beijing",
+      "kind": "Activity",
+      "distinction": "Attraction",
+      "official_url": "http://www.summerpalace-china.com/English/",
+      "official_label": "Summer Palace — official English site (linked from the verified video description)",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "no official page was fetched and read in this session",
+      "cost_two": "",
+      "cost_basis": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ItLhW3AWPps",
+          "title": "SUMMER PALACE IN BEIJING, CHINA | Top 5 things to see and do",
+          "channel": "Journey with Jenny",
+          "uploaded": "2022-05-31",
+          "length": "9:56",
+          "scope": "On-site walking tour",
+          "evidence": "Transcript: 'today i'm taking you to the summer palace in the northwest of beijing'; description links the official site."
+        }
+      ],
+      "flags": [
+        "Hours and price remain blank; the video's spoken 2022 boat price is not used as a verified official price."
+      ]
+    },
+    {
+      "id": "S16",
+      "venue": "Yu Garden",
+      "city": "Shanghai",
+      "kind": "Activity",
+      "distinction": "Attraction",
+      "official_url": "https://www.yugarden.com.cn/page/articleview/message.html",
+      "official_label": "Yu Garden — official visitor information",
+      "hours": "09:00–16:30, entry stops 16:00 (inherited)",
+      "hours_exceptions": "Closed Mondays except statutory holidays; Spring Festival hours announced separately (inherited).",
+      "hours_status": "inherited from the verified Shanghai plan's official-site read; not re-fetched this session",
+      "cost_two": "¥60 total",
+      "cost_basis": "¥30 off-season adult ticket, 1 Dec–31 Mar, per the official visitor page (inherited)",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=mPh-XrrIjMo",
+          "title": "Yu Garden, Shanghai",
+          "channel": "Laowai in Shanghai",
+          "uploaded": "2022-03-05",
+          "length": "14:20",
+          "scope": "On-site garden walk",
+          "evidence": "Transcript: 'This is the Yu Garden, a classical Chinese garden' and describes the visit in Shanghai."
+        }
+      ],
+      "flags": []
+    },
+    {
+      "id": "S17",
+      "venue": "Shanghai Tower — Top of Shanghai Observatory",
+      "city": "Shanghai",
+      "kind": "Activity",
+      "distinction": "Attraction",
+      "official_url": "https://en.shanghaitower.com/shagnhai.html",
+      "official_label": "Shanghai Tower — official English observatory page",
+      "hours": "",
+      "hours_exceptions": "",
+      "hours_status": "not published on the official English page read by the verified Shanghai plan",
+      "cost_two": "",
+      "cost_basis": "not published on the official English page",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=6ssEi4Esd7s",
+          "title": "Shanghai Tower Observatory Tour | 118th Floor Views",
+          "channel": "The Quiet Traveller",
+          "uploaded": "2025-02-10",
+          "length": "17:38",
+          "scope": "Observatory visit",
+          "evidence": "Title names the Shanghai Tower observatory and 118th floor; description: 'Amazing place to visit :)'."
+        }
+      ],
+      "flags": [
+        "No official ticket price or opening hours were found by either this pass or the earlier verified Shanghai plan."
+      ]
+    }
+  ]
+}
