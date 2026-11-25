@@ -83,7 +83,29 @@
   },
   "official_url": "https://www.ottoemezzobombana.com/branch/shanghai/",
   "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana",
-  "videos": [],
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/shorts/1S18-k4lDO4",
+    "title": "Chef Nicolo Rotella's Summer Menu — 2 Michelin Star 8½ Otto e Mezzo BOMBANA Shanghai",
+    "meta": "YouTube Short",
+    "type": "short"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/shorts/1o1ReTjMkP0",
+    "title": "Behind the doors at Otto e Mezzo Bombana Shanghai",
+    "meta": "YouTube Short",
+    "type": "short"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/shorts/WCAnMndg-1s",
+    "title": "The Favs Shanghai Edition: Where Gourmets Eat — 8½ Otto e Mezzo Bombana",
+    "meta": "YouTube Short",
+    "type": "short"
+   }
+  ],
   "sources": [
    {
     "label": "MICHELIN Guide — 8½ Otto e Mezzo Bombana",
@@ -162,7 +184,29 @@
   },
   "official_url": null,
   "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
-  "videos": [],
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=XqRipEUwYOs",
+    "title": "Canton 8 Shanghai, China Review | Most Affordable 2 Michelin Star Restaurant?",
+    "meta": "Oli Eatz · 6:23",
+    "type": "video"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=MerTf4Wl8Gg",
+    "title": "I Tried the World's Cheapest 2-Star Michelin Restaurant",
+    "meta": "Christian Grossi · 22:22",
+    "type": "video"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=5i4wIJx8Bgo",
+    "title": "Maître Kenneth Boon presents Canton 8 in Shanghai",
+    "meta": "wbpstars · 1:55",
+    "type": "video"
+   }
+  ],
   "sources": [
    {
     "label": "MICHELIN Guide — Canton 8 (Huangpu)",
@@ -202,7 +246,29 @@
   },
   "official_url": "https://www.davittorio.com/en/restaurants/da-vittorio-shanghai.html",
   "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
-  "videos": [],
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=gaJsg5lnCvE",
+    "title": "My 27th Birthday Dinner at DA VITTORIO, Shanghai",
+    "meta": "pookpcn · 15:09",
+    "type": "video"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=ctWXi7a-S0E",
+    "title": "Food & wine pairing with Meiyu — #DAVITTORIO #SHANGHAI",
+    "meta": "Meiyu's Wine Pairing · 5:14",
+    "type": "video"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/shorts/GknYBT4BBhw",
+    "title": "TRYING TWO MICHELIN STAR in Shanghai: DA VITTORIO",
+    "meta": "YouTube Short",
+    "type": "short"
+   }
+  ],
   "sources": [
    {
     "label": "MICHELIN Guide — Da Vittorio",
@@ -314,7 +380,15 @@
   },
   "official_url": null,
   "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/imperial-treasure-fine-chinese-cuisine-huangpu",
-  "videos": [],
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=XTPzS4m9ggQ",
+    "title": "This Dim Sum Experience is The Real Imperial Treasure (Shanghai)",
+    "meta": "Black Buddha · 1:08",
+    "type": "video"
+   }
+  ],
   "sources": [
    {
     "label": "MICHELIN Guide — Imperial Treasure Fine Chinese Cuisine",

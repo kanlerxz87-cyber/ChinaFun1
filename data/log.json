@@ -206,9 +206,9 @@
  {
   "date": "2026-11-25",
   "item": "Video links",
-  "claim": "Each listed place has a matching video",
-  "how": "Ran YouTube searches and kept only real result URLs",
-  "result": "Verified links collected for 4 of 12 restaurants and 2 of 5 activities (Taian Table, Fu He Hui, Yu Garden, Shanghai Tower). Remaining rows left blank and flagged.",
+  "claim": "Each listed place should carry a social-video link",
+  "how": "Ran one YouTube search per venue and kept only result URLs whose title/description named the venue AND the city; same-name restaurants in Hong Kong, London and Guangzhou were rejected",
+  "result": "Verified links now exist for 6 of 12 restaurants and 3 of 5 activities (17 + 8 URLs: Taian Table, Fu He Hui, 8½ Otto e Mezzo, Canton 8, Da Vittorio, Imperial Treasure; Yu Garden, Shanghai Tower, The Bund). The other rows stay blank and are on Flagged for Review — TikTok and Instagram were unreachable from this environment.",
   "source": {
    "label": "YouTube search results",
    "url": "https://www.youtube.com/results?search_query=Taian+Table+Shanghai+michelin",

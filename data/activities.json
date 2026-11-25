@@ -7,7 +7,22 @@
   "hours": "",
   "closed": "",
   "official_url": null,
-  "videos": [],
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=YqK30WIIvuU",
+    "title": "Shanghai The Bund Night Walk 4K｜ROCKBUND｜Yuyuan Mall｜Suzhou Creek",
+    "meta": "Tour Walking · 1:54:56",
+    "type": "video"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=JzqsCnefpWk",
+    "title": "4K Walking Shanghai at Night | From Nanjing Road to The Bund",
+    "meta": "World Wanderings · 1:45:01",
+    "type": "video"
+   }
+  ],
   "sources": [
    {
     "label": "OpenStreetMap — Bund location",
@@ -18,8 +33,7 @@
    }
   ],
   "flags": [
-   "No official operator page reached, so opening hours and 'free entry' are not asserted here.",
-   "No verified video link yet."
+   "No official operator page reached, so opening hours and 'free entry' are not asserted here."
   ]
  },
  {

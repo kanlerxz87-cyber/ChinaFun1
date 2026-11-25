@@ -19,7 +19,7 @@
 | 6 | Michelin-cluster ranking of hotels (<=60 min model) | done (computed at render time) | 68e13071 | `data/methodology.json`, `build.py` |
 | 7 | Restaurant hours / closures / price-for-two verification | **partial** — hours 3/12, prices 0/12 (see `data/flagged.json`) | 68e13071 | `data/restaurants.json` |
 | 8 | Activities (tickets, hours, official links) | **partial** — links yes, tickets/hours unverified | 68e13071 | `data/activities.json` |
-| 9 | Social video links per item | **partial** — 4/12 restaurants, 2/5 activities | 68e13071 | inline `videos` arrays |
+| 9 | Social video links per item | **partial** — 6/12 restaurants (17 links), 3/5 activities (8 links); TikTok/Instagram unreachable | 68e13071 | inline `videos` arrays |
 | 10 | Executive summary, questions, suggestions, review log | done | 68e13071 | `data/meta.json`, `questions.json`, `suggestions.json`, `log.json` |
 | 11 | Final integration: re-verify, build, publish to GitHub Pages | in progress | 68e13071 | `docs/` publish |
 

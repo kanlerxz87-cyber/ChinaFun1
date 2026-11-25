@@ -132,10 +132,10 @@
   }
  },
  {
-  "item": "The Bund, Shanghai Museum, Tianzifang + 8 restaurants",
+  "item": "6 restaurants (Bao Li Xuan, Ji Pin Court, Tou Zao, The House of Rong, Amazing Chinese Cuisine, T'ang Court) + 2 activities (Shanghai Museum, Tianzifang)",
   "field": "Video links",
-  "why": "No verified YouTube/TikTok/Instagram link captured yet; guessing URLs would put dead links on the site.",
-  "next_step": "Run the video pass: one search per row, keep only URLs that resolve.",
+  "why": "Video links were added for 6 of 12 restaurants and 3 of 5 activities (17 + 8 links, all taken from YouTube search result pages and tied to the correct venue and city). The remaining rows have no link yet: search results for these names were dominated by same-name venues in Hong Kong, London or Guangzhou, and a wrong-city video is worse than no video.",
+  "next_step": "Search each remaining name with a Shanghai disambiguator (e.g. \"Ji Pin Court 55 Wulumuqi Road\" / the Chinese name), open the result to confirm the address appears in the description, then add. TikTok/Instagram were not reachable from this environment at all.",
   "source": {
    "label": "YouTube search results",
    "url": "https://www.youtube.com/results?search_query=Shanghai+Bund",

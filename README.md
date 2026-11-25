@@ -53,7 +53,7 @@ python3 build.py && python3 check.py
   Selected tiers; hotel room-level 7-night totals for the preferred window; a five-window price sweep; T'ang Court and
   8½/Da Vittorio opening hours; Chinese New Year 2027 dates; coordinates for 4 hotels and 11 restaurants.
 * **Not verified (flagged):** menu prices for two at every starred restaurant, hours for 9 of 12 restaurants,
-  attraction ticket prices and hours, live journey times, video links for 8 restaurants and 3 activities,
+  attraction ticket prices and hours, live journey times, video links for 6 restaurants and 2 activities,
   the full 38-row one-star list.
 * **Known irregularities:** `102 House` (article vs listing), Bib Gourmand count 33 vs 35, two hotels not bookable for
   the preferred window, and a slug collision on Booking.com where `the-middle-house` resolves to *Upper House Shanghai*.
