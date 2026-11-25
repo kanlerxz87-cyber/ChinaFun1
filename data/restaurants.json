@@ -1,0 +1,539 @@
+[
+ {
+  "id": "taian-table",
+  "name": "Taian Table",
+  "name_local": "泰安门",
+  "tier": "3",
+  "tier_label": "Three MICHELIN Stars (2026)",
+  "cuisine": "Innovative",
+  "district": "Changning",
+  "address": "101-102, Building No. 1, Garden Office, 161 Lane 465 Zhenning Road, Changning",
+  "lat": 31.2238977,
+  "lon": 121.4281783,
+  "coord_note": "Coordinate published by MICHELIN on its own page",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only (¥¥¥¥ = 'spare no expense' on MICHELIN's own scale). Menu price not published on the MICHELIN page we could read.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": null,
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/taian-table",
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=JNpZw1f49TY",
+    "title": "Taian Table Shanghai, China Review | The Best Meal I've Ever Had",
+    "meta": "Oli Eatz"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=9FbSPG4We0M",
+    "title": "I Went to CHINA for This Restaurant - Taian Table (Shanghai)",
+    "meta": "Alexander The Guest"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=RYsEUZJSrN8",
+    "title": "In-depth review of Shanghai's only 3 Michelin-star restaurant",
+    "meta": "Alexander On The Road"
+   }
+  ],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Taian Table",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/taian-table",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening days/hours not published on the MICHELIN page; must be confirmed directly before scheduling a dinner.",
+   "Menu price for two not confirmed from an official source."
+  ]
+ },
+ {
+  "id": "8-otto",
+  "name": "8½ Otto e Mezzo Bombana",
+  "name_local": "",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Italian",
+  "district": "Huangpu",
+  "address": "6-7F, Associate Mission Building, 169 Yuanmingyuan Road, Huangpu",
+  "lat": 31.2445355,
+  "lon": 121.4835995,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only; lunch set menu is advertised by the restaurant but no price was read from an official page.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "Mon 18:00–21:00 · Tue–Sun 12:00–13:30 and 18:00–21:00",
+   "closed": "",
+   "status": "MICHELIN page",
+   "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana"
+  },
+  "official_url": "https://www.ottoemezzobombana.com/branch/shanghai/",
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — 8½ Otto e Mezzo Bombana",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Menu price for two not confirmed from an official source."
+  ]
+ },
+ {
+  "id": "bao-li-xuan",
+  "name": "Bao Li Xuan",
+  "name_local": "",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Cantonese",
+  "district": "Jing'an",
+  "address": "3F, Chamber of Commerce Shanghai, Lane 108, North Shanxi Road, Jing'an",
+  "lat": 31.2466259,
+  "lon": 121.4756575,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": "https://www.bulgarihotels.com/en_US/shanghai/dining/chinese-fine-dining-restaurant",
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/bao-li-xuan",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Bao Li Xuan",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/bao-li-xuan",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "canton-8",
+  "name": "Canton 8 (Huangpu)",
+  "name_local": "",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Cantonese",
+  "district": "Huangpu",
+  "address": "63 Runan Street, Huangpu",
+  "lat": 31.204624,
+  "lon": 121.4792632,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only (¥¥ = 'a moderate spend').",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": null,
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Canton 8 (Huangpu)",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "da-vittorio",
+  "name": "Da Vittorio",
+  "name_local": "",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Italian",
+  "district": "Huangpu",
+  "address": "3F, N3 Building, The Bund Finance Centre, 600 Zhongshan Dong Er Road, Huangpu",
+  "lat": null,
+  "lon": null,
+  "coord_note": "Address could not be geocoded — excluded from the ≤60 min count",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "Tue–Sun 12:00–13:30 and 18:00–21:30",
+   "closed": "Monday",
+   "status": "MICHELIN page",
+   "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570"
+  },
+  "official_url": "https://www.davittorio.com/en/restaurants/da-vittorio-shanghai.html",
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Da Vittorio",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   },
+   {
+    "label": "Da Vittorio Shanghai — official site (contacts)",
+    "url": "https://www.davittorio.com/en/restaurants/da-vittorio-shanghai.html",
+    "type": "official",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Coordinates not resolved, so this restaurant is left out of every hotel's ≤60 minute count.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "fu-he-hui",
+  "name": "Fu He Hui",
+  "name_local": "福和慧",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Vegetarian",
+  "district": "Changning",
+  "address": "1037 Yuyuan Road, Changning",
+  "lat": 31.2207592,
+  "lon": 121.4188809,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only; set-menu prices circulate in the press but no official price was read.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": null,
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/fu-he-hui",
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=RcjG3JuE-y0",
+    "title": "Fu He Hui Shanghai Review | Is a 2 Michelin Star Vegetarian Tasting Menu Worth It?",
+    "meta": "Oli Eatz"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=RS18ML_iRW0",
+    "title": "Fu He Hui Shanghai — 2 Michelin Stars",
+    "meta": "SongieWorld"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=i_2WMZhuL04",
+    "title": "Shanghai's Black Pearl Guide: Asia's Top 50 Veg Restaurant",
+    "meta": "Bingjie Lin"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/shorts/7APfxnHcnMw",
+    "title": "$200 For Michelin Star Vegetables, Worth It? (Fu He Hui)",
+    "meta": "266K views"
+   }
+  ],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Fu He Hui",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/fu-he-hui",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "imperial-treasure",
+  "name": "Imperial Treasure Fine Chinese Cuisine",
+  "name_local": "御宝轩",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Cantonese",
+  "district": "Huangpu",
+  "address": "L402-403, 4F, Yi Feng Galleria, 99 East Beijing Road, Huangpu",
+  "lat": 31.2409584,
+  "lon": 121.4741249,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": null,
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/imperial-treasure-fine-chinese-cuisine-huangpu",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Imperial Treasure Fine Chinese Cuisine",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/imperial-treasure-fine-chinese-cuisine-huangpu",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "ji-pin-court",
+  "name": "Ji Pin Court",
+  "name_local": "",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Cantonese",
+  "district": "Xuhui",
+  "address": "3F, 55 South Wulumuqi Road, Xuhui",
+  "lat": 31.2104493,
+  "lon": 121.4432771,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": null,
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/ji-pin-court",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Ji Pin Court",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/ji-pin-court",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "house-of-rong",
+  "name": "The House of Rong",
+  "name_local": "荣府宴",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Taizhou",
+  "district": "Jing'an",
+  "address": "170 Nanyang Road, Jing'an",
+  "lat": 31.2303725,
+  "lon": 121.4483659,
+  "coord_note": "Street-level OpenStreetMap geocode (±1 km)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only; the group advertises an 'all-inclusive' menu but no price was read.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": "https://www.xinrongji.com/list",
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/the-house-of-rong",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — The House of Rong",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/the-house-of-rong",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed."
+  ]
+ },
+ {
+  "id": "tou-zao",
+  "name": "Tou Zao",
+  "name_local": "头灶",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Cantonese",
+  "district": "Jing'an",
+  "address": "Shop 211, East Wing, Shanghai Centre, 1376 West Nanjing Road, Jing'an",
+  "lat": 31.2286708,
+  "lon": 121.4466454,
+  "coord_note": "Building-level point (OpenStreetMap POI at the same street address)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": null,
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/tou-zao",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Tou Zao",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/tou-zao",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Menu price for two not confirmed.",
+   "This is a chef's-table style restaurant (MICHELIN 'Chef's Table') — seating may be a single counter, so booking lead time matters."
+  ]
+ },
+ {
+  "id": "amazing-chinese-cuisine",
+  "name": "Amazing Chinese Cuisine (Changning)",
+  "name_local": "菁禧荟",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Chao Zhou",
+  "district": "Changning",
+  "address": "B5 Villa, 1665 Hongqiao Road, Changning",
+  "lat": 31.1908904,
+  "lon": 121.3503383,
+  "coord_note": "Street-level OpenStreetMap geocode; house number not resolved (~±1 km)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "",
+   "closed": "",
+   "status": "not published on the MICHELIN page",
+   "source": null
+  },
+  "official_url": "https://www.selectionbydu.com/en",
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/amazing-chinese-cuisine-changning",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — Amazing Chinese Cuisine (Changning)",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/amazing-chinese-cuisine-changning",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Opening hours not published on the MICHELIN page.",
+   "Only five private rooms — reservations essential (MICHELIN description)."
+  ]
+ },
+ {
+  "id": "tang-court",
+  "name": "T'ang Court",
+  "name_local": "唐阁",
+  "tier": "2",
+  "tier_label": "Two MICHELIN Stars (2026)",
+  "cuisine": "Cantonese",
+  "district": "Huangpu",
+  "address": "5F, The Langham Xintiandi, 99 Madang Road, Huangpu",
+  "lat": 31.2237257,
+  "lon": 121.4698926,
+  "coord_note": "Building centroid (OpenStreetMap, The Langham Xintiandi)",
+  "price_band": "¥¥¥¥",
+  "price_two_adults": {
+   "basis": "MICHELIN price band only; the hotel publishes a set-menu PDF but the prices were not read into this build.",
+   "status": "unverified"
+  },
+  "hours": {
+   "text": "Lunch 11:30–14:00 daily · Dinner 17:30–21:00 daily",
+   "closed": "Closed Monday",
+   "status": "Hotel's official restaurant page",
+   "source": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/"
+  },
+  "official_url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+  "michelin_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/t-ang-court-506725",
+  "videos": [],
+  "sources": [
+   {
+    "label": "MICHELIN Guide — T'ang Court",
+    "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/t-ang-court-506725",
+    "type": "official-guide",
+    "note": "",
+    "checked": "2026-11-25"
+   },
+   {
+    "label": "The Langham Shanghai — T'ang Court page (hours)",
+    "url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+    "type": "official",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Menu price for two not confirmed from an official source (set-menu PDF exists but was not read)."
+  ]
+ }
+]

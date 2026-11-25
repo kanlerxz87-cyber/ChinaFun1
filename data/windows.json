@@ -1,0 +1,42 @@
+[
+ {
+  "id": "w1",
+  "label": "W1 · Preferred",
+  "checkin": "2027-02-15",
+  "checkout": "2027-02-22",
+  "preferred": true,
+  "note": "Mon→Mon, 7 nights. Two days after the official Spring Festival break (5–13 Feb 2027)."
+ },
+ {
+  "id": "w2",
+  "label": "W2",
+  "checkin": "2027-02-22",
+  "checkout": "2027-03-01",
+  "preferred": false,
+  "note": "Mon→Mon, 7 nights."
+ },
+ {
+  "id": "w3",
+  "label": "W3",
+  "checkin": "2027-03-01",
+  "checkout": "2027-03-08",
+  "preferred": false,
+  "note": "Mon→Mon, 7 nights."
+ },
+ {
+  "id": "w4",
+  "label": "W4",
+  "checkin": "2027-03-08",
+  "checkout": "2027-03-15",
+  "preferred": false,
+  "note": "Mon→Mon, 7 nights."
+ },
+ {
+  "id": "w5",
+  "label": "W5",
+  "checkin": "2027-03-15",
+  "checkout": "2027-03-22",
+  "preferred": false,
+  "note": "Mon→Mon, 7 nights."
+ }
+]

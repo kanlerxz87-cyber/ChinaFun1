@@ -1,0 +1,146 @@
+[
+ {
+  "name": "The Bund (Waitan) waterfront",
+  "type": "Sightseeing / free public waterfront",
+  "district": "Huangpu",
+  "ticket_two_adults_usd": null,
+  "hours": "",
+  "closed": "",
+  "official_url": null,
+  "videos": [],
+  "sources": [
+   {
+    "label": "OpenStreetMap — Bund location",
+    "url": "https://nominatim.openstreetmap.org/search?format=json&q=The%20Bund%20Shanghai",
+    "type": "osm",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "No official operator page reached, so opening hours and 'free entry' are not asserted here.",
+   "No verified video link yet."
+  ]
+ },
+ {
+  "name": "Yu Garden (Yuyuan)",
+  "type": "Classical garden",
+  "district": "Huangpu",
+  "ticket_two_adults_usd": null,
+  "hours": "",
+  "closed": "",
+  "official_url": "https://www.yugarden.com.cn/",
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=5rbE9xE15to",
+    "title": "Why You MUST Visit Yu Garden in Shanghai | A Local's Guide",
+    "meta": "Travel Shanghai Like a Local"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=Ay96PAha8uQ",
+    "title": "Is Visiting Yu Garden in Shanghai REALLY Worth It?",
+    "meta": "Jimmy Visits World"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=K1sloREQ6bI",
+    "title": "The Fabulous Yu Garden Shanghai | Watch this before you go",
+    "meta": "Paul Ifrim"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Yu Garden — official site",
+    "url": "https://www.yugarden.com.cn/",
+    "type": "official",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Ticket price and opening hours not verified — only the official site link is provided.",
+   "Lantern Festival (Sat 20 Feb 2027) falls inside the trip; expect peak crowds in the Yuyuan area."
+  ]
+ },
+ {
+  "name": "Shanghai Tower — 118F observation deck",
+  "type": "Observation deck",
+  "district": "Pudong (Lujiazui)",
+  "ticket_two_adults_usd": null,
+  "hours": "",
+  "closed": "",
+  "official_url": "https://en.shanghaitower.com/",
+  "videos": [
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=kp04RPUOJ_c",
+    "title": "Shanghai Tower - Highest Observation Deck - 118th Floor",
+    "meta": "WanderFit with Kazi"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/watch?v=ujsLgyOJYeo",
+    "title": "Inside the Shanghai Tower: High-Speed Elevator & 118th Floor Views",
+    "meta": "Travel Around The World"
+   },
+   {
+    "platform": "youtube",
+    "url": "https://www.youtube.com/shorts/qb1sZXiQML4",
+    "title": "55 seconds to the 118th floor, Shanghai Observation Deck",
+    "meta": "2K views"
+   }
+  ],
+  "sources": [
+   {
+    "label": "Shanghai Tower — official site",
+    "url": "https://en.shanghaitower.com/",
+    "type": "official",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Ticket price and hours not verified from the official site (home page only was readable)."
+  ]
+ },
+ {
+  "name": "Shanghai Museum (People's Square)",
+  "type": "Museum",
+  "district": "Huangpu",
+  "ticket_two_adults_usd": null,
+  "hours": "",
+  "closed": "",
+  "official_url": "https://www.shanghaimuseum.net/",
+  "videos": [],
+  "sources": [
+   {
+    "label": "Shanghai Museum — official site (returned HTTP 500 when read)",
+    "url": "https://www.shanghaimuseum.net/",
+    "type": "official",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Official site returned HTTP 500 on 2026-11-25 — free-admission/reservation rules NOT verified.",
+   "No verified video link yet."
+  ]
+ },
+ {
+  "name": "Tianzifang (Taikang Road lanes)",
+  "type": "Neighbourhood / shopping lanes",
+  "district": "Huangpu",
+  "ticket_two_adults_usd": null,
+  "hours": "",
+  "closed": "",
+  "official_url": null,
+  "videos": [],
+  "sources": [],
+  "flags": [
+   "No official page reached — hours, entry and current status unverified.",
+   "No verified video link yet."
+  ]
+ }
+]
