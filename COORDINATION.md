@@ -24,8 +24,8 @@ Session ID: `session-3f9a2c41` (this session).
 | T6 | Site: hotels subpage + table | unclaimed | — | site/hotels.html |
 | T7 | Site: restaurants subpage + table | unclaimed | — | site/restaurants.html |
 | T8 | Site: activities subpage + table | unclaimed | — | site/activities.html |
-| T9 | Site: executive summary page | unclaimed | — | site/summary.html |
-| T10 | Site: questions & suggestions pages | unclaimed | — | site/questions.html, site/suggestions.html |
+| T9 | Site: executive summary page | done | session-3f9a2c41 | site/summary.html |
+| T10 | Site: questions & suggestions pages | done | session-3f9a2c41 | site/questions.html, site/suggestions.html, site/flagged-review.html |
 | T12 | Site: Flagged-for-Review page | unclaimed | — | site/flagged-review.html |
 | T13 | Verification pass of all tables (official sources, blanks flagged) | unclaimed | — | data/*, site/* |
 | T14 | Build & publish to GitHub Pages | unclaimed | — | site/, gh-pages branch |

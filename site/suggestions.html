@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions — Trip Planning China</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><h1>Suggestions &amp; Review Section</h1><nav><a href="index.html">Home</a> <a href="suggestions.html">Suggestions</a></nav></header>
+<main>
+  <section class="card">
+    <h2>Suggestions to improve decision-making</h2>
+    <ul class="bullets">
+      <li><strong>Heat map of Michelin density vs budget per hotel.</strong> Add a ranking page. Score = starred-restaurant count within ~1h (approx.) + per-star multipliers — first review the approximations on <a href="hotels.html">Hotels</a>.</li>
+      <li><strong>Booking-timeline check.</strong> For each of the top-3 hotels per city, fetch Booking.com pages with 3 different dates (Feb 15, Mar 1, Mar 8) and compare totals — best "cheapest time" evidence.</li>
+      <li><strong>Day-by-day itinerary.</strong> Draft a 14-day timeline (3 nights Livefortuna/Hotel Éclat + 11 nights Shanghai) with activities, restaurants, transport from hotels. First collect preferences on <a href="questions.html">Questions</a>.</li>
+      <li><strong>Verify queen-bed rooms.</strong> For Livefortuna (official says "1 queen-size bed") and Andaz Xintiandi (add "queen room" to itinerary; currently flagged), review with hotel owners/Booking.com filters before deciding.</li>
+      <li><strong>Budget checks for restaurants.</strong> Fetch restaurant booking pages (guide.michelin.com) or Tripadvis/Booking.com for the 8 starred restaurants to confirm price ranges — many marked "flag".</li>
+      <li><strong>Create a comparison table.</strong> Ranking: Livefortuna (Beijing, ~3 starred), Hotel Éclat Beijing (Dongcheng), NUO (none flagged), The Langham Xintiandi (Shanghai, 2 starred), Andaz Xintiandi, InterContinental Ruijin — compare on: Michelin density, price, quirkiness, location vs activities.</li>
+      <li><strong>Timeline question list.</strong> Before implementing, review with the couple (see <a href="questions.html">Questions &amp; Info Gaps</a>).</li>
+    </ul>
+  </section>
+  <section class="card" id="review">
+    <h2>Review — Choose the best path before implementing</h2>
+    <p class="muted">Decide: (1) which hotel ranking formula, (2) whether to extend with a day-by-day itinerary, (3) which restaurants to confirm prices for. Options marked <span class="flag">flag</span> are unverified; see <a href="flagged-review.html">Flagged for Review</a>.</p>
+    <table>
+      <thead><tr><th>Option</th><th>Pros</th><th>Cons/Risks</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Use current hotel rankings (3 per city)</td><td>Verified data, simple</td><td>Some flags</td><td>Review flags at <a href="flagged-review.html">Flagged for Review</a></td></tr>
+        <tr><td>Ranking by star-density only</td><td>Simple scoring</td><td>Ignores other preferences (Q1)</td><td>Review <a href="questions.html">Q1</a> first</td></tr>
+        <tr><td>Add day-by-day itinerary first</td><td>Maximizes value of suggestions</td><td>Extra tokens; collect Q2–Q8 first</td><td>Review <a href="questions.html">Q2–Q8</a> first</td></tr>
+        <tr><td>Skip itinerary; keep static trip info</td><td>Fast, verified</td><td>Misses value add</td><td>Decision to note</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+<footer class="small">Review choices before implementing. Flagged items live on <a href="flagged-review.html">Flagged for Review</a>.</footer>
+</body>
+</html>
