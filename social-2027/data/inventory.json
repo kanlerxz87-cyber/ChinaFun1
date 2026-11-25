@@ -1,0 +1,3247 @@
+{
+  "built": "2026-11-25",
+  "session": "c2067093",
+  "method": "Verbatim extraction from four existing plan data files; rows merged only on exact normalised venue name within a city. No value inferred.",
+  "source_plan_files": [
+    "assets/data.js",
+    "data/restaurants.json",
+    "data/activities.json",
+    "shanghai-2027/data/michelin-restaurants.json",
+    "shanghai-2027/data/activities.json",
+    "shanghai-verified-2027/data/michelin.csv",
+    "shanghai-verified-2027/data/activities.csv"
+  ],
+  "counts": {
+    "raw_rows": 106,
+    "unique_venues": 83
+  },
+  "venues": [
+    {
+      "id": "BJ-R01",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Chao Shang Chao (Chaoyang)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "3 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "L406B, 4F, CP Center, 20 Jinhe East Road, Chaoyang",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/chao-shang-chao",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=Chao+Shang+Chao+Beijing+michelin",
+          "label": "YouTube search",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Hours not published on the MICHELIN page. Book direct — restaurant manages its own reservations.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R01",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R02",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Xin Rong Ji (Xinyuan South Road)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "3 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "1F, East Tower, Genesis Beijing, 8 Xinyuan South Road, Chaoyang",
+      "official_url": "https://www.xinrongji.com/",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/xin-rong-ji-xinyuan-south-road",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=6SvqIT2SW7M",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Hours not published on the MICHELIN page. Menu prices not published on an official page in this pass.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R02",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R03",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Blackswan",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "2 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "1F, Luohong Art Museum, 89 Capital Airport Road, Shunyi",
+      "official_url": "https://www.restaurantblackswan.com/",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/blackswan",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=Blackswan+restaurant+Beijing+Luohong+Art+Museum",
+          "label": "YouTube search",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Shunyi / Airport Road — this is outside the central dining core, so it is treated separately in the ≤1 h analysis.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R03",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R04",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Jingji",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "2 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "2F, The Ritz-Carlton Hotel, 83A Jianguo Road, Chaoyang",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/jingji",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=Jingji+restaurant+Ritz+Carlton+Beijing+michelin",
+          "label": "YouTube search",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Hours not published on the MICHELIN page.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R04",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R05",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "King's Joy",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "2 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "2 Wudaoying Hutong, Dongcheng",
+      "official_url": "https://www.kingsjoy.com/",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/king-s-joy",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=TTfH0qd79aE",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "Mon–Sun 11:00–22:00",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Video is from 2024 and describes the restaurant as 3-star; the current 2027 MICHELIN status is Two Stars.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R05",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R06",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Lamdre",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "2 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "Room 04, 1F, Block 14, Courtyard 4, Gongti North Road, Chaoyang",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lamdre",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=Lamdre+Beijing+vegan+michelin",
+          "label": "YouTube search",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Hours not published on the MICHELIN page. Restaurant manages its own bookings.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R06",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R07",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Lu Shang Lu",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "2 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "2A01-2A13, 2F, Sunshine Financial Center Tower 1, 33 Jinghui Street, Chaoyang",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lu-shang-lu",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=Lu+Shang+Lu+Beijing+Shandong+michelin",
+          "label": "YouTube search",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Hours not published on the MICHELIN page.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R07",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R08",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Cai Yi Xuan",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/cai-yi-xuan",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R08",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R09",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Chao Shang Chao (Xicheng)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/chao-shang-chao-xicheng",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R09",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R10",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Chef 1996",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/chef-1996",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Promoted from MICHELIN Selected to One Star in the 2027 edition.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R10",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R11",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Fu Chun Ju",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/fu-chun-ju",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R11",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R12",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Furong",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/furong",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R12",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R13",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Gastro Esthetics DaDong",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/gastro-esthetics-dadong",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R13",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R14",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Giada Garden",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/giada-garden",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R14",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R15",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Il Ristorante – Niko Romito",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/il-ristorante-niko-romito-1186723",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R15",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R16",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Lei Garden (Jinbao Tower)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lei-garden-jinbao-tower",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R16",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R17",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Lu Style (Anding Road)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lu-style",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R17",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R18",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Mansion Cuisine by Jingyan",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mansion-cuisine-by-jingyan",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R18",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R19",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "MO Jasmine",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mo-jasmine",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R19",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R20",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Old Tower",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/old-tower",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "New entry: joined the Guide directly with One Star in 2027. Chef Talib Hudda.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R20",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R21",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Poetry·Wine (Dongsanhuan Middle Road)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/poetry%E2%80%A7wine",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R21",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R22",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Rong Pao",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/rong-pao",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R22",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R23",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Seventh Son",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/seventh-son-1186794",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R23",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R24",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Shanghai Cuisine",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/shanghai-cuisine",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R24",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R25",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Sheng Yong Xing (Chaoyang)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/sheng-yong-xing-chaoyang",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "District taken from the restaurant name as published by MICHELIN; full address not captured in this pass.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R25",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R26",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "The Beijing Kitchen (Jianguo Road)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/the-beijing-kitchen",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R26",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R27",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "The Georg",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/the-georg",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R27",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R28",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "The House of Dynasties",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/the-house-of-dynasties",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R28",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R29",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Trb Hutong",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥¥",
+      "address": "23 Shatan North Street, Dongcheng",
+      "official_url": "https://www.trbhutong.com/",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/trb-hutong",
+      "social": [
+        {
+          "platform": "Other",
+          "url": "https://edition.cnn.com/videos/travel-play/2018/06/22/trb-hutong-beijing-china.cnn",
+          "label": "CNN video",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "Mon–Sun 11:30–14:30, 17:30–22:00",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "Weekday lunch ¥788 pp · Seasonal ¥1,688 pp · Signature ¥2,288 pp (+15% service). Two on Seasonal = ¥3,376 + 15% = ¥3,882",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Menu prices read from the restaurant's own menu page on 25 Nov 2026; +15% service charge applies.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R29",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R30",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Xin Rong Ji (Jianguomenwai Street)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "5F, Tower A, Yintai Centre, 2 Jianguomenwai Street, Chaoyang",
+      "official_url": "https://www.xinrongji.com/",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/xin-rong-ji-jianguomenwai-street",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R30",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R31",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Xin Rong Ji (Jinrong Street)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "B1, International Finance Centre, 11 Jinrong Street, Xicheng",
+      "official_url": "https://www.xinrongji.com/",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/xin-rong-ji-jinrong-street",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R31",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R32",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Zhiguan Courtyard",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zhiguan",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R32",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-R33",
+      "city": "Beijing",
+      "kind": "restaurant",
+      "name": "Zijin Mansion",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "1 MICHELIN star",
+      "price_band": "¥¥¥",
+      "address": "",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-R33",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A01",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Palace Museum (Forbidden City)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "https://intl.dpm.org.cn/visit.html",
+      "guide_url": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=yHYT3_xpOSU",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=d972yZ8bcx4",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Lr-jVXDSyY0",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "Tue–Sun 8:30–16:30, last entry 15:30 (1 Nov–31 Mar). Closed Mondays, except national holidays and Chinese New Year's Eve.",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "¥40 low season (1 Nov–31 Mar) · Treasure Gallery +¥10 · Gallery of Clocks +¥10",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "No same-day tickets. Daily cap 40,000. Passport number required for foreign visitors.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A01",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A02",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Mutianyu Great Wall",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "https://en.mutianyugreatwall.com/",
+      "guide_url": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=z49wo_Zki4U",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=kU9huPVdVlM",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=D9gdGqZ0Pc0",
+          "label": "YouTube",
+          "origin": "fac6d965/assets/data.js"
+        }
+      ],
+      "hours": {
+        "text": "Off-season 16 Nov–15 Mar: 8:00–17:30, ticket sales end 16:30, check-in 8:00–17:00.",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Ticket and cable-car prices were not published on the English page read in this pass — check the booking page.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A02",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A03",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Temple of Heaven Park",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Hours and ticket price not yet verified against an official page.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A03",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A04",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Summer Palace (Yiheyuan)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Not yet verified against an official page. It is a 60-minute-plus trip from the Wangfujing hotels — verify before scheduling.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A04",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A05",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Tiananmen Square",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Advance real-name reservation is reported to be required; not verified in this pass.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A05",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A06",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Yonghe Temple (Lama Temple)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Not yet verified. Adjacent to King's Joy (2★), so it pairs naturally with lunch.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A06",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A07",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "798 Art Zone",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Not yet verified against an official page.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A07",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A08",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Nanluoguxiang / hutong walk",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Public street, no ticket. Not an official source item.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A08",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A09",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "National Museum of China",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Free admission is reported but not verified in this pass; reservation rules need checking.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A09",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "BJ-A10",
+      "city": "Beijing",
+      "kind": "activity",
+      "name": "Jingshan Park (Prospect Hill)",
+      "plan": "fac6d965 (root)",
+      "source_file": "assets/data.js",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "assets/data.js"
+      },
+      "plan_note": "Best rooftop view of the Forbidden City; hours not verified in this pass.",
+      "plan_refs": [
+        {
+          "plan": "fac6d965 (root)",
+          "id": "BJ-A10",
+          "source_file": "assets/data.js"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R01",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Taian Table",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Three MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "101-102, Building No. 1, Garden Office, 161 Lane 465 Zhenning Road, Changning",
+      "official_url": "https://sh.taian-table.cn/",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/taian-table",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=JNpZw1f49TY",
+          "label": "Taian Table Shanghai, China Review | The Best Meal I've Ever Had",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=9FbSPG4We0M",
+          "label": "I Went to CHINA for This Restaurant - Taian Table (Shanghai)",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=RYsEUZJSrN8",
+          "label": "In-depth review of Shanghai's only 3 Michelin-star restaurant",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/shorts/1Z01UZSP8-w",
+          "label": "How many times did you have scrambled eggs in a 3-star restaurant?",
+          "origin": "3b27db6c/data/activities.json"
+        }
+      ],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "Seasonal menu changes every few weeks; Menu No.55 is the version published on the official site as of capture.",
+        "source": "https://sh.taian-table.cn/",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only (¥¥¥¥ = 'spare no expense' on MICHELIN's own scale). Menu price not published on the MICHELIN page we could read.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening days/hours not published on the MICHELIN page; must be confirmed directly before scheduling a dinner.; Menu price for two not confirmed from an official source.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R01",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R01",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-A04",
+          "source_file": "shanghai-2027/data/activities.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R01",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R02",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "8½ Otto e Mezzo Bombana",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "6-7F, Associate Mission Building, 169 Yuanmingyuan Road, Huangpu",
+      "official_url": "https://www.ottoemezzobombana.com/branch/shanghai/",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/shorts/1S18-k4lDO4",
+          "label": "Chef Nicolo Rotella's Summer Menu — 2 Michelin Star 8½ Otto e Mezzo BOMBANA Shanghai",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/shorts/1o1ReTjMkP0",
+          "label": "Behind the doors at Otto e Mezzo Bombana Shanghai",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/shorts/WCAnMndg-1s",
+          "label": "The Favs Shanghai Edition: Where Gourmets Eat — 8½ Otto e Mezzo Bombana",
+          "origin": "68e13071/data/restaurants.json"
+        }
+      ],
+      "hours": {
+        "text": "Mon 18:00–21:00 · Tue–Sun 12:00–13:30 and 18:00–21:00",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only; lunch set menu is advertised by the restaurant but no price was read from an official page.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Menu price for two not confirmed from an official source.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R02",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R02",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R03",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Bao Li Xuan",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "3F, Chamber of Commerce Shanghai, Lane 108, North Shanxi Road, Jing'an",
+      "official_url": "https://www.bulgarihotels.com/en_US/shanghai/dining/chinese-fine-dining-restaurant",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/bao-li-xuan",
+      "social": [],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R03",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R04",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R04",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Canton 8 (Huangpu)",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥",
+      "address": "63 Runan Street, Huangpu",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=XqRipEUwYOs",
+          "label": "Canton 8 Shanghai, China Review | Most Affordable 2 Michelin Star Restaurant?",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=MerTf4Wl8Gg",
+          "label": "I Tried the World's Cheapest 2-Star Michelin Restaurant",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=5i4wIJx8Bgo",
+          "label": "Maître Kenneth Boon presents Canton 8 in Shanghai",
+          "origin": "68e13071/data/restaurants.json"
+        }
+      ],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only (¥¥ = 'a moderate spend').",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R04",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R12",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R05",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Da Vittorio",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "3F, N3 Building, The Bund Finance Centre, 600 Zhongshan Dong Er Road, Huangpu",
+      "official_url": "https://www.davittorio.com/en/restaurants/da-vittorio-shanghai.html",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=gaJsg5lnCvE",
+          "label": "My 27th Birthday Dinner at DA VITTORIO, Shanghai",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=ctWXi7a-S0E",
+          "label": "Food & wine pairing with Meiyu — #DAVITTORIO #SHANGHAI",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/shorts/GknYBT4BBhw",
+          "label": "TRYING TWO MICHELIN STAR in Shanghai: DA VITTORIO",
+          "origin": "68e13071/data/restaurants.json"
+        }
+      ],
+      "hours": {
+        "text": "Tue–Sun 12:00–13:30 and 18:00–21:30",
+        "closed": "Monday",
+        "exceptions": "",
+        "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Coordinates not resolved, so this restaurant is left out of every hotel's ≤60 minute count.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R05",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R08",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R06",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Fu He Hui",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "1037 Yuyuan Road, Changning",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/fu-he-hui",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=RcjG3JuE-y0",
+          "label": "Fu He Hui Shanghai Review | Is a 2 Michelin Star Vegetarian Tasting Menu Worth It?",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=RS18ML_iRW0",
+          "label": "Fu He Hui Shanghai — 2 Michelin Stars",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=i_2WMZhuL04",
+          "label": "Shanghai's Black Pearl Guide: Asia's Top 50 Veg Restaurant",
+          "origin": "68e13071/data/restaurants.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/shorts/7APfxnHcnMw",
+          "label": "$200 For Michelin Star Vegetables, Worth It? (Fu He Hui)",
+          "origin": "68e13071/data/restaurants.json"
+        }
+      ],
+      "hours": {
+        "text": "Mon–Sun 11:00–13:00 and 17:30–21:00",
+        "closed": "None listed (open 7 days per MICHELIN Guide)",
+        "exceptions": "",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-he-hui",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only; set-menu prices circulate in the press but no official price was read.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R06",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R03",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R07",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Imperial Treasure Fine Chinese Cuisine",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥",
+      "address": "L402-403, 4F, Yi Feng Galleria, 99 East Beijing Road, Huangpu",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/imperial-treasure-fine-chinese-cuisine-huangpu",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=XTPzS4m9ggQ",
+          "label": "This Dim Sum Experience is The Real Imperial Treasure (Shanghai)",
+          "origin": "68e13071/data/restaurants.json"
+        }
+      ],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R07",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R09",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R08",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Ji Pin Court",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥",
+      "address": "3F, 55 South Wulumuqi Road, Xuhui",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/ji-pin-court",
+      "social": [],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ji-pin-court",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R08",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R07",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R03",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R09",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "The House of Rong",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "170 Nanyang Road, Jing'an",
+      "official_url": "https://www.xinrongji.com/list",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/the-house-of-rong",
+      "social": [],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only; the group advertises an 'all-inclusive' menu but no price was read.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R09",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R11",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R10",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Tou Zao",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "Shop 211, East Wing, Shanghai Centre, 1376 West Nanjing Road, Jing'an",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/tou-zao",
+      "social": [],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Menu price for two not confirmed.; This is a chef's-table style restaurant (MICHELIN 'Chef's Table') — seating may be a single counter, so booking lead time matters.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R10",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R06",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R11",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Amazing Chinese Cuisine (Changning)",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "B5 Villa, 1665 Hongqiao Road, Changning",
+      "official_url": "https://www.selectionbydu.com/en",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/amazing-chinese-cuisine-changning",
+      "social": [],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Opening hours not published on the MICHELIN page.; Only five private rooms — reservations essential (MICHELIN description).",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R11",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R10",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "DOC-R12",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "T'ang Court",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/restaurants.json",
+      "distinction": "Two MICHELIN Stars (2026)",
+      "price_band": "¥¥¥¥",
+      "address": "5F, The Langham Xintiandi, 99 Madang Road, Huangpu",
+      "official_url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/t-ang-court-506725",
+      "social": [],
+      "hours": {
+        "text": "Lunch 11:30–14:00 daily · Dinner 17:30–21:00 daily",
+        "closed": "Closed Monday",
+        "exceptions": "Off on Monday. Reserved tables held only 15 minutes past booking time. Smart casual attire.",
+        "source": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+        "origin": "data/restaurants.json"
+      },
+      "cost": {
+        "text": "MICHELIN price band only; the hotel publishes a set-menu PDF but the prices were not read into this build.",
+        "source": "",
+        "origin": "data/restaurants.json"
+      },
+      "plan_note": "Menu price for two not confirmed from an official source (set-menu PDF exists but was not read).",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-R12",
+          "source_file": "data/restaurants.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R05",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R02",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-A01",
+      "city": "Shanghai",
+      "kind": "activity",
+      "name": "The Bund waterfront",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/activities.json",
+      "distinction": "",
+      "price_band": "",
+      "address": "Zhongshan East 1st Road, Huangpu",
+      "official_url": "https://www.peninsula.com/en/shanghai | https://www.hilton.com/en/hotels/shawawa-waldorf-astoria-shanghai-on-the-bund/hotel-location/",
+      "guide_url": "",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=YqK30WIIvuU",
+          "label": "Shanghai The Bund Night Walk 4K｜ROCKBUND｜Yuyuan Mall｜Suzhou Creek",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=JzqsCnefpWk",
+          "label": "4K Walking Shanghai at Night | From Nanjing Road to The Bund",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/results?search_query=the+bund+shanghai+walking+tour",
+          "label": "Search: The Bund Shanghai walking tour",
+          "origin": "3b27db6c/data/activities.json"
+        }
+      ],
+      "hours": {
+        "text": "UNVERIFIED — no official operator page found. Public promenade; treated as open access, but this is NOT confirmed from an official source.",
+        "closed": "UNVERIFIED",
+        "exceptions": "UNVERIFIED",
+        "source": "https://www.peninsula.com/en/shanghai | https://www.hilton.com/en/hotels/shawawa-waldorf-astoria-shanghai-on-the-bund/hotel-location/",
+        "origin": "data/activities.json"
+      },
+      "cost": {
+        "text": "UNVERIFIED — no official ticketing exists for the public promenade; assumed free but not confirmed from an official source.",
+        "source": "",
+        "origin": "shanghai-2027/data/activities.json"
+      },
+      "plan_note": "No official operator page reached, so opening hours and 'free entry' are not asserted here.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-A01",
+          "source_file": "data/activities.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-A03",
+          "source_file": "shanghai-2027/data/activities.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-A05",
+          "source_file": "shanghai-verified-2027/data/activities.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-A02",
+      "city": "Shanghai",
+      "kind": "activity",
+      "name": "Yu Garden",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/activities.json",
+      "distinction": "",
+      "price_band": "",
+      "address": "North gate: 168 Fuyou Road, Huangpu (groups + individuals). South gate: 279 Yu Yuan Lao Jie, Huangpu (individuals only).",
+      "official_url": "https://www.yugarden.com.cn/",
+      "guide_url": "",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=5rbE9xE15to",
+          "label": "Why You MUST Visit Yu Garden in Shanghai | A Local's Guide",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=Ay96PAha8uQ",
+          "label": "Is Visiting Yu Garden in Shanghai REALLY Worth It?",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=K1sloREQ6bI",
+          "label": "The Fabulous Yu Garden Shanghai | Watch this before you go",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=f7ErJ2COBH4",
+          "label": "Shanghai CHINA – Walking Tour Yu Garden at Night (4K)",
+          "origin": "3b27db6c/data/activities.json"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Und9LL4DX2M",
+          "label": "Visiting Shanghai Yu Garden, China",
+          "origin": "3b27db6c/data/activities.json"
+        }
+      ],
+      "hours": {
+        "text": "09:00–16:30 (last entry 16:00, closes 16:30)",
+        "closed": "Closed every Monday (except national statutory holidays)",
+        "exceptions": "Opening hours during Spring Festival are per official announcement. Monday closure does NOT apply on national holidays.",
+        "source": "https://www.yugarden.com.cn/page/articleview/message.html",
+        "origin": "data/activities.json"
+      },
+      "cost": {
+        "text": "Off-season (1 Jul–31 Aug, 1 Dec–31 Mar): ¥30 per adult. Peak (1 Apr–30 Jun, 1 Sep–30 Nov): ¥40 per adult. Couple = ¥60 off-season / ¥80 peak (2 × adult).",
+        "source": "",
+        "origin": "shanghai-2027/data/activities.json"
+      },
+      "plan_note": "Ticket price and opening hours not verified — only the official site link is provided.; Lantern Festival (Sat 20 Feb 2027) falls inside the trip; expect peak crowds in the Yuyuan area.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-A02",
+          "source_file": "data/activities.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-A02",
+          "source_file": "shanghai-2027/data/activities.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-A04",
+          "source_file": "shanghai-verified-2027/data/activities.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-A03",
+      "city": "Shanghai",
+      "kind": "activity",
+      "name": "Shanghai Tower observatory",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/activities.json",
+      "distinction": "",
+      "price_band": "",
+      "address": "NOT PUBLISHED on the official English observatory page - blank/flagged",
+      "official_url": "https://en.shanghaitower.com/",
+      "guide_url": "",
+      "social": [
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=kp04RPUOJ_c",
+          "label": "Shanghai Tower - Highest Observation Deck - 118th Floor",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/watch?v=ujsLgyOJYeo",
+          "label": "Inside the Shanghai Tower: High-Speed Elevator & 118th Floor Views",
+          "origin": "68e13071/data/activities.json"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/shorts/qb1sZXiQML4",
+          "label": "55 seconds to the 118th floor, Shanghai Observation Deck",
+          "origin": "68e13071/data/activities.json"
+        }
+      ],
+      "hours": {
+        "text": "NOT PUBLISHED on official page - blank/flagged (R3) NOT PUBLISHED on official page - blank/flagged (R3)",
+        "closed": "",
+        "exceptions": "Official page publishes the sightseeing route only: 'Top of Shanghai Exhibition Hall' on floor B1, 'Top of Shanghai Observatory' on floor 118 (546 metres, 360 degree view), and 'SKY632 Art Space' on floors 125 and 126. Official page instructs visitors to carry ID cards or passports.",
+        "source": "https://en.shanghaitower.com/shagnhai.html",
+        "origin": "data/activities.json"
+      },
+      "cost": {
+        "text": "BLANK - no official price located (third-party figures exist but are not official)",
+        "source": "NOT PUBLISHED on official page - blank/flagged (R3)",
+        "origin": "shanghai-verified-2027/data/activities.csv"
+      },
+      "plan_note": "Ticket price and hours not verified from the official site (home page only was readable).",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-A03",
+          "source_file": "data/activities.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-A03",
+          "source_file": "shanghai-verified-2027/data/activities.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-A04",
+      "city": "Shanghai",
+      "kind": "activity",
+      "name": "Shanghai Museum (People's Square)",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/activities.json",
+      "distinction": "",
+      "price_band": "",
+      "address": "201 Ren Min Da Dao, Huangpu District (South Entrance on Wusheng Road)",
+      "official_url": "https://www.shanghaimuseum.net/",
+      "guide_url": "",
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=WH24eys8xd4",
+          "label": "Shanghai Museum: Where Arts Shine",
+          "origin": "3b27db6c/data/activities.json"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=bqU3WbL6xac",
+          "label": "Shanghai Museum East Branch reopens",
+          "origin": "3b27db6c/data/activities.json"
+        }
+      ],
+      "hours": {
+        "text": "Tuesday–Sunday 09:00–17:00 (last entry 15:00). Also listed: Day & Evening Session 09:00–21:00 (last entry 19:00).",
+        "closed": "Closed Mondays (except national holidays)",
+        "exceptions": "During 'On Top of the World Tree: Ancient Civilizations of the Americas' (2026-07-09 → 2027-11-14) this building hosts no other exhibitions; permanent displays are at Shanghai Museum East. Evening sessions must be confirmed on the museum's official WeChat channel.",
+        "source": "https://www.shanghaimuseum.net/mu/frontend/pg/en/service/visit-west",
+        "origin": "data/activities.json"
+      },
+      "cost": {
+        "text": "Not published on the visit page — admission terms not captured. FLAG: verify on official booking channel.",
+        "source": "",
+        "origin": "shanghai-2027/data/activities.json"
+      },
+      "plan_note": "Official site returned HTTP 500 on 2026-11-25 — free-admission/reservation rules NOT verified.; No verified video link yet.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-A04",
+          "source_file": "data/activities.json"
+        },
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-A01",
+          "source_file": "shanghai-2027/data/activities.json"
+        },
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-A01",
+          "source_file": "shanghai-verified-2027/data/activities.csv"
+        }
+      ]
+    },
+    {
+      "id": "DOC-A05",
+      "city": "Shanghai",
+      "kind": "activity",
+      "name": "Tianzifang (Taikang Road lanes)",
+      "plan": "68e13071 (docs/)",
+      "source_file": "data/activities.json",
+      "distinction": "",
+      "price_band": "",
+      "address": "",
+      "official_url": "",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "",
+        "source": "",
+        "origin": "data/activities.json"
+      },
+      "cost": {
+        "text": "",
+        "source": "",
+        "origin": "data/activities.json"
+      },
+      "plan_note": "No official page reached — hours, entry and current status unverified.; No verified video link yet.",
+      "plan_refs": [
+        {
+          "plan": "68e13071 (docs/)",
+          "id": "DOC-A05",
+          "source_file": "data/activities.json"
+        }
+      ]
+    },
+    {
+      "id": "S27-R13",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Yi Long Court",
+      "plan": "3b27db6c (shanghai-2027/)",
+      "source_file": "shanghai-2027/data/michelin-restaurants.json",
+      "distinction": "MICHELIN Star",
+      "price_band": "¥¥¥¥",
+      "address": "2F, The Peninsula Hotel, Bund 32, 32 Zhongshan Dong Yi Road, Huangpu, Shanghai",
+      "official_url": "https://www.peninsula.com/en/shanghai/hotel-fine-dining/yi-long-court-chinese-restaurant",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/yi-long-court",
+      "social": [],
+      "hours": {
+        "text": "Mon–Sun 11:30–14:30 and 18:00–22:30",
+        "closed": "None listed (open 7 days per MICHELIN Guide)",
+        "exceptions": "",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/yi-long-court",
+        "origin": "shanghai-2027/data/michelin-restaurants.json"
+      },
+      "cost": {
+        "text": "No price published by MICHELIN. Dim sum lunch set mentioned in Guide description.",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/yi-long-court",
+        "origin": "shanghai-2027/data/michelin-restaurants.json"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R13",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "S27-R14",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Huaiyang Delights (Jingan)",
+      "plan": "3b27db6c (shanghai-2027/)",
+      "source_file": "shanghai-2027/data/michelin-restaurants.json",
+      "distinction": "MICHELIN Star",
+      "price_band": "¥¥¥",
+      "address": "5F, Park Place, 1601 West Nanjing Road, Jingan, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/huaiyang-delights-jingan",
+      "social": [],
+      "hours": {
+        "text": "NOT LISTED on MICHELIN Guide page — contact restaurant directly",
+        "closed": "UNVERIFIED",
+        "exceptions": "",
+        "source": "",
+        "origin": "shanghai-2027/data/michelin-restaurants.json"
+      },
+      "cost": {
+        "text": "No price published by MICHELIN.",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/huaiyang-delights-jingan",
+        "origin": "shanghai-2027/data/michelin-restaurants.json"
+      },
+      "plan_note": "",
+      "plan_refs": [
+        {
+          "plan": "3b27db6c (shanghai-2027/)",
+          "id": "S27-R14",
+          "source_file": "shanghai-2027/data/michelin-restaurants.json"
+        }
+      ]
+    },
+    {
+      "id": "VER-R04",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Ren He Guan (Xuhui)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥",
+      "address": "407 Zhaojiabang Road, Xuhui, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ren-he-guan-zhaojiabang-road",
+      "social": [],
+      "hours": {
+        "text": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "closed": "",
+        "exceptions": "",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ren-he-guan-zhaojiabang-road",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "BLANK - no official price located",
+        "source": "Official MICHELIN text: first-rate Shanghainese fare at bargain prices; crab from owner's own farm; crabmeat and roe on rice is a must",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": null,
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R04",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R05",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Lu Style (Huangpu)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/lu-style-1203592",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/lu-style-1203592",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R05",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R06",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Oriental Sense & Palate",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/oriental-sense-palate",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/oriental-sense-palate",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R06",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R07",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Obscura",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/obscura",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/obscura",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R07",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R08",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Vivant by Johnny Pham",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/vivant-by-johnny-pham",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/vivant-by-johnny-pham",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "First star awarded in the 2026 edition (official MICHELIN press release)",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R08",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R09",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Narisawa",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/narisawa-1209925",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/narisawa-1209925",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R09",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R10",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Fu 1088",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥",
+      "address": "375 Zhenning Road, Jingan, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-1088",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-1088",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-and-address / price-unverified",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R10",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R11",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Lei Garden (Xuhui)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥",
+      "address": "Shop 401, 4F, iapm, 999 Middle Huaihai Road, Xuhui, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/lei-garden-xuhui",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/lei-garden-xuhui",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-and-address / price-unverified",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R11",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R12",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Da Dong (Xuhui)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥",
+      "address": "Shop 602, 6F, iapm, 999 Middle Huaihai Road, Xuhui, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/kr/en/shanghai-municipality/shanghai/restaurant/da-dong-xuhui",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/kr/en/shanghai-municipality/shanghai/restaurant/da-dong-xuhui",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-and-address / price-unverified",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R12",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R13",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Zhou She (Minhang)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "One Star: High quality cooking",
+      "price_band": "¥¥¥",
+      "address": "Shop 116, Hongqiao Lihpao Plaza, No.16-101, Lane 318, Suhong Road, Minhang, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/ae-du/en/shanghai-municipality/shanghai/restaurant/zhou-she-minhang",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/ae-du/en/shanghai-municipality/shanghai/restaurant/zhou-she-minhang",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-star-and-address / price-unverified",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R13",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R14",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "1515 West Chophouse",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/1515-west-chophouse",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/1515-west-chophouse",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R14",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R15",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "The Yidao (East Beijing Road)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥",
+      "address": "L201A, 2F, Yi Feng Galleria, 99 East Beijing Road, Huangpu, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/tea-culture-east-beijing-road",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/tea-culture-east-beijing-road",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-and-address",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R15",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R16",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Shanghai (restaurant)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥",
+      "address": "2F, Central Hotel, 555 Jiujiang Road, Huangpu, Shanghai",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/shanghai",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/shanghai",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-and-address",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R16",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R17",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Lao Xing Xian (Huangpu)",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown in fetched listing)",
+      "price_band": "¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/lao-xing-xian",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/lao-xing-xian",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R17",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R18",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Toi Sihng Lauh Yuht",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/toi-sihng-lauh-yuht",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/toi-sihng-lauh-yuht",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R18",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R19",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Scarpetta",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/scarpetta",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/scarpetta",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R19",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R20",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "The Pine",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/the-pine",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/the-pine",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R20",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R21",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Torikaze",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/torikaze",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/torikaze",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R21",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R22",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Stonesal",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/stonesal",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/stonesal",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R22",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-R23",
+      "city": "Shanghai",
+      "kind": "restaurant",
+      "name": "Summer Palace",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/michelin.csv",
+      "distinction": "Listed in MICHELIN Guide (no star shown)",
+      "price_band": "¥¥¥",
+      "address": "NOT FETCHED - blank/flagged",
+      "official_url": "",
+      "guide_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/summer-palace-506733",
+      "social": [],
+      "hours": {
+        "text": "",
+        "closed": "",
+        "exceptions": "NOT PUBLISHED on fetched pages - blank/flagged",
+        "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/summer-palace-506733",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "cost": {
+        "text": "",
+        "source": "BLANK - no official price located",
+        "origin": "shanghai-verified-2027/data/michelin.csv"
+      },
+      "plan_note": "verified-listed-only",
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-R23",
+          "source_file": "shanghai-verified-2027/data/michelin.csv"
+        }
+      ]
+    },
+    {
+      "id": "VER-A02",
+      "city": "Shanghai",
+      "kind": "activity",
+      "name": "Shanghai Museum East",
+      "plan": "16153d37 (shanghai-verified-2027/)",
+      "source_file": "shanghai-verified-2027/data/activities.csv",
+      "distinction": "",
+      "price_band": "",
+      "address": "1952 Century Avenue, Pudong New Area (address published on the official People's Square visit page)",
+      "official_url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/en/service/visit-east",
+      "guide_url": "",
+      "social": [],
+      "hours": {
+        "text": "Closed every Tuesday (except public holidays) per official notice dated 2024-09-10 10:00 - 18:00 (last entry 17:00) per official notice dated 2024-09-10",
+        "closed": "",
+        "exceptions": "Per official notice: walk-in entry with valid ID through the B1 East Gate, no reservation required (from 15 Sept 2024); reservations still required for The Curio-City and the Digital Gallery via the museum WeChat account; priority access for 65+ and visitors with disabilities at the North Gate (1F).",
+        "source": "https://www.shanghaimuseum.net/mu/frontend/pg/m/en/service/visit-east",
+        "origin": "shanghai-verified-2027/data/activities.csv"
+      },
+      "cost": {
+        "text": "BLANK - no official admission price located",
+        "source": "NOT STATED on fetched official notice - blank/flagged",
+        "origin": "shanghai-verified-2027/data/activities.csv"
+      },
+      "plan_note": null,
+      "plan_refs": [
+        {
+          "plan": "16153d37 (shanghai-verified-2027/)",
+          "id": "VER-A02",
+          "source_file": "shanghai-verified-2027/data/activities.csv"
+        }
+      ]
+    }
+  ]
+}

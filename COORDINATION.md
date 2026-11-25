@@ -347,8 +347,8 @@ than editing either. This task does not overlap any existing claim (T1–T11, S1
 
 | # | Task | Status | File scope | Verification required |
 |---|------|--------|-----------|----------------------|
-| C1 | Claim + repo review | in progress | this section | board read; four plans inventoried; no duplicate scope |
-| C2 | Extract every listed restaurant/activity from the four plans into one canonical inventory | unclaimed | `social-2027/data/inventory.json` | row-by-row provenance back to the owning plan's file |
+| C1 | Claim + repo review | done | this section | board read; four plans inventoried; no duplicate scope |
+| C2 | Extract every listed restaurant/activity from the four plans into one canonical inventory | done | `social-2027/data/inventory.json` | row-by-row provenance back to the owning plan's file |
 | C3 | Verify social reviews (YouTube / TikTok / Instagram) per venue, preferring official operator accounts | unclaimed | `social-2027/data/social.json` | fetch each URL, confirm the account/video names the venue; no guessed URLs |
 | C4 | Verify opening days, hours and exceptions per venue | unclaimed | `social-2027/data/hours.json` | official operator or MICHELIN page; blank + flag otherwise |
 | C5 | Verify total meal price for two / activity price for two where published | unclaimed | `social-2027/data/costs.json` | official menu/price page only; estimate band only when MICHELIN publishes it |
