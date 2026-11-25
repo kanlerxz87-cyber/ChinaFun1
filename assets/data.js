@@ -3,6 +3,12 @@
    Trip window: 15 Feb 2027 – 23 Mar 2027 (preferred 15–18 Feb 2027)
    Every value below carries the source used. Blank = not confirmed.
    Last verification pass: 25 Nov 2026
+   T12 social-links pass (session 909c5d37, 25 Nov 2026): every
+   restaurant and activity now carries a YouTube link. Direct
+   review videos are linked where a web search confirmed the
+   title/description names that exact place; otherwise a labelled
+   YouTube search URL is given. No video URL was invented.
+   National Museum of China hours/price verified from chnmuseum.cn.
    ============================================================ */
 
 const META = {
@@ -42,12 +48,12 @@ const META = {
 const MICHELIN = [
   {n:"Chao Shang Chao (Chaoyang)", s:3, c:"Chao Zhou", p:"¥¥¥¥", d:"Chaoyang",
    a:"L406B, 4F, CP Center, 20 Jinhe East Road, Chaoyang", h:"", ph:"+86 10 8596 2666", w:"",
-   soc:[["YouTube search","https://www.youtube.com/results?search_query=Chao+Shang+Chao+Beijing+michelin"]],
-   fx:"Hours not published on the MICHELIN page. Book direct — restaurant manages its own reservations."},
+   soc:[["YouTube","https://www.youtube.com/watch?v=SQ9JzAqNpjY"],["YouTube","https://www.youtube.com/watch?v=_fOMeu8jdCA"]],
+   fx:"Hours not published on the MICHELIN page. Book direct — restaurant manages its own reservations. Videos found via web search 25 Nov 2026 (T12); titles confirm Chao Shang Chao Beijing."},
   {n:"Xin Rong Ji (Xinyuan South Road)", s:3, c:"Taizhou", p:"¥¥¥¥", d:"Chaoyang",
    a:"1F, East Tower, Genesis Beijing, 8 Xinyuan South Road, Chaoyang", h:"", ph:"", w:"https://www.xinrongji.com/",
-   soc:[["YouTube","https://www.youtube.com/watch?v=6SvqIT2SW7M"]],
-   fx:"Hours not published on the MICHELIN page. Menu prices not published on an official page in this pass."},
+   soc:[["YouTube","https://www.youtube.com/watch?v=6SvqIT2SW7M"],["YouTube","https://www.youtube.com/watch?v=T-vm41LO6AA"]],
+   fx:"Hours not published on the MICHELIN page. Menu prices not published on an official page in this pass. Second video found via web search 25 Nov 2026 (T12)."},
   {n:"Blackswan", s:2, c:"French Contemporary", p:"¥¥¥¥", d:"Shunyi",
    a:"1F, Luohong Art Museum, 89 Capital Airport Road, Shunyi", h:"", ph:"+86 10 5385 9911", w:"https://www.restaurantblackswan.com/",
    soc:[["YouTube search","https://www.youtube.com/results?search_query=Blackswan+restaurant+Beijing+Luohong+Art+Museum"]],
@@ -58,8 +64,8 @@ const MICHELIN = [
    fx:"Hours not published on the MICHELIN page."},
   {n:"King's Joy", s:2, c:"Vegetarian", p:"¥¥¥¥", d:"Dongcheng",
    a:"2 Wudaoying Hutong, Dongcheng", h:"Mon–Sun 11:00–22:00", ph:"+86 10 8404 9191", w:"https://www.kingsjoy.com/",
-   soc:[["YouTube","https://www.youtube.com/watch?v=TTfH0qd79aE"]],
-   fx:"Video is from 2024 and describes the restaurant as 3-star; the current 2027 MICHELIN status is Two Stars."},
+   soc:[["YouTube","https://www.youtube.com/watch?v=TTfH0qd79aE"],["YouTube","https://www.youtube.com/watch?v=mT6hdUcRRIs"]],
+   fx:"Videos are from 2024/2026 and describe the restaurant as 3-star; the current 2027 MICHELIN status is Two Stars. Second video added via web search 25 Nov 2026 (T12)."},
   {n:"Lamdre", s:2, c:"Vegan", p:"¥¥¥¥", d:"Chaoyang",
    a:"Room 04, 1F, Block 14, Courtyard 4, Gongti North Road, Chaoyang", h:"", ph:"+86 10 8597 8888", w:"",
    soc:[["YouTube search","https://www.youtube.com/results?search_query=Lamdre+Beijing+vegan+michelin"]],
@@ -68,38 +74,38 @@ const MICHELIN = [
    a:"2A01-2A13, 2F, Sunshine Financial Center Tower 1, 33 Jinghui Street, Chaoyang", h:"", ph:"+86 10 8718 5556", w:"",
    soc:[["YouTube search","https://www.youtube.com/results?search_query=Lu+Shang+Lu+Beijing+Shandong+michelin"]],
    fx:"Hours not published on the MICHELIN page."},
-  {n:"Cai Yi Xuan", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Chao Shang Chao (Xicheng)", s:1, c:"Chao Zhou", p:"¥¥¥", d:"Xicheng", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Chef 1996", s:1, c:"Sichuan", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:"Promoted from MICHELIN Selected to One Star in the 2027 edition."},
-  {n:"Fu Chun Ju", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Furong", s:1, c:"Hunanese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Gastro Esthetics DaDong", s:1, c:"Chinese Contemporary", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Giada Garden", s:1, c:"Italian", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Il Ristorante – Niko Romito", s:1, c:"Italian", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Lei Garden (Jinbao Tower)", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Lu Style (Anding Road)", s:1, c:"Shandong", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Mansion Cuisine by Jingyan", s:1, c:"Beijing Cuisine", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"MO Jasmine", s:1, c:"Beijing Cuisine", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Old Tower", s:1, c:"Innovative", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:"New entry: joined the Guide directly with One Star in 2027. Chef Talib Hudda."},
-  {n:"Poetry·Wine (Dongsanhuan Middle Road)", s:1, c:"Beijing Cuisine", p:"¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Rong Pao", s:1, c:"Sichuan", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Seventh Son", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Shanghai Cuisine", s:1, c:"Shanghainese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Sheng Yong Xing (Chaoyang)", s:1, c:"Beijing Cuisine", p:"¥¥¥", d:"Chaoyang", a:"", h:"", ph:"", w:"", soc:[], fx:"District taken from the restaurant name as published by MICHELIN; full address not captured in this pass."},
-  {n:"The Beijing Kitchen (Jianguo Road)", s:1, c:"Cantonese", p:"¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"The Georg", s:1, c:"European Contemporary", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"The House of Dynasties", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
+  {n:"Cai Yi Xuan", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube","https://www.youtube.com/watch?v=T8S_OdfLvEg"]], fx:"Video found via web search 25 Nov 2026 (T12); title confirms Cai Yi Xuan, Four Seasons Beijing. Address/hours not yet verified from an official page."},
+  {n:"Chao Shang Chao (Xicheng)", s:1, c:"Chao Zhou", p:"¥¥¥", d:"Xicheng", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Chao+Shang+Chao+Xicheng+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Chef 1996", s:1, c:"Sichuan", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Chef+1996+Beijing+Michelin"]], fx:"Promoted from MICHELIN Selected to One Star in the 2027 edition. No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead."},
+  {n:"Fu Chun Ju", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Fu+Chun+Ju+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Furong", s:1, c:"Hunanese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Furong+Beijing+Michelin+Hunanese"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Gastro Esthetics DaDong", s:1, c:"Chinese Contemporary", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Gastro+Esthetics+DaDong+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Giada Garden", s:1, c:"Italian", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Giada+Garden+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Il Ristorante – Niko Romito", s:1, c:"Italian", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Il+Ristorante+Niko+Romito+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Lei Garden (Jinbao Tower)", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Lei+Garden+Jinbao+Tower+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Lu Style (Anding Road)", s:1, c:"Shandong", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Lu+Style+Anding+Road+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Mansion Cuisine by Jingyan", s:1, c:"Beijing Cuisine", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube","https://www.youtube.com/watch?v=Yok9qkb4bKw"]], fx:"Video found via web search 25 Nov 2026 (T12); description confirms Mansion Cuisine by Jingyan, 1-star Beijing. Address/hours not yet verified from an official page."},
+  {n:"MO Jasmine", s:1, c:"Beijing Cuisine", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=MO+Jasmine+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Old Tower", s:1, c:"Innovative", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Old+Tower+Beijing+Michelin"]], fx:"New entry: joined the Guide directly with One Star in 2027. Chef Talib Hudda. No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead."},
+  {n:"Poetry·Wine (Dongsanhuan Middle Road)", s:1, c:"Beijing Cuisine", p:"¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Poetry+Wine+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Rong Pao", s:1, c:"Sichuan", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Rong+Pao+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Seventh Son", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Seventh+Son+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Shanghai Cuisine", s:1, c:"Shanghainese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Shanghai+Cuisine+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Sheng Yong Xing (Chaoyang)", s:1, c:"Beijing Cuisine", p:"¥¥¥", d:"Chaoyang", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Sheng+Yong+Xing+Beijing+Michelin"]], fx:"District taken from the restaurant name as published by MICHELIN; full address not captured in this pass. No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead."},
+  {n:"The Beijing Kitchen (Jianguo Road)", s:1, c:"Cantonese", p:"¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Beijing+Kitchen+Jianguo+Road+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"The Georg", s:1, c:"European Contemporary", p:"¥¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=The+Georg+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"The House of Dynasties", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=House+of+Dynasties+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
   {n:"Trb Hutong", s:1, c:"French Contemporary", p:"¥¥¥¥", d:"Dongcheng",
    a:"23 Shatan North Street, Dongcheng", h:"Mon–Sun 11:30–14:30, 17:30–22:00", ph:"+86 139 1171 2083", w:"https://www.trbhutong.com/",
    p2:"Weekday lunch ¥788 pp · Seasonal ¥1,688 pp · Signature ¥2,288 pp (+15% service). Two on Seasonal = ¥3,376 + 15% = ¥3,882",
    soc:[["CNN video","https://edition.cnn.com/videos/travel-play/2018/06/22/trb-hutong-beijing-china.cnn"]],
    fx:"Menu prices read from the restaurant's own menu page on 25 Nov 2026; +15% service charge applies."},
   {n:"Xin Rong Ji (Jianguomenwai Street)", s:1, c:"Taizhou", p:"¥¥¥", d:"Chaoyang",
-   a:"5F, Tower A, Yintai Centre, 2 Jianguomenwai Street, Chaoyang", h:"", ph:"", w:"https://www.xinrongji.com/", soc:[], fx:""},
+   a:"5F, Tower A, Yintai Centre, 2 Jianguomenwai Street, Chaoyang", h:"", ph:"", w:"https://www.xinrongji.com/", soc:[["YouTube search","https://www.youtube.com/results?search_query=Xin+Rong+Ji+Jianguomenwai+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. The direct Xin Rong Ji videos in this table cover the 3-star Xinyuan location, not this 1-star branch."},
   {n:"Xin Rong Ji (Jinrong Street)", s:1, c:"Taizhou", p:"¥¥¥", d:"Xicheng",
-   a:"B1, International Finance Centre, 11 Jinrong Street, Xicheng", h:"", ph:"", w:"https://www.xinrongji.com/", soc:[], fx:""},
-  {n:"Zhiguan Courtyard", s:1, c:"Dongbei", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""},
-  {n:"Zijin Mansion", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[], fx:""}
+   a:"B1, International Finance Centre, 11 Jinrong Street, Xicheng", h:"", ph:"", w:"https://www.xinrongji.com/", soc:[["YouTube search","https://www.youtube.com/results?search_query=Xin+Rong+Ji+Jinrong+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. The direct Xin Rong Ji videos in this table cover the 3-star Xinyuan location, not this 1-star branch."},
+  {n:"Zhiguan Courtyard", s:1, c:"Dongbei", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Zhiguan+Courtyard+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."},
+  {n:"Zijin Mansion", s:1, c:"Cantonese", p:"¥¥¥", d:"", a:"", h:"", ph:"", w:"", soc:[["YouTube search","https://www.youtube.com/results?search_query=Zijin+Mansion+Beijing+Michelin"]], fx:"No single review video confirmed via web search 25 Nov 2026 (T12); search link provided instead. Address/hours not yet verified."}
 ];
 
 const GUIDE_SLUG = {
@@ -200,14 +206,14 @@ const ACTIVITIES = [
    price:"", v:true, off:"https://en.mutianyugreatwall.com/", book:"https://en.mutianyugreatwall.com/reservation-center/tickets",
    soc:[["YouTube","https://www.youtube.com/watch?v=z49wo_Zki4U"],["YouTube","https://www.youtube.com/watch?v=kU9huPVdVlM"],["YouTube","https://www.youtube.com/watch?v=D9gdGqZ0Pc0"]],
    fx:"Ticket and cable-car prices were not published on the English page read in this pass — check the booking page."},
-  {n:"Temple of Heaven Park", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Hours and ticket price not yet verified against an official page."},
-  {n:"Summer Palace (Yiheyuan)", area:"Haidian", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Not yet verified against an official page. It is a 60-minute-plus trip from the Wangfujing hotels — verify before scheduling."},
-  {n:"Tiananmen Square", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Advance real-name reservation is reported to be required; not verified in this pass."},
-  {n:"Yonghe Temple (Lama Temple)", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Not yet verified. Adjacent to King's Joy (2★), so it pairs naturally with lunch."},
-  {n:"798 Art Zone", area:"Chaoyang", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Not yet verified against an official page."},
-  {n:"Nanluoguxiang / hutong walk", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Public street, no ticket. Not an official source item."},
-  {n:"National Museum of China", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Free admission is reported but not verified in this pass; reservation rules need checking."},
-  {n:"Jingshan Park (Prospect Hill)", area:"Xicheng", h:"", price:"", v:false, off:"", book:"", soc:[], fx:"Best rooftop view of the Forbidden City; hours not verified in this pass."}
+  {n:"Temple of Heaven Park", area:"Dongcheng", h:"", price:"", v:false, off:"http://www.tiantanpark.com/", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=Vf2iuqpw0Z0"],["YouTube","https://www.youtube.com/watch?v=MwEmtq961zQ"],["YouTube","https://www.youtube.com/watch?v=PaXGsf_0qss"]], fx:"Official site tiantanpark.com was unreachable (HTTP 500) on 25 Nov 2026 (T12), so hours/price stay blank and unverified. Third parties consistently report park 06:00/06:30-22:00, halls 08:00-18:00/17:00, park ¥15/¥10, combo ¥34/¥28, halls closed Mondays except holidays — check the official site before scheduling."},
+  {n:"Summer Palace (Yiheyuan)", area:"Haidian", h:"", price:"", v:false, off:"http://www.summerpalace-china.com/", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=9Wi1TIvbeLo"],["YouTube","https://www.youtube.com/watch?v=RUDi0hhMdZ0"],["YouTube","https://www.youtube.com/watch?v=2GAlJygp2fE"]], fx:"Official site summerpalace-china.com was unreachable (HTTP 500) on 25 Nov 2026 (T12), so hours/price stay blank and unverified. Third parties report 06:00-20:00 (Apr-Oct) / 06:30-19:00 (Nov-Mar), ¥30/¥20, combo ¥60/¥50 — check the official site before scheduling. It is a 60-minute-plus trip from the Wangfujing hotels."},
+  {n:"Tiananmen Square", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=e7TB7sp-P0M"],["YouTube search","https://www.youtube.com/results?search_query=Tiananmen+Square+Beijing+travel"]], fx:"Advance real-name reservation is reported to be required; not verified from an official page in this pass (T12). One travel video found; other search results were a model review and a documentary, not travel reviews, so they were not linked."},
+  {n:"Yonghe Temple (Lama Temple)", area:"Dongcheng", h:"", price:"", v:false, off:"https://www.yonghegong.com.cn/", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=z_nuVZBmmFY"],["YouTube","https://www.youtube.com/watch?v=zIoLmTNa2uQ"]], fx:"Official site yonghegong.com.cn was unreachable (HTTP 500) on 25 Nov 2026 (T12), so hours/price stay blank and unverified. Third parties report 09:00-17:00 (Apr-Oct) / 09:00-16:30 (Nov-Mar), ¥25 — check the official site. Adjacent to King's Joy (2★), so it pairs naturally with lunch."},
+  {n:"798 Art Zone", area:"Chaoyang", h:"", price:"", v:false, off:"", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=RL50dLu5nCg"],["YouTube","https://www.youtube.com/watch?v=1t37-vRGmL4"],["YouTube","https://www.youtube.com/watch?v=GIWBvaJjd1w"]], fx:"Public art district, no single ticket or official hours page. 798artzone.com resolves to a parked/spam placeholder, so no official link is given (T12). Individual galleries keep their own hours."},
+  {n:"Nanluoguxiang / hutong walk", area:"Dongcheng", h:"", price:"", v:false, off:"", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=KJQsTKEL-Es"],["YouTube","https://www.youtube.com/watch?v=R5RXPHvyUA4"],["YouTube","https://www.youtube.com/watch?v=2hBgUsqh4gM"]], fx:"Public street, no ticket. Not an official source item. Videos added via web search 25 Nov 2026 (T12)."},
+  {n:"National Museum of China", area:"Dongcheng", h:"Tue–Sun 9:00–17:00, last admission 16:00. Closed Mondays except public holidays.", price:"Free (real-name reservation required, up to 7 days ahead; vouchers released 17:00)", v:true, off:"https://www.chnmuseum.cn/", book:"https://pcticket.chnmuseum.cn/museum-en/", soc:[["YouTube","https://www.youtube.com/watch?v=Zq-WW5j-eGM"],["YouTube","https://www.youtube.com/watch?v=TyY2AJGsOGc"]], fx:"Verified from the official museum site 25 Nov 2026 (T12): chnmuseum.cn states 09:00 open, 16:00 last entry, 17:00 close, closed Mondays except holidays; the official English reservation system confirms free admission with real-name booking."},
+  {n:"Jingshan Park (Prospect Hill)", area:"Xicheng", h:"", price:"", v:false, off:"", book:"", soc:[["YouTube","https://www.youtube.com/watch?v=qwsDS2Qzl3M"],["YouTube","https://www.youtube.com/watch?v=m77wW6FLcq0"],["YouTube","https://www.youtube.com/watch?v=fFzFiUT5ACU"]], fx:"Best rooftop view of the Forbidden City. No official hours page verified in this pass (T12); hours/price stay blank. Third parties report 06:00–21:00 (Apr–Oct) / 06:30–20:00 (Nov–Mar), ¥2–¥10 — check the park's official WeChat mini-program before scheduling."}
 ];
 
 /* ------------------------------------------------------------

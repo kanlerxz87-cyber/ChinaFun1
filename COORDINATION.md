@@ -345,3 +345,23 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 | T12 | Social-link expansion + hours/price verification for Beijing root plan | **in progress** | `assets/data.js`, `flagged.html` | Brief requires a YouTube/TikTok/Instagram link for *every* restaurant/activity; currently 8/33 restaurants and 2/10 activities have one (5 of those are search URLs, not videos). T12 fills verified direct links only; anything unconfirmed stays blank + flagged. Overlaps T8/T11 field-by-field but does not block them — T8/T11 remain `needs review` for any rows T12 does not close. |
 
 **Method (no hallucinations):** every new `soc` URL must be found via search and confirmed to resolve to a video/post about that exact restaurant/activity; search-result URLs are kept only if no direct video can be confirmed and are labelled as such. Hours/prices are added only from the restaurant's own site, its MICHELIN page, or the attraction's official site — otherwise blank. Hotel totals are *not* re-priced in T12 (Booking.com snapshot of 2026-11-25 stands; re-quote flagged as next step).
+
+### T12 completion log (session `909c5d37`, 2026-11-25)
+
+**Status: done.** Files changed: `assets/data.js`, `flagged.html`, this section. No other session's files touched.
+
+| What | Result |
+|------|--------|
+| MICHELIN 2027 re-check | Press release (28 Oct 2026) confirms 107 Beijing entries; 2×3★, 5×2★, 26×1★; Chef 1996 promoted, Old Tower new. Matches `assets/data.js` exactly — no name/star edits needed. Live listing via `r.jina.ai` proxy confirms filter counts 2/5/26/32/42. |
+| Social links — restaurants | **33/33 now carry a link** (was 8/33). Direct review videos: 5 YouTube (Chao Shang Chao Chaoyang ×2, Xin Rong Ji Xinyuan ×2, King's Joy ×2, Cai Yi Xuan, Mansion Cuisine) + Trb Hutong CNN (pre-existing). Other 27: labelled `YouTube search` URLs (no single review video confirmed by web search). No URL invented; every direct video's search snippet names that exact restaurant. |
+| Social links — activities | **10/10 now carry direct YouTube videos** (was 2/10). Temple of Heaven ×3, Summer Palace ×3, Yonghe ×2, 798 ×3, Nanluoguxiang ×3, National Museum ×2, Jingshan ×3, Tiananmen ×1 (+ search fallback; other results were a model review and a documentary, deliberately not linked). |
+| National Museum of China | **Now verified** from `chnmuseum.cn` (09:00–17:00, last entry 16:00, closed Mondays except holidays) + official English reservation system (free, real-name, 7 days ahead, released 17:00). Row marked `v:true`. |
+| Other activity hours/prices | Stay blank + flagged: `tiantanpark.com`, `summerpalace-china.com`, `yonghegong.com.cn` all HTTP 500 on 2026-11-25. Third-party reported values recorded in row notes as unverified. `798artzone.com` is a parked/spam placeholder — no official link given. |
+| Restaurant hours/prices | No new verified values added. `kingsjoy.com` homepage has no menu prices in fetched content; Mutianyu ticket page renders no prices (JS). Both remain blank + flagged. T8/T11 remain open for these. |
+| Hotel prices | Not re-priced in T12 (Booking.com snapshot of 2026-11-25 stands; re-quote flagged as next step). |
+
+**Irregularities raised:** (1) three official attraction sites unreachable (HTTP 500); (2) `798artzone.com` is parked/spam; (3) both King's Joy videos say "3-star" vs current 2★; (4) Xin Rong Ji direct videos cover only the 3★ Xinyuan branch, so the two 1★ branches use search URLs. All published on `flagged.html`.
+
+**Verification:** `node --check assets/data.js` passes; per-row counts via node eval: MICHELIN 33 (5 YouTube-direct + 1 CNN + 27 search-only, 0 empty), ACTIVITIES 10 (10 direct, 0 empty). Site smoke-tested locally (see below).
+
+**Note for future sessions:** parallel `edit_file` calls on the same file race and silently drop edits — this session lost 23 of 30 edits to that race and re-applied them with an atomic python patch. Edit `assets/data.js` sequentially or via a single script.
