@@ -331,3 +331,17 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+## Session `909c5d37` — Beijing root plan: social links + hours/prices verification (T12)
+
+**Branch:** `arena/909c5d37-chinafun1`, branched from `main` @ `eda1907`
+**File scope (claimed 2026-11-25):** `assets/data.js` (`MICHELIN` soc/h/p2/d/a fields + `ACTIVITIES` soc/h/price/off/book fields + `META.updated`), `flagged.html`, this section of `COORDINATION.md`
+**Status:** in progress — claim pushed before any data edit, per board rules. No other session's files (`docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `data/`, `build.py`) will be touched.
+
+| # | Task | Status | File scope | Notes |
+|---|------|--------|-----------|-------|
+| T12 | Social-link expansion + hours/price verification for Beijing root plan | **in progress** | `assets/data.js`, `flagged.html` | Brief requires a YouTube/TikTok/Instagram link for *every* restaurant/activity; currently 8/33 restaurants and 2/10 activities have one (5 of those are search URLs, not videos). T12 fills verified direct links only; anything unconfirmed stays blank + flagged. Overlaps T8/T11 field-by-field but does not block them — T8/T11 remain `needs review` for any rows T12 does not close. |
+
+**Method (no hallucinations):** every new `soc` URL must be found via search and confirmed to resolve to a video/post about that exact restaurant/activity; search-result URLs are kept only if no direct video can be confirmed and are labelled as such. Hours/prices are added only from the restaurant's own site, its MICHELIN page, or the attraction's official site — otherwise blank. Hotel totals are *not* re-priced in T12 (Booking.com snapshot of 2026-11-25 stands; re-quote flagged as next step).
