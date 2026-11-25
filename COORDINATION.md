@@ -393,7 +393,7 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 | I3 | Verified social-review index for listed venues | done | `integration-2027/data/social.json` | Only platform pages actually fetched and read are entered; search-result URLs are never counted as evidence |
 | I4 | Consolidated questions / suggestions / flags | done | `integration-2027/data/*.json` | Inherited flags keep their original source links; new blanks flagged explicitly |
 | I5 | Build, link check, documentation | done | `integration-2027/`, its local README | Zero broken local links; generator output diffed against data |
-| I6 | Integration + GitHub Pages publish | in progress | `main` via PR | Additive subtree only; root landing untouched; merged site pages must return HTTP 200 |
+| I6 | Integration + GitHub Pages publish | **done** | `main` via PR #13 | Merged 2026-11-25; live at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html — overview, social, questions and flagged pages fetched successfully; root landing untouched |
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here. Requests to change another session's data must be logged here, not applied.
 
