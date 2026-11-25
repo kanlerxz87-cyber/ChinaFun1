@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChinaFun1 | Shanghai Trip Planning Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>ChinaFun1 — Shanghai Trip Planning Dashboard</h1>
+    <p>Evidence-first planning workspace for a 1–2 week China trip (couple, 2 adults). This draft prioritizes verified official sources, flags unverified fields, and documents decisions needed before booking.</p>
+    <div class="meta-bar">
+      <span class="pill">Target window: 2027-02-15 to 2027-03-23</span>
+      <span class="pill">Preferred: 2027-02-15 to 2027-02-18</span>
+      <span class="pill">Travelers: 2 adults</span>
+      <span class="pill">Status: Research in progress</span>
+    </div>
+  </div>
+</header>
+<nav>
+  <div class="wrap">
+    <a class="active" href="index.html">Dashboard</a>
+    <a href="summary.html">Executive Summary</a>
+    <a href="hotels.html">Hotels</a>
+    <a href="restaurants.html">Michelin Restaurants</a>
+    <a href="activities.html">Activities</a>
+    <a href="questions.html">Questions &amp; Missing Info</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="verification.html">Verification &amp; Flags</a>
+  </div>
+</nav>
+<main class="wrap">
+
+  <div class="notice notice-warn">
+    <strong>Verification policy:</strong> Every table row should include an official/source link. Values not confirmed from an official or authoritative primary source are left blank and flagged as <span class="badge badge-unverified">Unverified</span>. No prices, hours, or availability are inferred. Data snapshot date: <strong>2026-11-25 (UTC)</strong>.
+  </div>
+
+  <div class="notice notice-info">
+    <strong>Planning assumption (documented, not user-confirmed):</strong> The destination focus is <strong>Shanghai, China</strong> because the user request specified "Trip Planning China" without a city, and Shanghai offers a dense Michelin cluster, strong subway/bus transit, and clear official tourism/hotel/restaurant sources. This is a decision point requiring confirmation before final booking. See <a href="questions.html">Questions &amp; Missing Info</a>.
+  </div>
+
+  <section>
+    <h2>At-a-glance</h2>
+    <div class="grid">
+      <div class="card kpi">
+        <div class="label">Trip window</div>
+        <div class="value">Feb 15–Mar 23, 2027</div>
+        <div class="note">Preferred: Feb 15–18, 2027 (3 nights). User also requested 7-night hotel pricing comparison.</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">CNY context</div>
+        <div class="value">Feb 5–13, 2027</div>
+        <div class="note">Spring Festival public holiday per State Council notice cited by multiple sources; makeup workdays Jan 31 &amp; Feb 14. Verify on official gov.cn notice.</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">Hotel criteria</div>
+        <div class="value">2 adults</div>
+        <div class="note">Private bathroom; queen bed or equivalent/bigger; rank by Michelin access within ~1 hour subway/bus.</div>
+      </div>
+      <div class="card kpi">
+        <div class="label">Verification</div>
+        <div class="value">Line-by-line</div>
+        <div class="note">Official Michelin Guide used for star/listing status. Hotel pricing/hours/social links require per-row verification before booking.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key findings (current snapshot)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Destination &amp; timing</h3>
+        <ul class="clean">
+          <li><strong>Preferred dates (Feb 15–18, 2027)</strong> start 2 days after the official Spring Festival holiday ends (Feb 13) and 5 days before Lantern Festival (Feb 20). Expect residual holiday travel demand; verify hotel rates and restaurant closures.</li>
+          <li><strong>Shanghai</strong> selected as planning focus due to Michelin density and transit. Alternatives (Beijing, Guangzhou, Chengdu) not yet evaluated.</li>
+          <li>Preferred window is 3 nights; request also asks for 7-night hotel total and cheapest upcoming booking time — both require live official pricing checks.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Michelin landscape (official source)</h3>
+        <ul class="clean">
+          <li>Michelin Guide Shanghai page currently shows <strong>1</strong> Three-Star, <strong>11</strong> Two-Star, <strong>38</strong> One-Star, <strong>33</strong> Bib Gourmand, <strong>70</strong> Selected restaurants (Shanghai and surroundings filter). Source: <a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/all-starred" target="_blank" rel="noopener">Michelin Guide Shanghai</a>.</li>
+          <li>High-density clusters appear around Huangpu/Bund, Jing'an/West Nanjing Road, and Pudong/Lujiazui. Detailed 1-hour transit validation is pending per hotel.</li>
+          <li>Restaurant pricing/hours/social links are incomplete and must be verified row-by-row.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Hotel/rate status</h3>
+        <ul class="clean">
+          <li>No hotel price is marked verified until checked on the hotel's official booking engine for specific dates and captured with timestamp/screenshot-equivalent citation.</li>
+          <li>"Cheapest upcoming time to book" cannot be responsibly stated without live rate sampling across dates; this is flagged as a critical missing data item.</li>
+          <li>Room-type verification (private bathroom, queen/king equivalent) must be confirmed on official room pages.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Deliverable status</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Deliverable</th><th>Status</th><th>What is verified</th><th>What remains</th><th>Source / Link</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Executive summary</td>
+            <td><span class="badge badge-partial">In progress</span></td>
+            <td>Trip constraints, CNY window (secondary citations), Michelin counts from official guide page.</td>
+            <td>Confirm destination/city, verify CNY on gov.cn, finalize hotel/restaurant recommendations.</td>
+            <td><a href="summary.html">Summary page</a></td>
+          </tr>
+          <tr>
+            <td>Hotels ranked by Michelin access</td>
+            <td><span class="badge badge-partial">In progress</span></td>
+            <td>Criteria defined; candidate hotels identified for research.</td>
+            <td>Official room/amenity verification, 7-night totals on actual dates, transit-time validation, ranking.</td>
+            <td><a href="hotels.html">Hotels page</a></td>
+          </tr>
+          <tr>
+            <td>Michelin restaurants cluster table</td>
+            <td><span class="badge badge-partial">In progress</span></td>
+            <td>Star/listing status can be verified against Michelin Guide official pages.</td>
+            <td>Hours, closure days, price for 2 adults, official site, social links, transit from hotel.</td>
+            <td><a href="restaurants.html">Restaurants page</a></td>
+          </tr>
+          <tr>
+            <td>Activities with social links</td>
+            <td><span class="badge badge-unverified">Not verified</span></td>
+            <td>None yet.</td>
+            <td>Select activities within 1 hour of hotel; verify hours/days/links/social media.</td>
+            <td><a href="activities.html">Activities page</a></td>
+          </tr>
+          <tr>
+            <td>Questions / missing info</td>
+            <td><span class="badge badge-verified">Drafted</span></td>
+            <td>Key decision gaps documented.</td>
+            <td>Update as research resolves items.</td>
+            <td><a href="questions.html">Questions page</a></td>
+          </tr>
+          <tr>
+            <td>Suggestions / decision support</td>
+            <td><span class="badge badge-verified">Drafted</span></td>
+            <td>Improvement and decision-path suggestions documented.</td>
+            <td>Refine after data verification.</td>
+            <td><a href="suggestions.html">Suggestions page</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Primary sources used so far</h2>
+    <div class="card source-list">
+      <ul class="clean">
+        <li>Michelin Guide — Shanghai all starred: <a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/all-starred" target="_blank" rel="noopener">https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/all-starred</a></li>
+        <li>Michelin Guide — Shanghai 3 Stars: <a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/3-stars-michelin" target="_blank" rel="noopener">https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/3-stars-michelin</a></li>
+        <li>Michelin Guide — Shanghai 2 Stars: <a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/2-stars-michelin" target="_blank" rel="noopener">https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/2-stars-michelin</a></li>
+        <li>Michelin Guide — Shanghai 1 Star: <a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/1-star-michelin" target="_blank" rel="noopener">https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/1-star-michelin</a></li>
+        <li>State Council holiday notice (cited; verify on gov.cn): <a href="https://www.gov.cn/zhengce/content/202611/content_7050000.htm" target="_blank" rel="noopener">https://www.gov.cn/zhengce/content/202611/content_7050000.htm</a> <span class="badge badge-unverified">Needs direct verification</span></li>
+        <li>Repo: <a href="https://github.com/kanlerxz87-cyber/ChinaFun1" target="_blank" rel="noopener">https://github.com/kanlerxz87-cyber/ChinaFun1</a></li>
+      </ul>
+      <p class="small">Note: Some sources above are included as starting points; each data row in tables must carry its own verification status and source link. The gov.cn URL is a placeholder-style citation pattern observed in search results and must be directly verified before being treated as confirmed.</p>
+    </div>
+  </section>
+
+</main>
+<footer class="wrap">
+  <div>ChinaFun1 planning workspace. Generated in-session; no manual user input required. All unverified values intentionally left blank/flagged.</div>
+</footer>
+</body>
+</html>

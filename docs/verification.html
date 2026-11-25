@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification & Flags | ChinaFun1</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap"><h1>Verification &amp; Flagged Irregularities</h1><p>Line-by-line verification status, source audit, and irregularities requiring review. No value is marked verified without an official source.</p></div></header>
+<nav><div class="wrap">
+  <a href="index.html">Dashboard</a><a href="summary.html">Executive Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin Restaurants</a><a href="activities.html">Activities</a><a href="questions.html">Questions &amp; Missing Info</a><a href="suggestions.html">Suggestions</a><a class="active" href="verification.html">Verification &amp; Flags</a>
+</div></nav>
+<main class="wrap">
+
+  <div class="notice notice-warn"><strong>Audit date:</strong> 2026-11-25 (UTC). This is a draft snapshot. Re-verify all time-sensitive data (prices, hours, availability, Michelin distinctions) before use.</div>
+
+  <section>
+    <h2>Verification summary</h2>
+    <div class="grid">
+      <div class="card kpi"><div class="label">Verified (official)</div><div class="value">Partial</div><div class="note">Michelin star/cuisine/price-symbol for subset; repo state.</div></div>
+      <div class="card kpi"><div class="label">Unverified / blank</div><div class="value">High</div><div class="note">Hotel prices, 7-night totals, booking window, room compliance, transit counts, restaurant hours/prices-for-2, social links.</div></div>
+      <div class="card kpi"><div class="label">Flagged irregularities</div><div class="value">6</div><div class="note">See table below.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Flagged irregularities / risks</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Severity</th><th>Item</th><th>Issue</th><th>Impact</th><th>Required action</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>F1</td><td><span class="badge badge-unverified">High</span></td>
+          <td>Hotel pricing</td>
+          <td>No 7-night totals, taxes/fees, or cheapest booking window verified from official hotel booking engines.</td>
+          <td>Cannot satisfy user request for real verified pricing or make price-based ranking.</td>
+          <td>Capture official booking-engine quotes for selected dates; record timestamp, room type, total incl. taxes/fees.</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>F2</td><td><span class="badge badge-unverified">High</span></td>
+          <td>Hotel room compliance</td>
+          <td>Private bathroom and queen/equivalent bed not confirmed on official room pages for any candidate hotel.</td>
+          <td>Candidate hotels may fail mandatory requirements.</td>
+          <td>Verify room type details on official hotel site before ranking.</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>F3</td><td><span class="badge badge-unverified">High</span></td>
+          <td>Michelin transit ranking</td>
+          <td>No verified 1-hour subway/bus travel-time calculation from any candidate hotel to Michelin restaurants.</td>
+          <td>Core ranking criterion unfulfilled.</td>
+          <td>Compute routes with documented method/time of day; store evidence.</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>F4</td><td><span class="badge badge-partial">Medium</span></td>
+          <td>CNY 2027 official notice</td>
+          <td>Holiday dates Feb 5–13, 2027 cited by secondary sources referencing State Council notice; direct gov.cn verification not completed in-session.</td>
+          <td>Date/planning assumptions could be wrong if notice citation is incorrect.</td>
+          <td>Verify on official <a href="https://www.gov.cn/" target="_blank" rel="noopener">gov.cn</a> notice page and record document number/title.</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>F5</td><td><span class="badge badge-partial">Medium</span></td>
+          <td>Destination assumption</td>
+          <td>Shanghai chosen as draft focus without explicit user confirmation.</td>
+          <td>All downstream research may be misaligned if user wanted a different city.</td>
+          <td>Confirm destination in questions/decision step.</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>F6</td><td><span class="badge badge-partial">Medium</span></td>
+          <td>Social media links</td>
+          <td>No YouTube/TikTok/Instagram links verified for restaurants/activities.</td>
+          <td>User-requested field incomplete.</td>
+          <td>Collect official account links from venue official websites; label unofficial/fan sources.</td>
+          <td>Open</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Source audit log</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Source</th><th>Type</th><th>Used for</th><th>Accessed (UTC)</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/3-stars-michelin" target="_blank" rel="noopener">Michelin Guide - Shanghai 3 Stars</a></td><td>Official</td><td>3-star count/name</td><td>2026-11-25</td><td><span class="badge badge-verified">Verified</span></td><td>Observed Taian Table listed as 1 restaurant.</td></tr>
+        <tr><td><a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/2-stars-michelin" target="_blank" rel="noopener">Michelin Guide - Shanghai 2 Stars</a></td><td>Official</td><td>2-star subset names/status/symbols</td><td>2026-11-25</td><td><span class="badge badge-verified">Verified</span></td><td>Subset extracted from fetched chunks.</td></tr>
+        <tr><td><a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/1-star-michelin" target="_blank" rel="noopener">Michelin Guide - Shanghai 1 Star</a></td><td>Official</td><td>1-star subset names/status/symbols</td><td>2026-11-25</td><td><span class="badge badge-verified">Verified</span></td><td>Subset extracted; full 38-row verification pending.</td></tr>
+        <tr><td><a href="https://guide.michelin.com/en/cn/shanghai-municipality/shanghai/restaurants/all-starred" target="_blank" rel="noopener">Michelin Guide - Shanghai All Starred</a></td><td>Official</td><td>Overall starred counts/context</td><td>2026-11-25</td><td><span class="badge badge-verified">Verified</span></td><td>Page indicates 50 starred restaurants in Shanghai and surroundings.</td></tr>
+        <tr><td><a href="https://www.gov.cn/zhengce/content/202611/content_7050000.htm" target="_blank" rel="noopener">Gov.cn State Council notice URL (cited)</a></td><td>Official (expected)</td><td>CNY 2027 holiday dates</td><td>Not directly verified</td><td><span class="badge badge-unverified">Unverified</span></td><td>URL pattern cited by secondary sources; direct fetch/confirmation required.</td></tr>
+        <tr><td><a href="https://www.peninsula.com/en/shanghai/5-star-luxury-hotel-bund" target="_blank" rel="noopener">The Peninsula Shanghai (official domain)</a></td><td>Official (domain)</td><td>Hotel candidate link</td><td>2026-11-25</td><td><span class="badge badge-partial">Partial</span></td><td>Domain appears official; room/pricing not verified.</td></tr>
+        <tr><td><a href="https://www.shangri-la.com/shanghai/jinganshangrila/" target="_blank" rel="noopener">Jing An Shangri-La (official domain)</a></td><td>Official (domain)</td><td>Hotel candidate link</td><td>2026-11-25</td><td><span class="badge badge-partial">Partial</span></td><td>Official domain observed in search; room/pricing not verified.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Rules applied</h2>
+    <div class="card">
+      <ul class="clean">
+        <li>No inferred prices, hours, availability, or social links.</li>
+        <li>Unverified values left blank and flagged.</li>
+        <li>Official sources linked where used; secondary citations labeled.</li>
+        <li>Assumptions explicitly documented (Shanghai destination, date interpretation).</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+<footer class="wrap"><div>ChinaFun1 — Verification. Flagged items block confident decisions where noted.</div></footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggestions | ChinaFun1</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap"><h1>Suggestions &amp; Decision Paths</h1><p>Ideas to improve the site and the decision process. No changes are implemented automatically; review and choose a path first.</p></div></header>
+<nav><div class="wrap">
+  <a href="index.html">Dashboard</a><a href="summary.html">Executive Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin Restaurants</a><a href="activities.html">Activities</a><a href="questions.html">Questions &amp; Missing Info</a><a class="active" href="suggestions.html">Suggestions</a><a href="verification.html">Verification &amp; Flags</a>
+</div></nav>
+<main class="wrap">
+
+  <div class="notice notice-info"><strong>How to use this page:</strong> Each suggestion includes value, effort, dependencies, and risk. Pick a path before implementation. Suggestions do not override the verification rule: no value is marked verified without an official source.</div>
+
+  <section>
+    <h2>Decision paths (choose before implementation)</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Path</th><th>Best when</th><th>What to do first</th><th>Tradeoff</th><th>Risk</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>A — Verify-first (recommended)</strong></td>
+          <td>Accuracy matters more than speed; booking decisions depend on this data.</td>
+          <td>Resolve Q1-Q7 in <a href="questions.html">Questions</a>. Verify hotel rates/room types on official sites, then rank by Michelin access.</td>
+          <td>Slower initial completion.</td>
+          <td>Low risk of hallucinated/incorrect bookings.</td>
+        </tr>
+        <tr>
+          <td><strong>B — Comparison matrix</strong></td>
+          <td>Destination/date not yet decided.</td>
+          <td>Build side-by-side matrix for Shanghai/Beijing/Chengdu across Feb 15-18 and a 7-night window: hotel price band, Michelin density, transit, weather, CNY impact.</td>
+          <td>More research breadth; less depth per city.</td>
+          <td>Medium; can delay booking if over-expanded.</td>
+        </tr>
+        <tr>
+          <td><strong>C — Booking-ready shortlist</strong></td>
+          <td>User confirms Shanghai + dates + budget.</td>
+          <td>Produce 3 hotel finalists, 6-10 restaurants, 5 activities, all fully verified with official links and booking/reservation actions.</td>
+          <td>Narrower options.</td>
+          <td>Low if verification complete; medium if dates change.</td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Site improvements</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Suggestion</th><th>Value</th><th>Effort</th><th>Dependencies</th><th>Verification impact</th></tr></thead>
+      <tbody>
+        <tr><td>S1</td><td>Add a "Data snapshot" banner on every page with timestamp, source count, and verified/unverified counts.</td><td>High — prevents stale data misuse.</td><td>Low</td><td>None</td><td>Improves auditability.</td></tr>
+        <tr><td>S2</td><td>Add sortable/filterable tables (client-side JS) for price, star rating, district, verification status.</td><td>High — faster decision making on mobile/desktop.</td><td>Medium</td><td>Stable table schema</td><td>Neutral; must not hide unverified flags.</td></tr>
+        <tr><td>S3</td><td>Add a map view with hotel + Michelin cluster pins and 1-hour transit isochrone layer.</td><td>High — directly supports ranking criterion.</td><td>High</td><td>Verified addresses, transit API/source, map tile licensing</td><td>Requires verified coordinates/addresses.</td></tr>
+        <tr><td>S4</td><td>Add per-row "last verified" date and verifier/session ID.</td><td>High — supports parallel sessions and audit trail.</td><td>Low</td><td>COORDINATION.md discipline</td><td>Strong positive.</td></tr>
+        <tr><td>S5</td><td>Separate "Official source" from "Social/review source" columns; never treat social links as verification for facts.</td><td>High — avoids evidence confusion.</td><td>Low</td><td>Table schema update</td><td>Strong positive.</td></tr>
+        <tr><td>S6</td><td>Add a booking checklist page: visa, flights, hotel cancellation, restaurant reservations, payment apps, eSIM, insurance.</td><td>Medium — operational readiness.</td><td>Medium</td><td>Official source links</td><td>Needs official sources for each checklist item.</td></tr>
+        <tr><td>S7</td><td>Add currency conversion with dated FX source (e.g., official central bank rate) and show original CNY.</td><td>Medium — price comparability.</td><td>Low</td><td>Verified FX source/date</td><td>Must show rate date/source; no live guess.</td></tr>
+        <tr><td>S8</td><td>Create printable/PDF-friendly itinerary cards per day.</td><td>Medium — usability during travel.</td><td>Medium</td><td>Verified hours/transit</td><td>Only include verified venues/times.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Data collection suggestions (to fill missing info)</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Missing info</th><th>Best official/primary source</th><th>Capture format</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Hotel 7-night total, taxes/fees, cancellation</td><td>Hotel official booking engine (brand site)</td><td>URL + date checked + check-in/out + room type + total price incl. taxes + screenshot/PDF archive</td><td>Do not use third-party OTA price as "verified" unless explicitly labeled and cross-checked.</td></tr>
+        <tr><td>Room has private bathroom + queen/king</td><td>Official hotel room-type page</td><td>Room name + bed type + bathroom description + URL</td><td>Mark "equivalent or bigger" only when bed size explicitly stated or clearly equivalent.</td></tr>
+        <tr><td>Restaurant hours/days/exceptions</td><td>Official restaurant site, official reservation page, or Michelin page if it clearly lists hours</td><td>Weekly hours + holiday exceptions + URL + date checked</td><td>Holiday periods around CNY/Lantern Festival need explicit check.</td></tr>
+        <tr><td>Restaurant price for 2 adults</td><td>Official menu/tasting menu page</td><td>Per-person/menu price + service charge + assumed items + total for 2 + URL</td><td>If only Michelin symbol available, keep exact total blank and flag.</td></tr>
+        <tr><td>Transit time &lt;= 1 hour</td><td>Official transit planner / reputable map routing with subway+bus mode; validate with station exits</td><td>Origin, destination, departure time, duration, transfers, mode, URL/screenshot</td><td>Test at realistic dining/activity times (evening/weekend).</td></tr>
+        <tr><td>Social links</td><td>Official website/social profile links from venue's own site</td><td>Platform + URL + account name + verified-official flag</td><td>Avoid fan accounts unless clearly labeled unverified/unofficial.</td></tr>
+        <tr><td>CNY 2027 official holiday dates</td><td>State Council notice on gov.cn</td><td>Notice title + document number + URL + date published</td><td>Currently cited by secondary sources; direct gov.cn verification pending.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Recommended next path</h2>
+    <div class="card">
+      <p><strong>Recommended: Path A (Verify-first) + S1/S4/S5.</strong> Before adding more rows, confirm destination and dates, then verify 3 candidate hotels end-to-end (room, 7-night total, taxes, cancellation, transit to Michelin cluster). This produces a small but trustworthy decision set.</p>
+    </div>
+  </section>
+
+</main>
+<footer class="wrap"><div>ChinaFun1 — Suggestions. Review before implementing.</div></footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions & Missing Info | ChinaFun1</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="wrap"><h1>Questions &amp; Missing Information</h1><p>Clear questions, information gaps, and suggested discovery actions. No decisions should be finalized until critical items are resolved or explicitly accepted as assumptions.</p></div></header>
+<nav><div class="wrap">
+  <a href="index.html">Dashboard</a><a href="summary.html">Executive Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">Michelin Restaurants</a><a href="activities.html">Activities</a><a class="active" href="questions.html">Questions &amp; Missing Info</a><a href="suggestions.html">Suggestions</a><a href="verification.html">Verification &amp; Flags</a>
+</div></nav>
+<main class="wrap">
+  <div class="notice notice-warn"><strong>Rule:</strong> Items below block confident decision-making where marked "Blocking". "Non-blocking" items improve quality but do not prevent an initial draft plan.</div>
+
+  <section>
+    <h2>Decision-blocking questions</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Question</th><th>Why it matters</th><th>Information we have</th><th>Information missing</th><th>Suggested discovery action</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Q1</td>
+          <td>Which city/cities in China should be the destination?</td>
+          <td>Hotels, Michelin clusters, transit, activities, and costs depend entirely on location.</td>
+          <td>User said "Trip Planning China"; Shanghai selected as draft assumption due to Michelin/transit density.</td>
+          <td>User confirmation of Shanghai vs Beijing/Guangzhou/Chengdu/Hong Kong/etc.; single-city or multi-city preference.</td>
+          <td>Confirm destination. If undecided, run a comparison matrix: Michelin density, flight access, hotel cost, visa/entry constraints, transit ease, Feb weather.</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+        <tr>
+          <td>Q2</td>
+          <td>What are the exact travel dates and trip length (3 nights preferred, or 7 nights)?</td>
+          <td>Hotel totals, availability, restaurant closures, and CNY crowd impact change by date.</td>
+          <td>Window: 2027-02-15 to 2027-03-23; preferred 2027-02-15–2027-02-18; 7-night pricing requested.</td>
+          <td>Final check-in/check-out dates; flexibility; whether 7-night stay is desired or only a pricing benchmark.</td>
+          <td>Choose a primary 7-night window and a backup. Evaluate Feb 15–22, Feb 22–Mar 1, Mar 1–8 for price/crowd tradeoffs using official hotel booking engines.</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+        <tr>
+          <td>Q3</td>
+          <td>What is the total budget (flights, hotels, dining, activities, local transport)?</td>
+          <td>"Best hotel by price..." cannot be ranked without budget ceiling and willingness to pay for Michelin dining.</td>
+          <td>Couple, 2 adults; looking for best hotels by price/location/amenities.</td>
+          <td>Nightly/total hotel budget; dining budget per meal/day; currency preference (CNY/USD).</td>
+          <td>Set budget bands: value, mid-range, luxury. Collect 7-night totals for one candidate hotel in each band on same dates.</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+        <tr>
+          <td>Q4</td>
+          <td>What are the real, verifiable 7-night hotel prices for specific dates?</td>
+          <td>User requested real verified pricing and cheapest upcoming time to book. Dynamic pricing cannot be assumed.</td>
+          <td>Candidate hotels not yet verified with live official rates.</td>
+          <td>Official booking-engine total for 7 nights, room type, taxes/fees, cancellation policy, currency, capture timestamp.</td>
+          <td>Check each candidate hotel on its official site for at least 3 date windows (Feb 15–22, Feb 22–Mar 1, Mar 8–15). Record screenshots/PDFs and total price incl. taxes/fees.</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+        <tr>
+          <td>Q5</td>
+          <td>Do candidate hotel rooms meet hard requirements (private bathroom, queen bed or equivalent/bigger)?</td>
+          <td>Non-negotiable requirement stated by user.</td>
+          <td>Requirement known; room-level verification not completed.</td>
+          <td>Official room description for selected room type; bed dimensions/configuration; bathroom type.</td>
+          <td>For each hotel, capture official room page URL and confirm "private bathroom" and bed size (queen/king/double >= queen equivalent).</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+        <tr>
+          <td>Q6</td>
+          <td>Which Michelin restaurants are within 1 hour by subway/bus from each candidate hotel?</td>
+          <td>Core ranking criterion. Transit time varies by route, time of day, transfers, and walking.</td>
+          <td>Michelin star/list status verified for subset; hotel candidates not finalized.</td>
+          <td>Hotel addresses, restaurant addresses, transit route/time estimates from official/map routing, operating hours for subway/bus.</td>
+          <td>Use official transit planners (Amap/Baidu/Google where available) with fixed departure time; record route, duration, transfers, and date checked. Verify against hotel/restaurant hours.</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+        <tr>
+          <td>Q7</td>
+          <td>What are actual restaurant prices for 2 adults?</td>
+          <td>User requested estimate range or exact price if listed, with total for 2 adults.</td>
+          <td>Michelin price symbols (¥, ¥¥, ¥¥¥, ¥¥¥¥) observed on official Michelin pages.</td>
+          <td>Official menu/tasting menu prices, per-person/set-menu pricing, service charge, tea/water, beverage assumptions for 2 adults.</td>
+          <td>Check official restaurant websites/menus. Record price per person or set menu and calculate 2-adult total with stated assumptions. If unavailable, leave blank and flag.</td>
+          <td><span class="badge badge-unverified">Blocking</span></td>
+        </tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Non-blocking but important questions</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Question</th><th>Why it matters</th><th>Missing info</th><th>Suggested discovery action</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td>Q8</td><td>Are passports, visas, and entry requirements satisfied for US travelers to China?</td><td>Trip feasibility.</td><td>Nationality/passport details, visa status, transit rules.</td><td>Check official PRC embassy/consulate and U.S. State Department travel pages for travel date.</td><td><span class="badge badge-partial">High</span></td></tr>
+        <tr><td>Q9</td><td>What is the impact of Chinese New Year/Spring Festival 2027 on the preferred dates?</td><td>Preferred Feb 15–18 is just after official holiday; crowds/pricing/closures may persist.</td><td>Official gov.cn holiday notice direct confirmation; hotel/restaurant closure schedules.</td><td>Verify State Council notice on gov.cn; check each hotel/restaurant for holiday hours.</td><td><span class="badge badge-partial">High</span></td></tr>
+        <tr><td>Q10</td><td>What dietary restrictions, accessibility needs, or mobility constraints apply?</td><td>Affects restaurant suitability and transit plans.</td><td>Allergies, vegetarian/other diet, wheelchair access, walking tolerance.</td><td>Collect traveler constraints; filter restaurants/activities accordingly.</td><td><span class="badge badge-partial">High</span></td></tr>
+        <tr><td>Q11</td><td>What activities are preferred (culture, museums, shopping, nightlife, day trips)?</td><td>Activity selection should match interests and 1-hour travel rule.</td><td>User preferences; must-see items.</td><td>Provide categorized shortlist with verified hours/links; user selects priorities.</td><td><span class="badge badge-info">Medium</span></td></tr>
+        <tr><td>Q12</td><td>What social media sources are acceptable/official for restaurants and activities?</td><td>User asked for YouTube/TikTok/Instagram links "as many as you can".</td><td>Official vs fan-made account distinction; language preference.</td><td>Prefer official accounts/pages linked from official websites; label unofficial clearly.</td><td><span class="badge badge-info">Medium</span></td></tr>
+        <tr><td>Q13</td><td>Is travel insurance needed and what coverage level?</td><td>Risk management for international trip.</td><td>Existing coverage, medical/evacuation needs, cancellation risk tolerance.</td><td>Compare policies after dates/flights/hotels are known.</td><td><span class="badge badge-info">Medium</span></td></tr>
+        <tr><td>Q14</td><td>What airport/arrival plan and local SIM/eSIM/payment setup is needed?</td><td>Affects first/last day logistics.</td><td>Arrival airport, flight times, payment apps, roaming plan.</td><td>Check PVG/SHA options; confirm Alipay/WeChat Pay foreign card setup on official sources.</td><td><span class="badge badge-info">Medium</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Assumptions made in this draft</h2>
+    <div class="card">
+      <ul class="clean">
+        <li><strong>A1 — Destination assumed Shanghai:</strong> User asked for "Trip Planning China" without city. Shanghai chosen for draft due to Michelin density and transit. <em>Unconfirmed.</em></li>
+        <li><strong>A2 — 7-night benchmark window not fixed:</strong> User asked for 7-night hotel total and cheapest upcoming time to book; no specific 7-night dates chosen. <em>Needs selection.</em></li>
+        <li><strong>A3 — "Within 1 hour subway/bus" interpreted as public transit:</strong> Taxi/rideshare excluded unless specified. Walking/transfer time should be included; method needs confirmation.</li>
+        <li><strong>A4 — "Queen sized bed or equivalent or bigger":</strong> King/queen/double meeting size requirement treated as acceptable; exact bed dimension verification required on official room pages.</li>
+        <li><strong>A5 — Pricing currency:</strong> CNY expected for local prices; USD conversion may be shown only with dated exchange-rate source. Not yet applied.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="wrap"><div>ChinaFun1 — Questions &amp; Missing Info. Update as answers are verified.</div></footer>
+</body>
+</html>
