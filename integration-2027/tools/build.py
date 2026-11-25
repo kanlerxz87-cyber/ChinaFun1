@@ -215,6 +215,10 @@ def build_social(social):
     body = f"""
 <p class="eyebrow">Primary research · session 815c7943</p><h1>Social reviews index</h1>
 <p class="lede">{e(social['rule'])}</p>
+<div class="callout"><strong>Parallel register:</strong> session `773e75a3` published a deeper Beijing-only video
+register with 58 first-party-oEmbed-verified links at <a href="../social-2027/index.html">social-2027/</a>.
+The two registers share three video IDs and do not contradict each other; this page is the cross-plan view that
+also covers Shanghai. Use the deeper register when you need maximum Beijing coverage.</div>
 {filter_input('social-table')}
 <div class="tablewrap"><table id="social-table"><thead><tr><th>Venue</th><th>Status</th><th>Official source</th>
 <th>Open days / hours / exceptions</th><th>Cost for 2</th><th>Verified social links</th><th>Flags</th></tr></thead>
