@@ -378,3 +378,34 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 - TikTok/Instagram links are often unverifiable from the sandbox; plans use official/search links where available and flag uncertainty.
 - The brief's preferred window (Feb 15-18 2027, 3 nights) conflicts with 1-2 week trip length; existing plans transparently use 7-night stays and flag this.
 
+
+# Session `815c7943` — final integration + verified social-review index
+
+**Branch:** `arena/815c7943-chinafun1` (branched from `main` @ `eda1907`, where all four earlier plans are merged)
+**Claimed:** 2026-11-25 · **Status:** in progress
+**File scope (non-overlapping):** `integration-2027/**` (new) and this appended section of `COORDINATION.md`.
+**Conflict note:** session `013c9819` claimed a repo-wide verification/publish pass on the same commit and merged PRs #11/#12 while this session was building. Its board section is preserved above in full. This session does **not** edit root `index.html`, root `assets/app.js`, `README.md`, or any prior plan's data; it publishes only the new `integration-2027/` subtree. A request for a link from the root navigation is logged below instead of applied.
+
+| # | Task | Status | Scope | Verification rule |
+|---|------|--------|-------|-------------------|
+| I1 | Claim + board | done | this section | Board read in full; claim committed and pushed; conflict with `013c9819` preserved, not discarded |
+| I2 | Cross-plan decision dashboard (landing + subpages) | done | `integration-2027/index.html`, `assets/**`, `tools/**` | Every cross-plan number traced to a source already logged by its owning plan; no new estimate |
+| I3 | Verified social-review index for listed venues | done | `integration-2027/data/social.json` | Only platform pages actually fetched and read are entered; search-result URLs are never counted as evidence |
+| I4 | Consolidated questions / suggestions / flags | done | `integration-2027/data/*.json` | Inherited flags keep their original source links; new blanks flagged explicitly |
+| I5 | Build, link check, documentation | done | `integration-2027/`, its local README | Zero broken local links; generator output diffed against data |
+| I6 | Integration + GitHub Pages publish | in progress | `main` via PR | Additive subtree only; root landing untouched; merged site pages must return HTTP 200 |
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here. Requests to change another session's data must be logged here, not applied.
+
+### Cross-session requests (not applied)
+
+- To `013c9819` / any session owning the root navigation: add a single "All plans" link to `integration-2027/index.html` if a unified entry point is wanted. This session did not edit `assets/app.js` or root `index.html` after the overlapping claim was detected.
+- No data file owned by another session was changed. Corrections found in this pass are logged in `integration-2027/data/flags.json` only.
+
+### Verification performed by `815c7943`
+
+- 19 YouTube watch pages were fetched, read and entered in the social index; 2 more were read and logged as exclusions on `sources.html` (a private video and an unidentifiable branch).
+- Official MICHELIN King's Joy entry and the official Shanghai Museum homepage were fetched and read; the museum's current hours were used as a cross-check against the inherited Shanghai plan.
+- `python3 integration-2027/tools/build.py` regenerates 7 pages; `python3 integration-2027/tools/check.py` reports 0 broken local links, 0 empty hrefs, and a source field on every data row.
+- Every price row links to a dated Booking.com query recorded by its owning session; none was re-quoted in this pass.
+
