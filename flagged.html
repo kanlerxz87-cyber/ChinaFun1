@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verification Audit &amp; Flagged Irregularities — ChinaFun1</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Task T6 · Zero-Hallucination Audit Ledger</span>
+      <h1>Line-by-Line Verification Audit &amp; Flagged Irregularities</h1>
+      <p class="lead">
+        Every rejected hotel listing, page fetch error, room category discrepancy, missing social handle, and calendar risk discovered during Nov 25, 2026 live verification is documented openly below rather than hidden or estimated.
+      </p>
+    </section>
+
+    <h2>Methodology Guardrails</h2>
+    <div class="prose-card" id="method-notes"></div>
+
+    <h2>Flagged Items &amp; Exclusions (10 Audited Records)</h2>
+    <div id="flag-cards" class="card-grid"></div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>
+    renderChrome('flagged');
+    loadData().then(({ flagData }) => {
+      document.getElementById('method-notes').innerHTML = `
+        <ul>${flagData.methodology_notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul>
+      `;
+
+      document.getElementById('flag-cards').innerHTML = flagData.irregularities.map(item => {
+        const sevClass = item.severity === 'critical' ? 'badge-red' : item.severity === 'warning' ? 'badge-amber' : 'badge-blue';
+        return `
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <div class="xs">${esc(item.category)}</div>
+                <h3>${esc(item.item)}</h3>
+              </div>
+              <span class="badge ${sevClass}">${esc(item.severity.toUpperCase())}</span>
+            </div>
+            <p class="small" style="margin:0">${esc(item.detail)}</p>
+            <div class="link-row">
+              <a class="chip-link" target="_blank" rel="noopener" href="${item.source}">Reference Source</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    });
+  </script>
+</body>
+</html>

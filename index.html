@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChinaFun1 — Executive Summary &amp; Best 2027 Hotel/City Picks</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Verified Nov 25, 2026 · 7-Night Trip · 2 Adults</span>
+      <h1>Executive Summary: Hong Kong, Shanghai &amp; Beijing (Feb–Mar 2027)</h1>
+      <p class="lead">
+        Ranked across <strong>494 official MICHELIN Guide venues</strong>, <strong>15 verified 7-night hotels</strong> (private bath, &ge; Queen bed), <strong>37 individually audited MICHELIN dining rooms</strong>, and <strong>24 curated &le;60-minute cultural sights</strong>.
+      </p>
+      <div class="kpi-grid" id="summary-kpis"></div>
+    </section>
+
+    <div class="notice">
+      <strong>Best Booking Window:</strong> Across 13 of 14 dynamic-rate hotels, <strong>Feb 15–22, 2027</strong> (Mon–Mon immediately after Mainland Spring Festival holiday Feb 5–13) beats mid-March <strong>15–22</strong> by <strong>7%–40.5%</strong> (saving up to <strong>$1,293</strong> in Shanghai or <strong>$1,258</strong> in Beijing). Watch Lantern Festival crowds on <strong>Sat Feb 20</strong> and Beijing <em>Two Sessions</em> (~Mar 4–14).
+    </div>
+
+    <h2>1. City Tier Ranking by MICHELIN Density &amp; Transit Compactness</h2>
+    <div id="city-ranking-cards" class="card-grid"></div>
+
+    <h2>2. Best Hotel Winners by Strategy &amp; Budget</h2>
+    <div id="winner-cards" class="card-grid"></div>
+
+    <h2>3. Complete 15-Hotel Leaderboard (7-Night Feb 15–22 vs. Mar 15–22)</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>City</th>
+            <th>Hotel &amp; Metro Hub</th>
+            <th>Tier</th>
+            <th>Room / Bed</th>
+            <th class="num">Feb 15–22</th>
+            <th class="num">Mar 15–22</th>
+            <th class="num">Feb Savings</th>
+            <th>Audited Dining (&le;15/30/60m)</th>
+            <th>Audited Sights (&le;15/30/60m)</th>
+          </tr>
+        </thead>
+        <tbody id="summary-hotel-tbody"></tbody>
+      </table>
+    </div>
+
+    <h2>4. Explore All Dashboards</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3><a href="./hotels.html">Full Hotel Matrix (15 Properties)</a></h3>
+        <p class="small">Filter by city, tier, Feb vs. Mar prices, breakfast, free cancellation, room size, tax rules, and booking timing strategy.</p>
+      </div>
+      <div class="card">
+        <h3><a href="./restaurants.html">MICHELIN Directory (37 Audited Venues)</a></h3>
+        <p class="small">Interactive hotel-origin selector calculates exact minutes to every 3★, 2★, 1★, Bib Gourmand &amp; Selected spot plus verified YT/IG/TT links.</p>
+      </div>
+      <div class="card">
+        <h3><a href="./activities.html">Activities &amp; Closure Calendar (24 Sights)</a></h3>
+        <p class="small">Monday vs. Tuesday museum closures, Two Sessions warnings, ticket costs for 2 adults, and direct transit routes under 60 minutes.</p>
+      </div>
+      <div class="card">
+        <h3><a href="./questions.html">Interactive 7-Night Trip Cost Estimator</a></h3>
+        <p class="small">Combine hotel, dining tier, and sightseeing to compare Hong Kong vs. Shanghai vs. Beijing total 2-adult budgets.</p>
+      </div>
+      <div class="card">
+        <h3><a href="./suggestions.html">Booking Action Plan &amp; Missing Info</a></h3>
+        <p class="small">Step-by-step Black Friday refundable booking lock + Jan 30–43 day re-shop calendar and Mainland Alipay/passport prep.</p>
+      </div>
+      <div class="card">
+        <h3><a href="./flagged.html">Verification Audit &amp; Exclusions</a></h3>
+        <p class="small">Line-by-line documentation of sold-out properties, bathroom tag conflicts, March room step-ups, and geocoding boundaries.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>
+    renderChrome('summary');
+    loadData().then(({ hotelsData }) => {
+      const { city_summary, hotels } = hotelsData;
+      const totalMich = city_summary.reduce((a, c) => a + c.michelin_total, 0);
+      const totalStar = city_summary.reduce((a, c) => a + c.michelin_starred_total, 0);
+
+      document.getElementById('summary-kpis').innerHTML = `
+        <div class="kpi-card">
+          <div class="kpi-label">#1 Overall City</div>
+          <div class="kpi-val">Hong Kong</div>
+          <div class="kpi-sub">234 MICHELIN venues (78★) · 12/12 audited dining &le;30 min from every HK hotel</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">#1 Luxury Overall</div>
+          <div class="kpi-val">Mandarin Oriental HK</div>
+          <div class="kpi-sub">$5,302 Feb · 11/12 audited MICHELIN &le;15 min door-to-door</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">#1 Value Overall</div>
+          <div class="kpi-val">iclub Sheung Wan</div>
+          <div class="kpi-sub">$727 Feb · 8/12 audited MICHELIN &le;15 min at 1/7th MO price</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">#1 Mainland Value-Luxury</div>
+          <div class="kpi-val">The Kunlun Jing An</div>
+          <div class="kpi-sub">$659 Feb · 5★ Jing'an 3-line hub · 6/13 MICHELIN &le;15 min</div>
+        </div>
+      `;
+
+      document.getElementById('city-ranking-cards').innerHTML = city_summary.map(c => `
+        <div class="card">
+          <div class="card-header">
+            <h3>Tier #${c.city_tier}: ${esc(c.city_name)}</h3>
+            <span class="badge badge-star">${c.michelin_total} MICHELIN</span>
+          </div>
+          <div class="meta-row">
+            <span class="badge badge-star">${c.michelin_3star}× 3★</span>
+            <span class="badge badge-star">${c.michelin_2star}× 2★</span>
+            <span class="badge badge-star">${c.michelin_1star}× 1★</span>
+            <span class="badge badge-bib">${c.michelin_bib} Bib</span>
+            <span class="badge badge-selected">${c.michelin_selected} Selected</span>
+          </div>
+          <p class="small">
+            Total Starred: <strong>${c.michelin_starred_total}</strong> (${Math.round((c.michelin_starred_total / totalStar) * 100)}% of 3-city starred share).
+            Audited matrix covers <strong>${c.audited_restaurants} venues</strong> + <strong>${c.audited_activities} &le;60m sights</strong>.
+          </p>
+          <div class="mini-bar-bg"><div class="mini-bar-fill" style="width:${Math.round((c.michelin_total / 234) * 100)}%"></div></div>
+          <div class="link-row">
+            <a class="chip-link" target="_blank" rel="noopener" href="${c.michelin_source}">Official MICHELIN List</a>
+            <a class="chip-link" href="./restaurants.html?city=${c.city_code}">Explore ${c.city_code} Dining &rarr;</a>
+          </div>
+        </div>
+      `).join('');
+
+      const picks = [
+        { label: 'Overall Flagship Luxury (#1)', h: hotels[0], why: 'Steps to Amber (3★), Man Wah (1★), Terrace Boulud, Pedder Chinese & Ying Jee Club (2★).' },
+        { label: 'Best Overall Value (#2)', h: hotels[1], why: 'Walks to Kau Kee & Yat Lok; 1 MTR stop from Central 3★ cluster for $727/week.' },
+        { label: 'Best Mainland Base (#5)', h: hotels[4], why: 'Lowest 7-night price in our entire survey ($659) with 5★ Jing\'an Lines 2/7/14 access.' },
+        { label: 'Best Beijing Base (#12)', h: hotels[11], why: 'Lines 5 & 8 at Jinyu Hutong reach 12/12 audited restaurants &le;30m and 4 sights &le;15m.' }
+      ];
+
+      document.getElementById('winner-cards').innerHTML = picks.map(({ label, h, why }) => `
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="xs" style="font-weight:700;color:var(--accent)">${esc(label)}</div>
+              <h3>${esc(h.name)}</h3>
+            </div>
+            <span class="badge badge-green">${fmtUSD(h.feb15_usd)} Feb</span>
+          </div>
+          <div class="small">${esc(why)}</div>
+          <div class="meta-row">
+            <span class="badge badge-blue">${h.audited_rest_15}/${h.audited_rest_30}/${h.audited_rest_60} Dining</span>
+            <span class="badge badge-amber">${h.audited_act_15}/${h.audited_act_30}/${h.audited_act_60} Sights</span>
+          </div>
+          <div class="link-row">${socialChips(h, 'Hotel Site')}</div>
+        </div>
+      `).join('');
+
+      document.getElementById('summary-hotel-tbody').innerHTML = hotels.map(h => {
+        const diff = h.mar15_usd - h.feb15_usd;
+        const pct = h.mar15_usd ? Math.round((diff / h.mar15_usd) * 100) : 0;
+        const savBadge = diff > 0
+          ? `<span class="badge badge-green">-${pct}% (${fmtUSD(diff)})</span>`
+          : `<span class="badge badge-selected">Flat</span>`;
+        return `
+          <tr>
+            <td><strong>#${h.overall_rank}</strong></td>
+            <td><span class="badge badge-blue">${esc(h.city_code)}</span></td>
+            <td>
+              <strong>${esc(h.name)}</strong>
+              <div class="xs">${esc(h.metro_station)}</div>
+            </td>
+            <td>${esc(h.tier)}</td>
+            <td>
+              ${esc(h.bed_size)} · ${h.room_area_sqft} ft²
+              ${h.breakfast_included ? '<div class="xs" style="color:var(--emerald)">+ Breakfast incl.</div>' : ''}
+            </td>
+            <td class="num"><strong>${fmtUSD(h.feb15_usd)}</strong></td>
+            <td class="num">${fmtUSD(h.mar15_usd)}</td>
+            <td class="num">${savBadge}</td>
+            <td>${h.audited_rest_15} &le;15m · ${h.audited_rest_30} &le;30m · ${h.audited_rest_60} &le;60m</td>
+            <td>${h.audited_act_15} &le;15m · ${h.audited_act_30} &le;30m · ${h.audited_act_60} &le;60m</td>
+          </tr>
+        `;
+      }).join('');
+    });
+  </script>
+</body>
+</html>

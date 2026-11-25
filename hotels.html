@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotels Matrix (15 Audited) — ChinaFun1</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Task T1 · Live Verified Quotes</span>
+      <h1>15 Audited Hotels: 7-Night Feb vs. Mar 2027 Matrix</h1>
+      <p class="lead">
+        Every property below is verified for <strong>2 adults</strong>, <strong>1 room &ge; Queen bed</strong>, and an <strong>in-room private bathroom</strong>.
+        Quotes show verified Booking.com 7-night base USD totals alongside cancellation flexibility, local tax disclaimers, subway interchanges, and MICHELIN cluster proximity.
+      </p>
+    </section>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="f-city">City</label>
+        <select id="f-city">
+          <option value="ALL">All 3 Cities (15)</option>
+          <option value="HK">Hong Kong (4)</option>
+          <option value="SH">Shanghai (7)</option>
+          <option value="BJ">Beijing (4)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="f-tier">Hotel Tier</label>
+        <select id="f-tier">
+          <option value="ALL">All Price Tiers</option>
+          <option value="Budget">Budget / Value</option>
+          <option value="Midrange">Midrange</option>
+          <option value="Luxury">Luxury / Upscale</option>
+          <option value="Ultra">Ultra-Luxury</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="f-sort">Sort By</label>
+        <select id="f-sort">
+          <option value="rank">Overall City+Access Rank (#1–15)</option>
+          <option value="feb_asc">Cheapest Feb 15–22 (USD)</option>
+          <option value="mar_asc">Cheapest Mar 15–22 (USD)</option>
+          <option value="rest15">Most Audited MICHELIN &le;15 min</option>
+          <option value="sav_pct">Biggest Feb Savings vs Mar (%)</option>
+        </select>
+      </div>
+      <div class="control-group" style="flex:0 0 auto;">
+        <label>View</label>
+        <div class="btn-group">
+          <button type="button" class="btn active" id="v-cards">Cards</button>
+          <button type="button" class="btn" id="v-table">Table</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="hotel-results-cards" class="card-grid"></div>
+    <div id="hotel-results-table" class="table-wrap" style="display:none">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>City</th>
+            <th>Property &amp; Address</th>
+            <th>Room / Bed / Bath</th>
+            <th>Cancellation &amp; Tax</th>
+            <th class="num">Feb 15–22</th>
+            <th class="num">Mar 1–8</th>
+            <th class="num">Mar 15–22</th>
+            <th>Dining &le;15/30/60</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody id="hotel-tbody"></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>
+    renderChrome('hotels');
+    let allHotels = [];
+    let viewMode = 'cards';
+
+    function matchTier(h, filterVal) {
+      if (filterVal === 'ALL') return true;
+      const t = h.tier.toLowerCase();
+      if (filterVal === 'Budget') return t.includes('budget') || t.includes('value');
+      if (filterVal === 'Midrange') return t.includes('midrange');
+      if (filterVal === 'Luxury') return t.includes('luxury') && !t.includes('ultra');
+      if (filterVal === 'Ultra') return t.includes('ultra');
+      return true;
+    }
+
+    function renderHotels() {
+      const city = document.getElementById('f-city').value;
+      const tier = document.getElementById('f-tier').value;
+      const sort = document.getElementById('f-sort').value;
+
+      let list = allHotels.filter(h => (city === 'ALL' || h.city_code === city) && matchTier(h, tier));
+      list.sort((a, b) => {
+        if (sort === 'feb_asc') return a.feb15_usd - b.feb15_usd;
+        if (sort === 'mar_asc') return a.mar15_usd - b.mar15_usd;
+        if (sort === 'rest15') return b.audited_rest_15 - a.audited_rest_15 || a.overall_rank - b.overall_rank;
+        if (sort === 'sav_pct') {
+          const pa = (a.mar15_usd - a.feb15_usd) / a.mar15_usd;
+          const pb = (b.mar15_usd - b.feb15_usd) / b.mar15_usd;
+          return pb - pa;
+        }
+        return a.overall_rank - b.overall_rank;
+      });
+
+      document.getElementById('hotel-results-cards').style.display = viewMode === 'cards' ? 'grid' : 'none';
+      document.getElementById('hotel-results-table').style.display = viewMode === 'table' ? 'block' : 'none';
+
+      document.getElementById('hotel-results-cards').innerHTML = list.map(h => {
+        const diff = h.mar15_usd - h.feb15_usd;
+        const pct = h.mar15_usd ? Math.round((diff / h.mar15_usd) * 100) : 0;
+        return `
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <div class="xs">Rank #${h.overall_rank} · ${esc(h.city)} (#${h.city_rank} in ${h.city_code})</div>
+                <h3>${esc(h.name)}</h3>
+              </div>
+              <span class="badge badge-blue">${esc(h.tier)}</span>
+            </div>
+            <div class="meta-row">
+              <span class="badge badge-green">Feb 15–22: ${fmtUSD(h.feb15_usd)}</span>
+              ${h.mar1_usd ? `<span class="badge badge-selected">Mar 1–8: ${fmtUSD(h.mar1_usd)}</span>` : ''}
+              <span class="badge badge-amber">Mar 15–22: ${fmtUSD(h.mar15_usd)}${diff > 0 ? ` (-${pct}% in Feb)` : ''}</span>
+            </div>
+            <div class="small">
+              <strong>Room:</strong> ${esc(h.room_type)} · ${esc(h.bed_size)} · ${h.room_area_sqft} sq ft (${h.room_area_sqm} m²) ·
+              <span style="color:var(--emerald);font-weight:600">Private Bath</span>
+              ${h.breakfast_included ? ' · <span style="color:var(--emerald);font-weight:600">Breakfast Incl.</span>' : ''}
+            </div>
+            <div class="small">
+              <strong>Transit Hub:</strong> ${esc(h.metro_station)} (${esc(h.metro_lines.join(', '))})
+            </div>
+            <div class="meta-row">
+              <span class="badge badge-star">Audited Dining: ${h.audited_rest_15} &le;15m · ${h.audited_rest_30} &le;30m · ${h.audited_rest_60} &le;60m</span>
+              <span class="badge badge-selected">Sights: ${h.audited_act_15} &le;15m · ${h.audited_act_30} &le;30m · ${h.audited_act_60} &le;60m</span>
+            </div>
+            <div class="xs"><strong>Why here:</strong> ${esc(h.proximity_note)}</div>
+            <div class="xs"><strong>Timing &amp; Policy:</strong> ${esc(h.cancellation_policy)}. ${esc(h.tax_note)}</div>
+            <div class="xs"><strong>Strategy:</strong> ${esc(h.booking_timing_advice)}</div>
+            <div class="link-row">
+              ${socialChips(h, 'Official Site')}
+              <a class="chip-link" href="./restaurants.html?city=${h.city_code}&hotel=${h.id}">View Transit Times &rarr;</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      document.getElementById('hotel-tbody').innerHTML = list.map(h => `
+        <tr>
+          <td><strong>#${h.overall_rank}</strong></td>
+          <td><span class="badge badge-blue">${esc(h.city_code)}</span></td>
+          <td>
+            <strong>${esc(h.name)}</strong>
+            <div class="xs">${esc(h.address)}</div>
+            <div class="xs">${esc(h.metro_station)}</div>
+          </td>
+          <td>
+            ${esc(h.room_type)}
+            <div class="xs">${esc(h.bed_size)} · ${h.room_area_sqft} ft² · Private Bath${h.breakfast_included ? ' · Breakfast' : ''}</div>
+          </td>
+          <td class="xs">${esc(h.cancellation_policy)}<br>${esc(h.tax_note)}</td>
+          <td class="num"><strong>${fmtUSD(h.feb15_usd)}</strong></td>
+          <td class="num">${fmtUSD(h.mar1_usd)}</td>
+          <td class="num">${fmtUSD(h.mar15_usd)}</td>
+          <td>
+            ${h.audited_rest_15}/${h.audited_rest_30}/${h.audited_rest_60} Dining
+            <div class="xs">${h.audited_act_15}/${h.audited_act_30}/${h.audited_act_60} Sights</div>
+          </td>
+          <td><div class="link-row">${socialChips(h, 'Official')}</div></td>
+        </tr>
+      `).join('');
+    }
+
+    document.getElementById('f-city').addEventListener('change', renderHotels);
+    document.getElementById('f-tier').addEventListener('change', renderHotels);
+    document.getElementById('f-sort').addEventListener('change', renderHotels);
+    document.getElementById('v-cards').addEventListener('click', () => {
+      viewMode = 'cards';
+      document.getElementById('v-cards').classList.add('active');
+      document.getElementById('v-table').classList.remove('active');
+      renderHotels();
+    });
+    document.getElementById('v-table').addEventListener('click', () => {
+      viewMode = 'table';
+      document.getElementById('v-table').classList.add('active');
+      document.getElementById('v-cards').classList.remove('active');
+      renderHotels();
+    });
+
+    loadData().then(({ hotelsData }) => {
+      allHotels = hotelsData.hotels;
+      renderHotels();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MICHELIN Restaurants &amp; Hotel Proximity Explorer — ChinaFun1</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Task T2 · 2026 SH/HK &amp; 2027 BJ MICHELIN</span>
+      <h1>MICHELIN Clusters &amp; 37 Audited Restaurants</h1>
+      <p class="lead">
+        Official citywide MICHELIN totals stand at <strong>Hong Kong 234 (78★)</strong>, <strong>Shanghai 153 (50★)</strong>, and <strong>Beijing 107 (33★)</strong>.
+        Pick any hotel below to measure exact door-to-door transit minutes to every audited 3★, 2★, 1★, Bib Gourmand &amp; Selected venue, plus 2-adult costs at <strong>1 USD = 6.6775 CNY = 7.84 HKD</strong>.
+      </p>
+      <div class="kpi-grid" id="mich-kpis"></div>
+    </section>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="r-city">City</label>
+        <select id="r-city">
+          <option value="ALL">All Cities (37)</option>
+          <option value="HK">Hong Kong (12)</option>
+          <option value="SH">Shanghai (13)</option>
+          <option value="BJ">Beijing (12)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="r-hotel">Transit From Hotel</label>
+        <select id="r-hotel">
+          <option value="">-- Select Hotel for Door-to-Door Minutes --</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="r-tier">MICHELIN Distinction</label>
+        <select id="r-tier">
+          <option value="ALL">All Distinctions</option>
+          <option value="5">3 Stars only</option>
+          <option value="4">2 Stars &amp; above</option>
+          <option value="3">Starred (1★ / 2★ / 3★)</option>
+          <option value="2">Bib Gourmand</option>
+          <option value="1">MICHELIN Selected</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="r-budget">2-Adult Budget</label>
+        <select id="r-budget">
+          <option value="ALL">All Budgets</option>
+          <option value="Budget">Budget (&le; $60 USD)</option>
+          <option value="Moderate">Moderate ($60–$160 USD)</option>
+          <option value="Fine Dining">Fine Dining ($160–$450 USD)</option>
+          <option value="Splurge">Splurge ($450+ USD)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="r-search">Search Name / Cuisine</label>
+        <input id="r-search" type="search" placeholder="e.g. Goose, Noodles, Bund...">
+      </div>
+    </div>
+
+    <div id="hotel-transit-summary" class="notice info" style="display:none"></div>
+    <div id="rest-cards" class="card-grid"></div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>
+    renderChrome('restaurants');
+    let allRests = [];
+    let allHotels = [];
+
+    function populateHotels() {
+      const city = document.getElementById('r-city').value;
+      const sel = document.getElementById('r-hotel');
+      const prev = sel.value;
+      const filtered = allHotels.filter(h => city === 'ALL' || h.city_code === city);
+      sel.innerHTML = '<option value="">-- Select Hotel for Door-to-Door Minutes --</option>' +
+        filtered.map(h => `<option value="${h.id}">[${h.city_code}] #${h.overall_rank} ${esc(h.name)} (${fmtUSD(h.feb15_usd)} Feb)</option>`).join('');
+      if (filtered.some(h => h.id === prev)) sel.value = prev;
+    }
+
+    function renderRestaurants() {
+      const city = document.getElementById('r-city').value;
+      const hotelId = document.getElementById('r-hotel').value;
+      const tierMin = document.getElementById('r-tier').value;
+      const budget = document.getElementById('r-budget').value;
+      const q = document.getElementById('r-search').value.trim().toLowerCase();
+
+      const chosenHotel = allHotels.find(h => h.id === hotelId);
+      const summaryEl = document.getElementById('hotel-transit-summary');
+      if (chosenHotel) {
+        summaryEl.style.display = 'block';
+        summaryEl.innerHTML = `<strong>Selected Origin:</strong> ${esc(chosenHotel.name)} (${esc(chosenHotel.metro_station)}) — Reaches <strong>${chosenHotel.audited_rest_15}</strong> audited MICHELIN spots &le;15 min, <strong>${chosenHotel.audited_rest_30}</strong> &le;30 min, and <strong>${chosenHotel.audited_rest_60}</strong> &le;60 min.`;
+      } else {
+        summaryEl.style.display = 'none';
+      }
+
+      let list = allRests.filter(r => {
+        if (chosenHotel && r.city_code !== chosenHotel.city_code) return false;
+        if (city !== 'ALL' && r.city_code !== city) return false;
+        if (tierMin === '5' && r.michelin_rank_score !== 5) return false;
+        if (tierMin === '4' && r.michelin_rank_score < 4) return false;
+        if (tierMin === '3' && r.michelin_rank_score < 3) return false;
+        if (tierMin === '2' && r.michelin_rank_score !== 2) return false;
+        if (tierMin === '1' && r.michelin_rank_score !== 1) return false;
+        if (budget !== 'ALL' && !r.price_tier.includes(budget)) return false;
+        if (q && !(r.name + ' ' + r.cuisine + ' ' + r.district).toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      if (chosenHotel) {
+        list.sort((a, b) => (a.hotel_minutes[chosenHotel.id] ?? 999) - (b.hotel_minutes[chosenHotel.id] ?? 999) || b.michelin_rank_score - a.michelin_rank_score);
+      } else {
+        list.sort((a, b) => b.michelin_rank_score - a.michelin_rank_score || a.price_usd_2_adults - b.price_usd_2_adults);
+      }
+
+      document.getElementById('rest-cards').innerHTML = list.map(r => {
+        const mins = chosenHotel ? r.hotel_minutes[chosenHotel.id] : null;
+        return `
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <div class="xs">${esc(r.city)} · ${esc(r.district)}</div>
+                <h3>${esc(r.name)}</h3>
+              </div>
+              ${tierBadge(r.michelin_tier)}
+            </div>
+            <div class="meta-row">
+              <span class="badge badge-blue">${esc(r.cuisine)}</span>
+              <span class="badge badge-green">~${fmtUSD(r.price_usd_2_adults)} / 2 adults</span>
+              ${mins !== null && mins !== undefined ? transitBadge(mins) : ''}
+            </div>
+            <div class="small"><strong>2 Adults Est.:</strong> ${esc(r.price_local_2_adults)}</div>
+            <div class="small"><strong>Hours:</strong> ${esc(r.hours)} · <strong>Closed:</strong> ${esc(r.closed_days)}</div>
+            <div class="small"><strong>Address:</strong> ${esc(r.address)}</div>
+            <div class="xs"><strong>Transit:</strong> ${esc(r.transit_summary)}</div>
+            ${r.social_note ? `<div class="xs" style="color:var(--muted)"><em>Note: ${esc(r.social_note)}</em></div>` : ''}
+            <div class="link-row">${socialChips(r, 'Official')}</div>
+          </article>
+        `;
+      }).join('') || '<div class="prose-card">No restaurants match the selected filter combination.</div>';
+    }
+
+    ['r-city', 'r-hotel', 'r-tier', 'r-budget'].forEach(id => {
+      document.getElementById(id).addEventListener('change', () => {
+        if (id === 'r-city') populateHotels();
+        renderRestaurants();
+      });
+    });
+    document.getElementById('r-search').addEventListener('input', renderRestaurants);
+
+    loadData().then(({ hotelsData, restData }) => {
+      allHotels = hotelsData.hotels;
+      allRests = restData.restaurants;
+      const t = restData.city_totals;
+
+      document.getElementById('mich-kpis').innerHTML = ['HK', 'SH', 'BJ'].map(code => `
+        <div class="kpi-card">
+          <div class="kpi-label">${code === 'HK' ? 'Hong Kong' : code === 'SH' ? 'Shanghai' : 'Beijing'} (${t[code].edition})</div>
+          <div class="kpi-val">${t[code].total} Total</div>
+          <div class="kpi-sub">${t[code].three_star}× 3★ · ${t[code].two_star}× 2★ · ${t[code].one_star}× 1★ · ${t[code].bib_gourmand} Bib · ${t[code].selected} Selected</div>
+        </div>
+      `).join('');
+
+      const params = new URLSearchParams(location.search);
+      if (params.get('city')) document.getElementById('r-city').value = params.get('city');
+      populateHotels();
+      if (params.get('hotel')) document.getElementById('r-hotel').value = params.get('hotel');
+      renderRestaurants();
+    });
+  </script>
+</body>
+</html>

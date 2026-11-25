@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Booking Timeline, Missing Info &amp; Site Roadmap — ChinaFun1</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Task T5 · Actionable Timing &amp; Improvements</span>
+      <h1>Booking Window Action Plan &amp; Missing Info Discovery</h1>
+      <p class="lead">
+        Concrete booking calendar from today (Nov 25, 2026) through check-in, plus transparent documentation of every data gap uncovered during research and future UX upgrades.
+      </p>
+    </section>
+
+    <h2>1. Cheapest Booking Calendar (Nov 2026 &rarr; Feb 2027)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-header">
+          <h3>Step 1: Late Nov 2026 (Now)</h3>
+          <span class="badge badge-green">Lock Refundable Floor</span>
+        </div>
+        <p class="small">
+          Reserve <strong>free-cancellation inventory</strong> right now at Black Friday / Q4 promo rates: e.g., <strong>The Kunlun Jing An ($659)</strong>, <strong>Park Plaza Wangfujing ($833)</strong>, <strong>Atour Nanluoguxiang ($744)</strong>, <strong>The PuLi ($3,240)</strong>, or flex tiers at <strong>MO HK / Hyatt TST</strong>. Avoid locking non-refundable quotes before flights clear.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>Step 2: Jan 3–16, 2027 (T–30 to 43 Days)</h3>
+          <span class="badge badge-amber">Re-Shop &amp; Reserve 3★</span>
+        </div>
+        <p class="small">
+          Historical OTA/corporate curve drops soften unsold post-Spring Festival inventory ~30–43 days out. Re-check Booking/official hotel rates to swap lower if available, and open reservations for <strong>Amber (60d out)</strong>, <strong>Taian Table (1st of month)</strong>, <strong>Xin Rong Ji</strong>, and <strong>T'ang Court</strong>.
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h3>Step 3: Feb 1–8, 2027 (T–7 to 14 Days)</h3>
+          <span class="badge badge-blue">Passport Slots &amp; LNY Hours</span>
+        </div>
+        <p class="small">
+          Book mandatory real-name passport slots for <strong>Forbidden City</strong> (7 days prior at 20:00 CST), <strong>National Museum</strong>, and <strong>Shanghai Museum</strong>. Confirm Feb 15–16 reopening schedules directly with smaller family restaurants (Yat Lok, Kau Kee, Lai Lai Xiao Long).
+        </p>
+      </div>
+    </div>
+
+    <h2>2. Missing Information Discovered During Verification</h2>
+    <div class="prose-card">
+      <ul>
+        <li><strong>Excluded Sold-Out / Conflicting Hotels:</strong> <em>Atour Bund East Nanjing Rd</em> failed Feb availability AND displayed conflicting bathroom tags ("Shared toilet" vs "Private bathroom"); <em>Atour S Sanlitun</em> and <em>ibis Central HK</em> were sold out Feb 15–22; <em>Radisson Blu New World</em> &amp; <em>The Murray HK</em> threw HTML fetch errors.</li>
+        <li><strong>March Room Category Upgrades Inflate Spreads:</strong> March 15 base rates at <em>Upper House SH</em> (Landmark Studio 646 sq ft vs Studio 50 538 sq ft), <em>Waldorf BJ</em> (Two Queens 592 sq ft vs King 484 sq ft), and <em>Atour Nanluoguxiang</em> (Superior Queen 258 sq ft vs Cozy Queen 183 sq ft) reflect depleted March entry inventory.</li>
+        <li><strong>Citywide 494-Venue Geocoding Scope:</strong> Official citywide counts (234 HK / 153 SH / 107 BJ) are verified directly from <code>guide.michelin.com</code>, while door-to-door &le;15/30/60-min transit matrices cover our <strong>37 individually audited MICHELIN venues + 24 attractions</strong>.</li>
+        <li><strong>Mainland Social &amp; 2026 New-Opening Gaps:</strong> Several domestic spots (<em>Ji Pin Court</em>, <em>Bao Du Jin Sheng Long</em>, <em>Mingyuan</em>) operate primarily on Douyin/Xiaohongshu and show <code>null</code> rather than guessed IG/TikTok links.</li>
+      </ul>
+    </div>
+
+    <h2>3. Phase 2 UX &amp; Site Enhancements</h2>
+    <div class="prose-card">
+      <ul>
+        <li><strong>Implemented in v1:</strong> Mobile-first responsive pages, live hotel-to-venue transit calculator, interactive Feb/Mar trip estimator, Monday/Tuesday museum conflict filter, and a transparent Verification Audit ledger.</li>
+        <li><strong>Next-Phase Ideas (Once City &amp; Hotel Picked):</strong> Deep-link buttons directly to <strong>Apple Maps / Google Maps / Amap</strong>, automated <strong>.ics calendar export</strong> with T–7d museum ticket alarms, and day-by-day walking loops chaining 1★/Bib lunches directly into afternoon sights.</li>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>renderChrome('suggestions');</script>
+</body>
+</html>

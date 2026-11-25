@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decision Questions &amp; 7-Night Trip Cost Estimator — ChinaFun1</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Task T5 · Decision Configurator</span>
+      <h1>Traveler Decision Questions &amp; 7-Night Trip Budget Simulator</h1>
+      <p class="lead">
+        Pair any of the 15 audited hotels with your preferred date window and 7-night MICHELIN dining cadence to estimate real 2-adult trip costs (excluding international flights).
+      </p>
+    </section>
+
+    <h2>Interactive 7-Night Cost Estimator (2 Adults)</h2>
+    <div class="controls">
+      <div class="control-group">
+        <label for="calc-hotel">Choose Audited Hotel</label>
+        <select id="calc-hotel"></select>
+      </div>
+      <div class="control-group">
+        <label for="calc-window">7-Night Date Window</label>
+        <select id="calc-window">
+          <option value="feb">Feb 15–22, 2027 (Cheapest Verified)</option>
+          <option value="mar">Mar 15–22, 2027</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="calc-dining">7-Night MICHELIN Dining Mix</label>
+        <select id="calc-dining">
+          <option value="street">Bib Gourmand + Affordable 1★ Hunter (~$450 / 2 adults)</option>
+          <option value="balanced" selected>Balanced: 1× 3★ + 2× 1★/2★ + 8× Bib/Casual (~$1,650)</option>
+          <option value="splurge">Ultra-Fine: 2× 3★ + 4× 2★/1★ + Lunches (~$3,900)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="calc-transit">Sights + Metro/Airport Transit</label>
+        <select id="calc-transit">
+          <option value="standard" selected>All 8 Sights + Metro Cards (~$180 / 2 adults)</option>
+          <option value="excursion">All 8 Sights + Private Car Excursion (~$340 / 2 adults)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="kpi-grid" id="calc-output"></div>
+
+    <h2>Key Pre-Booking Decision Questions</h2>
+    <div class="prose-card">
+      <h3>1. Culinary Density vs. Value vs. Monument Scale</h3>
+      <ul>
+        <li><strong>Hong Kong (#1):</strong> 234 MICHELIN venues (78★), every audited venue &le;30 min, zero firewall payment blockers.</li>
+        <li><strong>Shanghai (#2):</strong> Best 5-star hotel bargain (The Kunlun Jing An $659/week) + 153 MICHELIN venues (50★).</li>
+        <li><strong>Beijing (#3):</strong> Unmatched UNESCO monuments (Forbidden City, Summer Palace, Temple of Heaven), wider spread across Dongcheng &amp; Chaoyang (107 MICHELIN / 33★).</li>
+      </ul>
+    </div>
+    <div class="prose-card">
+      <h3>2. Feb 15–22 vs. Mar 1–8 vs. Mar 15–22, 2027</h3>
+      <ul>
+        <li><strong>Why Feb 15–22 wins on price:</strong> Saves <strong>40.5%</strong> at HIE Causeway Bay, <strong>35.5%</strong> at Upper House SH, <strong>25.3%</strong> at Atour People's Sq, <strong>21.5%</strong> at MO Wangfujing, and <strong>18.4%</strong> at Kunlun Jing An / Waldorf BJ.</li>
+        <li><strong>Watch-outs:</strong> Mainland Spring Festival holiday ends Feb 13 (confirm local restaurant Feb 15–16 hours) and Lantern Festival falls Sat Feb 20. March introduces Beijing <em>Two Sessions</em> (~Mar 4–14) &amp; HK pre-Easter rate inflation.</li>
+      </ul>
+    </div>
+    <div class="prose-card">
+      <h3>3. Value Base + Dining Splurge vs. Ultra-Luxury Hotel</h3>
+      <ul>
+        <li>Staying at <strong>iclub Sheung Wan ($727)</strong> instead of <strong>Mandarin Oriental HK ($5,302)</strong> frees up <strong>$4,575</strong> — easily paying for an entire week of 3-Star dining (Amber + T'ang Court + Tin Lung Heen + Ying Jee Club) with $2,000 left over.</li>
+        <li>Staying at <strong>The Kunlun Jing An ($659)</strong> matches <strong>The PuLi ($3,240)</strong> on 15-min dining access (6/13 restaurants) while saving <strong>$2,581</strong>.</li>
+      </ul>
+    </div>
+    <div class="prose-card">
+      <h3>4. Mainland Digital &amp; Passport Prep Checklist</h3>
+      <ul>
+        <li>Link foreign Visa/Mastercard inside <strong>Alipay &amp; WeChat Pay</strong> before boarding (no street cash reliance in SH/BJ).</li>
+        <li>Carry passports everywhere in Mainland China (required for Forbidden City, National Museum, Shanghai Tower, and metro ticket machines/SIM registration).</li>
+        <li>Install an eSIM with roaming data or Hong Kong SIM to keep Apple/Google Maps &amp; reservation apps working smoothly.</li>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>
+    renderChrome('questions');
+    let hotels = [];
+    const DINING_MAP = { street: 450, balanced: 1650, splurge: 3900 };
+    const TRANSIT_MAP = { standard: 180, excursion: 340 };
+
+    function updateCalc() {
+      const hid = document.getElementById('calc-hotel').value;
+      const win = document.getElementById('calc-window').value;
+      const din = DINING_MAP[document.getElementById('calc-dining').value];
+      const trn = TRANSIT_MAP[document.getElementById('calc-transit').value];
+      const h = hotels.find(x => x.id === hid);
+      if (!h) return;
+
+      const hotelCost = win === 'feb' ? h.feb15_usd : h.mar15_usd;
+      const taxPct = h.city_code === 'HK' ? 0.03 : 0.06;
+      const estTax = Math.round(hotelCost * taxPct);
+      const total = hotelCost + estTax + din + trn;
+
+      document.getElementById('calc-output').innerHTML = `
+        <div class="kpi-card">
+          <div class="kpi-label">7-Night Hotel Base</div>
+          <div class="kpi-val">${fmtUSD(hotelCost)}</div>
+          <div class="kpi-sub">${esc(h.name)} (+~${fmtUSD(estTax)} local ${h.city_code === 'HK' ? '3% HAT' : '6% VAT buffer'})</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">7-Night Dining + Sights</div>
+          <div class="kpi-val">${fmtUSD(din + trn)}</div>
+          <div class="kpi-sub">Dining ${fmtUSD(din)} + Sights/Metro ${fmtUSD(trn)}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Estimated Ground Total (2 Adults)</div>
+          <div class="kpi-val" style="color:var(--accent)">${fmtUSD(total)}</div>
+          <div class="kpi-sub">Reaches ${h.audited_rest_15} audited MICHELIN &le;15m · ${h.audited_rest_30} &le;30m</div>
+        </div>
+      `;
+    }
+
+    ['calc-hotel', 'calc-window', 'calc-dining', 'calc-transit'].forEach(id => {
+      document.getElementById(id).addEventListener('change', updateCalc);
+    });
+
+    loadData().then(({ hotelsData }) => {
+      hotels = hotelsData.hotels;
+      const sel = document.getElementById('calc-hotel');
+      sel.innerHTML = hotels.map(h =>
+        `<option value="${h.id}">#${h.overall_rank} [${h.city_code}] ${esc(h.name)} (${fmtUSD(h.feb15_usd)} Feb / ${fmtUSD(h.mar15_usd)} Mar)</option>`
+      ).join('');
+      if (hotels.length) sel.value = hotels[0].id;
+      updateCalc();
+    });
+  </script>
+</body>
+</html>

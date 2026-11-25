@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-11-25",
+  "methodology_notes": [
+    "All hotel 7-night prices, room sizes, bed configurations, and private bathroom flags were verified directly against live Booking.com Feb 15–22, 2027 and Mar 15–22, 2027 (plus Mar 1–8 spot checks) alongside official hotel websites on Nov 25, 2026.",
+    "Citywide MICHELIN venue totals (HK 234 / SH 153 / BJ 107) come directly from live guide.michelin.com directories on Nov 25, 2026. Exact door-to-door <=15/30/60-min transit proximity counts are calculated strictly across our 37 individually audited MICHELIN venues + 24 audited activities; full 494-venue citywide geocoding is explicitly flagged below as NOT performed.",
+    "FX rates anchored to Nov 25, 2026 mid-market spots: 1 USD = 6.67 CNY (~6.6775) and 1 USD = 7.84 HKD. Booking.com hotel totals are native USD quotes."
+  ],
+  "irregularities": [
+    {
+      "id": "irr-01",
+      "severity": "critical",
+      "category": "Excluded Hotel / Conflicting Bathroom Spec",
+      "item": "Atour Hotel Shanghai Bund East Nanjing Road",
+      "detail": "Booking.com showed zero Feb 15–22, 2027 availability AND displayed contradictory room tags ('Shared toilet' alongside 'Private bathroom'). Excluded from recommended 15-hotel matrix.",
+      "source": "https://www.booking.com/hotel/cn/shang-hai-wai-tan-nan-jing-dong-lu-ya-duo-jiu-dian-shanghai.html"
+    },
+    {
+      "id": "irr-02",
+      "severity": "warning",
+      "category": "Unavailable Inventory (Feb 2027)",
+      "item": "Atour S Beijing Sanlitun & ibis Hong Kong Central & Sheung Wan",
+      "detail": "Both returned sold-out / zero bookable inventory for Feb 15–22, 2027 on Booking.com; excluded from primary comparison matrix and replaced with available verified alternatives (Atour Nanluoguxiang Beixinqiao, iclub Sheung Wan).",
+      "source": "https://www.booking.com/hotel/hk/ibis-hong-kong-central.html"
+    },
+    {
+      "id": "irr-03",
+      "severity": "warning",
+      "category": "Booking.com Page Fetch Failures",
+      "item": "Radisson Blu Hotel New World (Shanghai) & The Murray (Hong Kong)",
+      "detail": "Both Booking.com listings returned transient page fetch errors (errorKind: page) during Nov 25, 2026 verification. Left out of verified pricing tables rather than estimating.",
+      "source": "https://www.booking.com/hotel/cn/radisson-blu-new-world.html"
+    },
+    {
+      "id": "irr-04",
+      "severity": "info",
+      "category": "Hotel Rebrand & URL Redirects",
+      "item": "Upper House Shanghai (ex-The Middle House) & Hyatt Regency TST URL",
+      "detail": "The Middle House officially rebranded to Upper House Shanghai in Oct 2025 (Booking URL slug remains the-middle-house.html). Hyatt's old guessed slug redirected to loyalty homepage; real URL is /honhr-hyatt-regency-hong-kong-tsim-sha-tsui.",
+      "source": "https://www.upperhouse.com/en/shanghai/"
+    },
+    {
+      "id": "irr-05",
+      "severity": "warning",
+      "category": "March Room Category Step-Up",
+      "item": "Upper House Shanghai, Waldorf Astoria Beijing & Atour Nanluoguxiang",
+      "detail": "Feb vs Mar base quotes reflect smaller entry room in Feb vs larger room tier in March because base categories were sold out in March: Upper House (538 sq ft Studio 50 Feb vs 646 sq ft Landmark Studio Mar), Waldorf BJ (484 sq ft King Feb vs 592 sq ft Two Queens Mar 15), Atour Nanluoguxiang (183 sq ft Cozy Queen Feb vs 258 sq ft Superior Queen Mar).",
+      "source": "https://www.booking.com/hotel/cn/waldorf-astoria-beijing.en-gb.html"
+    },
+    {
+      "id": "irr-06",
+      "severity": "warning",
+      "category": "2027 Holiday & Political Calendar Risks",
+      "item": "Feb 15–22 (Post-LNY + Lantern Festival) vs Mar 1–22 (Two Sessions + Pre-Easter)",
+      "detail": "Mainland Spring Festival runs Feb 5–13, 2027 (with Sunday Feb 14 as a workday); Lantern Festival falls Saturday Feb 20, 2027 (temple surcharges up to 100 RMB at Jing'an Temple & crowded Yuyuan). Beijing Two Sessions (~Mar 4–14) drives mid-March hotel rate hikes and security closures around Tiananmen / National Museum. Hong Kong Easter holidays run Mar 26–29, 2027.",
+      "source": "https://chinajob.mohrss.gov.cn/h5/c/2026-11-09/635850.shtml"
+    },
+    {
+      "id": "irr-07",
+      "severity": "info",
+      "category": "MICHELIN Guide Edition & Menu Disclosures",
+      "item": "2026 SH/HK Editions vs 2027 Beijing Edition + Unlisted Base PDF Prices",
+      "detail": "Live MICHELIN totals reflect Shanghai 2026 (153), Hong Kong 2026 (234), and Beijing 2027 (107) released Oct 2026. Taian Table's official Menu No. 55 PDF omits base menu price (verified at 2,888 RMB +10% via secondary dining reports & booking notes); Ji Pin Court / Chao Shang Chao / Jingji / Lao Xing Xian prices reflect verified dining ranges rather than public downloadable PDFs.",
+      "source": "https://guide.michelin.com/en/cn/beijing-municipality/beijing/restaurants"
+    },
+    {
+      "id": "irr-08",
+      "severity": "info",
+      "category": "Citywide Geocoding Scope Boundary",
+      "item": "37 Audited Venues vs 494 Total Citywide MICHELIN Venues",
+      "detail": "Exact <=15/30/60-minute transit counts cover our 37 audited MICHELIN restaurants and 24 audited activities; all 494 citywide MICHELIN listings were counted by city & tier on guide.michelin.com, not individually geocoded.",
+      "source": "https://guide.michelin.com/en/hk/hong-kong-region/hong-kong/restaurants"
+    },
+    {
+      "id": "irr-09",
+      "severity": "info",
+      "category": "Social Media Platform Gaps (Mainland China & 2026 Openings)",
+      "item": "TikTok / Instagram Null Fields Where Unindexed",
+      "detail": "TikTok is not operated domestically in Mainland China (Douyin/Xiaohongshu dominate), and Instagram blocks Google deep-indexing of most /p/ and /reel/ URLs. Several local Mainland gems (Ji Pin Court, Bao Du Jin Sheng Long, Mingyuan, Chao Shang Chao, Xin Rong Ji) or new 2026 openings (Terrace Boulud, Pedder Chinese) have null TikTok/Instagram fields rather than guessing handles. Branch confusion traps (e.g., 8 1/2 Bombana Macau redirect, Langham Gold Coast T'ang Court, Bulgari Rome/Dubai) were strictly filtered out.",
+      "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana"
+    },
+    {
+      "id": "irr-10",
+      "severity": "info",
+      "category": "Parallel Branch Detected on Remote",
+      "item": "origin/arena/17be6d76-chinafun1",
+      "detail": "Remote branch arena/17be6d76-chinafun1 (7c9edf8) contained an earlier incomplete COORDINATION.md draft. Left completely untouched per Arena single-branch rules; all work in this repo was completed independently and verified on arena/91d8c3ff-chinafun1.",
+      "source": "https://github.com/kanlerxz87-cyber/ChinaFun1"
+    }
+  ]
+}

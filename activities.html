@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activities &amp; Closure Calendar (24 Sights &le;60 Min) — ChinaFun1</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Task T3 · &le;60 Min Transit from All Hotels</span>
+      <h1>24 Curated Cultural Activities &amp; 2027 Closure Matrix</h1>
+      <p class="lead">
+        All 24 core attractions (8 Hong Kong · 8 Shanghai · 8 Beijing) sit strictly within <strong>60 minutes</strong> by subway, walking, or bus from every audited hotel in that city.
+        Always check <strong>Monday</strong> vs. <strong>Tuesday</strong> museum closures and Mainland passport booking rules.
+      </p>
+    </section>
+
+    <div class="notice">
+      <strong>2027 Mon–Mon Calendar Warning (Feb 15–22, Mar 1–8, Mar 15–22):</strong>
+      Your check-in &amp; check-out days are both <strong>Mondays</strong>. Forbidden City, National Museum, Shanghai Museum (People's Sq), Yu Garden, West Bund/Long Museum &amp; M+ are <strong>CLOSED Mondays</strong> — whereas <strong>Shanghai Museum East Wing</strong> and <strong>Hong Kong Palace Museum</strong> are <strong>OPEN Mondays</strong> (closed Tuesdays)! Saturday <strong>Feb 20, 2027</strong> is <strong>Lantern Festival</strong> (temple surcharges &amp; Yu Garden crowds).
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="a-city">City</label>
+        <select id="a-city">
+          <option value="ALL">All 3 Cities (24)</option>
+          <option value="HK">Hong Kong (8)</option>
+          <option value="SH">Shanghai (8)</option>
+          <option value="BJ">Beijing (8)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="a-hotel">Transit From Hotel</label>
+        <select id="a-hotel">
+          <option value="">-- Select Hotel for Door-to-Door Minutes --</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="a-day">Availability / Cost</label>
+        <select id="a-day">
+          <option value="ALL">Show All 24</option>
+          <option value="OPEN_MON">Open Mondays (Smart Check-in/Out Picks)</option>
+          <option value="FREE">Free Admission ($0)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="a-search">Search Sight</label>
+        <input id="a-search" type="search" placeholder="e.g. Museum, Temple, Ferry...">
+      </div>
+    </div>
+
+    <div id="act-cards" class="card-grid"></div>
+
+    <h2>Optional Iconic &gt;60-Minute Excursions (Separated Out of Core Matrix)</h2>
+    <div id="excursion-cards" class="card-grid"></div>
+  </main>
+  <footer class="footer" id="site-footer"></footer>
+  <script src="./assets/app.js"></script>
+  <script>
+    renderChrome('activities');
+    let allActs = [];
+    let allHotels = [];
+
+    function populateHotels() {
+      const city = document.getElementById('a-city').value;
+      const sel = document.getElementById('a-hotel');
+      const prev = sel.value;
+      const filtered = allHotels.filter(h => city === 'ALL' || h.city_code === city);
+      sel.innerHTML = '<option value="">-- Select Hotel for Door-to-Door Minutes --</option>' +
+        filtered.map(h => `<option value="${h.id}">[${h.city_code}] ${esc(h.name)}</option>`).join('');
+      if (filtered.some(h => h.id === prev)) sel.value = prev;
+    }
+
+    function isOpenMonday(a) {
+      const closedText = (a.open_days + ' ' + a.closed_exceptions).toLowerCase();
+      if (a.id === 'sh-museum') return true; // East Wing open Mondays!
+      if (closedText.includes('closed mondays') || closedText.includes('close mondays')) return false;
+      if (a.open_days.includes('Tue–Sun')) return false;
+      return true;
+    }
+
+    function renderActivities() {
+      const city = document.getElementById('a-city').value;
+      const hotelId = document.getElementById('a-hotel').value;
+      const dayFilter = document.getElementById('a-day').value;
+      const q = document.getElementById('a-search').value.trim().toLowerCase();
+      const chosenHotel = allHotels.find(h => h.id === hotelId);
+
+      let list = allActs.filter(a => {
+        if (chosenHotel && a.city_code !== chosenHotel.city_code) return false;
+        if (city !== 'ALL' && a.city_code !== city) return false;
+        if (dayFilter === 'OPEN_MON' && !isOpenMonday(a)) return false;
+        if (dayFilter === 'FREE' && a.ticket_usd_2_adults !== 0) return false;
+        if (q && !(a.name + ' ' + a.category + ' ' + a.closed_exceptions).toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      if (chosenHotel) {
+        list.sort((a, b) => (a.hotel_minutes[chosenHotel.id] ?? 999) - (b.hotel_minutes[chosenHotel.id] ?? 999));
+      }
+
+      document.getElementById('act-cards').innerHTML = list.map(a => {
+        const mins = chosenHotel ? a.hotel_minutes[chosenHotel.id] : null;
+        const monOk = isOpenMonday(a);
+        return `
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <div class="xs">${esc(a.city)} · ${esc(a.category)}</div>
+                <h3>${esc(a.name)}</h3>
+              </div>
+              <span class="badge ${monOk ? 'badge-green' : 'badge-amber'}">${monOk ? 'Open Mon' : 'Closed Mon'}</span>
+            </div>
+            <div class="meta-row">
+              <span class="badge badge-blue">${a.ticket_usd_2_adults === 0 ? 'Free ($0)' : `~${fmtUSD(a.ticket_usd_2_adults)} / 2 adults`}</span>
+              ${mins !== null && mins !== undefined ? transitBadge(mins) : ''}
+            </div>
+            <div class="small"><strong>Open &amp; Hours:</strong> ${esc(a.open_days)} · ${esc(a.hours)}</div>
+            <div class="small"><strong>2 Adults Cost:</strong> ${esc(a.ticket_local_2_adults)}</div>
+            <div class="small"><strong>Closures / Notes:</strong> ${esc(a.closed_exceptions)}</div>
+            <div class="xs"><strong>Transit:</strong> ${esc(a.transit_summary)}</div>
+            <div class="xs"><strong>Tip:</strong> ${esc(a.booking_tip)}</div>
+            <div class="link-row">${socialChips(a, 'Official')}</div>
+          </article>
+        `;
+      }).join('') || '<div class="prose-card">No activities match the selected filters.</div>';
+    }
+
+    ['a-city', 'a-hotel', 'a-day'].forEach(id => {
+      document.getElementById(id).addEventListener('change', () => {
+        if (id === 'a-city') populateHotels();
+        renderActivities();
+      });
+    });
+    document.getElementById('a-search').addEventListener('input', renderActivities);
+
+    loadData().then(({ hotelsData, actData }) => {
+      allHotels = hotelsData.hotels;
+      allActs = actData.activities;
+      populateHotels();
+      renderActivities();
+
+      document.getElementById('excursion-cards').innerHTML = actData.over_60_min_excursions.map(ex => `
+        <div class="card">
+          <div class="card-header">
+            <h3>${esc(ex.name)}</h3>
+            <span class="badge badge-red">${esc(ex.city_code)} &gt;60 min</span>
+          </div>
+          <div class="small"><strong>Transit:</strong> ${esc(ex.transit)}</div>
+          <div class="xs">${esc(ex.note)}</div>
+        </div>
+      `).join('');
+    });
+  </script>
+</body>
+</html>
