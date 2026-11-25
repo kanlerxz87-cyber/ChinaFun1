@@ -331,3 +331,35 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+# Session `5470d254` — China trip planner (new comprehensive pass) (`trip-china-2027/`)
+
+**Branch:** `arena/5470d254-chinafun1` (branched from `main` @ `eda1907`)  
+**Last update:** 2026-11-25  
+**Scope:** `trip-china-2027/**`, this section of `COORDINATION.md`, and an additive extension to `README.md` only. No other session's files will be modified, deleted, or renamed.
+
+## Intent
+
+Deliver a new, self-contained, source-verified trip-planning site in `trip-china-2027/` addressing the full brief: 2 adults, 1–2 weeks (7 nights priced) within 15 Feb–23 Mar 2027 (preferred start 15 Feb 2027), hotels ranked by verified price/location/amenities (private bathroom, queen/king bed), MICHELIN-cluster ranking within 1 hour by subway/bus (modelled only where routing cannot be officially verified; no fabricated minutes), restaurants/activities with official links, opening days/hours, and social-media review links (YouTube/TikTok/Instagram) where discoverable from official/verified sources, with every row carrying a source link. Unverified values left blank and flagged.
+
+## Task board — session `5470d254`
+
+| # | Task | Status | File scope | Notes |
+|---|------|--------|-----------|-------|
+| C1 | Claim + coordination setup | **in progress** | `COORDINATION.md`, `README.md` | Claim recorded; push immediately. |
+| C2 | Repo review & baseline audit | unclaimed | `trip-china-2027/notes/repo-review.md` | Line-by-line review of existing repo; flag irregularities. |
+| C3 | Research: dates, visa/advisory, destination framing | unclaimed | `trip-china-2027/data/*.json` | Official sources only. |
+| C4 | Hotel research & verified pricing (7-night windows) | unclaimed | `trip-china-2027/data/hotels.json` | Booking/hotel official sources; exact dates; 2 adults; private bath; queen/king. |
+| C5 | MICHELIN restaurant research & cluster ranking | unclaimed | `trip-china-2027/data/restaurants.json` | Distinguish starred vs guide-listed; cost for 2; hours/days; links. |
+| C6 | Activities research & social links | unclaimed | `trip-china-2027/data/activities.json` | Official links + YouTube/TikTok/Instagram review links; hours/days. |
+| C7 | Site build (mobile-friendly dashboard) | unclaimed | `trip-china-2027/*.html`, `trip-china-2027/assets/*` | Clean landing + subpages by category. |
+| C8 | Verification pass, flagged items, questions, suggestions | unclaimed | `trip-china-2027/flagged.html`, `trip-china-2027/questions.html`, `trip-china-2027/suggestions.html` | No unverified values presented as fact. |
+| C9 | Final integration/publish checks | unclaimed | `trip-china-2027/**`, `README.md` | Link check, source audit, commit log. |
+
+## Notes
+
+- I will not modify root Beijing files or other session directories.
+- Any value not confirmed from an official/verifiable source will be left blank and flagged.
+- Transit times will not be fabricated; if not officially routable/verifiable, they will be marked modelled/unknown with method disclosed.
