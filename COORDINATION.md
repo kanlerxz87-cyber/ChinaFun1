@@ -331,3 +331,26 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+## Session `013c9819` — repo review, verification hardening, and publish/integration pass
+
+**Branch:** `arena/013c9819-chinafun1` (branched from `main` @ `eda1907`)
+**Last update:** 2026-11-25
+**Scope (claimed):** `COORDINATION.md`, `README.md` (only if needed for accuracy), site integrity/verification checks, PR creation/merge metadata recording. I will **not** edit `assets/data.js`, `data/*.json`, `docs/`, `shanghai-2027/`, or `shanghai-verified-2027/` content owned by other sessions except to fix a broken-build/blocking deploy issue, and any such exception will be logged here before/with the fix.
+
+| Task | Status | Owner | File scope | Notes |
+|------|--------|-------|-----------|-------|
+| R1 Repo review and requirement-gap audit | **in progress** | 013c9819 | read-only across repo; findings logged here | Reviewing existing 4 plans against the full user brief (social links, hours/open days/exceptions, official links, 1-2 week window Feb 15-Mar 23 2027 preferred Feb 15-18, 2 adults, private bath + queen+ bed, <=1h subway/bus from hotel, MICHELIN cluster ranking, starred vs listed distinction, 7-night hotel totals, cheapest booking time, real verified pricing, restaurant cost for 2 adults, mobile-friendly, exec summary, suggestions, questions/missing-info, flagged review page, verification). |
+| R2 Verification spot-checks on official sources | **in progress** | 013c9819 | read-only + `COORDINATION.md` log | Spot-check key claims against official sources where reachable; flag discrepancies. Will not invent values. |
+| R3 Site/build/link integrity check | **in progress** | 013c9819 | read-only + `COORDINATION.md` log | Run local checks/build sanity where applicable; confirm pages render and internal links resolve. |
+| R4 PR to main, merge, Pages deploy confirmation | **pending** | 013c9819 | GitHub PR/merge metadata, `COORDINATION.md` | Will create PR from integration-eligible branch state per instructions after verification/build checks pass. Flagged/unverified items will not block merge; broken build/deploy will. |
+
+### Review findings (initial)
+
+- Repo contains 4 parallel plans (Beijing root by fac6d965; Shanghai docs by 68e13071; shanghai-2027 by 3b27db6c; shanghai-verified-2027 by 16153d37). README documents the split and known cross-plan price/method disagreements.
+- User brief requirements present across plans in varying degrees: MICHELIN starred/listed distinction, 7-night totals, date windows, social links, hours/open-days columns, official links, questions/suggestions/flagged pages, mobile layout, exec summaries. Coverage is uneven and many cells are intentionally blank/flagged (correct per verification rule).
+- Key gaps to audit against brief: (a) every restaurant/activity row having as many YouTube/TikTok/Instagram links as can be found (many rows have search links or partial coverage; TikTok/Instagram often unreachable/unverified); (b) explicit <=1h subway/bus travel-time verification from hotel to activities/restaurants (most plans flag this as modelled/unverified); (c) "cheapest upcoming time to book a hotel" with actual verified dates; (d) restaurant cost for 2 adults as total price where possible; (e) ensuring no inferred values.
+- I will not fabricate missing data. Any unresolved gap remains flagged/unverified with source/discovery notes.
+
