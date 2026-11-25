@@ -1,44 +1,48 @@
-# ChinaFun1 — two China 2027 trip planners
+# ChinaFun1 — four China 2027 trip planners
 
-This repository holds **two independent, source-verified plans** for the same brief (2 adults, 7 nights,
-15 Feb – 23 Mar 2027), produced by two parallel sessions that answered the question differently:
+This repository holds **four independent, source-verified plans** for the same brief (2 adults, 7 nights,
+15 Feb – 23 Mar 2027), produced by parallel sessions that answered the question differently. They are kept
+in separate directories rather than merged, because they disagree with each other and merging them would
+hide that:
 
 | Plan | City | Where it lives | Entry point |
 |---|---|---|---|
 | `fac6d965` | **Beijing** | repo root | [`index.html`](index.html) |
 | `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
+| `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
 
-Both follow the same rules: every row links to the official source it came from, unconfirmed values are left
+All of them follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
-"listed". Read all three before deciding — the honest answer to "which city" is that the brief did not say, and the
+"listed". Read all four before deciding — the honest answer to "which city" is that the brief did not say, and the
 plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
-two independent studies, below).
+three independent studies, compared below).
 
-## The two Shanghai plans disagree, and that is worth knowing
+## The Shanghai plans disagree, and that is worth knowing
 
-`docs/` and `shanghai-2027/` researched the same city independently and reached **different numbers from
-the same Booking.com source**. Neither is wrong; they priced different room categories, which the Beijing
-study identifies as the real cost driver.
+Three sessions researched the same city independently and reached **different numbers from the same
+Booking.com source**. None is wrong; they priced different room categories, which the Beijing study
+identifies as the real cost driver.
 
-| | `docs/` (`68e13071`) | `shanghai-2027/` (`3b27db6c`) |
-|---|---|---|
-| Recommended hotel | Radisson Blu New World, **Junior Suite** | Radisson Blu New World, **queen room** |
-| 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius member rate; list $1,025) |
-| Starred rows itemised | 12 | 14 |
-| Hotel ranking | Geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model with declared constants |
-| Restaurant cost column | not attempted | present, `null` + flagged for all 12 |
+| | `docs/` (`68e13071`) | `shanghai-2027/` (`3b27db6c`) | `shanghai-verified-2027/` (`16153d37`) |
+|---|---|---|---|
+| Recommended hotel | Radisson Blu, **Junior Suite** | Radisson Blu, **queen room** | see its summary |
+| 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius rate; list $1,025) | see its summary |
+| Starred rows itemised | 12 | 14 | see its data |
+| Hotel ranking | geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model | see its method |
 
-**Where they agree — and this is the finding that matters:** once you require "starred, reachable inside
-an hour", *every* central hotel passes. Shanghai's MICHELIN density does not discriminate between hotels on
-this brief, so **price and room quality should decide, not proximity.** `shanghai-2027/` quantifies the
-spread as 6.6 minutes of modelled transit across all five hotels; `docs/` reaches it by a different route.
+**The finding all three converge on:** once you require "starred, reachable inside an hour", *every*
+central hotel passes. Shanghai's MICHELIN density does not discriminate between hotels on this brief, so
+**price and room quality should decide, not proximity.**
 
-**Where they differ:** the $194 gap between $922 and $1,116. It reflects room type and VAT treatment, not a
-data error. Confirm which room category you are actually being quoted before treating either as the price.
+**Where they differ:** the gap between $922 and $1,116 reflects room type and VAT treatment, not a data
+error. Confirm which room category you are actually being quoted before treating any of them as the price.
+
+`shanghai-2027/` quantifies the spread as 6.6 minutes of modelled transit across all five hotels;
+`docs/` reaches the same conclusion by a different route.
 
 > **Note on the brief's dates:** the preferred window 15–18 Feb 2027 is 3 nights, which does not fit a 1–2 week
-> trip. Both plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
+> trip. All plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
 
 ---
 
