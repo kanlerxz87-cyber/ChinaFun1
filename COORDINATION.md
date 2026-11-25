@@ -20,20 +20,21 @@
 
 | ID | Task | Status | Owner | Files in scope |
 |----|------|--------|-------|----------------|
-| T1 | Repo setup + COORDINATION.md + claim | in progress | arena-16153d37 | `COORDINATION.md`, `README.md` |
-| T2 | Research: dates, CNY 2027, visa, weather (official sources) | unclaimed | — | `data/research-dates.md` |
-| T3 | Research: hotels (official sites only) | unclaimed | — | `data/hotels.csv`, `data/hotels-notes.md` |
-| T4 | Research: Michelin restaurants (official guide only) | unclaimed | — | `data/michelin.csv`, `data/michelin-notes.md` |
-| T5 | Research: activities + hours + official links | unclaimed | — | `data/activities.csv`, `data/activities-notes.md` |
-| T6 | Research: social links (YT/TikTok/IG) | unclaimed | — | `data/social.csv` |
-| T7 | Site build: landing + nav + CSS/JS | unclaimed | — | `index.html`, `assets/*` |
-| T8 | Site build: executive summary + questions + suggestions | unclaimed | — | `executive-summary.html`, `questions.html`, `suggestions.html` |
-| T9 | Site build: hotels + michelin + activities + costs pages | unclaimed | — | `hotels.html`, `michelin.html`, `activities.html`, `costs.html` |
-| T10 | Verification pass: line-by-line source check + flagged page | unclaimed | — | `flagged.html`, `sources.html` |
+| T1 | Repo setup + COORDINATION.md + claim | done | arena-16153d37 | `COORDINATION.md`, `README.md` |
+| T2 | Research: dates, CNY 2027, visa, weather (official sources) | in progress | arena-16153d37 | `data/research-dates.md` |
+| T3 | Research: hotels (official sites only) | in progress | arena-16153d37 | `data/hotels.csv`, `data/hotels-notes.md` |
+| T4 | Research: Michelin restaurants (official guide only) | in progress | arena-16153d37 | `data/michelin.csv`, `data/michelin-notes.md` |
+| T5 | Research: activities + hours + official links | in progress | arena-16153d37 | `data/activities.csv`, `data/activities-notes.md` |
+| T6 | Research: social links (YT/TikTok/IG) | in progress | arena-16153d37 | `data/social.csv` |
+| T7 | Site build: landing + nav + CSS/JS | in progress | arena-16153d37 | `index.html`, `assets/*` |
+| T8 | Site build: executive summary + questions + suggestions | in progress | arena-16153d37 | `executive-summary.html`, `questions.html`, `suggestions.html` |
+| T9 | Site build: hotels + michelin + activities + costs pages | in progress | arena-16153d37 | `hotels.html`, `michelin.html`, `activities.html`, `costs.html` |
+| T10 | Verification pass: line-by-line source check + flagged page | in progress | arena-16153d37 | `flagged.html`, `sources.html` |
 | T11 | Final integration: build check, link check, Pages publish | unclaimed | — | all (integration only) |
 
 ## Claims Log
-- 2026-11-25 13:09 UTC — `arena-16153d37` claimed T1 (COORDINATION.md, README.md) on branch `arena/16153d37-chinafun1`.
+- 2026-11-25 13:09 UTC — `arena-16153d37` claimed T1 (COORDINATION.md, README.md) on branch `arena/16153d37-chinafun1`. T1 complete.
+- 2026-11-25 13:15 UTC — `arena-16153d37` claimed T2–T10 (all data files under `data/`, all site files at repo root and `assets/`). Single-session run: user requested all tasks completed in this session with no manual input, so this session owns the whole scope. T11 (integration/Pages publish) also executed by this session since no other session has claimed any task.
 
 ## Change Requests (file owned by another session)
 - None yet.
