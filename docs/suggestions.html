@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suggestions · China Trip Planner 2027</title>
+<meta name="description" content="Options to make the dashboard better at decision-making — pick a path, then we build it.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="bar">
+    <a class="brand" href="index.html"><span class="dot"></span> China 2027 <small>Trip Dashboard</small></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav"><a class="" href="index.html">Overview</a><a class="" href="hotels.html">Hotels &amp; Ranking</a><a class="" href="michelin.html">Michelin</a><a class="" href="activities.html">Activities</a><a class="" href="itinerary.html">Itinerary</a><a class="" href="budget.html">Budget</a><a class="" href="verification.html">Verification Log</a><a class="" href="flagged.html">Flagged for Review</a><a class="" href="questions.html">Open Questions</a><a class="active" href="suggestions.html">Suggestions</a><a class="" href="sources.html">Sources &amp; Method</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="pagehead">
+    <h1>Suggestions</h1>
+    <p class="sub">Options to make the dashboard better at decision-making — pick a path, then we build it.</p>
+    <p class="stamp">Snapshot 2026-11-25 13:40 UTC · prices in USD · every claim links to its source; blanks mean <em>not verified</em>, never a guess.</p>
+  </div>
+<section class="card "><h2>Proposed site improvements (choose before implementing)</h2><div class="tablewrap"><table class="" id="suggestions"><thead><tr><th>#</th><th>Suggestion</th><th>Decision impact</th><th>Effort</th><th>Recommendation</th></tr></thead><tbody><tr><td>S1</td><td><strong>Add a weighted decision scorecard (price × Michelin density × amenities)</strong><br><span class="muted">Right now the ranking sorts by Michelin count then star weight. Let the user set weights (e.g. 40% price, 40% density, 20% amenities) and show the resulting order change.</span></td><td>High — turns a ranking into a decision</td><td>Low (client-side slider, no new data)</td><td>Recommended first</td></tr><tr><td>S2</td><td><strong>Replace estimated travel times with measured ones</strong><br><span class="muted">Batch the hotel→restaurant pairs through a live transit planner (or add an &#x27;open in maps&#x27; link per pair) so the 60-minute claim stops being a formula.</span></td><td>High — the whole ranking rests on it</td><td>Medium (needs an API key or manual check of ~60 pairs)</td><td>Do before booking</td></tr><tr><td>S3</td><td><strong>Finish the restaurant data: hours, closures, price for two</strong><br><span class="muted">9 of 12 starred rows have no hours and all 12 lack a verified price. A single pass over each restaurant&#x27;s own site/PDF would close both gaps.</span></td><td>High — these are the two columns you will use at the table</td><td>Medium (12 sites, ~1 h)</td><td>Do before booking</td></tr><tr><td>S4</td><td><strong>Add the remaining 38 one-star and 33 Bib Gourmand rows</strong><br><span class="muted">The affordable options matter for a couple eating out 14 times; Bib Gourmand is exactly where value is.</span></td><td>Medium–High</td><td>Medium (official filtered pages)</td><td>Next iteration</td></tr><tr><td>S5</td><td><strong>Complete the video column</strong><br><span class="muted">8 restaurants and 3 activities still have no verified video link; add TikTok/Instagram too, which are stronger for food content in China.</span></td><td>Medium</td><td>Low (one search per row)</td><td>Next iteration</td></tr><tr><td>S6</td><td><strong>Add a map with walking/metro isochrones</strong><br><span class="muted">A single map showing hotel pins and star pins with a 60-minute ring would explain the ranking faster than the table.</span></td><td>High (comprehension)</td><td>Medium (Leaflet + the coordinates we already have)</td><td>Recommended after S2</td></tr><tr><td>S7</td><td><strong>Add a second city to compare (Suzhou / Hangzhou / Beijing)</strong><br><span class="muted">The brief allows 1–2 weeks; a 4+3 split may beat 7 nights in one city, and Beijing has its own MICHELIN selection.</span></td><td>Medium</td><td>High (new city data)</td><td>Optional</td></tr><tr><td>S8</td><td><strong>Price tracking + target-price alerts</strong><br><span class="muted">Store each snapshot with a date so the site can show &#x27;this room was $1,114 on 25 Nov&#x27; and flag movement; add a reminder list.</span></td><td>Medium–High (booking timing is the biggest open question)</td><td>Medium (needs repeated snapshots)</td><td>Recommended</td></tr><tr><td>S9</td><td><strong>CNY / holiday overlay on the calendar</strong><br><span class="muted">Show the 5–13 Feb break, Lantern Festival (20 Feb) and the make-up working days directly on the date picker.</span></td><td>Medium</td><td>Low</td><td>Quick win</td></tr><tr><td>S10</td><td><strong>Currency toggle (USD / CNY / EUR) with the rate date</strong><br><span class="muted">Prices are USD snapshots converted by Booking.com; Dutch travellers think in EUR and the restaurants price in CNY.</span></td><td>Medium (trust)</td><td>Low</td><td>Quick win</td></tr><tr><td>S11</td><td><strong>Printable one-page summary for the trip</strong><br><span class="muted">A print stylesheet view with hotel, dates, reservations, phone numbers and addresses — usable offline in China.</span></td><td>Medium</td><td>Low</td><td>Quick win</td></tr><tr><td>S12</td><td><strong>Split &#x27;verified&#x27; vs &#x27;needs review&#x27; into a filter on every table</strong><br><span class="muted">One click to hide rows with any unverified field, so you never plan around a blank by accident.</span></td><td>Medium</td><td>Low</td><td>Quick win</td></tr></tbody></table></div><p class="muted">Nothing in this list has been implemented yet — pick the ones worth doing.</p></section>
+</main>
+<footer>
+  <p><strong>How to read this site:</strong> a value is only shown when an official/primary source was read on the date shown. Empty cells are intentionally empty and appear on the
+  <a href="flagged.html">Flagged for Review</a> page. Travel times are labelled estimates from a documented model (<a href="sources.html#method">method</a>).</p>
+  <p class="muted">Built by session 68e13071 · generated by <code>build.py</code> from <code>data/*.json</code> · no manual edits to <code>docs/</code>.<br>
+  A parallel session in this repository published an independent <a href="https://kanlerxz87-cyber.github.io/ChinaFun1/">Beijing version of the same brief</a> at the site root — the two plans chose different cities, so compare them before booking.</p>
+</footer>
+<script src="assets/app.js"></script>
+
+</body>
+</html>

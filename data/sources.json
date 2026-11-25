@@ -1,0 +1,92 @@
+[
+ {
+  "name": "MICHELIN Guide — Shanghai restaurants (distinction filters)",
+  "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants",
+  "type": "Official guide",
+  "note": "Counts (1/11/38/33/70) and the 2★ listing (11 rows)."
+ },
+ {
+  "name": "MICHELIN Guide — Shanghai / Jiangsu / Zhejiang 2026 announcement",
+  "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang",
+  "type": "Official guide",
+  "note": "Regional counts and the promotions; source of the 102 House discrepancy."
+ },
+ {
+  "name": "MICHELIN Guide — restaurant pages (12 rows)",
+  "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/taian-table",
+  "type": "Official guide",
+  "note": "Star tier, address, cuisine, price band, hours where published."
+ },
+ {
+  "name": "Booking.com — property pages with 2027 dates",
+  "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "type": "Booking platform (primary price evidence)",
+  "note": "Room-level 7-night totals for 2 adults, USD, 5 date windows."
+ },
+ {
+  "name": "Booking.com — Langham Xintiandi (unavailable dates)",
+  "url": "https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "type": "Booking platform",
+  "note": "Availability failure for the preferred window."
+ },
+ {
+  "name": "Booking.com — Bvlgari Hotel Shanghai (unavailable dates)",
+  "url": "https://www.booking.com/hotel/cn/bulgari-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "type": "Booking platform",
+  "note": "Availability failure; adjacent-window prices."
+ },
+ {
+  "name": "The Langham Shanghai — T'ang Court official page",
+  "url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+  "type": "Hotel / restaurant official",
+  "note": "Opening hours and Monday closure."
+ },
+ {
+  "name": "Da Vittorio Shanghai — official site",
+  "url": "https://www.davittorio.com/en/restaurants/da-vittorio-shanghai.html",
+  "type": "Restaurant official",
+  "note": "Contacts; hours corroborate the MICHELIN page."
+ },
+ {
+  "name": "Bvlgari Hotels — Bao Li Xuan page",
+  "url": "https://www.bulgarihotels.com/en_US/shanghai/dining/chinese-fine-dining-restaurant",
+  "type": "Hotel official",
+  "note": "Restaurant exists inside the hotel; hours not read."
+ },
+ {
+  "name": "OpenStreetMap / Nominatim",
+  "url": "https://nominatim.openstreetmap.org/search?format=json&q=Radisson%20Blu%20Hotel%20Shanghai%20New%20World",
+  "type": "Open data (coordinates)",
+  "note": "Hotel polygons and street-level restaurant points."
+ },
+ {
+  "name": "Shanghai Tower — official site",
+  "url": "https://en.shanghaitower.com/",
+  "type": "Venue official",
+  "note": "Only the home page was readable; no ticket price."
+ },
+ {
+  "name": "Yu Garden — official site",
+  "url": "https://www.yugarden.com.cn/",
+  "type": "Venue official",
+  "note": "Link only; prices/hours not read."
+ },
+ {
+  "name": "Shanghai Museum — official site",
+  "url": "https://www.shanghaimuseum.net/",
+  "type": "Venue official",
+  "note": "Returned HTTP 500 on 2026-11-25."
+ },
+ {
+  "name": "China public holidays 2027 (quotes State Council notice)",
+  "url": "https://msadvisory.com/china-holidays-festivals/",
+  "type": "Secondary reference",
+  "note": "CNY 6 Feb 2027; official break 5–13 Feb 2027. State Council notice itself not reachable."
+ },
+ {
+  "name": "YouTube search results",
+  "url": "https://www.youtube.com/results?search_query=Taian+Table+Shanghai+michelin",
+  "type": "Social video",
+  "note": "Real video URLs for 4 restaurants/activities."
+ }
+]

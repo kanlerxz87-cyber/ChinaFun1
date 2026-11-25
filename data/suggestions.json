@@ -1,0 +1,98 @@
+[
+ {
+  "id": "S1",
+  "title": "Add a weighted decision scorecard (price × Michelin density × amenities)",
+  "detail": "Right now the ranking sorts by Michelin count then star weight. Let the user set weights (e.g. 40% price, 40% density, 20% amenities) and show the resulting order change.",
+  "impact": "High — turns a ranking into a decision",
+  "effort": "Low (client-side slider, no new data)",
+  "recommendation": "Recommended first"
+ },
+ {
+  "id": "S2",
+  "title": "Replace estimated travel times with measured ones",
+  "detail": "Batch the hotel→restaurant pairs through a live transit planner (or add an 'open in maps' link per pair) so the 60-minute claim stops being a formula.",
+  "impact": "High — the whole ranking rests on it",
+  "effort": "Medium (needs an API key or manual check of ~60 pairs)",
+  "recommendation": "Do before booking"
+ },
+ {
+  "id": "S3",
+  "title": "Finish the restaurant data: hours, closures, price for two",
+  "detail": "9 of 12 starred rows have no hours and all 12 lack a verified price. A single pass over each restaurant's own site/PDF would close both gaps.",
+  "impact": "High — these are the two columns you will use at the table",
+  "effort": "Medium (12 sites, ~1 h)",
+  "recommendation": "Do before booking"
+ },
+ {
+  "id": "S4",
+  "title": "Add the remaining 38 one-star and 33 Bib Gourmand rows",
+  "detail": "The affordable options matter for a couple eating out 14 times; Bib Gourmand is exactly where value is.",
+  "impact": "Medium–High",
+  "effort": "Medium (official filtered pages)",
+  "recommendation": "Next iteration"
+ },
+ {
+  "id": "S5",
+  "title": "Complete the video column",
+  "detail": "8 restaurants and 3 activities still have no verified video link; add TikTok/Instagram too, which are stronger for food content in China.",
+  "impact": "Medium",
+  "effort": "Low (one search per row)",
+  "recommendation": "Next iteration"
+ },
+ {
+  "id": "S6",
+  "title": "Add a map with walking/metro isochrones",
+  "detail": "A single map showing hotel pins and star pins with a 60-minute ring would explain the ranking faster than the table.",
+  "impact": "High (comprehension)",
+  "effort": "Medium (Leaflet + the coordinates we already have)",
+  "recommendation": "Recommended after S2"
+ },
+ {
+  "id": "S7",
+  "title": "Add a second city to compare (Suzhou / Hangzhou / Beijing)",
+  "detail": "The brief allows 1–2 weeks; a 4+3 split may beat 7 nights in one city, and Beijing has its own MICHELIN selection.",
+  "impact": "Medium",
+  "effort": "High (new city data)",
+  "recommendation": "Optional"
+ },
+ {
+  "id": "S8",
+  "title": "Price tracking + target-price alerts",
+  "detail": "Store each snapshot with a date so the site can show 'this room was $1,114 on 25 Nov' and flag movement; add a reminder list.",
+  "impact": "Medium–High (booking timing is the biggest open question)",
+  "effort": "Medium (needs repeated snapshots)",
+  "recommendation": "Recommended"
+ },
+ {
+  "id": "S9",
+  "title": "CNY / holiday overlay on the calendar",
+  "detail": "Show the 5–13 Feb break, Lantern Festival (20 Feb) and the make-up working days directly on the date picker.",
+  "impact": "Medium",
+  "effort": "Low",
+  "recommendation": "Quick win"
+ },
+ {
+  "id": "S10",
+  "title": "Currency toggle (USD / CNY / EUR) with the rate date",
+  "detail": "Prices are USD snapshots converted by Booking.com; Dutch travellers think in EUR and the restaurants price in CNY.",
+  "impact": "Medium (trust)",
+  "effort": "Low",
+  "recommendation": "Quick win"
+ },
+ {
+  "id": "S11",
+  "title": "Printable one-page summary for the trip",
+  "detail": "A print stylesheet view with hotel, dates, reservations, phone numbers and addresses — usable offline in China.",
+  "impact": "Medium",
+  "effort": "Low",
+  "recommendation": "Quick win"
+ },
+ {
+  "id": "S12",
+  "title": "Split 'verified' vs 'needs review' into a filter on every table",
+  "detail": "One click to hide rows with any unverified field, so you never plan around a blank by accident.",
+  "impact": "Medium",
+  "effort": "Low",
+  "recommendation": "Quick win"
+ }
+]
