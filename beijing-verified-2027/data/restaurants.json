@@ -86,7 +86,9 @@
       ],
       "unverified": [
         "price_two_adults"
-      ]
+      ],
+      "hours_source": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/xin-rong-ji-xinyuan-south-road",
+      "hours_note": "Times as published on the MICHELIN Guide listing. No closing days or holiday exceptions were stated on that page - not verified."
     },
     {
       "name": "Blackswan",
@@ -210,7 +212,9 @@
       "unverified": [
         "price_two_adults"
       ],
-      "flag": "Both published review videos describe King's Joy as three-star. The 2027 MICHELIN Guide lists Two Stars. The videos predate the change; the star level shown in this table is the guide's, not the video's."
+      "flag": "Both published review videos describe King's Joy as three-star. The 2027 MICHELIN Guide lists Two Stars. The videos predate the change; the star level shown in this table is the guide's, not the video's.",
+      "hours_source": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/king-s-joy",
+      "hours_note": "Times as published on the MICHELIN Guide listing. No closing days or holiday exceptions were stated on that page - not verified."
     },
     {
       "name": "Lamdre",
@@ -274,8 +278,8 @@
       "address": "2F, Four Seasons Hotel, 48 Liangmaqiao Road, Chaoyang",
       "phone": "+86 10 5695 8520",
       "website": "https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan",
-      "hours": "",
-      "closed": "",
+      "hours": "Mon-Sun 11:30-14:00 and 17:30-22:00",
+      "closed": "None published",
       "booking_note": "Bookable through the guide's reservation widget.",
       "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/cai-yi-xuan",
       "price_two_adults": {
@@ -284,11 +288,11 @@
       },
       "social": [],
       "unverified": [
-        "hours",
-        "closed",
         "price_two_adults",
         "social"
-      ]
+      ],
+      "hours_source": "https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan/",
+      "hours_note": "Hotel page lists Lunch 11:30 am-2:00 pm, Dinner 5:30 pm-10:00 pm, without stating closed days."
     },
     {
       "name": "Chao Shang Chao (Xicheng)",
@@ -351,8 +355,8 @@
       "address": "3F, The Puxuan Hotel, 1 Wangfujing Street, Dongcheng, 100006",
       "phone": "+86 10 5280 6418",
       "website": "https://thepuxuan.com/en/beijing-wangfujing-luxury-hotel-dining/cantonese-cuisine-fu-chun-ju-restaurant/",
-      "hours": "",
-      "closed": "",
+      "hours": "Mon-Sun 11:30-14:30 and 17:30-21:30",
+      "closed": "None published",
       "booking_note": "Bookable through the guide's reservation widget. Dim sum recommended at lunchtime.",
       "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/fu-chun-ju",
       "price_two_adults": {
@@ -361,12 +365,12 @@
       },
       "social": [],
       "unverified": [
-        "hours",
-        "closed",
         "price_two_adults",
         "social"
       ],
-      "flag": "Located inside The PuXuan Hotel on Wangfujing Street, the same block as several shortlisted hotels."
+      "flag": "Located inside The PuXuan Hotel on Wangfujing Street, the same block as several shortlisted hotels.",
+      "hours_source": "https://thepuxuan.com/en/beijing-wangfujing-luxury-hotel-dining/cantonese-cuisine-fu-chun-ju-restaurant/",
+      "hours_note": "Hotel page lists Lunch 11:30-14:30, Dinner 17:30-21:30, without stating closed days."
     },
     {
       "name": "Furong",
@@ -439,7 +443,9 @@
       "unverified": [
         "price_two_adults",
         "social"
-      ]
+      ],
+      "hours_source": "https://www.shangri-la.com/beijing/chinaworld/dining/restaurants/giada-garden/",
+      "hours_note": "Hotel page lists Lunch 11:30am-2:30pm, Dinner 5:30pm-10pm, without stating closed days."
     },
     {
       "name": "Il Ristorante - Niko Romito",
@@ -450,8 +456,8 @@
       "address": "1F, Bvlgari Hotel, Building 2, Courtyard 8, Xinyuan South Road, Chaoyang",
       "phone": "+86 10 8555 8585",
       "website": "https://www.bulgarihotels.com/en_US/beijing/dining/il-ristorante-niko-romito",
-      "hours": "",
-      "closed": "",
+      "hours": "Lunch from 12:00 and dinner from 18:00; last seating 13:30 lunch and 20:30 dinner",
+      "closed": "None published",
       "booking_note": "Bookable through the guide's reservation widget.",
       "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/il-ristorante-niko-romito-1186723",
       "price_two_adults": {
@@ -460,11 +466,12 @@
       },
       "social": [],
       "unverified": [
-        "hours",
-        "closed",
         "price_two_adults",
-        "social"
-      ]
+        "social",
+        "exact closing time"
+      ],
+      "hours_source": "https://www.bulgarihotels.com/en_US/beijing/dining/il-ristorante-niko-romito",
+      "hours_note": "The hotel publishes 'open for lunch and dinner' and its own reservation form offers seats 12:00-14:00 and 18:00-21:30. No closing day is published; the exact closing time is NOT verified."
     },
     {
       "name": "Lei Garden (Jinbao Tower)",
@@ -854,7 +861,9 @@
           "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
         }
       ],
-      "unverified": []
+      "unverified": [],
+      "hours_source": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/trb-hutong",
+      "hours_note": "Times as published on the MICHELIN Guide listing. No closing days or holiday exceptions were stated on that page - not verified."
     },
     {
       "name": "Xin Rong Ji (Jianguomenwai Street)",
@@ -877,7 +886,9 @@
       "unverified": [
         "price_two_adults",
         "social"
-      ]
+      ],
+      "hours_source": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/xin-rong-ji-jianguomenwai-street",
+      "hours_note": "Times as published on the MICHELIN Guide listing. No closing days or holiday exceptions were stated on that page - not verified."
     },
     {
       "name": "Xin Rong Ji (Jinrong Street)",
