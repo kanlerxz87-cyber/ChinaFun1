@@ -1,0 +1,178 @@
+{
+  "compiled": "2026-11-25",
+  "rule": "Each row is a dated 7-night total captured by the owning session, for 2 adults in 1 room, USD. Nothing here is a live quote. VAT/service treatment is shown as each source recorded it — the studies disagree on whether the headline already absorbs the charges.",
+  "rows": [
+    {
+      "plan": "shanghai-2027",
+      "property": "Radisson Blu New World, Superior Room, queen",
+      "window": "15–22 Feb 2027",
+      "total_usd": 922,
+      "terms": "Genius rate; list $1,025. Source states totals exclude VAT and service charge. Dated capture recorded in shanghai-2027/data/price-windows.json.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "shanghai-2027",
+      "property": "Radisson Blu New World, Superior Room, queen",
+      "window": "18–25 Feb 2027",
+      "total_usd": 1013,
+      "terms": "Genius rate; list $1,125.20. Dated capture recorded in shanghai-2027/data/price-windows.json.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "shanghai-2027",
+      "property": "Radisson Blu New World, Superior Room, queen",
+      "window": "22 Feb–1 Mar 2027",
+      "total_usd": 1191,
+      "terms": "List price, no member rate. Dated capture recorded in shanghai-2027/data/price-windows.json.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "shanghai-2027",
+      "property": "Radisson Blu New World, Superior Room, queen",
+      "window": "1–8 Mar 2027",
+      "total_usd": 1367,
+      "terms": "List price. Dated capture recorded in shanghai-2027/data/price-windows.json.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "shanghai-2027",
+      "property": "Radisson Blu New World, Superior Room, queen",
+      "window": "15–22 Mar 2027",
+      "total_usd": 1440,
+      "terms": "List price — most expensive sampled window. Dated capture recorded in shanghai-2027/data/price-windows.json.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "68e13071",
+      "property": "Radisson Blu New World, Superior Room",
+      "window": "15–22 Feb 2027",
+      "total_usd": 1114,
+      "terms": "Lowest publicly bookable rate in this session's capture; 10% service included, 6.6% VAT excluded.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "68e13071",
+      "property": "Radisson Blu New World, Junior Suite, 1 queen",
+      "window": "15–22 Feb 2027",
+      "total_usd": 1116,
+      "terms": "The plan's recommended compliant room.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "68e13071",
+      "property": "Radisson Blu New World, Superior Room",
+      "window": "22 Feb–1 Mar 2027",
+      "total_usd": 1295,
+      "terms": "Member price $1,165 excluded by that study.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "68e13071",
+      "property": "Radisson Blu New World, Superior Room",
+      "window": "1–8 Mar 2027",
+      "total_usd": 1485,
+      "terms": "Member price $1,337 excluded.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "68e13071",
+      "property": "Radisson Blu New World, Superior Room",
+      "window": "8–15 Mar 2027",
+      "total_usd": 1560,
+      "terms": "Junior Suite quoted $1,526 in the same window.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-08&checkout=2027-03-15&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "68e13071",
+      "property": "Radisson Blu New World, Superior Room",
+      "window": "15–22 Mar 2027",
+      "total_usd": 1565,
+      "terms": "Junior Suite quoted $1,531 in the same window.",
+      "source": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "fac6d965",
+      "property": "Grand Hyatt Beijing, 1 king bed",
+      "window": "15–22 Feb 2027",
+      "total_usd": 1652,
+      "terms": "Same total quoted for 15–22 Mar 2027 — a direct same-hotel date comparison.",
+      "source": "https://www.booking.com/hotel/cn/grand-hyatt-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "fac6d965",
+      "property": "Grand Hyatt Beijing, 1 king bed",
+      "window": "15–22 Mar 2027",
+      "total_usd": 1652,
+      "terms": "Identical to the February quote.",
+      "source": "https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "fac6d965",
+      "property": "Beijing Purple Horse Garden, 1 queen",
+      "window": "15–22 Mar 2027",
+      "total_usd": 901,
+      "terms": "March-only quote; not available for 15–22 Feb when checked.",
+      "source": "https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "16153d37",
+      "property": "Radisson Collection Hyland, selectable 1 king",
+      "window": "15–22 Feb 2027",
+      "total_usd": 696,
+      "terms": "Black Friday promo, free cancellation. Source states totals include 10% service and exclude 6% VAT. Private-bathroom wording not captured on the rate.",
+      "source": "https://www.booking.com/hotel/cn/hyland.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&sb_price_type=total&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "16153d37",
+      "property": "Radisson Collection Hyland, selectable 1 king",
+      "window": "22 Feb–1 Mar 2027",
+      "total_usd": 696,
+      "terms": "Identical promo price — the promotion, not the date, sets this rate. Dated capture recorded in that plan's coordination notes.",
+      "source": "https://www.booking.com/hotel/cn/hyland.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "16153d37",
+      "property": "Waldorf Astoria Shanghai, 2 queen beds",
+      "window": "15–22 Feb 2027",
+      "total_usd": 2414,
+      "terms": "Non-refundable; includes 10% service, excludes 6% VAT.",
+      "source": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&sb_price_type=total&type=total&selected_currency=USD",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "16153d37",
+      "property": "Waldorf Astoria Shanghai, 2 queen beds",
+      "window": "22 Feb–1 Mar 2027",
+      "total_usd": 2378,
+      "terms": "Non-refundable; dated capture recorded in that plan's coordination notes.",
+      "source": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html",
+      "captured": "2026-11-25"
+    },
+    {
+      "plan": "16153d37",
+      "property": "Waldorf Astoria Shanghai, 2 queen beds",
+      "window": "8–15 Mar 2027",
+      "total_usd": 2374,
+      "terms": "Cheapest sampled Waldorf window, $40 below the preferred week; dated capture recorded in that plan's coordination notes.",
+      "source": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html",
+      "captured": "2026-11-25"
+    }
+  ],
+  "finding": "For the same Shanghai room (Radisson Blu New World Superior), two sessions captured different February totals: $922 with a Genius sign-in and $1,114/$1,116 public. Radisson Collection Hyland's $696 promo was identical in two sampled windows, so its saving comes from the promotion, not the date. Every sampled later Radisson Blu window is dearer than 15–22 Feb; Beijing's Grand Hyatt was identical in February and March. 'Cheapest' here means cheapest of the sampled and quoted windows, never all possible dates."
+}
