@@ -1,0 +1,959 @@
+{
+  "_meta": {
+    "generated": "2026-11-25",
+    "session": "3b335293",
+    "city": "Beijing",
+    "edition": "MICHELIN Guide Beijing 2027 (released 27-28 Oct 2026)",
+    "guide_list_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+    "guide_release_url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
+    "totals_from_guide_filter": "3 stars: 2 | 2 stars: 5 | 1 star: 26 | Bib Gourmand: 32 | Selected: 42 | starred total 33",
+    "rules": [
+      "Every field is copied from the restaurant's own page on guide.michelin.com, read on 2026-11-25.",
+      "A field the official page does not show is left as an empty string and listed in unverified[].",
+      "Social links are only included after the link itself was opened and the video confirmed to exist.",
+      "No price is estimated. price_two_adults is filled only when the restaurant publishes a price."
+    ]
+  },
+  "restaurants": [
+    {
+      "name": "Chao Shang Chao (Chaoyang)",
+      "stars": 3,
+      "cuisine": "Chao Zhou",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "L406B, 4F, CP Center, 20 Jinhe East Road, Chaoyang",
+      "phone": "+86 10 8596 2666",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/chao-shang-chao",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band. No price for two on an official page."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=_fOMeu8jdCA",
+          "title": "Tour of a 3-Michelin-Star Kitchen in China's Capital",
+          "channel": "The Drunken Sommelier Food Show",
+          "note": "Kitchen tour of Chef Cheung's three-star restaurant",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=XukgOKSq4Wo",
+          "title": "米其林三星之旅 (1/2) 北京 潮上潮 Chao Shang Chao",
+          "channel": "Jack Lu",
+          "note": "Chinese-language three-star visit, part 1",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        }
+      ],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults"
+      ]
+    },
+    {
+      "name": "Xin Rong Ji (Xinyuan South Road)",
+      "stars": 3,
+      "cuisine": "Taizhou",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "1F, East Tower, Genesis Beijing, 8 Xinyuan South Road, Chaoyang",
+      "phone": "+86 10 6501 5501",
+      "website": "https://www.xinrongji.com/",
+      "hours": "Mon-Sun 11:30-14:00 and 17:30-21:00",
+      "closed": "None published",
+      "booking_note": "Guide page states the establishment manages its own bookings. MICHELIN notes the 28-day baby Peking duck must be pre-ordered.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/xin-rong-ji-xinyuan-south-road",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band. Menu prices not published."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=6SvqIT2SW7M",
+          "title": "Must Visit 3-Michelin Stars Restaurant 'Xin Rong Ji' in Beijing",
+          "channel": "Ana Loh",
+          "note": "Walk-through and meal",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        }
+      ],
+      "unverified": [
+        "price_two_adults"
+      ]
+    },
+    {
+      "name": "Blackswan",
+      "stars": 2,
+      "cuisine": "French Contemporary",
+      "price_band": "¥¥¥¥",
+      "district": "Shunyi",
+      "address": "1F, Luohong Art Museum, 89 Capital Airport Road, Shunyi",
+      "phone": "+86 10 5385 9911",
+      "website": "https://www.restaurantblackswan.com/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Bookable through the guide's reservation widget.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/blackswan",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=b2fxK2c0N9g",
+          "title": "Kids Dining Etiquette Class at Black Swan Fine Dining Restaurant Beijing",
+          "channel": "Brandon Lui",
+          "note": "Not a food review: a short etiquette-class clip filmed in the dining room",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        }
+      ],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults"
+      ],
+      "flag": "Shunyi / Airport Road. This is outside the central dining core and should be tested separately against the one-hour rule."
+    },
+    {
+      "name": "Jingji",
+      "stars": 2,
+      "cuisine": "Beijing Cuisine",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "2F, The Ritz-Carlton Hotel, 83A Jianguo Road, Chaoyang",
+      "phone": "+86 10 5969 5698",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings. Two set menus in the main dining room.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/jingji",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band; set-menu price not shown."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/shorts/cB-8dFIIl_Y",
+          "title": "I Tried a 2-Michelin-Star Royal Feast in Beijing | Jingji Restaurant Review",
+          "channel": "Bei Aiba",
+          "note": "Short-format review of the two-star royal-cuisine menu",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        }
+      ],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults"
+      ]
+    },
+    {
+      "name": "King's Joy",
+      "stars": 2,
+      "cuisine": "Vegetarian",
+      "price_band": "¥¥¥¥",
+      "district": "Dongcheng",
+      "address": "2 Wudaoying Hutong, Dongcheng, 100007",
+      "phone": "+86 10 8404 9191",
+      "website": "https://www.kingsjoy.com/",
+      "hours": "Mon-Sun 11:00-22:00",
+      "closed": "None published",
+      "booking_note": "Bookable through the guide's reservation widget. Three lacto-ovo vegetarian menus of 10+ courses, all can be made vegan.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/king-s-joy",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=zbi8tSPRDvs",
+          "title": "Is Beijing's 3 Michelin Star Vegetarian Restaurant Worth It? \"King's Joy\"",
+          "channel": "UA Eats",
+          "note": "Filmed when King's Joy held three stars",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=mT6hdUcRRIs",
+          "title": "Is Beijing's 3-Star Vegetarian Restaurant \"King's Joy\" Worth It?",
+          "channel": "Tiff Again",
+          "note": "Filmed when King's Joy held three stars",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@thesamtyler/video/7429173283184020754",
+          "title": "Don't miss this unique restaurant in Beijing — King's Joy",
+          "channel": "Sam ✪ (@thesamtyler)",
+          "note": "Courtyard, interior and food walk-through. Creator states the experience was Mastercard-exclusive; not verified independently.",
+          "verified": "Page opened 2026-11-25: 40,429 views, posted 2024-10-24, transcript captured."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=jnZ_d6uAPLs",
+          "title": "[King's Joy] 3 MICHELIN starred vegetarian fine dining | China - Beijing",
+          "channel": "Epicurean Escapes",
+          "note": "Short food-focused edit.",
+          "verified": "oEmbed returned HTTP 200 with this title and channel on 2026-11-25."
+        }
+      ],
+      "unverified": [
+        "price_two_adults"
+      ],
+      "flag": "Both published review videos describe King's Joy as three-star. The 2027 MICHELIN Guide lists Two Stars. The videos predate the change; the star level shown in this table is the guide's, not the video's."
+    },
+    {
+      "name": "Lamdre",
+      "stars": 2,
+      "cuisine": "Vegan",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "Room 04, 1F, Block 14, Courtyard 4, Gongti North Road, Chaoyang, 100000",
+      "phone": "",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/lamdre",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "phone",
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Lu Shang Lu",
+      "stars": 2,
+      "cuisine": "Shandong",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "2A01-2A13, 2F, Sunshine Financial Center Tower 1, 33 Jinghui Street, Chaoyang",
+      "phone": "+86 10 8718 5556",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/lu-shang-lu",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Cai Yi Xuan",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "2F, Four Seasons Hotel, 48 Liangmaqiao Road, Chaoyang",
+      "phone": "+86 10 5695 8520",
+      "website": "https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Bookable through the guide's reservation widget.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/cai-yi-xuan",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Chao Shang Chao (Xicheng)",
+      "stars": 1,
+      "cuisine": "Chao Zhou",
+      "price_band": "¥¥¥",
+      "district": "Xicheng",
+      "address": "Basement Level, Winland IFC, 7 Jinrong Street, Xicheng",
+      "phone": "+86 10 6609 1266",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/chao-shang-chao-xicheng",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Chef 1996",
+      "stars": 1,
+      "cuisine": "Sichuan",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "4A Jiangtaiwa, Xinghuo East Road, Chaoyang",
+      "phone": "+86 135 2150 9321",
+      "website": "https://www.chef1996.com/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/chef-1996",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ],
+      "flag": "Newly promoted from MICHELIN Selected to One Star in the 2027 edition."
+    },
+    {
+      "name": "Fu Chun Ju",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥¥",
+      "district": "Dongcheng",
+      "address": "3F, The Puxuan Hotel, 1 Wangfujing Street, Dongcheng, 100006",
+      "phone": "+86 10 5280 6418",
+      "website": "https://thepuxuan.com/en/beijing-wangfujing-luxury-hotel-dining/cantonese-cuisine-fu-chun-ju-restaurant/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Bookable through the guide's reservation widget. Dim sum recommended at lunchtime.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/fu-chun-ju",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ],
+      "flag": "Located inside The PuXuan Hotel on Wangfujing Street, the same block as several shortlisted hotels."
+    },
+    {
+      "name": "Furong",
+      "stars": 1,
+      "cuisine": "Hunanese",
+      "price_band": "¥¥¥",
+      "district": "Xicheng",
+      "address": "1F, The Westin, 9C Jinrong Street, Xicheng",
+      "phone": "+86 10 6600 7175",
+      "website": "https://www.xinrongji.com/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings. Part of the Xin Rong Ji group.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/furong",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Gastro Esthetics DaDong",
+      "stars": 1,
+      "cuisine": "Chinese Contemporary",
+      "price_band": "¥¥¥",
+      "district": "Dongcheng",
+      "address": "1-2F, Nanxincang Business Tower, 22A Dongsi 10th Alley, Dongcheng",
+      "phone": "+86 51690328",
+      "website": "https://www.dadongdadong.com/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/gastro-esthetics-dadong",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Giada Garden",
+      "stars": 1,
+      "cuisine": "Italian",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "3F, China World Hotel, 1 Jianguomenwai Street, Chaoyang",
+      "phone": "+86 10 6505 7671",
+      "website": "https://www.shangri-la.com/beijing/chinaworld/dining/restaurants/giada-garden/",
+      "hours": "Mon-Sun 11:30-14:30 and 17:30-22:00",
+      "closed": "None published",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/giada-garden",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Il Ristorante - Niko Romito",
+      "stars": 1,
+      "cuisine": "Italian",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "1F, Bvlgari Hotel, Building 2, Courtyard 8, Xinyuan South Road, Chaoyang",
+      "phone": "+86 10 8555 8585",
+      "website": "https://www.bulgarihotels.com/en_US/beijing/dining/il-ristorante-niko-romito",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Bookable through the guide's reservation widget.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/il-ristorante-niko-romito-1186723",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Lei Garden (Jinbao Tower)",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥¥",
+      "district": "Dongcheng",
+      "address": "3F, Jinbao Tower, 89 Jinbao Street, Dongcheng",
+      "phone": "+86 10 8522 1212",
+      "website": "https://leigarden.hk/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings. Slow-cooked soups need pre-ordering.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/lei-garden-jinbao-tower",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Lu Style (Anding Road)",
+      "stars": 1,
+      "cuisine": "Shandong",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "5F, Uni Elite, Building 6, Courtyard 5, Anding Road, Chaoyang",
+      "phone": "+86 10 6441 3777",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Bookable through the guide's reservation widget.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/lu-style",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "MO Jasmine",
+      "stars": 1,
+      "cuisine": "Beijing Cuisine",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "L307, 3F, CP Center, 20 Jinhe East Road, Chaoyang, 100020",
+      "phone": "+86 10 8582 1919",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/mo-jasmine",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Mansion Cuisine by Jingyan",
+      "stars": 1,
+      "cuisine": "Beijing Cuisine",
+      "price_band": "¥¥¥¥",
+      "district": "Dongcheng",
+      "address": "22 Jianchang Hutong, Dongcheng",
+      "phone": "+86 10 8663 2999",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Bookable through the guide's reservation widget.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/mansion-cuisine-by-jingyan",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=3ZJIBFglj_Y",
+          "title": "$8 vs $22 vs $520 - Michelin Food in Beijing, China",
+          "channel": "Aden Films",
+          "note": "Third segment covers Mansion Cuisine by Jingyan; roundup, not a dedicated review",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        }
+      ],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults"
+      ]
+    },
+    {
+      "name": "Old Tower",
+      "stars": 1,
+      "cuisine": "Innovative",
+      "price_band": "¥¥¥¥",
+      "district": "Chaoyang",
+      "address": "40A, 4F, Building N4, North, TaiKoo Li Sanlitun, 11 Sanlitun Road, Chaoyang",
+      "phone": "+86 139 1020 8150",
+      "website": "https://www.oldtower.cn/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings. Pescatarian tasting menus only, per the guide.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/old-tower",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ],
+      "flag": "New entry in the 2027 edition (per the 2027 Beijing/Tianjin release). Sanlitun location."
+    },
+    {
+      "name": "Poetry‧Wine (Dongsanhuan Middle Road)",
+      "stars": 1,
+      "cuisine": "Beijing Cuisine",
+      "price_band": "¥¥",
+      "district": "Chaoyang",
+      "address": "61 Dongsanhuan Middle Road, Chaoyang, 10020",
+      "phone": "+86 10 8777 4188",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/poetry%E2%80%A7wine",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Rong Pao",
+      "stars": 1,
+      "cuisine": "Sichuan",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "2F, The Ritz-Carlton Hotel, 83A Jianguo Road, Chaoyang",
+      "phone": "+86 10 6616 6636",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/rong-pao",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Seventh Son",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "B1 Level, Jiaming Center, 27 Dongsanhuan North Road, Chaoyang",
+      "phone": "+86 10 8571 6888",
+      "website": "https://www.seventhson.hk/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/seventh-son-1186794",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Shanghai Cuisine",
+      "stars": 1,
+      "cuisine": "Shanghainese",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "South side of Pacific Century Place, 2A Gongrentiyuchang North Road, Chaoyang, 100027",
+      "phone": "+86 10 6539 8660",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/shanghai-cuisine",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Sheng Yong Xing (Chaoyang)",
+      "stars": 1,
+      "cuisine": "Beijing Cuisine",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "5 Xindong Road, Chaoyang",
+      "phone": "+86 10 6464 0968",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/sheng-yong-xing-chaoyang",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=f7ezo7KbnVs",
+          "title": "4 Best Peking Duck Restaurants in Beijing: From Budget to Michelin",
+          "channel": "Beijing with Gracie",
+          "note": "Sheng Yong Xing segment starts at 7:04; restaurant roundup, not a dedicated review",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@bellekuv/video/7549150214125309202",
+          "title": "Sheng Yong Xing - Roast Duck",
+          "channel": "Bellekuv (@bellekuv)",
+          "note": "Warning: this video is filmed at the Sheng Yong Xing outpost in Shanghai, not the Beijing Chaoyang branch. Kept because the brand and 45-day duck are the same; do not treat it as a review of the Beijing room.",
+          "verified": "Page opened 2026-11-25: 7,923 views, posted 2025-09-12, transcript captured."
+        }
+      ],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults"
+      ]
+    },
+    {
+      "name": "The Beijing Kitchen (Jianguo Road)",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥",
+      "district": "Chaoyang",
+      "address": "D6007, 6F, SKP Beijing, 87 Jianguo Road, Chaoyang",
+      "phone": "+86 10 6530 7905",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/the-beijing-kitchen",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "The Georg",
+      "stars": 1,
+      "cuisine": "European Contemporary",
+      "price_band": "¥¥¥¥",
+      "district": "Dongcheng",
+      "address": "95 Donghuamen Street, Dongcheng, 100006",
+      "phone": "+86 186 1833 7710",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings. Guide notes: except on major holidays, when only prix fixes are offered, a tasting menu and a la carte are available.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/the-georg",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥¥ band and explicitly warns that major holidays are prix fixe only, without a price."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ],
+      "flag": "Holiday menu exception applies to this trip: the stay falls inside the Chinese New Year period, so the a la carte menu may not be available."
+    },
+    {
+      "name": "The House of Dynasties",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "4F, Rosewood Hotel, Jing Guang Centre, Hujialou, 1 Chaoyangmenwai Street, Chaoyang",
+      "phone": "+86 10 6536 0066",
+      "website": "https://www.rosewoodhotels.com/en/beijing/dining/the-house-of-dynasties",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/the-house-of-dynasties",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Trb Hutong",
+      "stars": 1,
+      "cuisine": "French Contemporary",
+      "price_band": "¥¥¥¥",
+      "district": "Dongcheng",
+      "address": "23 Shatan North Street, Dongcheng",
+      "phone": "+86 139 1171 2083",
+      "website": "https://www.trbhutong.com/",
+      "hours": "Mon-Sun 11:30-14:30 and 17:30-22:00",
+      "closed": "None published",
+      "booking_note": "Bookable through the guide's reservation widget.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/trb-hutong",
+      "price_two_adults": {
+        "status": "verified_menu_published",
+        "note": "The restaurant's own menu page publishes three set menus: ¥788, ¥1,688 and ¥2,288 per person, plus 15% service charge. For two adults on the entry menu, before service: 2 x ¥788 = ¥1,576. Source: https://www.trbhutong.com/menu",
+        "menu_url": "https://www.trbhutong.com/menu"
+      },
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=53giDGH710U",
+          "title": "【EATS】北京法餐TRB食记 2 则 / FRENCH DINING RECORDS IN BEIJING",
+          "channel": "Vivien Wong",
+          "note": "Covers TRB Hutong and TRB Forbidden City",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        }
+      ],
+      "unverified": []
+    },
+    {
+      "name": "Xin Rong Ji (Jianguomenwai Street)",
+      "stars": 1,
+      "cuisine": "Taizhou",
+      "price_band": "¥¥¥",
+      "district": "Chaoyang",
+      "address": "5F, Tower A, Yintai Centre, 2 Jianguomenwai Street, Chaoyang",
+      "phone": "+86 10 8517 1789",
+      "website": "https://www.xinrongji.com/",
+      "hours": "Mon-Sun 11:00-14:00 and 17:00-21:30",
+      "closed": "None published",
+      "booking_note": "Guide page states the establishment manages its own bookings and advises pre-ordering.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/xin-rong-ji-jianguomenwai-street",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Xin Rong Ji (Jinrong Street)",
+      "stars": 1,
+      "cuisine": "Taizhou",
+      "price_band": "¥¥¥",
+      "district": "Xicheng",
+      "address": "B1 Level, International Finance Centre, 11 Jinrong Street, Xicheng",
+      "phone": "+86 10 6618 0567",
+      "website": "https://www.xinrongji.com/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/xin-rong-ji-jinrong-street",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Zhiguan Courtyard",
+      "stars": 1,
+      "cuisine": "Dongbei",
+      "price_band": "¥¥¥",
+      "district": "Dongcheng",
+      "address": "12 Jinyu Hutong, Dongcheng",
+      "phone": "+86 10 6559 9899",
+      "website": "",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/zhiguan",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "website",
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    },
+    {
+      "name": "Zijin Mansion",
+      "stars": 1,
+      "cuisine": "Cantonese",
+      "price_band": "¥¥¥",
+      "district": "Dongcheng",
+      "address": "3F, Waldorf Astoria Hotel, 5-15 Jinyu Hutong, Dongcheng",
+      "phone": "+86 10 8520 8989",
+      "website": "https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/",
+      "hours": "",
+      "closed": "",
+      "booking_note": "Guide page states the establishment manages its own bookings.",
+      "guide_url": "https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/zijin-mansion",
+      "price_two_adults": {
+        "status": "unverified",
+        "note": "MICHELIN publishes only the ¥¥¥ band."
+      },
+      "social": [],
+      "unverified": [
+        "hours",
+        "closed",
+        "price_two_adults",
+        "social"
+      ]
+    }
+  ]
+}
