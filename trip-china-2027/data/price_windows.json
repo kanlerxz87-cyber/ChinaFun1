@@ -1,0 +1,26 @@
+[
+  {
+    "window": "15–22 Feb 2027 (7 nights, preferred start)",
+    "checkin": "2027-02-15",
+    "checkout": "2027-02-22",
+    "example": "New World Beijing Hotel: $1,177 public / $901 member (king)",
+    "source": "https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204",
+    "note": "Fetched 2026-11-25. Rates are dynamic."
+  },
+  {
+    "window": "22 Feb–1 Mar 2027 (7 nights)",
+    "checkin": "2027-02-22",
+    "checkout": "2027-03-01",
+    "example": "Waldorf Astoria Beijing: $2,246 (Deluxe King Room)",
+    "source": "https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204",
+    "note": "Fetched 2026-11-25. Limited sample; compare on Booking for full picture."
+  },
+  {
+    "window": "15–22 Mar 2027 (7 nights)",
+    "checkin": "2027-03-15",
+    "checkout": "2027-03-22",
+    "example": "Sunworld Dynasty (twin, non-compliant room shown): $933 public / $778 member",
+    "source": "https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204",
+    "note": "Fetched 2026-11-25. Sample only; not a compliant-room comparison."
+  }
+]

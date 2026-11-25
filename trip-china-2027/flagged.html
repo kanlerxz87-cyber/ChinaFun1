@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flagged / Verification · China Trip 2027</title>
+  <meta name="description" content="Verification log, flagged gaps, and repo review.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-title">China Trip 2027</div>
+      <div class="brand-sub">Beijing · 2 adults · 7 nights · verified-source planner</div>
+    </div>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">Menu</button>
+    <nav class="nav" aria-label="Primary"><a href="index.html">Executive Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">MICHELIN Restaurants</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a class="active" href="flagged.html">Flagged / Verification</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero"><h1>Flagged items & verification log</h1><p>Every blank/unverified value is intentional. This page lists irregularities, data gaps, and verification status. No value was inferred to fill a gap.</p></section>
+<div class="grid">
+  <div class="card">
+    <h2>Verification summary</h2>
+    <div class="kv">
+      <div>MICHELIN 33 starred restaurants</div><div><span class="pill good">Verified</span> Names, stars, cuisine, price band, guide URLs verified against official MICHELIN Guide listing fetched 2026-11-25.</div>
+      <div>MICHELIN 2027 release counts</div><div><span class="pill good">Verified</span> 107 Beijing restaurants; 2/5/26 stars; 32 Bib Gourmand; 42 Selected. Source: <a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection" target="_blank" rel="noopener">michelin.com release</a>.</div>
+      <div>Palace Museum hours/tickets</div><div><span class="pill good">Verified</span> From <a href="https://intl.dpm.org.cn/visit.html" target="_blank" rel="noopener">intl.dpm.org.cn/visit.html</a>.</div>
+      <div>Mutianyu hours</div><div><span class="pill good">Verified</span> From <a href="https://en.mutianyugreatwall.com/" target="_blank" rel="noopener">en.mutianyugreatwall.com</a>. Ticket price not captured.</div>
+      <div>Hotel prices</div><div><span class="pill warn">OTA snapshot</span> Booking.com search results fetched 2026-11-25; dynamic rates.</div>
+      <div>Restaurant hours/price-for-two/social</div><div><span class="pill bad">Mostly unverified</span> Only TRB Hutong hours/address verified from official site.</div>
+      <div>Transit ≤1 hour</div><div><span class="pill bad">Not routed</span> Modelled by district only; no fabricated times.</div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Flagged irregularities / gaps</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>ID</th><th>Issue</th><th>Detail</th><th>Source / evidence</th><th>Scope</th></tr></thead>
+      <tbody><tr><td>F-001</td><td><strong>Hotel prices are OTA snapshots</strong></td><td>Booking.com prices were fetched 2026-11-25 for 15–22 Feb 2027. They are dynamic, may change, and may exclude/add taxes/fees at checkout. Member prices require sign-in.</td><td>Use Booking search URL per row; re-verify before booking.</td><td>Hotels</td></tr><tr><td>F-002</td><td><strong>Non-compliant room types displayed</strong></td><td>Sunworld Dynasty (twin beds), Prime Hotel (2 full beds), East Sacred Hotel (twin beds) were shown in Booking results but do not meet queen/king requirement. They are excluded from compliant ranking.</td><td>Booking search URL; room name shown in table.</td><td>Hotels</td></tr><tr><td>F-003</td><td><strong>Transit times not routed</strong></td><td>The ≤1 hour subway/bus rule was not verified with a routing engine. Hotel-MICHELIN proximity is modelled by district only.</td><td>No official routing source captured; flag remains open.</td><td>Hotels / Ranking</td></tr><tr><td>F-004</td><td><strong>Restaurant hours/days/price-for-two mostly unverified</strong></td><td>Only TRB Hutong has verified hours/address from official site in this session. 32/33 restaurants have blank hours/days/closed/price-for-two.</td><td>MICHELIN guide URLs are official for star/cuisine/band; other fields blank.</td><td>Restaurants</td></tr><tr><td>F-005</td><td><strong>Social media links incomplete</strong></td><td>Requirement asks for YouTube/TikTok/Instagram for every restaurant/activity. Most are unverified. Mutianyu Instagram found from official web presence; others need verification.</td><td>Only verified links included; blanks flagged.</td><td>Restaurants / Activities</td></tr><tr><td>F-006</td><td><strong>Preferred window conflict</strong></td><td>Brief prefers 15–18 Feb 2027 (3 nights) but also asks for 1–2 weeks. Plan uses 7 nights starting 15 Feb 2027.</td><td>Flagged in itinerary and questions.</td><td>Itinerary</td></tr><tr><td>F-007</td><td><strong>Mutianyu ticket price not captured</strong></td><td>Official site confirms hours/booking path but ticket price was not captured in this session.</td><td>https://en.mutianyugreatwall.com/</td><td>Activities</td></tr><tr><td>F-008</td><td><strong>Unverified activity candidates excluded</strong></td><td>Temple of Heaven, Summer Palace, National Museum of China not verified in this session; excluded from main table.</td><td>No official source captured in-session.</td><td>Activities</td></tr><tr><td>F-009</td><td><strong>Booking.com 5-star label is platform rating</strong></td><td>Property star rating on Booking may not equal an official tourism star classification; treated as platform listing metadata.</td><td>Booking search results.</td><td>Hotels</td></tr></tbody>
+    </table></div>
+  </div>
+  <div class="card">
+    <h2>Repo review (session 5470d254)</h2>
+    <ul class="check">
+      <li><strong>Observed:</strong> Repository contains multiple prior session outputs (Beijing root by fac6d965; Shanghai docs/ by 68e13071; shanghai-2027/ by 3b27db6c; shanghai-verified-2027/ by 16153d37). Existing COORDINATION.md and README.md document conflicts and resolutions.</li>
+      <li><strong>Observed:</strong> Root site files are owned by prior sessions. This session does not modify them.</li>
+      <li><strong>Observed:</strong> <code>.gitignore</code> exists; <code>__pycache__</code> patterns present in prior notes/history - I will avoid committing pycache.</li>
+      <li><strong>Risk:</strong> Multiple overlapping plans can confuse users; README should clearly distinguish them. This session extends README additively.</li>
+      <li><strong>Risk:</strong> Prior plans contain modelled transit/pricing snapshots; users may mistake them for current verified facts. All snapshots should be timestamped.</li>
+    </ul>
+  </div>
+</div>
+
+</main>
+<footer class="wrap footer">
+  <p>Built by session <code>5470d254</code> on branch <code>arena/5470d254-chinafun1</code>. Last updated 2026-11-25. Unverified values are left blank and flagged; nothing here is invented.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

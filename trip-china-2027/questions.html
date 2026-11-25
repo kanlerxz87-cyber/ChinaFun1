@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questions · China Trip 2027</title>
+  <meta name="description" content="Open questions and missing information before booking.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-title">China Trip 2027</div>
+      <div class="brand-sub">Beijing · 2 adults · 7 nights · verified-source planner</div>
+    </div>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">Menu</button>
+    <nav class="nav" aria-label="Primary"><a href="index.html">Executive Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">MICHELIN Restaurants</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a class="active" href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged / Verification</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero"><h1>Open questions & missing information</h1><p>Decisions that cannot be responsibly made without additional verified information. No question below is answered by guessing.</p></section>
+<div class="grid"><div class="card">
+  <div class="table-wrap"><table>
+    <thead><tr><th>ID</th><th>Question</th><th>Why it matters</th><th>Impact</th><th>How to resolve</th></tr></thead>
+    <tbody><tr><td>Q1</td><td><strong>Destination confirmed as Beijing?</strong></td><td>The brief says &#x27;Trip Planning China&#x27; without naming a city. This session chose Beijing because the MICHELIN Guide Beijing 2027 is officially published. Confirm city choice before booking.</td><td>High</td><td>User decision; compare Beijing vs Shanghai plans already in repo.</td></tr><tr><td>Q2</td><td><strong>Preferred dates: 3 nights or 7 nights?</strong></td><td>Brief states preferred 15–18 Feb 2027 (3 nights) but also asks for 1–2 weeks. This plan prices 7 nights 15–22 Feb 2027.</td><td>High</td><td>Confirm exact travel dates and trip length.</td></tr><tr><td>Q3</td><td><strong>Hotel bed type on final booking page?</strong></td><td>Some Booking-displayed rooms were twin/full. Requirement is queen/king or equivalent/bigger. Non-compliant rooms are excluded from ranking.</td><td>High</td><td>Open the hotel&#x27;s room selection page and confirm bed type before paying.</td></tr><tr><td>Q4</td><td><strong>Actual door-to-door transit times (≤1 hour)?</strong></td><td>No routing API was verified. Hotel-MICHELIN proximity is modelled by district only.</td><td>High</td><td>Use Amap/Google Maps transit directions for exact departure times.</td></tr><tr><td>Q5</td><td><strong>Restaurant opening days/hours for specific dates?</strong></td><td>Only TRB Hutong hours verified from official site in this session; 32/33 restaurants have unverified hours.</td><td>High</td><td>Check each restaurant&#x27;s official site/MICHELIN page/phone before reserving.</td></tr><tr><td>Q6</td><td><strong>Exact menu price for 2 adults?</strong></td><td>MICHELIN shows price bands (¥¥–¥¥¥¥), not a fixed dinner-for-two total for most venues.</td><td>Medium</td><td>Check official menu PDFs or call restaurants; record per-person/set-menu price.</td></tr><tr><td>Q7</td><td><strong>Mutianyu ticket price and transport cost?</strong></td><td>Official Mutianyu site confirms hours but ticket price was not captured in this session.</td><td>Medium</td><td>Check https://en.mutianyugreatwall.com/reservation-center/tickets and transport options.</td></tr><tr><td>Q8</td><td><strong>Which MICHELIN restaurants are within 1h of chosen hotel?</strong></td><td>Requires verified routing and restaurant addresses. Only district-level model available.</td><td>High</td><td>Build a hotel×restaurant transit matrix after geocoding verified addresses.</td></tr><tr><td>Q9</td><td><strong>Visa/entry requirements for travelers&#x27; passports?</strong></td><td>Not verified for the travelers&#x27; specific nationalities in this session.</td><td>High</td><td>Check official embassy/consulate and government travel advisory for traveler nationality.</td></tr><tr><td>Q10</td><td><strong>Are Booking.com OTA prices final?</strong></td><td>Prices were captured 2026-11-25 and are dynamic; taxes/fees/service charges may differ at checkout.</td><td>Medium</td><td>Re-check total price on Booking and hotel&#x27;s official site before booking.</td></tr></tbody>
+  </table></div>
+</div></div>
+
+</main>
+<footer class="wrap footer">
+  <p>Built by session <code>5470d254</code> on branch <code>arena/5470d254-chinafun1</code>. Last updated 2026-11-25. Unverified values are left blank and flagged; nothing here is invented.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

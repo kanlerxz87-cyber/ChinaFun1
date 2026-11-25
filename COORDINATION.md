@@ -348,18 +348,43 @@ Deliver a new, self-contained, source-verified trip-planning site in `trip-china
 
 | # | Task | Status | File scope | Notes |
 |---|------|--------|-----------|-------|
-| C1 | Claim + coordination setup | **in progress** | `COORDINATION.md`, `README.md` | Claim recorded; push immediately. |
-| C2 | Repo review & baseline audit | unclaimed | `trip-china-2027/notes/repo-review.md` | Line-by-line review of existing repo; flag irregularities. |
-| C3 | Research: dates, visa/advisory, destination framing | unclaimed | `trip-china-2027/data/*.json` | Official sources only. |
-| C4 | Hotel research & verified pricing (7-night windows) | unclaimed | `trip-china-2027/data/hotels.json` | Booking/hotel official sources; exact dates; 2 adults; private bath; queen/king. |
-| C5 | MICHELIN restaurant research & cluster ranking | unclaimed | `trip-china-2027/data/restaurants.json` | Distinguish starred vs guide-listed; cost for 2; hours/days; links. |
-| C6 | Activities research & social links | unclaimed | `trip-china-2027/data/activities.json` | Official links + YouTube/TikTok/Instagram review links; hours/days. |
-| C7 | Site build (mobile-friendly dashboard) | unclaimed | `trip-china-2027/*.html`, `trip-china-2027/assets/*` | Clean landing + subpages by category. |
-| C8 | Verification pass, flagged items, questions, suggestions | unclaimed | `trip-china-2027/flagged.html`, `trip-china-2027/questions.html`, `trip-china-2027/suggestions.html` | No unverified values presented as fact. |
-| C9 | Final integration/publish checks | unclaimed | `trip-china-2027/**`, `README.md` | Link check, source audit, commit log. |
+| C1 | Claim + coordination setup | **done** | `COORDINATION.md`, `README.md` | Claimed and pushed. |
+| C2 | Repo review & baseline audit | **done** | `trip-china-2027/flagged.html` (repo review section) | Reviewed existing structure; no other session files modified. Irregularities/gaps recorded in flagged page. |
+| C3 | Research: dates, visa/advisory, destination framing | **done (partial)** | `trip-china-2027/data/*.json`, pages | Beijing chosen due to official MICHELIN 2027 guide. 15 Feb 2027 is Monday (datetime). Preferred 3-night window conflict flagged. Visa not nationality-specific - flagged as Q9. |
+| C4 | Hotel research & verified pricing (7-night windows) | **done (partial)** | `trip-china-2027/data/hotels.json`, `hotels.html` | 8 hotel rows captured from Booking.com 5-star search fetched 2026-11-25 (15–22 Feb 2027, 2 adults, 1 room, USD). 5 compliant (queen/king), 3 non-compliant excluded from ranking. Two comparison windows sampled. Prices are OTA snapshots, not contracts. |
+| C5 | MICHELIN restaurant research & cluster ranking | **done (partial)** | `trip-china-2027/data/restaurants.json`, `restaurants.html` | All 33 Beijing 2027 starred restaurants verified from official MICHELIN listing (names/stars/cuisine/price band/guide URLs). TRB Hutong hours/address verified from official site. 32/33 restaurant hours/days/price-for-two/social links left blank/flagged. Cluster ranking is district-modelled only, not routed (F-003). |
+| C6 | Activities research & social links | **done (partial)** | `trip-china-2027/data/activities.json`, `activities.html` | Palace Museum verified from intl.dpm.org.cn/visit.html. Mutianyu hours verified from en.mutianyugreatwall.com; Instagram link found; ticket price not captured. Temple of Heaven/Summer Palace/National Museum excluded as unverified. |
+| C7 | Site build (mobile-friendly dashboard) | **done** | `trip-china-2027/*.html`, `trip-china-2027/assets/*` | 9 pages, mobile-first CSS, no build deps at runtime. Build script: `trip-china-2027/build_site.py`. |
+| C8 | Verification pass, flagged items, questions, suggestions | **done** | `trip-china-2027/flagged.html`, `trip-china-2027/questions.html`, `trip-china-2027/suggestions.html`, `sources.html` | 9 flagged items, 10 questions, 6 suggestions. Blanks left blank; no inferred values. |
+| C9 | Final integration/publish checks | **done (partial)** | `trip-china-2027/**`, `README.md`, `COORDINATION.md` | Internal link check: 0 missing. README extended additively. No other session files modified. |
 
 ## Notes
 
 - I will not modify root Beijing files or other session directories.
 - Any value not confirmed from an official/verifiable source will be left blank and flagged.
 - Transit times will not be fabricated; if not officially routable/verifiable, they will be marked modelled/unknown with method disclosed.
+
+## Verification log (session 5470d254)
+
+| Source | What was verified | Date |
+|---|---|---|
+| [MICHELIN Guide Beijing all starred](https://guide.michelin.com/en/cn/beijing-municipality/beijing/restaurants/all-starred) | 33 starred restaurants: names, star counts (2/5/26), cuisines, price bands, guide URLs | 2026-11-25 |
+| [MICHELIN 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Beijing 107 entries; 2 Three-Star, 5 Two-Star, 26 One-Star; 32 Bib Gourmand; 42 Selected; new 1-stars Chef 1996 & Old Tower | 2026-11-25 |
+| [Palace Museum visit page](https://intl.dpm.org.cn/visit.html) | Hours (Apr-Oct 08:30-17:00 last 16:00; Nov-Mar 08:30-16:30 last 15:30), Tue-Sun closed Mon, CNY 60/40, gallery fees, 40k cap, advance booking | 2026-11-25 |
+| [Mutianyu Great Wall official](https://en.mutianyugreatwall.com/) | Hours 08:00-17:30, ticket sales end 16:30, check-in 08:00-17:00, off-season Nov 16-Mar 15 | 2026-11-25 |
+| [TRB Hutong find-us](https://www.trbhutong.com/findus) | Address, phone +86 139 1171 2083, hours daily 11:30-14:30 & 17:30-22:00 | 2026-11-25 |
+| [Booking.com 5-star Beijing 15-22 Feb 2027](https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204) | 8 hotel rows (room/bed/price/cancel/score) as displayed; 3 non-compliant bed types flagged | 2026-11-25 |
+| [Booking.com 22 Feb-1 Mar 2027](https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-02-22&checkout=2027-03-01&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204) | Waldorf Astoria sample $2,246 Deluxe King Room | 2026-11-25 |
+| [Booking.com 15-22 Mar 2027](https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204) | Sunworld Dynasty twin (non-compliant) sample $933/$778 member | 2026-11-25 |
+
+## Irregularities (session 5470d254)
+
+- **F-001** Booking prices are OTA snapshots (2026-11-25), dynamic; not booking contracts.
+- **F-002** Non-compliant bed types (twin/full) displayed by Booking; excluded from compliant ranking.
+- **F-003** ≤1h subway/bus transit not routed; hotel-MICHELIN proximity is district-modelled only.
+- **F-004** 32/33 starred restaurants missing verified hours/days/price-for-two/social links; left blank.
+- **F-005** Social media coverage incomplete; only Mutianyu Instagram verified.
+- **F-006** Preferred 15–18 Feb window is 3 nights, conflicts with 1–2 week brief.
+- **F-007** Mutianyu ticket price not captured.
+- **F-008** Temple of Heaven/Summer Palace/National Museum unverified; excluded from main table.
+- **F-009** Booking "5-star" is platform listing metadata, not an official tourism classification.

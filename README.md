@@ -1,6 +1,6 @@
-# ChinaFun1 — four China 2027 trip planners
+# ChinaFun1 — five China 2027 trip planners
 
-This repository holds **four independent, source-verified plans** for the same brief (2 adults, 7 nights,
+This repository holds **five independent, source-verified plans** for the same brief (2 adults, 7 nights,
 15 Feb – 23 Mar 2027), produced by four parallel sessions that answered the question differently. They are kept
 in separate directories rather than merged, because they disagree with each other and merging them would
 hide that:
@@ -11,6 +11,7 @@ hide that:
 | `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
+| `5470d254` | **Beijing** | `trip-china-2027/` | [`trip-china-2027/index.html`](trip-china-2027/index.html) |
 
 All four follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
@@ -205,3 +206,27 @@ separate for the same reason: it is its own research, not a revision of anyone e
 Its distinguishing feature is the **CSV-plus-prose** structure: every table has a companion
 `*-notes.md` recording how the rows were gathered, which makes it the easiest of the three Shanghai
 studies to audit line by line.
+
+
+---
+
+# Beijing plan (`5470d254`) — `trip-china-2027/`
+
+A source-verified, mobile-friendly Beijing planning dashboard for **2 adults, 7 nights, 15–22 Feb 2027** (preferred start 15 Feb 2027; 3-night preference flagged as conflicting with 1–2 week brief). Built in its own directory to avoid overwriting prior session outputs.
+
+**Entry point:** [`trip-china-2027/index.html`](trip-china-2027/index.html)
+
+| Path | What it is |
+|---|---|
+| `trip-china-2027/index.html` | Executive summary and landing dashboard |
+| `trip-china-2027/hotels.html` | Compliant hotel comparison (private bath + queen/king), 7-night totals, date-window samples, modelled MICHELIN-cluster ranking |
+| `trip-china-2027/restaurants.html` | All 33 MICHELIN-starred Beijing 2027 restaurants with official guide links; gaps flagged |
+| `trip-china-2027/activities.html` | Verified activities with official hours/tickets/social links |
+| `trip-china-2027/itinerary.html` | 7-night draft respecting verified closures |
+| `trip-china-2027/questions.html` | Open questions / missing information |
+| `trip-china-2027/suggestions.html` | Review-before-implementing suggestions |
+| `trip-china-2027/flagged.html` | Verification log, flagged gaps, repo review |
+| `trip-china-2027/sources.html` | Source register |
+| `trip-china-2027/data/*.json` | Data exports (restaurants, hotels, activities, price windows) |
+
+**Key caveats:** Hotel prices are Booking.com OTA snapshots fetched 2026-11-25 (dynamic). Transit ≤1h is modelled by district, not routed. Restaurant hours/price-for-two/social links are mostly unverified and left blank/flagged. No values inferred.

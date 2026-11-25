@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suggestions · China Trip 2027</title>
+  <meta name="description" content="Suggestions for improving the trip planner.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-title">China Trip 2027</div>
+      <div class="brand-sub">Beijing · 2 adults · 7 nights · verified-source planner</div>
+    </div>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">Menu</button>
+    <nav class="nav" aria-label="Primary"><a href="index.html">Executive Summary</a><a href="hotels.html">Hotels</a><a href="restaurants.html">MICHELIN Restaurants</a><a href="activities.html">Activities</a><a href="itinerary.html">Itinerary</a><a href="questions.html">Questions</a><a class="active" href="suggestions.html">Suggestions</a><a href="flagged.html">Flagged / Verification</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<section class="hero"><h1>Suggestions (review before implementing)</h1><p>Improvement ideas only. Nothing here is implemented automatically. Each suggestion includes impact and caveat.</p></section>
+<div class="grid"><div class="card">
+  <div class="table-wrap"><table>
+    <thead><tr><th>ID</th><th>Suggestion</th><th>Priority</th><th>Description</th><th>Expected impact</th><th>Caveat / before implementing</th></tr></thead>
+    <tbody><tr><td>S1</td><td><strong>Build a verified hotel × restaurant transit matrix</strong></td><td>High</td><td>Use Amap/Google Maps Directions API or manual verified checks to compute subway/bus time from each compliant hotel to each starred restaurant. Publish only verified times.</td><td>Improves the core ranking requirement; replaces modelled proximity.</td><td>Do not implement until routing source is verified and reproducible.</td></tr><tr><td>S2</td><td><strong>Capture restaurant hours/days/menus from official sources</strong></td><td>High</td><td>For each MICHELIN restaurant, open official site or verified listing and record hours, closed days, menu price for two. Leave blank if not published.</td><td>Makes dining planning reliable.</td><td>Use official restaurant sites / MICHELIN detail pages; do not scrape paywalled/unverifiable sources.</td></tr><tr><td>S3</td><td><strong>Add weekly price tracker</strong></td><td>Medium</td><td>Record 7-night total for compliant king/queen rooms weekly in a CSV with timestamp and source URL.</td><td>Answers &#x27;cheapest time to book&#x27; with evidence instead of snapshot.</td><td>Track same room type; include taxes/fees notes.</td></tr><tr><td>S4</td><td><strong>Verify social media links for every venue</strong></td><td>Medium</td><td>Find official/verified YouTube, Instagram, TikTok accounts or review videos for each restaurant/activity; label as official vs third-party.</td><td>Satisfies social-link requirement with provenance.</td><td>Do not guess handles; verify via official website links or verified profiles.</td></tr><tr><td>S5</td><td><strong>Add visa/entry advisory section per nationality</strong></td><td>High</td><td>Add a table for traveler nationality with official embassy/consulate source links. Do not generalize.</td><td>Prevents entry issues.</td><td>Only use official government sources.</td></tr><tr><td>S6</td><td><strong>Add airport transfer and transit card guidance</strong></td><td>Low</td><td>Document PEK/PKX to hotel options with official sources and estimated costs from official operators.</td><td>Improves arrival planning.</td><td>Verify current prices from official operator pages.</td></tr></tbody>
+  </table></div>
+</div></div>
+
+</main>
+<footer class="wrap footer">
+  <p>Built by session <code>5470d254</code> on branch <code>arena/5470d254-chinafun1</code>. Last updated 2026-11-25. Unverified values are left blank and flagged; nothing here is invented.</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
