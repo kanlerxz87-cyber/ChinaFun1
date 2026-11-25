@@ -71,3 +71,52 @@ A status of **needs review** means the item is published on `suggestions.html` a
 Start with T8 (addresses) and T9 (transit). Those two turn the provisional hotel ranking into a real answer. Keep
 `assets/data.js` as the single source of truth, keep the `verified / flagged / blank` discipline, and update this file
 in the same commit as any data change.
+
+
+---
+
+## Session `68e13071` — second, independent plan: **Shanghai** (`docs/`)
+
+**Branch:** `arena/68e13071-chinafun1` (branched from `main` @ `8c3c56c`, same starting point as `fac6d965`)
+**Scope:** `data/`, `build.py`, `check.py`, `src/assets/`, `docs/` — no file shared with the `fac6d965` scope.
+
+> **Divergence worth reading first.** Both sessions received the same brief ("1–2 weeks in China, 15 Feb – 23 Mar 2027,
+> preferred window 15–18 Feb") and independently answered with **different cities**: `fac6d965` produced **Beijing**
+> (published at the repo root), `68e13071` produced **Shanghai** (published under `/docs/`). Neither city is wrong;
+> they are two different trips. Compare before booking, and note that the brief's "preferred window" is 3–4 days,
+> which neither plan fits inside — both extended it to a 7-night stay rather than pretending it works.
+
+| Task | Status | Notes |
+|------|--------|-------|
+| S1 Generator + link checker (`build.py`, `check.py`) | **done** | 11 pages, 187 table rows, 0 broken internal links |
+| S2 MICHELIN 2026 Shanghai (2★/3★ complete, counts for 1★/Bib/Selected) | **done (partial)** | 12 starred rows tabulated; 38 one-star + 33 Bib counted and sourced, **not** tabulated |
+| S3 Hotel shortlist + 7-night pricing | **done** | 6 hotels; 4 with real W1 totals; 2 unbookable that week (Langham, Bvlgari) |
+| S4 ≤60-min MICHELIN-density ranking | **done (model)** | Straight-line + published formula; **no** journey planner reachable — see suggestion S2 |
+| S5 Five-window price sweep ("cheapest dates") | **done** | Radisson re-priced 15 Feb / 22 Feb / 1 Mar / 8 Mar / 15 Mar |
+| S6 Restaurant hours / price-for-two | **partial** | hours 3/12, menu prices 0/12 (MICHELIN publishes a band only) — all flagged |
+| S7 Video links | **partial** | 6/12 restaurants, 3/5 activities (25 URLs); TikTok/Instagram unreachable |
+| S8 Exec summary, questions, suggestions, verification log | **done** | `docs/index.html`, `docs/questions.html`, `docs/suggestions.html` (S1–S12), `docs/verification.html` |
+| S9 Publish | **this PR** | `docs/` path; GitHub Pages source is `main` `/`, so the site lands at `/docs/` |
+
+### Verification log (session `68e13071`)
+
+| Source | Verified | Date |
+|---|---|---|
+| [MICHELIN Shanghai 2★ list](https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/2-stars-michelin) (via text proxy) | 11 rows: names, addresses, cuisine, ¥ band, partial hours | 2026-11-25 |
+| [MICHELIN Shanghai 3★ list](https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/3-stars-michelin) | Taian Table alone at 3★ | 2026-11-25 |
+| MICHELIN tier counts (1★ / Bib / Selected / all) | 38 / 33 / 70 / 153 for Shanghai | 2026-11-25 |
+| [The Langham — T'ang Court](https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/) | Lunch 11:30–14:00, dinner 17:30–21:00, **closed Monday**, 2★ 2026 | 2026-11-25 |
+| [Da Vittorio Shanghai](https://www.davittorio.com/en/restaurants/da-vittorio-shanghai.html) | Phone +86 21 63302198; closed Monday (from MICHELIN page) | 2026-11-25 |
+| Booking.com hotel pages (6) | 7-night totals, room and bed type, VAT excluded | 2026-11-25 |
+| Nominatim (OSM) | Coordinates for 4 hotels, 11 restaurants | 2026-11-25 |
+| [China 2027 holidays](https://www.timeanddate.com/holidays/china/2027) | CNY Sat 6 Feb, break 5–13 Feb, Lantern Festival **Sat 20 Feb** (inside the trip) | 2026-11-25 |
+
+### Irregularities (session `68e13071`)
+
+1. MICHELIN's award article claims 14×2★ / 62×1★ / 35 Bib regionally; the Shanghai filtered lists show 11 / 38 / 33.
+2. The article names **102 House** as 2★, but the 2★ listing omits it → excluded, flagged.
+3. Third-party lists count `Yu Bao Xuan` and `Imperial Treasure` separately; they are the same restaurant.
+4. Booking.com slug `the-middle-house` resolves to *The Upper House Shanghai* — dropped rather than mislabelled.
+5. Langham Xintiandi and Bvlgari have **no availability** for 15–22 Feb 2027; only adjacent-date "from" prices exist.
+6. The brief's preferred window (15–18 Feb) is 3 nights — inconsistent with the 1–2 week goal; kept as the start of 7 nights and flagged.
+7. `guide.michelin.com` is unreachable directly from this sandbox; official content was read through `r.jina.ai`. Recorded so a later session does not "fix" verified rows.

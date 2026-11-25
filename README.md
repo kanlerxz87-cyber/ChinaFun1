@@ -1,4 +1,26 @@
-# ChinaFun1 — Beijing 2027 trip planner
+# ChinaFun1 — two China 2027 trip planners
+
+This repository holds **two independent, source-verified plans** for the same brief (2 adults, 7 nights,
+15 Feb – 23 Mar 2027), produced by two parallel sessions that answered the question differently:
+
+| Plan | City | Where it lives | Entry point |
+|---|---|---|---|
+| `fac6d965` | **Beijing** | repo root | [`index.html`](index.html) |
+| `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
+
+Both follow the same rules: every row links to the official source it came from, unconfirmed values are left
+blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
+"listed". Read both before deciding — the honest answer to "which city" is that the brief did not say, and the
+two plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
+cheapest verified 7-night rate at $1,116 and 12 starred restaurants all inside a 60-minute band).
+
+> **Note on the brief's dates:** the preferred window 15–18 Feb 2027 is 3 nights, which does not fit a 1–2 week
+> trip. Both plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
+
+---
+
+# Beijing plan (`fac6d965`) — repo root
+
 
 A static, mobile-first planning dashboard for a **7-night Beijing trip for two adults, 15–22 February 2027**
 (inside the 15 Feb – 23 Mar 2027 window), built around the MICHELIN Guide rather than around sightseeing.
@@ -46,3 +68,40 @@ irregularities. Headline caveats:
 - Hotel totals are Booking.com "from" rates read on **25 Nov 2026**, not a locked contract.
 - Michelin density counts cover **10 of 33** starred restaurants, so they are a lower bound.
 - Transit times are deliberately **not** estimated; the ≤1-hour rule still needs a routing pass in Amap.
+
+
+---
+
+# Shanghai plan (`68e13071`) — `docs/`
+
+**Live path:** `docs/index.html` · **Session branch:** `arena/68e13071-chinafun1`
+
+A generated dashboard, not hand-written HTML: `data/*.json` → `build.py` → `docs/`.
+
+**Recommendation:** Shanghai only, 7 nights Mon 15 Feb → Mon 22 Feb 2027, **Radisson Blu New World Junior Suite**
+(1 queen bed, attached private bathroom) at **US$1,116 total for 7 nights** for 2 adults — the cheapest of the five
+7-night windows priced, and the best of the hotels that could be geolocated.
+
+**Headline finding:** the ≤60-minute MICHELIN-density test asked for in the brief does not separate central hotels —
+all four geocodable hotels reach 10–11 of the 11 geocodable 2★/3★ restaurants. Price and room quality decide.
+
+| Path | What it is |
+|---|---|
+| `data/*.json` | 14 datasets: hotels, restaurants, activities, itinerary, budget, windows, five-window sweep, flags, questions, suggestions S1–S12, verification log, source register, methodology |
+| `build.py` | Renders `docs/` from `data/`. No dependencies. |
+| `check.py` | Post-build checks: broken internal links, empty `href`s, missing `<title>`/viewport |
+| `src/assets/` | Mobile-first CSS + tiny JS (menu, per-table filter). *Moved out of `assets/` so the Beijing plan keeps the repo-root assets.* |
+| `docs/` | The generated Shanghai site |
+
+Rebuild:
+
+```bash
+python3 build.py && python3 check.py
+```
+
+Pages: 11 — Overview · Hotels & Ranking · Michelin · Activities · Itinerary · Budget · Verification Log ·
+Flagged for Review · Open Questions · Suggestions · Sources & Method.
+
+**What is deliberately blank:** menu prices for two at every starred restaurant (MICHELIN publishes only a ¥ band),
+hours for 9 of 12 restaurants, all attraction ticket prices/hours, live journey times, flights. Each is on
+`docs/flagged.html` with the exact next step to close it.

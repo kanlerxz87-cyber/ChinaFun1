@@ -1,0 +1,276 @@
+[
+ {
+  "id": "radisson",
+  "name": "Radisson Blu Hotel Shanghai New World",
+  "district": "Huangpu (People's Square)",
+  "address": "88 Nanjing West Road, Huangpu, 200003 Shanghai",
+  "lat": 31.2364079,
+  "lon": 121.4684659,
+  "nearest_metro": "People's Square Station — 1,200 ft walk (Booking.com 'Subway Access')",
+  "bed": "1 queen (Junior Suite)",
+  "bathroom": "Attached (private) bathroom — stated on the rate",
+  "rating": "9.2 / 10 (10,162 reviews)",
+  "amenities": [
+   "Indoor swimming pool",
+   "Fitness centre",
+   "Sauna",
+   "Massage",
+   "Parking garage",
+   "Free WiFi (rated 7.8)",
+   "Breakfast (buffet, rated 9.1)"
+  ],
+  "price": {
+   "w1": {
+    "total_usd": 1116,
+    "room_type": "Junior Suite, 431 sq ft",
+    "bed": "1 queen",
+    "note": "Free cancellation before 14 Feb 2027; no prepayment; breakfast $34/person; 10% service charge incl., 6.6% VAT excl.",
+    "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "checked": "2026-11-25"
+   }
+  },
+  "alt_prices": [
+   {
+    "window": "15–22 Feb 2027 (Superior Room, 1 double or 2 twins)",
+    "total_usd": 1114,
+    "note": "Cheapest public rate in the same window"
+   }
+  ],
+  "official_url": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-shanghai-new-world",
+  "booking_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "sources": [
+   {
+    "label": "Booking.com — Radisson Blu New World, 15–22 Feb 2027, 2 adults",
+    "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "type": "booking",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": []
+ },
+ {
+  "id": "langham",
+  "name": "The Langham, Shanghai, Xintiandi",
+  "district": "Huangpu (Xintiandi)",
+  "address": "99 Madang Road, Huangpu, 200021 Shanghai",
+  "lat": 31.2237257,
+  "lon": 121.4698926,
+  "nearest_metro": "Xintiandi / South Huangpi Road area (station walk not stated on the page we read)",
+  "bed": "Not stated for the windows we could read",
+  "bathroom": "Not verified",
+  "rating": "9.1 / 10 (1,296 reviews)",
+  "amenities": [
+   "Subway access tag on Booking.com",
+   "Sustainability certification"
+  ],
+  "price": {},
+  "alt_prices": [
+   {
+    "window": "13–19 Feb 2027 (6 nights)",
+    "total_usd": 1419.04,
+    "note": "Booking.com 'from' price — 6 nights, ~$236/night"
+   },
+   {
+    "window": "13–17 Feb 2027 (4 nights)",
+    "total_usd": 932.96,
+    "note": "Booking.com 'from' price — 4 nights, ~$233/night"
+   }
+  ],
+  "official_url": "https://www.langhamhotels.com/en/the-langham/shanghai/",
+  "booking_url": "https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "sources": [
+   {
+    "label": "Booking.com — Langham Xintiandi availability for 15–22 Feb 2027",
+    "url": "https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "type": "booking",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Not bookable on Booking.com for 15–22 Feb 2027 — a 7-night total for the preferred window could not be captured."
+  ]
+ },
+ {
+  "id": "waldorf",
+  "name": "Waldorf Astoria Shanghai on the Bund",
+  "district": "Huangpu (The Bund)",
+  "address": "No. 2 Zhong Shan Dong Yi Road, Huangpu, 200002 Shanghai",
+  "lat": 31.2355096,
+  "lon": 121.4853956,
+  "nearest_metro": "Not stated on the section we read",
+  "bed": "2 queen beds (Deluxe Queen Room)",
+  "bathroom": "Marble bathroom with double vanities, tub, shower (room description)",
+  "rating": "9.1 / 10 (569 reviews); location 9.7",
+  "amenities": [
+   "Indoor heated swimming pool",
+   "Spa & wellness centre",
+   "Fitness centre",
+   "Parking garage",
+   "Free WiFi (rated 7.7)",
+   "Breakfast $49/person or included"
+  ],
+  "price": {
+   "w1": {
+    "total_usd": 2414,
+    "room_type": "Deluxe Queen Room with Two Queen Beds, 646 sq ft",
+    "bed": "2 queen",
+    "note": "Non-refundable, breakfast $49/person; flexible rate for the same room $3,018",
+    "url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "checked": "2026-11-25"
+   }
+  },
+  "alt_prices": [
+   {
+    "window": "15–22 Feb 2027 (same room, free cancellation)",
+    "total_usd": 3018,
+    "note": "Flexible rate"
+   }
+  ],
+  "official_url": "https://www.hilton.com/en/hotels/shawawa-waldorf-astoria-shanghai-on-the-bund/",
+  "booking_url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "sources": [
+   {
+    "label": "Booking.com — Waldorf Astoria Shanghai on the Bund, 15–22 Feb 2027",
+    "url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "type": "booking",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": []
+ },
+ {
+  "id": "peninsula",
+  "name": "The Peninsula Shanghai",
+  "district": "Huangpu (The Bund)",
+  "address": "32 Zhong Shan Dong Yi Road (East Zhongshan No. 1 Road), Huangpu, 200002 Shanghai",
+  "lat": 31.2432569,
+  "lon": 121.4847583,
+  "nearest_metro": "Not stated on the section we read",
+  "bed": "1 king bed (Deluxe Room)",
+  "bathroom": "Private bathroom — spa bathtub, separate shower, TV in mirror",
+  "rating": "Not captured for this hotel (Booking room page)",
+  "amenities": [
+   "Free cancellation rate read",
+   "Continental breakfast $52/person",
+   "Nespresso machine",
+   "Soundproofing"
+  ],
+  "price": {
+   "w1": {
+    "total_usd": 3813,
+    "room_type": "Deluxe Room, 581 sq ft",
+    "bed": "1 king",
+    "note": "Free cancellation before 14 Feb 2027; pay property before arrival; 6% VAT excl.",
+    "url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "checked": "2026-11-25"
+   }
+  },
+  "alt_prices": [
+   {
+    "window": "15–22 Feb 2027 (Deluxe Double Room with River View)",
+    "total_usd": 4853,
+    "note": "Same dates, river view"
+   }
+  ],
+  "official_url": "https://www.peninsula.com/en/shanghai/5-star-luxury-hotel-bund",
+  "booking_url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "sources": [
+   {
+    "label": "Booking.com — The Peninsula Shanghai, 15–22 Feb 2027",
+    "url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "type": "booking",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": []
+ },
+ {
+  "id": "atour",
+  "name": "Atour Hotel Nanjing East Road The Bund",
+  "district": "Huangpu (The Bund)",
+  "address": "Not captured (Booking.com lists the property as Huangpu, The Bund)",
+  "lat": null,
+  "lon": null,
+  "nearest_metro": "'Subway Access' tag on Booking.com; distance not captured",
+  "bed": "1 queen bed (Superior Double Room with Inner Window)",
+  "bathroom": "Private bathroom with walk-in shower — stated on the rate",
+  "rating": "Breakfast rated 7.7 (22 reviews); overall score not captured",
+  "amenities": [
+   "Soundproofing",
+   "Minibar",
+   "Air conditioning",
+   "Breakfast included (buffer $1/person on the rate read)"
+  ],
+  "price": {
+   "w1": {
+    "total_usd": 1031,
+    "room_type": "Superior Double Room with Inner Window, 248 sq ft",
+    "bed": "1 queen",
+    "note": "Free cancellation before 2:00 PM on 15 Feb 2027; 6% VAT excl.; Genius member rate $928 excluded",
+    "url": "https://www.booking.com/hotel/cn/atour-shanghai-the-bund-east-nanjing-road.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "checked": "2026-11-25"
+   }
+  },
+  "alt_prices": [],
+  "official_url": null,
+  "booking_url": "https://www.booking.com/hotel/cn/atour-shanghai-the-bund-east-nanjing-road.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "sources": [
+   {
+    "label": "Booking.com — Atour Hotel Nanjing East Road The Bund, 15–22 Feb 2027",
+    "url": "https://www.booking.com/hotel/cn/atour-shanghai-the-bund-east-nanjing-road.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "type": "booking",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Street address and coordinates not verified — the hotel could not be geocoded, so its MICHELIN cluster count is not computed."
+  ]
+ },
+ {
+  "id": "bvlgari",
+  "name": "Bvlgari Hotel Shanghai",
+  "district": "Jing'an",
+  "address": "Not captured",
+  "lat": null,
+  "lon": null,
+  "nearest_metro": "'Subway Access' tag on Booking.com",
+  "bed": "Not stated for the windows we could read",
+  "bathroom": "Not verified",
+  "rating": "9.5 / 10 (87 reviews)",
+  "amenities": [
+   "Not captured"
+  ],
+  "price": {},
+  "alt_prices": [
+   {
+    "window": "13–20 Feb 2027 (7 nights)",
+    "total_usd": 6858.26,
+    "note": "Booking.com 'from' price — 7 nights, ~$980/night"
+   },
+   {
+    "window": "13–19 Feb 2027 (6 nights)",
+    "total_usd": 5878.51,
+    "note": "Booking.com 'from' price"
+   }
+  ],
+  "official_url": "https://www.bulgarihotels.com/en_US/shanghai",
+  "booking_url": "https://www.booking.com/hotel/cn/bulgari-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+  "sources": [
+   {
+    "label": "Booking.com — Bvlgari Hotel Shanghai availability for 15–22 Feb 2027",
+    "url": "https://www.booking.com/hotel/cn/bulgari-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+    "type": "booking",
+    "note": "",
+    "checked": "2026-11-25"
+   }
+  ],
+  "flags": [
+   "Not bookable on Booking.com for 15–22 Feb 2027; address and coordinates not verified, so no cluster count."
+  ]
+ }
+]

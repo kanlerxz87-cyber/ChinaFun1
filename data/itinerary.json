@@ -1,0 +1,58 @@
+[
+ {
+  "day": "Day 1",
+  "date": "Mon 15 Feb 2027",
+  "theme": "Arrive & settle",
+  "plan": "Check in (Radisson Blu recommended). Evening walk on the Bund; light dinner near People's Square. Keep it flexible in case of flight delay.",
+  "travel": "Hotel ↔ Bund ≈ 20–25 min (estimate)"
+ },
+ {
+  "day": "Day 2",
+  "date": "Tue 16 Feb 2027",
+  "theme": "Old city",
+  "plan": "Yu Garden + Yuyuan bazaar in the morning, Shanghai Museum in the afternoon (both <30 min from the hotel). Optional Cantonese lunch at Canton 8 (2★).",
+  "travel": "≤30 min each leg (estimate)"
+ },
+ {
+  "day": "Day 3",
+  "date": "Wed 17 Feb 2027",
+  "theme": "Skyline",
+  "plan": "Shanghai Tower 118F observation deck (cross the river). Dinner at 8½ Otto e Mezzo Bombana — its published hours include Wednesday 18:00–21:00.",
+  "travel": "≤35 min each leg (estimate)"
+ },
+ {
+  "day": "Day 4",
+  "date": "Thu 18 Feb 2027",
+  "theme": "French Concession",
+  "plan": "Tianzifang lanes, then Xintiandi. Dinner at T'ang Court — open Thu lunch + dinner; verify the Monday closure and the 15-minute table hold policy.",
+  "travel": "≤30 min (estimate)"
+ },
+ {
+  "day": "Day 5",
+  "date": "Fri 19 Feb 2027",
+  "theme": "Splurge night",
+  "plan": "Free day / shopping. Dinner at Da Vittorio (2★) — closed Mondays, open Friday; confirm the reservation window.",
+  "travel": "≤35 min (estimate)"
+ },
+ {
+  "day": "Day 6",
+  "date": "Sat 20 Feb 2027",
+  "theme": "Lantern Festival",
+  "plan": "Lantern Festival falls on Sat 20 Feb 2027 — Yuyuan/old-city area is the focal point; go early, book dinner away from the crowds.",
+  "travel": "≤30 min (estimate)"
+ },
+ {
+  "day": "Day 7",
+  "date": "Sun 21 Feb 2027",
+  "theme": "Big finish",
+  "plan": "Taian Table (3★) dinner — the one booking to make first, because its opening days are NOT published and it may not open on a Sunday. Fallback: Fu He Hui (2★).",
+  "travel": "Taian Table ≈ 29 min; Fu He Hui ≈ 32 min (estimate)"
+ },
+ {
+  "day": "Day 8",
+  "date": "Mon 22 Feb 2027",
+  "theme": "Depart",
+  "plan": "Checkout. Note: T'ang Court and Da Vittorio are closed on Mondays — do not plan a farewell lunch there.",
+  "travel": "—"
+ }
+]

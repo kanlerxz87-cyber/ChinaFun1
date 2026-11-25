@@ -1,0 +1,93 @@
+{
+ "lines": [
+  {
+   "line": "Hotel — 7 nights, Radisson Blu New World, Junior Suite (1 queen, private bathroom), 2 adults",
+   "low": 1116,
+   "high": 1190,
+   "basis": "Booking.com snapshot 2026-11-25 for 15–22 Feb 2027. Low = price as quoted (10% service charge included, 6.6% VAT excluded). High = low + 6.6% VAT (arithmetic, not a quoted figure).",
+   "sources": [
+    {
+     "label": "Booking.com — Radisson Blu New World 15–22 Feb 2027",
+     "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+     "type": "booking",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  {
+   "line": "Hotel — 7 nights, Waldorf Astoria (2-queen Deluxe, non-refundable)",
+   "low": 2414,
+   "high": 2573,
+   "basis": "Booking.com snapshot; high adds 6% VAT (arithmetic).",
+   "sources": [
+    {
+     "label": "Booking.com — Waldorf Astoria 15–22 Feb 2027",
+     "url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+     "type": "booking",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  {
+   "line": "Hotel — 7 nights, The Peninsula Shanghai (Deluxe king)",
+   "low": 3813,
+   "high": 4042,
+   "basis": "Booking.com snapshot; high adds 6% VAT (arithmetic).",
+   "sources": [
+    {
+     "label": "Booking.com — Peninsula Shanghai 15–22 Feb 2027",
+     "url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+     "type": "booking",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  {
+   "line": "Hotel — 7 nights, Atour Nanjing East Road (1 queen)",
+   "low": 1031,
+   "high": 1093,
+   "basis": "Booking.com snapshot; high adds 6% VAT (arithmetic).",
+   "sources": [
+    {
+     "label": "Booking.com — Atour 15–22 Feb 2027",
+     "url": "https://www.booking.com/hotel/cn/atour-shanghai-the-bund-east-nanjing-road.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+     "type": "booking",
+     "note": "",
+     "checked": "2026-11-25"
+    }
+   ]
+  },
+  {
+   "line": "MICHELIN dinners for two (4–5 dinners)",
+   "low": null,
+   "high": null,
+   "basis": "NOT CALCULATED — no official menu price was obtained for two adults at any of the 12 starred restaurants. Counting on a number here would be invention.",
+   "sources": []
+  },
+  {
+   "line": "Attraction tickets (Yu Garden, Shanghai Tower 118F, museum)",
+   "low": null,
+   "high": null,
+   "basis": "NOT VERIFIED — official ticket pages did not return prices in this pass.",
+   "sources": []
+  },
+  {
+   "line": "Local transport (metro/taxi) and airport transfers",
+   "low": null,
+   "high": null,
+   "basis": "NOT CALCULATED — fares were not verified from an official operator page.",
+   "sources": []
+  },
+  {
+   "line": "Flights, visa, insurance",
+   "low": null,
+   "high": null,
+   "basis": "OUT OF SCOPE for this build — flagged as an open question (see Open Questions).",
+   "sources": []
+  }
+ ],
+ "note": "Only the room lines are real quoted totals. Treat the budget as a partial ledger: it tells you what the hotel will cost and deliberately refuses to invent the rest."
+}

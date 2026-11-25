@@ -1,0 +1,218 @@
+[
+ {
+  "date": "2026-11-25",
+  "item": "Repo audit",
+  "claim": "Repository contains a project to verify",
+  "how": "git log / ls -la / COORDINATION.md check",
+  "result": "Empty repo: single commit 8c3c56c, README.md only (11 bytes, '# ChinaFun1'). No site, data or CI existed, so everything below is new work.",
+  "source": {
+   "label": "Repository",
+   "url": "https://github.com/kanlerxz87-cyber/ChinaFun1",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "MICHELIN Shanghai counts",
+  "claim": "Shanghai has 1 three-star, 11 two-star, 38 one-star, 33 Bib Gourmand and 70 Selected restaurants in the 2026 guide",
+  "how": "Read the distinction filters rendered on the official Shanghai listing page",
+  "result": "Confirmed: 3★=1, 2★=11, 1★=38, Bib=33, Selected=70; page header says 'Shanghai and surroundings: 1-48 of 153 restaurants'.",
+  "source": {
+   "label": "MICHELIN Guide — Shanghai restaurants",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "MICHELIN regional article vs listing",
+  "claim": "The award article states 14 two-star and 62 one-star across Shanghai+Jiangsu+Zhejiang, and names 102 House as a two-star",
+  "how": "Compared the official award article with the official Shanghai 2-star filtered listing (11 entries)",
+  "result": "IRREGULARITY: 102 House is named in the article's two-star sentence but does NOT appear in the Shanghai 2-star listing (11 rows). Bib Gourmand count also differs (article: 35 / filter: 33). Flagged, not resolved.",
+  "source": {
+   "label": "MICHELIN Guide — Shanghai/Jiangsu/Zhejiang 2026 announcement",
+   "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Third-party MIchelin lists",
+  "claim": "Third-party compilations list '12 two-star' Shanghai restaurants including 102 House and 'Yu Bao Xuan'",
+  "how": "Cross-read three independent 2026 summaries",
+  "result": "IRREGULARITY EXPLAINED: 'Yu Bao Xuan' (御宝轩) is the Chinese name of Imperial Treasure Fine Chinese Cuisine — the same restaurant counted twice. Third-party lists therefore overstate the count.",
+  "source": {
+   "label": "Localshanghai — MICHELIN Shanghai 2026 list",
+   "url": "https://localshanghai.com/michelin-guide-shanghai-2026/",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Hotel prices W1",
+  "claim": "Radisson Blu Junior Suite (1 queen) 7 nights 15–22 Feb 2027 = $1,116 for 2 adults",
+  "how": "Read the room-by-room rate table on the Booking.com property page with those exact dates and 2 adults",
+  "result": "Confirmed $1,116 (7 nights, 10% service charge included, 6.6% VAT excluded). The $922 figure seen earlier on the search page is a Genius members-only price and was excluded.",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World 15–22 Feb 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Hotel prices W1",
+  "claim": "Waldorf Astoria 2-queen Deluxe 15–22 Feb 2027 = $2,414 non-refundable / $3,018 flexible",
+  "how": "Same method as above",
+  "result": "Confirmed both rates on the property page for 2 adults.",
+  "source": {
+   "label": "Booking.com — Waldorf Astoria 15–22 Feb 2027",
+   "url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Hotel prices W1",
+  "claim": "The Peninsula Shanghai Deluxe king 15–22 Feb 2027 = $3,813 (free cancellation)",
+  "how": "Same method",
+  "result": "Confirmed; 6% VAT excluded.",
+  "source": {
+   "label": "Booking.com — Peninsula Shanghai 15–22 Feb 2027",
+   "url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Hotel prices W1",
+  "claim": "Atour Nanjing East Road The Bund Superior Double (1 queen) = $1,031",
+  "how": "Same method",
+  "result": "Confirmed public rate; the $928 figure is a Genius member rate and was excluded.",
+  "source": {
+   "label": "Booking.com — Atour 15–22 Feb 2027",
+   "url": "https://www.booking.com/hotel/cn/atour-shanghai-the-bund-east-nanjing-road.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Availability risk",
+  "claim": "Every shortlisted hotel is bookable for the preferred window",
+  "how": "Attempted each property page with 15–22 Feb 2027",
+  "result": "FALSE for two hotels: The Langham Xintiandi and Bvlgari Hotel Shanghai both show 'This property is unavailable on our site for your dates'. Flagged; adjacent-date prices recorded instead.",
+  "source": {
+   "label": "Booking.com — Langham Xintiandi 15–22 Feb 2027",
+   "url": "https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Date-window sweep",
+  "claim": "The preferred window is the cheapest of five 7-night windows",
+  "how": "Read the same hotel's public 7-night totals for W1–W5 (15 Feb, 22 Feb, 1 Mar, 8 Mar, 15 Mar)",
+  "result": "Confirmed: $1,114 / $1,295 / $1,485 / $1,560 / $1,565 (lowest public room). Preferred window is cheapest by $181–$451.",
+  "source": {
+   "label": "Booking.com — Radisson Blu New World 15–22 Mar 2027",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Star status per row",
+  "claim": "All 12 restaurants listed at 2★ or 3★ hold that award in the 2026 guide",
+  "how": "Read each restaurant's own MICHELIN page (star icons + award text)",
+  "result": "Confirmed for all 12 rows; addresses taken from the same pages.",
+  "source": {
+   "label": "MICHELIN Guide — Taian Table",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/taian-table",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Restaurant hours",
+  "claim": "T'ang Court opening hours",
+  "how": "Read the hotel's official restaurant page (not the MICHELIN page)",
+  "result": "Confirmed: lunch 11:30–14:00 daily, dinner 17:30–21:00 daily, closed Monday. The MICHELIN page for the same restaurant showed no hours.",
+  "source": {
+   "label": "The Langham Shanghai — T'ang Court",
+   "url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Restaurant hours (bulk)",
+  "claim": "Hours for the other 10 starred restaurants",
+  "how": "Looked for hours on each MICHELIN page (chunk 0 and the Facilities section)",
+  "result": "Not published for 9 of them (8½ and Da Vittorio were the only two with published hours). Left BLANK and flagged rather than guessed.",
+  "source": {
+   "label": "MICHELIN Guide — Shanghai restaurants",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Menu prices",
+  "claim": "Price for two adults at each starred restaurant",
+  "how": "Looked for menu prices on the MICHELIN pages and the official restaurant sites reached",
+  "result": "Not found. MICHELIN publishes only a ¥–¥¥¥¥ band. All price cells are blank and the band is shown with MICHELIN's own legend.",
+  "source": {
+   "label": "MICHELIN Guide — Bao Li Xuan (price band shown as ¥¥¥¥)",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/bao-li-xuan",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Holiday calendar",
+  "claim": "Chinese New Year 2027 is Sat 6 Feb and the official break is 5–13 Feb 2027",
+  "how": "Cross-read three independent calendars that quote the State Council notice",
+  "result": "Consistent across all three. The State Council notice itself was not readable from this environment — flagged for manual confirmation.",
+  "source": {
+   "label": "China public holidays 2027",
+   "url": "https://msadvisory.com/china-holidays-festivals/",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Coordinates",
+  "claim": "Distances between hotels and restaurants",
+  "how": "Geocoded published addresses with OpenStreetMap Nominatim; hotels resolved to building/polygon, restaurants to street level",
+  "result": "12 restaurants: 11 geocoded (one street-level only, one building-level), 1 failed (Da Vittorio). Documented as ±1 km; travel times are estimates from a stated formula.",
+  "source": {
+   "label": "OpenStreetMap Nominatim",
+   "url": "https://nominatim.openstreetmap.org/search?format=json&q=63%20Runan%20Street%2C%20Huangpu%2C%20Shanghai",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Tooling limits",
+  "claim": "Live transit times and MICHELIN pages are directly fetchable",
+  "how": "Attempted direct fetches and a public Overpass API query",
+  "result": "guide.michelin.com and overpass-api.de are blocked from this sandbox (MICHELIN had to be read through a text proxy); no journey-planner output was obtainable. Recorded so nobody mistakes estimates for measurements.",
+  "source": {
+   "label": "OpenStreetMap Overpass API (blocked in this environment)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "date": "2026-11-25",
+  "item": "Video links",
+  "claim": "Each listed place should carry a social-video link",
+  "how": "Ran one YouTube search per venue and kept only result URLs whose title/description named the venue AND the city; same-name restaurants in Hong Kong, London and Guangzhou were rejected",
+  "result": "Verified links now exist for 6 of 12 restaurants and 3 of 5 activities (17 + 8 URLs: Taian Table, Fu He Hui, 8½ Otto e Mezzo, Canton 8, Da Vittorio, Imperial Treasure; Yu Garden, Shanghai Tower, The Bund). The other rows stay blank and are on Flagged for Review — TikTok and Instagram were unreachable from this environment.",
+  "source": {
+   "label": "YouTube search results",
+   "url": "https://www.youtube.com/results?search_query=Taian+Table+Shanghai+michelin",
+   "checked": "2026-11-25"
+  }
+ }
+]

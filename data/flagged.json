@@ -1,0 +1,167 @@
+[
+ {
+  "item": "102 House",
+  "field": "Star status",
+  "why": "The official 2026 announcement article names 102 House among the two-star restaurants, but the official Shanghai 2-star listing shows only 11 entries and does not include it. Third-party lists copy the article.",
+  "next_step": "Open the 102 House page on guide.michelin.com and read the award text; then either add it as 2★ or record it as 'not a 2026 two-star'.",
+  "source": {
+   "label": "MICHELIN Guide — 2-star Shanghai listing",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/2-stars-michelin",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "Bib Gourmand count",
+  "field": "Count",
+  "why": "Official article says 35 Bib Gourmand in Shanghai; the live filter says 33.",
+  "next_step": "Recount on the listing page and note the publication date of each figure.",
+  "source": {
+   "label": "MICHELIN Guide — Shanghai listing filters",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "38 one-star restaurants",
+  "field": "Itemisation",
+  "why": "Only the 2★ and 3★ tiers are itemised row-by-row in this build; the 38 one-star rows were not extracted (the listing pages are extremely heavy to read).",
+  "next_step": "Extract the one-star list on the official filtered page and add rows with the same schema.",
+  "source": {
+   "label": "MICHELIN Guide — 1-star Shanghai listing",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/1-stars-michelin",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "All 12 starred restaurants",
+  "field": "Price for two adults",
+  "why": "MICHELIN publishes only a ¥–¥¥¥¥ band; no official menu price was read.",
+  "next_step": "Collect set-menu prices from each restaurant's own site/PDF or by phone; store the currency and date.",
+  "source": {
+   "label": "MICHELIN Guide — price band legend",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "Taian Table, Bao Li Xuan, Canton 8, Fu He Hui, Imperial Treasure, Ji Pin Court, House of Rong, Tou Zao, Amazing Chinese Cuisine",
+  "field": "Opening days / hours",
+  "why": "Not published on the MICHELIN pages.",
+  "next_step": "Confirm via each restaurant's website or the hotel concierge; especially the Monday/Sunday closures.",
+  "source": {
+   "label": "MICHELIN Guide — Shanghai restaurants",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "All restaurants",
+  "field": "Spring Festival closures",
+  "why": "The trip starts two days after the official 5–13 Feb 2027 break; independent restaurants may extend closures.",
+  "next_step": "Re-confirm each booking 2–3 weeks before travel, and again 48 h before each dinner.",
+  "source": {
+   "label": "China public holidays 2027",
+   "url": "https://studycli.org/chinese-holidays/2027/",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "The Langham, Shanghai, Xintiandi",
+  "field": "7-night total for 15–22 Feb 2027",
+  "why": "Booking.com shows the property as unavailable for those dates; only adjacent-window 'from' prices could be read.",
+  "next_step": "Check the hotel's own site and a second OTA for 15–22 Feb before ruling it out.",
+  "source": {
+   "label": "Booking.com — Langham Xintiandi",
+   "url": "https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "Bvlgari Hotel Shanghai",
+  "field": "Price, address, room spec",
+  "why": "Unavailable on Booking.com for the preferred window; address and coordinates could not be verified, so no cluster count.",
+  "next_step": "Read the hotel's official page for address, then geocode it.",
+  "source": {
+   "label": "Booking.com — Bvlgari Hotel Shanghai",
+   "url": "https://www.booking.com/hotel/cn/bulgari-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "Atour Hotel Nanjing East Road The Bund",
+  "field": "Address & coordinates",
+  "why": "The property could not be geocoded, so it has no ≤60 min count.",
+  "next_step": "Take the street address from the hotel's own site and geocode it.",
+  "source": {
+   "label": "Booking.com — Atour Nanjing East Road",
+   "url": "https://www.booking.com/hotel/cn/atour-shanghai-the-bund-east-nanjing-road.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "All travel times",
+  "field": "Journey times",
+  "why": "No live journey-planner output was available; times come from a documented formula on straight-line distance (±1 km coordinate error).",
+  "next_step": "Run each hotel→restaurant pair through a live transit planner and replace the estimate; treat 1–2 restaurant differences between hotels as noise.",
+  "source": {
+   "label": "Travel-time method",
+   "url": "https://www.openstreetmap.org/copyright",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "Da Vittorio",
+  "field": "Coordinates",
+  "why": "The Bund Finance Centre address did not geocode.",
+  "next_step": "Use the coordinate MICHELIN publishes on the restaurant page (lat/lon in the 'Find nearby' link).",
+  "source": {
+   "label": "MICHELIN Guide — Da Vittorio",
+   "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/da-vittorio-570570",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "Yu Garden, Shanghai Tower, Shanghai Museum, Tianzifang, The Bund",
+  "field": "Ticket price, opening hours, closures",
+  "why": "Official sites either returned errors (Shanghai Museum: HTTP 500) or did not expose prices on the page that could be read.",
+  "next_step": "Buy-side check: read the official ticketing page (or the venue's WeChat mini-program) and record the CNY price, currency and validity rules.",
+  "source": {
+   "label": "Shanghai Museum — official site",
+   "url": "https://www.shanghaimuseum.net/",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "6 restaurants (Bao Li Xuan, Ji Pin Court, Tou Zao, The House of Rong, Amazing Chinese Cuisine, T'ang Court) + 2 activities (Shanghai Museum, Tianzifang)",
+  "field": "Video links",
+  "why": "Video links were added for 6 of 12 restaurants and 3 of 5 activities (17 + 8 links, all taken from YouTube search result pages and tied to the correct venue and city). The remaining rows have no link yet: search results for these names were dominated by same-name venues in Hong Kong, London or Guangzhou, and a wrong-city video is worse than no video.",
+  "next_step": "Search each remaining name with a Shanghai disambiguator (e.g. \"Ji Pin Court 55 Wulumuqi Road\" / the Chinese name), open the result to confirm the address appears in the description, then add. TikTok/Instagram were not reachable from this environment at all.",
+  "source": {
+   "label": "YouTube search results",
+   "url": "https://www.youtube.com/results?search_query=Shanghai+Bund",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "All hotels",
+  "field": "'Private bathroom' confirmation",
+  "why": "Only rooms whose rate text states 'Attached bathroom'/'private bathroom' are marked as verified; others are blank.",
+  "next_step": "Confirm room-level bathroom type and bed size (queen or larger) on the hotel's own booking page at the time of booking.",
+  "source": {
+   "label": "Booking.com — Radisson Blu rate table",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ },
+ {
+  "item": "All prices",
+  "field": "Taxes, fees and currency",
+  "why": "Booking.com quotes exclude 6–6.6% VAT and some exclude city tax; totals here are pre-VAT snapshots in USD, and Booking converts from CNY at its own rate.",
+  "next_step": "Re-price at booking time in CNY, and capture the exact tax lines from the confirmation.",
+  "source": {
+   "label": "Booking.com — Radisson Blu rate table (VAT noted as excluded)",
+   "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+   "checked": "2026-11-25"
+  }
+ }
+]
