@@ -100,6 +100,23 @@
       the booking flow; the line items settle it immediately.</p>
   </div>
 
+  <div class="card">
+    <h3 style="margin-top:0">F-11 · A guessed MICHELIN URL can land on a different restaurant entirely <span class="badge bad">trap</span></h3>
+    <p>Four venues on the shortlist (Da Vittorio, Imperial Treasure, Amazing Chinese Cuisine, The House of
+      Rong) publish no street address, and their detail pages were never captured. Constructing the obvious
+      URL by pattern — <code>…/shanghai/restaurant/da-vittorio</code> — <strong>redirects to Da Vittorio in
+      Brusaporto, Italy: three stars, a completely different restaurant.</strong></p>
+    <p><strong>What it would have caused.</strong> A link that resolves, looks right, and misattributes a
+      foreign restaurant's stars to a Shanghai listing. It would have passed any automated link check,
+      because the URL returns 200.</p>
+    <p><strong>What was done.</strong> The four rows now link to the verified
+      <a href="https://guide.michelin.com/us/en/shanghai-municipality/restaurants" target="_blank" rel="noopener">Shanghai listing page</a>
+      and carry an explicit <em>"detail page not captured"</em> badge instead of a fake deep link.</p>
+    <p class="sub" style="margin-bottom:0"><strong>General lesson, worth carrying to any similar study:</strong>
+      a resolving link is not a verified link. Pattern-guessed slugs are as dangerous as pattern-guessed
+      data, and are harder to spot because they pass structural checks.</p>
+  </div>
+
   <h2>Chronology problem</h2>
 
   <div class="card">

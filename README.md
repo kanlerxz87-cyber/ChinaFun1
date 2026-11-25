@@ -144,7 +144,7 @@ its own model.
 | `shanghai-2027/index.html` | Executive summary, recommendation, price-window ladder |
 | `shanghai-2027/itinerary.html` | Day-by-day 15–22 Feb 2027, built around verified Monday closures |
 | `shanghai-2027/hotels.html` | 7 hotels, verified 7-night totals, bed and bathroom specs |
-| `shanghai-2027/restaurants.html` | 50 starred venues, 14-row shortlist, ★ vs Guide-Selected distinction |
+| `shanghai-2027/restaurants.html` | Full 50-venue star inventory, 14-row deep shortlist, ★ vs Guide-Selected distinction |
 | `shanghai-2027/activities.html` | Hours, closures, official and social links |
 | `shanghai-2027/ranking.html` | Hotels ranked by MICHELIN access, method disclosed in full |
 | `shanghai-2027/questions.html` | 14 open questions, each with a resolution path |
@@ -170,8 +170,8 @@ away still scores 7 minutes — which is disclosed on the page rather than hidde
 
 ### What it still cannot tell you
 
-- **No menu price from any of the 12 shortlisted restaurants.** Every restaurant cost cell is `null`.
-- Only 2 of 12 venues publish opening hours, so 7 dinner slots read "TBC".
+- **No menu price from any of the 14 shortlisted restaurants.** Every restaurant cost cell is `null`.
+- Only 2 of 14 venues publish opening hours, so 7 dinner slots read "TBC".
 - The **Pullman Jing'an at $708** — cheaper than the recommendation — is excluded from the ranking because
   its coordinates could not be verified; geocoding returned a district centroid.
 - No total trip cost exists: airfare, visas and dinner prices were never sourced.

@@ -182,9 +182,19 @@ extended (not replaced) to describe all three plans and to record where the two 
 | Q8 claimed totals were "taxes and charges included", contradicting the VAT exclusion noted in `data/hotels.json` | Q8 rewritten to flag the exclusion; F-10 added; landing-page table caption annotated |
 | `tools/proximity_model.py` referenced by pre-move path after relocation | All references updated to `shanghai-2027/tools/proximity_model.py` |
 
-**Lesson worth recording:** the numeric error in the landing prose survived a link check and a markup check,
-because both were structural. Only reading the rendered page against the model output caught it. Anyone
-editing prose that restates a model result should diff it against `data/hotel-ranking.json`.
+| Restaurants table showed 10 rows but the JSON holds 14, and README claimed "14-row shortlist" | Added the 4 missing rows (Da Vittorio, Imperial Treasure, Amazing Chinese Cuisine, The House of Rong) plus Huaiyang Delights; corrected "all ten venues" to fourteen |
+| Adding those rows meant writing MICHELIN URLs for venues whose detail pages were never captured | **Pattern-guessed slug `…/shanghai/restaurant/da-vittorio` redirects to Da Vittorio in Brusaporto, Italy (3★)** — a different restaurant. All four guessed rows now link to the verified Shanghai listing with a "detail page not captured" badge. Logged as **F-11** |
+| Yi Long Court was marked "hours not published" | Wrong — its MICHELIN page does publish Mon–Sun 11:30–14:30 & 18:00–22:30. Corrected; Yi Long Court added as R13 with official site and phone |
+
+**Lessons worth recording.**
+
+1. The numeric error in the landing prose survived a link check *and* a markup check, because both were
+   structural. Only reading the rendered page against the model output caught it. **Anyone editing prose
+   that restates a model result should diff it against `data/hotel-ranking.json`.**
+2. **A resolving link is not a verified link.** A pattern-guessed MICHELIN slug returned HTTP 200 and
+   looked plausible while pointing at a three-star restaurant in Lombardy. Automated checks cannot catch
+   this. Only fetching the URL and reading the restaurant name can. Never construct a deep link from a
+   slug pattern — cite the listing page instead.
 
 ## Note for future sessions
 
