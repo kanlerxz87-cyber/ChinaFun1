@@ -172,6 +172,19 @@ extended (not replaced) to describe all three plans and to record where the two 
 - **F-07** Transit times are modelled, not routed (±10 min). The ranking is robust; absolute minutes are not.
 - **F-08** Only 5 of 50 starred restaurants had extractable coordinates. Name-geocoding was abandoned after 4 false matches (Hong Kong, Singapore, Minhang, Hongqiao) rather than mined for coincidences.
 - **F-09** Pullman Jing'an (cheapest at $708) and Capella are **excluded from the ranking** — geocoding returned district centroids, which would have produced a confident false result.
+- **F-10** Captured Booking.com notes state displayed prices **exclude 6.6% VAT and 10% service charge**. Every hotel total may therefore understate true cost by ~17% (the $922 week ≈ $1,077). Published in three places rather than silently grossed up, because the capture did not record whether the headline already absorbed it.
+
+### Post-publish corrections (after PR #5 merged)
+
+| Issue found by re-reading the live site | Fix |
+|---|---|
+| Landing page said Taian Table was 26 min from the Radisson — that is the Peninsula's figure | Corrected to 15 min modelled, and the 2★ band from 12–25 to 10–22 min, matching `data/hotel-ranking.json` |
+| Q8 claimed totals were "taxes and charges included", contradicting the VAT exclusion noted in `data/hotels.json` | Q8 rewritten to flag the exclusion; F-10 added; landing-page table caption annotated |
+| `tools/proximity_model.py` referenced by pre-move path after relocation | All references updated to `shanghai-2027/tools/proximity_model.py` |
+
+**Lesson worth recording:** the numeric error in the landing prose survived a link check and a markup check,
+because both were structural. Only reading the rendered page against the model output caught it. Anyone
+editing prose that restates a model result should diff it against `data/hotel-ranking.json`.
 
 ## Note for future sessions
 

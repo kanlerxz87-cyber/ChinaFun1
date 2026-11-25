@@ -102,7 +102,7 @@
       excluded rather than guessed.</p>
     <p><strong>How to close it.</strong> Open the hotel's location on its own site or in a maps app and
       read the coordinates off the pin. Then re-run
-      <code>python3 tools/proximity_model.py</code> — it is designed to accept new coordinates.</p>
+      <code>python3 shanghai-2027/tools/proximity_model.py</code> — it is designed to accept new coordinates.</p>
     <p class="sub" style="margin-bottom:0">This matters: at $708 the Pullman undercuts the recommendation
       by $214. If it turns out to be well located, it wins on price.</p>
   </div>
@@ -120,11 +120,17 @@
   <div class="card">
     <h3 style="margin-top:0">Q8 · Is $922 really dollars? <span class="badge warn">data</span></h3>
     <p><strong>Known.</strong> All totals are as displayed by Booking.com with the US/English locale,
-      i.e. USD, taxes and charges included per the listing.</p>
-    <p><strong>Missing.</strong> The exchange rate on the day you book, and whether your card adds a
+      i.e. USD, for 1 room and 2 adults.</p>
+    <p><strong>Missing, and this matters.</strong> The captured property notes state that the displayed
+      totals <strong>exclude 6.6% VAT and a 10% service charge</strong>. If that is right, the true cost of
+      the $922 week is closer to <strong>$1,077</strong> once both are added — and every other hotel total
+      on this site shifts by the same proportion. What was not captured is whether Booking.com's headline
+      figure already absorbed these or excluded them; the discrepancy is flagged rather than resolved.</p>
+    <p><strong>Also missing.</strong> The exchange rate on the day you book, and whether your card adds a
       foreign-transaction fee.</p>
-    <p><strong>How to close it.</strong> Nothing to research — just budget a small margin. Figures are
-      comparative, so the ranking holds regardless.</p>
+    <p><strong>How to close it.</strong> Open the room's price breakdown in the booking flow — the line
+      items settle it in ten seconds. Until then, treat the totals as <em>comparative</em>, which they
+      remain regardless, and budget roughly 17% above them.</p>
   </div>
 
   <div class="card">
