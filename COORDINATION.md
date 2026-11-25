@@ -337,25 +337,35 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 
 **Branch:** `arena/33a259ca-chinafun1`, branched from `main` @ `eda19076bc9eb4ffa267c6efb6fdc1fd00aa9c4f`
 **File scope (claimed):** `COORDINATION.md`, `README.md`, `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/data.js`, `assets/app.js`, `assets/style.css`, `data/*.json` (only if required for consistency), `.nojekyll`
-**Status:** in progress
-**Intent:** Audit the published root Beijing site against the full project brief. Fill verifiable gaps (social media/review links, hours/open-days columns, official links, pricing clarity, Michelin cluster ranking transparency, executive summary/questions/suggestions/flagged review). Do not overwrite `docs/`, `shanghai-2027/`, or `shanghai-verified-2027/`. Do not fabricate values; leave unverified fields blank and flag them.
+**Status:** done (pending merge/deploy)
+**Intent:** Audit the published root Beijing site against the full project brief. Fill verifiable gaps (social media/review links, hours/open-days/exceptions columns, official links, pricing clarity, Michelin cluster ranking transparency, executive summary/questions/suggestions/flagged review). Do not overwrite `docs/`, `shanghai-2027/`, or `shanghai-verified-2027/`. No fabricated values; unverified fields left blank and flagged.
 
 ## Task board — session `33a259ca`
 
 | # | Task | Status | File scope | Notes |
 |---|------|--------|-----------|-------|
-| C1 | Claim + repo audit | in progress | `COORDINATION.md` | Reviewing brief compliance gaps. |
-| C2 | Verify/fill social links, hours, open days, official links for restaurants/activities | unclaimed | `assets/data.js`, `michelin.html`, `activities.html`, `assets/app.js` | Web-search verified only; search links labeled as search when no direct review confirmed. |
-| C3 | Hotel pricing/cluster ranking clarity & 7-night totals | unclaimed | `assets/data.js`, `hotels.html`, `index.html` | Real dates, verified totals only. |
-| C4 | Executive summary, questions, suggestions, flagged review | unclaimed | `index.html`, `decisions.html`, `suggestions.html`, `flagged.html` | Publish all gaps; nothing hidden. |
-| C5 | Build/check, PR, merge, Pages deploy | unclaimed | repo-wide verification only | Will not merge a broken site. |
+| C1 | Claim + repo audit | **done** | `COORDINATION.md` | Claimed and pushed before work. Audited root Beijing site vs brief. |
+| C2 | Verify/fill social links, hours, open days, official links for restaurants/activities | **done** | `assets/data.js`, `michelin.html`, `activities.html`, `assets/app.js` | Added YouTube/Instagram/TikTok search links for all MICHELIN restaurants and activities; kept/added direct review links where verified. Added Temple of Heaven and National Museum of China verified hours/official links. |
+| C3 | Hotel pricing/cluster ranking clarity & 7-night totals | **done** | `assets/data.js`, `hotels.html`, `index.html`, `assets/app.js` | Kept verified 7-night totals for 15–22 Feb 2027 (2 adults). Clarified private-bathroom note (per Booking listing, confirm before booking), bed rule, and 1-hour subway/bus transit caveat (not routed; district-count lower bound). |
+| C4 | Executive summary, questions, suggestions, flagged review | **done** | `index.html`, `decisions.html`, `suggestions.html`, `flagged.html` | Updated flagged source log and blank/irregularity notes; decisions table refreshed for new verifications; suggestions remain review-only. |
+| C5 | Build/check, PR, merge, Pages deploy | **in progress** | repo-wide verification only | JS syntax checked; internal links checked; data counts verified (33/12/10/10). |
 
 ## Verification log (session `33a259ca`)
 
 | Source | Verified | Date |
 |---|---|---|
-| (pending) | | |
+| [MICHELIN Guide 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Reconfirmed Beijing 107 entries; 2/5/26 stars (33 starred); Tianjin 27 entries; total 135 establishments, 34 starred, 48 Bib, 52 Selected. | 2026-11-25 |
+| [Palace Museum visit page](https://intl.dpm.org.cn/visit.html) | Apr 1–Oct 31 8:30–17:00 last 16:00; Nov 1–Mar 31 8:30–16:30 last 15:30; closed Mon except national holidays; CNY60/40; Treasure 10; Clock 10; 40,000 cap; no same-day tickets; passport booking. | 2026-11-25 |
+| [Mutianyu Great Wall official site](https://en.mutianyugreatwall.com/) | Opening hours 8:00–17:30; ticket sales end 16:30; check-in 8:00–17:00; off-season 16 Nov–15 Mar noted. | 2026-11-25 |
+| [Temple of Heaven - Beijing Municipal Government](https://english.beijing.gov.cn/travellinginbeijing/parks/202603/t20260320_4562532.html) | Park 6:00–22:00 (last entry 21:00); attractions with separate charges Tue–Sun 8:00–18:00 (last entry 17:30); closed Mondays except statutory holidays. Seasonal ticket categories shown on page; exact Feb low-season amount not explicitly captured — left flagged. | 2026-11-25 |
+| [National Museum of China visit page](https://en.chnmuseum.cn/visit_692/) | Tue–Sun 9:00–17:00, last admission 16:00; closed Mondays except national public holidays; free admission; advance reservation required. | 2026-11-25 |
+| [NMC reservation portal](https://pcticket.chnmuseum.cn/museum-en/) | Official English reservation portal exists; used as booking link. | 2026-11-25 |
 
-## Irregularities
+## Irregularities / flags (session `33a259ca`)
 
-- (pending)
+- **Social links:** Every restaurant/activity now has YouTube/Instagram/TikTok links, but many are platform *search* links (labeled as search) rather than specific verified review URLs. Direct review links were added only where verified. This satisfies link presence but not full review-verification for every row; flagged on `flagged.html`.
+- **Temple of Heaven pricing:** Official gov page displayed high-season ticket categories; Feb 2027 is low season. Exact low-season ticket amounts were not explicitly confirmed in the captured page chunks, so the row states "confirm low-season Feb rates" and remains partially flagged.
+- **Mutianyu ticket price:** Not clearly published on the English landing page captured in this pass; left blank/flagged rather than inferred.
+- **1-hour subway/bus rule:** No routing API/Amap transit verification performed. Hotel ranking uses verified same-district starred-restaurant counts as a lower-bound proxy; all transit claims remain flagged as unverified.
+- **Hotel bathroom field:** "Private bathroom" added as per Booking listing note; not independently verified from hotel official room spec pages for every property. Flagged for confirmation before booking.
+- **No `g` field in MICHELIN data:** `assets/app.js` previously referenced `r.g`; fixed to build MICHELIN guide URL from `GUIDE_SLUG` with fallback to all-starred listing.

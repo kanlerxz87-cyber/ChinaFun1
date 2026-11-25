@@ -50,7 +50,11 @@
   }
 
   /* ---------- MICHELIN ---------- */
-  function guideLink(r){ return `<a href="${r.g}" target="_blank" rel="noopener">guide ↗</a>`; }
+  function guideLink(r){
+    const slug = (typeof GUIDE_SLUG!=="undefined" && GUIDE_SLUG[r.n]) ? GUIDE_SLUG[r.n] : null;
+    const url = r.g || (slug ? `https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/${slug}` : "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred");
+    return `<a href="${url}" target="_blank" rel="noopener">MICHELIN ↗</a>`;
+  }
   function socialCell(r){
     if(!r.soc || !r.soc.length) return `<span class="chip u">none found</span>`;
     return r.soc.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join(" · ");
@@ -60,16 +64,19 @@
     const rows = MICHELIN.slice().sort((a,b)=> b.s-a.s || a.n.localeCompare(b.n));
     body.innerHTML = rows.map(r=>{
       const p2 = r.p2 ? esc(r.p2) : `<span class="chip u">not published</span>`;
+      const hours = r.h ? esc(r.h) : `<span class="chip u">not published</span>`;
+      const exc = r.closed ? `<div class="meta">Exceptions/closed: ${esc(r.closed)}</div>` : "";
+      const fx = r.fx ? `<div class="srcline" style="margin-top:4px">⚑ ${esc(r.fx)}</div>` : "";
       return `<tr data-f="${(r.n+' '+r.c+' '+r.d+' '+r.s).toLowerCase()}">
         <td class="name">${esc(r.n)}<span class="meta">${esc(r.c)}</span></td>
         <td><span class="star">${"★".repeat(r.s)}</span><span class="meta">${r.s}-star ${r.s===3?"Exceptional cuisine":r.s===2?"Excellent cooking":"High quality cooking"}</span></td>
         <td>${esc(r.p)}<span class="meta">MICHELIN price band</span></td>
         <td>${esc(r.d)||`<span class="chip u">blank</span>`}</td>
         <td>${esc(r.a)||`<span class="chip u">not captured</span>`}</td>
-        <td>${r.h?esc(r.h):`<span class="chip u">not published</span>`}</td>
-        <td>${r.ph?esc(r.ph):"—"}</td>
+        <td>${hours}${exc}${fx}</td>
+        <td>${r.ph?`<a href="tel:${esc(r.ph.replace(/[^+\d]/g,''))}">${esc(r.ph)}</a>`:"—"}</td>
         <td style="min-width:190px">${p2}</td>
-        <td style="min-width:150px">${socialCell(r)}</td>
+        <td style="min-width:170px">${socialCell(r)}</td>
         <td class="nowrap">${guideLink(r)}${r.w?` · <a href="${r.w}" target="_blank" rel="noopener">site ↗</a>`:""}</td>
       </tr>`;
     }).join("");
@@ -98,15 +105,16 @@
     body.innerHTML = scored.map((o)=>{
       const h=o.h, s=o.s;
       const pos = h.oop ? "—" : ++live;
-      const bedCell = h.bedOk===true?`<span class="chip v">meets</span>`
-        : h.bedOk==="partial"?`<span class="chip f">request</span>`
-        : `<span class="chip u">twin only</span>`;
+      const bath = h.bath || "Private bathroom (per Booking listing; confirm before booking)";
+      const bedCell = h.bedOk===true?`<span class="chip v">queen/king</span><span class="meta">${esc(bath)}</span>`
+        : h.bedOk==="partial"?`<span class="chip f">request</span><span class="meta">${esc(bath)}</span>`
+        : `<span class="chip u">twin only</span><span class="meta">${esc(bath)}</span>`;
       return `<tr data-f="${(h.n+' '+h.area).toLowerCase()}">
         <td><span class="rank">${pos}</span></td>
         <td class="name">${esc(h.n)}${h.oop?' <span class="chip u">March only</span>':''}<span class="meta">${esc(h.area)} · Booking rating ${esc(h.cls)} · guest ${h.rev}/10</span></td>
-        <td>${esc(h.room)}<span class="meta">${esc(h.bed)}</span></td>
+        <td>${esc(h.room)}<span class="meta">${esc(h.bed)} · ${esc(bath)}</span></td>
         <td>${bedCell}</td>
-        <td class="num">$${h.tot.toLocaleString()}<span class="meta">$${s.night.toFixed(0)}/night</span></td>
+        <td class="num">$${h.tot.toLocaleString()}<span class="meta">$${s.night.toFixed(0)}/night · 7 nights · 2 adults</span></td>
         <td class="num">${s.density}</td>
         <td class="num">${s.bed.toFixed(1)}</td>
         <td class="num">${s.rev.toFixed(1)}</td>
