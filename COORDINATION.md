@@ -2,6 +2,9 @@
 
 **Session:** `fac6d965` · branch `arena/fac6d965-chinafun1` (branched from `main` @ `8c3c56c`)
 **Last update:** 2026-11-25
+**Published:** https://kanlerxz87-cyber.github.io/ChinaFun1/ — GitHub Pages, `main` / root, build `built` at commit `29fe8da`
+**Branch watch:** other empty `arena/*` branches exist on this remote (no commits / no files as of this update). No conflicting
+claims were found, so nothing was taken over. Any session starting now should claim a row here before touching `assets/data.js`.
 
 Read this file before starting any task. It is the shared task board: what exists, who owns it, what is still open,
 and what was verified against which official source.
