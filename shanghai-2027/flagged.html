@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged Irregularities — Shanghai 2027</title>
+<meta name="description" content="Inconsistencies, conflicts and dead ends found while verifying, with exactly what each one means.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/nav.js"></script>
+</head>
+<body>
+<div id="nav"></div>
+
+<main id="main" class="wrap">
+
+  <h1>Flagged irregularities</h1>
+  <p class="lede">
+    Things that did not line up. Some are errors in published sources, some are limits of the data, and
+    some are places where a reasonable person would have quietly filled in a number. Each is stated with
+    what it affects and how much to trust the surrounding figures.
+  </p>
+
+  <div class="callout warn">
+    <strong>Why this page exists.</strong> A plan built only from confirmed facts still needs a list of
+    what was <em>not</em> confirmable, or the reader cannot tell the difference. Every item below produced
+    a blank cell, an excluded row, or a caveat somewhere on the site.
+  </div>
+
+  <h2>Conflicts between sources</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-01 · MICHELIN says 11 two-star restaurants; its own press release says 12 <span class="badge bad">conflict</span></h3>
+    <p><strong>The discrepancy.</strong> The live Shanghai restaurant listing on guide.michelin.com
+      filters to <strong>3★ 1, 2★ 11, 1★ 38</strong> — fifty starred venues in total. The 2026 selection
+      announcement describes twelve two-star restaurants.</p>
+    <p><strong>What it affects.</strong> The "50-star inventory" figure on the
+      <a href="restaurants.html">restaurants page</a>. The shortlist itself is built from the
+      <em>live</em> count of 11, which is the more conservative read — so no restaurant here is claimed to
+      hold a star it does not currently hold.</p>
+    <p><strong>Most likely explanation.</strong> A closure between the announcement and now, or a venue
+      reclassified. Neither is confirmed.</p>
+    <p><strong>What was <em>not</em> done.</strong> The missing twelfth restaurant was not guessed at.
+      That is why the page shows 11 two-star venues named, not 12.</p>
+    <p class="sub" style="margin-bottom:0"><strong>Resolution:</strong> recount the facet on the day you
+      book. See Q12.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-02 · Two venues publish hours; ten do not <span class="badge warn">data gap</span></h3>
+    <p>Of the twelve shortlisted restaurants, only <strong>Fu He Hui</strong> and <strong>Yi Long
+      Court</strong> have opening hours published on their MICHELIN Guide pages. The other ten show no
+      hours at all, and their own websites either do not publish them or were not reachable.</p>
+    <p><strong>What it affects.</strong> Every dinner slot on the <a href="itinerary.html">itinerary</a>
+      except Fu He Hui's. They are marked <span class="badge warn">TBC</span> rather than filled with
+      plausible times like "18:00–22:00", which any restaurant critic would tell you is the standard guess.</p>
+    <p class="sub" style="margin-bottom:0"><strong>Why this is flagged rather than fixed:</strong> a
+      guessed dinner time is worse than a blank one — it creates false confidence in a schedule that has
+      not been agreed with anyone.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-03 · No restaurant publishes a price <span class="badge bad">data gap</span></h3>
+    <p>None of the twelve publishes a menu price, on MICHELIN or on its own site. Taian Table's official
+      site serves its current menu as a PDF with no price on it. This is unusual for a city with fifty
+      starred restaurants and it blocks the budget entirely.</p>
+    <p><strong>What it affects.</strong> The cost column on the <a href="restaurants.html">restaurant
+      table</a> is <code>null</code> for every row, and the trip budget has no dinner line. The
+      <a href="index.html">summary page</a> says plainly that no total trip cost exists.</p>
+    <p class="sub" style="margin-bottom:0"><strong>The one signal:</strong> Taian Table's add-on dishes at
+      ¥218 and ¥388 — supplements, not a menu price. Recorded as such, not extrapolated upward.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-04 · Hotel prices move with a hidden membership tier <span class="badge warn">caveat</span></h3>
+    <p>The Radisson Blu total of <strong>$922</strong> depends on a Genius-level member rate. The list
+      price for the same 7 nights is <strong>$1,025</strong>. A later window showed $1,013 against a list
+      of $1,125.20.</p>
+    <p><strong>What it affects.</strong> Every hotel total is comparative, not absolute. If you are not
+      signed in at the right membership tier, or the tier changes, you will see the higher figure.</p>
+    <p class="sub" style="margin-bottom:0"><strong>Handling:</strong> the dependency is recorded in
+      <code>data/hotels.json</code> per property rather than hidden. Treat $922 as "achievable with a
+      member rate", and $1,025 as the sticker price.</p>
+  </div>
+
+  <h2>Chronology problem</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-05 · Your preferred window starts the day after a make-up working day <span class="badge warn">scheduling</span></h3>
+    <p>Chinese New Year 2027 is Saturday <strong>6 February</strong>. The holiday block is
+      <strong>5–13 February</strong>. <strong>Sunday 14 February is a designated make-up working
+      day</strong> — a normal working day moved to a Sunday to extend the holiday.</p>
+    <p><strong>What it affects.</strong> Arrival on 15 February lands on the first ordinary Monday after
+      the holiday. In practice this is excellent: prices have just dropped, crowds have gone, and the city
+      is running normally. But it also means the Monday closures at the museum and garden are in full
+      effect on your arrival day.</p>
+    <p class="sub" style="margin-bottom:0"><strong>Modelled assumption:</strong> that "holiday over" means
+      "normal hours". Yu Garden explicitly reserves the right to set Spring Festival hours by
+      announcement, so this is assumed, not verified. See Q9.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-06 · The museum is mid-exhibition and that changes what you see <span class="badge warn">caveat</span></h3>
+    <p>The Shanghai Museum's official visit page states that while
+      <em>On Top of the World Tree: Ancient Civilizations of the Americas</em> runs
+      (9 July 2026 – 14 November 2027), the People's Square building hosts <strong>no other
+      exhibitions</strong>. Permanent collections are at Shanghai Museum East, 1952 Century Avenue, Pudong.</p>
+    <p><strong>What it affects.</strong> A visitor expecting bronze and ceramics at People's Square will
+      not find them. The itinerary schedules the People's Square building on day 2 with this caveat
+      attached, and lists East as the alternative. This is the kind of fact that reshapes a trip and is
+      easy to miss, because the museum is still "open".</p>
+    <p class="sub" style="margin-bottom:0">Also flagged: the visit page gives free admission only for
+      visitors with disabilities; general admission pricing was not shown. Left blank rather than assumed
+      free — Chinese national museums usually are, which is exactly why assuming would have been tempting.</p>
+  </div>
+
+  <h2>Method limitations</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-07 · The one-hour claim is modelled, not routed <span class="badge warn">method</span></h3>
+    <p>No live transit-routing service was reachable from this environment. Travel times are derived from
+      straight-line distance using a declared model (6 min walk, 30 km/h rail, ×1.25 detour, +6 min for
+      line changes beyond 4 km).</p>
+    <p><strong>What it affects.</strong> Every minute figure on the <a href="ranking.html">ranking
+      page</a>. Individual journeys could be materially off — call it ±10 minutes.</p>
+    <p><strong>What it does not affect.</strong> The <em>ranking</em>. The same model is applied to all
+      five hotels, so relative order is far more robust than the absolute numbers. And since all five
+      clear one hour for all five restaurants by a wide margin, the conclusion "the one-hour rule does not
+      bind" survives a large margin of error.</p>
+    <p class="sub" style="margin-bottom:0">The model also has a floor: a restaurant 0.32 km away still
+      scores 7 minutes. Disclosed on the ranking page.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-08 · Only 5 of 50 starred restaurants could be located <span class="badge warn">method</span></h3>
+    <p>Coordinates could be extracted for five venues only: Taian Table, Bombana, Fu He Hui, T'ang Court,
+      Ji Pin Court. The other forty-five had no machine-readable coordinate on a primary source.</p>
+    <p><strong>What it affects.</strong> "Stars reachable" is measured across five, not fifty. The figure
+      "11 stars" means eleven among the five located restaurants, not eleven out of Shanghai's fifty.</p>
+    <p><strong>Workaround attempted and abandoned.</strong> Geocoding the venues by name was tried four
+      times and returned wrong cities each time (a Hongqiao address, a Minhang address, a Hong Kong venue,
+      and a Singapore one). Abandoned as a method rather than mined for coincidences. Details below.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">F-09 · Two hotels could not be geocoded and were excluded <span class="badge warn">method</span></h3>
+    <p><strong>Pullman Shanghai Jing'an</strong> — geocoding returned a district centroid, not a building.
+      A centroid would have placed it in a plausible spot and produced a confident but fabricated ranking.
+      <strong>Capella Shanghai</strong> — same problem.</p>
+    <p><strong>What it affects.</strong> The ranking covers five hotels, not seven. Notably, the excluded
+      Pullman is the <em>cheapest</em> at $708, so the ranking's omission is not neutral — it omits a
+      serious contender. That is stated on the ranking page rather than buried here.</p>
+  </div>
+
+  <h2>Dead ends</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Attempt</th><th>Outcome</th><th>Consequence</th></tr></thead>
+      <tbody>
+        <tr><td>Google Maps transit times</td><td class="small">Not usable — <span class="badge bad">unreachable</span></td><td class="small">Motivated the transparent model instead. Do not retry.</td></tr>
+        <tr><td>Overpass / OSM API</td><td class="small">Not usable — <span class="badge bad">unreachable</span></td><td class="small">Hotels geocoded via Photon only; restaurants fell back to MICHELIN coordinates.</td></tr>
+        <tr><td>Name-geocoding Chinese restaurants</td><td class="small">Four attempts, four non-matches — <span class="badge bad">abandoned</span></td><td class="small">Returned Yong Fu (Hong Kong) and Seventh Son (Singapore) style false positives. A match on a romanised name is not evidence. Abandoned rather than trusted.</td></tr>
+        <tr><td>Official sites for hours</td><td class="small">Mostly no published hours — <span class="badge warn">limited</span></td><td class="small">Ten of twelve restaurants left with blank hours.</td></tr>
+        <tr><td>The Bund official page</td><td class="small">No operator exists — <span class="badge bad">none found</span></td><td class="small">Row left unverified rather than filled with typical hours.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Nothing was inferred — here is the proof</h2>
+  <div class="callout ok">
+    Every blank on this site represents a fact that was <strong>looked for and not found</strong>, not one
+    that was skipped. The rule applied throughout: <em>if an official source does not state it, the cell
+    says so.</em> That is why the restaurant cost column is empty for all twelve rows, why two hotels are
+    missing from the ranking, and why the itinerary says "TBC" seven times.
+  </div>
+
+</main>
+
+<footer class="site"><div class="inner">
+  Irregularities observed during verification on 25 Nov 2026. Source links for each are on the
+  <a href="sources.html">sources page</a>.
+</div></footer>
+</body>
+</html>

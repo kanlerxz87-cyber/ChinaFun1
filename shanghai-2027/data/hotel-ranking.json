@@ -1,0 +1,302 @@
+{
+  "model": {
+    "walk_to_station_min": 6,
+    "avg_metro_speed_kmh": 30.0,
+    "transfer_penalty_min": 6,
+    "transfer_distance_threshold_km": 4.0,
+    "street_detour_factor": 1.25,
+    "one_hour_budget_min": 60
+  },
+  "results": [
+    {
+      "hotel_id": "H04",
+      "hotel": "The Langham, Shanghai, Xintiandi",
+      "restaurant_count_1h": 5,
+      "star_weight_1h": 11,
+      "mean_transit_min_all": 12.8,
+      "mean_transit_min_1h": 12.8,
+      "nearest": "T'ang Court",
+      "nearest_distance_km": 0.47,
+      "rows": [
+        {
+          "restaurant_id": "R05",
+          "restaurant": "T'ang Court",
+          "stars": 2,
+          "distance_km": 0.47,
+          "modelled_transit_min": 7,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R02",
+          "restaurant": "8 ½ Otto e Mezzo Bombana",
+          "stars": 2,
+          "distance_km": 2.69,
+          "modelled_transit_min": 13,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R07",
+          "restaurant": "Ji Pin Court",
+          "stars": 2,
+          "distance_km": 2.8,
+          "modelled_transit_min": 13,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R01",
+          "restaurant": "Taian Table",
+          "stars": 3,
+          "distance_km": 3.52,
+          "modelled_transit_min": 15,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R03",
+          "restaurant": "Fu He Hui",
+          "stars": 2,
+          "distance_km": 3.85,
+          "modelled_transit_min": 16,
+          "assumed_transfers": 0,
+          "within_1h": true
+        }
+      ],
+      "rank": 1
+    },
+    {
+      "hotel_id": "H01",
+      "hotel": "Radisson Blu Hotel Shanghai New World",
+      "restaurant_count_1h": 5,
+      "star_weight_1h": 11,
+      "mean_transit_min_all": 14.8,
+      "mean_transit_min_1h": 14.8,
+      "nearest": "T'ang Court",
+      "nearest_distance_km": 1.72,
+      "rows": [
+        {
+          "restaurant_id": "R05",
+          "restaurant": "T'ang Court",
+          "stars": 2,
+          "distance_km": 1.72,
+          "modelled_transit_min": 10,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R02",
+          "restaurant": "8 ½ Otto e Mezzo Bombana",
+          "stars": 2,
+          "distance_km": 1.96,
+          "modelled_transit_min": 11,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R01",
+          "restaurant": "Taian Table",
+          "stars": 3,
+          "distance_km": 3.74,
+          "modelled_transit_min": 15,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R07",
+          "restaurant": "Ji Pin Court",
+          "stars": 2,
+          "distance_km": 3.84,
+          "modelled_transit_min": 16,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R03",
+          "restaurant": "Fu He Hui",
+          "stars": 2,
+          "distance_km": 4.17,
+          "modelled_transit_min": 22,
+          "assumed_transfers": 1,
+          "within_1h": true
+        }
+      ],
+      "rank": 2
+    },
+    {
+      "hotel_id": "H02",
+      "hotel": "Grand Central Hotel Shanghai",
+      "restaurant_count_1h": 5,
+      "star_weight_1h": 11,
+      "mean_transit_min_all": 17.8,
+      "mean_transit_min_1h": 17.8,
+      "nearest": "8 ½ Otto e Mezzo Bombana",
+      "nearest_distance_km": 1.2,
+      "rows": [
+        {
+          "restaurant_id": "R02",
+          "restaurant": "8 ½ Otto e Mezzo Bombana",
+          "stars": 2,
+          "distance_km": 1.2,
+          "modelled_transit_min": 9,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R05",
+          "restaurant": "T'ang Court",
+          "stars": 2,
+          "distance_km": 1.72,
+          "modelled_transit_min": 10,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R07",
+          "restaurant": "Ji Pin Court",
+          "stars": 2,
+          "distance_km": 4.35,
+          "modelled_transit_min": 23,
+          "assumed_transfers": 1,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R01",
+          "restaurant": "Taian Table",
+          "stars": 3,
+          "distance_km": 4.51,
+          "modelled_transit_min": 23,
+          "assumed_transfers": 1,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R03",
+          "restaurant": "Fu He Hui",
+          "stars": 2,
+          "distance_km": 4.93,
+          "modelled_transit_min": 24,
+          "assumed_transfers": 1,
+          "within_1h": true
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "hotel_id": "H05",
+      "hotel": "Waldorf Astoria Shanghai on the Bund",
+      "restaurant_count_1h": 5,
+      "star_weight_1h": 11,
+      "mean_transit_min_all": 18.8,
+      "mean_transit_min_1h": 18.8,
+      "nearest": "8 ½ Otto e Mezzo Bombana",
+      "nearest_distance_km": 0.74,
+      "rows": [
+        {
+          "restaurant_id": "R02",
+          "restaurant": "8 ½ Otto e Mezzo Bombana",
+          "stars": 2,
+          "distance_km": 0.74,
+          "modelled_transit_min": 8,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R05",
+          "restaurant": "T'ang Court",
+          "stars": 2,
+          "distance_km": 1.94,
+          "modelled_transit_min": 11,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R07",
+          "restaurant": "Ji Pin Court",
+          "stars": 2,
+          "distance_km": 4.87,
+          "modelled_transit_min": 24,
+          "assumed_transfers": 1,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R01",
+          "restaurant": "Taian Table",
+          "stars": 3,
+          "distance_km": 5.32,
+          "modelled_transit_min": 25,
+          "assumed_transfers": 1,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R03",
+          "restaurant": "Fu He Hui",
+          "stars": 2,
+          "distance_km": 5.72,
+          "modelled_transit_min": 26,
+          "assumed_transfers": 1,
+          "within_1h": true
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "hotel_id": "H06",
+      "hotel": "The Peninsula Shanghai",
+      "restaurant_count_1h": 5,
+      "star_weight_1h": 11,
+      "mean_transit_min_all": 19.4,
+      "mean_transit_min_1h": 19.4,
+      "nearest": "8 ½ Otto e Mezzo Bombana",
+      "nearest_distance_km": 0.32,
+      "rows": [
+        {
+          "restaurant_id": "R02",
+          "restaurant": "8 ½ Otto e Mezzo Bombana",
+          "stars": 2,
+          "distance_km": 0.32,
+          "modelled_transit_min": 7,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R05",
+          "restaurant": "T'ang Court",
+          "stars": 2,
+          "distance_km": 2.59,
+          "modelled_transit_min": 12,
+          "assumed_transfers": 0,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R07",
+          "restaurant": "Ji Pin Court",
+          "stars": 2,
+          "distance_km": 5.36,
+          "modelled_transit_min": 25,
+          "assumed_transfers": 1,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R01",
+          "restaurant": "Taian Table",
+          "stars": 3,
+          "distance_km": 5.46,
+          "modelled_transit_min": 26,
+          "assumed_transfers": 1,
+          "within_1h": true
+        },
+        {
+          "restaurant_id": "R03",
+          "restaurant": "Fu He Hui",
+          "stars": 2,
+          "distance_km": 5.89,
+          "modelled_transit_min": 27,
+          "assumed_transfers": 1,
+          "within_1h": true
+        }
+      ],
+      "rank": 5
+    }
+  ]
+}

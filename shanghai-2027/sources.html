@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources &amp; Verification — Shanghai 2027</title>
+<meta name="description" content="Every source used, what it verified, and what it could not.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/nav.js"></script>
+</head>
+<body>
+<div id="nav"></div>
+
+<main id="main" class="wrap">
+
+  <h1>Sources &amp; verification</h1>
+  <p class="lede">
+    Every figure on this site traces to one of the sources below. Each entry says what it was used for and
+    — just as importantly — what it failed to establish. All pages were read on <strong>25 November
+    2026</strong>.
+  </p>
+
+  <div class="callout">
+    <strong>Source hierarchy applied.</strong> Operator's own site &gt; MICHELIN Guide &gt; official
+    municipal/tourism body &gt; booking platform. A booking platform was accepted for prices and review
+    scores (it is the seller), never for museum hours. Where the top two disagreed, both are shown —
+    see <a href="flagged.html">F-01</a>.
+  </div>
+
+  <h2>Restaurants</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Source</th><th>Used for</th><th>What it could not establish</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://guide.michelin.com/us/en/shanghai-municipality/restaurants" target="_blank" rel="noopener">MICHELIN Guide — Shanghai listing</a></td>
+          <td class="small">The full inventory and the star counts: 3★ 1, 2★ 11, 1★ 38, Bib Gourmand 34, Selected 70.</td>
+          <td class="small">Nothing about hours or prices. Its 2★ count conflicts with the 2026 press release (F-01).</td>
+        </tr>
+        <tr>
+          <td class="small">MICHELIN Guide detail pages — <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/taian-table" target="_blank" rel="noopener">Taian Table</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana" target="_blank" rel="noopener">Bombana</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-he-hui" target="_blank" rel="noopener">Fu He Hui</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/bao-li-xuan" target="_blank" rel="noopener">Bao Li Xuan</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/t-ang-court-506725" target="_blank" rel="noopener">T'ang Court</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/tou-zao" target="_blank" rel="noopener">Tou Zao</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ji-pin-court" target="_blank" rel="noopener">Ji Pin Court</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/yi-long-court" target="_blank" rel="noopener">Yi Long Court</a>, <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/huaiyang-delights-jingan" target="_blank" rel="noopener">Huaiyang Delights</a></td>
+          <td class="small">Star classification, cuisine, price band, address, phone, official website link, and coordinates for five venues. Hours for Fu He Hui and Yi Long Court only.</td>
+          <td class="small">Menu prices for all twelve. Hours for the other ten. Booking availability.</td>
+        </tr>
+        <tr>
+          <td><a href="https://sh.taian-table.cn/" target="_blank" rel="noopener">Taian Table official site</a> and its <a href="https://sh.taian-table.cn/wp-content/uploads/2026/10/Menu-No.55.pdf" target="_blank" rel="noopener">Menu No.55 PDF</a></td>
+          <td class="small">Mandatory 10-course structure, rotating menu, add-on prices ¥218 / ¥388 / ¥188.</td>
+          <td class="small">The menu price itself — not printed anywhere. Opening days and CNY closure.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Hotels</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Source</th><th>Used for</th><th>What it could not establish</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="small">Booking.com property pages — <a href="https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html" target="_blank" rel="noopener">Radisson Blu New World</a>, <a href="https://www.booking.com/hotel/cn/grand-central-shanghai.html" target="_blank" rel="noopener">Grand Central</a>, <a href="https://www.booking.com/hotel/cn/the-peninsula-shanghai.html" target="_blank" rel="noopener">Peninsula</a>, <a href="https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html" target="_blank" rel="noopener">Waldorf Astoria</a>, <a href="https://www.booking.com/hotel/cn/the-langham-xintiandi-shanghai.html" target="_blank" rel="noopener">Langham Xintiandi</a>, <a href="https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html" target="_blank" rel="noopener">Pullman Jing'an</a></td>
+          <td class="small">7-night totals for 15–22 Feb 2027, 2 adults; room type; bed size; bathroom; review scores; availability.</td>
+          <td class="small">The Pullman's and Capella's coordinates. Whether "queen selectable" is guaranteed at the quoted rate (Q3). Langham 7-night availability — none exists.</td>
+        </tr>
+        <tr>
+          <td><a href="https://photon.komoot.io/api/" target="_blank" rel="noopener">Photon geocoder (OpenStreetMap)</a></td>
+          <td class="small">Coordinates for five hotels, used in the proximity model.</td>
+          <td class="small">Failed on the Pullman (district centroid) and Capella. Failed entirely on restaurant names.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Activities</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Source</th><th>Used for</th><th>What it could not establish</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://www.shanghaimuseum.net/mu/frontend/pg/en/service/visit-west" target="_blank" rel="noopener">Shanghai Museum — official visit page</a></td>
+          <td class="small">Tue–Sun 09:00–17:00, last entry 15:00; closed Mondays except national holidays; Metro L1/L2/L8 People's Square Exit 1 and L14 Dashijie Exit 4; the Americas-exhibition exclusivity to 14 Nov 2027; booking via WeChat Mini Program or trip.com.</td>
+          <td class="small">General admission price. Evening-session dates.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.yugarden.com.cn/page/articleview/message.html" target="_blank" rel="noopener">Yu Garden — official site</a></td>
+          <td class="small">09:00–16:30, last entry 16:00; closed Mondays except national statutory holidays; ¥30 off-season / ¥40 peak; both gate addresses.</td>
+          <td class="small">Spring Festival 2027 hours — explicitly deferred to an official announcement.</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.timeanddate.com/holidays/china/2027" target="_blank" rel="noopener">timeanddate.com — China holidays 2027</a></td>
+          <td class="small">CNY Saturday 6 February 2027; holiday block 5–13 February; make-up working day Sunday 14 February.</td>
+          <td class="small">Whether individual venues close. Not a tourism source — used only for calendar dates, cross-checked against the reasoning in F-05.</td>
+        </tr>
+        <tr>
+          <td class="small">YouTube — <a href="https://www.youtube.com/watch?v=RYsEUZJSrN8" target="_blank" rel="noopener">Taian Table review</a>, <a href="https://www.youtube.com/watch?v=1Z01UZSP8-w" target="_blank" rel="noopener">Taian Table short</a>, <a href="https://www.youtube.com/watch?v=f7ErJ2COBH4" target="_blank" rel="noopener">Yu Garden</a>, <a href="https://www.youtube.com/watch?v=Und9LL4DX2M" target="_blank" rel="noopener">Yu Garden 2</a>, <a href="https://www.youtube.com/watch?v=WH24eys8xd4" target="_blank" rel="noopener">Shanghai Museum</a>, <a href="https://www.youtube.com/watch?v=bqU3WbL6xac" target="_blank" rel="noopener">Shanghai Museum 2</a></td>
+          <td class="small">Video references for the four activities, for visual orientation before booking.</td>
+          <td class="small">Nothing factual. These are not sources of record and were not used for any figure.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Not published anywhere — the verified blanks</h2>
+  <p>
+    These are the specific facts that were searched for across every official channel available and
+    simply do not exist in public form. They are listed so the blanks on the other pages are traceable
+    to a real search rather than an omission.
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Missing fact</th><th>Where it was looked for</th><th>Only way to get it</th></tr></thead>
+      <tbody>
+        <tr><td>Menu price, all 12 restaurants</td><td class="small">MICHELIN pages, official sites, menu PDFs</td><td class="small">Phone the venue</td></tr>
+        <tr><td>Opening hours, 10 of 12 restaurants</td><td class="small">MICHELIN pages, official sites</td><td class="small">Phone the venue</td></tr>
+        <tr><td>Chinese New Year closures, all venues</td><td class="small">No source publishes 2027 closures</td><td class="small">Phone, or check locally in February</td></tr>
+        <tr><td>Shanghai Museum admission price</td><td class="small">Official visit page</td><td class="small">Booking flow on WeChat / trip.com shows it</td></tr>
+        <tr><td>The Bund's hours or operator</td><td class="small">No operator exists</td><td class="small">Not obtainable — it is a public promenade</td></tr>
+        <tr><td>Coordinates for 45 of 50 starred restaurants</td><td class="small">MICHELIN pages, geocoding (failed)</td><td class="small">Manual map lookup, one venue at a time</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Reproducing this</h2>
+  <div class="card">
+    <p>The proximity model is plain Python with no dependencies beyond the standard library:</p>
+    <pre><code>python3 tools/proximity_model.py</code></pre>
+    <p>
+      It reads <code>data/hotels.json</code> and <code>data/michelin-restaurants.json</code>, applies the
+      constants declared at the top of the file, and writes <code>data/hotel-ranking.json</code>. Change
+      the constants and the ranking recomputes — the assumptions are visible and adjustable rather than
+      buried in a spreadsheet.
+    </p>
+    <p class="sub" style="margin-bottom:0">
+      Data files: <a href="data/hotels.json">hotels.json</a> ·
+      <a href="data/michelin-restaurants.json">michelin-restaurants.json</a> ·
+      <a href="data/activities.json">activities.json</a> ·
+      <a href="data/price-windows.json">price-windows.json</a> ·
+      <a href="data/hotel-ranking.json">hotel-ranking.json</a>
+    </p>
+  </div>
+
+</main>
+
+<footer class="site"><div class="inner">
+  All sources read 25 November 2026. Prices and hours change; re-verify immediately before booking.
+</div></footer>
+</body>
+</html>

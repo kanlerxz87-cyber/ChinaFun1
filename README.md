@@ -7,12 +7,35 @@ This repository holds **two independent, source-verified plans** for the same br
 |---|---|---|---|
 | `fac6d965` | **Beijing** | repo root | [`index.html`](index.html) |
 | `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
+| `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 
 Both follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
-"listed". Read both before deciding — the honest answer to "which city" is that the brief did not say, and the
-two plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
-cheapest verified 7-night rate at $1,116 and 12 starred restaurants all inside a 60-minute band).
+"listed". Read all three before deciding — the honest answer to "which city" is that the brief did not say, and the
+plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
+two independent studies, below).
+
+## The two Shanghai plans disagree, and that is worth knowing
+
+`docs/` and `shanghai-2027/` researched the same city independently and reached **different numbers from
+the same Booking.com source**. Neither is wrong; they priced different room categories, which the Beijing
+study identifies as the real cost driver.
+
+| | `docs/` (`68e13071`) | `shanghai-2027/` (`3b27db6c`) |
+|---|---|---|
+| Recommended hotel | Radisson Blu New World, **Junior Suite** | Radisson Blu New World, **queen room** |
+| 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius member rate; list $1,025) |
+| Starred rows itemised | 12 | 14 |
+| Hotel ranking | Geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model with declared constants |
+| Restaurant cost column | not attempted | present, `null` + flagged for all 12 |
+
+**Where they agree — and this is the finding that matters:** once you require "starred, reachable inside
+an hour", *every* central hotel passes. Shanghai's MICHELIN density does not discriminate between hotels on
+this brief, so **price and room quality should decide, not proximity.** `shanghai-2027/` quantifies the
+spread as 6.6 minutes of modelled transit across all five hotels; `docs/` reaches it by a different route.
+
+**Where they differ:** the $194 gap between $922 and $1,116. It reflects room type and VAT treatment, not a
+data error. Confirm which room category you are actually being quoted before treating either as the price.
 
 > **Note on the brief's dates:** the preferred window 15–18 Feb 2027 is 3 nights, which does not fit a 1–2 week
 > trip. Both plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
@@ -105,3 +128,50 @@ Flagged for Review · Open Questions · Suggestions · Sources & Method.
 **What is deliberately blank:** menu prices for two at every starred restaurant (MICHELIN publishes only a ¥ band),
 hours for 9 of 12 restaurants, all attraction ticket prices/hours, live journey times, flights. Each is on
 `docs/flagged.html` with the exact next step to close it.
+
+---
+
+# Shanghai plan (`3b27db6c`) — `shanghai-2027/`
+
+A separate Shanghai study, kept in its own directory because it arrived after the other two plans were
+already published to the repo root and `docs/`. It is self-contained: its own `assets/`, its own `data/`,
+its own model.
+
+**Entry point:** [`shanghai-2027/index.html`](shanghai-2027/index.html)
+
+| Path | What it is |
+|---|---|
+| `shanghai-2027/index.html` | Executive summary, recommendation, price-window ladder |
+| `shanghai-2027/itinerary.html` | Day-by-day 15–22 Feb 2027, built around verified Monday closures |
+| `shanghai-2027/hotels.html` | 7 hotels, verified 7-night totals, bed and bathroom specs |
+| `shanghai-2027/restaurants.html` | 50 starred venues, 14-row shortlist, ★ vs Guide-Selected distinction |
+| `shanghai-2027/activities.html` | Hours, closures, official and social links |
+| `shanghai-2027/ranking.html` | Hotels ranked by MICHELIN access, method disclosed in full |
+| `shanghai-2027/questions.html` | 14 open questions, each with a resolution path |
+| `shanghai-2027/suggestions.html` | 10 proposals awaiting decision — none implemented |
+| `shanghai-2027/flagged.html` | Irregularities F-01…F-09 and dead ends |
+| `shanghai-2027/sources.html` | Every source, what it proved and what it could not |
+| `shanghai-2027/data/*.json` | Hotels, restaurants, activities, price windows, ranking output |
+| `shanghai-2027/tools/proximity_model.py` | Stdlib-only proximity model, re-runnable |
+
+### Its distinctive contribution: a disclosed transit model
+
+No routing API was reachable, so rather than quietly guessing travel times this study publishes the
+assumptions and the code that applies them — 6-minute walk to a station, 30 km/h average rail speed,
+×1.25 detour factor, +6 minutes for a line change beyond 4 km. Anyone can change a constant and re-run:
+
+```bash
+python3 shanghai-2027/tools/proximity_model.py
+```
+
+The result is honest about its own limits: the minutes are **modelled, not routed** (±10 min), so the
+*ranking* is trustworthy while the individual numbers are not. It also has a floor — a restaurant 0.32 km
+away still scores 7 minutes — which is disclosed on the page rather than hidden.
+
+### What it still cannot tell you
+
+- **No menu price from any of the 12 shortlisted restaurants.** Every restaurant cost cell is `null`.
+- Only 2 of 12 venues publish opening hours, so 7 dinner slots read "TBC".
+- The **Pullman Jing'an at $708** — cheaper than the recommendation — is excluded from the ranking because
+  its coordinates could not be verified; geocoding returned a district centroid.
+- No total trip cost exists: airfare, visas and dinner prices were never sourced.

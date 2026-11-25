@@ -120,3 +120,63 @@ in the same commit as any data change.
 5. Langham Xintiandi and Bvlgari have **no availability** for 15–22 Feb 2027; only adjacent-date "from" prices exist.
 6. The brief's preferred window (15–18 Feb) is 3 nights — inconsistent with the 1–2 week goal; kept as the start of 7 nights and flagged.
 7. `guide.michelin.com` is unreachable directly from this sandbox; official content was read through `r.jina.ai`. Recorded so a later session does not "fix" verified rows.
+
+---
+
+# Session `3b27db6c` — Shanghai plan (`shanghai-2027/`)
+
+**Branch:** `arena/3b27db6c-chinafun1`, branched from `main` @ `8c3c56c`
+**File scope:** `shanghai-2027/**`, this section of `COORDINATION.md`, the three-plan table in `README.md`
+**Status:** complete and published
+
+## Why this session's files live in `shanghai-2027/`
+
+This session started against `8c3c56c`, when the repo held only a README. By the time it pushed, `main` had
+advanced to `88e78ef` with a Beijing site at the root (session `fac6d965`) and a different Shanghai site in
+`docs/` (session `68e13071`). Publishing at the root would have **overwritten** the Beijing dashboard, and
+`docs/` was already occupied.
+
+**Resolution:** everything was moved into `shanghai-2027/`, a self-contained directory with its own
+`assets/`, `data/` and `tools/`. No other session's file was modified, deleted or renamed. `README.md` was
+extended (not replaced) to describe all three plans and to record where the two Shanghai studies disagree.
+
+### Conflict log
+
+| When (UTC) | Session | Event |
+|------------|---------|-------|
+| 2026-11-25 | `3b27db6c` | Created board, claimed T1–T10. Repo was README-only at `8c3c56c`. |
+| 2026-11-25 | `3b27db6c` | Built 10 pages + 5 data files + model, committed as `27fa322`, opened PR #5. |
+| 2026-11-25 | `3b27db6c` | PR #5 rejected as unmergeable — `main` had moved to `88e78ef`. |
+| 2026-11-25 | `3b27db6c` | Moved all files to `shanghai-2027/`; merged `origin/main`. Resolved add/add conflicts in `COORDINATION.md` and `README.md` by **keeping both sides** and consolidating. No work discarded. |
+
+## Task board — session `3b27db6c`
+
+| # | Task | Status | File scope | Verified against |
+|---|------|--------|-----------|------------------|
+| T1 | Site scaffold (CSS, nav, 10 pages) | done | `shanghai-2027/assets/**`, `shanghai-2027/*.html` | All 10 routes HTTP 200, zero broken internal links |
+| T2 | MICHELIN Shanghai starred-restaurant inventory | done | `shanghai-2027/data/michelin-restaurants.json` | guide.michelin.com listing + 11 detail pages; live 3★1 / 2★11 / 1★38 |
+| T3 | Hotel shortlist, verified 7-night totals | done | `shanghai-2027/data/hotels.json` | Booking.com, 15–22 Feb 2027, 2 adults, USD |
+| T4 | Hotel rank by MICHELIN-cluster proximity | done | `shanghai-2027/data/hotel-ranking.json`, `tools/proximity_model.py` | 5 geocoded hotels × 5 MICHELIN-coordinated restaurants |
+| T5 | Activities inventory | done | `shanghai-2027/data/activities.json` | shanghaimuseum.net, yugarden.com.cn, taian-table.cn |
+| T6 | Date-window price comparison | done | `shanghai-2027/data/price-windows.json` | 5 Booking.com windows; monotonic increase |
+| T7 | Open questions register (14 items) | done | `shanghai-2027/questions.html` | Each item carries a resolution method |
+| T8 | Suggestions backlog (10 items) | done | `shanghai-2027/suggestions.html` | Nothing implemented |
+| T9 | Flagged irregularities (F-01…F-09) | done | `shanghai-2027/flagged.html` | Each blank traced to a real failed search |
+| T10 | Integration + publish | done | `main` via PR #5 | Merged after relocation |
+
+## Irregularities raised by this session
+
+- **F-01** MICHELIN's 2026 press release states 12 two-star Shanghai restaurants; the live facet shows 11. The shortlist uses the live 11.
+- **F-02 / F-03** Only 2 of 12 shortlisted restaurants publish hours, and **none** publishes a menu price. Left blank, flagged, never estimated.
+- **F-05** 2027-02-14 is a make-up working day, so arrival on 15 Feb is the first ordinary Monday — Monday closures apply on day 1.
+- **F-07** Transit times are modelled, not routed (±10 min). The ranking is robust; absolute minutes are not.
+- **F-08** Only 5 of 50 starred restaurants had extractable coordinates. Name-geocoding was abandoned after 4 false matches (Hong Kong, Singapore, Minhang, Hongqiao) rather than mined for coincidences.
+- **F-09** Pullman Jing'an (cheapest at $708) and Capella are **excluded from the ranking** — geocoding returned district centroids, which would have produced a confident false result.
+
+## Note for future sessions
+
+- `shanghai-2027/` is read-only unless you claim it above. It is self-contained; changing
+  `shanghai-2027/assets/nav.js` affects only that study.
+- The two Shanghai studies are **deliberately not merged**. Their $922 vs $1,116 gap reflects different
+  room categories, and reconciling it is published as an open question rather than silently resolved.
+- Do not re-attempt name-geocoding of Chinese restaurants (see F-08).
