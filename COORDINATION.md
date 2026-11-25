@@ -331,3 +331,31 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+---
+
+# Session `33a259ca` — compliance pass on the published Beijing root site
+
+**Branch:** `arena/33a259ca-chinafun1`, branched from `main` @ `eda19076bc9eb4ffa267c6efb6fdc1fd00aa9c4f`
+**File scope (claimed):** `COORDINATION.md`, `README.md`, `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/data.js`, `assets/app.js`, `assets/style.css`, `data/*.json` (only if required for consistency), `.nojekyll`
+**Status:** in progress
+**Intent:** Audit the published root Beijing site against the full project brief. Fill verifiable gaps (social media/review links, hours/open-days columns, official links, pricing clarity, Michelin cluster ranking transparency, executive summary/questions/suggestions/flagged review). Do not overwrite `docs/`, `shanghai-2027/`, or `shanghai-verified-2027/`. Do not fabricate values; leave unverified fields blank and flag them.
+
+## Task board — session `33a259ca`
+
+| # | Task | Status | File scope | Notes |
+|---|------|--------|-----------|-------|
+| C1 | Claim + repo audit | in progress | `COORDINATION.md` | Reviewing brief compliance gaps. |
+| C2 | Verify/fill social links, hours, open days, official links for restaurants/activities | unclaimed | `assets/data.js`, `michelin.html`, `activities.html`, `assets/app.js` | Web-search verified only; search links labeled as search when no direct review confirmed. |
+| C3 | Hotel pricing/cluster ranking clarity & 7-night totals | unclaimed | `assets/data.js`, `hotels.html`, `index.html` | Real dates, verified totals only. |
+| C4 | Executive summary, questions, suggestions, flagged review | unclaimed | `index.html`, `decisions.html`, `suggestions.html`, `flagged.html` | Publish all gaps; nothing hidden. |
+| C5 | Build/check, PR, merge, Pages deploy | unclaimed | repo-wide verification only | Will not merge a broken site. |
+
+## Verification log (session `33a259ca`)
+
+| Source | Verified | Date |
+|---|---|---|
+| (pending) | | |
+
+## Irregularities
+
+- (pending)
