@@ -331,3 +331,28 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+## Session `3b335293` — Beijing, address + hours + social pass
+
+**Branch:** `arena/3b335293-chinafun1` (branched from `main` @ `eda1907`)
+**Scope (claimed):** `beijing-verified-2027/**` only — a new self-contained directory. No file owned by
+`fac6d965`, `68e13071`, `3b27db6c` or `16153d37` is edited. `assets/data.js`, `index.html` and `README.md`
+are **not** touched; the cross-plan note for this plan is appended here instead of in `README.md`.
+
+| Task | Status | Owner | File scope | Notes |
+|------|--------|-------|-----------|-------|
+| B1 All 33 Beijing starred restaurants: address, district, phone, own website | **in progress** | 3b335293 | `beijing-verified-2027/data/*` | Closes T8 for Beijing. Read from each restaurant's own MICHELIN Guide page. |
+| B2 Published opening hours + closure exceptions per venue | **in progress** | 3b335293 | `beijing-verified-2027/data/*` | Taken from the MICHELIN page hours block where present; blank + flagged where absent. |
+| B3 Social review links (YouTube / Instagram / TikTok) per venue | **in progress** | 3b335293 | `beijing-verified-2027/data/*` | Only links opened and confirmed to exist are listed; a YouTube search deep-link is never presented as a review. |
+| B4 Hotel ranking on verified same-district star counts | **in progress** | 3b335293 | `beijing-verified-2027/data/*` | District counts recomputed from B1 so they stop being a lower bound. |
+| B5 Site build + exec summary + questions + suggestions + flagged | **in progress** | 3b335293 | `beijing-verified-2027/**` | Mobile-first, no dependencies, no build step. |
+
+**Why a new directory and not an edit of the root plan:** the root `assets/data.js` is a shared output and the
+rules above reserve shared outputs for a final integration session. This session therefore publishes its own
+tree and leaves the root plan untouched.
+
+**Note for the integration session:** if this tree is judged to supersede the root Beijing data, the merge is
+mechanical — copy `beijing-verified-2027/data/restaurants.json` into the root plan's `MICHELIN` array and keep
+the root plan's page shell. Do not merge the two by hand-editing both.
