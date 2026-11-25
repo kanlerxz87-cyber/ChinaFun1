@@ -331,3 +331,18 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+## Session `de3b75e2` — Repo-wide HTML & Link Audit
+
+**Branch:** `arena/de3b75e2-chinafun1` (branched from `main` @ `eda1907`)
+**Date:** 2026-11-25
+**Scope:** `COORDINATION.md` (read-only audit of `.`, `docs/`, `shanghai-2027/`)
+
+- Ran `python3 check.py`: 11 pages in `docs/`, 187 table rows, 0 broken internal links, 0 empty hrefs, all pages have `<title>` and `viewport`.
+- Ran internal link, `<title>`, and `viewport` audit across all 29 HTML files:
+  - Root (`.`): 8 HTML files, 0 issues
+  - `docs/`: 11 HTML files, 0 issues
+  - `shanghai-2027/`: 10 HTML files, 0 issues
+- External web hosts (`guide.michelin.com`, `booking.com`, etc.) are not reachable from this sandbox, so `T8`–`T11` remain `needs review` / `unclaimed` rather than inferring or fabricating unverified data.
