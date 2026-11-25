@@ -1,0 +1,346 @@
+{
+  "executive_summary": [
+    "The repo already contained four complete, independently verified trip plans before this session: one Beijing plan at the repo root and three Shanghai plans in separate folders. This study adds the piece the brief emphasised most but the plans covered least: a source-checked register of social-video reviews alongside every listed venue.",
+    "58 social-video links were verified for 25 of the 43 venues in the Beijing plan: 31 links across 15 of the 33 MICHELIN-starred restaurants, and 27 links across all 10 activities. Each link was confirmed by YouTube's own oEmbed endpoint returning the exact video title and channel; no link was accepted from a search snippet alone.",
+    "Every one of the 10 activities has at least one verified video. Coverage for restaurants is uneven: three-star and two-star venues have 3 videos each, while 18 restaurants have none that can be tied to the exact venue without guessing.",
+    "No TikTok or Instagram link could be verified from a first-party page in this pass. They are left blank and flagged rather than filled with unverified handles or search URLs.",
+    "Opening hours could be confirmed for only four of 43 venues (King's Joy, Trb Hutong, Palace Museum and Mutianyu). All other hour cells are blank and flagged. Video descriptions are not treated as official opening-hour evidence.",
+    "This study does not re-decide the city, hotel or dates. Those choices remain open across the four existing plans, and the questions page states exactly what must be answered first."
+  ],
+  "coverage": {
+    "social_links": 58,
+    "venues_with_links": 25,
+    "restaurants_with_links": 15,
+    "restaurants_total": 33,
+    "activities_with_links": 10,
+    "activities_total": 10,
+    "hours_confirmed_restaurants": 2,
+    "hours_confirmed_activities": 2,
+    "platforms_verified": "YouTube (videos and Shorts)",
+    "platforms_unverified": "TikTok, Instagram"
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "q": "Which city should the trip be in?",
+      "known": "Four complete plans exist: Beijing (root), three Shanghai variants (docs/, shanghai-2027/, shanghai-verified-2027/).",
+      "missing": "The brief never named a city; the plans optimise different things and their cheapest 7-night totals disagree.",
+      "resolve": "Pick one plan as the working base, then apply this social register to that city's venue list. No cross-plan merge should be attempted without a decision.",
+      "source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection"
+    },
+    {
+      "id": "Q2",
+      "q": "Which exact dates should be booked?",
+      "known": "Trip may be 1–4 weeks between 15 Feb and 23 Mar 2027; preferred window 15–18 Feb is only 3 nights.",
+      "missing": "A check-in/check-out pair and whether the 3-night preference overrides the 1–2 week requirement.",
+      "resolve": "Choose exact dates; the Beijing and Shanghai plans priced 15–22 Feb 2027 as a proxy and flagged the conflict.",
+      "source": "https://www.booking.com/"
+    },
+    {
+      "id": "Q3",
+      "q": "Is a social-video review required for every shortlisted restaurant, or only the finalists?",
+      "known": "25 of 43 Beijing venues have at least one verified link.",
+      "missing": "Whether 18 unlinked restaurants may still be booked.",
+      "resolve": "Set a threshold (for example 2★ and above only) before treating the missing links as a blocker.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "Q4",
+      "q": "What are the opening hours and closure exceptions for the 39 venues without confirmed hours?",
+      "known": "Guide, museum and operator pages for five venues.",
+      "missing": "31 restaurants and 8 activities have no verified hours in this register.",
+      "resolve": "Contact each venue or capture its own current booking page; do not use video descriptions as an official source.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "Q5",
+      "q": "What will dinner for two actually cost?",
+      "known": "MICHELIN publishes a ¥ band; the root plan has one exact published menu total (Trb Hutong).",
+      "missing": "Exact current menu prices for the remaining 32 restaurants.",
+      "resolve": "Request current menus directly; record a dated quote rather than an estimate.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "Q6",
+      "q": "Are the shortlisted venues within 60 minutes by subway or bus from the chosen hotel?",
+      "known": "District-level counts in the root plan are a lower bound only.",
+      "missing": "No routed journey times from any first-party journey planner.",
+      "resolve": "Run a dated routing pass from the final hotel address; keep modelled minutes clearly separate from routed minutes.",
+      "source": "https://intl.dpm.org.cn/visit.html"
+    },
+    {
+      "id": "Q7",
+      "q": "Which of the four plans' hotel prices is still bookable?",
+      "known": "Multiple dated Booking.com quotes for 15–22 Feb 2027 across the plans.",
+      "missing": "Live availability at the moment of booking, room category, taxes and cancellation terms.",
+      "resolve": "Re-quote on the chosen hotel's own engine on the same day as the decision.",
+      "source": "https://www.booking.com/"
+    },
+    {
+      "id": "Q8",
+      "q": "Do we have the right visa, passport validity and registration plan?",
+      "known": "US State Department China page: visa generally required, 10-year multiple-entry for US citizens, 6-month passport rule, registration within 24 hours.",
+      "missing": "Passport numbers, visa status, arrival airport and any 2027 rule change.",
+      "resolve": "Check both passports and re-read the State Department advisory immediately before travel.",
+      "source": "https://travel.state.gov/en/international-travel/travel-advisories/china.html"
+    },
+    {
+      "id": "Q9",
+      "q": "Are official TikTok or Instagram accounts available for the venues?",
+      "known": "None could be confirmed from a first-party page in this pass.",
+      "missing": "Official handles, if they exist.",
+      "resolve": "Follow social links from each restaurant's or attraction's own website; record the linking page as provenance.",
+      "source": "https://www.kingsjoy.com/"
+    },
+    {
+      "id": "Q10",
+      "q": "How much weight should be given to Chinese-language reviews?",
+      "known": "Most venue-specific videos are in Chinese; several English-language videos cover multiple attractions.",
+      "missing": "Whether the couple reads Chinese or wants English-only commentary.",
+      "resolve": "Decide a language rule, then shortlist by kind (review vs walking tour vs official promo) in the video index.",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "Q11",
+      "q": "Do duplicate branch names point to the restaurant we mean?",
+      "known": "Xin Rong Ji has three Beijing entries; Chao Shang Chao has two; most verified videos name the three-star Xinyuan South Road / CP Center branches.",
+      "missing": "Branch-specific reviews for the one-star branches.",
+      "resolve": "Confirm the branch address in the video description before booking a branch-specific table.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "Q12",
+      "q": "What are the current ticket and reservation rules for the activities?",
+      "known": "Palace Museum and Mutianyu official pages were checked; the National Museum home page had no hours in the captured chunk.",
+      "missing": "Prices and reservations for the other eight activities.",
+      "resolve": "Fetch each operator's own visit page and booking portal; leave blanks until then.",
+      "source": "https://intl.dpm.org.cn/visit.html"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": "S1",
+      "title": "Add official social handles from venue websites",
+      "problem": "No TikTok or Instagram account was verifiable this session.",
+      "proposal": "Crawl each restaurant's and museum's own site footer for social links; record the linking official page as provenance.",
+      "path": "Path A — low effort, closes Q9",
+      "status": "proposed",
+      "source": "https://www.kingsjoy.com/"
+    },
+    {
+      "id": "S2",
+      "title": "Collect current hours by direct contact",
+      "problem": "31 restaurants and 8 activities have blank hour cells.",
+      "proposal": "Send one dated email/WeChat request per venue; store the reply or a screenshot of the current booking page.",
+      "path": "Path A — closes Q4",
+      "status": "proposed",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lamdre"
+    },
+    {
+      "id": "S3",
+      "title": "Translate and date the video evidence",
+      "problem": "Most reviews are Chinese-language and some use outdated star counts.",
+      "proposal": "Add upload date, a two-line English summary and a star-status note to each video row; never let video titles override the 2027 guide.",
+      "path": "Path A — improves Q3/Q10",
+      "status": "proposed",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "S4",
+      "title": "Run a first-party transit routing pass",
+      "problem": "The 'within one hour' rule is still unverified.",
+      "proposal": "Route each final hotel-to-venue pair on a journey planner, record departure time and mode, and publish routed minutes separately from modelled minutes.",
+      "path": "Path B — closes Q6",
+      "status": "proposed",
+      "source": "https://intl.dpm.org.cn/visit.html"
+    },
+    {
+      "id": "S5",
+      "title": "Add a dated hotel price tracker",
+      "problem": "Quotes are point-in-time and the plans disagree.",
+      "proposal": "Requote the same room category weekly across the candidate windows; chart total 7-night cost with taxes.",
+      "path": "Path B — closes Q7",
+      "status": "proposed",
+      "source": "https://www.booking.com/"
+    },
+    {
+      "id": "S6",
+      "title": "Build a single decision funnel over the four plans",
+      "problem": "Four full plans make the landing page hard to decide from.",
+      "proposal": "Add a one-page comparison with explicit decision criteria (city, dates, budget, bed type, Michelin priority) that links into the existing plans without merging their data.",
+      "path": "Path B — closes Q1/Q2",
+      "status": "proposed",
+      "source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection"
+    },
+    {
+      "id": "S7",
+      "title": "Publish structured data for the table rows",
+      "problem": "Findings are readable but not machine-checkable.",
+      "proposal": "Add JSON-LD or a CSV export per table so a reviewer can diff values and sources automatically.",
+      "path": "Path A",
+      "status": "proposed",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "S8",
+      "title": "Add thumbnails and short captions to the video index",
+      "problem": "A title alone does not show what a video covers.",
+      "proposal": "Use YouTube's own thumbnail URL from oEmbed plus a neutral, factual caption; keep third-party provenance visible.",
+      "path": "Path C — presentation only",
+      "status": "proposed",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "S9",
+      "title": "Cross-link this register from the existing plans",
+      "problem": "A reviewer of the root dashboard will not discover the video register.",
+      "proposal": "Integration session adds one navigation link; no other session's file was edited here.",
+      "path": "Path A — integration only",
+      "status": "proposed",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "S10",
+      "title": "Define a shortlist rule for the one-star restaurants",
+      "problem": "18 restaurants have no venue-specific social evidence.",
+      "proposal": "Agree whether verified hours, a review video, or a menu price is a hard requirement before ranking one-star venues.",
+      "path": "Path B — closes Q3/Q5",
+      "status": "proposed",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    }
+  ],
+  "flags": [
+    {
+      "id": "F01",
+      "title": "No TikTok or Instagram link verified",
+      "detail": "Neither platform could be confirmed from a first-party page. Search-result handles are not recorded as facts. Blank by design.",
+      "impact": "The brief's social-link requirement is only partly met (YouTube only).",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "F02",
+      "title": "Opening hours blank for 31 restaurants and 8 activities",
+      "detail": "Official guide and operator pages read in this pass did not publish hours for those venues.",
+      "impact": "A six-day itinerary cannot be finalised without direct confirmation.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "F03",
+      "title": "Older videos state outdated MICHELIN star counts",
+      "detail": "King's Joy is Two Stars in the 2027 guide; several videos call it three-star. Lamdre was one-star when filmed and is Two Stars now.",
+      "impact": "Video titles are evidence of a review, not of current star status.",
+      "source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection"
+    },
+    {
+      "id": "F04",
+      "title": "Branch mismatches",
+      "detail": "Xin Rong Ji videos name the Xinyuan South Road three-star branch; two one-star branches have no branch-specific video. Chao Shang Chao videos name the CP Center three-star branch, not the Xicheng one-star branch.",
+      "impact": "Do not use those videos to choose between branches.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "F05",
+      "title": "Official pages that could not be fetched",
+      "detail": "Temple of Heaven park site and 798art.org failed to fetch; yonghegong.cn returned HTTP 403.",
+      "impact": "Those venues have video links but no official hour or price data from this session.",
+      "source": "https://www.chnmuseum.cn/"
+    },
+    {
+      "id": "F06",
+      "title": "oEmbed proves existence, not accuracy",
+      "detail": "YouTube's endpoint returns the canonical title and channel for a video ID. It does not verify upload date, claims made in the video, or whether the video is a genuine customer review.",
+      "impact": "Each link is typed as Review / Interview / Official promo / Walking tour so a reviewer can judge it.",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "F07",
+      "title": "National Museum hours not in captured page",
+      "detail": "chnmuseum.cn home page was fetched, but no opening-hours or reservation statement appeared in the captured content.",
+      "impact": "Hours left blank rather than copied from a creator's description.",
+      "source": "https://www.chnmuseum.cn/"
+    },
+    {
+      "id": "F08",
+      "title": "Some videos cover multiple attractions",
+      "detail": "The Snowblue video covers Palace Museum, Summer Palace and Tiananmen; the I33X1PrHRQg video includes Jingshan. They are listed under more than one venue only where the title explicitly names it.",
+      "impact": "A single video is not a per-venue review.",
+      "source": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json"
+    },
+    {
+      "id": "F09",
+      "title": "No exact menu prices added",
+      "detail": "This session did not collect new menu prices. The only exact published figure remains the Trb Hutong menu in the repo-root plan.",
+      "impact": "Cost-for-two remains blank for 32 restaurants.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+    },
+    {
+      "id": "F10",
+      "title": "Date-window inconsistency in the brief",
+      "detail": "Preferred 15–18 Feb 2027 is 3 nights; the plan window is 1–2 weeks (possibly 2–4).",
+      "impact": "No pricing decision should be made until exact dates are fixed.",
+      "source": "https://www.booking.com/"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC01",
+      "name": "MICHELIN — 2027 Beijing & Tianjin selection release",
+      "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
+      "used_for": "Star edition, counts and the distinction between starred, Bib Gourmand and Selected."
+    },
+    {
+      "id": "SRC02",
+      "name": "MICHELIN Guide — Beijing all-starred listing",
+      "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "used_for": "The 33 restaurant names, cuisines, price bands and star tiers; live filter counts 2/5/26."
+    },
+    {
+      "id": "SRC03",
+      "name": "MICHELIN Guide — Lamdre entry (example detail page)",
+      "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lamdre",
+      "used_for": "Confirmed that the guide entry publishes address, cuisine, band and star icons but no opening hours."
+    },
+    {
+      "id": "SRC04",
+      "name": "YouTube search (first-party venue queries)",
+      "url": "https://www.youtube.com/results?search_query=%E6%BD%AE%E4%B8%8A%E6%BD%AE+%E5%8C%97%E4%BA%AC+%E7%B1%B3%E5%85%B6%E6%9E%97",
+      "used_for": "Discovery of candidate video IDs, titles and channels. Queried separately for each venue; see research-log.md."
+    },
+    {
+      "id": "SRC05",
+      "name": "YouTube oEmbed endpoint",
+      "url": "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json",
+      "used_for": "First-party confirmation of the exact title and channel behind every stored video URL. One unique endpoint per video, linked in every row."
+    },
+    {
+      "id": "SRC06",
+      "name": "Palace Museum — official visit page",
+      "url": "https://intl.dpm.org.cn/visit.html",
+      "used_for": "Low-season hours, Monday closure, ticket prices, daily cap and advance-booking rule."
+    },
+    {
+      "id": "SRC07",
+      "name": "Mutianyu Great Wall — official site",
+      "url": "https://en.mutianyugreatwall.com/",
+      "used_for": "Off-season operating window (16 Nov–15 Mar) and sales cut-off."
+    },
+    {
+      "id": "SRC08",
+      "name": "National Museum of China — official site",
+      "url": "https://www.chnmuseum.cn/",
+      "used_for": "Verified the operator domain; no hours found in the captured chunk, so hours remain blank."
+    },
+    {
+      "id": "SRC09",
+      "name": "Repo-root verified dataset (internal cross-reference)",
+      "url": "https://github.com/kanlerxz87-cyber/ChinaFun1/blob/main/assets/data.js",
+      "used_for": "The 43-venue scope, existing star statuses, two verified restaurant hour sets and dated Booking.com context. Internal source, not an official venue source."
+    },
+    {
+      "id": "SRC10",
+      "name": "U.S. Department of State — China travel advisory",
+      "url": "https://travel.state.gov/en/international-travel/travel-advisories/china.html",
+      "used_for": "Visa and passport context in Q8; copied from the existing root plan, not re-fetched in this session."
+    }
+  ]
+}

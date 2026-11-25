@@ -409,3 +409,102 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 - `python3 integration-2027/tools/build.py` regenerates 7 pages; `python3 integration-2027/tools/check.py` reports 0 broken local links, 0 empty hrefs, and a source field on every data row.
 - Every price row links to a dated Booking.com query recorded by its owning session; none was re-quoted in this pass.
 
+
+---
+
+# Session `773e75a3` — social-review link registry (`social-2027/`)
+
+**Branch:** `arena/773e75a3-chinafun1` (branched from `main` @ `eda19076bc9eb4ffa267c6efb6fdc1fd00aa9c4f`)
+**File scope:** `social-2027/**` and only the append-only section below in `COORDINATION.md`.
+No file owned by `fac6d965`, `68e13071`, `3b27db6c` or `16153d37` is edited. `assets/data.js`, `README.md`,
+the root pages and all other plans are **read-only** for this session.
+
+| # | Task | Status | File scope | Verification method |
+|---|------|--------|------------|---------------------|
+| V1 | Claim + repo review | in progress | this section | `COORDINATION.md` read in full; four existing plans inventoried |
+| V2 | Verify YouTube/TikTok/Instagram review links for the Beijing 2027 MICHELIN rows | in progress | `social-2027/data/social.json` | Every YouTube candidate checked with YouTube's own `oembed` endpoint (returns canonical title + channel); no link asserted from search snippets alone |
+| V3 | Verify social links for the Beijing activities | unclaimed by others | `social-2027/data/social.json` | Same oEmbed check; official operator pages used for hours where fetched |
+| V4 | Hours / closures / exceptions register | in progress | `social-2027/data/venues.json` | Official operator or MICHELIN page only; blank + flag otherwise |
+| V5 | Mobile dashboard, questions, suggestions, flags, sources | in progress | `social-2027/**` | Stdlib generator; link + data checks |
+| V6 | Integration / GitHub Pages | unclaimed | `social-2027/**` | Self-contained relative links; no shared file rewritten |
+
+**Verification rule for this session:** a social URL is recorded only when YouTube's official oEmbed endpoint
+returns a title and channel for that exact video ID, or when the venue's own official page publishes the account.
+Search-result snippets are used only to *discover* candidates, never as proof. A search-query URL is not counted
+as a review link. If nothing can be verified, the cell is left blank and flagged.
+
+### Session `773e75a3` work log
+
+#### 2026-11-25 — V1–V5 complete, V6 handed over
+
+**Delivered (new scope only):**
+- `social-2027/data/venues.json` — all 43 Beijing venues from the read-only root plan (33 starred
+  restaurants + 10 activities), each with name, guide status, price band, hours where verified,
+  exceptions where verified, an official guide/operator URL and a flag for every blank.
+- `social-2027/data/social.json` — 58 verified video URLs (49 normal videos, 9 Shorts) with the exact
+  published title, channel, video/Short URL, kind (Review / Interview / Official promo / Walking tour /
+  Reservation guide), provenance and the matching oEmbed URL. 31 links cover 15 restaurants; 27 links
+  cover all 10 activities.
+- `social-2027/data/content.json` — executive summary, 12 questions, 10 suggestions, 10 flags, 10 sources;
+  every non-venue row carries its own official source URL.
+- `social-2027/tools/build.py`, `social-2027/tools/check.py` — standard-library generator and validator.
+- `social-2027/research-log.md` — one first-party YouTube query per venue, the official pages fetched,
+  and an explicit "deliberate non-fills" list.
+- `social-2027/index.html` plus `restaurants.html`, `activities.html`, `videos.html`, `questions.html`,
+  `suggestions.html`, `flagged.html`, `sources.html`, `assets/style.css` and `assets/app.js` — a
+  self-contained, mobile-first dashboard with a filterable video table and no shared-file edits.
+
+**Verification performed:**
+1. Read `COORDINATION.md` before any work; appended this claim first and pushed it (`cc2cd97`).
+2. Read the root dataset and prior plans **without editing them**. Took the 43-venue scope and the
+   2027 star statuses from the existing verified dataset / MICHELIN's 2027 Beijing release.
+3. Discovered candidates only on YouTube's own search-results pages, one query per venue.
+4. Fetched `https://www.youtube.com/oembed?url=<exact video>&format=json` for every retained ID and
+   stored the link only when the returned title/channel matched the venue. 58 IDs passed.
+5. For hours, used only official operator/guide pages already verified in the root plan plus fresh
+   fetches of the MICHELIN list, a MICHELIN detail page and the National Museum home page. Failed
+   fetches (Temple of Heaven, 798art.org, yonghegong.cn 403) became blanks, not guesses.
+6. Ran `python3 tools/build.py && python3 tools/check.py` — PASS: 43 venues, 58 videos, 8 pages,
+   all internal links resolve and every table row has an outbound source link. Served all eight pages
+   over HTTP and confirmed 200 responses with non-empty bodies.
+7. `git pull --rebase` before pushing; no other session's files were touched.
+
+**Sources used (all linked in the site):**
+- [MICHELIN 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) — 2027 edition and 2★/5★/26★ counts.
+- [MICHELIN Beijing all-starred list](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred) — 33 names, cuisines, price bands and current tiers.
+- [MICHELIN Lamdre detail page](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lamdre) — confirmed no hours block on guide entries.
+- [YouTube search](https://www.youtube.com/results?search_query=%E6%BD%AE%E4%B8%8A%E6%BD%AE) and [YouTube oEmbed](https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json) — discovery plus first-party confirmation of every video row.
+- [Palace Museum visit page](https://intl.dpm.org.cn/visit.html), [Mutianyu official site](https://en.mutianyugreatwall.com/), [National Museum of China](https://www.chnmuseum.cn/) — official hours where available.
+- [Repo-root verified dataset](https://github.com/kanlerxz87-cyber/ChinaFun1/blob/main/assets/data.js) — internal cross-reference for venue scope and already-verified hour sets.
+- [US State Department China advisory](https://travel.state.gov/en/international-travel/travel-advisories/china.html) — visa context carried over from the root plan.
+
+**Irregularities logged (full detail on `flagged.html`):**
+- F01 No TikTok or Instagram link could be verified from any first-party page; both platforms left blank.
+- F02 Hours blank for 31 restaurants and 8 activities; guide entries and several operator pages publish none.
+- F03 Older videos state outdated MICHELIN counts (King's Joy called three-star; Lamdre called one-star). Video titles never override the 2027 guide.
+- F04 Branch mismatches: verified Xin Rong Ji and Chao Shang Chao videos are for the higher-star branches; one-star branches have no branch-specific video.
+- F05 Temple of Heaven and 798 fetch failures, Yonghe Temple HTTP 403.
+- F06 oEmbed proves existence and canonical title/channel only, not accuracy or review genuineness.
+- F07 National Museum home page had no hours in the captured chunk.
+- F08 Some videos cover multiple attractions; not treated as a per-venue review.
+- F09 No new menu prices collected; only the root plan's published Trb Hutong figure exists.
+- F10 Brief's preferred 3-night window conflicts with the 1–2 week requirement.
+
+**Handover / V6:** this sub-site is self-contained under `social-2027/` with relative links, so a final
+integration session can publish it as-is at `/social-2027/` from the same Pages branch. Add one navigation
+link from the repo-root landing page if desired; **this session did not edit any shared file**.
+
+#### 2026-11-25 — merge note
+
+`origin/main` advanced to `5683e45` with session `013c9819`'s integration pass while this branch was in
+review. That session's section is preserved verbatim above; this branch merged `origin/main` and resolved the
+single `COORDINATION.md` conflict by keeping **both** session logs. No `social-2027/` file was changed by the
+merge, and no file owned by another session was edited.
+
+#### 2026-11-25 — second merge note
+
+`origin/main` advanced again to `7f4d38c` with session `815c7943`'s integration + social-review subtree
+while PR #14 was open. That session's section and `integration-2027/**` are preserved verbatim; the single
+`COORDINATION.md` conflict was resolved by keeping **all three** session logs (013c9819, 815c7943, 773e75a3).
+The overlapping claim was not visible when this session claimed on the shared base commit `eda1907`; both
+subtrees remain additive and neither edits the other's data.

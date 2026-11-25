@@ -1,0 +1,58 @@
+:root{--ink:#17212e;--muted:#5b6b7c;--line:#dce3ea;--bg:#f6f8fa;--card:#fff;--accent:#0b6e68;--accent2:#e6f4f2;--warn:#9a3412;--warnbg:#fff4ed}
+*{box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #f0a500;outline-offset:2px}
+.site-head{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;background:#0f2b36;color:#fff;padding:.7rem 1rem}
+.brand{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.01em}
+.brand span{font-weight:400;opacity:.75}
+.site-head nav{display:flex;flex-wrap:wrap;gap:.35rem;margin-left:auto}
+.site-head nav a{color:#d8ecea;text-decoration:none;font-size:.9rem;padding:.35rem .55rem;border-radius:6px}
+.site-head nav a.on,.site-head nav a:hover{background:#1d4c57;color:#fff}
+#nav-toggle{display:none;margin-left:auto;background:none;color:#fff;border:1px solid #4a7078;border-radius:6px;padding:.35rem .6rem;font-size:.9rem}
+main{max-width:1180px;margin:0 auto;padding:1.2rem 1rem 2rem}
+.page-head h1{font-size:clamp(1.5rem,4vw,2.2rem);margin:.3rem 0 .25rem}
+.page-head p{margin:0 0 1.1rem;color:var(--muted)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem;margin:0 0 1rem;box-shadow:0 1px 2px rgba(20,40,60,.04)}
+.panel h2{font-size:1.15rem;margin:0 0 .7rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:.7rem;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.85rem;display:flex;flex-direction:column;gap:.25rem}
+.card strong{font-size:1.45rem;color:var(--accent)}
+.card span{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:720px}
+caption{text-align:left;padding:.6rem .75rem;color:var(--muted);font-size:.85rem}
+th,td{padding:.6rem .7rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#edf3f6;font-size:.78rem;text-transform:uppercase;letter-spacing:.035em;color:#33495b;position:sticky;top:0}
+tbody tr:nth-child(even){background:#fbfcfd}
+tbody tr:hover{background:var(--accent2)}
+tbody tr:last-child td{border-bottom:0}
+td a{word-break:break-word}
+.muted{color:var(--muted);font-size:.85rem}
+.blank{color:var(--warn);background:var(--warnbg);padding:.1rem .35rem;border-radius:4px;font-size:.8rem;white-space:nowrap}
+.note{background:#f2f7fa;border-left:3px solid var(--accent);padding:.6rem .75rem;border-radius:0 6px 6px 0;color:#3a4d5e}
+.chip{display:inline-block;background:var(--accent2);color:#075b56;border:1px solid #bfe0dc;border-radius:999px;padding:.15rem .5rem;margin:.1rem .15rem .1rem 0;font-size:.78rem;text-decoration:none;white-space:nowrap}
+.chip-none{background:var(--warnbg);color:var(--warn);border-color:#f0c8ae}
+.pill-official,.pill-third{display:inline-block;font-size:.75rem;border-radius:5px;padding:.1rem .4rem}
+.pill-official{background:#e5f3e5;color:#225c2a}
+.pill-third{background:#f0f2f5;color:#475467}
+.summary li{margin-bottom:.5rem}
+.filter-label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:.3rem}
+.filter{width:100%;max-width:420px;padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;margin-bottom:.8rem;font-size:.95rem}
+footer{max-width:1180px;margin:0 auto;padding:1rem 1rem 2rem;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+code{background:#eef2f5;padding:.05rem .3rem;border-radius:4px}
+@media(max-width:760px){
+ #nav-toggle{display:block}
+ .site-head nav{display:none;width:100%;margin-left:0}
+ .site-head nav.open{display:flex}
+ table{min-width:0;display:block}
+ thead{display:none}
+ tbody,tr,td{display:block;width:100%}
+ tbody tr{border-bottom:1px solid var(--line);padding:.5rem .2rem}
+ td{border:0;padding:.35rem .7rem;display:grid;grid-template-columns:38% 1fr;gap:.5rem}
+ td::before{content:attr(data-label);font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);font-weight:700}
+ td:last-child::before{content:"Sources"}
+ caption{display:block}
+ .panel{padding:.8rem}
+}
