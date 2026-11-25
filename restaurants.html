@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MICHELIN Restaurants — Shanghai 2027</title>
+<meta name="description" content="Shanghai MICHELIN-starred restaurants with verified star level, hours, social links and official sources.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/nav.js"></script>
+</head>
+<body>
+<div id="nav"></div>
+
+<main id="main" class="wrap">
+
+  <h1>MICHELIN restaurants in Shanghai</h1>
+  <p class="lede">
+    The brief asked for star level to be stated explicitly — <em>listed in the Guide</em> versus
+    <em>holding a star</em> — and for a cost estimate per couple. This page does the first properly and
+    refuses to fake the second: <strong>MICHELIN publishes no menu prices for any of these
+    restaurants</strong>, so the cost column is blank and flagged rather than estimated.
+  </p>
+
+  <!-- ============ inventory counts ============ -->
+  <h2>The full selection, verified</h2>
+  <p>
+    Counted directly from the MICHELIN Guide's own Shanghai listings on 25 Nov 2026. The Guide's
+    filter panel and its per-page listings agree on every figure below.
+  </p>
+  <div class="grid cols-4">
+    <div class="kpi"><div class="label">3 stars</div><div class="value">1</div><div class="note">Exceptional cuisine</div></div>
+    <div class="kpi"><div class="label">2 stars</div><div class="value">11</div><div class="note">Excellent cooking</div></div>
+    <div class="kpi"><div class="label">1 star</div><div class="value">38</div><div class="note">High quality cooking</div></div>
+    <div class="kpi"><div class="label">Total starred</div><div class="value">50</div><div class="note">Beyond this: 34 Bib Gourmand, 70 Selected</div></div>
+  </div>
+
+  <div class="callout warn">
+    <strong>Terminology, because it matters for your ranking.</strong>
+    <ul class="tight" style="margin-bottom:0">
+      <li><strong>MICHELIN Star</strong> — a rated distinction (1★, 2★, 3★). This is what most people
+        mean by "Michelin restaurant". <strong>50 in Shanghai.</strong></li>
+      <li><strong>Bib Gourmand</strong> — <em>not</em> a star. An award for good food at moderate
+        prices. <strong>34 in Shanghai.</strong> Listed separately below.</li>
+      <li><strong>MICHELIN Selected</strong> — <em>not</em> a star. Merely "good cooking"; appears in the
+        Guide with no distinction. <strong>70 in Shanghai.</strong> Listed separately below.</li>
+    </ul>
+  </div>
+
+  <!-- ============ shortlist ============ -->
+  <h2>Shortlist for your trip — verified detail</h2>
+  <p>
+    These are the starred venues relevant to a central hotel. Each row links to the MICHELIN Guide
+    page it was read from. Hours are shown only where the Guide publishes them.
+  </p>
+  <p class="scrollhint">→ Swipe sideways on a phone. Full data: <a href="data/michelin-restaurants.json">JSON</a>.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Restaurant</th>
+          <th>Distinction</th>
+          <th>Cuisine</th>
+          <th class="num">Price band</th>
+          <th>Address</th>
+          <th>Days open &amp; hours</th>
+          <th>Cost / couple</th>
+          <th>Official link</th>
+          <th>Watch</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Taian Table</strong></td>
+          <td><span class="badge star">★★★ 3 Star</span></td>
+          <td>Innovative</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">101-102, Bldg 1, 161 Ln 465 Zhenning Rd, Changning</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant. Menu changes every few weeks.</td>
+          <td class="small"><span class="badge warn">unverified</span><br>Mandatory 10-course menu; add-ons ¥218 / ¥388 only</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/taian-table" target="_blank" rel="noopener">MICHELIN</a><br><a href="https://sh.taian-table.cn/" target="_blank" rel="noopener">Official site</a></td>
+          <td class="small"><a href="https://www.youtube.com/watch?v=RYsEUZJSrN8" target="_blank" rel="noopener">YouTube review</a></td>
+        </tr>
+        <tr>
+          <td><strong>8 ½ Otto e Mezzo Bombana</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Italian</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">6-7F, 169 Yuanmingyuan Rd, Huangpu</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>Lunch set + 8-course tasting referenced, no price</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana" target="_blank" rel="noopener">MICHELIN</a><br><a href="https://www.ottoemezzobombana.com/branch/shanghai/" target="_blank" rel="noopener">Official site</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Fu He Hui</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Vegetarian</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">1037 Yuyuan Rd, Changning</td>
+          <td class="small"><span class="badge ok">published</span><br>Mon–Sun 11:00–13:00 &amp; 17:30–21:00</td>
+          <td class="small"><span class="badge warn">unverified</span><br>Set menus only, seasonal; no price published</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-he-hui" target="_blank" rel="noopener">MICHELIN</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Bao Li Xuan</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Cantonese</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">3F, Chamber of Commerce, Ln 108 N Shanxi Rd, Jing'an</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>No price published</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/bao-li-xuan" target="_blank" rel="noopener">MICHELIN</a><br><a href="https://www.bulgarihotels.com/en_US/shanghai/dining/chinese-fine-dining-restaurant" target="_blank" rel="noopener">Official site</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>T'ang Court</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Cantonese</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">5F, The Langham Xintiandi, 99 Madang Rd, Huangpu</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>No price published</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/t-ang-court-506725" target="_blank" rel="noopener">MICHELIN</a><br><a href="https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/" target="_blank" rel="noopener">Official site</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Tou Zao</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Cantonese</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">Shop 211, East Wing, Shanghai Centre, 1376 W Nanjing Rd, Jing'an</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>Single prix-fixe, omakase style; no price</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/tou-zao" target="_blank" rel="noopener">MICHELIN</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Ji Pin Court</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Cantonese</td>
+          <td class="num">¥¥¥</td>
+          <td class="small">3F, 55 S Wulumuqi Rd, Xuhui, 200031</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>No price published</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ji-pin-court" target="_blank" rel="noopener">MICHELIN</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Canton 8 (Huangpu)</strong></td>
+          <td><span class="badge star">★★ 2 Star</span></td>
+          <td>Cantonese</td>
+          <td class="num">¥¥</td>
+          <td class="small">Runan Street, Huangpu</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>No price published. <strong>Lowest price band of any 2★</strong></td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street" target="_blank" rel="noopener">MICHELIN</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Yi Long Court</strong> <span class="badge">in-hotel</span></td>
+          <td><span class="badge star">★ 1 Star</span></td>
+          <td>Cantonese</td>
+          <td class="num">¥¥¥¥</td>
+          <td class="small">2F, The Peninsula Hotel, Bund 32, 32 Zhongshan Dong Yi Rd, Huangpu</td>
+          <td class="small"><span class="badge ok">published</span><br>Mon–Sun 11:30–14:30 &amp; 18:00–22:30</td>
+          <td class="small"><span class="badge warn">unverified</span><br>No price published; dim sum lunch set noted</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/yi-long-court" target="_blank" rel="noopener">MICHELIN</a><br><a href="https://www.peninsula.com/en/shanghai/hotel-fine-dining/yi-long-court-chinese-restaurant" target="_blank" rel="noopener">Official site</a></td>
+          <td class="small">—</td>
+        </tr>
+        <tr>
+          <td><strong>Lao Zheng Xing (Huangpu)</strong></td>
+          <td><span class="badge star">★ 1 Star</span></td>
+          <td>Shanghainese</td>
+          <td class="num">¥¥</td>
+          <td class="small">Huangpu</td>
+          <td class="small"><span class="badge warn">not published</span><br>Contact restaurant</td>
+          <td class="small"><span class="badge warn">unverified</span><br>Cheapest star in the city by price band (¥¥)</td>
+          <td class="small"><a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/lao-zheng-xing-huangpu" target="_blank" rel="noopener">MICHELIN</a></td>
+          <td class="small">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout bad">
+    <strong>Why the cost column is blank.</strong>
+    You asked for a cost per couple, ideally exact. Across all ten venues above, the MICHELIN Guide
+    publishes only a relative price band (¥ to ¥¥¥¥) — never a number. The official restaurant sites
+    publish menus without prices, or no menu at all. Booking.com and OpenTable carry no rate for these
+    rooms either. Filling that column would mean inventing figures, so it is left empty and marked
+    <span class="badge warn">unverified</span>. Resolution path is on
+    <a href="questions.html">Open Questions</a> Q4.
+  </div>
+
+  <!-- ============ clusters ============ -->
+  <h2>Where the stars cluster geographically</h2>
+  <p>
+    Shanghai's starred restaurants are overwhelmingly in the historic centre west of the river. Of the
+    fifty, the shortlisted ten break down into four walkable pockets:
+  </p>
+  <p class="scrollhint">→ Swipe sideways on a phone.</p>
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr><th>Cluster</th><th>Venues in the shortlist</th><th class="num">Star total</th><th>Character</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bund / Huangpu north</strong></td>
+          <td class="small">8 ½ Otto e Mezzo Bombana (2★), Yi Long Court (1★), Lao Zheng Xing (1★), Canton 8 (2★)</td>
+          <td class="num">6</td>
+          <td class="small">Waterfront fine dining; highest star concentration.</td>
+        </tr>
+        <tr>
+          <td><strong>Xintiandi / Huangpu south</strong></td>
+          <td class="small">T'ang Court (2★)</td>
+          <td class="num">2</td>
+          <td class="small">In-hotel dining; one 2★ but zero travel time if you stay there.</td>
+        </tr>
+        <tr>
+          <td><strong>Jing'an</strong></td>
+          <td class="small">Bao Li Xuan (2★), Tou Zao (2★)</td>
+          <td class="num">4</td>
+          <td class="small">Hotel-adjacent; Bvlgari and Shanghai Centre addresses.</td>
+        </tr>
+        <tr>
+          <td><strong>Changning / Xuhui (west)</strong></td>
+          <td class="small">Taian Table (3★), Fu He Hui (2★), Ji Pin Court (2★)</td>
+          <td class="num">7</td>
+          <td class="small"><strong>Highest star total</strong> — includes the city's only 3★.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    This is the tension that makes hotel choice interesting: the <strong>densest star cluster is west</strong>
+    (Changning, 7 stars), but the hotels with verified coordinates sit mostly on the Bund side. The
+    proximity model on the <a href="ranking.html">Ranking</a> page resolves exactly this.
+  </p>
+
+  <!-- ============ non-starred distinctions ============ -->
+  <h2>Not stars — listed for completeness</h2>
+  <p>
+    Bib Gourmand and Selected venues are often confused with stars. They are not stars and are not
+    counted in the ranking.
+  </p>
+  <p class="scrollhint">→ Swipe sideways on a phone.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Distinction</th><th class="num">Count in Shanghai</th><th>What it means</th><th>Awarded a star?</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Bib Gourmand</strong></td><td class="num">34</td><td class="small">Good quality, good value cooking</td><td><span class="badge bad">No</span></td></tr>
+        <tr><td><strong>MICHELIN Selected</strong></td><td class="num">70</td><td class="small">Simply "good cooking"; in the Guide with no distinction</td><td><span class="badge bad">No</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="sub">
+    Counts read from the MICHELIN Guide Shanghai listing filter panel, 25 Nov 2026:
+    <a href="https://guide.michelin.com/us/en/shanghai-municipality/restaurants" target="_blank" rel="noopener">guide.michelin.com — Shanghai restaurants</a>.
+  </p>
+
+  <h2>Known source conflict</h2>
+  <div class="callout warn">
+    MICHELIN's own 2026 Shanghai/Jiangsu/Zhejiang press release lists <strong>twelve</strong> two-star
+    houses for Shanghai, while the live Shanghai listing page and its filter total both show
+    <strong>eleven</strong>. This site uses the live listing. The discrepancy is logged as F-01 on the
+    <a href="flagged.html">Flagged</a> page with links to both sources.
+  </div>
+
+</main>
+
+<footer class="site"><div class="inner">
+  Star levels, cuisines, price bands and addresses read from guide.michelin.com restaurant pages,
+  25 Nov 2026. Hours shown only where the Guide publishes them. Re-verify every booking by phone.
+</div></footer>
+</body>
+</html>

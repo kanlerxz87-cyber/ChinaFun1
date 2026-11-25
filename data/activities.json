@@ -1,0 +1,93 @@
+[
+  {
+    "id": "A01",
+    "name": "Shanghai Museum on People's Square",
+    "category": "Museum / Culture",
+    "official_url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/service/visit-west",
+    "address": "201 Ren Min Da Dao, Huangpu District (South Entrance on Wusheng Road)",
+    "hours": "Tuesday–Sunday 09:00–17:00 (last entry 15:00). Also listed: Day & Evening Session 09:00–21:00 (last entry 19:00).",
+    "closed_days": "Closed Mondays (except national holidays)",
+    "exceptions": "During 'On Top of the World Tree: Ancient Civilizations of the Americas' (2026-07-09 → 2027-11-14) this building hosts no other exhibitions; permanent displays are at Shanghai Museum East. Evening sessions must be confirmed on the museum's official WeChat channel.",
+    "price": "Not published on the visit page — admission terms not captured. FLAG: verify on official booking channel.",
+    "price_status": "unverified",
+    "booking": "Advance tickets via official WeChat Mini Program; overseas visitors may book through trip.com (per official page).",
+    "transit": "Metro Line 1, 2 or 8 to People's Square, Exit 1; or Line 14 to Dashijie, Exit 4 (official page).",
+    "transit_source": "https://www.shanghaimuseum.net/mu/frontend/pg/en/service/visit-west",
+    "lat": 31.2303,
+    "lon": 121.4707,
+    "social": [
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=WH24eys8xd4", "title": "Shanghai Museum: Where Arts Shine"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=bqU3WbL6xac", "title": "Shanghai Museum East Branch reopens"}
+    ],
+    "why": "Directly across the street from the preferred hotel; free of travel burden on arrival day.",
+    "verified_on": "2026-11-25"
+  },
+  {
+    "id": "A02",
+    "name": "Yu Garden (豫园)",
+    "category": "Garden / Historic site",
+    "official_url": "https://www.yugarden.com.cn/page/articleview/message.html",
+    "address": "North gate: 168 Fuyou Road, Huangpu (groups + individuals). South gate: 279 Yu Yuan Lao Jie, Huangpu (individuals only).",
+    "hours": "09:00–16:30 (last entry 16:00, closes 16:30)",
+    "closed_days": "Closed every Monday (except national statutory holidays)",
+    "exceptions": "Opening hours during Spring Festival are per official announcement. Monday closure does NOT apply on national holidays.",
+    "price": "Off-season (1 Jul–31 Aug, 1 Dec–31 Mar): ¥30 per adult. Peak (1 Apr–30 Jun, 1 Sep–30 Nov): ¥40 per adult. Couple = ¥60 off-season / ¥80 peak (2 × adult).",
+    "price_status": "verified (official garden website, CNY)",
+    "booking": "On-site ticket windows at north/south gates, or online via the official 'Shanghai Yu Garden' mini-program.",
+    "transit": "Not published on the official page. FLAG: verify metro route.",
+    "transit_source": null,
+    "lat": 31.2272,
+    "lon": 121.4921,
+    "social": [
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=f7ErJ2COBH4", "title": "Shanghai CHINA – Walking Tour Yu Garden at Night (4K)"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=Und9LL4DX2M", "title": "Visiting Shanghai Yu Garden, China"}
+    ],
+    "why": "Classic half-day; pair with the Old Town bazaar. Monday closure is the main scheduling constraint.",
+    "verified_on": "2026-11-25"
+  },
+  {
+    "id": "A03",
+    "name": "The Bund (Waitan) waterfront promenade",
+    "category": "Sight / Walk",
+    "official_url": null,
+    "address": "Zhongshan East 1st Road, Huangpu",
+    "hours": "UNVERIFIED — no official operator page found. Public promenade; treated as open access, but this is NOT confirmed from an official source.",
+    "closed_days": "UNVERIFIED",
+    "exceptions": "UNVERIFIED",
+    "price": "UNVERIFIED — no official ticketing exists for the public promenade; assumed free but not confirmed from an official source.",
+    "price_status": "unverified",
+    "booking": "No booking required (assumed — unverified).",
+    "transit": "Not confirmed. Multiple metro stations are within walking distance per Booking.com property descriptions, but no official source captured.",
+    "transit_source": null,
+    "lat": 31.2397,
+    "lon": 121.4903,
+    "social": [
+      {"platform": "YouTube", "url": "https://www.youtube.com/results?search_query=the+bund+shanghai+walking+tour", "title": "Search: The Bund Shanghai walking tour"}
+    ],
+    "why": "Zero-cost anchor for an evening; within walking/very short ride of the Bund hotels.",
+    "verified_on": "2026-11-25"
+  },
+  {
+    "id": "A04",
+    "name": "Taian Table — 3★ tasting menu (dining experience)",
+    "category": "MICHELIN dining",
+    "official_url": "https://sh.taian-table.cn/",
+    "address": "101-102, Building 1, Garden Office, 161 Lane 465 Zhenning Road, Changning",
+    "hours": "NOT PUBLISHED on official site or MICHELIN page. FLAG: must be confirmed by phone.",
+    "closed_days": "UNVERIFIED",
+    "exceptions": "Seasonal menu changes every few weeks; Menu No.55 is the version published on the official site as of capture.",
+    "price": "Mandatory seasonal 10-course menu (add-ons ¥218 / ¥388). Menu price itself NOT published — FLAG.",
+    "price_status": "unverified",
+    "booking": "Restaurant manages its own bookings — contact +86 173 0160 5350 (per MICHELIN Guide).",
+    "transit": "Modelled ~26 min from People's Square hotels; ~15 min from Xintiandi. See Hotel Ranking page for method.",
+    "transit_source": "Modelled — see tools/proximity_model.py",
+    "lat": 31.22205,
+    "lon": 121.43291,
+    "social": [
+      {"platform": "YouTube", "url": "https://www.youtube.com/watch?v=RYsEUZJSrN8", "title": "In-depth review of Shanghai's only 3 MICHELIN-star restaurant"},
+      {"platform": "YouTube", "url": "https://www.youtube.com/shorts/1Z01UZSP8-w", "title": "How many times did you have scrambled eggs in a 3-star restaurant?"}
+    ],
+    "why": "The single highest-starred table in Shanghai. Book far in advance.",
+    "verified_on": "2026-11-25"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "generated": "2026-11-25",
+  "currency": "USD",
+  "occupancy": "2 adults, 1 room",
+  "nights": 7,
+  "property": "Radisson Blu Hotel Shanghai New World (Superior Room, queen bed, private bathroom)",
+  "source": "Booking.com property page, USD, prices converted by Booking.com",
+  "caveat": "Booking.com rates are dynamic. Every figure below is a snapshot taken 2026-11-25 and MUST be re-checked before any payment. Totals exclude VAT and service charge. The 2027-02-15 window includes a Genius members-only discount in the figure shown; the same room without signing in was quoted higher.",
+  "task": "Cheapest upcoming time to book a 7-night stay inside the allowed trip window (2027-02-15 to 2027-03-23)",
+  "windows": [
+    {"window_start": "2027-02-15", "window_end": "2027-02-22", "nights": 7, "total_usd": 922, "avg_per_night_usd": 132, "note": "Includes 10% Genius member rate; list price $1,025", "inside_allowed_window": true},
+    {"window_start": "2027-02-18", "window_end": "2027-02-25", "nights": 7, "total_usd": 1013, "avg_per_night_usd": 132, "note": "Genius rate; list price $1,125.20", "inside_allowed_window": true},
+    {"window_start": "2027-02-22", "window_end": "2027-03-01", "nights": 7, "total_usd": 1191, "avg_per_night_usd": 155, "note": "List price, no member rate applied", "inside_allowed_window": true},
+    {"window_start": "2027-03-01", "window_end": "2027-03-08", "nights": 7, "total_usd": 1367, "avg_per_night_usd": 177, "note": "List price", "inside_allowed_window": true},
+    {"window_start": "2027-03-15", "window_end": "2027-03-22", "nights": 7, "total_usd": 1440, "avg_per_night_usd": 187, "note": "List price — most expensive captured window", "inside_allowed_window": true}
+  ],
+  "finding": "Within the captured windows, the 2027-02-15 → 2027-02-22 stay is the cheapest at $922 total, $518 less than the 2027-03-15 → 2027-03-22 window for the identical room. Late February and March pricing rises steadily. This contradicts the usual 'shoulder season is cheaper' intuition and is the single most actionable pricing finding in this study.",
+  "not_established": [
+    "Whether a cheaper window exists between the sampled points (only 5 windows were sampled, not every week).",
+    "Whether prices will fall or rise between now and booking (no historical fare curve was obtainable).",
+    "Whether Chinese New Year demand (CNY falls 2027-02-06, holidays 2027-02-05 to 2027-02-13, immediately BEFORE the preferred window) is already priced into these quotes."
+  ]
+}

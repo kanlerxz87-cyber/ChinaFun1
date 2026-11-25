@@ -1,0 +1,237 @@
+/* ChinaFun — trip planning dashboard
+   Mobile-first, no framework, no external fonts or CDNs. */
+
+:root {
+  --bg: #0f1419;
+  --panel: #161d26;
+  --panel-2: #1c2530;
+  --line: #2a3746;
+  --text: #e8eef5;
+  --muted: #93a3b5;
+  --dim: #6b7c90;
+  --accent: #e8b04b;
+  --accent-2: #4bb3e8;
+  --ok: #38b980;
+  --warn: #e8a33d;
+  --bad: #e0625d;
+  --radius: 10px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --panel-2: #f0f2f5;
+    --line: #dde2e8;
+    --text: #17202b;
+    --muted: #5a6a7c;
+    --dim: #7d8b9b;
+    --accent: #a9741a;
+    --accent-2: #16688f;
+    --ok: #1e7d52;
+    --warn: #9a6a12;
+    --bad: #b23b36;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px 72px; }
+
+/* ---------- header / nav ---------- */
+header.site {
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.bar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: .2px;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.brand .dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+.brand small { display: block; font-weight: 400; font-size: .68rem; color: var(--dim); letter-spacing: .5px; }
+
+nav.tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
+}
+nav.tabs::-webkit-scrollbar { display: none; }
+
+nav.tabs a {
+  flex: none;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+nav.tabs a:hover { color: var(--text); background: var(--panel-2); }
+nav.tabs a[aria-current="page"] {
+  color: #10151b;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- typography ---------- */
+h1 { font-size: 1.6rem; line-height: 1.25; margin: 28px 0 6px; letter-spacing: -.4px; }
+h2 { font-size: 1.16rem; margin: 34px 0 10px; letter-spacing: -.2px; }
+h3 { font-size: 1rem; margin: 22px 0 8px; }
+p { margin: 0 0 12px; }
+a { color: var(--accent-2); }
+a:hover { text-decoration: none; }
+
+.lede { color: var(--muted); font-size: .97rem; max-width: 74ch; margin: 0 0 8px; }
+.sub { color: var(--dim); font-size: .82rem; }
+.mono { font-variant-numeric: tabular-nums; }
+
+/* ---------- cards ---------- */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 14px 0;
+}
+
+.grid { display: grid; gap: 12px; }
+@media (min-width: 720px) {
+  .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+.kpi .label { font-size: .72rem; text-transform: uppercase; letter-spacing: .7px; color: var(--dim); font-weight: 700; }
+.kpi .value { font-size: 1.5rem; font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.kpi .note { font-size: .78rem; color: var(--muted); margin-top: 2px; }
+
+/* ---------- badges ---------- */
+.badge {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .4px;
+  padding: 2px 7px;
+  border-radius: 5px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--muted);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.badge.star { background: rgba(232,176,75,.14); border-color: rgba(232,176,75,.5); color: var(--accent); }
+.badge.ok { background: rgba(56,185,128,.13); border-color: rgba(56,185,128,.45); color: var(--ok); }
+.badge.warn { background: rgba(232,163,61,.13); border-color: rgba(232,163,61,.45); color: var(--warn); }
+.badge.bad { background: rgba(224,98,93,.13); border-color: rgba(224,98,93,.45); color: var(--bad); }
+
+/* ---------- tables ---------- */
+.tablewrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  margin: 12px 0;
+}
+
+table { border-collapse: collapse; width: 100%; font-size: .84rem; min-width: 640px; }
+thead th {
+  text-align: left;
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--dim);
+  background: var(--panel-2);
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+}
+tbody td { padding: 10px 11px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,.02); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.small { font-size: .78rem; color: var(--muted); }
+
+.scrollhint { font-size: .75rem; color: var(--dim); margin: 0 0 4px; }
+@media (min-width: 900px) { .scrollhint { display: none; } }
+
+/* ---------- callouts ---------- */
+.callout {
+  border-left: 3px solid var(--accent);
+  background: var(--panel);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+.callout.warn { border-left-color: var(--warn); }
+.callout.bad { border-left-color: var(--bad); }
+.callout.ok { border-left-color: var(--ok); }
+.callout strong { color: var(--text); }
+
+ul.tight, ol.tight { margin: 6px 0 12px; padding-left: 20px; }
+ul.tight li, ol.tight li { margin-bottom: 6px; }
+
+/* ---------- footer ---------- */
+footer.site {
+  border-top: 1px solid var(--line);
+  margin-top: 44px;
+  padding: 18px 16px 40px;
+  color: var(--dim);
+  font-size: .78rem;
+}
+footer.site .inner { max-width: 1180px; margin: 0 auto; }
+
+/* ---------- skip link ---------- */
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--accent); color: #10151b;
+  padding: 10px 14px; z-index: 100; border-radius: 0 0 8px 0;
+  font-weight: 700; text-decoration: none;
+}
+.skip:focus { left: 0; }
