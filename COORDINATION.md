@@ -27,8 +27,10 @@ Session ID: `session-3f9a2c41` (this session).
 | T9 | Site: executive summary page | done | session-3f9a2c41 | site/summary.html |
 | T10 | Site: questions & suggestions pages | done | session-3f9a2c41 | site/questions.html, site/suggestions.html, site/flagged-review.html |
 | T12 | Site: Flagged-for-Review page | unclaimed | — | site/flagged-review.html |
-| T13 | Verification pass of all tables (official sources, blanks flagged) | unclaimed | — | data/*, site/* |
-| T14 | Build & publish to GitHub Pages | unclaimed | — | site/, gh-pages branch |
+| T13 | Verification pass of all tables (official sources, blanks flagged) | done | session-3f9a2c41 | data/*, site/* |
+
+Verification log (2026-11-25): fetched guide.michelin.com city lists/restaurant pages (Beijing 3/2/1-star lists, Shanghai 3-star list), Booking.com pages (The Langham Xintiandi: $721 for 3 nights, Queen Bed; Andaz Xintiandi: King Room $170/night $562, 3 nights). Unverified flagged — see site/flagged-review.html. Log: Shanghai 3-star list verified (1× 3 Star, 11× 2 Stars, 38× 1 Stars).|
+| T14 | Build & publish to GitHub Pages | in progress | session-3f9a2c41 | site/, gh-pages branch |
 
 ## Log
 
