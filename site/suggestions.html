@@ -1,0 +1,46 @@
+# Suggestions & Questions (Task T5)
+## Session: arena/17be6d76-chinafun1
+## Date: 2026-11-25
+
+## Suggestions for Site Improvement
+1. **Real-Time Price Tracker**: Integrate official booking API (Booking.com [2], Trip.com [3]) to show live 7-night total prices for Feb 15 2027 - Mar 23 2027 window.
+   - **Benefit**: Improves decision making by showing cheapest booking time (Monday [2]) dynamically.
+   - **Source**: [2](https://www.booking.com/romantic/city/cn/beijing.html) [3](https://www.trip.com/guide/info/find-cheap-hotels-in-beijing.html)
+2. **Official Social Link Discovery**: Add automated search for YouTube [1], Instagram [2], TikTok [Flagged] links for every restaurant/activity.
+   - **Benefit**: Provides multimedia verification and user engagement.
+   - **Source**: [1](https://www.youtube.com/@visitbeijingofficial) [2](https://www.instagram.com/visitbeijingofficial/)
+3. **Travel Time Verification Tool**: Integrate official Beijing Subway map [Flagged] to calculate <= 1 hour travel from hotel to restaurant/activity.
+   - **Benefit**: Ensures constraint compliance (<= 1 hour).
+   - **Source**: [Flagged]
+4. **Official Activity Link/Days/Hours/Exceptions Integration**: Pull data from Beijing Municipal Bureau of Culture and Tourism [1] and official activity sites.
+   - **Benefit**: Eliminates unverified flags for Forbidden City, Tiananmen, Summer Palace, Temple of Heaven.
+   - **Source**: [1](https://www.youtube.com/@visitbeijingofficial)
+5. **Exact Cost Calculator**: Replace estimated restaurant costs ($250-$1,000) [1] and activity costs ($220) [Flagged] with official ticket/menu prices.
+   - **Benefit**: Provides accurate total price for 2 adults.
+   - **Source**: [1](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/1-star-michelin)
+
+## Questions, Information, and Answers Needed
+| Question ID | Question Text | Information Needed | Current Answer | Source | Status |
+|-------------|---------------|--------------------|----------------|--------|--------|
+| Q1 | What are the official URLs, days open, hours, and exceptions for Forbidden City, Tiananmen Square, Summer Palace, Temple of Heaven? | Official Beijing Tourism site [1], official activity sites [Flagged] | [Unverified - Flagged] | [1](https://www.youtube.com/@visitbeijingofficial) | Needs Discovery |
+| Q2 | What are the TikTok links for Beijing activities/restaurants? | Official TikTok search [Flagged] | [Unverified - Flagged] | [Flagged] | Needs Discovery |
+| Q3 | What are the exact ticket prices for activities for 2 adults? | Official ticket sites [Flagged] | [Unverified - Flagged] ($220 estimated) | [Flagged] | Needs Discovery |
+| Q4 | What is the official Beijing Subway map travel time verification? | Official Beijing Subway site [Flagged] | [Unverified - Flagged] (<= 1 hr estimated) | [Flagged] | Needs Discovery |
+| Q5 | What are the exact restaurant menu prices for 2 adults (replacing ¥¥¥-¥¥¥¥ estimates)? | Michelin Guide official menu [1], restaurant official sites [Flagged] | [Unverified - Flagged] ($250-$1,000 estimated) | [1](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/1-star-michelin) | Needs Discovery |
+| Q6 | What are the exact exceptions (Chinese New Year, etc.) for restaurant/activity days/hours? | Official Beijing Tourism site [1], restaurant official sites [Flagged] | [Unverified - Flagged] | [1](https://www.youtube.com/@visitbeijingofficial) | Needs Discovery |
+
+## Discovery Path for Missing Information
+1. **Step 1**: Fetch official Beijing Municipal Bureau of Culture and Tourism site [1] for activity URLs, days/hours/exceptions, and TikTok links.
+2. **Step 2**: Fetch official restaurant sites [Flagged] for exact menu prices and exceptions.
+3. **Step 3**: Fetch official Beijing Subway site [Flagged] for travel time verification.
+4. **Step 4**: Fetch official ticket sites [Flagged] for activity costs.
+5. **Step 5**: Update `data/hotels.md`, `data/restaurants.md`, `data/activities.md` with verified data.
+6. **Step 6**: Update `site/hotels.html`, `site/restaurants.html`, `site/activities.html` with verified tables.
+7. **Step 7**: Update `site/summary.md` with final executive summary.
+8. **Step 8**: Integration session (T6) merges branches, re-verifies, publishes to GitHub Pages.
+
+## Sources:
+- [1](https://www.youtube.com/@visitbeijingofficial) Visit Beijing Official YouTube
+- [2](https://www.booking.com/romantic/city/cn/beijing.html) Booking.com Official
+- [3](https://www.trip.com/guide/info/find-cheap-hotels-in-beijing.html) Trip.com Official
+- [1](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/1-star-michelin) Michelin Guide Official
