@@ -331,3 +331,36 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+## Session `c2067093` — cross-plan social-media & hours audit (`social-2027/`)
+
+**Branch:** `arena/c2067093-chinafun1`, branched from `main` @ `eda1907`
+**Claimed:** 2026-11-25 · **Status:** in progress
+**File scope (exclusive):** `social-2027/**` and this section of `COORDINATION.md`.
+**Read-only:** every other plan directory, `assets/data.js`, `data/`, `build.py`, root HTML, `README.md`.
+The root landing page and README are shared outputs; this session **requests** an integration link there rather
+than editing either. This task does not overlap any existing claim (T1–T11, S1–S9, and `16153d37` T1–T11 are done).
+
+### Task board — session `c2067093`
+
+| # | Task | Status | File scope | Verification required |
+|---|------|--------|-----------|----------------------|
+| C1 | Claim + repo review | in progress | this section | board read; four plans inventoried; no duplicate scope |
+| C2 | Extract every listed restaurant/activity from the four plans into one canonical inventory | unclaimed | `social-2027/data/inventory.json` | row-by-row provenance back to the owning plan's file |
+| C3 | Verify social reviews (YouTube / TikTok / Instagram) per venue, preferring official operator accounts | unclaimed | `social-2027/data/social.json` | fetch each URL, confirm the account/video names the venue; no guessed URLs |
+| C4 | Verify opening days, hours and exceptions per venue | unclaimed | `social-2027/data/hours.json` | official operator or MICHELIN page; blank + flag otherwise |
+| C5 | Verify total meal price for two / activity price for two where published | unclaimed | `social-2027/data/costs.json` | official menu/price page only; estimate band only when MICHELIN publishes it |
+| C6 | Build mobile-friendly dashboard (landing + subpages + tables + source links) | unclaimed | `social-2027/**/*.html`, `social-2027/assets/*` | link check + rendered-page read-through |
+| C7 | Exec summary, questions, suggestions, flagged register, sources | unclaimed | `social-2027/*.html` | every unverified value present in the blank register |
+| C8 | Final verification + record sources/irregularities, mark done | unclaimed | this section | each row re-fetched; results logged here |
+
+### Rules this session holds to
+
+- **A resolving URL is not a verified URL.** No URL is written to a data file unless it was fetched this session
+  and the page content confirms the venue name. Guessed slugs are logged as rejected, never published.
+- No inferred hours, prices, bed types, travel times or social handles. Blank means blank, with a flag.
+- Official operator / MICHELIN / museum / government pages outrank third-party articles. Third-party social
+  reviews are labelled as such and only included when the video/post itself was fetched and identified.
+- No edits to another session's files. Requests go in this section.
