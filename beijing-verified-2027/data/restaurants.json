@@ -48,6 +48,14 @@
           "channel": "Jack Lu",
           "note": "Chinese-language three-star visit, part 1",
           "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=SQ9JzAqNpjY",
+          "title": "What it Takes to Earn 3 Michelin Stars in China",
+          "channel": "The Drunken Sommelier Food Show",
+          "note": "Interview/kitchen access with Chef Cheung of the Chao Shang Chao group.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
         }
       ],
       "unverified": [
@@ -149,6 +157,22 @@
           "channel": "Bei Aiba",
           "note": "Short-format review of the two-star royal-cuisine menu",
           "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=9wni9YGzaTg",
+          "title": "【验证】新荣记高端北京官府菜米其林二星京季…",
+          "channel": "波儿美食 (shty77)",
+          "note": "Chinese-language tasting-menu walkthrough; description places 京季 on floor 2 of the Ritz-Carlton, Jianguo Road, Chaoyang, and calls it a two-star.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=3WOoCQF9RH8",
+          "title": "【井盖】米其林 | 228元一份炒饼，来自官宦人家的奢侈！",
+          "channel": "井盖小分队JingGai",
+          "note": "2021 visit, filmed when Jingji held two stars.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
         }
       ],
       "unverified": [
@@ -207,6 +231,22 @@
           "channel": "Epicurean Escapes",
           "note": "Short food-focused edit.",
           "verified": "oEmbed returned HTTP 200 with this title and channel on 2026-11-25."
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/kingsjoy_official/",
+          "title": "King's Joy 京兆尹 (@kingsjoy_official)",
+          "channel": "Official restaurant account",
+          "note": "Official account, not a third-party review. Profile page opened 2026-11-25 and listed 276+ posts; bio says Michelin and links kingsjoy.com.",
+          "verified": "Instagram profile page rendered with posts and bio on 2026-11-25."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=3wvb8xFdq7Q",
+          "title": "¥3,077元探店全球唯一一家米其林三星素食-京兆尹！除了贵没什么毛病！",
+          "channel": "真探唐仁杰",
+          "note": "Filmed in 2022 when King's Joy held three stars; gives a per-person spend figure from that era.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
         }
       ],
       "unverified": [
@@ -233,7 +273,24 @@
         "status": "unverified",
         "note": "MICHELIN publishes only the ¥¥¥¥ band."
       },
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=2Rsj9Q81qAE",
+          "title": "Inside Asia's Hottest New Restaurant: Lamdre in Beijing",
+          "channel": "The 50",
+          "note": "Short documentary-style feature on the restaurant and its cooking.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=R8MTcCKuGBA",
+          "title": "#Experience food & wine pairing with Meiyu#Lamdre#Beijing#",
+          "channel": "Meiyu's Wine Pairing",
+          "note": "Guest-shot clip of a wine pairing dinner.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        }
+      ],
       "unverified": [
         "phone",
         "website",
@@ -260,7 +317,16 @@
         "status": "unverified",
         "note": "MICHELIN publishes only the ¥¥¥¥ band."
       },
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=kk3L2zMwkMw",
+          "title": "【鲁上鲁】超高端的鲁菜——鲁上鲁。又被认出来了……",
+          "channel": "特廚隋卞 (ChefSui)",
+          "note": "Restaurant name matches 鲁上鲁 exactly. Page does not name the city; the brand is the Beijing two-star, but branch is not confirmed in the text.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        }
+      ],
       "unverified": [
         "website",
         "hours",
@@ -363,7 +429,16 @@
         "status": "unverified",
         "note": "MICHELIN publishes only the ¥¥¥ band."
       },
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Z8qFZ3jvAEk",
+          "title": "【富春居】38一碗的米饭是什么味道——富春居",
+          "channel": "特廚隋卞 (ChefSui)",
+          "note": "Name matches exactly (富春居), but the page does not state which city's 富春居 this is. Treat as probable, NOT confirmed for the Beijing PuXuan restaurant.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        }
+      ],
       "unverified": [
         "price_two_adults",
         "social"
@@ -414,7 +489,32 @@
         "status": "unverified",
         "note": "MICHELIN publishes only the ¥¥¥ band."
       },
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=k9VBbTq8PKc",
+          "title": "Beijing Must Eats! Da Dong Restaurant - Chef serves famous Peking Roast Duck 北京大董烤鸭店",
+          "channel": "Hello World",
+          "note": "Da Dong GROUP footage (大董烤鸭店). Branch is not identified - not confirmed to be the Michelin-starred Gastro Esthetics DaDong room.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=pfwRa_okjsc",
+          "title": "Peking Duck from Dadong restaurant, Beijing",
+          "channel": "Daniel Lee Gray aka Seouleats",
+          "note": "Da Dong GROUP footage, branch unidentified. Same caveat as above.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@foodiefranky/video/7405907816143277329",
+          "title": "DaDong in Beijing, China is where I found the pinnacle of Peking Duck",
+          "channel": "Franky | Solo Travel & Food! (@foodiefranky)",
+          "note": "Group-level claim ('Michelin-starred'); branch not identified. Page opened 2026-11-25: 12,852 views, 44s, posted 2024-08-22.",
+          "verified": "TikTok video page rendered with caption and view counts on 2026-11-25."
+        }
+      ],
       "unverified": [
         "hours",
         "closed",
@@ -575,6 +675,22 @@
           "channel": "Aden Films",
           "note": "Third segment covers Mansion Cuisine by Jingyan; roundup, not a dedicated review",
           "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25"
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Yok9qkb4bKw",
+          "title": "China's most sophisticated Fried Rice ?",
+          "channel": "Aden Films",
+          "note": "Aden Films visit; the video description names 'Mansion Cuisine by Jingyan, 1 Star Michelin in Beijing'.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Vu2sSUzzilc",
+          "title": "京艳·翰林书院下午茶…",
+          "channel": "Yang Strawberry Bear",
+          "note": "Afternoon-tea visit to the same address (京艳·翰林书院 = Mansion Cuisine by Jingyan); covers the tea service, not the tasting menu.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
         }
       ],
       "unverified": [
@@ -746,6 +862,14 @@
           "channel": "Bellekuv (@bellekuv)",
           "note": "Warning: this video is filmed at the Sheng Yong Xing outpost in Shanghai, not the Beijing Chaoyang branch. Kept because the brand and 45-day duck are the same; do not treat it as a review of the Beijing room.",
           "verified": "Page opened 2026-11-25: 7,923 views, posted 2025-09-12, transcript captured."
+        },
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=jaZr6qWh0s0",
+          "title": "【验证】北京米其林一星烤鸭晟永兴,看看符合北京烤鸭天花板的水平吗？",
+          "channel": "波儿美食 (shty77)",
+          "note": "Description names 晟永兴 at 朝阳区新东路5号 - the Chaoyang/Xindong Road address, i.e. this branch.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
         }
       ],
       "unverified": [
@@ -907,7 +1031,16 @@
         "status": "unverified",
         "note": "MICHELIN publishes only the ¥¥¥ band."
       },
-      "social": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=T-vm41LO6AA",
+          "title": "Inside China's Michelin Star Factory...",
+          "channel": "Blondie in China",
+          "note": "Covers the Xin Rong Ji group and a Beijing branch; a group feature rather than a review of this specific room.",
+          "verified": "oEmbed returned HTTP 200 with this exact title and channel on 2026-11-25."
+        }
+      ],
       "unverified": [
         "hours",
         "closed",
