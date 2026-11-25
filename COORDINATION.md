@@ -13,7 +13,7 @@ Session `b111cd10` · fixed Arena branch `arena/b111cd10-chinafun1` · updated 2
 | T7 Site build | done | b111cd10 | index.html, *.html, assets/, build.py | Six dependency-free responsive pages; README explains build. |
 | T8 Verification | needs review | b111cd10 | data/verification-log.md, tests/ | Checked row sources, local links and date arithmetic; no guarantee external link uptime or mobile browser rendering. Review page records unanswered requirements. |
 | T9 Questions / suggestions | done | b111cd10 | build.py, review.html | Proposed ideas separated from implementation; discovery paths and source links supplied. |
-| T10 Integration / Pages | needs review | b111cd10 | all integrated files | Automated checks passed. Pages publication attempted separately; hotel pricing, transit counts and complete inventory remain unresolved. |
+| T10 Integration / Pages | needs review | b111cd10 | all integrated files | Automated checks passed. Changing the Pages source via GitHub API returned HTTP 403 (integration lacks permission). An Actions deployment is being attempted; hotel pricing, transit counts and complete inventory remain unresolved. |
 
 ## Claim and handoff log
 
