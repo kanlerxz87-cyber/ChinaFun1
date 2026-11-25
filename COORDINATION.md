@@ -2,7 +2,14 @@
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Initial site, research, verification and integration | in progress | bc471896 | COORDINATION.md, index.html, assets/, pages/, README.md, .github/workflows/ |
+| Initial site, research, verification and integration | needs review | bc471896 | COORDINATION.md, index.html, assets/, pages/, README.md, .github/workflows/ |
 
 ## Session log
 - 2026-11-25: Session bc471896 found an empty repository apart from README. Claimed initial integrated site; other sessions should avoid the above scope and log requests here. Arena fixes this session to its current branch, so the requested session-specific branch cannot be created.
+
+## Research and verification log — bc471896
+- 2026-11-25: Created a static, responsive initial integration. Examined Michelin's official pages for [Ling Long](https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ling-long-1209951), [Jin Xuan](https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/jin-xuan), [Taian Table](https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/taian-table), [Ren He Guan](https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/ren-he-guan-zhaojiabang-road), [Meet the Bund](https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/meet-the-bund), and [Xiao Tao Mian Guan](https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/xiao-tao-mian-guan): checked names, exact branches, 2026 distinctions and addresses. Guide edition may change before travel.
+- Checked hotel room names against [Hilton](https://www.hilton.com/en/hotels/shawawa-waldorf-astoria-shanghai-on-the-bund/rooms/) and [Ritz-Carlton](https://www.ritzcarlton.com/en/hotels/shasz-the-ritz-carlton-shanghai-pudong/photos/); checked amenities against [Ritz-Carlton overview](https://www.ritzcarlton.com/en/hotels/shasz-the-ritz-carlton-shanghai-pudong/overview/). Specific room bathroom privacy, availability and all-in 2027 prices were not established.
+- Checked museum address and normal opening hours against [Shanghai government](https://english.shanghai.gov.cn/en-MuseumsGalleries/20240730/9a296c977b41481a8410642d36aaa9c3.html). 2027 schedules and exceptions are unverified. Videos are explicitly independent, not evidence of current facts.
+- Local internal HTML links checked programmatically; comprehensive external-link and date-specific booking validation remains open. Full inventory, transit counts and rankings, pair dining totals, best booking time and detailed itinerary remain unverified. All appear on Flagged for Review. User-supplied trip requirements are attributed to the user, not claimed to have an official source.
+- Pages originally points at main. Arena restricts this session to the current branch; no merge to main or session-named branch is permitted. Publishing configuration must be checked separately.
