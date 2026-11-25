@@ -1,4 +1,11 @@
+# Union of the patterns contributed by parallel sessions.
+# Neither side was discarded; *.py[cod] already covers *.pyc, which is kept
+# verbatim so each contributing session can see its own entry.
 __pycache__/
+*.py[cod]
 *.pyc
 .DS_Store
+*.swp
 *.log
+.env
+node_modules/

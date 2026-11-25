@@ -1,7 +1,7 @@
 # ChinaFun1 — four China 2027 trip planners
 
 This repository holds **four independent, source-verified plans** for the same brief (2 adults, 7 nights,
-15 Feb – 23 Mar 2027), produced by parallel sessions that answered the question differently. They are kept
+15 Feb – 23 Mar 2027), produced by four parallel sessions that answered the question differently. They are kept
 in separate directories rather than merged, because they disagree with each other and merging them would
 hide that:
 
@@ -12,7 +12,7 @@ hide that:
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
 
-All of them follow the same rules: every row links to the official source it came from, unconfirmed values are left
+All four follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
 "listed". Read all four before deciding — the honest answer to "which city" is that the brief did not say, and the
 plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
@@ -29,7 +29,7 @@ identifies as the real cost driver.
 | Recommended hotel | Radisson Blu, **Junior Suite** | Radisson Blu, **queen room** | see its summary |
 | 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius rate; list $1,025) | see its summary |
 | Starred rows itemised | 12 | 14 | see its data |
-| Hotel ranking | geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model | see its method |
+| Hotel ranking | geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model with declared constants | see its method |
 
 **The finding all three converge on:** once you require "starred, reachable inside an hour", *every*
 central hotel passes. Shanghai's MICHELIN density does not discriminate between hotels on this brief, so
@@ -179,3 +179,29 @@ away still scores 7 minutes — which is disclosed on the page rather than hidde
 - The **Pullman Jing'an at $708** — cheaper than the recommendation — is excluded from the ranking because
   its coordinates could not be verified; geocoding returned a district centroid.
 - No total trip cost exists: airfare, visas and dinner prices were never sourced.
+
+---
+
+# Shanghai plan (`16153d37`) — `shanghai-verified-2027/`
+
+A fourth, later Shanghai study. It arrived after the other three were already published, and is kept
+separate for the same reason: it is its own research, not a revision of anyone else's.
+
+**Entry point:** [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html)
+
+| Path | What it is |
+|---|---|
+| `index.html` | Landing page and executive summary |
+| `executive-summary.html` | Long-form summary |
+| `hotels.html` | Hotel comparison |
+| `michelin.html` | Starred restaurant tables |
+| `activities.html`, `dates.html` | Things to do, and date-window analysis |
+| `costs.html` | Cost breakdown |
+| `questions.html`, `flagged.html` | Open questions and flagged items |
+| `suggestions.html`, `sources.html` | Proposals and source register |
+| `data/*.csv`, `data/*-notes.md` | Tabular data plus the reasoning behind each table |
+| `tools/sitegen.py` | Generator that builds the pages from the CSVs |
+
+Its distinguishing feature is the **CSV-plus-prose** structure: every table has a companion
+`*-notes.md` recording how the rows were gathered, which makes it the easiest of the three Shanghai
+studies to audit line by line.

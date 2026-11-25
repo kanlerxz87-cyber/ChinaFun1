@@ -203,3 +203,131 @@ extended (not replaced) to describe all three plans and to record where the two 
 - The two Shanghai studies are **deliberately not merged**. Their $922 vs $1,116 gap reflects different
   room categories, and reconciling it is published as an open question rather than silently resolved.
 - Do not re-attempt name-geocoding of Chinese restaurants (see F-08).
+
+---
+
+# Session `16153d37` — fourth plan: **Shanghai** (`shanghai-verified-2027/`)
+
+**Branch:** `arena/16153d37-chinafun1`, branched from `main` @ `8c3c56c` (the same README-only starting point as
+`fac6d965`, `68e13071` and `3b27db6c`)
+**File scope:** `shanghai-verified-2027/**`, this section of `COORDINATION.md`, this plan's rows in `README.md`
+**Status:** complete. Full task-by-task verification log and irregularities R1–R8 are in
+[`shanghai-verified-2027/COORDINATION-16153d37.md`](shanghai-verified-2027/COORDINATION-16153d37.md), which this
+session kept as its own board while working. It is summarised here so the shared board stays the single index.
+
+## Why this session's files live in `shanghai-verified-2027/`
+
+This session built its 11 pages at the **repository root**, which was correct when it claimed T1–T11 against
+`8c3c56c` and wrong by the time it pushed: `main` had advanced to `b78b61f` with the Beijing dashboard at the
+root (`fac6d965`), a Shanghai study in `docs/` (`68e13071`) and a second Shanghai study in `shanghai-2027/`
+(`3b27db6c`). Merging as-is would have **overwritten** `index.html`, `hotels.html`, `michelin.html`,
+`activities.html`, `suggestions.html`, `flagged.html` and both files in `assets/`.
+
+**Resolution:** everything was moved into `shanghai-verified-2027/` with its own `assets/`, `data/` and `tools/`.
+Pages, assets and data moved together, so every relative link resolves unchanged. **No other session's file was
+modified, deleted or renamed.** This mirrors the resolution `3b27db6c` documented for the identical collision.
+
+### Conflict log
+
+| When (UTC) | Event |
+|------------|-------|
+| 2026-11-25 13:09 | Board created, T1 claimed and pushed (`21c326f`). Repo was README-only at `8c3c56c`. |
+| 2026-11-25 13:15 | T2–T11 claimed as a single-session run — the user asked for all tasks completed with no manual input. |
+| 2026-11-25 13:22–13:36 | Data layer (8 files) and 11 pages built, committed in four small commits, pushed (`426a80f`…`2182716`). |
+| 2026-11-25 | `tools/__pycache__/sitegen.cpython-311.pyc` slipped into a commit. Untracked with `git rm --cached` and `.gitignore` added. |
+| 2026-11-25 | PR #6 opened; rejected as unmergeable — `main` had moved to `b78b61f` with three other plans published. |
+| 2026-11-25 | Relocated all work to `shanghai-verified-2027/` (`6078d49`). Merged `origin/main`: `.gitignore` resolved as a **union** of both sides; `README.md` **extended, not replaced**, with this plan's row and section. No work discarded from any session. |
+
+## Task board — session `16153d37`
+
+| # | Task | Status | File scope | Verified against |
+|---|------|--------|-----------|------------------|
+| T1 | Repo setup + board + claim | done | `COORDINATION.md`, `README.md` | base tree is README-only; no LICENSE, no CI, no `.gitignore`, Pages already enabled on `main` `/` |
+| T2 | Dates, CNY 2027, visa, weather | done | `shanghai-verified-2027/data/research-dates.md` | travel.state.gov (Level 2, issued 2026-10-19); weekday map computed with `datetime.date` |
+| T3 | Hotels + live 2027 rates | done | `.../data/hotels.csv`, `hotels-notes.md` | peninsula.com, hilton.com, press.fourseasons.com, 6 dated Booking.com quotes |
+| T4 | MICHELIN restaurants | done | `.../data/michelin.csv`, `michelin-notes.md` | guide.michelin.com live filter + 9 entry pages + the 2026-04-09 launch release |
+| T5 | Activities, hours, official links | done | `.../data/activities.csv`, `activities-notes.md` | shanghaimuseum.net (3 pages), yugarden.com.cn, en.shanghaitower.com (2 pages) |
+| T6 | Social links | done | `.../data/social.csv` | 8 official museum accounts from the museum site footer; the rest labelled third-party |
+| T7 | Site build: landing, nav, CSS/JS | done | `shanghai-verified-2027/index.html`, `assets/*`, `tools/sitegen.py` | 11/11 pages serve HTTP 200; 0 broken local links; 0 unbalanced tags |
+| T8 | Exec summary + questions + suggestions | done | `executive-summary.html`, `questions.html`, `suggestions.html` | 17 open questions, 6 paths, 18 suggestions — none implemented |
+| T9 | Hotels + MICHELIN + activities + costs pages | done | `hotels.html`, `michelin.html`, `activities.html`, `costs.html` | 34 tables, 449 rows, every row carrying a source link |
+| T10 | Verification pass + flagged page | done | `flagged.html`, `sources.html` | irregularities R1–R8, a 26-row blank register, 51 registered sources |
+| T11 | Integration + publish | done | `main` via PR #6 | relocated, merged, both shared files resolved without discarding work |
+
+## Verification highlights (full log in `shanghai-verified-2027/COORDINATION-16153d37.md`)
+
+- **travel.state.gov** China advisory — Level 2 issued **2026-10-19**; visa generally required; 10-year
+  multiple-entry tourist visa; passport 6+ months beyond arrival with 2+ blank pages; **registration within
+  24 hours** and at every new location. Visa fee and processing time are **not on the page → blank (Q11)**.
+- **Booking.com dated quotes**, all `group_adults=2&no_rooms=1&type=total&selected_currency=USD`, fetched
+  **2026-11-25**, totals include 10% service and exclude 6% VAT. Waldorf Deluxe Queen (2 queen beds, 646 ft²):
+  **$2,414** / **$2,378** / **$2,374** across the three windows. Radisson Collection Hyland (selectable 1 king
+  bed, 269 ft²): **$696** in two different windows. Peninsula Deluxe (1 king, private bathroom with spa
+  bathtub): **$3,813**. Atour Light Collection Twin: **$652** — two twin beds, fails the requirement.
+- **guide.michelin.com** live Shanghai filter — **3★ 1 · 2★ 11 · 1★ 38 · Bib 33 · Selected 70 · total 153**;
+  open Monday **35 of 153**. The 2026-04-09 launch release says **156** Shanghai and **12** two-stars → **R4**.
+- **langhamhotels.com** — T'ang Court **2★ 2026**, Forbes Four-Star 2026, lunch 11:30–14:00 and dinner
+  17:30–21:00 daily, **off Monday**. Its official set-menu PDF gives **exact totals for two: ¥888 / ¥2,288**,
+  stated inclusive of service charge and taxes.
+- **sh.taian-table.cn** Menu No.55 PDF — the 10-course degustation is "fixed and mandatory"; only add-ons are
+  priced (¥388 / ¥218 / ¥188). **The degustation price is not published → blank (Q8).**
+- **shanghaimuseum.net** current visit page — People's Square Tue–Sun 09:00–17:00, **last entry 15:00**, closed
+  Mondays; during *On Top of the World Tree* (9 Jul 2026 – 14 Nov 2027) it hosts **no other exhibitions** and the
+  permanent collections are at Museum East (closed **Tuesdays**). **Admission price not stated → blank (Q14).**
+- **en.shanghaitower.com** — route and hotline published, but **no ticket price and no opening hours → R3**.
+  Its transport page is the only official journey-time source used (40 min Shanghai Railway Stn South Sq →
+  People's Square → Dongchang Rd).
+- **yugarden.com.cn** — 9:00–16:30, entry stops 16:00, closed Mondays; **¥30 adult off-season (1 Dec – 31 Mar)**
+  covers every trip date, so **cost for two = ¥60, verified**.
+
+## Irregularities raised by this session
+
+Rendered with both competing sources linked on `shanghai-verified-2027/flagged.html`.
+
+- **R1** No primary source for the 2027 mainland holiday calendar; two secondary sources disagree (5–11 Feb vs
+  5–13 Feb, with a make-up working day reported for **Sun 14 Feb 2027**). The State Council notice was not
+  located. No holiday period is asserted as verified. → Q2.
+- **R2** Shanghai February weather conflicts across secondary sources (means 4.6–7 °C; precipitation 58.8–145.6
+  mm). **No numeric weather value is asserted anywhere.**
+- **R3** The Shanghai Tower observatory publishes **neither a ticket price nor opening hours** on its official
+  English page, though third parties quote ¥180 and 08:30–22:00. Left blank; the operator's five named ticket
+  channels are given as the discovery route. → Q6.
+- **R4** Two official MICHELIN pages disagree on Shanghai counts (live filter 153 / 11 two-stars vs the launch
+  release 156 / 12). Both shown side by side; the live filter is treated as current. The **2027 edition is
+  unpublished**, so all star statuses are 2026. → Q12.
+- **R5** The cheapest verified room fails the stated requirement: Atour Light's **$652** room has **two twin
+  beds**. Shown with a red compliance badge and excluded from the recommended paths, not substituted. → Q15.
+- **R6** Two official Shanghai Museum pages conflict on last entry (**16:00** in the 2025-08-25 notice vs
+  **15:00** on the current visit page, which also requires advance booking). The current page governs; the older
+  notice is linked so the conflict can be reviewed.
+- **R7** Two similarly named Instagram accounts exist for Waldorf Astoria Shanghai and no fetched hilton.com page
+  links to either. Both listed with provenance; neither presented as confirmed official.
+- **R8** Hotel prices come from an online travel agency, not the hotel's own booking engine. Hotel brand sites
+  were used for rooms, addresses, amenities and inventory; **every price row links to the exact dated query that
+  produced it** with its fetch timestamp, and the source is labelled as an OTA rate throughout. Re-quoting on
+  each hotel's own engine is Suggestion S4.
+
+## Notes for future sessions
+
+- `shanghai-verified-2027/` is **read-only unless claimed here**. Changing `tools/sitegen.py` regenerates all 11
+  pages, so edit `data/` and re-run the generator rather than hand-editing HTML.
+- **Do not retry these failed fetches:** the signed `routify-file-proxy-sg.oss-ap-southeast-1.aliyuncs.com/
+  proxy_temp_file/...` proxy URLs failed **six** times (fetch the canonical site URL instead);
+  `booking.com/hotel/cn/the-puli.html` and `/hotel/cn/capella-shanghai-jian-ye-li.html` failed (guessed slugs);
+  `hilton.com/.../shawawa-.../rooms/` failed.
+- **Booking.com free-text `ss=` searches for luxury hotels are unreliable** — `ss=The+PuLi+Hotel+and+Spa+
+  Shanghai` returned Puli town in **Nantou, Taiwan**. Mine property slugs from a district search such as
+  `ss=Shanghai+Huangpu` instead. Availability matrices appear around **chunk 2**, not chunk 0 (Peninsula ~9–10
+  chunks, Waldorf ~16–18, Hyland ~7).
+- **Michelin entry pages render no opening-hours block and no numeric prices** in any chunk. The workaround that
+  succeeded: fetch the restaurant's own official site plus its menu PDF (complete for T'ang Court, partial for
+  Taian Table).
+- **Three Shanghai plans now exist and are deliberately not merged.** Their cheapest compliant 7-night figures
+  are $696 (this session), $922 (`shanghai-2027/`) and $1,116 (`docs/`). The spread reflects different hotel
+  shortlists and room categories, not a data error. This session prices Peninsula / Waldorf / Radisson
+  Collection Hyland / Atour Light; the other two centre on Radisson Blu New World.
+- **On the one-hour test the plans diverge by method, not by data.** `shanghai-2027/` publishes a modelled
+  proximity score with disclosed constants; this session refuses to model and uses only verified shared
+  districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
+  modelled minute and an unmodelled blank are not the same kind of statement.
+
