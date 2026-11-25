@@ -1,21 +1,97 @@
-# China 2027 — Trip Planning Dashboard
+# ChinaFun1 — two China 2027 trip planners
 
-A source-verified trip plan for **2 adults, 7 nights, Shanghai, 15–22 February 2027**, built as a static
-dashboard and published with GitHub Pages.
+This repository holds **two independent, source-verified plans** for the same brief (2 adults, 7 nights,
+15 Feb – 23 Mar 2027), produced by two parallel sessions that answered the question differently:
 
-**Live site:** `docs/` on this repository (GitHub Pages) → `index.html`
-**Session branch:** `arena/68e13071-chinafun1`
+| Plan | City | Where it lives | Entry point |
+|---|---|---|---|
+| `fac6d965` | **Beijing** | repo root | [`index.html`](index.html) |
+| `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
 
-## What is here
+Both follow the same rules: every row links to the official source it came from, unconfirmed values are left
+blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
+"listed". Read both before deciding — the honest answer to "which city" is that the brief did not say, and the
+two plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
+cheapest verified 7-night rate at $1,116 and 12 starred restaurants all inside a 60-minute band).
+
+> **Note on the brief's dates:** the preferred window 15–18 Feb 2027 is 3 nights, which does not fit a 1–2 week
+> trip. Both plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
+
+---
+
+# Beijing plan (`fac6d965`) — repo root
+
+
+A static, mobile-first planning dashboard for a **7-night Beijing trip for two adults, 15–22 February 2027**
+(inside the 15 Feb – 23 Mar 2027 window), built around the MICHELIN Guide rather than around sightseeing.
+
+**Live site:** published from the repository root via GitHub Pages.
+
+## What is in here
 
 | Path | What it is |
 |---|---|
-| `data/*.json` | The single source of truth. Every row carries its sources and its verification status. |
-| `build.py` | Renders `docs/` from `data/`. No dependencies, no manual edits to `docs/`. |
-| `check.py` | Post-build checks: broken internal links, empty `href`s, missing `<title>`/viewport. |
-| `assets/` | Mobile-first CSS + a tiny JS layer (menu, per-table filter). |
-| `docs/` | The generated site that GitHub Pages serves. |
-| `COORDINATION.md` | Shared task board for parallel agent sessions. |
+| `index.html` | Executive summary and the dashboard landing page |
+| `hotels.html` | 12 Beijing hotels priced for the exact week, ranked on a published, auditable score |
+| `michelin.html` | All 33 MICHELIN-starred restaurants in Beijing 2027 with star level, price band, hours, links |
+| `activities.html` | Activities with verified/unverified flags on hours and ticket prices |
+| `itinerary.html` | 7-night day-by-day plan that respects closing days |
+| `decisions.html` | The 10 questions that block a booking, plus what is known vs unknown |
+| `suggestions.html` | Improvement proposals awaiting review — nothing applied yet |
+| `flagged.html` | Verification log, every blank field, irregularities, repository review |
+| `assets/data.js` | The single source of truth for all rows |
+| `assets/style.css`, `assets/app.js` | Design system and table renderers (no dependencies, no build step) |
+| `COORDINATION.md` | Shared task board for parallel agent sessions |
+
+## Editorial rules
+
+1. Every value in every row links to the official source it came from.
+2. If a value cannot be confirmed from an official source it is **left blank and flagged** — never estimated, never inferred.
+3. Star status is stated explicitly: starred (with count) vs MICHELIN Selected vs Bib Gourmand.
+4. Hotel prices are shown as the **total for a 7-night stay**, with the room type and bed type that price actually buys.
+5. Every change is committed to a session branch and logged in `COORDINATION.md`.
+
+## Run locally
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
+
+No build step, no package manager, no external requests at runtime.
+
+## Verification status
+
+See [`flagged.html`](flagged.html) for the source-by-source log, the full list of blank fields and the known
+irregularities. Headline caveats:
+
+- Hotel totals are Booking.com "from" rates read on **25 Nov 2026**, not a locked contract.
+- Michelin density counts cover **10 of 33** starred restaurants, so they are a lower bound.
+- Transit times are deliberately **not** estimated; the ≤1-hour rule still needs a routing pass in Amap.
+
+
+---
+
+# Shanghai plan (`68e13071`) — `docs/`
+
+**Live path:** `docs/index.html` · **Session branch:** `arena/68e13071-chinafun1`
+
+A generated dashboard, not hand-written HTML: `data/*.json` → `build.py` → `docs/`.
+
+**Recommendation:** Shanghai only, 7 nights Mon 15 Feb → Mon 22 Feb 2027, **Radisson Blu New World Junior Suite**
+(1 queen bed, attached private bathroom) at **US$1,116 total for 7 nights** for 2 adults — the cheapest of the five
+7-night windows priced, and the best of the hotels that could be geolocated.
+
+**Headline finding:** the ≤60-minute MICHELIN-density test asked for in the brief does not separate central hotels —
+all four geocodable hotels reach 10–11 of the 11 geocodable 2★/3★ restaurants. Price and room quality decide.
+
+| Path | What it is |
+|---|---|
+| `data/*.json` | 14 datasets: hotels, restaurants, activities, itinerary, budget, windows, five-window sweep, flags, questions, suggestions S1–S12, verification log, source register, methodology |
+| `build.py` | Renders `docs/` from `data/`. No dependencies. |
+| `check.py` | Post-build checks: broken internal links, empty `href`s, missing `<title>`/viewport |
+| `src/assets/` | Mobile-first CSS + tiny JS (menu, per-table filter). *Moved out of `assets/` so the Beijing plan keeps the repo-root assets.* |
+| `docs/` | The generated Shanghai site |
 
 Rebuild:
 
@@ -23,39 +99,9 @@ Rebuild:
 python3 build.py && python3 check.py
 ```
 
-## Pages
+Pages: 11 — Overview · Hotels & Ranking · Michelin · Activities · Itinerary · Budget · Verification Log ·
+Flagged for Review · Open Questions · Suggestions · Sources & Method.
 
-* **Overview** — executive summary, KPIs, cheapest window.
-* **Hotels & Ranking** — 6 hotels, real 7-night totals, the ≤60-minute MICHELIN-density ranking, price detail, a five-window price sweep, and where the stars actually cluster.
-* **Michelin** — the complete 2★ + 3★ set (12 restaurants) with star tier, address, cuisine, price band, hours where officially published, video links and source links.
-* **Activities** — five things to do, with official links and video links; tickets/hours are blank where unverified.
-* **Itinerary** — an 8-day plan that respects each restaurant's published opening days.
-* **Budget** — only the lines that are actually quoted; everything else is explicitly *not calculated*.
-* **Verification Log** — every claim, how it was checked, and what came back.
-* **Flagged for Review** — values withheld because no official source confirmed them.
-* **Open Questions** — the decision gate: what must be answered before booking.
-* **Suggestions** — 12 proposed improvements with impact/effort, for you to choose from.
-* **Sources & Method** — the source register and the exact travel-time formula.
-
-## Verification rules used in this build
-
-1. A value is shown only if it was read from a named source on a stated date; the source is linked in the row.
-2. If a value could not be confirmed, the cell is **blank**, the row appears on **Flagged for Review**, and the next
-   step to close it is written down. No value is inferred, interpolated or "typical".
-3. Travel times are **estimates** from a published formula (`sources.html#method-h`) over OpenStreetMap coordinates —
-   never presented as measured journeys.
-4. Third-party compilations are used only to *find* things, never to *assert* them. Where they disagreed with the
-   official MICHELIN pages, the disagreement is logged (for example: `102 House`, and `Yu Bao Xuan` = `Imperial Treasure`).
-
-## Status of the data (honest summary)
-
-* **Verified:** MICHELIN star tiers for the 12 restaurants at 2★/3★; official counts for the 1★, Bib Gourmand and
-  Selected tiers; hotel room-level 7-night totals for the preferred window; a five-window price sweep; T'ang Court and
-  8½/Da Vittorio opening hours; Chinese New Year 2027 dates; coordinates for 4 hotels and 11 restaurants.
-* **Not verified (flagged):** menu prices for two at every starred restaurant, hours for 9 of 12 restaurants,
-  attraction ticket prices and hours, live journey times, video links for 6 restaurants and 2 activities,
-  the full 38-row one-star list.
-* **Known irregularities:** `102 House` (article vs listing), Bib Gourmand count 33 vs 35, two hotels not bookable for
-  the preferred window, and a slug collision on Booking.com where `the-middle-house` resolves to *Upper House Shanghai*.
-
-Nothing in this repository claims to be more than it is.
+**What is deliberately blank:** menu prices for two at every starred restaurant (MICHELIN publishes only a ¥ band),
+hours for 9 of 12 restaurants, all attraction ticket prices/hours, live journey times, flights. Each is on
+`docs/flagged.html` with the exact next step to close it.
