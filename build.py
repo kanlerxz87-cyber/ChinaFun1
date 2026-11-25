@@ -353,10 +353,16 @@ def main():
 def hotel_top_table(hotels):
     if not hotels:
         return '<p class="muted">Pending.</p>'
-    rows = [[f'<strong>{esc(h["name"])}</strong>', str(len(h["_within60"])), str(h["_star_sum"]),
-             money(next(iter(h.get("price", {}).values()), {}).get("total_usd")),
-             src_links(h.get("sources")[:1])] for h in hotels]
-    return table(["Hotel","≤60 min starred","Star weight","7-night total","Source"], rows)
+    rows = []
+    for h in hotels:
+        p = (h.get("price") or {}).get("w1", {})
+        if p.get("total_usd"):
+            cell = money(p.get("total_usd"))
+        else:
+            cell = '<span class="unv">not bookable for 15–22 Feb 2027</span>'
+        rows.append([f'<strong>{esc(h["name"])}</strong>', str(len(h["_within60"])), str(h["_star_sum"]),
+                     cell, src_links((h.get("sources") or [])[:1])])
+    return table(["Hotel", "≤60 min starred", "Star weight", "7-night total (2 adults)", "Source"], rows)
 
 
 def hotel_alt_prices(hotels):
