@@ -331,3 +331,28 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+
+---
+
+# Session `773e75a3` — social-review link registry (`social-2027/`)
+
+**Branch:** `arena/773e75a3-chinafun1` (branched from `main` @ `eda19076bc9eb4ffa267c6efb6fdc1fd00aa9c4f`)
+**File scope:** `social-2027/**` and only the append-only section below in `COORDINATION.md`.
+No file owned by `fac6d965`, `68e13071`, `3b27db6c` or `16153d37` is edited. `assets/data.js`, `README.md`,
+the root pages and all other plans are **read-only** for this session.
+
+| # | Task | Status | File scope | Verification method |
+|---|------|--------|------------|---------------------|
+| V1 | Claim + repo review | in progress | this section | `COORDINATION.md` read in full; four existing plans inventoried |
+| V2 | Verify YouTube/TikTok/Instagram review links for the Beijing 2027 MICHELIN rows | in progress | `social-2027/data/social.json` | Every YouTube candidate checked with YouTube's own `oembed` endpoint (returns canonical title + channel); no link asserted from search snippets alone |
+| V3 | Verify social links for the Beijing activities | unclaimed by others | `social-2027/data/social.json` | Same oEmbed check; official operator pages used for hours where fetched |
+| V4 | Hours / closures / exceptions register | in progress | `social-2027/data/venues.json` | Official operator or MICHELIN page only; blank + flag otherwise |
+| V5 | Mobile dashboard, questions, suggestions, flags, sources | in progress | `social-2027/**` | Stdlib generator; link + data checks |
+| V6 | Integration / GitHub Pages | unclaimed | `social-2027/**` | Self-contained relative links; no shared file rewritten |
+
+**Verification rule for this session:** a social URL is recorded only when YouTube's official oEmbed endpoint
+returns a title and channel for that exact video ID, or when the venue's own official page publishes the account.
+Search-result snippets are used only to *discover* candidates, never as proof. A search-query URL is not counted
+as a review link. If nothing can be verified, the cell is left blank and flagged.
+
+### Session `773e75a3` work log
