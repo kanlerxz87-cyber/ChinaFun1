@@ -184,7 +184,7 @@ def main():
 
     os.makedirs(os.path.join(OUT, "assets"), exist_ok=True)
     for f in ("style.css", "app.js", "favicon.svg"):
-        s = os.path.join(ROOT, "assets", f)
+        s = os.path.join(ROOT, "src", "assets", f)
         if os.path.exists(s):
             shutil.copy(s, os.path.join(OUT, "assets", f))
 
