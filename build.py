@@ -193,7 +193,7 @@ def main():
     n_listed = len([r for r in rests if r.get("tier") in ("bib", "selected")])
     w1 = next((w for w in windows if w.get("preferred")), windows[0] if windows else {})
     best = None
-    for h in ranked + unranked:
+    for h in ranked:
         p = h.get("price", {}).get(w1.get("id"), {})
         if p.get("total_usd") and (best is None or p["total_usd"] < best[1]):
             best = (h["name"], p["total_usd"])
@@ -205,13 +205,13 @@ def main():
   <div class="kpis">
     {kpi("Trip shape", esc(meta.get("trip_shape","")), esc(meta.get("trip_shape_note","")))}
     {kpi("Preferred window", esc(w1.get("label","")), esc(w1.get("note","")))}
-    {kpi("Michelin stars in scope", str(n_star), f"{n_listed} listed (Bib Gourmand / Selected)")}
-    {kpi("Cheapest 7-night total<br>in shortlist", money(best[1]) if best else "—", esc(best[0]) if best else "")}
+    {kpi("Starred rows itemised", str(n_star), f"{n_listed} listed-only rows itemised yet (38 one-star / 33 Bib counted, not tabulated)")}
+    {kpi("Cheapest ranked hotel<br>7 nights, 2 adults", money(best[1]) if best else "—", esc(best[0]) if best else "")}
   </div>
 </section>
 <section class="card">
   <h2>Executive summary</h2>
-  {''.join(meta.get('exec_summary', [])) if isinstance(meta.get('exec_summary'), list) else esc(meta.get('exec_summary',''))}
+  {(meta.get('exec_summary') or '')}
 </section>
 <section class="grid2">
   <div class="card"><h2>What this site answers</h2>
