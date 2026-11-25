@@ -13,3 +13,7 @@ python3 -m http.server 8000
 ```
 
 Visit `http://localhost:8000/`. Commit regenerated HTML alongside changes to `build.py`. Official source and checking notes appear on the Flagged for Review page and in `data/verification-log.md`. GitHub Pages serves the repository root. External links can change or require authentication or regional access; a successful local link check is not a promise about external availability.
+
+## Publication status
+
+The repository's existing Pages site uses `main`; this project is on `arena/b111cd10-chinafun1`. Publication has **not** succeeded. Changing the Pages source and adding this branch to the `github-pages` environment policy both returned HTTP 403 from the GitHub integration. [Deployment attempt](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45621706155) was rejected by the environment's main-only branch policy. A repository administrator needs to allow this branch for that environment and configure Pages to use GitHub Actions, then run the `Deploy trip planner` workflow.
