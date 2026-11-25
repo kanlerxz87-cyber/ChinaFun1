@@ -331,3 +331,8 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
   districts plus operator-published journey times, flagging the gap as Q7 / S1. Do not blend the two — a
   modelled minute and an unmodelled blank are not the same kind of statement.
 
+## Session `8b541b4b` — independent verification audit
+
+| Task | Status | Owner | File scope | Notes |
+|---|---|---|---|---|
+| Audit existing plans for decision-critical unsupported claims and publish findings | in progress | 8b541b4b | `audit-8b541b4b/**`, this board section | Independent scope; no edits to other sessions' datasets or shared navigation. Claimed 2026-11-25 22:31 UTC. |
