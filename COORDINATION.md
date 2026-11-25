@@ -356,3 +356,62 @@ Search-result snippets are used only to *discover* candidates, never as proof. A
 as a review link. If nothing can be verified, the cell is left blank and flagged.
 
 ### Session `773e75a3` work log
+
+#### 2026-11-25 — V1–V5 complete, V6 handed over
+
+**Delivered (new scope only):**
+- `social-2027/data/venues.json` — all 43 Beijing venues from the read-only root plan (33 starred
+  restaurants + 10 activities), each with name, guide status, price band, hours where verified,
+  exceptions where verified, an official guide/operator URL and a flag for every blank.
+- `social-2027/data/social.json` — 58 verified video URLs (49 normal videos, 9 Shorts) with the exact
+  published title, channel, video/Short URL, kind (Review / Interview / Official promo / Walking tour /
+  Reservation guide), provenance and the matching oEmbed URL. 31 links cover 15 restaurants; 27 links
+  cover all 10 activities.
+- `social-2027/data/content.json` — executive summary, 12 questions, 10 suggestions, 10 flags, 10 sources;
+  every non-venue row carries its own official source URL.
+- `social-2027/tools/build.py`, `social-2027/tools/check.py` — standard-library generator and validator.
+- `social-2027/research-log.md` — one first-party YouTube query per venue, the official pages fetched,
+  and an explicit "deliberate non-fills" list.
+- `social-2027/index.html` plus `restaurants.html`, `activities.html`, `videos.html`, `questions.html`,
+  `suggestions.html`, `flagged.html`, `sources.html`, `assets/style.css` and `assets/app.js` — a
+  self-contained, mobile-first dashboard with a filterable video table and no shared-file edits.
+
+**Verification performed:**
+1. Read `COORDINATION.md` before any work; appended this claim first and pushed it (`cc2cd97`).
+2. Read the root dataset and prior plans **without editing them**. Took the 43-venue scope and the
+   2027 star statuses from the existing verified dataset / MICHELIN's 2027 Beijing release.
+3. Discovered candidates only on YouTube's own search-results pages, one query per venue.
+4. Fetched `https://www.youtube.com/oembed?url=<exact video>&format=json` for every retained ID and
+   stored the link only when the returned title/channel matched the venue. 58 IDs passed.
+5. For hours, used only official operator/guide pages already verified in the root plan plus fresh
+   fetches of the MICHELIN list, a MICHELIN detail page and the National Museum home page. Failed
+   fetches (Temple of Heaven, 798art.org, yonghegong.cn 403) became blanks, not guesses.
+6. Ran `python3 tools/build.py && python3 tools/check.py` — PASS: 43 venues, 58 videos, 8 pages,
+   all internal links resolve and every table row has an outbound source link. Served all eight pages
+   over HTTP and confirmed 200 responses with non-empty bodies.
+7. `git pull --rebase` before pushing; no other session's files were touched.
+
+**Sources used (all linked in the site):**
+- [MICHELIN 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) — 2027 edition and 2★/5★/26★ counts.
+- [MICHELIN Beijing all-starred list](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred) — 33 names, cuisines, price bands and current tiers.
+- [MICHELIN Lamdre detail page](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lamdre) — confirmed no hours block on guide entries.
+- [YouTube search](https://www.youtube.com/results?search_query=%E6%BD%AE%E4%B8%8A%E6%BD%AE) and [YouTube oEmbed](https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=TTfH0qd79aE&format=json) — discovery plus first-party confirmation of every video row.
+- [Palace Museum visit page](https://intl.dpm.org.cn/visit.html), [Mutianyu official site](https://en.mutianyugreatwall.com/), [National Museum of China](https://www.chnmuseum.cn/) — official hours where available.
+- [Repo-root verified dataset](https://github.com/kanlerxz87-cyber/ChinaFun1/blob/main/assets/data.js) — internal cross-reference for venue scope and already-verified hour sets.
+- [US State Department China advisory](https://travel.state.gov/en/international-travel/travel-advisories/china.html) — visa context carried over from the root plan.
+
+**Irregularities logged (full detail on `flagged.html`):**
+- F01 No TikTok or Instagram link could be verified from any first-party page; both platforms left blank.
+- F02 Hours blank for 31 restaurants and 8 activities; guide entries and several operator pages publish none.
+- F03 Older videos state outdated MICHELIN counts (King's Joy called three-star; Lamdre called one-star). Video titles never override the 2027 guide.
+- F04 Branch mismatches: verified Xin Rong Ji and Chao Shang Chao videos are for the higher-star branches; one-star branches have no branch-specific video.
+- F05 Temple of Heaven and 798 fetch failures, Yonghe Temple HTTP 403.
+- F06 oEmbed proves existence and canonical title/channel only, not accuracy or review genuineness.
+- F07 National Museum home page had no hours in the captured chunk.
+- F08 Some videos cover multiple attractions; not treated as a per-venue review.
+- F09 No new menu prices collected; only the root plan's published Trb Hutong figure exists.
+- F10 Brief's preferred 3-night window conflicts with the 1–2 week requirement.
+
+**Handover / V6:** this sub-site is self-contained under `social-2027/` with relative links, so a final
+integration session can publish it as-is at `/social-2027/` from the same Pages branch. Add one navigation
+link from the repo-root landing page if desired; **this session did not edit any shared file**.
