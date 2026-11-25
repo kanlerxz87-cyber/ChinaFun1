@@ -1,8 +1,0 @@
-# GitHub Pages (Jekyll) config.
-# Keep the site buildable but do NOT let Jekyll rewrite anything.
-include:
-  - data
-exclude:
-  - tools
-  - COORDINATION.md
-  - README.md

@@ -1,57 +1,50 @@
-# China 2027 — Shanghai couple's trip plan
+# ChinaFun1 — China 2027 trip planning
 
-A research-backed trip planner for **2 adults, 15–22 February 2027** (within the wider
-2027-02-15 → 2027-03-23 window). Built to answer one question honestly: what can actually be
-verified about a Shanghai trip, and what can't?
+This repository holds **three independent research studies** for a February–March 2027 trip. They were
+produced in separate sessions and are deliberately kept apart, because they disagree with each other and
+merging them would hide that.
+
+| Path | Study | Start here |
+|------|-------|-----------|
+| `/` (root) | **Beijing** — a MICHELIN-led 7-night plan | [`index.html`](index.html) |
+| [`docs/`](docs/) | **Shanghai** — dashboard built around a 12-row starred-restaurant shortlist | [`docs/index.html`](docs/index.html) |
+| [`shanghai-2027/`](shanghai-2027/) | **Shanghai** — dashboard built around a 14-row shortlist and a published proximity model | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 
 Live site: **https://kanlerxz87-cyber.github.io/ChinaFun1/**
 
-## Pages
+## Why is there more than one Shanghai plan?
 
-| Page | What it answers |
-|------|-----------------|
-| `index.html` | Executive summary, headline recommendation, price windows |
-| `itinerary.html` | Day-by-day plan built around verified opening hours |
-| `hotels.html` | 7 hotels compared on verified 7-night totals, beds, bathrooms |
-| `restaurants.html` | 50 starred venues, shortlist of 14, star vs Guide distinction |
-| `activities.html` | Hours, closures and official links for each activity |
-| `ranking.html` | Hotels ranked by MICHELIN access, with the method disclosed |
-| `questions.html` | 14 open questions, each with a way to resolve it |
-| `suggestions.html` | 10 proposals awaiting a decision — none implemented |
-| `flagged.html` | Irregularities, conflicts and dead ends |
-| `sources.html` | Every source, what it proved, what it couldn't |
+Two sessions independently researched Shanghai and reached **different conclusions from the same
+Booking.com data**. The honest thing to do is publish both rather than pick one and present it as
+settled.
 
-## Data
+| | `docs/` | `shanghai-2027/` |
+|---|---|---|
+| Recommended hotel | Radisson Blu New World, **Junior Suite** | Radisson Blu New World, **queen room** |
+| 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius member rate; list $1,025) |
+| Starred restaurants itemised | 12 | 14 |
+| Hotel ranking | Geocoded hotels, one-hour band on 2★+ only | 5 hotels, published transit model with declared constants |
+| Restaurant cost column | — | Present, `null` + flagged for all 12 |
 
-- `data/hotels.json` — 7 hotels, 7-night totals, bed/bathroom specs, price ladder
-- `data/michelin-restaurants.json` — 14 shortlisted restaurants with star level and source
-- `data/activities.json` — activities with hours, exceptions, official and social links
-- `data/price-windows.json` — 5 date windows sampled for the best time to book
-- `data/hotel-ranking.json` — proximity model output
+**The headline disagreement:** `docs/` concludes that MICHELIN density *does not discriminate* between
+central hotels, so price and room quality should decide. `shanghai-2027/` reaches the same practical
+conclusion but measures it differently — it ranks all five geocodable hotels and shows the spread is
+only 6.6 minutes of modelled time. Both are right that the one-hour rule doesn't bind; they differ on
+which room type the $922/$1,116 gap reflects.
 
-## Model
+Neither document is wrong. They used different room categories, which is exactly the variable the
+Beijing study flags as "the real cost driver". Worth reading both price sections side by side before
+booking anything.
 
-```bash
-python3 tools/proximity_model.py
-```
+## Ground rules the studies follow
 
-Standard library only. Applies declared constants (walk 6 min, 30 km/h rail, ×1.25 detour, +6 min
-line change beyond 4 km) to MICHELIN-published restaurant coordinates and OpenStreetMap hotel
-coordinates, then writes `data/hotel-ranking.json`.
-
-**These are modelled estimates, not routed transit times** — no routing API was reachable. The
-disclosed model ranks hotels reliably against each other; it does not predict a single journey well.
-
-## Ground rules this repo follows
-
-1. Never infer a value. If an official source does not state it, the cell is blank and flagged.
-2. Cite an official source for every row, or mark it unverified.
+1. Never infer a value. If an official source doesn't state it, the cell is blank and flagged.
+2. Every table row cites a source, or is marked unverified.
 3. Distinguish *MICHELIN Guide listed* from *currently holds a star*.
-4. Show hotel costs as a 7-night total on real dates, and restaurant costs as a total for 2.
-5. Publish what could **not** be found — see `flagged.html` and `questions.html`.
+4. Hotel costs are 7-night totals on real dates; restaurant costs are totals for two.
+5. Publish what could **not** be found — see each study's flagged / open-questions page.
 
-## What is still missing
+## Coordination
 
-No restaurant publishes a menu price; 10 of 12 shortlist venues publish no hours; the Pullman
-Jing'an and Capella could not be geocoded, so the ranking excludes the cheapest option. Details and
-resolutions: `questions.html`.
+`COORDINATION.md` is the shared task board. Read it before starting work: claim a task, keep file
+scopes non-overlapping, `git pull --rebase` before pushing.
