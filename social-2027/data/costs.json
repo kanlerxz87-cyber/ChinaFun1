@@ -1,0 +1,39 @@
+{
+  "checked": "2026-11-25",
+  "session": "c2067093",
+  "count": 4,
+  "rows": [
+    {
+      "venue_id": "BJ-R29",
+      "total_for_two": "¥1,812.40 / ¥3,882.40 / ¥5,262.40",
+      "basis": "2 × ¥788 weekday lunch / 2 × ¥1,688 seasonal / 2 × ¥2,288 signature, each +15% service charge. Calculated from the operator menu; not a quoted total for two.",
+      "source_url": "https://www.trbhutong.com/menu",
+      "evidence": "Operator menu prints ¥788 / ¥1,688 / ¥2,288 per person and 'A 15% Service Charge Will Be Added'.",
+      "status": "calculated from official prices"
+    },
+    {
+      "venue_id": "BJ-A01",
+      "total_for_two": "¥80 for two (base)",
+      "basis": "2 × ¥40 low-season ticket (1 Nov–31 Mar); optional galleries +¥10 each per person, so +¥20 for two if both are added. Calculated from the official tariff; no 'couple ticket' exists.",
+      "source_url": "https://intl.dpm.org.cn/visit.html",
+      "evidence": "Official Tickets table: ¥40 low season, ¥10 Treasure Gallery, ¥10 Gallery of Clocks.",
+      "status": "calculated from official prices"
+    },
+    {
+      "venue_id": "DOC-R12",
+      "total_for_two": "¥888 (Classic Dim Sum Lunch Set for Two) or ¥2,288 (All Day Set Menu for Two)",
+      "basis": "Official set-menu PDF labels both as 'FOR TWO' and states prices are inclusive of service charge and taxes.",
+      "source_url": "https://www.langhamhotels.com/content/dam/langhamhotels/tlshx-pdfs/tang-court/2026/seasonal-set-menu-selection-2026.pdf",
+      "evidence": "PDF headings: 'CLASSIC DIM SUM LUNCH SET FOR TWO ¥888', 'ALL DAY SET MENU FOR TWO ¥2,288'.",
+      "status": "official total for two"
+    },
+    {
+      "venue_id": "DOC-A02",
+      "total_for_two": "¥60 for two",
+      "basis": "2 × ¥30 off-season adult ticket (1 Dec–31 Mar), which covers all trip dates. Calculated from the official tariff.",
+      "source_url": "https://www.yugarden.com.cn/page/articleview/message.html",
+      "evidence": "Official 豫园票价: 淡季（12月1日至3月31日）成人每位30元.",
+      "status": "calculated from official prices"
+    }
+  ]
+}

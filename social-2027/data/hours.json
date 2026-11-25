@@ -1,0 +1,103 @@
+{
+  "checked": "2026-11-25",
+  "session": "c2067093",
+  "count": 12,
+  "rows": [
+    {
+      "venue_id": "BJ-R05",
+      "days_open": "Mon–Sun",
+      "hours": "11:00–22:00",
+      "exceptions": "No closure or exception stated on the fetched MICHELIN page.",
+      "source_url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/king-s-joy",
+      "evidence": "MICHELIN page, opening-hours block: Monday–Sunday 11 AM–10 PM."
+    },
+    {
+      "venue_id": "BJ-R29",
+      "days_open": "Mon–Sun",
+      "hours": "11:30–14:30; 17:30–22:00",
+      "exceptions": "No exception stated on the operator page.",
+      "source_url": "https://www.trbhutong.com/findus",
+      "evidence": "Operator page: 'Open Monday through Sunday 11:30 AM - 2:30 PM, 5:30 PM – 10:00 PM'."
+    },
+    {
+      "venue_id": "BJ-A01",
+      "days_open": "Tue–Sun (closed Mon)",
+      "hours": "1 Nov–31 Mar: 08:30–16:30, last entry 15:30. 1 Apr–31 Oct: 08:30–17:00, last entry 16:00.",
+      "exceptions": "Monday closed except national traditional holidays; closed on Chinese New Year's Eve; 'does not sell tickets on the day of your visit'; 40,000 daily cap; passport number required for foreign visitors; may close irregularly.",
+      "source_url": "https://intl.dpm.org.cn/visit.html",
+      "evidence": "Official 'Opening Hours' and 'Tickets' tables on the Palace Museum visit page."
+    },
+    {
+      "venue_id": "BJ-A02",
+      "days_open": "Daily (off-season timetable applies 16 Nov–15 Mar)",
+      "hours": "08:00–17:30; ticket sales end 16:30; check-in 08:00–17:00.",
+      "exceptions": "Operator states off-season hours from 16 Nov to 15 Mar of the next year. Visitor-volume warnings are posted on the operator notice page.",
+      "source_url": "https://en.mutianyugreatwall.com/",
+      "evidence": "Official 'Opening Hours' block and 'Notes' line."
+    },
+    {
+      "venue_id": "DOC-R02",
+      "days_open": "Mon–Wed; Thu–Sun",
+      "hours": "Mon–Wed 18:00–21:00 (no lunch). Thu–Sun 12:00–13:30 and 18:00–21:00.",
+      "exceptions": "No closure stated; no exception stated.",
+      "source_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/8-%C2%BD-otto-e-mezzo-bombana",
+      "evidence": "MICHELIN page opening-hours block lists all seven days separately."
+    },
+    {
+      "venue_id": "DOC-R05",
+      "days_open": "Tue–Sun; closed Mon",
+      "hours": "12:00–13:30; 18:00–21:30",
+      "exceptions": "Monday shown as 'closed' on the MICHELIN page.",
+      "source_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
+      "evidence": "MICHELIN page opening-hours block: Monday 'closed', Tuesday–Sunday two services."
+    },
+    {
+      "venue_id": "DOC-R06",
+      "days_open": "Mon–Sun",
+      "hours": "11:00–13:00; 17:30–21:00",
+      "exceptions": "No closure stated on the fetched MICHELIN page.",
+      "source_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/fu-he-hui",
+      "evidence": "MICHELIN page opening-hours block lists the same sessions for all seven days."
+    },
+    {
+      "venue_id": "DOC-R12",
+      "days_open": "Mon–Sun for lunch and dinner, but off on Monday",
+      "hours": "Lunch 11:30–14:00; dinner 17:30–21:00",
+      "exceptions": "Operator states 'Off on Monday' on the same page. Reserved tables held only 15 minutes past booking; smart casual attire.",
+      "source_url": "https://www.langhamhotels.com/en/the-langham/shanghai/dine/tang-court/",
+      "evidence": "Official Langham restaurant page, HOURS and IMPORTANT NOTE sections."
+    },
+    {
+      "venue_id": "DOC-R13",
+      "days_open": "Mon–Sun",
+      "hours": "11:30–14:30; 18:00–22:30",
+      "exceptions": "No closure or exception stated on the fetched MICHELIN page.",
+      "source_url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/yi-long-court",
+      "evidence": "MICHELIN page opening-hours block lists identical sessions for all seven days."
+    },
+    {
+      "venue_id": "DOC-A02",
+      "days_open": "Tue–Sun (closed Mon)",
+      "hours": "09:00–16:30; last entry 16:00",
+      "exceptions": "Closed every Monday except national statutory holidays; during Spring Festival hours follow a separate announcement. Off-season ticket applies 1 Dec–31 Mar.",
+      "source_url": "https://www.yugarden.com.cn/page/articleview/message.html",
+      "evidence": "Official 参观信息 page: 开放时间 and 每周一闭园 lines."
+    },
+    {
+      "venue_id": "DOC-A04",
+      "days_open": "Tue–Sun (closed Mon)",
+      "hours": "Day session 09:00–17:00 (last entry 15:00); day & evening session 09:00–21:00 (last entry 19:00)",
+      "exceptions": "Closed Mondays except national holidays. During 'On Top of the World Tree' (9 Jul 2026–14 Nov 2027) this branch hosts no other exhibitions; permanent collections are at Museum East. Evening sessions follow the museum's official WeChat channel. Advance booking via WeChat Mini Program; overseas visitors may book through trip.com.",
+      "source_url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/service/visit-west",
+      "evidence": "Official visit page: 'Admission' and 'Guidelines' sections; guidelines effective 30 Jun 2026."
+    },
+    {
+      "venue_id": "VER-A02",
+      "days_open": "Wed–Mon (closed Tue)",
+      "hours": "10:00–18:00; last entry 17:00",
+      "exceptions": "Closed Tuesdays except national holidays. Individual visitors need no reservation; The Curio-City and Digital Gallery still require reservations via the museum WeChat account.",
+      "source_url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/en/service/visit-east",
+      "evidence": "Official Museum East visit page: 'Admission' and 'Guidelines'."
+    }
+  ]
+}

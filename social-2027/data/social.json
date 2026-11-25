@@ -1,0 +1,647 @@
+{
+  "checked": "2026-11-25",
+  "session": "c2067093",
+  "method": "Each URL was fetched; title, uploader and date copied from the fetched page. Search-result URLs are rejected. Creator-reported prices are never treated as official prices.",
+  "verified": [
+    {
+      "venue_id": "BJ-R01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=_fOMeu8jdCA",
+      "title": "Tour of a 3-Michelin-Star Kitchen in China's Capital",
+      "creator": "The Drunken Sommelier Food Show",
+      "published": "2026-01-10",
+      "kind": "kitchen tour",
+      "official_account": false,
+      "note": "Description names Chef Cheung's Chao Shang Chao in Beijing; not a diner review."
+    },
+    {
+      "venue_id": "BJ-R02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=6SvqIT2SW7M",
+      "title": "Must Visit 3-Michelin Stars Restaurant ’Xin Rong Ji’ in Beijing.",
+      "creator": "Ana Loh",
+      "published": "2025-02-04",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description says the chain's Beijing location holds three stars; no specific branch named."
+    },
+    {
+      "venue_id": "BJ-R04",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/cB-8dFIIl_Y",
+      "title": "I Tried a 2-Michelin-Star Royal Feast in Beijing | Jingji Restaurant Review",
+      "creator": "Bei Aiba",
+      "published": "2026-08-31",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description gives Jingji, 2F Ritz-Carlton, 83A Jianguo Road, Chaoyang."
+    },
+    {
+      "venue_id": "BJ-R05",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=TTfH0qd79aE",
+      "title": "King's Joy - Michelin 3-star vegetarian restaurant #beijing #michelin #food",
+      "creator": "Epicurean Escapes",
+      "published": "2024-04-06",
+      "kind": "short clip",
+      "official_account": false,
+      "note": "Description gives 2 Wudaoying Hutong, Dongcheng, Beijing. Upload says 3-star; the 2027 guide in this repo says Two Stars — older video, flag."
+    },
+    {
+      "venue_id": "BJ-R05",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/kingsjoy_official/",
+      "title": "King’s Joy 京兆尹 (@kingsjoy_official)",
+      "creator": "King’s Joy 京兆尹",
+      "published": "",
+      "kind": "official account",
+      "official_account": true,
+      "note": "Bio: Michelin two stars, rsvp@kingsjoy.com, +86(10)8404 9191, No.2 Wudaoying Hutong; links to kingsjoy.com. Fetched 2026-11-25."
+    },
+    {
+      "venue_id": "BJ-R06",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=PiClQQ0s_Bs",
+      "title": "Lamdre Beijing Brings Vegetarian Cuisine to New Heights 植物系料理之路，北京蘭齋將蔬食推向新高度",
+      "creator": "TastyTrip",
+      "published": "2024-02-29",
+      "kind": "restaurant feature",
+      "official_account": false,
+      "note": "Description: Lamdre, plant-based restaurant in Sanlitun, Chef Dai Jun."
+    },
+    {
+      "venue_id": "BJ-R06",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=2Rsj9Q81qAE",
+      "title": "Inside Asia's Hottest New Restaurant: Lamdre in Beijing",
+      "creator": "The 50",
+      "published": "2024-03-04",
+      "kind": "restaurant feature",
+      "official_account": false,
+      "note": "Official channel of the 50 Best brand; description names owner Zhao Jia and chef Dai Jun."
+    },
+    {
+      "venue_id": "BJ-R29",
+      "platform": "Video (CNN)",
+      "url": "https://edition.cnn.com/videos/travel-play/2018/06/22/trb-hutong-beijing-china.cnn",
+      "title": "Beijing’s beautiful TRB Hutong restaurant",
+      "creator": "CNN / Black Buddha",
+      "published": "2018-06-22",
+      "kind": "video feature",
+      "official_account": false,
+      "note": "CNN video page. Not YouTube/TikTok/Instagram: included as a supplementary video link, expressly labelled."
+    },
+    {
+      "venue_id": "BJ-A01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=yHYT3_xpOSU",
+      "title": "BEIJING 4K: Exploring the 9,999 Room Palace | Forbidden City Walk",
+      "creator": "Pathfinder CN",
+      "published": "2026-03-13",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description: filmed at The Forbidden City (Palace Museum), Beijing."
+    },
+    {
+      "venue_id": "BJ-A01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=d972yZ8bcx4",
+      "title": "The Forbidden City: China’s Legendary Imperial Palace | 4K Walking Tour",
+      "creator": "Ambient Explorers",
+      "published": "2025-03-08",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Video transcript walks the Forbidden City."
+    },
+    {
+      "venue_id": "BJ-A01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Lr-jVXDSyY0",
+      "title": "Beijing China - Forbidden City | 4K HDR Walking Tour",
+      "creator": "LADmob",
+      "published": "2025-08-22",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description names Forbidden City, Beijing."
+    },
+    {
+      "venue_id": "BJ-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=z49wo_Zki4U",
+      "title": "Unbelievable Toboggan Ride Down the Great Wall of China 4K",
+      "creator": "Yao Hui",
+      "published": "2025-07-23",
+      "kind": "activity POV",
+      "official_account": false,
+      "note": "Description names the Mutianyu section and the toboggan."
+    },
+    {
+      "venue_id": "BJ-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=kU9huPVdVlM",
+      "title": "The Ultimate Way to Leave the Great Wall of China | Great Wall Toboggan Ride",
+      "creator": "ActionKid",
+      "published": "2026-06-27",
+      "kind": "activity POV",
+      "official_account": false,
+      "note": "Transcript: 'Mutianyu section' and slideway ticket booth."
+    },
+    {
+      "venue_id": "BJ-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=D9gdGqZ0Pc0",
+      "title": "Exploring the Great Wall of China | Mutianyu East Side & Toboggan Ride",
+      "creator": "ActionKid",
+      "published": "2026-06-30",
+      "kind": "activity POV",
+      "official_account": false,
+      "note": "Description names Mutianyu East Section."
+    },
+    {
+      "venue_id": "DOC-R01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=JNpZw1f49TY",
+      "title": "Taian Table Shanghai, China Review | The Best Meal I’ve Ever Had",
+      "creator": "Oli Eatz",
+      "published": "2026-09-30",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description gives the Zhenning Road address and a 10-course menu price. Price is a creator's report, NOT an official price."
+    },
+    {
+      "venue_id": "DOC-R01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=9FbSPG4We0M",
+      "title": "I Went to CHINA for This Restaurant - Taian Table (Shanghai)",
+      "creator": "Alexander The Guest",
+      "published": "2023-09-04",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description names Taian Table and chef Stefan Stiller."
+    },
+    {
+      "venue_id": "DOC-R01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=RYsEUZJSrN8",
+      "title": "IN-DEPTH REVIEW Of Shanghai's ONLY 3 MICHELIN-STAR Restaurant",
+      "creator": "Alexander On The Road",
+      "published": "2026-07-16",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description names Taian Table; transcript shows menu 48 prices quoted by restaurant staff (creator recording, not official menu)."
+    },
+    {
+      "venue_id": "DOC-R01",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/1Z01UZSP8-w",
+      "title": "How many times did you have scrambled eggs in a 3 Michelin-starred restaurant?",
+      "creator": "Alexander The Guest",
+      "published": "2026-07",
+      "kind": "short clip",
+      "official_account": false,
+      "note": "Short description: 'This restaurant is Shanghai’s only 3 Michelin star restaurant, Taian Table.'"
+    },
+    {
+      "venue_id": "DOC-R02",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/1S18-k4lDO4",
+      "title": "Chef Nicolo Rotella's Summer Menu - 2 Michelin Star Restaurant 8½ Otto e Mezzo BOMBANA Shanghai",
+      "creator": "All4Chefs",
+      "published": "2024-07-12",
+      "kind": "chef feature",
+      "official_account": false,
+      "note": "Title and description name the Shanghai restaurant."
+    },
+    {
+      "venue_id": "DOC-R02",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/1o1ReTjMkP0",
+      "title": "Behind the doors at Otto e Mezzo Bombana Shanghai",
+      "creator": "All4Chefs",
+      "published": "2024-05-13",
+      "kind": "chef feature",
+      "official_account": false,
+      "note": "Fetched short title names the Shanghai restaurant."
+    },
+    {
+      "venue_id": "DOC-R02",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/WCAnMndg-1s",
+      "title": "The Favs Shanghai Edition: 8 1/2 Otto e Mezzo Bombana Shanghai — Nicoló",
+      "creator": "",
+      "published": "",
+      "kind": "short clip",
+      "official_account": false,
+      "note": "Fetched title names the Shanghai restaurant; no uploader/date exposed by the fetch."
+    },
+    {
+      "venue_id": "DOC-R04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=XqRipEUwYOs",
+      "title": "Canton 8 Shanghai, China Review | Most Affordable 2 Michelin Star Restaurant?",
+      "creator": "Oli Eatz",
+      "published": "2026-10-02",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description gives 63 Runan Street, Huangpu and item prices (creator-reported, not official)."
+    },
+    {
+      "venue_id": "DOC-R04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=MerTf4Wl8Gg",
+      "title": "I Tried to the World’s Cheapest 2-Star Michelin Restaurant in The World",
+      "creator": "Christian Grossi",
+      "published": "2026-01-31",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description names Canton 8 in Shanghai; price in description is creator-reported."
+    },
+    {
+      "venue_id": "DOC-R04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=5i4wIJx8Bgo",
+      "title": "Maître Kenneth Boon presents the world's cheapest 2 Michelin Star Restaurant Canton 8 in Shanghai",
+      "creator": "wbpstarscom",
+      "published": "2018-10-14",
+      "kind": "restaurant feature",
+      "official_account": false,
+      "note": "Title and transcript name Canton 8 Shanghai."
+    },
+    {
+      "venue_id": "DOC-R05",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=gaJsg5lnCvE",
+      "title": "My 27th Birthday Dinner at DA VITTORIO, Shanghai",
+      "creator": "pookpcn",
+      "published": "2023-05-07",
+      "kind": "review",
+      "official_account": false,
+      "note": "Thai-language review; title and transcript name Da Vittorio Shanghai."
+    },
+    {
+      "venue_id": "DOC-R05",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=ctWXi7a-S0E",
+      "title": "#Experience food & wine pairing with Meiyu #DAVITTORIO #SHANGHAI",
+      "creator": "Meiyu's Wine Pairing",
+      "published": "2023-10-19",
+      "kind": "event feature",
+      "official_account": false,
+      "note": "Description: Da Vittorio, Two Michelin Star restaurant in Shanghai."
+    },
+    {
+      "venue_id": "DOC-R05",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/GknYBT4BBhw",
+      "title": "TRYING TWO MICHELIN STAR in Shanghai: DA VITTORIO",
+      "creator": "asdfgvalerie",
+      "published": "2023-04-17",
+      "kind": "short clip",
+      "official_account": false,
+      "note": "Short description names Da Vittorio in Shanghai."
+    },
+    {
+      "venue_id": "DOC-R06",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=RcjG3JuE-y0",
+      "title": "Fu He Hui Shanghai, China Review | Is a 2 Michelin Star Vegetarian Tasting Menu Worth It?",
+      "creator": "Oli Eatz",
+      "published": "2026-10-15",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description gives 1037 Yuyuan Road and creator-reported menu price (not official)."
+    },
+    {
+      "venue_id": "DOC-R06",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=RS18ML_iRW0",
+      "title": "Fu He Hui Shanghai | 2 Michelin Stars & World’s 50 Best Vegetarian Fine Dining",
+      "creator": "SongieWorld",
+      "published": "2026-10-20",
+      "kind": "restaurant feature",
+      "official_account": false,
+      "note": "Description names Fu He Hui and its awards as claimed by the creator."
+    },
+    {
+      "venue_id": "DOC-R06",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=i_2WMZhuL04",
+      "title": "Shanghai's Black Pearl Guide: Is Asia's Top 50 Veg Restaurant Worth It?",
+      "creator": "Bingjie Lin",
+      "published": "2025-09-06",
+      "kind": "multi-restaurant review",
+      "official_account": false,
+      "note": "Chapters list Fu He Hui at 0:25; three other restaurants are also reviewed."
+    },
+    {
+      "venue_id": "DOC-R06",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/7APfxnHcnMw",
+      "title": "$200 For Michelin Star Vegetables, Worth It? (Fu He Hui)",
+      "creator": "Clement Leung",
+      "published": "2026-05-05",
+      "kind": "short clip",
+      "official_account": false,
+      "note": "Description gives Fu He Hui, 1037 Yuyuan Road and a creator-reported 988 RMB price."
+    },
+    {
+      "venue_id": "DOC-R07",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=XTPzS4m9ggQ",
+      "title": "This Dim Sum Experience is The Real Imperial Treasure",
+      "creator": "Black Buddha",
+      "published": "2016-07-12",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description: 'Shanghai's treasure trove of Chinese classics… Imperial Treasure.'"
+    },
+    {
+      "venue_id": "DOC-A01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=YqK30WIIvuU",
+      "title": "Shanghai The Bund Night Walk 4K | ROCKBUND | Yuyuan Mall | Suzhou Creek",
+      "creator": "Tour Walking",
+      "published": "2026-09-25",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Chapters start at 'The Bund | Nanjing Road Intersection'."
+    },
+    {
+      "venue_id": "DOC-A01",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=JzqsCnefpWk",
+      "title": "4K CHINA Walking Shanghai at Night | From Nanjing Road to The Bund",
+      "creator": "World Wanderings: 4K Walking Tours",
+      "published": "2026-01-02",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description features 'The Bund Waterfront' at 1:35:00."
+    },
+    {
+      "venue_id": "DOC-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=5rbE9xE15to",
+      "title": "Why You MUST Visit Yu Garden in Shanghai | A Local's Guide",
+      "creator": "Travel Shanghai Like a Local",
+      "published": "2026-10-14",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description and transcript focus on Yu Garden itself."
+    },
+    {
+      "venue_id": "DOC-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Ay96PAha8uQ",
+      "title": "Is Visiting Yu Garden in Shanghai REALLY Worth It?",
+      "creator": "Jimmy Visits World",
+      "published": "2025-04-07",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description names Yu Garden (Yuyuan Garden), Shanghai."
+    },
+    {
+      "venue_id": "DOC-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=K1sloREQ6bI",
+      "title": "The Fabulous YU GARDEN SHANGHAI | Watch this before you go",
+      "creator": "Paul Ifrim",
+      "published": "2023-02-04",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description and transcript name Yu Garden in Huangpu."
+    },
+    {
+      "venue_id": "DOC-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=f7ErJ2COBH4",
+      "title": "Shanghai - Walking Tour Yu Garden Yuyuan at Night",
+      "creator": "Walking Expedition",
+      "published": "2024-01-30",
+      "kind": "walking tour",
+      "official_account": false,
+      "note": "Description names Yu Garden (Yuyuan), filmed November 2023."
+    },
+    {
+      "venue_id": "DOC-A02",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Und9LL4DX2M",
+      "title": "Visiting Shanghai Yu Garden, China",
+      "creator": "More Bumps Ahead",
+      "published": "2020-12-03",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description names Yu Garden in central Shanghai."
+    },
+    {
+      "venue_id": "DOC-A03",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=kp04RPUOJ_c",
+      "title": "Shanghai Tower - Highest Observation Deck - 118th Floor",
+      "creator": "WanderFit with Kazi",
+      "published": "2019-09-06",
+      "kind": "activity POV",
+      "official_account": false,
+      "note": "Title names the Shanghai Tower 118F observation deck."
+    },
+    {
+      "venue_id": "DOC-A03",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=ujsLgyOJYeo",
+      "title": "Inside the SHANGHAI TOWER: High-Speed Elevator & 118th Floor Views!",
+      "creator": "TRAVEL AROUND THE WORLD",
+      "published": "2026-05-10",
+      "kind": "activity POV",
+      "official_account": false,
+      "note": "Description names the 118th floor, 546 m."
+    },
+    {
+      "venue_id": "DOC-A03",
+      "platform": "YouTube Short",
+      "url": "https://www.youtube.com/shorts/qb1sZXiQML4",
+      "title": "55 seconds to the 118th floor, Shanghai Observation Deck",
+      "creator": "TourChina",
+      "published": "2024-09-25",
+      "kind": "short clip",
+      "official_account": false,
+      "note": "Title names the Shanghai observation deck at 118F."
+    },
+    {
+      "venue_id": "DOC-A04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=WH24eys8xd4",
+      "title": "Shanghai Museum: Where Arts Shine | 上海博物馆2026新版宣传片",
+      "creator": "The Shanghai Museum",
+      "published": "2026-01-30",
+      "kind": "official channel",
+      "official_account": true,
+      "note": "Uploaded by the museum's own YouTube channel; description names the Shanghai Museum."
+    },
+    {
+      "venue_id": "DOC-A04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/@theshanghaimuseum",
+      "title": "The Shanghai Museum",
+      "creator": "The Shanghai Museum",
+      "published": "",
+      "kind": "official channel",
+      "official_account": true,
+      "note": "Channel page fetched; playlists include 'Treasures in Shanghai Museum' and 'The Shanghai Museum East'."
+    },
+    {
+      "venue_id": "DOC-A04",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=bqU3WbL6xac",
+      "title": "Shanghai Museum East Branch reopens",
+      "creator": "Shanghai Let's Meet",
+      "published": "2024-06-26",
+      "kind": "news feature",
+      "official_account": false,
+      "note": "About the Museum East branch specifically; the plans list both branches."
+    },
+    {
+      "venue_id": "BJ-R27",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=VX4upQGsXHI",
+      "title": "You Can’t Miss Georg Jenson’s New Design House In Beijing",
+      "creator": "Black Buddha",
+      "published": "2018-03-06",
+      "kind": "restaurant feature",
+      "official_account": false,
+      "note": "Description names The Georg, Georg Jensen's restaurant concept in Beijing."
+    },
+    {
+      "venue_id": "BJ-R29",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/trb_cn/",
+      "title": "TRB Hutong (@trb_cn)",
+      "creator": "TRB Hutong",
+      "published": "",
+      "kind": "official account",
+      "official_account": true,
+      "note": "Bio links to trbhutong.com/reservations; recent posts name TRB Hutong, Beijing and One MICHELIN Star. Fetched 2026-11-25."
+    },
+    {
+      "venue_id": "BJ-A02",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/mutianyu_greatwall_official/",
+      "title": "Mutianyu Great Wall Official (@mutianyu_greatwall_official)",
+      "creator": "Mutianyu Great Wall",
+      "published": "",
+      "kind": "official account",
+      "official_account": true,
+      "note": "Bio links to en.mutianyugreatwall.com; posts are Great Wall notices and scenery. Fetched 2026-11-25."
+    },
+    {
+      "venue_id": "DOC-R06",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/fuhehui/",
+      "title": "福和慧FU HE HUI (@fuhehui)",
+      "creator": "Fu He Hui",
+      "published": "",
+      "kind": "official account",
+      "official_account": true,
+      "note": "Bio gives YuYuan Rd No 1037, Shanghai, +862139809188 and two MICHELIN stars. Fetched 2026-11-25."
+    },
+    {
+      "venue_id": "DOC-R03",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=6zxepoFgqJk",
+      "title": "Two Michelin Star restaurant Shanghai - Bao Li Xuan in Bvlgari Hotel Shanghai 宝丽轩中餐厅",
+      "creator": "pop rainbow",
+      "published": "2019-03-29",
+      "kind": "review",
+      "official_account": false,
+      "note": "Description names Bao Li Xuan at Bvlgari Hotel Shanghai; 2019 video, older star wording."
+    },
+    {
+      "venue_id": "DOC-A03",
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@traveltomtom/video/7282390862808517920",
+      "title": "Follow me up to the observation deck of the 2nd tallest building in the world",
+      "creator": "@traveltomtom",
+      "published": "2023-09-24",
+      "kind": "activity POV",
+      "official_account": false,
+      "note": "Fetched post describes the Shanghai Tower 118F deck. Its 180 RMB ticket figure is creator-reported, NOT an official price."
+    },
+    {
+      "venue_id": "DOC-A04",
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/theshanghaimuseum/",
+      "title": "The Shanghai Museum (@theshanghaimuseum)",
+      "creator": "The Shanghai Museum",
+      "published": "",
+      "kind": "official account",
+      "official_account": true,
+      "note": "Bio: 'A museum of, and beyond, ancient Chinese art.' Posts cover both branches. Fetched 2026-11-25."
+    }
+  ],
+  "rejected": [
+    {
+      "venue_id": "BJ-R01",
+      "platform": "YouTube search URL",
+      "url": "https://www.youtube.com/results?search_query=Chao+Shang+Chao+Beijing+michelin",
+      "reason": "Result page returned a 401 banner; a different direct video was mined from the results and verified instead."
+    },
+    {
+      "venue_id": "BJ-R03",
+      "platform": "YouTube search URL",
+      "url": "https://www.youtube.com/results?search_query=Blackswan+restaurant+Beijing+Luohong+Art+Museum",
+      "reason": "Result page only; no video on it names Blackswan restaurant. No direct review verified."
+    },
+    {
+      "venue_id": "BJ-R04",
+      "platform": "YouTube search URL",
+      "url": "https://www.youtube.com/results?search_query=Jingji+restaurant+Ritz+Carlton+Beijing+michelin",
+      "reason": "Result page only; direct short mined from the results and verified instead."
+    },
+    {
+      "venue_id": "BJ-R06",
+      "platform": "YouTube search URL",
+      "url": "https://www.youtube.com/results?search_query=Lamdre+Beijing+vegan+michelin",
+      "reason": "Result page only; two direct videos mined and verified instead."
+    },
+    {
+      "venue_id": "BJ-R07",
+      "platform": "YouTube search URL",
+      "url": "https://www.youtube.com/results?search_query=Lu+Shang+Lu+Beijing+Shandong+michelin",
+      "reason": "Result page only; none of the visible results names Lu Shang Lu. No direct review verified."
+    },
+    {
+      "venue_id": "DOC-A01",
+      "platform": "YouTube search URL",
+      "url": "https://www.youtube.com/results?search_query=the+bund+shanghai+walking+tour",
+      "reason": "Result page only; two direct walks mined and verified instead."
+    },
+    {
+      "venue_id": "BJ-A01",
+      "platform": "Instagram (stale search result)",
+      "url": "https://www.instagram.com/palace_museum/",
+      "reason": "Search snippet showed an account bio, but fetching the URL returned HTTP 404. Not published."
+    },
+    {
+      "venue_id": "DOC-R12",
+      "platform": "Instagram (wrong city)",
+      "url": "https://www.instagram.com/tangcourthk/",
+      "reason": "Fetch/search identify T'ang Court @ The Langham, Hong Kong (three stars) — a different restaurant from the Shanghai two-star venue. Rejected."
+    },
+    {
+      "venue_id": "DOC-R03",
+      "platform": "YouTube search result (false match)",
+      "url": "https://www.youtube.com/watch?v=hNDCCVEb8bA",
+      "reason": "Fetched video is about Bund House in Jakarta, Indonesia. The phrase 'first restaurant in Shanghai' is a passing mention. Rejected."
+    },
+    {
+      "venue_id": "DOC-R05",
+      "platform": "Instagram (unrelated person)",
+      "url": "https://www.instagram.com/fredericjaros/",
+      "reason": "Search result is a pastry chef who formerly worked at Da Vittorio Shanghai; not the restaurant's account or a review. Rejected."
+    },
+    {
+      "venue_id": "DOC-R04",
+      "platform": "Instagram (wrong city)",
+      "url": "https://www.instagram.com/canton8cambodia/",
+      "reason": "Account is Canton 8 Cambodia, not the Shanghai restaurant. Rejected."
+    }
+  ]
+}
