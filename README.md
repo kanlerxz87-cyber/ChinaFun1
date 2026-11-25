@@ -121,5 +121,6 @@ verified without an official-source link. Suggestions on
 [suggestions.html](suggestions.html) are for review and choice before implementation — record decisions in the
 blank Decision columns and in COORDINATION.md.
 
-The repository has **no LICENSE** and **no .gitignore**; both are flagged on [flagged.html](flagged.html) for the
-maintainer to decide.
+The repository has **no LICENSE**. Choosing one is the owner’s decision, so this session did not infer one; it is
+flagged on [flagged.html](flagged.html). A `.gitignore` was added during integration after a Python byte-code cache
+was accidentally committed under `tools/`.
