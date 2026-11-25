@@ -337,7 +337,7 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 
 **Branch:** `arena/33a259ca-chinafun1`, branched from `main` @ `eda19076bc9eb4ffa267c6efb6fdc1fd00aa9c4f`
 **File scope (claimed):** `COORDINATION.md`, `README.md`, `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/data.js`, `assets/app.js`, `assets/style.css`, `data/*.json` (only if required for consistency), `.nojekyll`
-**Status:** done (pending merge/deploy)
+**Status:** done — merged and deployed
 **Intent:** Audit the published root Beijing site against the full project brief. Fill verifiable gaps (social media/review links, hours/open-days/exceptions columns, official links, pricing clarity, Michelin cluster ranking transparency, executive summary/questions/suggestions/flagged review). Do not overwrite `docs/`, `shanghai-2027/`, or `shanghai-verified-2027/`. No fabricated values; unverified fields left blank and flagged.
 
 ## Task board — session `33a259ca`
@@ -348,7 +348,7 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 | C2 | Verify/fill social links, hours, open days, official links for restaurants/activities | **done** | `assets/data.js`, `michelin.html`, `activities.html`, `assets/app.js` | Added YouTube/Instagram/TikTok search links for all MICHELIN restaurants and activities; kept/added direct review links where verified. Added Temple of Heaven and National Museum of China verified hours/official links. |
 | C3 | Hotel pricing/cluster ranking clarity & 7-night totals | **done** | `assets/data.js`, `hotels.html`, `index.html`, `assets/app.js` | Kept verified 7-night totals for 15–22 Feb 2027 (2 adults). Clarified private-bathroom note (per Booking listing, confirm before booking), bed rule, and 1-hour subway/bus transit caveat (not routed; district-count lower bound). |
 | C4 | Executive summary, questions, suggestions, flagged review | **done** | `index.html`, `decisions.html`, `suggestions.html`, `flagged.html` | Updated flagged source log and blank/irregularity notes; decisions table refreshed for new verifications; suggestions remain review-only. |
-| C5 | Build/check, PR, merge, Pages deploy | **in progress** | repo-wide verification only | JS syntax checked; internal links checked; data counts verified (33/12/10/10). |
+| C5 | Build/check, PR, merge, Pages deploy | **done** | repo-wide verification only | PR #17 https://github.com/kanlerxz87-cyber/ChinaFun1/pull/17 merged to main at 2026-11-25T22:51:45Z (merge commit a00fb02a52b4fa7a50970ca6bf7ff7c54a8bdcce). GitHub Pages build status `built` for that commit. |
 
 ## Verification log (session `33a259ca`)
 
