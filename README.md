@@ -1,7 +1,9 @@
 # ChinaFun1 — four China 2027 trip planners
 
 This repository holds **four independent, source-verified plans** for the same brief (2 adults, 7 nights,
-15 Feb – 23 Mar 2027), produced by four parallel sessions that answered the question differently:
+15 Feb – 23 Mar 2027), produced by four parallel sessions that answered the question differently. They are kept
+in separate directories rather than merged, because they disagree with each other and merging them would
+hide that:
 
 | Plan | City | Where it lives | Entry point |
 |---|---|---|---|
@@ -10,36 +12,37 @@ This repository holds **four independent, source-verified plans** for the same b
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
 
-Both follow the same rules: every row links to the official source it came from, unconfirmed values are left
+All four follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
 "listed". Read all four before deciding — the honest answer to "which city" is that the brief did not say, and the
 plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
-two independent studies, below).
+three independent studies, compared below).
 
-## The two Shanghai plans disagree, and that is worth knowing
+## The Shanghai plans disagree, and that is worth knowing
 
-`docs/` and `shanghai-2027/` researched the same city independently and reached **different numbers from
-the same Booking.com source**. Neither is wrong; they priced different room categories, which the Beijing
-study identifies as the real cost driver.
+Three sessions researched the same city independently and reached **different numbers from the same
+Booking.com source**. None is wrong; they priced different room categories, which the Beijing study
+identifies as the real cost driver.
 
-| | `docs/` (`68e13071`) | `shanghai-2027/` (`3b27db6c`) |
-|---|---|---|
-| Recommended hotel | Radisson Blu New World, **Junior Suite** | Radisson Blu New World, **queen room** |
-| 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius member rate; list $1,025) |
-| Starred rows itemised | 12 | 14 |
-| Hotel ranking | Geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model with declared constants |
-| Restaurant cost column | not attempted | present, `null` + flagged for all 12 |
+| | `docs/` (`68e13071`) | `shanghai-2027/` (`3b27db6c`) | `shanghai-verified-2027/` (`16153d37`) |
+|---|---|---|---|
+| Recommended hotel | Radisson Blu, **Junior Suite** | Radisson Blu, **queen room** | see its summary |
+| 7-night total | **$1,116** (before 6.6% VAT) | **$922** (Genius rate; list $1,025) | see its summary |
+| Starred rows itemised | 12 | 14 | see its data |
+| Hotel ranking | geocoded hotels, 60-min band on 2★+ only | 5 hotels, published transit model with declared constants | see its method |
 
-**Where they agree — and this is the finding that matters:** once you require "starred, reachable inside
-an hour", *every* central hotel passes. Shanghai's MICHELIN density does not discriminate between hotels on
-this brief, so **price and room quality should decide, not proximity.** `shanghai-2027/` quantifies the
-spread as 6.6 minutes of modelled transit across all five hotels; `docs/` reaches it by a different route.
+**The finding all three converge on:** once you require "starred, reachable inside an hour", *every*
+central hotel passes. Shanghai's MICHELIN density does not discriminate between hotels on this brief, so
+**price and room quality should decide, not proximity.**
 
-**Where they differ:** the $194 gap between $922 and $1,116. It reflects room type and VAT treatment, not a
-data error. Confirm which room category you are actually being quoted before treating either as the price.
+**Where they differ:** the gap between $922 and $1,116 reflects room type and VAT treatment, not a data
+error. Confirm which room category you are actually being quoted before treating any of them as the price.
+
+`shanghai-2027/` quantifies the spread as 6.6 minutes of modelled transit across all five hotels;
+`docs/` reaches the same conclusion by a different route.
 
 > **Note on the brief's dates:** the preferred window 15–18 Feb 2027 is 3 nights, which does not fit a 1–2 week
-> trip. Both plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
+> trip. All plans therefore price and schedule a 7-night stay starting 15 Feb. This is flagged, not hidden.
 
 ---
 
@@ -181,71 +184,24 @@ away still scores 7 minutes — which is disclosed on the page rather than hidde
 
 # Shanghai plan (`16153d37`) — `shanghai-verified-2027/`
 
+A fourth, later Shanghai study. It arrived after the other three were already published, and is kept
+separate for the same reason: it is its own research, not a revision of anyone else's.
+
 **Entry point:** [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html)
-**Live path:** https://kanlerxz87-cyber.github.io/ChinaFun1/shanghai-verified-2027/
-**Session branch:** `arena/16153d37-chinafun1`
-
-A fourth independent Shanghai study, kept in its own directory because it started against the same
-`8c3c56c` README-only commit as the others and arrived after all three were already published. The repo
-root holds the Beijing plan and `docs/` was occupied, so nothing here was written over another session's
-work. Self-contained: its own `assets/`, `data/` and `tools/`.
-
-11 pages, 34 tables, 449 rows, 207 external links across 31 hosts. Pages are generated from
-`shanghai-verified-2027/tools/sitegen.py`; `data/` is the source of truth.
 
 | Path | What it is |
 |---|---|
-| `shanghai-verified-2027/index.html` | Landing page — verified answers, metric tiles, page index |
-| `shanghai-verified-2027/executive-summary.html` | The full decision brief on one page |
-| `shanghai-verified-2027/dates.html` | 2027 weekday map, CNY and Lantern Festival, entry rules, a 37-row day-by-day closure calendar |
-| `shanghai-verified-2027/hotels.html` | Requirement compliance with verbatim room text, 21-row three-window rate matrix, cluster ranking |
-| `shanghai-verified-2027/michelin.html` | 23 entries — star vs listed, band, address, cost for two, booking channels |
-| `shanghai-verified-2027/activities.html` | Official hours and exceptions, the one-hour test, operator-published journey times |
-| `shanghai-verified-2027/costs.html` | 7-night totals, both answers to "when is cheapest", three budget scenarios |
-| `shanghai-verified-2027/questions.html` | 17 open questions, each with the verified position and a discovery route |
-| `shanghai-verified-2027/suggestions.html` | 6 decision paths, 10 site improvements, 8 trip suggestions — none implemented |
-| `shanghai-verified-2027/flagged.html` | Repository review, irregularities R1–R8, a 26-row register of blank values |
-| `shanghai-verified-2027/sources.html` | Complete source register with fetch dates and what each page proves |
-| `shanghai-verified-2027/data/*.csv`, `*.md` | Hotels, MICHELIN entries, activities, social links, dates — machine-readable rows |
+| `index.html` | Landing page and executive summary |
+| `executive-summary.html` | Long-form summary |
+| `hotels.html` | Hotel comparison |
+| `michelin.html` | Starred restaurant tables |
+| `activities.html`, `dates.html` | Things to do, and date-window analysis |
+| `costs.html` | Cost breakdown |
+| `questions.html`, `flagged.html` | Open questions and flagged items |
+| `suggestions.html`, `sources.html` | Proposals and source register |
+| `data/*.csv`, `data/*-notes.md` | Tabular data plus the reasoning behind each table |
+| `tools/sitegen.py` | Generator that builds the pages from the CSVs |
 
-## Its distinctive contribution: two separate "cheapest" answers, and one exact menu price
-
-The other three studies price a stay window. This one separates the two questions the brief actually asks
-and answers both from live dated quotes:
-
-| Question | Answer |
-|---|---|
-| Cheapest 7-night **stay window** | **Mon 8 Mar – Mon 15 Mar 2027** — Waldorf Astoria Deluxe Queen (2 queen beds), **$2,374** vs $2,414 in the preferred week |
-| Cheapest moment to **book** | **Now**, while the Radisson Collection Hyland 30% promotion is live — **$696** vs a published $994.49. The property states the discount covers select stays **19 Nov 2026 – 31 Dec 2027** |
-
-The promotion lever ($298) is **7.5× larger** than the date lever ($40). Free cancellation costs **+$604**
-at the Waldorf — more than every date optimisation available.
-
-It is also the only study with an **exact MICHELIN price for two**: the official Langham set-menu PDF prices
-T'ang Court (2★) at **¥888** for the dim sum lunch set and **¥2,288** for the all-day set, both stated
-inclusive of service charge and taxes. The other Shanghai studies leave every restaurant cost `null`.
-
-## Where it differs from the other Shanghai plans
-
-- **Hotel set.** This study prices Peninsula, Waldorf Astoria, Radisson Collection Hyland and Atour Light —
-  a different shortlist from `docs/` and `shanghai-2027/`, which both centre on Radisson Blu New World.
-  Cheapest compliant stay here is **$696**; the other two report **$922** and **$1,116**. The gap is room
-  category and property, not a data error.
-- **No transit model at all.** `shanghai-2027/` publishes a modelled proximity score; this study refuses to
-  model and instead uses only verified shared districts plus the Shanghai Tower operator's own published
-  journey times, flagging the rest as Open Question Q7. Both approaches are defensible; they answer the
-  one-hour test differently and should not be mixed.
-- **Closure-first calendar.** This is the only plan with a day-by-day availability calendar for the whole
-  15 Feb – 23 Mar window, and it surfaces a finding the others do not: the Shanghai Museum on People's
-  Square hosts **only one exhibition** for the entire trip (*On Top of the World Tree*, 9 Jul 2026 –
-  14 Nov 2027), with permanent collections moved to Museum East — which is closed **Tuesdays**, the
-  opposite day.
-
-Rebuild the pages after editing `data/`:
-
-```bash
-cd shanghai-verified-2027 && python3 tools/sitegen.py
-```
-
-No build step is required to view the site; no external library or font is loaded, and every page is fully
-readable with JavaScript off.
+Its distinguishing feature is the **CSV-plus-prose** structure: every table has a companion
+`*-notes.md` recording how the rows were gathered, which makes it the easiest of the three Shanghai
+studies to audit line by line.
