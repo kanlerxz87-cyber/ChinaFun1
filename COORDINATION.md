@@ -342,10 +342,10 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 
 | Task | Status | Owner | File scope | Notes |
 |------|--------|-------|-----------|-------|
-| R1 Repo review and requirement-gap audit | **in progress** | 013c9819 | read-only across repo; findings logged here | Reviewing existing 4 plans against the full user brief (social links, hours/open days/exceptions, official links, 1-2 week window Feb 15-Mar 23 2027 preferred Feb 15-18, 2 adults, private bath + queen+ bed, <=1h subway/bus from hotel, MICHELIN cluster ranking, starred vs listed distinction, 7-night hotel totals, cheapest booking time, real verified pricing, restaurant cost for 2 adults, mobile-friendly, exec summary, suggestions, questions/missing-info, flagged review page, verification). |
-| R2 Verification spot-checks on official sources | **in progress** | 013c9819 | read-only + `COORDINATION.md` log | Spot-check key claims against official sources where reachable; flag discrepancies. Will not invent values. |
-| R3 Site/build/link integrity check | **in progress** | 013c9819 | read-only + `COORDINATION.md` log | Run local checks/build sanity where applicable; confirm pages render and internal links resolve. |
-| R4 PR to main, merge, Pages deploy confirmation | **pending** | 013c9819 | GitHub PR/merge metadata, `COORDINATION.md` | Will create PR from integration-eligible branch state per instructions after verification/build checks pass. Flagged/unverified items will not block merge; broken build/deploy will. |
+| R1 Repo review and requirement-gap audit | **done** | 013c9819 | read-only across repo; findings logged here | Audited all 4 plans against the brief. All required artifact types exist across the repo: executive summaries, hotel/MICHELIN/activity tables, suggestions, questions/missing-info, flagged-for-review pages, source/methodology/verifications. Gaps remain (by design, flagged): many hours/addresses/social links/restaurant prices-for-2 unverified; <=1h subway/bus travel times not fully verified from routing APIs; TikTok/Instagram often unreachable; Booking/OTA pricing is not the hotel's own engine. No values invented. |
+| R2 Verification spot-checks on official sources | **done** | 013c9819 | read-only + `COORDINATION.md` log | Verified official MICHELIN Beijing & Tianjin 2027 release (https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection): 135 total establishments combined; 34 starred, 48 Bib, 52 Selected; Beijing 107 total with 2 Three-Star, 5 Two-Star, 26 One-Star, 32 Bib, 42 Selected; Chef 1996 promoted, Old Tower new One Star. Matches fac6d965 Beijing data. Verified official MICHELIN Shanghai/Jiangsu/Zhejiang 2026 ceremony page (https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang): 409 restaurants, 77 starred (1/14/62), 164 Bib, 168 Selected; Shanghai represented by 156 restaurants. Matches high-level counts cited in repo. |
+| R3 Site/build/link integrity check | **done** | 013c9819 | read-only + `COORDINATION.md` log | `python3 check.py` passed (docs): 11 pages, 187 rows, 0 broken internal links, no empty hrefs, all have title+viewport. Root internal link scan: 8 HTML files, 0 missing. Full-repo HTML internal link scan: 72 HTML files checked, 0 missing internal refs. `.nojekyll` present. GitHub Pages configured on main `/` (legacy), status built, https enforced. |
+| R4 PR to main, merge, Pages deploy confirmation | **in progress** | 013c9819 | GitHub PR/merge metadata, `COORDINATION.md` | Creating PR from `arena/013c9819-chinafun1` to `main`, then merging and confirming Pages deploy. |
 
 ### Review findings (initial)
 
@@ -353,4 +353,28 @@ Rendered with both competing sources linked on `shanghai-verified-2027/flagged.h
 - User brief requirements present across plans in varying degrees: MICHELIN starred/listed distinction, 7-night totals, date windows, social links, hours/open-days columns, official links, questions/suggestions/flagged pages, mobile layout, exec summaries. Coverage is uneven and many cells are intentionally blank/flagged (correct per verification rule).
 - Key gaps to audit against brief: (a) every restaurant/activity row having as many YouTube/TikTok/Instagram links as can be found (many rows have search links or partial coverage; TikTok/Instagram often unreachable/unverified); (b) explicit <=1h subway/bus travel-time verification from hotel to activities/restaurants (most plans flag this as modelled/unverified); (c) "cheapest upcoming time to book a hotel" with actual verified dates; (d) restaurant cost for 2 adults as total price where possible; (e) ensuring no inferred values.
 - I will not fabricate missing data. Any unresolved gap remains flagged/unverified with source/discovery notes.
+
+
+### Verification log (013c9819)
+
+| Source | What was checked | Result | Date |
+|---|---|---|---|
+| [MICHELIN Guide Unveils the 2027 Beijing & Tianjin Selection](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Official release counts for Beijing/Tianjin 2027 | Confirmed: 135 total (34 starred, 48 Bib, 52 Selected); Beijing 107 (2 Three-Star, 5 Two-Star, 26 One-Star, 32 Bib, 42 Selected); Chef 1996 promoted, Old Tower new One Star | 2026-11-25 |
+| [MICHELIN Guide Launches Its First Regional Edition for Shanghai, Jiangsu and Zhejiang](https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang) | Official ceremony/release counts for Shanghai/Jiangsu/Zhejiang 2026 | Confirmed: 409 restaurants total; 77 starred (1 Three, 14 Two, 62 One); 164 Bib, 168 Selected; Shanghai represented by 156 restaurants | 2026-11-25 |
+| [GitHub Pages API for repo](https://api.github.com/repos/kanlerxz87-cyber/ChinaFun1/pages) | Pages config/status | Confirmed: built, main `/` legacy, https enforced, public | 2026-11-25 |
+
+### Integrity checks (013c9819)
+
+- `python3 check.py` (docs, build.py/check.py by 68e13071): PASS — 11 pages, 187 rows, 0 broken internal links, no empty hrefs, title+viewport present.
+- Root HTML internal reference scan: 8 files, 0 missing.
+- Repo-wide HTML internal reference scan (root/docs/shanghai-2027/shanghai-verified-2027): 72 files, 0 missing.
+- `.nojekyll` present at repo root.
+
+### Gaps / flagged items (not fabricated, not blocking merge)
+
+- Many restaurant/activity rows across plans lack verified hours, exceptions, exact addresses, menu prices for 2 adults, or direct social-media links; these are left blank/flagged per plan rules.
+- <=1 hour subway/bus travel times from hotels to activities/restaurants are not fully verified with a routing API in any plan; some plans use disclosed models or shared-district heuristics and flag the limitation.
+- Hotel prices are OTA/Booking snapshots in most plans, not hotel-direct contracts; re-quote on hotel/official booking engine before booking.
+- TikTok/Instagram links are often unverifiable from the sandbox; plans use official/search links where available and flag uncertainty.
+- The brief's preferred window (Feb 15-18 2027, 3 nights) conflicts with 1-2 week trip length; existing plans transparently use 7-night stays and flag this.
 
