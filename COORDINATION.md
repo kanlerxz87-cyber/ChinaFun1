@@ -747,3 +747,22 @@ No mismatch was found, so no data edit was made or requested.
   (informational; does not affect the deploy). No check failures.
 - The PR changed **only** `COORDINATION.md`. No trip data, price, source link or plan page was modified;
   all E2–E4 checks in the record above were run read-only against `main` @ `acf5965` before the PR.
+
+---
+
+# Session `8f562229` — independent line-by-line audit + spot re-verification + publish pass
+
+**Branch:** `arena/8f562229-chinafun1` (branched from `main` @ `1c839f22`, rebased onto `origin/main` @ `49a2646` before work)
+**Status:** in progress
+**Intent:** Final sweep for this brief. (E1) Line-by-line audit of the published site and all generated artifacts: every internal link, every asset, every JSON/JS file, every page's tables. (E2) Spot re-verification of the load-bearing published claims against official sources, read-only. (E3) T8 — capture the remaining 23 starred-restaurant addresses/phones/hours from the official MICHELIN pages only if they are reachable; anything unconfirmable stays blank and flagged. (E4) PR, merge, confirm GitHub Pages deploy.
+
+| Task | Status | File scope | Verification |
+|------|--------|-----------|--------------|
+| E1 Repo-wide line-by-line audit | **done** | new `audit-2027/**`, `COORDINATION.md` (this section only), appended `README.md` section | re-run 2026-11-26: 55 HTML files, **777 internal refs — 0 broken / 0 empty**; all JSON parses; `node --check` clean (8 JS files); local HTTP serve 200 on all pages; root `python3 check.py` OK (187 rows); `integration-2027/tools/check.py` 0 errors; `social-2027/tools/check.py` PASS (43 venues / 58 videos); all 3 `build.py` outputs reproducible |
+| E2 Spot re-verification vs official sources | **done** | read-only; results in `audit-2027/verification-2026-11-26.md` | MICHELIN press release + all-starred list re-read; all 23 remaining restaurant pages re-read; TRB Hutong menu; Palace Museum; Mutianyu (prices still unpublished — flag kept); YouTube links injected verbatim (all oEmbed-verified by 773e75a3). Recorded with URLs and dates |
+| E3 T8 — 23 missing starred-restaurant addresses | **done** | `assets/data.js` (`MICHELIN`, `DISTRICT_STARS`), plus **consistency edits forced by the data change**: root `index.html`, `michelin.html`, `hotels.html`, `itinerary.html`, `decisions.html`, `flagged.html`, `suggestions.html`, `README.md`, `social-2027/data/content.json` + rebuilt `social-2027/questions.html` | 23/23 pages read from official MICHELIN guide pages; addresses/phones filled; hours added for Fu Chun Ju and Il Ristorante (only pages publishing them); Zhiguan Courtyard publishes no website (left blank, flagged); Gastro Esthetics DaDong phone recorded as printed (8-digit, flagged); DISTRICT_STARS recomputed → **Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1**, verified by script against row districts; hotel ranking re-rendered (Four Seasons 62.0 → Happy Dragon 35.6 → Sunworld Dynasty 33.2); 53 verified direct video links prepended to rows of 25 venues (search links retained) |
+| E4 PR + merge + Pages deploy confirmation | in progress | GitHub PR/merge metadata, `COORDINATION.md` | `gh pr merge` result + Pages status re-queried via API after merge + live URLs fetched post-deploy; filled in the follow-up commit after merge |
+
+Scope note (transparency): the root-page edits were not in the original file scope; they were required so the published site stops contradicting the newly verified data (district counts, density scores, lower-bound caveats). No dataset owned by another session was changed beyond the E3 regeneration described above; `social-2027/questions.html` was regenerated from its own `content.json` one-line fix, not hand-edited.
+
+Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Beijing Kitchen** show **¥¥** on the live guide vs **¥¥¥** in data.js (flagged on `flagged.html`); 2026 vs 2027 editions both still indexed (site uses 2027 only); King's Joy videos describe a pre-2026 3★ claim (kept, noted). Mutianyu ticket prices still not published anywhere official fetched — flag stays open. Exact restaurant bills for 32 of 33 remain unpublished — flagged. These do not block merge; they are listed on the live "Flagged for Review" page.

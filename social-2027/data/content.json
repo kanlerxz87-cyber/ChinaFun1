@@ -63,7 +63,7 @@
     {
       "id": "Q6",
       "q": "Are the shortlisted venues within 60 minutes by subway or bus from the chosen hotel?",
-      "known": "District-level counts in the root plan are a lower bound only.",
+      "known": "District-level counts in the root plan are complete as of 26 Nov 2026 (Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1, all addresses read from official MICHELIN pages).",
       "missing": "No routed journey times from any first-party journey planner.",
       "resolve": "Run a dated routing pass from the final hotel address; keep modelled minutes clearly separate from routed minutes.",
       "source": "https://intl.dpm.org.cn/visit.html"

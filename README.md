@@ -101,9 +101,13 @@ See [`flagged.html`](flagged.html) for the source-by-source log, the full list o
 irregularities. Headline caveats:
 
 - Hotel totals are Booking.com "from" rates read on **25 Nov 2026**, not a locked contract.
-- Michelin density counts cover **10 of 33** starred restaurants, so they are a lower bound.
+- Michelin density counts cover **all 33** starred restaurants (addresses verified 26 Nov 2026): Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1.
 - Transit times are deliberately **not** estimated; the ≤1-hour rule still needs a routing pass in Amap.
 
+### Audit artifacts (session `8f562229`, 2026-11-26)
+
+- [`audit-2027/missing-fields-audit.md`](audit-2027/missing-fields-audit.md) — all 23 previously unverified restaurant pages re-read on 2026-11-26; address/phone for every starred row now complete; 2 new hours records (Fu Chun Ju; Il Ristorante); known discrepancies listed, nothing inferred.
+- [`audit-2027/verification-2026-11-26.md`](audit-2027/verification-2026-11-26.md) — spot re-verification of the load-bearing published claims (MICHELIN 2027 guide, all-starred list, TRB Hutong menu, Palace Museum) with URLs and results; independent of the checks recorded by sessions `24fa9b09` and `f6189cca` on the same date.
 
 ---
 
