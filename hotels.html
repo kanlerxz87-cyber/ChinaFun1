@@ -14,9 +14,9 @@
 <div class="wrap">
   <p class="eyebrow">Hotels · multi-tier verified shortlist</p>
   <h1>12 hotels across budget, boutique &amp; 5★ luxury (15–22 Feb 2027)</h1>
-  <p class="lede">Every live-priced row below is verified on Booking.com for <strong>7 nights (15–22 February 2027), 2 adults, 1 room</strong>
-  with <strong>at least 1 queen or 1 king bed and an explicitly confirmed private/attached bathroom</strong>. Amenities, March comparison
-  windows, and verified Beijing Subway transit counts (<strong>≤1 hour</strong>) are shown alongside each rate.</p>
+  <p class="lede">Every live-priced row below was re-verified on Booking.com for <strong>7 nights (15–22 February 2027), 2 adults, 1 room</strong>
+  with <strong>at least 1 queen or 1 king bed and an explicitly confirmed private/attached bathroom</strong>. Amenities, VAT/service exclusions,
+  March comparison windows, and Rome2rio Beijing Subway transit counts (<strong>≤1 hour</strong>) are shown alongside each rate.</p>
 
   <div class="controls">
     <input id="h-search" type="search" placeholder="Filter by hotel, area, amenity or bed…" aria-label="Filter hotels">
@@ -24,6 +24,7 @@
       <option value="">All districts</option>
       <option value="Dongcheng">Dongcheng (central sights + 9★)</option>
       <option value="Chaoyang">Chaoyang (CBD/Yansha + 20★)</option>
+      <option value="Xicheng">Xicheng / Temple of Heaven border (3★)</option>
     </select>
     <select id="h-tier" aria-label="Filter by hotel tier">
       <option value="">All price tiers</option>
@@ -61,52 +62,50 @@
   <div class="grid g2">
     <div class="card">
       <h3>Why 15–22 Feb 2027 wins overall</h3>
-      <p class="sub">Across 11 live-priced properties, <strong>6 are strictly cheaper on 15–22 Feb</strong> than in early/mid-March:
-      <em>XinQiao</em> ($485 vs $511 twin), <em>Holiday Inn Express</em> ($499 vs $536 Mar 1–8 / $505 Mar 15–22),
-      <em>Sunworld Wangfujing</em> ($502 vs $581 / $590), <em>Peking Yard</em> ($1,105 vs $1,664 — entry rooms sell out in Mar),
-      <em>Four Seasons</em> ($1,751 vs $1,914), and <em>Waldorf</em> ($2,243). Two are flat (<em>NUO</em> $943, <em>Rosewood</em> $3,115).</p>
+      <p class="sub">Across 11 live-priced properties, <strong>7 are strictly cheaper on 15–22 Feb</strong> than in early March:
+      <em>Sunworld Wangfujing</em> ($502 vs $581/$590), <em>Peking Yard</em> ($1,105/$1,163 vs $1,664 — entry rooms sell out in Mar),
+      <em>Four Seasons</em> ($1,751 vs $1,914), <em>Park Hyatt</em> ($2,297 vs $2,589), <em>Waldorf</em> ($2,243 non-ref), and
+      <em>XinQiao</em> ($568 queen vs $511 twin). Two are completely flat (<em>NUO</em> $943, <em>Rosewood</em> $3,115).</p>
     </div>
     <div class="card">
-      <h3>Three properties drop slightly on 1–8 Mar 2027</h3>
-      <p class="sub">If your dates are flexible into early March: <em>The Orchid Hotel</em> drops from $1,194 (Garden Room) to
-      <strong>$1,025</strong> (Courtyard Room opens up); <em>Park Hyatt</em> dips $21–$24/wk ($2,589 non-ref / $2,876 ref); and
-      <em>The PuXuan</em> drops $311 for Genius members ($2,803 vs $3,114). Meanwhile 15–22 Feb avoids Spring Festival crowds (5–13 Feb).</p>
+      <h3>Early/mid-March tweaks &amp; room-bed caveats</h3>
+      <p class="sub"><em>The PuXuan</em> drops $311 for Genius members ($2,803 vs $3,114) in early March, and <em>Holiday Inn Express</em> dips to $505 Mar 15–22 ($536 Genius / $596 list in Feb; $499 earlier Nov 26 snapshot). At <em>The Orchid</em>, the $923/$1,025 Courtyard Room has <strong>1 full bed only</strong>, so our queen comparison prices its Garden Room ($1,194 Genius / $1,327 public). 15–22 Feb also cleanly avoids Spring Festival (5–13 Feb).</p>
     </div>
   </div>
 
-  <h2>Verified ≤1 hour Beijing Subway transit audit</h2>
+  <h2>Verified Beijing Subway transit audit (Rome2rio + 1h rule)</h2>
   <div class="tablewrap">
     <table style="min-width:720px">
       <thead><tr><th>Hotel base</th><th>To Guomao CBD★ cluster</th><th>To Temple of Heaven</th><th>To Summer Palace</th><th>To 798 Art Zone</th><th>≤1h verdict</th></tr></thead>
       <tbody>
-        <tr><td class="name">Wangfujing / Dongcheng (Sunworld, Waldorf, PuXuan, Peking Yard, XinQiao, HI Express, Orchid)</td>
+        <tr><td class="name">Wangfujing / Dongcheng / Tiantan (Sunworld, Waldorf, PuXuan, Peking Yard, XinQiao, HI Express, Orchid)</td>
           <td><strong>8–20 min</strong> (Line 1 / 5)</td>
-          <td><strong>10–30 min</strong> (Line 5 / 8)</td>
-          <td><strong>45–55 min</strong> (Line 1 → 4)</td>
-          <td><strong>~55 min</strong> (Line 1 → 14)</td>
+          <td><strong>Walk – 26 min</strong> (Line 5 / 8)</td>
+          <td><strong>51 min</strong> (Line 1 → Xidan → Line 4, Rome2rio)</td>
+          <td><strong>54 min</strong> (Line 1 → Dawanglu → Line 14, Rome2rio)</td>
           <td><span class="chip v">9/9 city sights &amp; 32/33 ★ ≤1h</span></td></tr>
         <tr><td class="name">Chaoyang CBD (Park Hyatt, Rosewood)</td>
           <td><strong>Walk – 5 min</strong></td>
           <td><strong>~30 min</strong> (Line 10 → 5)</td>
-          <td><strong>1h 05m</strong> (Line 10 → 4)</td>
+          <td><strong>58 min subway / 1h 07m bus+metro</strong> (Rome2rio)</td>
           <td><strong>~35–40 min</strong></td>
-          <td><span class="chip f">8/9 city sights (Summer Palace &gt;1h)</span></td></tr>
+          <td><span class="chip f">8–9/9 sights (Summer Palace borderline &gt;1h door-to-door)</span></td></tr>
         <tr><td class="name">Chaoyang Liangmaqiao / 798 (Four Seasons, NUO)</td>
           <td><strong>15–25 min</strong> (Line 10 / 14)</td>
           <td><strong>~35–45 min</strong></td>
-          <td><strong>~1h 05m – 1h 15m</strong></td>
+          <td><strong>~58m – 1h 15m</strong></td>
           <td><strong>10m walk (NUO) / 25m (FS)</strong></td>
-          <td><span class="chip f">7–8/9 city sights (Summer Palace &gt;1h)</span></td></tr>
+          <td><span class="chip f">7–8/9 sights (Summer Palace &gt;1h door-to-door)</span></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="callout warn">
-    <p><strong>Important caveats &amp; flags:</strong> ① Booking.com rates are live snapshots (26 Nov 2026) and several non-Member / standard
-    listings exclude 6% VAT until checkout. ② <em>Sunworld Wangfujing</em>'s cheapest $469 Annex Double has a <em>full</em> bed only, so
-    our table quotes its <strong>$502 Superior King Room</strong> to meet the queen+ requirement. ③ <strong>Courtyard 7 Hotel</strong>
-    (Nanluoguxiang) redirects to Beijing search on Booking.com for 15–22 Feb 2027 and is explicitly flagged unverified (third-party sites
-    confirm 20 rooms with private baths and ~$50–$94/nt indicative rates).</p>
+    <p><strong>Important caveats &amp; flags:</strong> ① Booking.com rates above include 10%–16.6% service charge where noted, while most
+    standard listings <strong>exclude 6% (or 6.6%) VAT</strong> until final checkout. ② <em>Sunworld Wangfujing</em>'s $502 Superior King Room
+    shows "Select your bed (if available): 1 twin bed / 1 king bed" — confirm king allocation in writing (its cheaper $469 Annex Double has a full bed only).
+    ③ <em>XinQiao</em>'s $511 room is Twin; the confirmed 1-queen room is $568 ($751 w/ breakfast; $485 earlier Partner Offer). ④ <strong>Courtyard 7 Hotel</strong>
+    redirects to city search on Booking.com for Feb 15–22, 2027 and stays flagged unverified.</p>
   </div>
 </div>
 </main>

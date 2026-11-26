@@ -1,4 +1,4 @@
-/* China 2027 Trip Planner — shared header, footer & table renderers (session 1fa0d691) */
+/* China 2027 Trip Planner — shared header, footer & table renderers (1fa0d691 + 1ac7826d) */
 const PAGES = [
   ["index.html", "Overview"],
   ["hotels.html", "Hotels"],
@@ -89,7 +89,7 @@ function renderHotels() {
 
   let rows = HOTELS.map(h => Object.assign({}, h));
 
-  if (dist) rows = rows.filter(h => h.d === dist);
+  if (dist) rows = rows.filter(h => h.d.startsWith(dist));
   if (tierFilter === "budget") rows = rows.filter(h => h.usd !== null && h.usd < 1000);
   else if (tierFilter === "boutique") rows = rows.filter(h => (h.tier || "").includes("Boutique") || (h.tier || "").includes("Courtyard"));
   else if (tierFilter === "luxury") rows = rows.filter(h => (h.tier || "").includes("5★"));
@@ -181,7 +181,7 @@ function renderMichelin() {
   if (count) {
     const withH = rows.filter(r => r.h).length;
     const withP = rows.filter(r => r.p2).length;
-    count.textContent = `Showing ${rows.length} of ${MICHELIN.length} starred restaurants · ${rows.length}/${rows.length} addresses verified · ${withH} hours · ${withP} official prices for 2`;
+    count.textContent = `Showing ${rows.length} of ${MICHELIN.length} starred restaurants · ${rows.length}/${rows.length} addresses verified · ${withH} hours · ${withP} official menus/prices`;
   }
 
   body.innerHTML = rows.map(r => {
@@ -194,12 +194,14 @@ function renderMichelin() {
       const cls = x.k.startsWith("YT search") || x.k.startsWith("IG search") ? "n" : "v";
       return `<a href="${esc(x.u)}" target="_blank" rel="noopener" class="chip ${cls}" style="margin:2px 3px 2px 0">${esc(x.k)}</a>`;
     }).join("");
+    const noteHtml = r.note ? `<span class="meta">⚑ ${esc(r.note)}</span>` : "";
     return `
       <tr>
         <td class="star">${starStr} <span class="meta">${r.s}★</span></td>
         <td class="name">
           ${esc(r.n)}
           <span class="meta">${links}</span>
+          ${noteHtml}
         </td>
         <td>${esc(r.c)}</td>
         <td><strong>${esc(r.d)}</strong></td>

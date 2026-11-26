@@ -5,7 +5,7 @@ This repository holds **four independent, source-verified trip plans** for the s
 
 | Plan | City | Where it lives | Entry point |
 |---|---|---|---|
-| `fac6d965` / `33a259ca` | **Beijing** | repo root | [`index.html`](index.html) |
+| `fac6d965` / `33a259ca` / `1ac7826d` | **Beijing** | repo root | [`index.html`](index.html) |
 | `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
@@ -109,6 +109,8 @@ irregularities. Headline caveats:
 
 - [`audit-2027/missing-fields-audit.md`](audit-2027/missing-fields-audit.md) — all 23 previously unverified restaurant pages re-read on 2026-11-26; address/phone for every starred row now complete; 2 new hours records (Fu Chun Ju; Il Ristorante); known discrepancies listed, nothing inferred.
 - [`audit-2027/verification-2026-11-26.md`](audit-2027/verification-2026-11-26.md) — spot re-verification of the load-bearing published claims (MICHELIN 2027 guide, all-starred list, TRB Hutong menu, Palace Museum) with URLs and results; independent of the checks recorded by sessions `24fa9b09` and `f6189cca` on the same date.
+
+- **Cross-site audit & correction pass (`1ac7826d`, merged on top of `origin/main` @ `179e24c`):** Re-verified all 33 MICHELIN detail pages, official dining PDFs, Booking.com room snapshots, Rome2rio routes, official attraction portals, and social URLs. Restored exact MICHELIN addresses/phones/cuisines/bands (e.g. `Chao Shang Chao` `L406B, 4F` / `+86 10 8596 2666` / fixed slug `chao-shang-chao`, `Xin Rong Ji` phones/hours, `Blackswan`, `Jingji`, `Lamdre` `Vegan`, `Lu Shang Lu` + map-pin anomaly, `Lei Garden` official hours `11:30–15:00, 17:30–22:30`, `Trb Hutong` phone), fixed broken `/visitingbeijing/touristattractions/` & `/visit/tickets_reservation/` links, corrected Temple of Heaven low-season inner-hall hours (`08:00–17:00`), removed unrelated IG post `CvC7yL1yQx7` and Shanghai-titled YT video `tIBbLQB8Ueo`, added verified YT links (`Yok9qkb4bKw`, `I9xaH24FLnc`, `jaZr6qWh0s0`, `9wni9YGzaTg`, `lC4m_VLOdCY`, `rj5Erb_3gIo`), and reconciled Booking.com live queen/king prices, VAT notes & selectable-bed caveats.
 
 ---
 
