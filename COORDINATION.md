@@ -546,3 +546,19 @@ while PR #14 was open. That session's section and `integration-2027/**` are pres
 `COORDINATION.md` conflict was resolved by keeping **all three** session logs (013c9819, 815c7943, 773e75a3).
 The overlapping claim was not visible when this session claimed on the shared base commit `eda1907`; both
 subtrees remain additive and neither edits the other's data.
+
+---
+
+# Session `60e8d054` — root discovery link for the consolidated dashboard
+
+**Branch:** `arena/60e8d054-chinafun1` (current Arena session branch; base `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Status:** in progress
+**Claimed file scope:** `COORDINATION.md`, root `index.html`, root `assets/app.js` only. This is the final-integration follow-up to the earlier request below; no datasets or existing plan sub-sites will be changed.
+
+| Task | Status | Scope | Verification |
+|---|---|---|---|
+| D1 Claim + scope | in progress | this section | Read shared task board and checked existing ownership before claiming |
+| D2 Make the consolidated decision layer discoverable from the root | unclaimed | `index.html`, `assets/app.js` | Add one clearly labeled link to `integration-2027/`; preserve the Beijing planner and its existing navigation |
+| D3 Verify build and links | unclaimed | read-only checks | Run root and integration validators and check the generated root page's link |
+| D4 Record result | unclaimed | this section | Append exact verification and note that research/prices remain owned by prior plans |
+
