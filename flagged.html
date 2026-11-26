@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Verification log &amp; flags | China 2027 planner</title>
-<meta name="description" content="Complete source-by-source audit log (26 Nov 2026), remaining unverified fields, Booking.com/MICHELIN flags, and repository PR #1–#18 history.">
+<meta name="description" content="Complete source-by-source audit log (26 Nov 2026), caught data corrections, remaining unverified fields, Booking.com/MICHELIN flags, and multi-session repo audit history.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="flagged.html">
@@ -13,10 +13,10 @@
 <main>
 <div class="wrap">
   <p class="eyebrow">Verification log · updated 26 Nov 2026</p>
-  <h1>What was verified, what remains blank, and every flag</h1>
-  <p class="lede">Every fact on this site traces directly to an official page, live Booking.com listing, or oEmbed-verified video checked
-  through <strong>26 November 2026 (session 1fa0d691)</strong>. Fields that no official source publishes remain blank and listed below —
-  never estimated.</p>
+  <h1>What was verified, what was corrected, and every remaining flag</h1>
+  <p class="lede">Every fact on this site traces directly to an official page, live Booking.com listing, Rome2rio transit timetable, or
+  oEmbed/watch-verified review checked through <strong>26 November 2026 (sessions <code>1fa0d691</code> + <code>1ac7826d</code> audit)</strong>.
+  Fields that no official source publishes remain blank and listed below — never estimated.</p>
 
   <h2>Source-by-source audit log</h2>
   <div class="tablewrap">
@@ -27,40 +27,41 @@
           <span class="meta"><a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred" target="_blank" rel="noopener">all-starred (33) ↗</a> ·
           <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/bib-gourmand" target="_blank" rel="noopener">bib-gourmand (32) ↗</a> ·
           <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/the-plate-michelin" target="_blank" rel="noopener">selected (42) ↗</a></span></td>
-          <td>All 107 Beijing 2027 venues + all 33 starred detail pages (addresses, districts, phones, websites).</td>
+          <td>All 107 Beijing 2027 venues + all 33 starred detail pages (addresses, districts, cuisines, ¥ bands, phones, websites, Guide hours).</td>
           <td>33/33 starred + 32 Bib + 42 Selected verified (Chaoyang 20, Dongcheng 9, Xicheng 3, Shunyi 1).</td>
-          <td><span class="chip v">verified</span></td></tr>
+          <td><span class="chip v">verified (33/33)</span></td></tr>
 
-        <tr><td class="name">Official restaurant sites &amp; menu PDFs
-          <span class="meta">Four Seasons (Cai Yi Xuan) · PuXuan (Fu Chun Ju) · Shangri-La (Giada Garden) · Bvlgari (Il Ristorante) · Rosewood (House of Dynasties) · TRB Hutong · King's Joy · Malay Mail (Chef 1996, Old Tower)</span></td>
+        <tr><td class="name">Official restaurant sites, PDFs &amp; press profiles
+          <span class="meta">Four Seasons (Cai Yi Xuan) · PuXuan (Fu Chun Ju PDF) · Shangri-La (Giada Garden PDF) · Bvlgari (Il Ristorante PDF) · Rosewood (House of Dynasties) · TRB Hutong · Lei Garden (leigarden.hk) · Malay Mail Jun 2026 (Chef 1996, Old Tower)</span></td>
           <td>Opening hours &amp; official set/à la carte menu pricing.</td>
-          <td>9/33 restaurant hours verified; 4/33 official menu prices for two verified.</td>
+          <td><strong>13/33 restaurant hours</strong> verified (11 official + 2 Jun 2026 Malay Mail); <strong>4/33 official menus</strong> verified.</td>
           <td><span class="chip v">partial (honest)</span></td></tr>
 
         <tr><td class="name">Booking.com — 11 live Beijing properties (Feb &amp; Mar 2027)
-          <span class="meta">Checked 2027-02-15..22, 2027-03-01..08 &amp; 2027-03-15..22 (2 adults, 1 room)</span></td>
-          <td>7-night USD rates, 1-queen/1-king beds, private/attached bathrooms, cancellation, breakfast, full amenities.</td>
-          <td>11/12 live-priced ($485–$3,115). Courtyard 7 redirected to search &amp; flagged.</td>
+          <span class="meta">Re-checked 2027-02-15..22, 2027-03-01..08 &amp; 2027-03-15..22 (2 adults, 1 room) + Four Seasons Deluxe Room page</span></td>
+          <td>7-night USD rates, 1-queen/1-king beds, private/attached bathrooms, cancellation, breakfast, full amenities, VAT/service exclusions.</td>
+          <td>11/12 live-priced ($502–$3,115 before 6%/6.6% VAT where noted). Courtyard 7 redirected to search &amp; flagged.</td>
           <td><span class="chip v">verified snapshot</span></td></tr>
 
         <tr><td class="name">Beijing Municipal Gov &amp; Official Attraction Sites
           <span class="meta"><a href="https://english.beijing.gov.cn/" target="_blank" rel="noopener">english.beijing.gov.cn ↗</a> ·
           <a href="https://intl.dpm.org.cn/visit.html" target="_blank" rel="noopener">Palace Museum ↗</a> ·
-          <a href="https://en.chnmuseum.cn/visit/tickets_reservation/" target="_blank" rel="noopener">National Museum ↗</a></span></td>
+          <a href="https://en.chnmuseum.cn/visit_692/" target="_blank" rel="noopener">National Museum ↗</a> ·
+          <a href="https://en.mutianyugreatwall.com/" target="_blank" rel="noopener">Mutianyu ↗</a></span></td>
           <td>Off-season (Nov 1 – Mar 31) hours, Monday/inner closures, low-season ticket prices, real-name reservation rules.</td>
-          <td>10 / 10 Beijing attractions verified.</td>
-          <td><span class="chip v">verified</span></td></tr>
+          <td>10 / 10 Beijing attractions verified with working URLs.</td>
+          <td><span class="chip v">verified (10/10)</span></td></tr>
 
         <tr><td class="name">Rome2rio Beijing Subway Route Checks
-          <span class="meta"><a href="https://www.rome2rio.com/s/Wangfujing-Station/Guomao-Beijing" target="_blank" rel="noopener">Wangfujing ↔ Guomao ↗</a> · Summer Palace · Temple of Heaven · 798</span></td>
-          <td>Subway travel durations for ≤1h audit (Wangfujing ↔ Guomao 8m, Summer Palace 48m, 798 55m; Guomao ↔ Summer Palace 1h 05m).</td>
-          <td>Proves Dongcheng base keeps 9/9 central sights ≤1h.</td>
-          <td><span class="chip v">verified</span></td></tr>
+          <span class="meta"><a href="https://www.rome2rio.com/s/Wangfujing-Station/Guomao-Beijing-Municipality-China" target="_blank" rel="noopener">Wangfujing ↔ Guomao (8m) ↗</a> · <a href="https://www.rome2rio.com/s/Wangfujing-Station/Summer-Palace-Beijing-Municipality-China" target="_blank" rel="noopener">Summer Palace (51m) ↗</a> · <a href="https://www.rome2rio.com/s/Wangfujing-Station/798-Art-Zone" target="_blank" rel="noopener">798 (54m) ↗</a> · <a href="https://www.rome2rio.com/s/Guomao-Beijing-Municipality-China/Summer-Palace-Beijing-Municipality-China" target="_blank" rel="noopener">Guomao ↔ Summer Palace (58m) ↗</a></span></td>
+          <td>Subway travel durations for ≤1h audit.</td>
+          <td>Proves Dongcheng base keeps 9/9 central sights ≤1h (door-to-door Amap verification still open).</td>
+          <td><span class="chip v">verified (timetable)</span></td></tr>
 
-        <tr><td class="name">oEmbed-Verified Social &amp; Video Reviews
+        <tr><td class="name">Social &amp; Video Reviews (YouTube / IG / TikTok)
           <span class="meta"><a href="social-2027/index.html">social-2027 (58 YT) ↗</a> · <a href="integration-2027/index.html">integration-2027 ↗</a></span></td>
-          <td>58 oEmbed-verified YouTube videos (25 Beijing venues) + integration-2027 YouTube reviews + Instagram (@chef1996restaurant, @oldtower_beijing, IG posts) &amp; TikTok.</td>
-          <td>All direct video links verified; search links clearly tagged.</td>
+          <td>oEmbed + watch-page verified YouTube videos across 18/33 restaurants &amp; 10/10 activities + verified IG (<code>@chef1996restaurant</code>, <code>@oldtower_beijing</code>, <code>Cq2w9ssgcDW</code>) &amp; TikTok (<code>@wadeandtaylor</code>).</td>
+          <td>Broken private, unrelated, &amp; off-city links removed; search links clearly tagged.</td>
           <td><span class="chip v">verified</span></td></tr>
       </tbody>
     </table>
@@ -71,21 +72,24 @@
     <table style="min-width:720px">
       <thead><tr><th>Field</th><th>Remaining gap</th><th>Reason</th><th>Next action</th></tr></thead>
       <tbody>
-        <tr><td class="name">Restaurant open days / hours</td><td>24 of 33 starred</td><td>MICHELIN &amp; several hotel Chinese dining pages omit hours online (some sites timed out/500).</td><td>Confirm directly via phone or concierge when booking.</td></tr>
-        <tr><td class="name">Official menu cost for 2 adults</td><td>29 of 33 starred</td><td>Only Trb Hutong, Cai Yi Xuan, Giada Garden &amp; Fu Chun Ju publish RMB menu prices officially.</td><td>Use MICHELIN ¥–¥¥¥¥ bands or request PDF menus via WeChat/concierge.</td></tr>
-        <tr><td class="name">Courtyard 7 live Feb 2027 rate</td><td>1 of 12 hotels</td><td><code>booking.com/hotel/cn/courtyard7.html</code> redirects to Beijing search for Feb 15–22, 2027.</td><td>Contact Courtyard 7 directly or choose Peking Yard / The Orchid ($1,105–$1,194).</td></tr>
-        <tr><td class="name">Mutianyu cable car / shuttle add-on</td><td>1 of 10 sights</td><td>CNY 45 wall entry is published on <code>english.beijing.gov.cn</code>; cable car &amp; toboggan add-on prices are not.</td><td>Confirm package rate with driver / hotel concierge.</td></tr>
+        <tr><td class="name">Restaurant open days / hours</td><td>20 of 33 starred</td><td>MICHELIN &amp; several hotel Chinese dining pages omit hours online (Hilton Zijin Mansion returned timeout/500).</td><td>Confirm directly via phone or concierge when booking.</td></tr>
+        <tr><td class="name">Official menu cost for 2 adults</td><td>29 of 33 starred</td><td>Only Trb Hutong, Cai Yi Xuan, Giada Garden &amp; Fu Chun Ju (à la carte PDF) publish RMB menu prices officially.</td><td>Use MICHELIN ¥–¥¥¥¥ bands or request PDF menus via WeChat/concierge.</td></tr>
+        <tr><td class="name">Courtyard 7 live Feb 2027 rate</td><td>1 of 12 hotels</td><td><code>booking.com/hotel/cn/courtyard7.html</code> redirects to Beijing search for Feb 15–22, 2027.</td><td>Contact Courtyard 7 directly or choose Peking Yard / The Orchid ($1,105–$1,327).</td></tr>
+        <tr><td class="name">Door-to-door Amap routing</td><td>Hotel × venue pairs</td><td>Rome2rio gives station-to-station subway minutes (8m/51m/54m/58m); real walking + interchange legs require live Amap/Baidu Maps.</td><td>Verify shortlisted hotel × restaurant routes in Amap before departure.</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>Irregularities &amp; booking traps flagged</h2>
+  <h2>Irregularities &amp; errors caught in audit (<code>1ac7826d</code>)</h2>
   <ul class="tight">
-    <li><strong>Sunworld Wangfujing bed trap:</strong> The cheapest $469 <em>Annex Double</em> has a <em>full</em> bed only; we quote the <strong>$502 Superior King Room</strong> so the queen+ bed rule holds.</li>
-    <li><strong>Old Tower (1★) Mon–Tue closure:</strong> Newly starred for 2027, open <strong>Wed–Sun 18:00–22:00 only</strong>. Never schedule it on Mon 15 or Tue 16 Feb.</li>
-    <li><strong>2026 vs 2027 edition drift:</strong> Older 2024–2026 vlogs call <em>King's Joy</em> 3-star or <em>Shanghai Cuisine</em> 2-star; the live 2027 Guide lists them at <strong>2★</strong> and <strong>1★</strong> respectively.</li>
-    <li><strong>Booking.com tax &amp; Genius variance:</strong> Several standard rates exclude 6% VAT until checkout; Genius/Partner discounts depend on signed-in status.</li>
-    <li><strong>Hotel star-class caution:</strong> Holiday Inn Express Temple of Heaven is 3–4★ (value IHG), Peking Yard / Orchid are 4★ boutique courtyards, XinQiao / Sunworld are 4★, and NUO / Four Seasons / Waldorf / Park Hyatt / PuXuan / Rosewood are 5★ luxury.</li>
+    <li><strong>Corrected misstated MICHELIN phones, addresses, cuisines &amp; broken Guide slug:</strong> Restored verified MICHELIN fields across <em>Chao Shang Chao (Chaoyang)</em> (<code>L406B, 4F</code>, <code>+86 10 8596 2666</code>, fixed broken slug <code>chao-shang-chao-chaoyang</code> → <code>chao-shang-chao</code>), <em>Xin Rong Ji (Xinyuan South Rd)</em> (<code>+86 10 6501 5501</code> + hours), <em>Blackswan</em> (<code>+86 10 5385 9911</code>), <em>Jingji</em> (<code>2F Ritz-Carlton</code>, <code>+86 10 5969 5698</code>), <em>Lamdre</em> (<code>Vegan</code>, <code>Room 04, 1F, Block 14</code>, <code>+86 10 8597 8888</code>), <em>Lu Shang Lu</em> (<code>2A01-2A03... Sunshine Financial Center</code>, <code>+86 10 8718 5556</code>), <em>Trb Hutong</em> (<code>+86 139 1171 2083</code>), and <em>Xin Rong Ji (Jianguomenwai &amp; Jinrong St)</em> (<code>¥¥¥</code>, verified phones &amp; Jinrong hours).</li>
+    <li><strong>Lu Shang Lu MICHELIN map embed anomaly:</strong> <code>guide.michelin.com/us/en/.../lu-shang-lu</code> embeds broken <code>maps/embed/v1/undefined</code> (and <code>/en/</code> pinned <code>39.73727,116.32824</code> in southern Beijing), conflicting with CBD Jinghui Street. Flagged in table note.</li>
+    <li><strong>Gastro Esthetics DaDong phone omission:</strong> MICHELIN prints <code>+86 51690328</code> without Beijing's <code>10</code> area code. Kept verbatim and flagged.</li>
+    <li><strong>Removed unrelated Instagram post, private video &amp; Shanghai-titled video:</strong> Prior Palace Museum IG link <code>CvC7yL1yQx7</code> resolved to an unrelated lotus photo; prior TRB Hutong video <code>Sy0Df7KVfJk</code> is private; <code>tIBbLQB8Ueo</code> is titled <code>Shanghai China</code>. All three removed; added verified YT links for Mansion Cuisine (<code>Yok9qkb4bKw</code>), Zhiguan Courtyard (<code>I9xaH24FLnc</code>), Sheng Yong Xing (<code>jaZr6qWh0s0</code>), Jingji (<code>9wni9YGzaTg</code>), and Chao Shang Chao (<code>lC4m_VLOdCY</code>).</li>
+    <li><strong>Fixed broken Beijing Gov / Museum URLs &amp; low-season Temple of Heaven hours:</strong> Replaced 404/broken <code>/visitingbeijing/touristattractions/</code> and <code>/visit/tickets_reservation/</code> paths with working <code>english.beijing.gov.cn</code> &amp; <code>en.chnmuseum.cn/visit_692/</code> pages; corrected Temple of Heaven low-season inner-hall hours from <code>08:00–18:00</code> to verified <strong><code>08:00–17:00 (last entry 16:30)</code></strong>; caught that <code>t20260320_4562533</code> is Beihai Park while Jingshan Park is <code>t20260320_4562541</code>.</li>
+    <li><strong>Hotel bed, rate &amp; VAT corrections:</strong> Verified <em>XinQiao</em>'s live 1-queen rate is <strong>$568</strong> ($751 w/ breakfast; $511 is Twin; $485 was an earlier Partner Offer); <em>HI Express</em> live Genius is <strong>$536</strong> ($596 list; $499 earlier snapshot); <em>Sunworld</em>'s $502 Superior King shows <em>"Select your bed (if available): 1 twin / 1 king"</em> (flagged to confirm in writing; $469 Annex Double has full bed only); <em>The Orchid</em>'s $1,025 Courtyard Room is 1 full bed (Queen Garden Room is $1,194/$1,327); <em>Park Hyatt</em> live Feb rate is $2,297 non-ref / $2,552 ref. Standard Booking rates exclude 6% (or 6.6% Four Seasons) VAT until checkout.</li>
+    <li><strong>Old Tower (1★) &amp; Mio (Selected) Monday-closure / schedule conflicts:</strong> Newly starred <em>Old Tower</em> is open <strong>Wed–Sun 18:00–22:00 only</strong> (per Jun 2026 <em>Malay Mail</em>). On MICHELIN Selected <em>Mio</em> (Four Seasons Beijing), <code>fourseasons.com</code> lists <strong>Tuesday–Sunday (closed Mondays)</strong> + phone <code>+86 10 5695 8522</code>, conflicting with MICHELIN's <code>Mon–Sun</code> listing (and missing <code>10</code> area code). Older 2024–2026 vlogs call <em>King's Joy</em> 3-star or <em>Lamdre</em> 1-star; live 2027 Guide lists both at 2★.</li>
+    <li><strong>Primary State Council 2027 holiday schedule verified:</strong> <a href="https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html" target="_blank" rel="noopener">english.www.gov.cn (6 Nov 2026) ↗</a> officially sets Spring Festival break as <strong>5–13 Feb 2027</strong> (nine days), confirming Monday 15 Feb lands cleanly after the national break.</li>
   </ul>
 
   <h2>Repository history &amp; multi-plan structure</h2>
@@ -93,9 +97,9 @@
     <table style="min-width:700px">
       <thead><tr><th>Component</th><th>State in repository</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td class="name">Root Beijing 2027 planner (<code>/*.html</code>, <code>assets/</code>)</td><td>Updated by session <code>1fa0d691</code> (26 Nov 2026)</td><td>Static zero-dependency HTML/CSS/JS synced to all 107 Beijing Guide venues, 12 hotels, 10 activities, and companion nav links.</td></tr>
-        <tr><td class="name">Companion sub-sites</td><td>PRs #1–#18 merged on <code>main</code></td><td><code>integration-2027/</code> (All Plans Hub), <code>social-2027/</code> (58 oEmbed videos), <code>docs/</code>, <code>shanghai-2027/</code>, and <code>shanghai-verified-2027/</code> all preserved intact.</td></tr>
-        <tr><td class="name">Validation suite</td><td><code>check.py</code>, <code>integration-2027/tools/check.py</code>, <code>social-2027/tools/check.py</code></td><td>All 3 validators verified passing cleanly alongside root HTML/JS checks.</td></tr>
+        <tr><td class="name">Root Beijing 2027 planner (<code>/*.html</code>, <code>assets/</code>)</td><td>Integrated by <code>1fa0d691</code> + audited/corrected by <code>1ac7826d</code> (26 Nov 2026)</td><td>Static zero-dependency HTML/CSS/JS synced to all 107 Beijing Guide venues, 12 multi-tier hotels, 10 activities, and companion nav links.</td></tr>
+        <tr><td class="name">Companion sub-sites &amp; audit logs</td><td><code>integration-2027/</code>, <code>social-2027/</code>, <code>docs/</code>, <code>shanghai-2027/</code>, <code>shanghai-verified-2027/</code>, <code>audit-2027/</code></td><td>Preserved intact; linked directly from every page header via the Companion Plans bar.</td></tr>
+        <tr><td class="name">Validation suite</td><td><code>check.py</code>, <code>integration-2027/tools/check.py</code>, <code>social-2027/tools/check.py</code></td><td>All 3 validators + repo-wide 55-file HTML/DOM audit pass cleanly.</td></tr>
       </tbody>
     </table>
   </div>

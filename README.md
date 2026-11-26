@@ -5,12 +5,13 @@ This repository holds **four independent, source-verified trip plans** for the s
 
 | Plan | City | Where it lives | Entry point |
 |---|---|---|---|
-| `fac6d965` / `33a259ca` | **Beijing** | repo root | [`index.html`](index.html) |
+| `fac6d965` / `33a259ca` / `1ac7826d` | **Beijing** | repo root | [`index.html`](index.html) |
 | `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
 | `815c7943` | **Cross-plan integration** | `integration-2027/` | [`integration-2027/index.html`](integration-2027/index.html) |
 | `773e75a3` | **Beijing social-review registry** | `social-2027/` | [`social-2027/index.html`](social-2027/index.html) |
+| `f8e7ee9e` | **Dual-city Beijing + Shanghai planner** | `china-2027/` | [`china-2027/index.html`](china-2027/index.html) |
 
 All four plans follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
@@ -54,11 +55,12 @@ error. Confirm which room category you are actually being quoted before treating
 
 ---
 
-# Beijing plan (`fac6d965`) — repo root
-
+# Beijing plan (`fac6d965` + `1ac7826d` integration) — repo root
 
 A static, mobile-first planning dashboard for a **7-night Beijing trip for two adults, 15–22 February 2027**
-(inside the 15 Feb – 23 Mar 2027 window), built around the MICHELIN Guide rather than around sightseeing.
+(inside the 15 Feb – 23 Mar 2027 window), built around the MICHELIN Guide rather than around sightseeing, and linked
+from its top bar to both the cross-plan comparison layer ([`integration-2027/index.html`](integration-2027/index.html))
+and the oEmbed social registry ([`social-2027/index.html`](social-2027/index.html)).
 
 **Live site:** published from the repository root via GitHub Pages.
 
@@ -67,23 +69,23 @@ A static, mobile-first planning dashboard for a **7-night Beijing trip for two a
 | Path | What it is |
 |---|---|
 | `index.html` | Executive summary and the dashboard landing page |
-| `hotels.html` | 12 Beijing hotels priced for the exact week, ranked on a published, auditable score |
-| `michelin.html` | All 33 MICHELIN-starred restaurants in Beijing 2027 with star level, price band, hours, links |
-| `activities.html` | Activities with verified/unverified flags on hours and ticket prices |
-| `itinerary.html` | 7-night day-by-day plan that respects closing days |
+| `hotels.html` | 12 Beijing hotels priced for 15–22 Feb 2027, explicit bathroom verification, ranked on a published, auditable score |
+| `michelin.html` | All 33 MICHELIN-starred restaurants (33/33 addresses/districts/phones, 10/33 hours, 4 official menus, 18/33 direct YT links) plus separate 32 Bib Gourmand & 42 MICHELIN Selected reference tables |
+| `activities.html` | All 10 Beijing attractions officially verified for Feb 2027 low-season hours, prices, reservation channels & verified videos |
+| `itinerary.html` | 7-night day-by-day plan synced to verified Monday closures and district clusters |
 | `decisions.html` | The 10 questions that block a booking, plus what is known vs unknown |
-| `suggestions.html` | Improvement proposals awaiting review — nothing applied yet |
-| `flagged.html` | Verification log, every blank field, irregularities, repository review |
+| `suggestions.html` | Improvement backlog showing completed items (#1, #8) and remaining items awaiting review |
+| `flagged.html` | Verification log, remaining blanks, newly caught anomalies, and confidence statement |
 | `assets/data.js` | The single source of truth for all rows |
 | `assets/style.css`, `assets/app.js` | Design system and table renderers (no dependencies, no build step) |
-| `COORDINATION.md` | Shared task board for parallel agent sessions |
+| `COORDINATION.md` | Shared task board across all sessions |
 
 ## Editorial rules
 
 1. Every value in every row links to the official source it came from.
 2. If a value cannot be confirmed from an official source it is **left blank and flagged** — never estimated, never inferred.
-3. Star status is stated explicitly: starred (with count) vs MICHELIN Selected vs Bib Gourmand.
-4. Hotel prices are shown as the **total for a 7-night stay**, with the room type and bed type that price actually buys.
+3. Star status is stated explicitly: starred (with count) vs Bib Gourmand (0★) vs MICHELIN Selected (0★).
+4. Hotel prices are shown as the **total for a 7-night stay**, with the room type, bed type, and individually verified bathroom note.
 5. Every change is committed to a session branch and logged in `COORDINATION.md`.
 
 ## Run locally
@@ -97,7 +99,7 @@ No build step, no package manager, no external requests at runtime.
 
 ## Verification status
 
-See [`flagged.html`](flagged.html) for the source-by-source log, the full list of blank fields and the known
+See [`flagged.html`](flagged.html) for the source-by-source log, the full list of remaining blanks and the known
 irregularities. Headline caveats:
 
 - Hotel totals are Booking.com "from" rates read on **25 Nov 2026**, not a locked contract.
@@ -108,6 +110,8 @@ irregularities. Headline caveats:
 
 - [`audit-2027/missing-fields-audit.md`](audit-2027/missing-fields-audit.md) — all 23 previously unverified restaurant pages re-read on 2026-11-26; address/phone for every starred row now complete; 2 new hours records (Fu Chun Ju; Il Ristorante); known discrepancies listed, nothing inferred.
 - [`audit-2027/verification-2026-11-26.md`](audit-2027/verification-2026-11-26.md) — spot re-verification of the load-bearing published claims (MICHELIN 2027 guide, all-starred list, TRB Hutong menu, Palace Museum) with URLs and results; independent of the checks recorded by sessions `24fa9b09` and `f6189cca` on the same date.
+
+- **Cross-site audit & correction pass (`1ac7826d`, merged on top of `origin/main` @ `179e24c`):** Re-verified all 33 MICHELIN detail pages, official dining PDFs, Booking.com room snapshots, Rome2rio routes, official attraction portals, and social URLs. Restored exact MICHELIN addresses/phones/cuisines/bands (e.g. `Chao Shang Chao` `L406B, 4F` / `+86 10 8596 2666` / fixed slug `chao-shang-chao`, `Xin Rong Ji` phones/hours, `Blackswan`, `Jingji`, `Lamdre` `Vegan`, `Lu Shang Lu` + map-pin anomaly, `Lei Garden` official hours `11:30–15:00, 17:30–22:30`, `Trb Hutong` phone), fixed broken `/visitingbeijing/touristattractions/` & `/visit/tickets_reservation/` links, corrected Temple of Heaven low-season inner-hall hours (`08:00–17:00`), removed unrelated IG post `CvC7yL1yQx7` and Shanghai-titled YT video `tIBbLQB8Ueo`, added verified YT links (`Yok9qkb4bKw`, `I9xaH24FLnc`, `jaZr6qWh0s0`, `9wni9YGzaTg`, `lC4m_VLOdCY`, `rj5Erb_3gIo`), and reconciled Booking.com live queen/king prices, VAT notes & selectable-bed caveats.
 
 ---
 
