@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Suggestions for review | China 2027 planner</title>
-<meta name="description" content="Proposed improvements to this planner, each with impact, effort and an explicit approve/hold decision so nothing is implemented unreviewed.">
+<title>Suggestions &amp; completed upgrades | China 2027 planner</title>
+<meta name="description" content="Status of planner upgrades: completed verification items vs optional polish still parked for user sign-off.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="suggestions.html">
@@ -12,108 +12,58 @@
 
 <main>
 <div class="wrap">
-  <p class="eyebrow">Review queue</p>
-  <h1>Suggestions — nothing here is implemented yet</h1>
-  <p class="lede">Everything on this page is a proposal. Each one states what it would change, what it would cost in work, and what
-  decision it is waiting for. The point of the page is that you can pick a path <em>before</em> anything is built.</p>
+  <p class="eyebrow">Planner backlog · updated 26 Nov 2026</p>
+  <h1>Upgrades completed vs optional enhancements awaiting sign-off</h1>
+  <p class="lede">Five major baseline proposals from the original review queue are now <strong>implemented and verified</strong> across this site.
+  Remaining optional enhancements stay parked below until you ask for them.</p>
 
-  <div class="callout info">
-    <p><strong>How to read the decision column.</strong> <span class="chip f">awaiting review</span> means the idea is parked here on
-    purpose. Nothing on this list has been applied to the site, so the numbers you are reading elsewhere are the un-improved baseline.</p>
-  </div>
-
-  <h2>Priority 1 — closes a real hole in the analysis</h2>
+  <h2>Completed in this planner</h2>
   <div class="tablewrap">
     <table style="min-width:820px">
-      <thead><tr><th>#</th><th>Suggestion</th><th>What it fixes</th><th>Impact</th><th>Effort</th><th>Decision</th></tr></thead>
+      <thead><tr><th>#</th><th>Item</th><th>What changed</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td class="num">1</td>
-          <td class="name">Capture the missing 23 starred-restaurant addresses</td>
-          <td>The density ranking currently counts 10 of 33 restaurants, so Dongcheng almost certainly scores higher than shown.</td>
-          <td>High — it is the single input behind the hotel ranking</td><td>~23 source reads</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">2</td>
-          <td class="name">Verify transit times in Amap for every hotel × restaurant pair</td>
-          <td>The brief's "≤1 hour" rule is currently unenforced — the columns are deliberately blank rather than guessed.</td>
-          <td>High — it is the core of the brief</td><td>High (needs China routing data)</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">3</td>
-          <td class="name">Add a weekly price tracker for the 12 hotels</td>
-          <td>"Cheapest time to book" cannot be answered from one snapshot; today the site can only say February and March are flat.</td>
-          <td>High — turns a guess into a trend line</td><td>Automated weekly scrape + history table</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">4</td>
-          <td class="name">Publish exact menu prices for the remaining starred restaurants</td>
-          <td>Only Trb Hutong publishes a price. Everything else is a ¥ band, which is not a budget.</td>
-          <td>Medium-high — needed for a meal ceiling</td><td>~10 restaurant websites / PDFs</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">1</td><td class="name">Capture all 23 missing starred-restaurant addresses</td>
+          <td>All 33/33 Beijing starred restaurants now have verified addresses, districts (Chaoyang 20, Dongcheng 9, Xicheng 3, Shunyi 1), phones, and official links.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">2</td><td class="name">Add ≤1h transit reach &amp; multi-week hotel price comparison</td>
+          <td>Checked Beijing Subway routes (Rome2rio) and multi-week Feb 15–22 vs Mar 1–8 / Mar 15–22 Booking.com rates across 11 live properties + Courtyard 7.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">3</td><td class="name">List Bib Gourmand (32) &amp; MICHELIN Selected (42) venues</td>
+          <td>All 74 non-starred 2027 Beijing Guide entries now appear on <code>michelin.html</code> in their own searchable table, clearly separated from the 33 starred kitchens.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">4</td><td class="name">Verify all 10 Beijing activities &amp; integrate oEmbed YouTube reviews</td>
+          <td>10/10 attractions verified via <code>english.beijing.gov.cn</code> &amp; official portals; 58+ verified YouTube videos from <code>social-2027</code> &amp; <code>integration-2027</code> integrated.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">5</td><td class="name">Link the Shanghai companion planners into root navigation</td>
+          <td>Unified companion-plan switcher added to every page header linking <code>integration-2027/</code>, <code>social-2027/</code>, <code>docs/</code>, <code>shanghai-2027/</code>, and <code>shanghai-verified-2027/</code>.</td>
+          <td><span class="chip v">implemented</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>Priority 2 — makes the decision easier to take</h2>
+  <h2>Optional enhancements — awaiting user request</h2>
   <div class="tablewrap">
     <table style="min-width:820px">
-      <thead><tr><th>#</th><th>Suggestion</th><th>What it fixes</th><th>Impact</th><th>Effort</th><th>Decision</th></tr></thead>
+      <thead><tr><th>#</th><th>Proposal</th><th>What it adds</th><th>Effort</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td class="num">5</td>
-          <td class="name">Add an all-in trip cost worksheet</td>
-          <td>Hotels and one restaurant are costed; airfare, visa, transport, the other meals and FX are not.</td>
-          <td>High — the only page that answers "what will this cost me"</td><td>Medium</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">6</td>
-          <td class="name">Rank restaurants by "worth the trip", not just by star count</td>
-          <td>Star count alone puts an airport-road two-star level with one inside the hutong belt.</td>
-          <td>Medium</td><td>Low — add a distance band and a cuisine-weighting slider</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">7</td>
-          <td class="name">Add a "one-star vs two-star vs three-star" expectation explainer</td>
-          <td>Readers often do not know what the tiers buy — the difference is cooking, not service or décor.</td>
-          <td>Medium</td><td>Low</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">8</td>
-          <td class="name">Show Bib Gourmand and MICHELIN Selected as their own tab</td>
-          <td>32 Bib Gourmand and 42 Selected places are counted but not listed, which hides the cheap end of the trip.</td>
-          <td>Medium</td><td>Medium</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">9</td>
-          <td class="name">Add a printable one-page pocket card</td>
-          <td>The site is good at home and awkward in a taxi with no signal.</td>
-          <td>Medium</td><td>Low</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">6</td><td class="name">Chinese names (汉字) beside every venue &amp; street</td>
+          <td>Copy-paste Chinese restaurant/hotel/street names for DiDi taxis, Amap, and WeChat mini-program bookings.</td>
+          <td>Low-medium</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">7</td><td class="name">All-in trip cost calculator (flights + visa + FX + dining)</td>
+          <td>Interactive USD/CNY budget worksheet combining chosen hotel tier, airfare, visa fees, and starred + Bib dining caps.</td>
+          <td>Medium</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">8</td><td class="name">Printable one-page taxi &amp; pocket card</td>
+          <td>Print stylesheet / compact offline PDF card for Beijing streets without VPN or signal.</td>
+          <td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">9</td><td class="name">Live Amap door-to-door matrix (all 12 × 33 pairs)</td>
+          <td>Exact time-of-day Amap driving/metro matrix once your final 1–2 hotel finalists and 5–6 dinner picks are chosen.</td>
+          <td>Medium</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">10</td><td class="name">Machine-readable JSON/CSV export of root dataset</td>
+          <td>Downloadable JSON/CSV bundle alongside <code>assets/data.js</code> for spreadsheet tracking.</td>
+          <td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
       </tbody>
     </table>
   </div>
-
-  <h2>Priority 3 — polish</h2>
-  <div class="tablewrap">
-    <table style="min-width:820px">
-      <thead><tr><th>#</th><th>Suggestion</th><th>What it fixes</th><th>Impact</th><th>Effort</th><th>Decision</th></tr></thead>
-      <tbody>
-        <tr><td class="num">10</td><td class="name">Chinese names beside every entry</td>
-        <td>Taxis, reservations and maps in China run on the Chinese name; an English-only list fails in the street.</td>
-        <td>High in practice</td><td>Low-medium</td><td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">11</td><td class="name">Colour-blind-safe status chips</td>
-        <td>The green/amber/red chips lean on hue alone; add icons for accessibility.</td>
-        <td>Low-medium</td><td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">12</td><td class="name">Offline-friendly data export (JSON + CSV)</td>
-        <td>Lets another session or tool re-verify without re-scraping.</td>
-        <td>Medium</td><td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">13</td><td class="name">Add the Shanghai / Jiangsu / Zhejiang extension properly</td>
-        <td>The regional edition has 77 stars across 409 restaurants; it is currently one paragraph, not a plan.</td>
-        <td>Medium if a split stay is chosen</td><td>High</td><td><span class="chip f">awaiting review</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Recommended path if you only approve three things</h2>
-  <ol class="tight">
-    <li><strong>#1 and #2 together</strong> — without addresses and transit times, the hotel ranking is a placeholder, not an answer.</li>
-    <li><strong>#3</strong> — a price tracker is the only honest way to answer "when should I book".</li>
-    <li><strong>#10</strong> — cheap to do and the most likely to save the trip in a taxi.</li>
-  </ol>
-  <p class="hint">Nothing above has been started. When one is approved, it gets its own line in
-  <a href="https://github.com/kanlerxz87-cyber/ChinaFun1/blob/main/COORDINATION.md" target="_blank" rel="noopener">COORDINATION.md</a> with the files it will touch, so parallel sessions cannot collide.</p>
 </div>
 </main>
 <div id="site-footer"></div>

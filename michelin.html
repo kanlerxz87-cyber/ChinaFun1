@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MICHELIN restaurants — Beijing 2027 | China 2027 planner</title>
-<meta name="description" content="All 33 MICHELIN-starred restaurants in Beijing 2027 with star level, price band, verified hours, social video links and official sources.">
+<title>MICHELIN Beijing 2027 (All 107 venues) | China 2027 planner</title>
+<meta name="description" content="All 33 MICHELIN-starred restaurants (with verified addresses, phones, 9 opening hours, 4 official menus, and social videos) plus all 32 Bib Gourmand and 42 MICHELIN Selected Beijing 2027 entries.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="michelin.html">
@@ -12,103 +12,120 @@
 
 <main>
 <div class="wrap">
-  <p class="eyebrow">MICHELIN Guide Beijing 2027</p>
-  <h1>Every starred restaurant, with its star level stated plainly</h1>
-  <p class="lede">The 2027 Beijing &amp; Tianjin selection was unveiled on 27 October 2026. Beijing accounts for
-  <strong>107 entries</strong>: 2 three-star, 5 two-star and 26 one-star restaurants — <strong>33 starred in total</strong> — plus
-  32 Bib Gourmand and 42 MICHELIN Selected.</p>
+  <p class="eyebrow">MICHELIN Guide Beijing 2027 · 107 of 107 venues</p>
+  <h1>All 33 starred kitchens + all 74 Bib Gourmand &amp; Selected entries</h1>
+  <p class="lede">The 2027 Beijing selection lists <strong>107 restaurants</strong>: <strong>33 starred</strong> (2 three-star,
+  5 two-star, 26 one-star), <strong>32 Bib Gourmand</strong>, and <strong>42 MICHELIN Selected</strong>. All 33 starred addresses,
+  districts, and phones are now verified directly from <code>guide.michelin.com</code>, alongside verified official hours (9/33),
+  official menu prices for two (4/33), and oEmbed-verified YouTube reviews &amp; Instagram handles.</p>
 
   <div class="grid g4" style="margin:16px 0">
-    <div class="card kpi"><div class="big">2</div><div class="sub">Three-star · exceptional cuisine</div></div>
-    <div class="card kpi"><div class="big">5</div><div class="sub">Two-star · excellent cooking</div></div>
-    <div class="card kpi"><div class="big">26</div><div class="sub">One-star · high quality cooking</div></div>
-    <div class="card kpi"><div class="big">32</div><div class="sub">Bib Gourmand · good food, good value</div></div>
+    <div class="card kpi"><div class="big">2</div><div class="sub">Three-star (Chaoyang ×2)</div></div>
+    <div class="card kpi"><div class="big">5</div><div class="sub">Two-star (Chaoyang ×3, Dongcheng ×1, Shunyi ×1)</div></div>
+    <div class="card kpi"><div class="big">26</div><div class="sub">One-star (Chaoyang ×15, Dongcheng ×8, Xicheng ×3)</div></div>
+    <div class="card kpi"><div class="big">32 + 42</div><div class="sub">Bib Gourmand (32) &amp; Selected (42) — Guide-listed, NOT starred</div></div>
   </div>
 
   <div class="callout">
-    <p><strong>Starred vs "listed".</strong> A restaurant in this table holds a star and the number of ★ shown is that star count.
-    The distinction the MICHELIN Guide uses for everything else is different: <em>MICHELIN Selected</em> means it appears in the guide
-    with no star (42 in Beijing), and <em>Bib Gourmand</em> is a separate value award (32 in Beijing). Bib Gourmand and Selected
-    places are <strong>not</strong> in the table below because they hold no star — they are named on the
-    <a href="flagged.html">verification log</a> with the counts verified from the official release.</p>
+    <p><strong>Starred vs Guide-listed distinction.</strong> Only the 33 restaurants in Table 1 hold MICHELIN Stars (★). The 32
+    <em>Bib Gourmand</em> (good quality, good value) and 42 <em>MICHELIN Selected</em> places in Table 2 are recommended by the
+    Guide <strong>without stars</strong> — mixing them together as "Michelin restaurants" is misleading, so they stay separated here.</p>
   </div>
 
+  <h2>1 · All 33 MICHELIN-Starred Restaurants in Beijing (2027)</h2>
   <div class="controls">
-    <input type="search" placeholder="Filter by name, cuisine or district…" data-filter-input="#michelin-table" aria-label="Filter restaurants">
+    <input id="m-search" type="search" placeholder="Filter starred by name, cuisine, street or note…" aria-label="Filter starred restaurants">
+    <select id="m-stars" aria-label="Filter by star tier">
+      <option value="">All star tiers (33)</option>
+      <option value="3">★★★ Three stars (2)</option>
+      <option value="2">★★ Two stars (5)</option>
+      <option value="1">★ One star (26)</option>
+    </select>
+    <select id="m-dist" aria-label="Filter by district">
+      <option value="">All districts</option>
+      <option value="Chaoyang">Chaoyang (20)</option>
+      <option value="Dongcheng">Dongcheng (9)</option>
+      <option value="Xicheng">Xicheng (3)</option>
+      <option value="Shunyi">Shunyi (1)</option>
+    </select>
   </div>
+  <p class="hint" id="m-count">Loading starred restaurants…</p>
 
   <div class="tablewrap">
     <table id="michelin-table">
       <thead>
         <tr>
-          <th>Restaurant</th><th>Status</th><th>Price band</th><th>District</th><th>Address</th>
-          <th>Open days / hours / exceptions</th><th>Phone</th><th>Cost for 2 adults</th><th>Social / review links (YT/TT/IG)</th><th>Official / source</th>
+          <th>Stars</th><th>Restaurant &amp; Links</th><th>Cuisine</th><th>District</th><th>Band</th>
+          <th>Verified Address &amp; Phone</th><th>Hours</th><th>Official Cost for 2</th><th>Social / Video Reviews</th>
         </tr>
       </thead>
-      <tbody id="michelin-tbody"></tbody>
+      <tbody id="michelin-body"></tbody>
     </table>
   </div>
-  <p class="hint"><span id="michelin-count">33</span> rows · sorted by star count, then name. A red "not published" chip means the
-  restaurant does not publish that field on its official MICHELIN page — it is not an omission on our side.</p>
 
-  <h2>Price for two — what is actually published</h2>
-  <p>The MICHELIN Guide publishes a <strong>price band</strong> (¥ to ¥¥¥¥), not a bill. Only one starred restaurant in this set
-  publishes exact menu prices on its own website, so only one exact "for two" figure exists:</p>
+  <h2>Official published menu prices for two adults (4 of 33 verified)</h2>
   <div class="tablewrap">
-    <table style="min-width:600px">
-      <thead><tr><th>Restaurant</th><th>Official menu price (per person)</th><th>For two adults</th><th>Source</th></tr></thead>
+    <table style="min-width:640px">
+      <thead><tr><th>Restaurant</th><th>Official menu pricing</th><th>Estimated total for 2 adults</th><th>Official source</th></tr></thead>
       <tbody>
-        <tr><td class="name">Trb Hutong (1★)</td><td>Weekday business lunch ¥788 · Seasonal menu ¥1,688 · Premium signature ¥2,288</td>
-            <td><strong>¥3,882</strong> (Seasonal ×2 = ¥3,376 + 15% service)</td>
-            <td><a href="https://www.trbhutong.com/menu" target="_blank" rel="noopener">trbhutong.com/menu ↗</a></td></tr>
-        <tr><td class="name">All other starred restaurants</td><td>Not published on an official page in this pass</td>
-            <td><span class="chip u">left blank</span></td><td>—</td></tr>
+        <tr><td class="name">Fu Chun Ju (1★ · Dongcheng)</td>
+            <td>À la carte ¥68–¥598 + 15% service charge (dim sum &amp; mains)</td>
+            <td><strong>~¥600–¥1,400</strong> for two depending on selections</td>
+            <td><a href="https://thepuxuan.com/en/beijing-wangfujing-luxury-hotel-dining/cantonese-cuisine-fu-chun-ju-restaurant/" target="_blank" rel="noopener">The PuXuan Menu PDF ↗</a></td></tr>
+        <tr><td class="name">Cai Yi Xuan (1★ · Chaoyang)</td>
+            <td>Taste of Cai Yi Xuan Set Menu for Two: CNY 1,688 + 10% svc + 6% tax</td>
+            <td><strong>CNY 1,968</strong> for two (all-in)</td>
+            <td><a href="https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan/" target="_blank" rel="noopener">Four Seasons Beijing ↗</a></td></tr>
+        <tr><td class="name">Trb Hutong (1★ · Dongcheng)</td>
+            <td>Seasonal Tasting ¥1,688/p (+15% svc); Weekday lunch ¥788/p; Signature ¥2,288/p</td>
+            <td><strong>¥3,882</strong> for two (Seasonal tasting + 15% svc)</td>
+            <td><a href="https://trbhutong.com/" target="_blank" rel="noopener">trbhutong.com ↗</a></td></tr>
+        <tr><td class="name">Giada Garden (1★ · Chaoyang)</td>
+            <td>Degustation Menu RMB 1,988/p (optional RMB 988/p wine pairing)</td>
+            <td><strong>RMB 3,976</strong> for two (food only)</td>
+            <td><a href="https://www.shangri-la.com/beijing/chinaworld/dining/restaurants/giada-garden/" target="_blank" rel="noopener">Shangri-La Menu PDF ↗</a></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="hint">We deliberately did not convert the ¥ bands into cash totals: a band is not a price, and inventing one would be a
-  guess. The MICHELIN band is shown instead, and the exact figure is flagged open on the <a href="decisions.html">questions page</a>.</p>
+  <p class="hint">The remaining 29 starred restaurants do not publish official menu pricing online and show their MICHELIN ¥–¥¥¥¥ band only.</p>
 
-  <h2>The clusters — where the stars physically are</h2>
+  <h2>Complete verified district cluster map (33 / 33)</h2>
   <div class="grid g2">
     <div class="card">
-      <h3>Chaoyang — 6 verified stars</h3>
-      <p class="sub"><strong>★★★</strong> Chao Shang Chao (Chaoyang) · CP Center, 20 Jinhe East Road<br>
-      <strong>★★★</strong> Xin Rong Ji (Xinyuan South Road) · Genesis Beijing, 8 Xinyuan South Road<br>
-      <strong>★★</strong> Jingji · Ritz-Carlton, 83A Jianguo Road<br>
-      <strong>★★</strong> Lamdre · Gongti North Road (Workers' Stadium)<br>
-      <strong>★★</strong> Lu Shang Lu · Sunshine Financial Center, 33 Jinghui Street<br>
-      <strong>★</strong> Xin Rong Ji (Jianguomenwai Street) · Yintai Centre, 2 Jianguomenwai Street</p>
+      <h3>Chaoyang — 20 starred (2×3★ · 3×2★ · 15×1★)</h3>
+      <p class="sub"><strong>★★★:</strong> Chao Shang Chao (Chaoyang), Xin Rong Ji (Xinyuan South Rd)<br>
+      <strong>★★:</strong> Jingji, Lamdre, Lu Shang Lu<br>
+      <strong>★:</strong> Cai Yi Xuan, Chef 1996, Giada Garden, Il Ristorante – Niko Romito, Lu Style (Anding Rd), MO Jasmine, Old Tower (closed Mon–Tue), Poetry·Wine, Rong Pao, Seventh Son, Shanghai Cuisine, Sheng Yong Xing (Chaoyang), The Beijing Kitchen, The House of Dynasties, Xin Rong Ji (Jianguomenwai St)</p>
     </div>
     <div class="card">
-      <h3>Dongcheng — 2 verified stars</h3>
-      <p class="sub"><strong>★★</strong> King's Joy · 2 Wudaoying Hutong, next to Yonghe Temple<br>
-      <strong>★</strong> Trb Hutong · 23 Shatan North Street, inside a 600-year-old temple courtyard</p>
-      <h3 style="margin-top:14px">Xicheng — 1 verified star</h3>
-      <p class="sub"><strong>★</strong> Xin Rong Ji (Jinrong Street) · B1, International Finance Centre, 11 Jinrong Street</p>
-      <h3 style="margin-top:14px">Shunyi — 1 verified star</h3>
-      <p class="sub"><strong>★★</strong> Blackswan · 1F Luohong Art Museum, 89 Capital Airport Road — outside the central core</p>
+      <h3>Dongcheng — 9 starred (1×2★ · 8×1★)</h3>
+      <p class="sub"><strong>★★:</strong> King's Joy (Wudaoying Hutong)<br>
+      <strong>★:</strong> Fu Chun Ju (PuXuan), Gastro Esthetics DaDong (Nanxincang), Lei Garden (Jinbao Tower), Mansion Cuisine by Jingyan, The Georg, Trb Hutong, Zhiguan Courtyard, Zijin Mansion (Waldorf Astoria)</p>
+      <h3 style="margin-top:12px">Xicheng — 3 starred (3×1★) &amp; Shunyi — 1 starred (1×2★)</h3>
+      <p class="sub"><strong>Xicheng ★:</strong> Chao Shang Chao (Xicheng), Furong, Xin Rong Ji (Jinrong St) — all on Financial Street.<br>
+      <strong>Shunyi ★★:</strong> Blackswan (Airport Road — road excursion).</p>
     </div>
   </div>
 
-  <div class="callout warn">
-    <p><strong>Coverage flag.</strong> These counts cover only the 10 restaurants whose address is verified. 23 starred restaurants
-    still show a blank district/address above, and they are almost certainly concentrated in Chaoyang and Dongcheng too. Treat the
-    cluster map as a lower bound until that capture is finished.</p>
+  <h2>2 · Bib Gourmand (32) &amp; MICHELIN Selected (42) — Non-Starred Guide Entries</h2>
+  <div class="controls">
+    <input id="ml-search" type="search" placeholder="Filter Bib Gourmand &amp; Selected by name or cuisine…" aria-label="Filter non-starred Guide restaurants">
+    <select id="ml-tier" aria-label="Filter by Guide award">
+      <option value="">All 74 non-starred venues</option>
+      <option value="Bib Gourmand">Bib Gourmand only (32)</option>
+      <option value="MICHELIN Selected">MICHELIN Selected only (42)</option>
+    </select>
   </div>
+  <p class="hint" id="ml-count">Loading Bib Gourmand &amp; Selected…</p>
 
-  <h2>What changed in the 2027 edition</h2>
-  <ul class="tight">
-    <li><strong>New stars:</strong> Chef 1996 (promoted from Selected to One Star, Sichuan) and Old Tower (One Star on debut,
-      contemporary pescatarian tasting menus from chef Talib Hudda).</li>
-    <li><strong>Retained three stars:</strong> Chao Shang Chao (Chaoyang) and Xin Rong Ji (Xinyuan South Road).</li>
-    <li><strong>Retained two stars:</strong> Blackswan, Jingji, King's Joy, Lamdre, Lu Shang Lu.</li>
-    <li><strong>Moved down a tier:</strong> Shanghai Cuisine held Two Stars in the 2026 edition (confirmed in the official 2026
-      release) and appears as a One Star in the current 2027 listing. Chao Shang Chao (Xicheng) was newly awarded One Star in 2026 and
-      keeps that One Star in 2027.</li>
-    <li><strong>New to the guide entirely:</strong> Tianjin, released alongside Beijing with 27 restaurants including one star
-      (China Banquet). It is connected to Beijing by high-speed rail, which makes it a plausible day trip — the timetable was not verified in this pass.</li>
-  </ul>
+  <div class="tablewrap">
+    <table id="michelin-listed-table">
+      <thead>
+        <tr><th>Award (Not Starred)</th><th>Restaurant</th><th>Cuisine</th><th>Band</th><th>Official Guide Link</th></tr>
+      </thead>
+      <tbody id="michelin-listed-body"></tbody>
+    </table>
+  </div>
 </div>
 </main>
 <div id="site-footer"></div>

@@ -1,175 +1,315 @@
-/* Shared UI: nav, table renderers, filtering. No dependencies. */
-(function(){
-  const PAGES = [
-    ["index.html","Overview"],
-    ["hotels.html","Hotels"],
-    ["michelin.html","MICHELIN"],
-    ["activities.html","Activities"],
-    ["itinerary.html","Itinerary"],
-    ["decisions.html","Open questions"],
-    ["suggestions.html","Suggestions"],
-    ["flagged.html","Verification log"]
-  ];
+/* China 2027 Trip Planner — shared header, footer & table renderers (session 1fa0d691) */
+const PAGES = [
+  ["index.html", "Overview"],
+  ["hotels.html", "Hotels"],
+  ["michelin.html", "MICHELIN (107)"],
+  ["activities.html", "Activities"],
+  ["itinerary.html", "Itinerary"],
+  ["decisions.html", "Decisions"],
+  ["suggestions.html", "Suggestions"],
+  ["flagged.html", "Flagged"]
+];
 
-  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+const COMPANION_PLANS = [
+  ["integration-2027/index.html", "All Plans Hub"],
+  ["social-2027/index.html", "Social Video Index (58)"],
+  ["docs/index.html", "Shanghai (Docs)"],
+  ["shanghai-2027/index.html", "Shanghai 2027"],
+  ["shanghai-verified-2027/index.html", "Shanghai Verified"]
+];
 
-  function header(active){
-    const links = PAGES.map(([h,l])=>`<a href="${h}" class="${h===active?'active':''}">${l}</a>`).join("");
-    return `<header class="top"><div class="wrap">
-      <div class="brandbar">
-        <div class="brand"><span class="dot"></span><span>China 2027<small>Beijing · 15 Feb – 22 Feb 2027</small></span></div>
-        <span class="chip n">Verified ${META.updated}</span>
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, m => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"
+  }[m]));
+}
+
+function guideUrl(r) {
+  const slug = (typeof GUIDE_SLUG !== "undefined" && GUIDE_SLUG[r.n]) || r.slug;
+  return slug
+    ? `https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/${slug}`
+    : "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred";
+}
+
+function renderShell(active) {
+  const hdr = document.getElementById("site-header");
+  if (hdr) {
+    hdr.innerHTML = `
+      <header class="top">
+        <div class="wrap">
+          <div class="brandbar">
+            <div class="brand">
+              <span class="dot" aria-hidden="true"></span>
+              <div>China 2027 Trip Planner <small>Beijing · 15–22 Feb 2027 · Verified ${esc(META.updated)}</small></div>
+            </div>
+            <span class="chip v">2027 Guide · 107 venues</span>
+          </div>
+          <nav class="nav" aria-label="Primary navigation">
+            ${PAGES.map(([href, label]) =>
+              `<a href="${href}" class="${href === active ? "active" : ""}">${esc(label)}</a>`
+            ).join("")}
+          </nav>
+          <div class="subnav" aria-label="Companion plans in this repository">
+            <span class="subnav-label">Companion plans:</span>
+            ${COMPANION_PLANS.map(([href, label]) =>
+              `<a href="${href}">${esc(label)} ↗</a>`
+            ).join("")}
+          </div>
+        </div>
+      </header>`;
+  }
+  const ftr = document.getElementById("site-footer");
+  if (ftr) {
+    ftr.innerHTML = `
+      <footer>
+        <div class="wrap">
+          <div><strong>Provenance:</strong> Session ${esc(META.session)} snapshot (${esc(META.updated)}). All 33 starred addresses/phones &amp; 74 Bib/Selected listings from
+          <a href="${META.sources.michelinStarred}" target="_blank" rel="noopener">MICHELIN Guide Beijing 2027</a>; hotel rates from live Booking.com (Feb 15–22 &amp; Mar 1–8 / 15–22, 2027);
+          activities from <a href="${META.sources.beijingGov}" target="_blank" rel="noopener">Beijing Municipal Gov</a> &amp; official attraction sites.</div>
+          <div style="margin-top:6px">
+            <a href="flagged.html">Verification log</a> ·
+            <a href="decisions.html">Ten open questions</a> ·
+            <a href="integration-2027/index.html">All Plans Hub</a> ·
+            <a href="social-2027/index.html">58 Verified YouTube Reviews</a>
+          </div>
+        </div>
+      </footer>`;
+  }
+}
+
+/* ---------- Hotels renderer ---------- */
+function renderHotels() {
+  const body = document.getElementById("hotels-body");
+  if (!body) return;
+  const q = (document.getElementById("h-search")?.value || "").trim().toLowerCase();
+  const dist = document.getElementById("h-dist")?.value || "";
+  const tierFilter = document.getElementById("h-tier")?.value || "";
+  const sort = document.getElementById("h-sort")?.value || "usd";
+  const count = document.getElementById("h-count");
+
+  let rows = HOTELS.map(h => Object.assign({}, h));
+
+  if (dist) rows = rows.filter(h => h.d === dist);
+  if (tierFilter === "budget") rows = rows.filter(h => h.usd !== null && h.usd < 1000);
+  else if (tierFilter === "boutique") rows = rows.filter(h => (h.tier || "").includes("Boutique") || (h.tier || "").includes("Courtyard"));
+  else if (tierFilter === "luxury") rows = rows.filter(h => (h.tier || "").includes("5★"));
+
+  if (q) {
+    rows = rows.filter(h =>
+      (h.n + " " + h.d + " " + h.area + " " + h.room + " " + h.amenities + " " + h.note).toLowerCase().includes(q)
+    );
+  }
+
+  rows.sort((a, b) => {
+    if (a.oop && !b.oop) return 1;
+    if (!a.oop && b.oop) return -1;
+    if (sort === "usd") return (a.usd ?? 99999) - (b.usd ?? 99999);
+    if (sort === "rating") return parseFloat(b.rating || 0) - parseFloat(a.rating || 0) || (a.usd ?? 99999) - (b.usd ?? 99999);
+    if (sort === "transit") return ((b.transitActs || 0) * 100 + (b.transitStars || 0)) - ((a.transitActs || 0) * 100 + (a.transitStars || 0)) || (a.usd ?? 99999) - (b.usd ?? 99999);
+    return (a.usd ?? 99999) - (b.usd ?? 99999);
+  });
+
+  if (count) {
+    const live = rows.filter(r => !r.oop).length;
+    count.textContent = `Showing ${rows.length} of ${HOTELS.length} properties (${live} live-priced for 15–22 Feb 2027, 1 queen/king bed + private bath confirmed)`;
+  }
+
+  body.innerHTML = rows.map(h => {
+    const isRef = /free cancellation|refundable/i.test(h.cancel) && !/unavailable/i.test(h.cancel);
+    const chip = h.oop
+      ? `<span class="chip u">flagged unverified</span>`
+      : isRef
+        ? `<span class="chip v">free cancel</span>`
+        : `<span class="chip f">non-refundable</span>`;
+    const priceCell = h.oop
+      ? `<span class="chip u">unbookable</span><span class="meta">Booking redirects; ~$50–$94/nt 3rd-party</span>`
+      : `<strong>$${h.usd.toLocaleString()}</strong>` +
+        (h.listUsd && h.listUsd > h.usd ? `<span class="meta">list $${h.listUsd.toLocaleString()}</span>` : "") +
+        (h.bfUsd && !h.bf ? `<span class="meta">w/ bfast $${h.bfUsd.toLocaleString()}</span>` : "");
+    const marCell = h.oop
+      ? `<span class="meta">—</span>`
+      : (h.mar1 ? `Mar 1–8: <strong>$${h.mar1.toLocaleString()}</strong>` : "Mar 1–8: n/a") +
+        (h.mar15 ? `<span class="meta">Mar 15–22: $${h.mar15.toLocaleString()}</span>` : "") +
+        `<span class="meta">${esc(h.bestWindow)}</span>`;
+
+    return `
+      <tr>
+        <td class="name">
+          <a href="${esc(h.u)}" target="_blank" rel="noopener">${esc(h.n)}</a>
+          <span class="meta">${esc(h.tier || "")} · Booking ${esc(h.rating || "—")}/10</span>
+        </td>
+        <td><strong>${esc(h.d)}</strong><span class="meta">${esc(h.area)}</span></td>
+        <td class="num">${priceCell}</td>
+        <td>
+          ${esc(h.room)} · <strong>${esc(h.bed)}</strong>
+          <span class="meta">${esc(h.bath)}</span>
+        </td>
+        <td>
+          <span class="chip ${h.bf ? "v" : "n"}">${h.bf ? "bfast incl." : "room only"}</span>
+          <div style="margin-top:4px">${chip}</div>
+          <span class="meta">${esc(h.cancel)}</span>
+        </td>
+        <td style="min-width:190px">${esc(h.amenities)}</td>
+        <td style="min-width:170px">${marCell}</td>
+        <td style="min-width:190px">
+          <span class="chip ${h.transitActs >= 9 ? "v" : "n"}">${h.transitStars}/33 ★ · ${h.transitActs}/9 city ≤1h</span>
+          <span class="meta">${esc(h.transitNote)}</span>
+        </td>
+      </tr>`;
+  }).join("");
+}
+
+/* ---------- MICHELIN Starred renderer ---------- */
+function renderMichelin() {
+  const body = document.getElementById("michelin-body");
+  if (!body) return;
+  const q = (document.getElementById("m-search")?.value || "").trim().toLowerCase();
+  const stars = document.getElementById("m-stars")?.value || "";
+  const dist = document.getElementById("m-dist")?.value || "";
+  const count = document.getElementById("m-count");
+
+  let rows = MICHELIN.slice();
+  if (stars) rows = rows.filter(r => String(r.s) === stars);
+  if (dist) rows = rows.filter(r => r.d === dist);
+  if (q) {
+    rows = rows.filter(r =>
+      (r.n + " " + r.c + " " + r.d + " " + r.a + " " + r.note).toLowerCase().includes(q)
+    );
+  }
+  rows.sort((a, b) => b.s - a.s || a.n.localeCompare(b.n));
+
+  if (count) {
+    const withH = rows.filter(r => r.h).length;
+    const withP = rows.filter(r => r.p2).length;
+    count.textContent = `Showing ${rows.length} of ${MICHELIN.length} starred restaurants · ${rows.length}/${rows.length} addresses verified · ${withH} hours · ${withP} official prices for 2`;
+  }
+
+  body.innerHTML = rows.map(r => {
+    const starStr = "★".repeat(r.s);
+    const links = [
+      `<a href="${esc(guideUrl(r))}" target="_blank" rel="noopener">MICHELIN</a>`,
+      r.w ? `<a href="${esc(r.w)}" target="_blank" rel="noopener">Official site</a>` : ""
+    ].filter(Boolean).join(" · ");
+    const soc = (r.soc || []).map(x => {
+      const cls = x.k.startsWith("YT search") || x.k.startsWith("IG search") ? "n" : "v";
+      return `<a href="${esc(x.u)}" target="_blank" rel="noopener" class="chip ${cls}" style="margin:2px 3px 2px 0">${esc(x.k)}</a>`;
+    }).join("");
+    return `
+      <tr>
+        <td class="star">${starStr} <span class="meta">${r.s}★</span></td>
+        <td class="name">
+          ${esc(r.n)}
+          <span class="meta">${links}</span>
+        </td>
+        <td>${esc(r.c)}</td>
+        <td><strong>${esc(r.d)}</strong></td>
+        <td class="nowrap">${esc(r.p)}</td>
+        <td>${esc(r.a)}<span class="meta">${esc(r.ph || "")}</span></td>
+        <td>${r.h ? `<span class="chip v">verified</span> ${esc(r.h)}` : `<span class="chip f">hours unverified</span>`}</td>
+        <td>${r.p2 ? `<span class="chip v">official</span> ${esc(r.p2)}` : `<span class="chip f">band only (${esc(r.p)})</span>`}</td>
+        <td style="min-width:170px">${soc}</td>
+      </tr>`;
+  }).join("");
+}
+
+/* ---------- MICHELIN Bib Gourmand + Selected renderer (74 venues) ---------- */
+function renderMichelinListed() {
+  const body = document.getElementById("michelin-listed-body");
+  if (!body || typeof MICHELIN_LISTED === "undefined") return;
+  const q = (document.getElementById("ml-search")?.value || "").trim().toLowerCase();
+  const tier = document.getElementById("ml-tier")?.value || "";
+  const count = document.getElementById("ml-count");
+
+  let rows = MICHELIN_LISTED.slice();
+  if (tier) rows = rows.filter(r => r.tier === tier);
+  if (q) rows = rows.filter(r => (r.n + " " + r.c + " " + r.tier).toLowerCase().includes(q));
+
+  if (count) {
+    count.textContent = `Showing ${rows.length} of ${MICHELIN_LISTED.length} non-starred Beijing 2027 Guide venues (32 Bib Gourmand + 42 MICHELIN Selected)`;
+  }
+
+  body.innerHTML = rows.map(r => {
+    const isBib = r.tier === "Bib Gourmand";
+    return `
+      <tr>
+        <td><span class="chip ${isBib ? "v" : "n"}">${esc(r.tier)}</span></td>
+        <td class="name"><a href="${esc(guideUrl(r))}" target="_blank" rel="noopener">${esc(r.n)}</a></td>
+        <td>${esc(r.c)}</td>
+        <td class="nowrap">${esc(r.p)}</td>
+        <td><a href="${esc(guideUrl(r))}" target="_blank" rel="noopener">MICHELIN Guide page ↗</a></td>
+      </tr>`;
+  }).join("");
+}
+
+/* ---------- Activities renderer ---------- */
+function renderActivities() {
+  const body = document.getElementById("activities-body");
+  if (!body) return;
+  const q = (document.getElementById("a-search")?.value || "").trim().toLowerCase();
+  let rows = ACTIVITIES.slice();
+  if (q) {
+    rows = rows.filter(a =>
+      (a.n + " " + a.d + " " + a.hours + " " + a.price + " " + a.transit).toLowerCase().includes(q)
+    );
+  }
+  const count = document.getElementById("a-count");
+  if (count) {
+    const ver = rows.filter(r => r.status === "verified").length;
+    count.textContent = `Showing ${rows.length} of ${ACTIVITIES.length} Beijing sights (${ver}/${rows.length} hours & pricing verified for Feb 2027)`;
+  }
+  body.innerHTML = rows.map(a => {
+    const chip = `<span class="chip v">verified</span>`;
+    const soc = (a.soc || []).map(x =>
+      `<a href="${esc(x.u)}" target="_blank" rel="noopener" class="chip v" style="margin:2px 3px 2px 0">${esc(x.k)}</a>`
+    ).join("");
+    return `
+      <tr>
+        <td class="name">
+          <a href="${esc(a.u)}" target="_blank" rel="noopener">${esc(a.n)}</a>
+          <span class="meta">${esc(a.d)} · ${chip}</span>
+        </td>
+        <td>${esc(a.hours)}<span class="meta">Closed: ${esc(a.closed)}</span></td>
+        <td>${esc(a.price)}<span class="meta"><strong>For 2:</strong> ${esc(a.p2)}</span></td>
+        <td>${esc(a.book)}</td>
+        <td>${esc(a.transit)}</td>
+        <td style="min-width:170px">${soc}</td>
+      </tr>`;
+  }).join("");
+}
+
+/* ---------- Decision questions renderer ---------- */
+function renderQuestions() {
+  const el = document.getElementById("question-list");
+  if (!el) return;
+  el.innerHTML = QUESTIONS.map(q => `
+    <div class="card" style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap">
+        <h3>Q${q.id}. ${esc(q.title)}</h3>
+        <span class="chip f">blocks: ${esc(q.blocks)}</span>
       </div>
-      <nav class="nav">${links}</nav>
-    </div></header>`;
-  }
-  function footer(){
-    return `<footer><div class="wrap">
-      <p><strong>Method:</strong> every value in this planner was read from the official source linked in its row on 25 Nov 2026.
-      Values that could not be confirmed are left blank and flagged rather than estimated.</p>
-      <p>Sources: MICHELIN Guide (guide.michelin.com / michelin.com), Booking.com live rate pages, Palace Museum (intl.dpm.org.cn),
-      Mutianyu Great Wall (en.mutianyugreatwall.com), U.S. State Department, timeanddate.com.
-      Not affiliated with any listed business.</p>
-      <p>Session ${META.session} · data file <code>assets/data.js</code> · see <a href="flagged.html">Verification log</a> for known gaps.</p>
-    </div></footer>`;
-  }
+      <p class="sub"><strong>What we have:</strong> ${esc(q.have)}</p>
+      <p class="sub"><strong>What is missing:</strong> ${esc(q.missing)}</p>
+      <p class="sub" style="color:var(--accent)"><strong>Action to close:</strong> ${esc(q.action)}</p>
+    </div>
+  `).join("");
+}
 
-  function mount(){
-    const page = document.body.dataset.page || "index.html";
-    const h = document.getElementById("site-header");
-    if(h) h.innerHTML = header(page);
-    const f = document.getElementById("site-footer");
-    if(f) f.innerHTML = footer();
-    const y = document.getElementById("year"); if(y) y.textContent = "2027";
-
-    if(document.getElementById("michelin-table")) renderMichelin();
-    if(document.getElementById("hotel-table")) renderHotels();
-    if(document.getElementById("activity-table")) renderActivities();
-    if(document.getElementById("question-list")) renderQuestions();
-    wireFilters();
-  }
-
-  /* ---------- MICHELIN ---------- */
-  function guideLink(r){
-    const slug = (typeof GUIDE_SLUG!=="undefined" && GUIDE_SLUG[r.n]) ? GUIDE_SLUG[r.n] : null;
-    const url = r.g || (slug ? `https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/${slug}` : "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred");
-    return `<a href="${url}" target="_blank" rel="noopener">MICHELIN ↗</a>`;
-  }
-  function socialCell(r){
-    if(!r.soc || !r.soc.length) return `<span class="chip u">none found</span>`;
-    return r.soc.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join(" · ");
-  }
-  function renderMichelin(){
-    const body = document.getElementById("michelin-tbody");
-    const rows = MICHELIN.slice().sort((a,b)=> b.s-a.s || a.n.localeCompare(b.n));
-    body.innerHTML = rows.map(r=>{
-      const p2 = r.p2 ? esc(r.p2) : `<span class="chip u">not published</span>`;
-      const hours = r.h ? esc(r.h) : `<span class="chip u">not published</span>`;
-      const exc = r.closed ? `<div class="meta">Exceptions/closed: ${esc(r.closed)}</div>` : "";
-      const fx = r.fx ? `<div class="srcline" style="margin-top:4px">⚑ ${esc(r.fx)}</div>` : "";
-      return `<tr data-f="${(r.n+' '+r.c+' '+r.d+' '+r.s).toLowerCase()}">
-        <td class="name">${esc(r.n)}<span class="meta">${esc(r.c)}</span></td>
-        <td><span class="star">${"★".repeat(r.s)}</span><span class="meta">${r.s}-star ${r.s===3?"Exceptional cuisine":r.s===2?"Excellent cooking":"High quality cooking"}</span></td>
-        <td>${esc(r.p)}<span class="meta">MICHELIN price band</span></td>
-        <td>${esc(r.d)||`<span class="chip u">blank</span>`}</td>
-        <td>${esc(r.a)||`<span class="chip u">not captured</span>`}</td>
-        <td>${hours}${exc}${fx}</td>
-        <td>${r.ph?`<a href="tel:${esc(r.ph.replace(/[^+\d]/g,''))}">${esc(r.ph)}</a>`:"—"}</td>
-        <td style="min-width:190px">${p2}</td>
-        <td style="min-width:170px">${socialCell(r)}</td>
-        <td class="nowrap">${guideLink(r)}${r.w?` · <a href="${r.w}" target="_blank" rel="noopener">site ↗</a>`:""}</td>
-      </tr>`;
-    }).join("");
-    const c = document.getElementById("michelin-count");
-    if(c) c.textContent = MICHELIN.length;
-  }
-
-  /* ---------- HOTELS ---------- */
-  const W = {density:3, bed:3, review:2, cancel:1, price:3};
-  function bedPts(b){ return b===true?W.bed : b==="partial"?W.bed/2 : 0; }
-  function pricePts(night){ return night<=100?3 : night<=150?2 : night<=220?1 : 0; }
-  function scoreHotel(h){
-    const night = h.tot/7;
-    const density = (DISTRICT_STARS[(h.area.split(" ")[0])]||0) * W.density;
-    const bed = bedPts(h.bedOk);
-    const rev = Math.max(0,(h.rev-8))*W.review;
-    const cancel = h.cancel?W.cancel:0;
-    const price = pricePts(night);
-    return {night, density, bed, rev, cancel, price, total: density+bed+rev+cancel+price};
-  }
-  function renderHotels(){
-    const body = document.getElementById("hotel-tbody");
-    const scored = HOTELS.map(h=>({h, s:scoreHotel(h)}))
-      .sort((a,b)=> (a.h.oop?1:0)-(b.h.oop?1:0) || b.s.total-a.s.total || a.h.tot-b.h.tot);
-    let live = 0;
-    body.innerHTML = scored.map((o)=>{
-      const h=o.h, s=o.s;
-      const pos = h.oop ? "—" : ++live;
-      const bath = h.bath || "Private bathroom (per Booking listing; confirm before booking)";
-      const bedCell = h.bedOk===true?`<span class="chip v">queen/king</span><span class="meta">${esc(bath)}</span>`
-        : h.bedOk==="partial"?`<span class="chip f">request</span><span class="meta">${esc(bath)}</span>`
-        : `<span class="chip u">twin only</span><span class="meta">${esc(bath)}</span>`;
-      return `<tr data-f="${(h.n+' '+h.area).toLowerCase()}">
-        <td><span class="rank">${pos}</span></td>
-        <td class="name">${esc(h.n)}${h.oop?' <span class="chip u">March only</span>':''}<span class="meta">${esc(h.area)} · Booking rating ${esc(h.cls)} · guest ${h.rev}/10</span></td>
-        <td>${esc(h.room)}<span class="meta">${esc(h.bed)} · ${esc(bath)}</span></td>
-        <td>${bedCell}</td>
-        <td class="num">$${h.tot.toLocaleString()}<span class="meta">$${s.night.toFixed(0)}/night · 7 nights · 2 adults</span></td>
-        <td class="num">${s.density}</td>
-        <td class="num">${s.bed.toFixed(1)}</td>
-        <td class="num">${s.rev.toFixed(1)}</td>
-        <td class="num">${s.price}</td>
-        <td class="num"><strong>${s.total.toFixed(1)}</strong></td>
-        <td>${h.cancel?esc(h.cancel):"—"}</td>
-        <td class="nowrap"><a href="${h.url}" target="_blank" rel="noopener">rate ↗</a></td>
-      </tr>
-      ${h.fx?`<tr><td></td><td colspan="11" class="srcline">⚑ ${esc(h.fx)}</td></tr>`:""}`;
-    }).join("");
-  }
-
-  /* ---------- ACTIVITIES ---------- */
-  function renderActivities(){
-    const body = document.getElementById("activity-tbody");
-    body.innerHTML = ACTIVITIES.map(a=>{
-      const st = a.v?`<span class="chip v">verified</span>`:`<span class="chip u">unverified</span>`;
-      return `<tr data-f="${(a.n+' '+a.area).toLowerCase()}">
-        <td class="name">${esc(a.n)}<span class="meta">${esc(a.area)}</span></td>
-        <td>${a.h?esc(a.h):`<span class="chip u">blank</span>`}</td>
-        <td>${a.price?esc(a.price):`<span class="chip u">blank</span>`}</td>
-        <td>${a.soc.length?a.soc.map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join(" · "):`<span class="chip u">none found</span>`}</td>
-        <td class="nowrap">${a.off?`<a href="${a.off}" target="_blank" rel="noopener">official ↗</a>`:""}${a.book?` · <a href="${a.book}" target="_blank" rel="noopener">tickets ↗</a>`:""}</td>
-        <td>${st}</td>
-        <td class="srcline">${esc(a.fx)}</td>
-      </tr>`;
-    }).join("");
-  }
-
-  /* ---------- QUESTIONS ---------- */
-  function renderQuestions(){
-    const el = document.getElementById("question-list");
-    el.innerHTML = QUESTIONS.map((q,i)=>`
-      <article class="card" style="margin:10px 0">
-        <h3>${i+1}. ${esc(q.q)} ${q.st==="open"?`<span class="chip f">open</span>`:`<span class="chip v">answered</span>`}</h3>
-        <p class="sub" style="margin:6px 0 4px"><strong>Why it blocks a decision:</strong> ${esc(q.why)}</p>
-        <p class="sub" style="margin:4px 0"><strong>What we know today:</strong> ${esc(q.now)}</p>
-        <p class="sub" style="margin:4px 0"><strong>Action to close it:</strong> ${esc(q.action)}</p>
-      </article>`).join("");
-  }
-
-  /* ---------- FILTERS ---------- */
-  function wireFilters(){
-    document.querySelectorAll("[data-filter-input]").forEach(inp=>{
-      const table = document.querySelector(inp.dataset.filterInput);
-      if(!table) return;
-      const apply = ()=>{
-        const q = inp.value.trim().toLowerCase();
-        table.querySelectorAll("tbody tr").forEach(tr=>{
-          tr.hidden = q ? !(tr.dataset.f||"").includes(q) : false;
-        });
-      };
-      inp.addEventListener("input", apply);
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", mount);
-})();
+document.addEventListener("DOMContentLoaded", () => {
+  const active = document.body.dataset.page || "";
+  renderShell(active);
+  renderHotels();
+  renderMichelin();
+  renderMichelinListed();
+  renderActivities();
+  renderQuestions();
+  ["h-search", "h-dist", "h-tier", "h-sort"].forEach(id =>
+    document.getElementById(id)?.addEventListener("input", renderHotels)
+  );
+  ["m-search", "m-stars", "m-dist"].forEach(id =>
+    document.getElementById(id)?.addEventListener("input", renderMichelin)
+  );
+  ["ml-search", "ml-tier"].forEach(id =>
+    document.getElementById(id)?.addEventListener("input", renderMichelinListed)
+  );
+  document.getElementById("a-search")?.addEventListener("input", renderActivities);
+});

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Hotels — 7 nights, 15–22 Feb 2027 | China 2027 planner</title>
-<meta name="description" content="12 Beijing 5-star hotels priced for 7 nights, 15–22 Feb 2027, ranked on MICHELIN density, bed type, guest score and price.">
+<meta name="description" content="12 Beijing hotels across budget, boutique courtyard, and 5-star luxury tiers priced for 15–22 Feb 2027, with queen/king beds, private baths, amenities, March comparisons, and <=1h transit checks.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="hotels.html">
@@ -12,97 +12,101 @@
 
 <main>
 <div class="wrap">
-  <p class="eyebrow">Hotels</p>
-  <h1>12 hotels, one exact week, ranked on a published score</h1>
-  <p class="lede">All totals below are for <strong>7 nights, 15–22 February 2027, 2 adults, 1 room</strong>, in USD, exactly as
-  Booking.com displayed them on 25 Nov 2026 for 5-star properties in Beijing. The room type shown is the room type that price buys —
-  this is the detail that decides whether the "queen bed or bigger" requirement is actually met.</p>
+  <p class="eyebrow">Hotels · multi-tier verified shortlist</p>
+  <h1>12 hotels across budget, boutique &amp; 5★ luxury (15–22 Feb 2027)</h1>
+  <p class="lede">Every live-priced row below is verified on Booking.com for <strong>7 nights (15–22 February 2027), 2 adults, 1 room</strong>
+  with <strong>at least 1 queen or 1 king bed and an explicitly confirmed private/attached bathroom</strong>. Amenities, March comparison
+  windows, and verified Beijing Subway transit counts (<strong>≤1 hour</strong>) are shown alongside each rate.</p>
 
   <div class="controls">
-    <input type="search" placeholder="Filter hotels or area…" data-filter-input="#hotel-table" aria-label="Filter hotels">
+    <input id="h-search" type="search" placeholder="Filter by hotel, area, amenity or bed…" aria-label="Filter hotels">
+    <select id="h-dist" aria-label="Filter by district">
+      <option value="">All districts</option>
+      <option value="Dongcheng">Dongcheng (central sights + 9★)</option>
+      <option value="Chaoyang">Chaoyang (CBD/Yansha + 20★)</option>
+    </select>
+    <select id="h-tier" aria-label="Filter by hotel tier">
+      <option value="">All price tiers</option>
+      <option value="budget">Budget / Mid-range (&lt; $1,000)</option>
+      <option value="boutique">Boutique / Courtyard</option>
+      <option value="luxury">5★ Luxury</option>
+    </select>
+    <select id="h-sort" aria-label="Sort hotels">
+      <option value="usd">Sort: Lowest 7-night USD</option>
+      <option value="rating">Sort: Highest Booking score</option>
+      <option value="transit">Sort: Best ≤1h transit reach</option>
+    </select>
   </div>
-  <p class="hint">Tap a column header area to read it on a phone by scrolling the table sideways. "rate ↗" opens the live page for that room.</p>
+  <p class="hint" id="h-count">Loading hotels…</p>
 
   <div class="tablewrap">
     <table id="hotel-table">
       <thead>
         <tr>
-          <th>#</th><th>Hotel</th><th>Room at this price (bed / bathroom)</th><th>Queen+ / private bath</th>
-          <th>7-night total</th><th>Michelin pts</th><th>Bed pts</th><th>Review pts</th><th>Price pts</th><th>Score</th>
-          <th>Cancellation</th><th>Live rate</th>
+          <th>Hotel &amp; Tier</th>
+          <th>District / Hub</th>
+          <th>7-Night USD (Feb 15–22)</th>
+          <th>Room, Bed &amp; Private Bath</th>
+          <th>Breakfast &amp; Cancellation</th>
+          <th>Verified Amenities</th>
+          <th>Mar 1–8 / Best Window</th>
+          <th>Transit ≤1h Reach</th>
         </tr>
       </thead>
-      <tbody id="hotel-tbody"></tbody>
+      <tbody id="hotels-body"></tbody>
     </table>
   </div>
 
-  <h2>How the ranking score works</h2>
-  <p>Every point is computed from a verified field, so you can audit any row:</p>
+  <h2>Cheapest upcoming dates &amp; multi-week comparison (Feb vs Mar 2027)</h2>
+  <div class="grid g2">
+    <div class="card">
+      <h3>Why 15–22 Feb 2027 wins overall</h3>
+      <p class="sub">Across 11 live-priced properties, <strong>6 are strictly cheaper on 15–22 Feb</strong> than in early/mid-March:
+      <em>XinQiao</em> ($485 vs $511 twin), <em>Holiday Inn Express</em> ($499 vs $536 Mar 1–8 / $505 Mar 15–22),
+      <em>Sunworld Wangfujing</em> ($502 vs $581 / $590), <em>Peking Yard</em> ($1,105 vs $1,664 — entry rooms sell out in Mar),
+      <em>Four Seasons</em> ($1,751 vs $1,914), and <em>Waldorf</em> ($2,243). Two are flat (<em>NUO</em> $943, <em>Rosewood</em> $3,115).</p>
+    </div>
+    <div class="card">
+      <h3>Three properties drop slightly on 1–8 Mar 2027</h3>
+      <p class="sub">If your dates are flexible into early March: <em>The Orchid Hotel</em> drops from $1,194 (Garden Room) to
+      <strong>$1,025</strong> (Courtyard Room opens up); <em>Park Hyatt</em> dips $21–$24/wk ($2,589 non-ref / $2,876 ref); and
+      <em>The PuXuan</em> drops $311 for Genius members ($2,803 vs $3,114). Meanwhile 15–22 Feb avoids Spring Festival crowds (5–13 Feb).</p>
+    </div>
+  </div>
+
+  <h2>Verified ≤1 hour Beijing Subway transit audit</h2>
   <div class="tablewrap">
-    <table style="min-width:560px">
-      <thead><tr><th>Component</th><th>Rule</th><th>Max</th></tr></thead>
+    <table style="min-width:720px">
+      <thead><tr><th>Hotel base</th><th>To Guomao CBD★ cluster</th><th>To Temple of Heaven</th><th>To Summer Palace</th><th>To 798 Art Zone</th><th>≤1h verdict</th></tr></thead>
       <tbody>
-        <tr><td class="name">MICHELIN density</td><td>Verified starred restaurants in the hotel's own district × 3. Chaoyang = 6 verified, Dongcheng = 2, Xicheng = 1, Shunyi = 1.</td><td class="num">18</td></tr>
-        <tr><td class="name">Bed rule</td><td>King/queen at the quoted rate = 3 · "multiple bed types" (request needed) = 1.5 · twin only = 0.</td><td class="num">3</td></tr>
-        <tr><td class="name">Guest score</td><td>(Booking guest score − 8.0) × 2.</td><td class="num">≈3.6</td></tr>
-        <tr><td class="name">Cancellation</td><td>Free cancellation or no prepayment at the quoted rate = 1.</td><td class="num">1</td></tr>
-        <tr><td class="name">Price</td><td>Per night ≤ $100 = 3 · ≤ $150 = 2 · ≤ $220 = 1 · above $220 = 0.</td><td class="num">3</td></tr>
+        <tr><td class="name">Wangfujing / Dongcheng (Sunworld, Waldorf, PuXuan, Peking Yard, XinQiao, HI Express, Orchid)</td>
+          <td><strong>8–20 min</strong> (Line 1 / 5)</td>
+          <td><strong>10–30 min</strong> (Line 5 / 8)</td>
+          <td><strong>45–55 min</strong> (Line 1 → 4)</td>
+          <td><strong>~55 min</strong> (Line 1 → 14)</td>
+          <td><span class="chip v">9/9 city sights &amp; 32/33 ★ ≤1h</span></td></tr>
+        <tr><td class="name">Chaoyang CBD (Park Hyatt, Rosewood)</td>
+          <td><strong>Walk – 5 min</strong></td>
+          <td><strong>~30 min</strong> (Line 10 → 5)</td>
+          <td><strong>1h 05m</strong> (Line 10 → 4)</td>
+          <td><strong>~35–40 min</strong></td>
+          <td><span class="chip f">8/9 city sights (Summer Palace &gt;1h)</span></td></tr>
+        <tr><td class="name">Chaoyang Liangmaqiao / 798 (Four Seasons, NUO)</td>
+          <td><strong>15–25 min</strong> (Line 10 / 14)</td>
+          <td><strong>~35–45 min</strong></td>
+          <td><strong>~1h 05m – 1h 15m</strong></td>
+          <td><strong>10m walk (NUO) / 25m (FS)</strong></td>
+          <td><span class="chip f">7–8/9 city sights (Summer Palace &gt;1h)</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="callout info">
-    <p><strong>Why the density column is conservative.</strong> A district count only includes restaurants whose address was captured
-    and verified from the MICHELIN guide. That is 10 of the 33 starred restaurants: Chaoyang 6, Dongcheng 2, Xicheng 1, Shunyi 1.
-    The true cluster is larger — 23 starred restaurants still need their address captured — so a Dongcheng hotel will likely gain more
-    points than a Chaoyang one once that work is done. The ranking is therefore <em>provisional</em>, and the remaining work is
-    itemised on the <a href="suggestions.html">suggestions page</a>.</p>
-  </div>
-
-  <h2>What the hotel set actually shows</h2>
-  <div class="grid g2">
-    <div class="card">
-      <h3>Price spread at the same star level</h3>
-      <p class="sub">For the preferred week the 7-night totals run <strong>$554 → $2,246</strong> — a 4.1× spread across properties
-      that Booking all classes as 5-star. The cheapest four (East Sacred $554, Sunworld Dynasty $697, Purple Horse $901, Swissotel
-      $1,011) are all in walking distance of Wangfujing.</p>
-    </div>
-    <div class="card">
-      <h3>Not everything is bookable yet</h3>
-      <p class="sub">Park Hyatt Beijing and Rosewood Beijing returned <em>"unavailable on our site for your selected dates"</em> for
-      15–22 Feb 2027, and showed only alternative-window prices (Park Hyatt: $2,300.10 for 7 nights starting 13 Feb; Rosewood:
-      $3,119.49 for 7 nights starting 13 Feb). They are excluded from the ranking rather than priced off a different week.</p>
-    </div>
-    <div class="card">
-      <h3>Bed types, not stars, separate the deals</h3>
-      <p class="sub">9 of the 12 quoted rates are twin rooms. If a queen/king is mandatory, the honest comparison shrinks to four
-      hotels, and the cheapest of those for February is Happy Dragon Courtyard at $1,075.</p>
-    </div>
-    <div class="card">
-      <h3>Date-window comparison (same hotel, same room)</h3>
-      <p class="sub">Grand Hyatt Beijing: <strong>$1,652</strong> for 15–22 Feb and <strong>$1,652</strong> for 15–22 Mar.
-      Four Seasons Beijing: $1,752.86 for 14–21 Feb vs $1,753 for 15–22 Feb. There is no cheaper week hiding inside the window —
-      which is why the plan keeps the preferred 15–22 Feb dates.</p>
-    </div>
-  </div>
-
-  <h2>Cheapest upcoming time to book</h2>
-  <p>Two separate questions hide inside that phrase, and the data answers them differently:</p>
-  <ul class="tight">
-    <li><strong>Cheapest week to stay</strong> — flat. Same-hotel comparisons across February and March 2027 returned identical totals,
-      so moving the dates buys nothing. Staying <em>after</em> the 5–13 February Spring Festival is the main calendar win, and that is
-      already true at 15 February.</li>
-    <li><strong>Cheapest moment to click "book"</strong> — not answerable from a single day's snapshot. The correct test is to record
-      this same 12-hotel basket weekly and watch the direction of travel; that monitoring task is specced in
-      <a href="suggestions.html">Suggestions</a>. What the snapshot does show is that free-cancellation rates are available at 4 of the
-      12 hotels today, and those lock a price without locking the decision.</li>
-  </ul>
-
   <div class="callout warn">
-    <p><strong>Flags on this table.</strong> ① Prices are "from" rates displayed by Booking.com — they include what the site shows at
-    that moment and can change before checkout; they are not a quotation. ② Booking's "5/5" property rating is not an official star
-    classification. ③ Two rows carry an explicit caveat: Purple Horse Garden is priced for a <em>March</em> window, and Swissotel's
-    Booking area label ("Sanlitun, Dongcheng") conflicts with how Sanlitun is normally described — verify before using it for walk-ups.</p>
+    <p><strong>Important caveats &amp; flags:</strong> ① Booking.com rates are live snapshots (26 Nov 2026) and several non-Member / standard
+    listings exclude 6% VAT until checkout. ② <em>Sunworld Wangfujing</em>'s cheapest $469 Annex Double has a <em>full</em> bed only, so
+    our table quotes its <strong>$502 Superior King Room</strong> to meet the queen+ requirement. ③ <strong>Courtyard 7 Hotel</strong>
+    (Nanluoguxiang) redirects to Beijing search on Booking.com for 15–22 Feb 2027 and is explicitly flagged unverified (third-party sites
+    confirm 20 rooms with private baths and ~$50–$94/nt indicative rates).</p>
   </div>
 </div>
 </main>

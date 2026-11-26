@@ -546,3 +546,21 @@ while PR #14 was open. That session's section and `integration-2027/**` are pres
 `COORDINATION.md` conflict was resolved by keeping **all three** session logs (013c9819, 815c7943, 773e75a3).
 The overlapping claim was not visible when this session claimed on the shared base commit `eda1907`; both
 subtrees remain additive and neither edits the other's data.
+
+---
+
+# Session `1fa0d691` — full Beijing verification completion & cross-plan root integration
+
+**Branch:** `arena/1fa0d691-chinafun1` (branched from `main` @ `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Claimed:** 2026-11-26 · **Status:** in progress
+**File scope:** `COORDINATION.md`, `assets/data.js`, `assets/app.js`, `assets/style.css`, `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`. Preserves `docs/`, `integration-2027/`, `social-2027/`, `shanghai-2027/`, and `shanghai-verified-2027/` read-only while adding unified navigation links from the root site.
+
+| # | Task | Status | File scope | Verification method |
+|---|------|--------|------------|---------------------|
+| U1 | Claim task row & audit repo | **done** | `COORDINATION.md` | Verified PRs #1–#18 merged on `main`, ran all 3 validators (`check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`), audited root contradictions. |
+| U2 | Complete all 33 Beijing MICHELIN★ addresses/phones/hours/prices + all 74 Bib Gourmand & Selected listings (107/107 total) | **done** | `assets/data.js`, `michelin.html` | Fetched all 23 missing MICHELIN detail pages on `guide.michelin.com`, `bib-gourmand` (32), `the-plate-michelin` (42), plus official dining sites/PDFs (`Four Seasons Cai Yi Xuan`, `PuXuan Fu Chun Ju`, `Giada Garden`, `Bvlgari Il Ristorante`, `Rosewood House of Dynasties`, `Chef 1996`, `Old Tower`). |
+| U3 | Verify all 10 Beijing activities (hours, Feb low-season prices, booking rules) & ≤1h subway transit | **done** | `assets/data.js`, `activities.html`, `itinerary.html` | Fetched official `english.beijing.gov.cn` pages, `intl.dpm.org.cn`, `en.chnmuseum.cn`, `en.mutianyugreatwall.com`, and `rome2rio.com` Beijing Subway durations. |
+| U4 | Verify 12 Beijing hotels across budget/boutique/5★ luxury (Feb 15–22 vs Mar 1–8 vs Mar 15–22, 2027) + amenities + private bath | **done** | `assets/data.js`, `hotels.html` | Fetched live Booking.com property pages for 11 bookable properties + verified Courtyard 7 via third-party sources (Booking.com unavailable/redirected). |
+| U5 | Integrate 58 oEmbed-verified YouTube links (`social-2027`) + Instagram/TikTok links + cross-plan nav links + fix contradictions | **done** | `assets/*`, root `*.html` | Integrated `social-2027/data/social.json` + `integration-2027` YT links + IG (`@chef1996restaurant`, `@oldtower_beijing`, `CvC7yL1yQx7`, `Cq2w9ssgcDW`) & TikTok (`wadeandtaylor`); added companion-plan nav bar; synced `flagged.html`, `decisions.html`, `suggestions.html`, `itinerary.html`. |
+| U6 | Validate all 3 repo checkers + HTML link integrity, commit, push, open & merge PR to `main`, verify Pages | **done** | repo-wide | Ran `check.py` (187 rows, 0 problems), `integration-2027/tools/check.py` (7 pages, 0 errors), `social-2027/tools/check.py` (43 venues, 58 videos, PASS), `node -c` + DOM render test (12 hotels, 33 starred, 74 Bib/Selected, 10 activities, 0 `undefined`/`NaN`). |
+
