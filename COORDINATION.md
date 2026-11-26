@@ -564,3 +564,14 @@ Existing sections and their scopes remain untouched. The earlier `815c7943` and 
 | A2 | in progress | 59c8c8e1 | root `index.html` only: correct unsupported live-pricing/whole-window and holiday certainty claims; add a link to the independent audit |
 
 Prior root work is completed; this is a narrowly scoped final integration correction, not a change to the underlying dataset or another plan's files. If this overlaps an active claim, stop and coordinate.
+
+### 2026-11-26 independent audit results
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| A1 | needs review | 59c8c8e1 | `audit-2027/**`: targeted audit and unresolved verification gaps |
+| A2 | done | 59c8c8e1 | root `index.html`: removed unsupported live-price, all-date price and holiday-certainty claims; linked existing plans, social index and audit |
+
+Checked directly: [MICHELIN 2027 release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) (107 Beijing restaurants, 2/5/26 stars); [Palace Museum](https://intl.dpm.org.cn/visit.html) (winter hours, last entry, Monday/holiday and irregular-closure exceptions, advance tickets); [US State Department](https://travel.state.gov/en/international-travel/travel-advisories/china.html) (Level 2, 19 Oct 2026 advisory). Logged missing official hotel quotes, current all-in prices, route-based one-hour rankings, comprehensive restaurant cost/hours/social verification, and official holiday schedule in `audit-2027/index.html`. Previous snapshots are not reverified; no claim of exhaustive verification is made. The other plans may still contain unsupported language; the root warning directs readers to the audit.
+
+Checks: `python3 check.py`, `python3 integration-2027/tools/check.py`, and `python3 social-2027/tools/check.py` passed. Independent check of local `href`/`src` paths in all 56 HTML files found zero missing local targets. It does not test fragment targets, dynamically generated links or external links. Full external-link and line-by-line combined-data verification were not completed; do not treat the checks as proof of those requirements. No PR/merge was performed because the requested prerequisite of final combined line-by-line verification and no broken links has not been established. Existing GitHub Pages deployment on `main` was confirmed `built` at `1c839f2`; the present branch changes are not yet deployed.
