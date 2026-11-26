@@ -593,3 +593,37 @@ subtrees remain additive and neither edits the other's data.
 | F5 | Re-run all checks, PR, merge, Pages deploy | unclaimed | repo-wide verification only | `check.py` (docs), `integration-2027/tools/check.py`, `social-2027/tools/check.py`, repo-wide internal-link scan all pass; PR merged; Pages `built` for the merge commit |
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here.
+
+### Final integration verification log (`24fa9b09`)
+
+**F1 — repo audit:** The inherited `COORDINATION.md` board and repository README were reviewed before claiming. The published repository contains four independently researched trip plans, plus `integration-2027/` and `social-2027/`; prior session scopes remain intact. Claim commit `165cfea` was pushed before code edits.
+
+**F2 — official source re-checks (2026-11-26):**
+
+| Official source | Re-check performed | Result |
+|---|---|---|
+| [MICHELIN 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Fetched release and read the Beijing selection section | Confirms Beijing has 107 total entries; Chao Shang Chao and Xin Rong Ji (Xinyuan South Road) retain 3★; Black Swan, Jingji, King's Joy, Lamdre and Lu Shang Lu retain 2★; 26 one-star venues, including two new 1★ entries. Published data's 33-star total (2+5+26) matches. |
+| [MICHELIN 2026 Shanghai/Jiangsu/Zhejiang release](https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang) | Fetched official release and read selection counts | Confirms 409 entries region-wide, 77 starred (1×3★, 14×2★, 62×1★), 164 Bib Gourmand and 168 Selected; Shanghai has 156 entries. This is the 2026 edition and is not presented as a 2027 selection. |
+| [Palace Museum — Visit](https://intl.dpm.org.cn/visit.html) | Fetched official visit page; read opening-hour, closure, admission and booking text | Confirms Tue–Sun, closed Mondays except national traditional holidays; winter hours 08:30–16:30, last entry 15:30; irregular temporary closure possible; tickets are not sold on visit day. This official page is the authority for current general hours, not a guarantee for 2027 operational notices. |
+
+**F3 — all six published entry points:** fetched successfully with non-empty page content through the Pages URL: root Beijing (`/`), `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`. (Sandbox Python HTTPS requests hit TLS EOF, so the Arena page fetch tool was used.)
+
+**F4 — unified entry:** completed additively. Root `index.html` links the three Shanghai plans and both supporting registers; root `assets/app.js` adds the All plans link; README now documents both added sub-sites. No data tables, prices, source links or existing claims were edited.
+
+**F5 — build/link checks before PR:**
+
+- `python3 check.py`: PASS — 11 generated docs pages, 187 rows, no broken internal links, empty hrefs, or missing title/viewport.
+- `python3 integration-2027/tools/check.py`: PASS — 7 pages, 0 errors.
+- `python3 social-2027/tools/check.py`: PASS — 43 venues, 58 videos, 8 pages; data, row sourcing and internal links consistent.
+- Repository-wide relative `href`/`src` scan: PASS — 55 HTML files, 0 missing local references.
+- `git diff --check`: PASS.
+
+**Known inherited irregularities retained (not fixed by inference):** hotel rates are dated OTA snapshots, not hotel-direct guarantees; the Shanghai plans differ by room category and tax treatment; only the social registry's verified platform links are YouTube; travel-time proximity remains estimated/modelled in some studies; opening hours, addresses, menus and activity costs remain blank where the official source did not establish them. These are on the existing Flagged for Review pages and do not block publication.
+
+| # | Task | Status | File scope | Verification rule |
+|---|------|--------|------------|-------------------|
+| F1 | Claim + board | **done** | this section | Claim commit `165cfea` pushed before code changes |
+| F2 | Re-verify load-bearing official sources | **done** | read-only + log | Official MICHELIN and Palace Museum sources listed above |
+| F3 | Verify all six live Pages entry points | **done** | read-only + log | All six returned page content successfully |
+| F4 | Unified entry point | **done** | `index.html`, `assets/app.js`, `README.md` | Additive only; all relative references pass |
+| F5 | Checks, PR, merge, deploy | in progress | repo-wide verification / GitHub | Checks pass; PR and deploy confirmation to follow |

@@ -1,9 +1,7 @@
 # ChinaFun1 — four China 2027 trip planners
 
-This repository holds **four independent, source-verified plans** for the same brief (2 adults, 7 nights,
-15 Feb – 23 Mar 2027), produced by four parallel sessions that answered the question differently. They are kept
-in separate directories rather than merged, because they disagree with each other and merging them would
-hide that:
+This repository holds **four independent, source-verified trip plans** for the same brief (2 adults, 7 nights,
+15 Feb – 23 Mar 2027), plus a cross-plan decision dashboard and a verified social-review register. Six published entry points are connected from the root landing page. The trip plans were produced by parallel sessions and are kept in separate directories rather than merged, because they disagree with each other and merging them would hide that:
 
 | Plan | City | Where it lives | Entry point |
 |---|---|---|---|
@@ -12,11 +10,19 @@ hide that:
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
 
-All four follow the same rules: every row links to the official source it came from, unconfirmed values are left
+All four plans follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
 "listed". Read all four before deciding — the honest answer to "which city" is that the brief did not say, and the
 plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
 three independent studies, compared below).
+
+## Unified dashboard and social-review register
+
+- [All plans: comparison, questions and flagged items](integration-2027/index.html) — cross-plan decision layer; it preserves disagreement instead of silently choosing one study.
+- [Social reviews: verified video register](social-2027/index.html) — 58 YouTube URLs confirmed against YouTube's oEmbed endpoint; 15/33 starred restaurants and all 10 listed activities have at least one match. TikTok and Instagram remain blank where not verified.
+- The root [Beijing landing page](index.html) now links directly to every plan and register. The root navigation includes **All plans** from each Beijing page.
+
+The integration layer reports differing hotel snapshots and room categories as captured by their owning sessions; these are not live quotes. Read the corresponding plan's source register and flagged page before relying on a value.
 
 ## The Shanghai plans disagree, and that is worth knowing
 
