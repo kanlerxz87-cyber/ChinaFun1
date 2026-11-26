@@ -651,3 +651,85 @@ subtrees remain additive and neither edits the other's data.
 - GitHub Pages deployment run [45881703663](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45881703663) completed successfully for that merge commit (`build`, `deploy`, and status-report jobs all passed). Pages API reports status `built`, publishing from `main` `/`.
 - Cache-busted live fetch `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=4262d82` confirms the root page now exposes the three Shanghai plans, comparison dashboard, and social-review register. The plain URL was cached by the fetch layer; the cache-busted URL showed the deployed version.
 - The PR adds navigation/documentation only. It does not revise the underlying trip datasets or supersede their source logs and flagged items.
+
+---
+
+# Session `f6189cca` — final verification, integration integrity, and publish pass
+
+**Branch:** `arena/f6189cca-chinafun1` (base `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`, fast-forwarded to `c7a3310`)
+**Claimed 2026-11-26 · Status:** in progress
+**File scope (non-overlapping):** this appended `COORDINATION.md` section only, plus repo-wide *read-only* verification.
+Any fix required inside another session's file scope will be **logged here first** and applied only as an explicit
+integration exception with the reason recorded. No dataset (`assets/data.js`, `data/*.json`, `*.csv`) will be
+rewritten by this session.
+
+| Task | Status | Scope | Verification rule |
+|---|---|---|---|
+| E1 Claim + board read | **done** | this section | Claim committed and pushed before any other work (`c502c6c`, `dcb136f`) |
+| E2 Line-by-line integrity pass (all generators/checkers + repo-wide link scan) | **done** | read-only across repo | Every checker passed — log below |
+| E3 Live GitHub Pages verification (all six entry points) | **done** | read-only | All six fetched with non-empty content — log below |
+| E4 Official-source spot checks of headline published numbers | **done** | read-only | Four official sources fetched 2026-11-26 — all matched published values |
+| E5 Fixes, PR to `main`, merge, Pages deploy confirmation | in progress | `COORDINATION.md` only | No fixes were needed; PR carries this verification record only |
+| E6 Record PR + deploy result here | unclaimed | this section | Follow-up commit after merge, same pattern as sessions `013c9819` / `33a259ca` / `60e8d054` |
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note
+the handoff here. Requests to change another session's data are logged here, not applied.
+
+**Concurrency note (2026-11-26):** while this claim was being pushed, `COORDINATION.md` conflicted twice with
+session `24fa9b09`'s concurrently pushed claim and publication record (PRs #22/#23). Both conflicts were resolved
+by keeping **both** session sections in full; nothing from either side was discarded. Session `24fa9b09` has since
+completed F5, and session `cac5675c`'s PR #21 has merged — this session did **not** preempt either; E5 means only:
+publish *this* session's verification record by PR, rebasing over any concurrent merge first. One intermediate
+GitHub Pages build (commit `39555a6`, run at 19:12:06 UTC) reported `errored` during the concurrent-merge burst;
+the very next build for `acf5965` reported `built`, and every live entry point was fetched successfully after it —
+treated as transient, not a site defect.
+
+### E2 — integrity pass (2026-11-26, all run from a clean checkout of `main` @ `acf5965`)
+
+| Check | Result |
+|---|---|
+| `python3 build.py && python3 check.py` (Shanghai `docs/` generator + checker) | **PASS** — 11 pages built, 187 table rows, 0 broken internal links, 0 empty hrefs, title + viewport on all |
+| `python3 integration-2027/tools/build.py && …/check.py` | **PASS** — 7 pages regenerated, 0 errors; regeneration produced **zero diff** against the committed files |
+| `python3 social-2027/tools/build.py && …/check.py` | **PASS** — 43 venues, 58 videos, 8 pages; data, row sourcing and internal links consistent; zero diff |
+| Repo-wide HTML scan (all 55 `.html` files incl. root Beijing plan, `shanghai-2027/`, `shanghai-verified-2027/`) | **PASS** — 1,185 `<tr>` rows, 777 local `href`/`src` references, **0 missing targets, 0 empty hrefs**, `<title>` and viewport present on every page |
+| JSON validation (29 files) | **PASS** — all parse |
+| Conflict-marker scan over tracked files | **PASS** — none (one transient marker set in this branch's own early push was fixed in `dcb136f` before any PR) |
+| `git diff --check` after all regenerations | **PASS** — clean; working tree unchanged, i.e. committed output matches generators exactly |
+| `.nojekyll` present; GitHub Pages config | **PASS** — `main` `/`, legacy, public, https enforced |
+
+### E3 — live GitHub Pages entry points (fetched 2026-11-26)
+
+| Entry point | Result |
+|---|---|
+| `https://kanlerxz87-cyber.github.io/ChinaFun1/` | 200, full content. The plain URL is served from a fetch-layer cache predating PRs #19–#22; a cache-busted fetch (`?v=acf5965-verify`) confirms the deployed page includes **Choose a plan**, **All China trip plans** and links to all six sub-sites. |
+| `…/docs/` | 200 — Shanghai overview, price windows, density table |
+| `…/shanghai-2027/` | 200 — executive summary, recommendation, price ladder |
+| `…/shanghai-verified-2027/` | 200 — overview, verification-status table, page directory |
+| `…/integration-2027/` | 200 — four-plan comparison, first three review paths |
+| `…/social-2027/` | 200 — 43 venues, 58 verified videos, methodology |
+| Pages API | `status: built`, source `main` `/`; latest build for `acf5965` **built** |
+
+### E4 — official-source spot checks (fetched 2026-11-26)
+
+| Official source | Published claim checked | Result |
+|---|---|---|
+| [MICHELIN Beijing all-starred list](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred) | 33 starred = 2×3★ + 5×2★ + 26×1★; Bib 32; Selected 42 | **Match** — live filter shows exactly `3 Stars 2 / 2 Stars 5 / 1 Star 26 / Bib 32 / Selected 42` and "1-33 of 33 restaurants" |
+| [timeanddate — Holidays in China 2027](https://www.timeanddate.com/holidays/china/2027) | CNY Sat 6 Feb 2027; holiday 5–13 Feb; make-up workday Sun 14 Feb; Lantern Festival Sat 20 Feb | **Match** — table lists Feb 5 Spring Festival Eve, Feb 6 Chinese New Year, holidays through Feb 13, Special Working Day Feb 14, Lantern Festival Feb 20. (Third-party calendar — already flagged as such by its citing plans.) |
+| [Palace Museum — Visit](https://intl.dpm.org.cn/visit.html) | Tue–Sun, closed Mon except national holidays; 1 Nov–31 Mar 08:30–16:30, last entry 15:30; CNY 40 low season; Treasure/Clocks CNY 10; 40,000 cap; no same-day tickets; passport booking | **Match** — every figure read verbatim from the official page |
+| [U.S. State Dept — China advisory](https://travel.state.gov/en/international-travel/travel-advisories/china.html) | Level 2, issued 2026-10-19 | **Match** — "Level 2 – Exercise increased caution", "Date issued: October 19, 2026" |
+
+No mismatch was found, so no data edit was made or requested.
+
+### Observations (non-blocking, for review — no file outside this section was changed)
+
+- **O1 — two Radisson figures on `docs/`.** The overview's window table shows **$1,114** for W1 while the
+  recommendation card shows **$1,116**. Both are sourced: `data/window_pricing.json` records $1,114 as the
+  cheapest public *Superior Room (1 double or 2 twins)* rate and the note carries "Junior Suite (1 queen)
+  $1,116"; `data/hotels.json` prices the recommended Junior Suite at $1,116. Not an error — but a reader who
+  does not open the JSON can miss the room-category difference. Suggestion for owner `68e13071`: render the
+  existing `note` field in the window table. Logged, not applied (other session's scope).
+- **O2 — fetch-layer caching of the root URL.** Plain fetches of the root landing page can return pre-#19 HTML.
+  Deploy is correct; reviewers should cache-bust when checking a fresh deploy (already noted by `24fa9b09`).
+- **O3 — transient errored Pages build** during the 19:12 UTC concurrent-merge burst (see concurrency note);
+  superseded within 20 seconds by a successful build. No action needed.
+
