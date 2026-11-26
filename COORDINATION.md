@@ -747,3 +747,20 @@ No mismatch was found, so no data edit was made or requested.
   (informational; does not affect the deploy). No check failures.
 - The PR changed **only** `COORDINATION.md`. No trip data, price, source link or plan page was modified;
   all E2–E4 checks in the record above were run read-only against `main` @ `acf5965` before the PR.
+
+---
+
+# Session `8f562229` — independent line-by-line audit + spot re-verification + publish pass
+
+**Branch:** `arena/8f562229-chinafun1` (branched from `main` @ `1c839f22`, rebased onto `origin/main` @ `49a2646` before work)
+**Status:** in progress
+**Intent:** Final sweep for this brief. (E1) Line-by-line audit of the published site and all generated artifacts: every internal link, every asset, every JSON/JS file, every page's tables. (E2) Spot re-verification of the load-bearing published claims against official sources, read-only. (E3) T8 — capture the remaining 23 starred-restaurant addresses/phones/hours from the official MICHELIN pages only if they are reachable; anything unconfirmable stays blank and flagged. (E4) PR, merge, confirm GitHub Pages deploy.
+
+| Task | Status | File scope | Verification |
+|------|--------|-----------|--------------|
+| E1 Repo-wide line-by-line audit | in progress | new `audit-2027/**`, `COORDINATION.md` (this section only), appended `README.md` section | link scan over every HTML file in repo; JSON parse; JS syntax; local HTTP serve + 200 check on all pages |
+| E2 Spot re-verification vs official sources | in progress | read-only; results into `audit-2027/**` | fetch official pages / oEmbed; record URL + date per claim |
+| E3 T8 — 23 missing starred-restaurant addresses | in progress (conditional on source reachability) | `assets/data.js` (`MICHELIN`, `DISTRICT_STARS`) only if sources confirm; otherwise findings to `audit-2027/**` and T8 stays needs review | MICHELIN official restaurant pages only; blank + flag otherwise |
+| E4 PR + merge + Pages deploy confirmation | unclaimed | GitHub PR/merge metadata, `COORDINATION.md` | `gh` checks on merge commit; Pages status |
+
+No file owned by another session is edited. `assets/data.js` is touched only under E3, and only with verified values; any such change is regenerated/checked and logged here in the same commit.
