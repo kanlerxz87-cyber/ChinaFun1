@@ -46,11 +46,12 @@ error. Confirm which room category you are actually being quoted before treating
 
 ---
 
-# Beijing plan (`fac6d965`) — repo root
-
+# Beijing plan (`fac6d965` + `1ac7826d` integration) — repo root
 
 A static, mobile-first planning dashboard for a **7-night Beijing trip for two adults, 15–22 February 2027**
-(inside the 15 Feb – 23 Mar 2027 window), built around the MICHELIN Guide rather than around sightseeing.
+(inside the 15 Feb – 23 Mar 2027 window), built around the MICHELIN Guide rather than around sightseeing, and linked
+from its top bar to both the cross-plan comparison layer ([`integration-2027/index.html`](integration-2027/index.html))
+and the oEmbed social registry ([`social-2027/index.html`](social-2027/index.html)).
 
 **Live site:** published from the repository root via GitHub Pages.
 
@@ -59,23 +60,23 @@ A static, mobile-first planning dashboard for a **7-night Beijing trip for two a
 | Path | What it is |
 |---|---|
 | `index.html` | Executive summary and the dashboard landing page |
-| `hotels.html` | 12 Beijing hotels priced for the exact week, ranked on a published, auditable score |
-| `michelin.html` | All 33 MICHELIN-starred restaurants in Beijing 2027 with star level, price band, hours, links |
-| `activities.html` | Activities with verified/unverified flags on hours and ticket prices |
-| `itinerary.html` | 7-night day-by-day plan that respects closing days |
+| `hotels.html` | 12 Beijing hotels priced for 15–22 Feb 2027, explicit bathroom verification, ranked on a published, auditable score |
+| `michelin.html` | All 33 MICHELIN-starred restaurants (33/33 addresses/districts/phones, 10/33 hours, 4 official menus, 18/33 direct YT links) plus separate 32 Bib Gourmand & 42 MICHELIN Selected reference tables |
+| `activities.html` | All 10 Beijing attractions officially verified for Feb 2027 low-season hours, prices, reservation channels & verified videos |
+| `itinerary.html` | 7-night day-by-day plan synced to verified Monday closures and district clusters |
 | `decisions.html` | The 10 questions that block a booking, plus what is known vs unknown |
-| `suggestions.html` | Improvement proposals awaiting review — nothing applied yet |
-| `flagged.html` | Verification log, every blank field, irregularities, repository review |
+| `suggestions.html` | Improvement backlog showing completed items (#1, #8) and remaining items awaiting review |
+| `flagged.html` | Verification log, remaining blanks, newly caught anomalies, and confidence statement |
 | `assets/data.js` | The single source of truth for all rows |
 | `assets/style.css`, `assets/app.js` | Design system and table renderers (no dependencies, no build step) |
-| `COORDINATION.md` | Shared task board for parallel agent sessions |
+| `COORDINATION.md` | Shared task board across all sessions |
 
 ## Editorial rules
 
 1. Every value in every row links to the official source it came from.
 2. If a value cannot be confirmed from an official source it is **left blank and flagged** — never estimated, never inferred.
-3. Star status is stated explicitly: starred (with count) vs MICHELIN Selected vs Bib Gourmand.
-4. Hotel prices are shown as the **total for a 7-night stay**, with the room type and bed type that price actually buys.
+3. Star status is stated explicitly: starred (with count) vs Bib Gourmand (0★) vs MICHELIN Selected (0★).
+4. Hotel prices are shown as the **total for a 7-night stay**, with the room type, bed type, and individually verified bathroom note.
 5. Every change is committed to a session branch and logged in `COORDINATION.md`.
 
 ## Run locally
@@ -89,11 +90,11 @@ No build step, no package manager, no external requests at runtime.
 
 ## Verification status
 
-See [`flagged.html`](flagged.html) for the source-by-source log, the full list of blank fields and the known
+See [`flagged.html`](flagged.html) for the source-by-source log, the full list of remaining blanks and the known
 irregularities. Headline caveats:
 
 - Hotel totals are Booking.com "from" rates read on **25 Nov 2026**, not a locked contract.
-- Michelin density counts cover **10 of 33** starred restaurants, so they are a lower bound.
+- All **33 of 33** starred Beijing addresses are verified (`Chaoyang: 20, Dongcheng: 9, Xicheng: 3, Shunyi: 1`), and all **10 of 10** activities carry verified Feb low-season hours/prices.
 - Transit times are deliberately **not** estimated; the ≤1-hour rule still needs a routing pass in Amap.
 
 
