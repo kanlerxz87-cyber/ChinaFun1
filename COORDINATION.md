@@ -577,3 +577,19 @@ subtrees remain additive and neither edits the other's data.
 - GitHub Pages: **built** for that merge commit; Pages remains configured for `main` at repository root: https://kanlerxz87-cyber.github.io/ChinaFun1/.
 - Live fetch checks returned success for the root landing page and the linked comparison page `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html`. The root page displays the new “Choose a plan” card pointing to the independent-plan comparison.
 - The navigation change does not reverify or supersede any existing travel facts. Existing source links, dates, hotel snapshots, and flags remain as recorded in their owning plan sections above.
+# Session `24fa9b09` — final integration: unified entry point + re-verification + publish
+
+**Branch:** `arena/24fa9b09-chinafun1` (branched from `main` @ `1c839f2`, PR #18 merge)
+**Claimed:** 2026-11-26 · **Status:** in progress
+**File scope (non-overlapping):** `COORDINATION.md` (this section only), `README.md`, `index.html` (root landing — additive "All plans" section only), `assets/app.js` (nav — additive link only). No data file (`assets/data.js`, `data/*.json`, any plan's `data/`) and no other plan's pages are edited. If a change outside this scope is needed, it will be logged here as a request, not applied.
+**Intent:** Act as the final integration session named in the brief. Six sub-sites are live (root Beijing, `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`) but the root landing links to none of the other five and `README.md` documents only four. This session adds one unified entry point, re-verifies the load-bearing official sources, re-runs every build/link check, then opens and merges a PR and confirms the Pages deploy.
+
+| # | Task | Status | File scope | Verification rule |
+|---|------|--------|------------|-------------------|
+| F1 | Claim + repo audit | in progress | this section | Board read in full; claim committed and pushed before any other edit |
+| F2 | Re-verify load-bearing official sources | unclaimed | read-only + log here | MICHELIN Beijing 2027 release, MICHELIN Shanghai ceremony, Palace Museum visit page fetched and read this session; counts must match the published data or the mismatch is flagged |
+| F3 | Verify all six live Pages entry points | unclaimed | read-only + log here | Each entry URL fetched; HTTP 200 + non-empty body required |
+| F4 | Unified entry point (root landing + nav + README) | unclaimed | `index.html`, `assets/app.js`, `README.md` | Additive only; every new link must resolve; no existing row, price or claim changed |
+| F5 | Re-run all checks, PR, merge, Pages deploy | unclaimed | repo-wide verification only | `check.py` (docs), `integration-2027/tools/check.py`, `social-2027/tools/check.py`, repo-wide internal-link scan all pass; PR merged; Pages `built` for the merge commit |
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here.
