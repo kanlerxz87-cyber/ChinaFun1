@@ -570,3 +570,18 @@ subtrees remain additive and neither edits the other's data.
 - The new comparison link targets the existing local `integration-2027/index.html` landing page. The link addition itself introduces no new factual trip claims; all inherited prices, restaurant statuses, and verification caveats remain owned by their original source logs.
 - Published content remains a set of independent plans; do not treat the comparison layer as a single agreed recommendation. No hotel quote was re-priced in this navigation-only task.
 
+---
+
+# Session `cac5675c` — unified navigation, repo-wide verification & final integration
+
+**Branch:** `arena/cac5675c-chinafun1` (branched from `main` @ `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Claimed:** 2026-11-26 · **Status:** in progress
+**File scope:** `COORDINATION.md` (this section only), `README.md` (index table update), root `assets/app.js` (nav links), root `index.html` (cross-plan & social-registry links). No data files in `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, or `social-2027/` are modified.
+
+| # | Task | Status | Owner | File scope | Notes |
+|---|------|--------|-------|------------|-------|
+| F1 | Claim + repo audit | **in progress** | cac5675c | `COORDINATION.md` | Read `COORDINATION.md` in full; all 6 sub-sites inventoried. |
+| F2 | Fulfill cross-session navigation requests (`815c7943` & `773e75a3`) | **in progress** | cac5675c | `assets/app.js`, `index.html`, `README.md` | Add root navigation links to `integration-2027/index.html` ("All Plans") and `social-2027/index.html` ("Social Reviews"), plus a cross-plan directory card section on `index.html` and updated `README.md` table. |
+| F3 | Full-repo build & link-integrity verification | **in progress** | cac5675c | read-only verification | Run `check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, and a repo-wide HTML internal-link audit across all sub-sites. |
+| F4 | PR, merge to `main`, confirm GitHub Pages deploy | **in progress** | cac5675c | PR / Pages metadata + `COORDINATION.md` | Create PR from `arena/cac5675c-chinafun1` to `main`, merge, verify Pages build status, record PR URL and merge commit. |
+
