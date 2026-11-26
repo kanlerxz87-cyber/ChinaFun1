@@ -546,3 +546,13 @@ while PR #14 was open. That session's section and `integration-2027/**` are pres
 `COORDINATION.md` conflict was resolved by keeping **all three** session logs (013c9819, 815c7943, 773e75a3).
 The overlapping claim was not visible when this session claimed on the shared base commit `eda1907`; both
 subtrees remain additive and neither edits the other's data.
+
+---
+
+## Session `59c8c8e1` — independent integrity audit
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| A1 | in progress | 59c8c8e1 | `audit-2027/**` and this appended board section; independent review of inherited published plans, verification limits and site checks |
+
+Existing sections and their scopes remain untouched. The earlier `815c7943` and `773e75a3` in-progress headers are historical; their logs report completion on 2026-11-25 and no work is being taken over.
