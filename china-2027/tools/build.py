@@ -91,8 +91,15 @@ def render_social_pills(social: list[dict], max_inline: int = 8) -> str:
     parts = []
     for s in social[:max_inline]:
         plat = s.get("platform", "Link")
-        p_cls = "social-yt" if plat == "YouTube" else ("social-tt" if plat == "TikTok" else "social-ig")
-        short_plat = "YT" if plat == "YouTube" else ("TikTok" if plat == "TikTok" else "IG")
+        if plat.startswith("YouTube"):
+            p_cls = "social-yt"
+            short_plat = "YT Short" if "Short" in plat else "YT"
+        elif plat == "TikTok":
+            p_cls = "social-tt"
+            short_plat = "TikTok"
+        else:
+            p_cls = "social-ig"
+            short_plat = "IG"
         creator = s.get("creator", "")
         title = s.get("title", plat)
         label = f"{short_plat}: {creator}" if creator and creator not in ("YouTube Review", "YouTube Guide") else f"{short_plat}: {title[:36]}"

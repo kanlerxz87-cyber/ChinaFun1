@@ -174,6 +174,8 @@ def main() -> int:
         text = p.read_text(encoding="utf-8")
         if re.search(r"\bundefined\b|>None<", text):
             errors.append(f"{page}: contains literal undefined/None text")
+        if re.search(r'youtube\.com/[^"]+"[^>]*>IG:', text):
+            errors.append(f"{page}: YouTube URL mislabeled as IG:")
         parser = LinkAndMetaParser()
         parser.feed(text)
         if not parser.has_viewport:
