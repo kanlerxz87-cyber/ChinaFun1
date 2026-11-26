@@ -802,3 +802,14 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 | M5 | Multi-window 2027 hotel pricing & cheapest booking-time proof (8 Beijing + 5 Shanghai; Feb 15–22 vs Mar 1–8 vs Mar 16–23) | **done** | f8e7ee9e | `china-2027/data/hotels.json` | Every hotel verified for private bathroom + queen/king bed + live Booking.com 7-night USD totals (`2026-11-26`); active Black Friday/Early Booker free-cancel trough proven (15%–56% savings vs mid-Mar) |
 | M6 | Mobile-friendly static dashboard (`china-2027/`, 9 pages, 0 external CDNs, deterministic stdlib builder & validator) | **done** | f8e7ee9e | `china-2027/**` | `china-2027/tools/build.py` byte-deterministic; `china-2027/tools/check.py` PASS + all existing repo checkers PASS |
 | M7 | PR to `main`, merge, confirm live GitHub Pages HTTP 200 on `/ChinaFun1/china-2027/` | in progress | f8e7ee9e | PR/merge metadata + this section | All checks green + live Pages verified |
+
+### Cross-Session Fix Requests (Read-Only Audit Against `origin/main` @ `179e24c`)
+
+1. **`shanghai-verified-2027/data/*.csv` (HIGH):** All 4 CSV files contain malformed column-count rows from unquoted commas (`activities.csv`: 4/5 rows have 14 vs 15 cols; `hotels.csv`: 4/5 rows have 26 or 29 vs 25 cols; `michelin.csv`: row 5 has 17 vs 18 cols; `social.csv`: row 15 has 10 vs 9 cols). Recommend re-exporting via Python `csv.writer` with proper quoting.
+2. **Root `assets/data.js` (HIGH — post-PR #28 residuals):** Directly verified on `guide.michelin.com` & official hotel sites (`2026-11-26`):
+   - `Xin Rong Ji (Xinyuan South Road)`: phone on live MICHELIN is `+86 10 6501 5501` (not `+86 10 6501 5555`) and hours are `Mon–Sun 11:30–14:00, 17:30–21:00` (currently `h: ""`).
+   - `Xin Rong Ji (Jinrong Street)`: phone on live MICHELIN is `+86 10 6618 0567` (not `+86 10 6602 2288`), price band `¥¥¥` (not `¥¥¥¥`), and hours `Mon–Sun 11:00–14:00, 17:00–21:30` (currently `h: ""`).
+   - `Zijin Mansion`: Hilton/Waldorf official hours `Mon–Sun 11:30–14:30, 17:30–21:30` (currently `h: ""`).
+   - `Mio` (Four Seasons Beijing): flag official conflict — Four Seasons official site closes Mio Mondays (`Tue–Sun`), whereas MICHELIN lists `Mon–Sun`.
+3. **`shanghai-2027/data/` & `docs/` (MEDIUM):** `shanghai-2027/data/activities.json` leaves The Bund as `UNVERIFIED` with a YouTube search URL (`results?search_query=`), and `michelin-restaurants.json` omits street addresses/phones/hours for `Da Vittorio` (`Tue–Sun 12:00–13:30, 18:00–21:30`, closed Mon, `+86 21 6330 2198`), `Imperial Treasure`, and `The House of Rong`. All resolved in `china-2027/`.
+4. **Root navigation optional link:** Future root-navigation pass may add `china-2027/index.html` ("China 2027 Dual-City Planner") to root `index.html` / `README.md`.
