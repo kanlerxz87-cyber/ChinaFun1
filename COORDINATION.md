@@ -570,3 +570,10 @@ subtrees remain additive and neither edits the other's data.
 - The new comparison link targets the existing local `integration-2027/index.html` landing page. The link addition itself introduces no new factual trip claims; all inherited prices, restaurant statuses, and verification caveats remain owned by their original source logs.
 - Published content remains a set of independent plans; do not treat the comparison layer as a single agreed recommendation. No hotel quote was re-priced in this navigation-only task.
 
+
+#### Publication result — session `60e8d054`
+
+- PR #19: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/19 — merged to `main` at 2026-11-26 19:09:03 UTC; merge commit `49a26466c97642b661d5fe8dd784fd66dab8f480`.
+- GitHub Pages: **built** for that merge commit; Pages remains configured for `main` at repository root: https://kanlerxz87-cyber.github.io/ChinaFun1/.
+- Live fetch checks returned success for the root landing page and the linked comparison page `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html`. The root page displays the new “Choose a plan” card pointing to the independent-plan comparison.
+- The navigation change does not reverify or supersede any existing travel facts. Existing source links, dates, hotel snapshots, and flags remain as recorded in their owning plan sections above.
