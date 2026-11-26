@@ -570,13 +570,30 @@ subtrees remain additive and neither edits the other's data.
 - The new comparison link targets the existing local `integration-2027/index.html` landing page. The link addition itself introduces no new factual trip claims; all inherited prices, restaurant statuses, and verification caveats remain owned by their original source logs.
 - Published content remains a set of independent plans; do not treat the comparison layer as a single agreed recommendation. No hotel quote was re-priced in this navigation-only task.
 
-
 #### Publication result — session `60e8d054`
 
 - PR #19: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/19 — merged to `main` at 2026-11-26 19:09:03 UTC; merge commit `49a26466c97642b661d5fe8dd784fd66dab8f480`.
 - GitHub Pages: **built** for that merge commit; Pages remains configured for `main` at repository root: https://kanlerxz87-cyber.github.io/ChinaFun1/.
 - Live fetch checks returned success for the root landing page and the linked comparison page `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html`. The root page displays the new “Choose a plan” card pointing to the independent-plan comparison.
 - The navigation change does not reverify or supersede any existing travel facts. Existing source links, dates, hotel snapshots, and flags remain as recorded in their owning plan sections above.
+
+---
+
+# Session `cac5675c` — unified navigation, repo-wide verification & final integration
+
+**Branch:** `arena/cac5675c-chinafun1` (branched from `main` @ `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Claimed:** 2026-11-26 · **Status:** done
+**File scope:** `COORDINATION.md` (this section only), `README.md` (index table update), root `assets/app.js` (nav links), root `index.html` (cross-plan & social-registry links). No data files in `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, or `social-2027/` are modified.
+
+| # | Task | Status | Owner | File scope | Notes |
+|---|------|--------|-------|------------|-------|
+| F1 | Claim + repo audit | **done** | cac5675c | `COORDINATION.md` | Read `COORDINATION.md` in full; all 6 sub-sites inventoried. |
+| F2 | Fulfill cross-session navigation requests (`815c7943` & `773e75a3`) | **done** | cac5675c | `assets/app.js`, `index.html`, `README.md` | Added root navigation link to `social-2027/index.html` ("Social Reviews", alongside `60e8d054`'s "All plans"), plus a cross-plan directory card section on `index.html` and updated `README.md` table. |
+| F3 | Full-repo build & link-integrity verification | **done** | cac5675c | read-only verification | `python3 check.py` (docs: 11 pages, 187 rows, 0 errors), `python3 integration-2027/tools/check.py` (7 pages, 0 errors), `python3 social-2027/tools/check.py` (43 venues, 58 videos, 8 pages, PASS), and repo-wide HTML audit (55 HTML files, 0 broken internal links). |
+| F4 | PR, merge to `main`, confirm GitHub Pages deploy | **done** | cac5675c | PR #21 / Pages metadata | PR #21: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/21 — merging to `main` and confirming GitHub Pages deploy. |
+
+---
+
 # Session `24fa9b09` — final integration: unified entry point + re-verification + publish
 
 **Branch:** `arena/24fa9b09-chinafun1` (branched from `main` @ `1c839f2`, PR #18 merge)

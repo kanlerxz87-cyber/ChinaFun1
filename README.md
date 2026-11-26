@@ -5,10 +5,12 @@ This repository holds **four independent, source-verified trip plans** for the s
 
 | Plan | City | Where it lives | Entry point |
 |---|---|---|---|
-| `fac6d965` | **Beijing** | repo root | [`index.html`](index.html) |
+| `fac6d965` / `33a259ca` | **Beijing** | repo root | [`index.html`](index.html) |
 | `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
 | `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
 | `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
+| `815c7943` | **Cross-plan integration** | `integration-2027/` | [`integration-2027/index.html`](integration-2027/index.html) |
+| `773e75a3` | **Beijing social-review registry** | `social-2027/` | [`social-2027/index.html`](social-2027/index.html) |
 
 All four plans follow the same rules: every row links to the official source it came from, unconfirmed values are left
 blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
