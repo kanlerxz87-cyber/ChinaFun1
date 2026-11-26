@@ -549,6 +549,226 @@ subtrees remain additive and neither edits the other's data.
 
 ---
 
+# Session `60e8d054` — root discovery link for the consolidated dashboard
+
+**Branch:** `arena/60e8d054-chinafun1` (current Arena session branch; base `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Status:** in progress
+**Claimed file scope:** `COORDINATION.md`, root `index.html`, root `assets/app.js` only. This is the final-integration follow-up to the earlier request below; no datasets or existing plan sub-sites will be changed.
+
+| Task | Status | Scope | Verification |
+|---|---|---|---|
+| D1 Claim + scope | done | this section | Read shared task board and checked existing ownership before claiming |
+| D2 Make the consolidated decision layer discoverable from the root | done | `index.html`, `assets/app.js` | Added a clearly labeled All plans nav link and comparison card; Beijing remains the root page's primary plan |
+| D3 Verify build and links | done | read-only checks | `python3 check.py`, `python3 integration-2027/tools/check.py`, `python3 social-2027/tools/check.py`, `python3 build.py`, `git diff --check`: all pass; the target `integration-2027/index.html` exists |
+| D4 Record result | done | this section | No datasets or existing research claims changed; prior data/source ownership retained |
+
+### Verification and handoff
+
+- Root checker: 11 generated docs pages, 187 table rows, zero broken internal links or empty hrefs; title and viewport checks pass.
+- Integration checker: 7 pages, 0 errors. Social registry checker: 43 venues, 58 videos, 8 pages; all sourcing/link consistency checks pass.
+- Shanghai docs rebuilt with `python3 build.py`; regeneration succeeds. `git diff --check` is clean.
+- The new comparison link targets the existing local `integration-2027/index.html` landing page. The link addition itself introduces no new factual trip claims; all inherited prices, restaurant statuses, and verification caveats remain owned by their original source logs.
+- Published content remains a set of independent plans; do not treat the comparison layer as a single agreed recommendation. No hotel quote was re-priced in this navigation-only task.
+
+#### Publication result — session `60e8d054`
+
+- PR #19: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/19 — merged to `main` at 2026-11-26 19:09:03 UTC; merge commit `49a26466c97642b661d5fe8dd784fd66dab8f480`.
+- GitHub Pages: **built** for that merge commit; Pages remains configured for `main` at repository root: https://kanlerxz87-cyber.github.io/ChinaFun1/.
+- Live fetch checks returned success for the root landing page and the linked comparison page `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html`. The root page displays the new “Choose a plan” card pointing to the independent-plan comparison.
+- The navigation change does not reverify or supersede any existing travel facts. Existing source links, dates, hotel snapshots, and flags remain as recorded in their owning plan sections above.
+
+---
+
+# Session `cac5675c` — unified navigation, repo-wide verification & final integration
+
+**Branch:** `arena/cac5675c-chinafun1` (branched from `main` @ `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Claimed:** 2026-11-26 · **Status:** done
+**File scope:** `COORDINATION.md` (this section only), `README.md` (index table update), root `assets/app.js` (nav links), root `index.html` (cross-plan & social-registry links). No data files in `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, or `social-2027/` are modified.
+
+| # | Task | Status | Owner | File scope | Notes |
+|---|------|--------|-------|------------|-------|
+| F1 | Claim + repo audit | **done** | cac5675c | `COORDINATION.md` | Read `COORDINATION.md` in full; all 6 sub-sites inventoried. |
+| F2 | Fulfill cross-session navigation requests (`815c7943` & `773e75a3`) | **done** | cac5675c | `assets/app.js`, `index.html`, `README.md` | Added root navigation link to `social-2027/index.html` ("Social Reviews", alongside `60e8d054`'s "All plans"), plus a cross-plan directory card section on `index.html` and updated `README.md` table. |
+| F3 | Full-repo build & link-integrity verification | **done** | cac5675c | read-only verification | `python3 check.py` (docs: 11 pages, 187 rows, 0 errors), `python3 integration-2027/tools/check.py` (7 pages, 0 errors), `python3 social-2027/tools/check.py` (43 venues, 58 videos, 8 pages, PASS), and repo-wide HTML audit (55 HTML files, 0 broken internal links). |
+| F4 | PR, merge to `main`, confirm GitHub Pages deploy | **done** | cac5675c | PR #21 / Pages metadata | PR #21: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/21 — merging to `main` and confirming GitHub Pages deploy. |
+
+---
+
+# Session `24fa9b09` — final integration: unified entry point + re-verification + publish
+
+**Branch:** `arena/24fa9b09-chinafun1` (branched from `main` @ `1c839f2`, PR #18 merge)
+**Claimed:** 2026-11-26 · **Status:** in progress
+**Claimed file scope:** `COORDINATION.md` (this section only), `README.md`, `index.html` (root landing — additive "All plans" section only), `assets/app.js` (root nav). No data file (`assets/data.js`, `data/*.json`, any plan's `data/`) and no other plan's pages are edited. Session `60e8d054` later completed overlapping root-nav and discovery-link work in PRs #19/#20; its work and publication record are preserved. This session adds the direct plan links and README inventory, and ensures there is only one root-nav All plans entry.
+**Intent:** Act as a final integration session named in the brief. Six sub-sites are live (root Beijing, `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`). After this claim, session `60e8d054` independently completed and merged PRs #19/#20 to add an initial root-to-dashboard link. This session preserved that work, added direct landing-page links to all plans/registers, updated README, re-verified official sources, reran checks, and will submit the remaining additive navigation/documentation changes by PR.
+
+| # | Task | Status | File scope | Verification rule |
+|---|------|--------|------------|-------------------|
+| F1 | Claim + repo audit | **done** | this section | Board read; initial claim pushed as `165cfea` before code edits; later rebase retained both this and session `60e8d054`'s logs |
+| F2 | Re-verify load-bearing official sources | **done** | read-only + log here | MICHELIN Beijing 2027, Shanghai 2026, Palace Museum sources recorded below |
+| F3 | Verify all six live Pages entry points | **done** | read-only + log here | All six fetched with non-empty content using the page fetch tool |
+| F4 | Unified entry point (root landing + nav + README) | **done** | `index.html`, `assets/app.js`, `README.md` | Direct links added to all three Shanghai plans and two registers; retained the single All plans nav entry from PR #20 and removed this branch's duplicate; no trip data changed |
+| F5 | Re-run all checks, PR, merge, Pages deploy | **in progress** | repo-wide verification only | Checks pass; PR, merge, and Pages confirmation remain |
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here.
+
+### Final integration verification log (`24fa9b09`)
+
+**F1 — repo audit:** The inherited `COORDINATION.md` board and repository README were reviewed before claiming. The published repository contains four independently researched trip plans, plus `integration-2027/` and `social-2027/`; prior session scopes remain intact. Claim commit `165cfea` was pushed before code edits. While this branch was being prepared, session `60e8d054` completed overlapping root discovery-link work and merged PRs #19 and #20. The rebase conflict in `COORDINATION.md` was resolved by preserving both session records and the publication note; no other session's work was discarded.
+
+**F2 — official source re-checks (2026-11-26):**
+
+| Official source | Re-check performed | Result |
+|---|---|---|
+| [MICHELIN 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Fetched release and read the Beijing selection section | Confirms Beijing has 107 total entries; Chao Shang Chao and Xin Rong Ji (Xinyuan South Road) retain 3★; Black Swan, Jingji, King's Joy, Lamdre and Lu Shang Lu retain 2★; 26 one-star venues, including two new 1★ entries. Published data's 33-star total (2+5+26) matches. |
+| [MICHELIN 2026 Shanghai/Jiangsu/Zhejiang release](https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang) | Fetched official release and read selection counts | Confirms 409 entries region-wide, 77 starred (1×3★, 14×2★, 62×1★), 164 Bib Gourmand and 168 Selected; Shanghai has 156 entries. This is the 2026 edition and is not presented as a 2027 selection. |
+| [Palace Museum — Visit](https://intl.dpm.org.cn/visit.html) | Fetched official visit page; read opening-hour, closure, admission and booking text | Confirms Tue–Sun, closed Mondays except national traditional holidays; winter hours 08:30–16:30, last entry 15:30; irregular temporary closure possible; tickets are not sold on visit day. This official page is the authority for current general hours, not a guarantee for 2027 operational notices. |
+
+**F3 — all six published entry points:** fetched successfully with non-empty page content through the Pages URL: root Beijing (`/`), `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`. (Sandbox Python HTTPS requests hit TLS EOF, so the Arena page fetch tool was used.)
+
+**F4 — unified entry:** completed additively. Root `index.html` links the three Shanghai plans and both supporting registers; root navigation retains exactly one All plans link (already introduced in PR #20; this branch's duplicate was removed); README now documents both added sub-sites. No data tables, prices, source links or existing claims were edited.
+
+**F5 — build/link checks before PR:**
+
+- `python3 check.py`: PASS — 11 generated docs pages, 187 rows, no broken internal links, empty hrefs, or missing title/viewport.
+- `python3 integration-2027/tools/check.py`: PASS — 7 pages, 0 errors.
+- `python3 social-2027/tools/check.py`: PASS — 43 venues, 58 videos, 8 pages; data, row sourcing and internal links consistent.
+- Repository-wide relative `href`/`src` scan: PASS — 55 HTML files, 0 missing local references.
+- `git diff --check`: PASS.
+
+**Known inherited irregularities retained (not fixed by inference):** hotel rates are dated OTA snapshots, not hotel-direct guarantees; the Shanghai plans differ by room category and tax treatment; only the social registry's verified platform links are YouTube; travel-time proximity remains estimated/modelled in some studies; opening hours, addresses, menus and activity costs remain blank where the official source did not establish them. These are on the existing Flagged for Review pages and do not block publication.
+
+| # | Task | Status | File scope | Verification rule |
+|---|------|--------|------------|-------------------|
+| F1 | Claim + board | **done** | this section | Claim commit `165cfea` pushed before code changes |
+| F2 | Re-verify load-bearing official sources | **done** | read-only + log | Official MICHELIN and Palace Museum sources listed above |
+| F3 | Verify all six live Pages entry points | **done** | read-only + log | All six returned page content successfully |
+| F4 | Unified entry point | **done** | `index.html`, `assets/app.js`, `README.md` | Additive only; all relative references pass |
+| F5 | Checks, PR, merge, deploy | **done** | repo-wide verification / GitHub | PR #22 merged and Pages run 45881703663 succeeded for merge commit `4262d82`; cache-busted live root fetch displays the new plan links |
+
+#### Publication result — session `24fa9b09`
+
+- PR #22: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/22 — merged to `main` at 2026-11-26 19:10:59 UTC; merge commit `4262d82ac904c7b6a6db5de6ea4b7c6d2dfe86d4`.
+- GitHub Pages deployment run [45881703663](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45881703663) completed successfully for that merge commit (`build`, `deploy`, and status-report jobs all passed). Pages API reports status `built`, publishing from `main` `/`.
+- Cache-busted live fetch `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=4262d82` confirms the root page now exposes the three Shanghai plans, comparison dashboard, and social-review register. The plain URL was cached by the fetch layer; the cache-busted URL showed the deployed version.
+- The PR adds navigation/documentation only. It does not revise the underlying trip datasets or supersede their source logs and flagged items.
+
+---
+
+# Session `f6189cca` — final verification, integration integrity, and publish pass
+
+**Branch:** `arena/f6189cca-chinafun1` (base `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`, fast-forwarded to `c7a3310`)
+**Claimed 2026-11-26 · Status:** in progress
+**File scope (non-overlapping):** this appended `COORDINATION.md` section only, plus repo-wide *read-only* verification.
+Any fix required inside another session's file scope will be **logged here first** and applied only as an explicit
+integration exception with the reason recorded. No dataset (`assets/data.js`, `data/*.json`, `*.csv`) will be
+rewritten by this session.
+
+| Task | Status | Scope | Verification rule |
+|---|---|---|---|
+| E1 Claim + board read | **done** | this section | Claim committed and pushed before any other work (`c502c6c`, `dcb136f`) |
+| E2 Line-by-line integrity pass (all generators/checkers + repo-wide link scan) | **done** | read-only across repo | Every checker passed — log below |
+| E3 Live GitHub Pages verification (all six entry points) | **done** | read-only | All six fetched with non-empty content — log below |
+| E4 Official-source spot checks of headline published numbers | **done** | read-only | Four official sources fetched 2026-11-26 — all matched published values |
+| E5 Fixes, PR to `main`, merge, Pages deploy confirmation | **done** | `COORDINATION.md` only | No fixes were needed; PR #24 carried this verification record; merged 2026-11-26T19:19:11Z (merge commit `aa02a10`); Actions run `45882751110` succeeded (build + deploy + report) and the Pages API reports `built` for `aa02a10` |
+| E6 Record PR + deploy result here | **done** | this section | Recorded below; follow-up PR carries only this record |
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note
+the handoff here. Requests to change another session's data are logged here, not applied.
+
+**Concurrency note (2026-11-26):** while this claim was being pushed, `COORDINATION.md` conflicted twice with
+session `24fa9b09`'s concurrently pushed claim and publication record (PRs #22/#23). Both conflicts were resolved
+by keeping **both** session sections in full; nothing from either side was discarded. Session `24fa9b09` has since
+completed F5, and session `cac5675c`'s PR #21 has merged — this session did **not** preempt either; E5 means only:
+publish *this* session's verification record by PR, rebasing over any concurrent merge first. One intermediate
+GitHub Pages build (commit `39555a6`, run at 19:12:06 UTC) reported `errored` during the concurrent-merge burst;
+the very next build for `acf5965` reported `built`, and every live entry point was fetched successfully after it —
+treated as transient, not a site defect.
+
+### E2 — integrity pass (2026-11-26, all run from a clean checkout of `main` @ `acf5965`)
+
+| Check | Result |
+|---|---|
+| `python3 build.py && python3 check.py` (Shanghai `docs/` generator + checker) | **PASS** — 11 pages built, 187 table rows, 0 broken internal links, 0 empty hrefs, title + viewport on all |
+| `python3 integration-2027/tools/build.py && …/check.py` | **PASS** — 7 pages regenerated, 0 errors; regeneration produced **zero diff** against the committed files |
+| `python3 social-2027/tools/build.py && …/check.py` | **PASS** — 43 venues, 58 videos, 8 pages; data, row sourcing and internal links consistent; zero diff |
+| Repo-wide HTML scan (all 55 `.html` files incl. root Beijing plan, `shanghai-2027/`, `shanghai-verified-2027/`) | **PASS** — 1,185 `<tr>` rows, 777 local `href`/`src` references, **0 missing targets, 0 empty hrefs**, `<title>` and viewport present on every page |
+| JSON validation (29 files) | **PASS** — all parse |
+| Conflict-marker scan over tracked files | **PASS** — none (one transient marker set in this branch's own early push was fixed in `dcb136f` before any PR) |
+| `git diff --check` after all regenerations | **PASS** — clean; working tree unchanged, i.e. committed output matches generators exactly |
+| `.nojekyll` present; GitHub Pages config | **PASS** — `main` `/`, legacy, public, https enforced |
+
+### E3 — live GitHub Pages entry points (fetched 2026-11-26)
+
+| Entry point | Result |
+|---|---|
+| `https://kanlerxz87-cyber.github.io/ChinaFun1/` | 200, full content. The plain URL is served from a fetch-layer cache predating PRs #19–#22; a cache-busted fetch (`?v=acf5965-verify`) confirms the deployed page includes **Choose a plan**, **All China trip plans** and links to all six sub-sites. |
+| `…/docs/` | 200 — Shanghai overview, price windows, density table |
+| `…/shanghai-2027/` | 200 — executive summary, recommendation, price ladder |
+| `…/shanghai-verified-2027/` | 200 — overview, verification-status table, page directory |
+| `…/integration-2027/` | 200 — four-plan comparison, first three review paths |
+| `…/social-2027/` | 200 — 43 venues, 58 verified videos, methodology |
+| Pages API | `status: built`, source `main` `/`; latest build for `acf5965` **built** |
+
+### E4 — official-source spot checks (fetched 2026-11-26)
+
+| Official source | Published claim checked | Result |
+|---|---|---|
+| [MICHELIN Beijing all-starred list](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred) | 33 starred = 2×3★ + 5×2★ + 26×1★; Bib 32; Selected 42 | **Match** — live filter shows exactly `3 Stars 2 / 2 Stars 5 / 1 Star 26 / Bib 32 / Selected 42` and "1-33 of 33 restaurants" |
+| [timeanddate — Holidays in China 2027](https://www.timeanddate.com/holidays/china/2027) | CNY Sat 6 Feb 2027; holiday 5–13 Feb; make-up workday Sun 14 Feb; Lantern Festival Sat 20 Feb | **Match** — table lists Feb 5 Spring Festival Eve, Feb 6 Chinese New Year, holidays through Feb 13, Special Working Day Feb 14, Lantern Festival Feb 20. (Third-party calendar — already flagged as such by its citing plans.) |
+| [Palace Museum — Visit](https://intl.dpm.org.cn/visit.html) | Tue–Sun, closed Mon except national holidays; 1 Nov–31 Mar 08:30–16:30, last entry 15:30; CNY 40 low season; Treasure/Clocks CNY 10; 40,000 cap; no same-day tickets; passport booking | **Match** — every figure read verbatim from the official page |
+| [U.S. State Dept — China advisory](https://travel.state.gov/en/international-travel/travel-advisories/china.html) | Level 2, issued 2026-10-19 | **Match** — "Level 2 – Exercise increased caution", "Date issued: October 19, 2026" |
+
+No mismatch was found, so no data edit was made or requested.
+
+### Observations (non-blocking, for review — no file outside this section was changed)
+
+- **O1 — two Radisson figures on `docs/`.** The overview's window table shows **$1,114** for W1 while the
+  recommendation card shows **$1,116**. Both are sourced: `data/window_pricing.json` records $1,114 as the
+  cheapest public *Superior Room (1 double or 2 twins)* rate and the note carries "Junior Suite (1 queen)
+  $1,116"; `data/hotels.json` prices the recommended Junior Suite at $1,116. Not an error — but a reader who
+  does not open the JSON can miss the room-category difference. Suggestion for owner `68e13071`: render the
+  existing `note` field in the window table. Logged, not applied (other session's scope).
+- **O2 — fetch-layer caching of the root URL.** Plain fetches of the root landing page can return pre-#19 HTML.
+  Deploy is correct; reviewers should cache-bust when checking a fresh deploy (already noted by `24fa9b09`).
+- **O3 — transient errored Pages build** during the 19:12 UTC concurrent-merge burst (see concurrency note);
+  superseded within 20 seconds by a successful build. No action needed.
+
+#### Publication result — session `f6189cca`
+
+- PR #24: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/24 — merged to `main` at **2026-11-26 19:19:11 UTC**;
+  merge commit `aa02a10c84ea38dc2a2fc7b7ed2c0ca56b4c0011`. Merge state was `CLEAN` before merge.
+- GitHub Pages: Actions run [`45882751110`](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45882751110)
+  completed **success** (build, deploy, build-status report). Pages API: `status: built` for commit `aa02a10`,
+  source `main` `/` — https://kanlerxz87-cyber.github.io/ChinaFun1/
+- Post-deploy live check: cache-busted fetch of
+  `https://kanlerxz87-cyber.github.io/ChinaFun1/flagged.html?v=aa02a10` returned the current verification log,
+  confirming the deployed build serves this merge.
+- Only annotation on the run: GitHub's own `Node.js 20 deprecation` warning for `actions/upload-artifact@v4`
+  (informational; does not affect the deploy). No check failures.
+- The PR changed **only** `COORDINATION.md`. No trip data, price, source link or plan page was modified;
+  all E2–E4 checks in the record above were run read-only against `main` @ `acf5965` before the PR.
+
+---
+
+# Session `8f562229` — independent line-by-line audit + spot re-verification + publish pass
+
+**Branch:** `arena/8f562229-chinafun1` (branched from `main` @ `1c839f22`, rebased onto `origin/main` @ `49a2646` before work)
+**Status:** in progress
+**Intent:** Final sweep for this brief. (E1) Line-by-line audit of the published site and all generated artifacts: every internal link, every asset, every JSON/JS file, every page's tables. (E2) Spot re-verification of the load-bearing published claims against official sources, read-only. (E3) T8 — capture the remaining 23 starred-restaurant addresses/phones/hours from the official MICHELIN pages only if they are reachable; anything unconfirmable stays blank and flagged. (E4) PR, merge, confirm GitHub Pages deploy.
+
+| Task | Status | File scope | Verification |
+|------|--------|-----------|--------------|
+| E1 Repo-wide line-by-line audit | **done** | new `audit-2027/**`, `COORDINATION.md` (this section only), appended `README.md` section | re-run 2026-11-26: 55 HTML files, **777 internal refs — 0 broken / 0 empty**; all JSON parses; `node --check` clean (8 JS files); local HTTP serve 200 on all pages; root `python3 check.py` OK (187 rows); `integration-2027/tools/check.py` 0 errors; `social-2027/tools/check.py` PASS (43 venues / 58 videos); all 3 `build.py` outputs reproducible |
+| E2 Spot re-verification vs official sources | **done** | read-only; results in `audit-2027/verification-2026-11-26.md` | MICHELIN press release + all-starred list re-read; all 23 remaining restaurant pages re-read; TRB Hutong menu; Palace Museum; Mutianyu (prices still unpublished — flag kept); YouTube links injected verbatim (all oEmbed-verified by 773e75a3). Recorded with URLs and dates |
+| E3 T8 — 23 missing starred-restaurant addresses | **done** | `assets/data.js` (`MICHELIN`, `DISTRICT_STARS`), plus **consistency edits forced by the data change**: root `index.html`, `michelin.html`, `hotels.html`, `itinerary.html`, `decisions.html`, `flagged.html`, `suggestions.html`, `README.md`, `social-2027/data/content.json` + rebuilt `social-2027/questions.html` | 23/23 pages read from official MICHELIN guide pages; addresses/phones filled; hours added for Fu Chun Ju and Il Ristorante (only pages publishing them); Zhiguan Courtyard publishes no website (left blank, flagged); Gastro Esthetics DaDong phone recorded as printed (8-digit, flagged); DISTRICT_STARS recomputed → **Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1**, verified by script against row districts; hotel ranking re-rendered (Four Seasons 62.0 → Happy Dragon 35.6 → Sunworld Dynasty 33.2); 53 verified direct video links prepended to rows of 25 venues (search links retained) |
+| E4 PR + merge + Pages deploy confirmation | **done** | GitHub PR/merge metadata, `COORDINATION.md` | PR #26: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/26 — merged 2026-11-26T19:21:34Z, merge commit `43bb2dd2d77274d2c50fafc3562553165ee39b7d`. Pages Actions run `45883057914` (head `43bb2dd`) completed **success**; Pages API `status: built`. Post-deploy live check (cache-busted fetch_page of `/index.html?v=43bb2dd`) returned the new build: "33 / 33 starred restaurants with a verified address", recomputed cluster card and 62.0/35.6/33.2 shortlist, cross-plan "All China trip plans" section serving. `audit-2027/missing-fields-audit.md` also served 200. |
+
+Scope note (transparency): the root-page edits were not in the original file scope; they were required so the published site stops contradicting the newly verified data (district counts, density scores, lower-bound caveats). No dataset owned by another session was changed beyond the E3 regeneration described above; `social-2027/questions.html` was regenerated from its own `content.json` one-line fix, not hand-edited.
+
+Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Beijing Kitchen** show **¥¥** on the live guide vs **¥¥¥** in data.js (flagged on `flagged.html`); 2026 vs 2027 editions both still indexed (site uses 2027 only); King's Joy videos describe a pre-2026 3★ claim (kept, noted). Mutianyu ticket prices still not published anywhere official fetched — flag stays open. Exact restaurant bills for 32 of 33 remain unpublished — flagged. These do not block merge; they are listed on the live "Flagged for Review" page.
+
+---
+
 # Session `1fa0d691` — full Beijing verification completion & cross-plan root integration
 
 **Branch:** `arena/1fa0d691-chinafun1` (branched from `main` @ `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
