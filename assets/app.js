@@ -11,6 +11,7 @@ const PAGES = [
 ];
 
 const COMPANION_PLANS = [
+  ["china-2027/index.html", "China 2027 Dual-City"],
   ["integration-2027/index.html", "All Plans Hub"],
   ["social-2027/index.html", "Social Video Index (58)"],
   ["docs/index.html", "Shanghai (Docs)"],

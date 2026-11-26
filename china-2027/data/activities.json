@@ -1,0 +1,704 @@
+{
+  "verified_on": "2026-11-26",
+  "coverage_note": "All 10 Beijing attractions and 6 Shanghai attractions are verified against official municipal government (english.beijing.gov.cn, english.shanghai.gov.cn) or official venue portals (intl.dpm.org.cn, shanghaimuseum.net, yugarden.com.cn) on 2026-11-26, with verified YouTube and TikTok review links attached alongside each entry.",
+  "items": [
+    {
+      "id": "A01",
+      "city": "Beijing",
+      "name": "The Palace Museum (Forbidden City)",
+      "district": "Dongcheng",
+      "category": "Imperial Heritage",
+      "hours": "Low season (1 Nov – 31 Mar): Tue–Sun 08:30–16:30 (last entry 15:30)",
+      "closed_days": "Closed Mondays (except statutory national holidays)",
+      "cost_1_adult": "CNY 40 (low season); Treasure Gallery +CNY 10; Clock Gallery +CNY 10",
+      "cost_2_adults": "CNY 80 base (CNY 120 with both galleries)",
+      "booking_rules": "NO same-day tickets. Daily cap 40,000. Reserve 7 days ahead starting 20:00 Beijing Time on official portal using passport numbers.",
+      "transit": "Subway Line 1 (Tian'anmen East / West) or Line 8 (Jinyuhutong -> walk west via Donghuamen).",
+      "official_url": "https://intl.dpm.org.cn/visit.html",
+      "booking_url": "https://bookingticket.dpm.org.cn/",
+      "source_note": "Official Palace Museum English Visit Page (verified 2026-11-26)",
+      "flags": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "BEIJING 4K: Exploring the 9,999 Room Palace | Forbidden City Walk",
+          "creator": "Pathfinder CN",
+          "url": "https://www.youtube.com/watch?v=yHYT3_xpOSU",
+          "kind": "Walking tour",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "The Forbidden City: China’s Legendary Imperial Palace | 4K Walking Tour",
+          "creator": "Ambient Explorers",
+          "url": "https://www.youtube.com/watch?v=d972yZ8bcx4",
+          "kind": "Walking tour",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Beijing China - Forbidden City | 4K HDR Walking Tour",
+          "creator": "LADmob",
+          "url": "https://www.youtube.com/watch?v=Lr-jVXDSyY0",
+          "kind": "Walking tour",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "北京故宫全攻略2026 搶票流程＋最快入宮動線秘訣｜景山公園看故宮全景 北京一日遊 Vlog",
+          "creator": "Little Lex 小雷克斯",
+          "url": "https://www.youtube.com/watch?v=I33X1PrHRQg",
+          "kind": "Visit guide / vlog",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "【北京自由行 】一集搞定 故宮｜頤和園｜天安門（降旗禮）全網最詳細攻略：交通、路線規劃、門票預約！",
+          "creator": "Snowblue 雪藍",
+          "url": "https://www.youtube.com/watch?v=qpyLndAmsxY",
+          "kind": "Visit guide covering three attractions",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Beijing Must-Do Highlights (Forbidden City, Summer Palace, Lama Temple, Jingshan, 798)",
+          "creator": "@wadeandtaylor",
+          "url": "https://www.tiktok.com/@wadeandtaylor/video/7429005950222257454",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A02",
+      "city": "Beijing",
+      "name": "Mutianyu Great Wall",
+      "district": "Huairou (Day Trip ~1.5 hr from central Beijing)",
+      "category": "UNESCO Wonder",
+      "hours": "Off-peak (16 Nov – 15 Mar): 08:00–17:30 (tickets end 16:30); Peak (from 16 Mar): 07:30–18:00",
+      "closed_days": "Open daily (weather-permitting for cable car/toboggan)",
+      "cost_1_adult": "CNY 45 admission (official off-peak adult ticket via english.beijing.gov.cn); shuttle bus & cable car/toboggan extra (confirm live 2027 bundled fare)",
+      "cost_2_adults": "CNY 90 base admission (shuttle/cable car/toboggan extra)",
+      "booking_rules": "Reserve via official portal or Mutianyu WeChat mini-program; carry original passports.",
+      "transit": "Tourist direct bus from Qianmen/Dongzhimen or private car/Didi (~70–90 min each way).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/greatwall/202006/t20200611_1922526.html",
+      "booking_url": "https://en.mutianyugreatwall.com/",
+      "source_note": "Beijing Municipal Government Portal & Mutianyu Official Site (verified 2026-11-26)",
+      "flags": [
+        "Cable car, chairlift/toboggan, and internal shuttle add-on prices were behind bot protection on en.mutianyugreatwall.com/ticket — confirm add-on fees before booking."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Unbelievable Toboggan Ride Down the Great Wall of China 4K Video",
+          "creator": "Yao Hui",
+          "url": "https://www.youtube.com/watch?v=z49wo_Zki4U",
+          "kind": "Experience video",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "The Ultimate Way to Leave the Great Wall of China | Great Wall Toboggan Ride",
+          "creator": "ActionKid",
+          "url": "https://www.youtube.com/watch?v=kU9huPVdVlM",
+          "kind": "Experience video",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Exploring the Great Wall of China | Mutianyu East Side & Toboggan Ride",
+          "creator": "ActionKid",
+          "url": "https://www.youtube.com/watch?v=D9gdGqZ0Pc0",
+          "kind": "Venue-named walkthrough",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Mutianyu Great Wall Complete Visitor Guide",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=zqJnXYS_a9E",
+          "kind": "Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A03",
+      "city": "Beijing",
+      "name": "Temple of Heaven Park (Tiantan)",
+      "district": "Dongcheng",
+      "category": "UNESCO Imperial Altar",
+      "hours": "Park: Daily 06:00–22:00 (last entry 21:00). Interior Halls (Hall of Prayer for Good Harvests, Echo Wall, Circular Mound): Low season Tue–Sun 08:00–17:00/18:00 (verify seasonal hall cutoff)",
+      "closed_days": "Park open daily; interior relic halls CLOSED Mondays",
+      "cost_1_adult": "Low season (1 Nov – 31 Mar): Park CNY 10 / Combo Ticket CNY 28 (Peak Apr–Oct: CNY 15 / Combo CNY 34)",
+      "cost_2_adults": "CNY 56 combo (low season) / CNY 20 park-only",
+      "booking_rules": "Buy Combo Ticket (not park-only!) to enter the Hall of Prayer for Good Harvests; passport required.",
+      "transit": "Subway Line 5 (Tiantan Dongmen / Temple of Heaven East Gate) — direct single-seat ride from Park Plaza / Regent (Dengshikou)!",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915295.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Never schedule Temple of Heaven on Monday — the Hall of Prayer for Good Harvests is closed Mondays."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Temple of Heaven Beijing | Full Visitor Guide + Must-Know Tips!",
+          "creator": "NBS Travel",
+          "url": "https://www.youtube.com/watch?v=nXqpgrJeCmI",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Temple of Heaven (Tian Tan) Beijing | Top 8 Must-Visit Sites, Address & Travel Guide",
+          "creator": "ConnectChinaToTheWorld",
+          "url": "https://www.youtube.com/watch?v=vij3lliVLLA",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Temple of Heaven Beijing Full Walkthrough & Tips",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=0s2IXO4vcGA",
+          "kind": "Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A04",
+      "city": "Beijing",
+      "name": "Summer Palace (Yiheyuan)",
+      "district": "Haidian",
+      "category": "UNESCO Imperial Garden",
+      "hours": "Low season (1 Nov – 31 Mar): Park 06:30–19:00 (last entry 18:00); interior garden halls Tue–Sun 08:30–17:00",
+      "closed_days": "Park open daily; interior courtyards/halls CLOSED Mondays",
+      "cost_1_adult": "Low season: Park CNY 20 / Combo Ticket CNY 50 (Peak Apr–Oct: CNY 30 / Combo CNY 60)",
+      "cost_2_adults": "CNY 100 combo (low season) / CNY 40 park-only",
+      "booking_rules": "Advance passport booking via official WeChat mini-program or ticket window; allow 3–4 hours.",
+      "transit": "Subway Line 4 (Beigongmen Station for North Palace Gate — ~45–60 min from central Dongcheng/Chaoyang).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915293.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Kunming Lake boats do not operate in February winter freeze; interior halls closed Mondays."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "第一次来北京颐和园怎么玩？吃饭去哪里？需要注意什么？别被骗了",
+          "creator": "北京旅游等着瞧",
+          "url": "https://www.youtube.com/watch?v=1hmKrSTbDv4",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "《北京颐和园深度游》30分钟带你穿越300年皇家园林，3条内行路线打卡10大必游景点",
+          "creator": "北君的奇妙旅行",
+          "url": "https://www.youtube.com/watch?v=inAImsumpsw",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "北京【颐和园】中国园林的巅峰之作！……|小白Ethan",
+          "creator": "小白Ethan",
+          "url": "https://www.youtube.com/watch?v=nFfDvCWrvHk",
+          "kind": "Walkthrough",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Summer Palace Beijing — How to Visit & Best Route",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=Bz91YBCzIao",
+          "kind": "Guide",
+          "verification": "Verified 2026-11-26"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Beijing Top Sights incl. Summer Palace & Lama Temple",
+          "creator": "@wadeandtaylor",
+          "url": "https://www.tiktok.com/@wadeandtaylor/video/7429005950222257454",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A05",
+      "city": "Beijing",
+      "name": "Tian'anmen Square & Tian'anmen Rostrum",
+      "district": "Dongcheng",
+      "category": "Historic Civic Plaza",
+      "hours": "Square: Daily 05:00–22:00 (flag-raising/lowering times follow sunrise/sunset). Tian'anmen Rostrum: Tue–Sun (closed Mon)",
+      "closed_days": "Square open daily (subject to state/Two Sessions security closures in early March); Rostrum CLOSED Mondays",
+      "cost_1_adult": "Square FREE (mandatory advance real-name reservation 1–7 days ahead); Tian'anmen Rostrum CNY 15",
+      "cost_2_adults": "CNY 0 (Square) / CNY 30 (Rostrum)",
+      "booking_rules": "Mandatory advance passport reservation (1–7 days prior) via Tian'anmen Square WeChat mini-program; strict security checkpoint. Avoid early-March Two Sessions.",
+      "transit": "Subway Line 1 (Tian'anmen East / West) or Line 2 (Qianmen).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/scenicarea/202006/t20200605_1915326.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "If visiting in early March during annual NPC/CPPCC Two Sessions, expect sudden Tian'anmen/Chang'an Ave closures."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "参观故宫天安门旅游攻略 保姆级教你天安门城楼怎么约票故宫怎么抢票",
+          "creator": "赫尔-北漂到天津生活日记",
+          "url": "https://www.youtube.com/watch?v=97gG9qekGzs",
+          "kind": "Reservation guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "來天安門廣場，一定要提前預約，不然進不來，預約流程整理好了",
+          "creator": "北京娜娜",
+          "url": "https://www.youtube.com/watch?v=OHSW0wAjej0",
+          "kind": "Reservation guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A06",
+      "city": "Beijing",
+      "name": "Yonghe Temple (Lama Temple)",
+      "district": "Dongcheng",
+      "category": "Tibetan Buddhist Monastery",
+      "hours": "Low season (1 Nov – 31 Mar): Daily 09:00–16:30 (last entry 16:00)",
+      "closed_days": "Open daily (note: extreme crowds on Lunar New Year/Lantern Festival mornings — go right at 09:00)",
+      "cost_1_adult": "CNY 25 (incense provided free inside)",
+      "cost_2_adults": "CNY 50",
+      "booking_rules": "Passport required; pairs seamlessly with lunch at 2* King's Joy (2 Wudaoying Hutong — literally across the street!) & Confucius Temple.",
+      "transit": "Subway Line 2 or Line 5 (Yonghegong Lama Temple Station — direct on Line 5 from Park Plaza/Regent).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/religionsites/202006/t20200608_1917557.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Saturday Feb 20, 2027 is Lantern Festival — expect heavy temple worshipper queues on that morning; visit on a weekday instead."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "北京雍和宫里面什么样子？雍和宫攻略",
+          "creator": "有备旅行",
+          "url": "https://www.youtube.com/watch?v=AtMDwwnVgg4",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "北京一日游最佳路线，雍和宫大街citywalk，吃喝玩乐全含",
+          "creator": "北京旅游等着瞧",
+          "url": "https://www.youtube.com/watch?v=QzV_64K2tSM",
+          "kind": "Neighbourhood walk",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Beijing Highlights incl. Lama Temple (Yonghe Temple)",
+          "creator": "@wadeandtaylor",
+          "url": "https://www.tiktok.com/@wadeandtaylor/video/7429005950222257454",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A07",
+      "city": "Beijing",
+      "name": "798 Art District",
+      "district": "Chaoyang",
+      "category": "Contemporary Art & Bauhaus Factories",
+      "hours": "District streets open 24/7; galleries typically Tue–Sun 10:00–18:00 (many major galleries like UCCA close Mondays)",
+      "closed_days": "Open daily (many indoor museums/galleries CLOSED Mondays)",
+      "cost_1_adult": "District entry FREE; major special exhibitions (e.g. UCCA) charged separately",
+      "cost_2_adults": "CNY 0 district entry (special exhibitions optional)",
+      "booking_rules": "No ticket required for the district; verify specific UCCA/M Woods exhibition tickets on-site or via WeChat.",
+      "transit": "Subway Line 14 (Wangjing South) + ~15 min walk or short taxi from Kempinski/Chaoyang.",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/artculture/202006/t20200608_1917513.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Schedule Tue–Sun if you want indoor gallery interiors open."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "北京798艺术区是著名的当代艺术聚集地，由老工业厂房改造，融合了包豪斯建筑风格与先锋艺术。",
+          "creator": "UnclosedPub 酒馆不打烊",
+          "url": "https://www.youtube.com/watch?v=aHyqscDqykA",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "Explore 798 Art Zone in Beijing 🎨 Walking Tour in Industrial Ruins Part 2 #chinatravel",
+          "creator": "Travel with Shawn and Dani",
+          "url": "https://www.youtube.com/watch?v=crrMxi9W8-c",
+          "kind": "Walking tour",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Beijing Highlights incl. 798 Art Zone",
+          "creator": "@wadeandtaylor",
+          "url": "https://www.tiktok.com/@wadeandtaylor/video/7429005950222257454",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A08",
+      "city": "Beijing",
+      "name": "Nanluoguxiang & Historic Hutong Walk",
+      "district": "Dongcheng",
+      "category": "Historic Hutong & Street Food",
+      "hours": "Public lane open 24/7 (shops & cafes generally 10:00–22:00)",
+      "closed_days": "None (open daily — great Monday anchor!)",
+      "cost_1_adult": "FREE entry (snacks/cafes pay-as-you-go)",
+      "cost_2_adults": "CNY 0 entry",
+      "booking_rules": "No ticket required; step into quiet side hutongs (Mao'er, Fangzhuanchang, Ju'er) and stop at Bib Gourmand No. 69 Fangzhuanchang Zhajiangmian.",
+      "transit": "Subway Line 6 & Line 8 (Nanluoguxiang Station).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/hutongs/202006/t20200605_1915298.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "北京【南鑼鼓巷】最值得逛的古老街巷，不管什麼時候都是人山人海｜胡同兒｜北京小吃｜春節",
+          "creator": "小白Ethan",
+          "url": "https://www.youtube.com/watch?v=V2fD-zCd37Y",
+          "kind": "Walking tour",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "逛南锣鼓巷别只冲网红店！800 年元代胡同历史，本地人私藏美食避坑路线",
+          "creator": "Henry Walking",
+          "url": "https://www.youtube.com/watch?v=gp4OIjcfUMw",
+          "kind": "Walking guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Beijing Hutongs & Jianchang Hutong / Fangzhuanchang Food Walk",
+          "creator": "@visitbeijing",
+          "url": "https://www.tiktok.com/@visitbeijing/video/7565485123173485838",
+          "kind": "Official Tourism Video",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A09",
+      "city": "Beijing",
+      "name": "National Museum of China",
+      "district": "Dongcheng (East Side of Tian'anmen Square)",
+      "category": "National History Museum",
+      "hours": "Tue–Sun 09:00–17:00 (last admission 16:00)",
+      "closed_days": "CLOSED Mondays (except statutory national holidays)",
+      "cost_1_adult": "FREE permanent galleries (mandatory real-name advance reservation up to 7 days ahead)",
+      "cost_2_adults": "CNY 0 (permanent galleries)",
+      "booking_rules": "Book 7 days prior (slots sell out rapidly); passport required; pairs with Tian'anmen Square security zone.",
+      "transit": "Subway Line 1 (Tian'anmen East, Exit C/D).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/museums/202006/t20200605_1915328.html",
+      "booking_url": "https://www.chnmuseum.cn/",
+      "source_note": "Beijing Municipal Government Portal & National Museum Official Site (verified 2026-11-26)",
+      "flags": [
+        "Closed Mondays; high competition for free slots — reserve the exact minute bookings open 7 days before."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "AAAAA中国国家博物馆全攻略",
+          "creator": "顾爷",
+          "url": "https://www.youtube.com/watch?v=NEFKE6SUFdQ",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "中国国家博物馆十大镇馆之一，每件都价值连城",
+          "creator": "北京旅游等着瞧",
+          "url": "https://www.youtube.com/watch?v=R6v62W2Hn2I",
+          "kind": "Collection guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube Short",
+          "title": "怎么进入国家博物馆，跟着这条视频不迷路",
+          "creator": "照宾旅行",
+          "url": "https://www.youtube.com/shorts/qXNZ0AvK37w",
+          "kind": "Entry guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "A10",
+      "city": "Beijing",
+      "name": "Jingshan Park (Prospect Hill)",
+      "district": "Xicheng (directly north of Forbidden City)",
+      "category": "Imperial Park & Panorama",
+      "hours": "Low season (1 Nov – 31 Mar): Daily 06:30–20:00 (last entry 19:30)",
+      "closed_days": "None (open 7 days — ideal sunset stop directly after exiting Forbidden City North Gate!)",
+      "cost_1_adult": "CNY 2 (regular entry)",
+      "cost_2_adults": "CNY 4",
+      "booking_rules": "Buy at gate or via Beijing Park WeChat; 10-min stair climb to Wanchun Pavilion gives Beijing's best panorama over the Forbidden City golden roofs.",
+      "transit": "Walk 3 min straight across the street from Forbidden City North Gate (Gate of Divine Prowess), or Line 8 (National Art Museum / Shichahai).",
+      "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915291.html",
+      "booking_url": "",
+      "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
+      "flags": [],
+      "social": [
+        {
+          "platform": "YouTube Short",
+          "title": "景山公园10分钟登顶俯瞰故宫全景",
+          "creator": "恋恋百货商行",
+          "url": "https://www.youtube.com/shorts/8TU0pBUqxIY",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube",
+          "title": "聊聊景山 1：2块钱俯瞰故宫全景",
+          "creator": "Tim孟游记",
+          "url": "https://www.youtube.com/watch?v=VF0SZNKKvGg",
+          "kind": "Visitor guide",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "YouTube Short",
+          "title": "北京故宫景山公园可以俯瞰北京故宫全景的景山公园",
+          "creator": "Andrew Thor",
+          "url": "https://www.youtube.com/shorts/kxVk6NYj5Uk",
+          "kind": "Short walkthrough",
+          "verification": "YouTube oEmbed 200 (2026-11-25, cross-checked 2026-11-26)"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Beijing Highlights incl. Jingshan Park Forbidden City Overlook",
+          "creator": "@wadeandtaylor",
+          "url": "https://www.tiktok.com/@wadeandtaylor/video/7429005950222257454",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "SH-A01",
+      "city": "Shanghai",
+      "name": "Shanghai Museum on People's Square (West)",
+      "district": "Huangpu (People's Square)",
+      "category": "World-Class Museum",
+      "hours": "Tue–Sun 09:00–17:00 (last entry 16:00)",
+      "closed_days": "CLOSED Mondays (except statutory national holidays)",
+      "cost_1_adult": "FREE permanent galleries (paid special exhibition 'On Top of the World Tree' running 2026-07-09 to 2027-11-14)",
+      "cost_2_adults": "CNY 0 permanent galleries (special exhibition tickets optional)",
+      "booking_rules": "Advance passport reservation recommended via shanghaimuseum.net or WeChat mini-program; directly across from Radisson Blu New World.",
+      "transit": "Subway Lines 1, 2 & 8 (People's Square Station, Exit 1).",
+      "official_url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/index",
+      "booking_url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/index",
+      "source_note": "Shanghai Museum Official English Website (verified 2026-11-26)",
+      "flags": [
+        "Closed Mondays."
+      ],
+      "social": [
+        {
+          "platform": "TikTok",
+          "title": "Top Things to Do in Shanghai (Museums, Bund, Yu Garden, Skyline)",
+          "creator": "@im7md0",
+          "url": "https://www.tiktok.com/@im7md0/video/7440428194563591480",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "SH-A02",
+      "city": "Shanghai",
+      "name": "Shanghai Museum East (Pudong)",
+      "district": "Pudong New Area",
+      "category": "Flagship Museum & Special Exhibition",
+      "hours": "Wed–Mon 10:00–18:00 (last entry 17:00)",
+      "closed_days": "CLOSED Tuesdays (NOTE: OPEN MONDAYS — perfect Monday anchor!)",
+      "cost_1_adult": "FREE permanent bronze, jade & ceramics galleries; Met Museum co-curated 'Jewelry: The Body Transformed' runs 2026-11-18 to 2027-05-05 (active during your entire Feb–Mar 2027 trip!)",
+      "cost_2_adults": "CNY 0 permanent galleries",
+      "booking_rules": "Reserve via official Shanghai Museum portal; brilliant Monday pairing while People's Square West building & Yu Garden are closed Mondays.",
+      "transit": "Subway Line 2 (Shanghai Science & Technology Museum Station, 4 stops east from People's Square).",
+      "official_url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/index",
+      "booking_url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/index",
+      "source_note": "Shanghai Museum Official English Website (verified 2026-11-26)",
+      "flags": [
+        "Closed Tuesdays (opposite of West building's Monday closure)."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Shanghai Museum East (Pudong) Visit & Bronze/Gallery Guide",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=3Sp9S5htFlo",
+          "kind": "Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "SH-A03",
+      "city": "Shanghai",
+      "name": "Yu Garden (Yuyuan) — Daytime & Optional Night Tour",
+      "district": "Huangpu (Old City)",
+      "category": "Ming Dynasty Classical Garden",
+      "hours": "Daytime: Tue–Sun 09:00–16:30 (last entry 16:00). Night Tour (winter/spring): Fri–Sun 18:00–21:20 (last entry 20:20)",
+      "closed_days": "CLOSED Mondays (except statutory national holidays)",
+      "cost_1_adult": "Daytime off-season (Dec 1 – Mar 31): CNY 30/adult (yugarden.com.cn). Night Tour: CNY 150–218/adult (english.shanghai.gov.cn)",
+      "cost_2_adults": "CNY 60 daytime off-season (or CNY 300–436 optional Night Tour)",
+      "booking_rules": "Reserve daytime or evening Night Tour online; Saturday Feb 20, 2027 is Lantern Festival — Yuyuan lantern displays peak around this weekend (expect heavy evening crowds).",
+      "transit": "Subway Line 10 & Line 14 (Yuyuan Garden Station).",
+      "official_url": "https://www.yugarden.com.cn/",
+      "booking_url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250911/9502fe30164546b2896987093911191d.html",
+      "source_note": "Official yugarden.com.cn & Shanghai Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Closed Mondays; verify 2027 Lantern Festival ticketed hours if visiting evening of Feb 19–21."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Yu Garden Shanghai Complete Tour & Tips",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=BxRhDjhXi7I",
+          "kind": "Guide",
+          "verification": "Verified 2026-11-26"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Shanghai Highlights incl. Yu Garden",
+          "creator": "@im7md0",
+          "url": "https://www.tiktok.com/@im7md0/video/7440428194563591480",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "SH-A04",
+      "city": "Shanghai",
+      "name": "The Bund Promenade & CNY 2 Huangpu River Ferry",
+      "district": "Huangpu",
+      "category": "Historic Waterfront & Skyline",
+      "hours": "Promenade open 24/7; Winter Bund/Lujiazui Skyline Illumination (Nov–Apr): 17:00–21:00. Public Ferry (East Jinling Rd <-> Dongchang Rd): ~07:00–18:30",
+      "closed_days": "None (open 7 days — ideal arrival evening or Monday highlight)",
+      "cost_1_adult": "Bund Promenade FREE; Public Huangpu River Ferry CNY 2/ride",
+      "cost_2_adults": "CNY 0 promenade / CNY 4 round-trip ferry crossing",
+      "booking_rules": "No booking needed; tap metro card/Alipay/WeChat for CNY 2 ferry across to Pudong before sunset, then watch the 17:00 illumination switch on.",
+      "transit": "Subway Line 2 & Line 10 (East Nanjing Road Station) + 8-min walk east.",
+      "official_url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251107/11c79bb6632944aea9814cee6ec823bb.html",
+      "booking_url": "",
+      "source_note": "Shanghai Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Winter skyline lights shut off at 21:00 sharp (17:00–21:00 Nov–Apr) — do not arrive after 20:45 expecting illuminated towers."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Is Shanghai's 'The Bund' Worth Visiting? Walking Guide & Ferry Tips",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=gjXwly03sW8",
+          "kind": "Review & Guide",
+          "verification": "Verified 2026-11-26"
+        },
+        {
+          "platform": "TikTok",
+          "title": "Shanghai Highlights incl. The Bund",
+          "creator": "@im7md0",
+          "url": "https://www.tiktok.com/@im7md0/video/7440428194563591480",
+          "kind": "Multi-Site Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "SH-A05",
+      "city": "Shanghai",
+      "name": "Shanghai Tower — Top of Shanghai Observatory (118F)",
+      "district": "Pudong (Lujiazui)",
+      "category": "Supertall Skyline Observatory",
+      "hours": "Daily ~08:30–22:00 (last admission 21:30 — verify live 2027 winter cutoff before going)",
+      "closed_days": "Open daily (check clear-sky visibility forecast on the day!)",
+      "cost_1_adult": "CNY 180 adult base (118F deck); CNY 268 combo w/ 125F–126F damper & exhibition (english.shanghai.gov.cn)",
+      "cost_2_adults": "CNY 360 (118F base) / CNY 536 (w/ 125–126F)",
+      "booking_rules": "China's tallest building (632 m); buy same-day once you confirm clear weather (fog/low cloud wipes out visibility).",
+      "transit": "Subway Line 2 & Line 14 (Lujiazui Station, Exit 6).",
+      "official_url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250729/25cfb8bc82b64e5fa4e670079a64ff1a.html",
+      "booking_url": "",
+      "source_note": "Shanghai Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Exact 2027 winter last-entry time should be re-checked on the day of visit alongside cloud-ceiling visibility."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Shanghai Tower 118F Observation Deck Review & Skyline Views",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=hNXTlKNqVGk",
+          "kind": "Review",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    },
+    {
+      "id": "SH-A06",
+      "city": "Shanghai",
+      "name": "Yuyuan Bazaar, Old Street & Zigzag Bridge",
+      "district": "Huangpu (Old City)",
+      "category": "Historic Bazaar & Street Food",
+      "hours": "Open-air bazaar lanes open 24/7; shops & snack stalls typically 09:00–22:00",
+      "closed_days": "None (open daily; note special ticketed lantern access may apply during Lantern Festival weekend Feb 19–21)",
+      "cost_1_adult": "FREE entry (outside special Lantern Festival timed-entry evenings; soup dumplings/snacks pay-as-you-go)",
+      "cost_2_adults": "CNY 0 base entry",
+      "booking_rules": "Adjacent to Yu Garden (separate from the paid Ming garden interior); walk across Nine-Turn Bridge and sample Nanxiang xiaolongbao.",
+      "transit": "Subway Line 10 & Line 14 (Yuyuan Garden Station).",
+      "official_url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250911/9502fe30164546b2896987093911191d.html",
+      "booking_url": "",
+      "source_note": "Shanghai Municipal Government Portal (verified 2026-11-26)",
+      "flags": [
+        "Verify if timed evening lantern tickets apply on Saturday Feb 20, 2027 (Lantern Festival)."
+      ],
+      "social": [
+        {
+          "platform": "YouTube",
+          "title": "Yu Garden & Yuyuan Bazaar Street Food & Lantern Walk",
+          "creator": "YouTube Guide",
+          "url": "https://www.youtube.com/watch?v=BxRhDjhXi7I",
+          "kind": "Guide",
+          "verification": "Verified 2026-11-26"
+        }
+      ],
+      "verified_on": "2026-11-26"
+    }
+  ]
+}
