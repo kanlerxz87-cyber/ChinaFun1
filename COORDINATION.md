@@ -784,3 +784,32 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 | U5 | Integrate 58 oEmbed-verified YouTube links (`social-2027`) + Instagram/TikTok links + cross-plan nav links + fix contradictions | **done** | `assets/*`, root `*.html` | Integrated `social-2027/data/social.json` + `integration-2027` YT links + IG (`@chef1996restaurant`, `@oldtower_beijing`, `CvC7yL1yQx7`, `Cq2w9ssgcDW`) & TikTok (`wadeandtaylor`); added companion-plan nav bar; synced `flagged.html`, `decisions.html`, `suggestions.html`, `itinerary.html`. |
 | U6 | Validate all 3 repo checkers + HTML link integrity, commit, push, open & merge PR to `main`, verify Pages | **done** | repo-wide | Ran `check.py` (187 rows, 0 problems), `integration-2027/tools/check.py` (7 pages, 0 errors), `social-2027/tools/check.py` (43 venues, 58 videos, PASS), `node -c` + DOM render test (12 hotels, 33 starred, 74 Bib/Selected, 10 activities, 0 `undefined`/`NaN`). |
 
+---
+
+# Session `f8e7ee9e` — dual-city China 2027 verified planner (`china-2027/`) & repo-wide audit
+
+**Branch:** `arena/f8e7ee9e-chinafun1` (rebased onto `origin/main` @ `179e24c`, preserving all earlier session records verbatim)
+**Claimed:** 2026-11-26 · **Status:** in progress
+**Claimed file scope (strictly non-overlapping):** `china-2027/**` (self-contained dual-city Beijing + Shanghai static dashboard, data JSONs, stdlib generator & automated validator) and this appended section of `COORDINATION.md` only.
+**Parallel-session respect:** Does **not** edit root `index.html`, `assets/*`, `README.md`, `docs/**`, `shanghai-2027/**`, `shanghai-verified-2027/**`, `integration-2027/**`, `social-2027/**`, or `audit-2027/**`.
+
+| # | Task | Status | Owner | File scope | Verification rule |
+|---|------|--------|-------|------------|-------------------|
+| M1 | Claim + line-by-line repo audit (re-verified against `origin/main` @ `179e24c`) | **done** | f8e7ee9e | this section, `china-2027/data/audit_and_planning.json` | Audited root + all sub-sites; tracked both defects already resolved in PR #26–#28 and remaining active defects across `shanghai-verified-2027/`, `shanghai-2027/`, `docs/` |
+| M2 | Dual-city MICHELIN verification: 33/33 Beijing 2027 starred + 8 BJ Bib/Selected + 15 Shanghai highlights (live SH total 1×3★, 11×2★, 38×1★ = 50 starred, 153 total; `Sir Elly's` audit-corrected to Selected) | **done** | f8e7ee9e | `china-2027/data/restaurants.json` | 100% primary-source verified on `guide.michelin.com` & official hotel/restaurant websites; 10/33 BJ starred hours + 5 published 2-adult menu totals verified; Mio Mon-closure conflict flagged |
+| M3 | Official Activities verification: 10 Beijing + 6 Shanghai attractions (winter hours, Mon/Tue closures, CNY costs for 2 adults, State Council 2027 holidays, Beijing–Shanghai HSR & metro fares) | **done** | f8e7ee9e | `china-2027/data/activities.json`, `china-2027/data/meta.json` | Official `english.www.gov.cn`, `english.beijing.gov.cn`, `english.shanghai.gov.cn`, `intl.dpm.org.cn`, `shanghaimuseum.net`, `yugarden.com.cn` |
+| M4 | Multi-platform verified social reviews (YouTube oEmbed 200 + TikTok + official Instagram profiles) | **done** | f8e7ee9e | `china-2027/data/restaurants.json`, `china-2027/data/activities.json` | 91 verified links (47 restaurant + 44 activity) across YT/TikTok/IG; zero search URLs, zero private videos (`Sy0Df7KVfJk` excluded) |
+| M5 | Multi-window 2027 hotel pricing & cheapest booking-time proof (8 Beijing + 5 Shanghai; Feb 15–22 vs Mar 1–8 vs Mar 16–23) | **done** | f8e7ee9e | `china-2027/data/hotels.json` | Every hotel verified for private bathroom + queen/king bed + live Booking.com 7-night USD totals (`2026-11-26`); active Black Friday/Early Booker free-cancel trough proven (15%–56% savings vs mid-Mar) |
+| M6 | Mobile-friendly static dashboard (`china-2027/`, 9 pages, 0 external CDNs, deterministic stdlib builder & validator) | **done** | f8e7ee9e | `china-2027/**` | `china-2027/tools/build.py` byte-deterministic; `china-2027/tools/check.py` PASS + all existing repo checkers PASS |
+| M7 | PR to `main`, merge, confirm live GitHub Pages HTTP 200 on `/ChinaFun1/china-2027/` | in progress | f8e7ee9e | PR/merge metadata + this section | All checks green + live Pages verified |
+
+### Cross-Session Fix Requests (Read-Only Audit Against `origin/main` @ `179e24c`)
+
+1. **`shanghai-verified-2027/data/*.csv` (HIGH):** All 4 CSV files contain malformed column-count rows from unquoted commas (`activities.csv`: 4/5 rows have 14 vs 15 cols; `hotels.csv`: 4/5 rows have 26 or 29 vs 25 cols; `michelin.csv`: row 5 has 17 vs 18 cols; `social.csv`: row 15 has 10 vs 9 cols). Recommend re-exporting via Python `csv.writer` with proper quoting.
+2. **Root `assets/data.js` (HIGH — post-PR #28 residuals):** Directly verified on `guide.michelin.com` & official hotel sites (`2026-11-26`):
+   - `Xin Rong Ji (Xinyuan South Road)`: phone on live MICHELIN is `+86 10 6501 5501` (not `+86 10 6501 5555`) and hours are `Mon–Sun 11:30–14:00, 17:30–21:00` (currently `h: ""`).
+   - `Xin Rong Ji (Jinrong Street)`: phone on live MICHELIN is `+86 10 6618 0567` (not `+86 10 6602 2288`), price band `¥¥¥` (not `¥¥¥¥`), and hours `Mon–Sun 11:00–14:00, 17:00–21:30` (currently `h: ""`).
+   - `Zijin Mansion`: Hilton/Waldorf official hours `Mon–Sun 11:30–14:30, 17:30–21:30` (currently `h: ""`).
+   - `Mio` (Four Seasons Beijing): flag official conflict — Four Seasons official site closes Mio Mondays (`Tue–Sun`), whereas MICHELIN lists `Mon–Sun`.
+3. **`shanghai-2027/data/` & `docs/` (MEDIUM):** `shanghai-2027/data/activities.json` leaves The Bund as `UNVERIFIED` with a YouTube search URL (`results?search_query=`), and `michelin-restaurants.json` omits street addresses/phones/hours for `Da Vittorio` (`Tue–Sun 12:00–13:30, 18:00–21:30`, closed Mon, `+86 21 6330 2198`), `Imperial Treasure`, and `The House of Rong`. All resolved in `china-2027/`.
+4. **Root navigation optional link:** Future root-navigation pass may add `china-2027/index.html` ("China 2027 Dual-City Planner") to root `index.html` / `README.md`.
