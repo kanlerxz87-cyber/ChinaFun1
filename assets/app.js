@@ -1,7 +1,8 @@
 /* Shared UI: nav, table renderers, filtering. No dependencies. */
 (function(){
   const PAGES = [
-    ["index.html","Overview"],
+    ["index.html","Beijing overview"],
+    ["integration-2027/index.html","All plans"],
     ["hotels.html","Hotels"],
     ["michelin.html","MICHELIN"],
     ["activities.html","Activities"],

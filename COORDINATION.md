@@ -546,3 +546,27 @@ while PR #14 was open. That session's section and `integration-2027/**` are pres
 `COORDINATION.md` conflict was resolved by keeping **all three** session logs (013c9819, 815c7943, 773e75a3).
 The overlapping claim was not visible when this session claimed on the shared base commit `eda1907`; both
 subtrees remain additive and neither edits the other's data.
+
+---
+
+# Session `60e8d054` — root discovery link for the consolidated dashboard
+
+**Branch:** `arena/60e8d054-chinafun1` (current Arena session branch; base `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`)
+**Status:** in progress
+**Claimed file scope:** `COORDINATION.md`, root `index.html`, root `assets/app.js` only. This is the final-integration follow-up to the earlier request below; no datasets or existing plan sub-sites will be changed.
+
+| Task | Status | Scope | Verification |
+|---|---|---|---|
+| D1 Claim + scope | done | this section | Read shared task board and checked existing ownership before claiming |
+| D2 Make the consolidated decision layer discoverable from the root | done | `index.html`, `assets/app.js` | Added a clearly labeled All plans nav link and comparison card; Beijing remains the root page's primary plan |
+| D3 Verify build and links | done | read-only checks | `python3 check.py`, `python3 integration-2027/tools/check.py`, `python3 social-2027/tools/check.py`, `python3 build.py`, `git diff --check`: all pass; the target `integration-2027/index.html` exists |
+| D4 Record result | done | this section | No datasets or existing research claims changed; prior data/source ownership retained |
+
+### Verification and handoff
+
+- Root checker: 11 generated docs pages, 187 table rows, zero broken internal links or empty hrefs; title and viewport checks pass.
+- Integration checker: 7 pages, 0 errors. Social registry checker: 43 venues, 58 videos, 8 pages; all sourcing/link consistency checks pass.
+- Shanghai docs rebuilt with `python3 build.py`; regeneration succeeds. `git diff --check` is clean.
+- The new comparison link targets the existing local `integration-2027/index.html` landing page. The link addition itself introduces no new factual trip claims; all inherited prices, restaurant statuses, and verification caveats remain owned by their original source logs.
+- Published content remains a set of independent plans; do not treat the comparison layer as a single agreed recommendation. No hotel quote was re-priced in this navigation-only task.
+
