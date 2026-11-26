@@ -20,7 +20,7 @@ and what was verified against which official source.
 | T5 Site build (8 pages, mobile-first) | **done** | fac6d965 | `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/*` | Zero dependencies, no build step. |
 | T6 Verification pass + flags published | **done** | fac6d965 | `flagged.html` | Every blank field, every irregularity and the confidence statement are published. |
 | T7 Merge + GitHub Pages publish | **done** | fac6d965 | `main` via PR | Static site from repo root, `.nojekyll` added. |
-| T8 Capture addresses for the remaining 23 starred restaurants | **needs review** | unclaimed | `assets/data.js` (`MICHELIN`, `DISTRICT_STARS`) | Published as suggestion #1. Do **not** start without claiming here first. |
+| T8 Capture addresses for the remaining 23 starred restaurants | **in progress** | `1ac7826d` | `assets/data.js` (`MICHELIN`, `DISTRICT_STARS`) | Claimed by integration/review session `1ac7826d` (see bottom section). |
 | T9 Transit-time verification for hotel × restaurant pairs | **needs review** | unclaimed | new `data/transit.*` | Published as suggestion #2. Needs Amap routing; no estimates allowed. |
 | T10 Weekly hotel price tracker | **needs review** | unclaimed | new `data/prices-history.*` | Published as suggestion #3. |
 | T11 Exact menu prices for starred restaurants | **needs review** | unclaimed | `assets/data.js` (`p2` field only) | Published as suggestion #4. |
@@ -577,3 +577,21 @@ subtrees remain additive and neither edits the other's data.
 - GitHub Pages: **built** for that merge commit; Pages remains configured for `main` at repository root: https://kanlerxz87-cyber.github.io/ChinaFun1/.
 - Live fetch checks returned success for the root landing page and the linked comparison page `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html`. The root page displays the new “Choose a plan” card pointing to the independent-plan comparison.
 - The navigation change does not reverify or supersede any existing travel facts. Existing source links, dates, hotel snapshots, and flags remain as recorded in their owning plan sections above.
+
+---
+
+# Session `1ac7826d` — full repo audit, line-by-line official verification, and root dashboard integration
+
+**Branch:** `arena/1ac7826d-chinafun1`, rebased onto `main` @ `c7a3310ecab52da435f11206799432ee787139a4` (after session `60e8d054` PR #19/#20 merged)
+**Status:** in progress (claimed 2026-11-26 UTC)
+**File scope (claimed):** `COORDINATION.md`, `README.md`, root dashboard (`index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/data.js`, `assets/app.js`, `assets/style.css`). Sub-sites `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/` are audited read-only and preserved intact (any bugs found in them are logged in `COORDINATION.md` and `flagged.html`, and only non-destructive fixes if needed will be documented explicitly).
+**Branch-naming note:** Arena tracks this session on `arena/1ac7826d-chinafun1` (no new branch created per platform rule).
+
+| # | Task | Status | Owner | File scope | Notes |
+|---|---|---|---|---|---|
+| A1 | Claim + initial repo audit | **in progress** | `1ac7826d` | `COORDINATION.md` | Rebased cleanly onto `c7a3310`; preserved `60e8d054`'s root `All plans` link and `Choose a plan` card. |
+| A2 | Line-by-line repo review across all 6 sub-sites | **in progress** | `1ac7826d` | read-only across `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`, root | Verify links, data consistency, check for unverified inferences or broken URLs (already detected: `Sy0Df7KVfJk` private video in `assets/data.js`, inferred `Private bathroom` string in `assets/app.js`, out-of-sync `itinerary.html`, unverified deep `GUIDE_SLUG` links). |
+| A3 | Complete Beijing MICHELIN 2027 verification (T8 + Bib/Selected distinction) | **in progress** | `1ac7826d` | `assets/data.js`, `michelin.html` | Fetch official `guide.michelin.com` pages for all 33 starred restaurants + verify Bib Gourmand (32) and MICHELIN Selected (42) entries/distinctions. |
+| A4 | Verify hotels (private bath, official sites, date windows, 2-4 week note) & activities (official hours/prices/exceptions) | **in progress** | `1ac7826d` | `assets/data.js`, `hotels.html`, `activities.html`, `itinerary.html` | Verify Booking.com / hotel official sites + Palace Museum, Mutianyu, Temple of Heaven, Summer Palace, Tiananmen, Yonghe Temple, 798, NMC, Jingshan. |
+| A5 | Integrate verified social-media review links (YouTube/TikTok/Instagram) & cross-plan root navigation | **in progress** | `1ac7826d` | `assets/data.js`, `assets/app.js`, root `*.html`, `README.md` | Merge verified YouTube links from `social-2027/` and `integration-2027/`, verify additional YT/IG/TT links where official/resolvable, remove broken private video `Sy0Df7KVfJk`, add cross-plan link to `social-2027/` while preserving `All plans` (`integration-2027/`). |
+| A6 | Full verification, link/integrity checks, PR, merge, GitHub Pages confirmation | **in progress** | `1ac7826d` | repo-wide checks + GitHub PR/Pages | Verify no broken links, open PR from `arena/1ac7826d-chinafun1` to `main`, merge, confirm live Pages build. |
