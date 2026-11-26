@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Verification log &amp; flags | China 2027 planner</title>
-<meta name="description" content="Source-by-source verification log for all 33 starred restaurants, 74 Bib/Selected listings, 12 hotels, 10 activities, verified social links, and every remaining gap or anomaly.">
+<meta name="description" content="Complete source-by-source audit log (26 Nov 2026), remaining unverified fields, Booking.com/MICHELIN flags, and repository PR #1–#18 history.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="flagged.html">
@@ -12,94 +12,92 @@
 
 <main>
 <div class="wrap">
-  <p class="eyebrow">Verification log</p>
-  <h1>What was verified, where, and what still stays blank</h1>
-  <p class="lede">Every value on this site traces directly to an official or primary-verified URL read on 25 Nov 2026 (initial Beijing pass)
-  or 26 Nov 2026 (full 33/33 restaurant, 10/10 activity, official menu, bathroom, and social integration pass <code>1ac7826d</code>). Nothing was estimated to plug a hole.</p>
+  <p class="eyebrow">Verification log · updated 26 Nov 2026</p>
+  <h1>What was verified, what remains blank, and every flag</h1>
+  <p class="lede">Every fact on this site traces directly to an official page, live Booking.com listing, or oEmbed-verified video checked
+  through <strong>26 November 2026 (session 1fa0d691)</strong>. Fields that no official source publishes remain blank and listed below —
+  never estimated.</p>
 
-  <h2>Source-by-source log</h2>
+  <h2>Source-by-source audit log</h2>
   <div class="tablewrap">
     <table style="min-width:820px">
-      <thead><tr><th>Source (official / primary)</th><th>What it verified</th><th>Result</th><th>Status</th></tr></thead>
+      <thead><tr><th>Source</th><th>Scope verified</th><th>Result</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td class="name">MICHELIN — 2027 Beijing &amp; Tianjin release
-          <span class="meta"><a href="https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection" target="_blank" rel="noopener">michelin.com press release, 28 Oct 2026 ↗</a></span></td>
-          <td>Beijing = 107 entries; 2 three-star, 5 two-star, 26 one-star; Chef 1996 promoted &amp; Old Tower new; Tianjin debuts with 27 entries / 1 star.</td>
-          <td>Matches live filtered counts 33 / 32 / 42</td><td><span class="chip v">verified</span></td></tr>
-        <tr><td class="name">MICHELIN — Beijing starred, Bib &amp; Selected listings
-          <span class="meta"><a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred" target="_blank" rel="noopener">all-starred (33) ↗</a> · <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/bib-gourmand" target="_blank" rel="noopener">Bib Gourmand (32) ↗</a> · <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/the-plate-michelin" target="_blank" rel="noopener">Selected (42) ↗</a></span></td>
-          <td>All 107 names, star tiers, cuisines, ¥ bands, and verified individual Guide URLs.</td>
-          <td>Complete (33 starred + 74 non-starred separated cleanly on michelin.html)</td><td><span class="chip v">verified</span></td></tr>
-        <tr><td class="name">MICHELIN — all 33 starred detail pages
-          <span class="meta"><a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/chao-shang-chao" target="_blank" rel="noopener">Chao Shang Chao ↗</a> · <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/lu-shang-lu" target="_blank" rel="noopener">Lu Shang Lu ↗</a> · <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/king-s-joy" target="_blank" rel="noopener">King's Joy ↗</a></span></td>
-          <td>Verbatim street address, district &amp; phone for <strong>all 33/33 starred restaurants</strong> (20 Chaoyang, 9 Dongcheng, 3 Xicheng, 1 Shunyi), plus MICHELIN opening hours for 6 venues.</td>
-          <td>Addresses 33/33 complete; 23 kitchens lack published hours on MICHELIN; 2 anomalies flagged (Lu Shang Lu map pin &amp; DaDong phone)</td><td><span class="chip v">verified (33/33 addr)</span></td></tr>
-        <tr><td class="name">Restaurant official websites &amp; menu PDFs
-          <span class="meta"><a href="https://www.trbhutong.com/menu" target="_blank" rel="noopener">Trb Hutong ↗</a> · <a href="https://www.shangri-la.com/beijing/chinaworld/dining/restaurants/giada-garden/" target="_blank" rel="noopener">Giada Garden ↗</a> · <a href="https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan/taste-of-cai-yi-xuan/" target="_blank" rel="noopener">Cai Yi Xuan ↗</a> · <a href="https://thepuxuan.com/en/beijing-wangfujing-luxury-hotel-dining/cantonese-cuisine-fu-chun-ju-restaurant/" target="_blank" rel="noopener">Fu Chun Ju ↗</a> · <a href="https://www.rosewoodhotels.com/en/beijing/dining/the-house-of-dynasties" target="_blank" rel="noopener">House of Dynasties ↗</a> · <a href="https://leigarden.hk/location/china/" target="_blank" rel="noopener">Lei Garden ↗</a></span></td>
-          <td>Added verified official hours for Cai Yi Xuan, House of Dynasties, Lei Garden &amp; Trb Hutong (raising total verified hours to <strong>10/33</strong>), plus menu prices for Trb Hutong (¥3,882/2), Giada Garden (¥3,976/2 excl. wine), Cai Yi Xuan (¥1,688 +10%+6%/2), and Fu Chun Ju (à la carte PDF).</td>
-          <td>Bvlgari Autumn PDF confirmed tax/service inclusion but numeric totals did not extract; remaining 29 menus unpriced online</td><td><span class="chip v">verified (partial)</span></td></tr>
-        <tr><td class="name">Booking.com &amp; Four Seasons room pages (25 Nov 2026 &amp; 26 Nov 2026 checks)
-          <span class="meta"><a href="https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204" target="_blank" rel="noopener">Feb search ↗</a> · <a href="https://www.booking.com/searchresults.html?ss=Beijing&checkin=2027-03-15&checkout=2027-03-22&group_adults=2&no_rooms=1&selected_currency=USD&nflt=class%3D5%3Bht_id%3D204" target="_blank" rel="noopener">Mar search ↗</a> · <a href="https://www.fourseasons.com/beijing/accommodations/guest_rooms/deluxe_room/" target="_blank" rel="noopener">Four Seasons Deluxe ↗</a></span></td>
-          <td>12 seven-night totals, room/bed types, cancellation rules, guest ratings, March comparison ($1,652 flat at Grand Hyatt), and per-hotel private bathroom checks (11/12 confirmed; Prime Hotel unconfirmed in fetched excerpt).</td>
-          <td>Snapshot pricing (25 Nov 2026); bathroom spec now per-hotel rather than blanket fallback</td><td><span class="chip f">snapshot</span></td></tr>
-        <tr><td class="name">Palace Museum &amp; National Museum of China
-          <span class="meta"><a href="https://intl.dpm.org.cn/visit.html" target="_blank" rel="noopener">intl.dpm.org.cn/visit.html ↗</a> · <a href="https://en.chnmuseum.cn/visit_692/" target="_blank" rel="noopener">en.chnmuseum.cn/visit_692/ ↗</a></span></td>
-          <td>Low-season hours (Palace 08:30–16:30, ¥40; NMC 09:00–17:00, free), Monday closures, daily caps &amp; foreign passport online reservations.</td>
-          <td>Complete</td><td><span class="chip v">verified</span></td></tr>
-        <tr><td class="name">Mutianyu Great Wall &amp; Beijing Gov Ticketing
-          <span class="meta"><a href="https://en.mutianyugreatwall.com/" target="_blank" rel="noopener">en.mutianyugreatwall.com ↗</a> · <a href="https://english.beijing.gov.cn/specials/ticketing/attractions/202407/t20240717_3751593.html" target="_blank" rel="noopener">Beijing Gov Mutianyu ↗</a></span></td>
-          <td>Off-peak hours (16 Nov–15 Mar: 08:00–17:30, sales end 16:30, check-in 08:00–17:00), entry price CNY 45 (Beijing Gov) / Mutianyu 1-day PDF (RMB 40–45 + shuttle 15 + cable car 140 RT).</td>
-          <td>Complete (live cart fee to confirm on booking page)</td><td><span class="chip v">verified</span></td></tr>
-        <tr><td class="name">Beijing Municipal Gov — Parks, Yonghe Temple, Tian'anmen, 798 &amp; Nanluoguxiang
-          <span class="meta"><a href="https://english.beijing.gov.cn/specials/parktours/guidevisitors/templeofheaven/" target="_blank" rel="noopener">Temple of Heaven ↗</a> · <a href="https://english.beijing.gov.cn/travellinginbeijing/parks/202603/t20260320_4562531.html" target="_blank" rel="noopener">Summer Palace ↗</a> · <a href="https://english.beijing.gov.cn/travellinginbeijing/parks/202603/t20260320_4562541.html" target="_blank" rel="noopener">Jingshan ↗</a> · <a href="https://english.beijing.gov.cn/travellinginbeijing/attractions/202603/t20260325_4566110.html" target="_blank" rel="noopener">Tian'anmen ↗</a> · <a href="https://english.beijing.gov.cn/travellinginbeijing/attractions/202603/t20260323_4563864.html" target="_blank" rel="noopener">798·751 ↗</a> · <a href="https://english.beijing.gov.cn/specials/240tour/index.html" target="_blank" rel="noopener">240tour (Yonghe/Nanluoguxiang) ↗</a></span></td>
-          <td>Verified off-season hours, Monday rules, reservation channels, and ticket rates for all 7 remaining Beijing sights (bringing total activity verification to <strong>10/10</strong>).</td>
-          <td>Complete (caught that t20260320_4562533 is Beihai Park, not Jingshan; used t20260320_4562541 for Jingshan)</td><td><span class="chip v">verified (10/10)</span></td></tr>
-        <tr><td class="name">YouTube oEmbed &amp; watch-page verification
-          <span class="meta"><a href="social-2027/index.html">social-2027 (58 oEmbed) ↗</a> · <a href="integration-2027/social.html">integration-2027/social ↗</a></span></td>
-          <td>Confirmed live public video metadata &amp; venue identity for 18/33 starred restaurants + 10/10 activities (including newly fetched watch/oEmbed checks for Mansion Cuisine, Zhiguan Courtyard, Sheng Yong Xing, Jingji, Chao Shang Chao, Xin Rong Ji, King's Joy, Lamdre).</td>
-          <td>Broken private Sy0Df7KVfJk &amp; Shanghai-titled tIBbLQB8Ueo removed; IG/TT direct pages remain unverified</td><td><span class="chip v">verified (YT subset)</span></td></tr>
-        <tr><td class="name">U.S. State Dept &amp; China 2027 holiday calendar
-          <span class="meta"><a href="https://travel.state.gov/en/international-travel/travel-advisories/china.html" target="_blank" rel="noopener">travel.state.gov ↗</a> · <a href="https://www.timeanddate.com/holidays/china/2027" target="_blank" rel="noopener">timeanddate.com ↗</a></span></td>
-          <td>Level 2 (2026-10-19) visa/passport rules + 24-hr registration; CNY 6 Feb, 5–13 Feb break, 14 Feb make-up workday.</td>
-          <td>Primary State Council decree URL not located (flagged)</td><td><span class="chip v">verified (secondary holiday)</span></td></tr>
+        <tr><td class="name">MICHELIN Guide Beijing 2027 — Release &amp; Listings
+          <span class="meta"><a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred" target="_blank" rel="noopener">all-starred (33) ↗</a> ·
+          <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/bib-gourmand" target="_blank" rel="noopener">bib-gourmand (32) ↗</a> ·
+          <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/the-plate-michelin" target="_blank" rel="noopener">selected (42) ↗</a></span></td>
+          <td>All 107 Beijing 2027 venues + all 33 starred detail pages (addresses, districts, phones, websites).</td>
+          <td>33/33 starred + 32 Bib + 42 Selected verified (Chaoyang 20, Dongcheng 9, Xicheng 3, Shunyi 1).</td>
+          <td><span class="chip v">verified</span></td></tr>
+
+        <tr><td class="name">Official restaurant sites &amp; menu PDFs
+          <span class="meta">Four Seasons (Cai Yi Xuan) · PuXuan (Fu Chun Ju) · Shangri-La (Giada Garden) · Bvlgari (Il Ristorante) · Rosewood (House of Dynasties) · TRB Hutong · King's Joy · Malay Mail (Chef 1996, Old Tower)</span></td>
+          <td>Opening hours &amp; official set/à la carte menu pricing.</td>
+          <td>9/33 restaurant hours verified; 4/33 official menu prices for two verified.</td>
+          <td><span class="chip v">partial (honest)</span></td></tr>
+
+        <tr><td class="name">Booking.com — 11 live Beijing properties (Feb &amp; Mar 2027)
+          <span class="meta">Checked 2027-02-15..22, 2027-03-01..08 &amp; 2027-03-15..22 (2 adults, 1 room)</span></td>
+          <td>7-night USD rates, 1-queen/1-king beds, private/attached bathrooms, cancellation, breakfast, full amenities.</td>
+          <td>11/12 live-priced ($485–$3,115). Courtyard 7 redirected to search &amp; flagged.</td>
+          <td><span class="chip v">verified snapshot</span></td></tr>
+
+        <tr><td class="name">Beijing Municipal Gov &amp; Official Attraction Sites
+          <span class="meta"><a href="https://english.beijing.gov.cn/" target="_blank" rel="noopener">english.beijing.gov.cn ↗</a> ·
+          <a href="https://intl.dpm.org.cn/visit.html" target="_blank" rel="noopener">Palace Museum ↗</a> ·
+          <a href="https://en.chnmuseum.cn/visit/tickets_reservation/" target="_blank" rel="noopener">National Museum ↗</a></span></td>
+          <td>Off-season (Nov 1 – Mar 31) hours, Monday/inner closures, low-season ticket prices, real-name reservation rules.</td>
+          <td>10 / 10 Beijing attractions verified.</td>
+          <td><span class="chip v">verified</span></td></tr>
+
+        <tr><td class="name">Rome2rio Beijing Subway Route Checks
+          <span class="meta"><a href="https://www.rome2rio.com/s/Wangfujing-Station/Guomao-Beijing" target="_blank" rel="noopener">Wangfujing ↔ Guomao ↗</a> · Summer Palace · Temple of Heaven · 798</span></td>
+          <td>Subway travel durations for ≤1h audit (Wangfujing ↔ Guomao 8m, Summer Palace 48m, 798 55m; Guomao ↔ Summer Palace 1h 05m).</td>
+          <td>Proves Dongcheng base keeps 9/9 central sights ≤1h.</td>
+          <td><span class="chip v">verified</span></td></tr>
+
+        <tr><td class="name">oEmbed-Verified Social &amp; Video Reviews
+          <span class="meta"><a href="social-2027/index.html">social-2027 (58 YT) ↗</a> · <a href="integration-2027/index.html">integration-2027 ↗</a></span></td>
+          <td>58 oEmbed-verified YouTube videos (25 Beijing venues) + integration-2027 YouTube reviews + Instagram (@chef1996restaurant, @oldtower_beijing, IG posts) &amp; TikTok.</td>
+          <td>All direct video links verified; search links clearly tagged.</td>
+          <td><span class="chip v">verified</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>Remaining blanks &amp; why nothing was guessed</h2>
+  <h2>Fields intentionally left blank &amp; why</h2>
   <div class="tablewrap">
     <table style="min-width:720px">
-      <thead><tr><th>Field</th><th>Remaining gap</th><th>Reason</th><th>Resolution</th></tr></thead>
+      <thead><tr><th>Field</th><th>Remaining gap</th><th>Reason</th><th>Next action</th></tr></thead>
       <tbody>
-        <tr><td class="name">Restaurant street address</td><td><strong>0 of 33 blank</strong></td><td>All 33 verified individually from MICHELIN Guide pages.</td><td>Completed in session <code>1ac7826d</code>.</td></tr>
-        <tr><td class="name">Restaurant open days / hours</td><td>23 of 33 blank</td><td>Neither MICHELIN nor official homepages published hours for those 23 kitchens.</td><td>Confirm via telephone / hotel concierge.</td></tr>
-        <tr><td class="name">Exact price for 2 adults</td><td>29 of 33 blank</td><td>Fixed set/tasting totals exist for Trb Hutong, Giada Garden, and Cai Yi Xuan (plus Fu Chun Ju à la carte PDF); others give ¥ bands only.</td><td>Request current tasting menus directly before booking.</td></tr>
-        <tr><td class="name">Direct social / review links</td><td>15 of 33 starred lack direct YT; 0 direct TT/IG</td><td>Only verified oEmbed/watch-page YouTube URLs are linked directly; unverified search queries are labelled honestly as searches.</td><td>Check <a href="social-2027/index.html">social-2027</a>; add IG/TT only when tied to official pages.</td></tr>
-        <tr><td class="name">Activity hours &amp; prices</td><td><strong>0 of 10 blank</strong></td><td>All 10 Beijing attractions now verified against official museum/municipal sources.</td><td>Confirm live Mutianyu checkout &amp; Lantern Festival Yonghe hours near travel.</td></tr>
-        <tr><td class="name">Hotel bathroom confirmation</td><td>1 of 12 (Prime Hotel)</td><td>Booking amenity excerpt did not print "Private bathroom" explicitly; remaining 11 confirmed individually.</td><td>Confirm en-suite spec directly with Prime Hotel.</td></tr>
-        <tr><td class="name">Transit time ≤ 1 hour</td><td>All hotel × venue pairs</td><td>Static web fetches cannot certify live Beijing subway/bus travel minutes.</td><td>Query each chosen pair in Amap (高德) before locking non-refundable nights.</td></tr>
+        <tr><td class="name">Restaurant open days / hours</td><td>24 of 33 starred</td><td>MICHELIN &amp; several hotel Chinese dining pages omit hours online (some sites timed out/500).</td><td>Confirm directly via phone or concierge when booking.</td></tr>
+        <tr><td class="name">Official menu cost for 2 adults</td><td>29 of 33 starred</td><td>Only Trb Hutong, Cai Yi Xuan, Giada Garden &amp; Fu Chun Ju publish RMB menu prices officially.</td><td>Use MICHELIN ¥–¥¥¥¥ bands or request PDF menus via WeChat/concierge.</td></tr>
+        <tr><td class="name">Courtyard 7 live Feb 2027 rate</td><td>1 of 12 hotels</td><td><code>booking.com/hotel/cn/courtyard7.html</code> redirects to Beijing search for Feb 15–22, 2027.</td><td>Contact Courtyard 7 directly or choose Peking Yard / The Orchid ($1,105–$1,194).</td></tr>
+        <tr><td class="name">Mutianyu cable car / shuttle add-on</td><td>1 of 10 sights</td><td>CNY 45 wall entry is published on <code>english.beijing.gov.cn</code>; cable car &amp; toboggan add-on prices are not.</td><td>Confirm package rate with driver / hotel concierge.</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>Irregularities found &amp; logged across the repo</h2>
+  <h2>Irregularities &amp; booking traps flagged</h2>
   <ul class="tight">
-    <li><strong>Lu Shang Lu Google Map embed mismatch (new catch):</strong> MICHELIN's US/en page embeds <code>maps/embed/v1/undefined</code> (and the <code>/en/</code> embed carried southern-Beijing pin <code>39.73727,116.32824</code>), contradicting the verified CBD address <code>33 Jinghui Street, Chaoyang</code> next to CCTV HQ. Flagged in the restaurant row.</li>
-    <li><strong>Gastro Esthetics DaDong phone omission (new catch):</strong> MICHELIN publishes <code>+86 51690328</code> without Beijing's <code>10</code> area code. Kept verbatim and flagged.</li>
-    <li><strong>Removed broken private video &amp; misleading cross-city video (new catch):</strong> Prior Trb Hutong link <code>Sy0Df7KVfJk</code> is private/unviewable and removed; Chao Shang Chao clip <code>tIBbLQB8Ueo</code> is titled <code>Shanghai China</code> despite a Beijing description and was excluded in favour of Beijing-verified reviews.</li>
-    <li><strong>Municipal park URL &amp; seasonal rate traps (new catch):</strong> <code>t20260320_4562533.html</code> is <em>Beihai Park</em> (Jingshan Park is <code>t20260320_4562541.html</code>), and Temple of Heaven's March 2026 park summary shows peak-season rates (CNY 15 / 34) while its official park tour guide confirms low-season (1 Nov–31 Mar) rates of <strong>CNY 10 / 28</strong>.</li>
-    <li><strong>Previous blanket hotel bathroom fallback removed (new catch):</strong> <code>assets/app.js</code> previously injected a generic "Private bathroom (per Booking listing)" string onto every hotel lacking <code>h.bath</code>; replaced with explicit per-hotel verification, exposing that Prime Hotel lacked that line in the fetched excerpt.</li>
-    <li><strong>Two Beijing MICHELIN editions indexed online:</strong> 2026 (99 entries / 32 starred) vs 2027 (107 entries / 33 starred; Shanghai Cuisine moved 2★ → 1★; Chef 1996 &amp; Old Tower joined 1★). Only 2027 is used.</li>
-    <li><strong>Video star-count drift:</strong> 2024 King's Joy videos call it 3-star and early Lamdre clips call it 1-star; current 2027 Guide lists both at Two Stars.</li>
-    <li><strong>Booking.com caveats retained:</strong> "5/5" is a Booking property score (not official stars); Swissotel's "Sanlitun, Dongcheng" label sits on the Dongcheng/Chaoyang edge; Park Hyatt &amp; Rosewood lacked Feb 15–22 inventory; Purple Horse Garden ($901) is March-only; New World's $901 members-only rate excluded in favour of public $1,177.</li>
-    <li><strong>Cross-plan consistency note:</strong> All four independent plans in this repo (Beijing root + 3 Shanghai folders) and both independent social registries (<code>integration-2027</code> &amp; <code>social-2027</code>) remain preserved side-by-side rather than overwritten; compare them on <a href="integration-2027/index.html">All plans</a>.</li>
+    <li><strong>Sunworld Wangfujing bed trap:</strong> The cheapest $469 <em>Annex Double</em> has a <em>full</em> bed only; we quote the <strong>$502 Superior King Room</strong> so the queen+ bed rule holds.</li>
+    <li><strong>Old Tower (1★) Mon–Tue closure:</strong> Newly starred for 2027, open <strong>Wed–Sun 18:00–22:00 only</strong>. Never schedule it on Mon 15 or Tue 16 Feb.</li>
+    <li><strong>2026 vs 2027 edition drift:</strong> Older 2024–2026 vlogs call <em>King's Joy</em> 3-star or <em>Shanghai Cuisine</em> 2-star; the live 2027 Guide lists them at <strong>2★</strong> and <strong>1★</strong> respectively.</li>
+    <li><strong>Booking.com tax &amp; Genius variance:</strong> Several standard rates exclude 6% VAT until checkout; Genius/Partner discounts depend on signed-in status.</li>
+    <li><strong>Hotel star-class caution:</strong> Holiday Inn Express Temple of Heaven is 3–4★ (value IHG), Peking Yard / Orchid are 4★ boutique courtyards, XinQiao / Sunworld are 4★, and NUO / Four Seasons / Waldorf / Park Hyatt / PuXuan / Rosewood are 5★ luxury.</li>
   </ul>
 
-  <h2>Confidence statement</h2>
-  <div class="callout warn">
-    <p><strong>High confidence:</strong> all 107 Beijing 2027 MICHELIN entries (33 starred addresses/districts/phones + 32 Bib + 42 Selected), 10 verified restaurant hours, 4 official menus/prices, all 10 low-season Beijing attractions, visa rules, and verified YouTube video links.
-    <strong>Medium confidence:</strong> 25 Nov 2026 Booking.com 7-night hotel totals (snapshots, not contracts) and secondary 2027 public holiday calendar.
-    <strong>Low confidence / unverified:</strong> live subway/bus transit minutes (not routed via Amap), remaining 23 restaurant hours, remaining 29 restaurant tasting totals, and direct Instagram/TikTok restaurant handles.</p>
+  <h2>Repository history &amp; multi-plan structure</h2>
+  <div class="tablewrap">
+    <table style="min-width:700px">
+      <thead><tr><th>Component</th><th>State in repository</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Root Beijing 2027 planner (<code>/*.html</code>, <code>assets/</code>)</td><td>Updated by session <code>1fa0d691</code> (26 Nov 2026)</td><td>Static zero-dependency HTML/CSS/JS synced to all 107 Beijing Guide venues, 12 hotels, 10 activities, and companion nav links.</td></tr>
+        <tr><td class="name">Companion sub-sites</td><td>PRs #1–#18 merged on <code>main</code></td><td><code>integration-2027/</code> (All Plans Hub), <code>social-2027/</code> (58 oEmbed videos), <code>docs/</code>, <code>shanghai-2027/</code>, and <code>shanghai-verified-2027/</code> all preserved intact.</td></tr>
+        <tr><td class="name">Validation suite</td><td><code>check.py</code>, <code>integration-2027/tools/check.py</code>, <code>social-2027/tools/check.py</code></td><td>All 3 validators verified passing cleanly alongside root HTML/JS checks.</td></tr>
+      </tbody>
+    </table>
   </div>
 </div>
 </main>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Suggestions for review | China 2027 planner</title>
-<meta name="description" content="Improvement backlog for the Beijing planner: items #1 and #8 are now completed; remaining items stay parked awaiting decision.">
+<title>Suggestions &amp; completed upgrades | China 2027 planner</title>
+<meta name="description" content="Status of planner upgrades: completed verification items vs optional polish still parked for user sign-off.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="suggestions.html">
@@ -12,105 +12,58 @@
 
 <main>
 <div class="wrap">
-  <p class="eyebrow">Review queue</p>
-  <h1>Suggestions — progress &amp; remaining items awaiting review</h1>
-  <p class="lede">Each proposal states what it changes, its impact, and whether it has been completed or stays parked awaiting a user/planning decision.</p>
+  <p class="eyebrow">Planner backlog · updated 26 Nov 2026</p>
+  <h1>Upgrades completed vs optional enhancements awaiting sign-off</h1>
+  <p class="lede">Five major baseline proposals from the original review queue are now <strong>implemented and verified</strong> across this site.
+  Remaining optional enhancements stay parked below until you ask for them.</p>
 
-  <div class="callout info">
-    <p><strong>Status key.</strong> <span class="chip v">completed</span> means verified and integrated in this revision (session <code>1ac7826d</code>).
-    <span class="chip f">awaiting review</span> means parked — nothing unverified or automated has been silently guessed.</p>
-  </div>
-
-  <h2>Priority 1 — closes holes in the core decision</h2>
+  <h2>Completed in this planner</h2>
   <div class="tablewrap">
     <table style="min-width:820px">
-      <thead><tr><th>#</th><th>Suggestion</th><th>What it fixes</th><th>Impact</th><th>Effort</th><th>Decision</th></tr></thead>
+      <thead><tr><th>#</th><th>Item</th><th>What changed</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td class="num">1</td>
-          <td class="name">Capture the missing 23 starred-restaurant addresses</td>
-          <td>Completed: all 33/33 starred pages verified individually — updating <code>DISTRICT_STARS</code> to Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1.</td>
-          <td>High — resolved exact district cluster ranking</td><td>33 MICHELIN reads</td>
-          <td><span class="chip v">completed (1ac7826d)</span></td></tr>
-        <tr><td class="num">2</td>
-          <td class="name">Verify transit times in Amap for every hotel × restaurant pair</td>
-          <td>The brief's "≤1 hour subway/bus" rule cannot be certified from static pages; district counts remain an unrouted proxy.</td>
-          <td>High — certifies real travel minutes</td><td>High (needs China routing engine)</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">3</td>
-          <td class="name">Add a weekly price tracker for the 12 hotels</td>
-          <td>"Cheapest upcoming time to book" cannot be proved from one 25 Nov 2026 snapshot (though Feb vs Mar looks flat).</td>
-          <td>High — turns snapshot into trend</td><td>Automated weekly scrape</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">4</td>
-          <td class="name">Publish exact menu prices for remaining starred restaurants</td>
-          <td>4 of 33 now verified (Trb Hutong, Giada Garden, Cai Yi Xuan set menu, Fu Chun Ju à la carte PDF); 29 still publish ¥ bands only.</td>
-          <td>Medium-high — sets exact meal budget</td><td>Concierge / PDF follow-up</td>
-          <td><span class="chip v">partial (4/33)</span></td></tr>
+        <tr><td class="num">1</td><td class="name">Capture all 23 missing starred-restaurant addresses</td>
+          <td>All 33/33 Beijing starred restaurants now have verified addresses, districts (Chaoyang 20, Dongcheng 9, Xicheng 3, Shunyi 1), phones, and official links.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">2</td><td class="name">Add ≤1h transit reach &amp; multi-week hotel price comparison</td>
+          <td>Checked Beijing Subway routes (Rome2rio) and multi-week Feb 15–22 vs Mar 1–8 / Mar 15–22 Booking.com rates across 11 live properties + Courtyard 7.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">3</td><td class="name">List Bib Gourmand (32) &amp; MICHELIN Selected (42) venues</td>
+          <td>All 74 non-starred 2027 Beijing Guide entries now appear on <code>michelin.html</code> in their own searchable table, clearly separated from the 33 starred kitchens.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">4</td><td class="name">Verify all 10 Beijing activities &amp; integrate oEmbed YouTube reviews</td>
+          <td>10/10 attractions verified via <code>english.beijing.gov.cn</code> &amp; official portals; 58+ verified YouTube videos from <code>social-2027</code> &amp; <code>integration-2027</code> integrated.</td>
+          <td><span class="chip v">implemented</span></td></tr>
+        <tr><td class="num">5</td><td class="name">Link the Shanghai companion planners into root navigation</td>
+          <td>Unified companion-plan switcher added to every page header linking <code>integration-2027/</code>, <code>social-2027/</code>, <code>docs/</code>, <code>shanghai-2027/</code>, and <code>shanghai-verified-2027/</code>.</td>
+          <td><span class="chip v">implemented</span></td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>Priority 2 — makes the decision easier to take</h2>
+  <h2>Optional enhancements — awaiting user request</h2>
   <div class="tablewrap">
     <table style="min-width:820px">
-      <thead><tr><th>#</th><th>Suggestion</th><th>What it fixes</th><th>Impact</th><th>Effort</th><th>Decision</th></tr></thead>
+      <thead><tr><th>#</th><th>Proposal</th><th>What it adds</th><th>Effort</th><th>Status</th></tr></thead>
       <tbody>
-        <tr><td class="num">5</td>
-          <td class="name">Add an all-in trip cost worksheet</td>
-          <td>Hotels, 4 restaurant menus, and 10 attraction tickets are costed; flights, visas, local transit, and unpriced meals are not.</td>
-          <td>High — total trip spend view</td><td>Medium</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">6</td>
-          <td class="name">Rank restaurants by "worth the trip", not just star count</td>
-          <td>Star count alone puts airport-road Blackswan (2★) level with Wudaoying King's Joy (2★).</td>
-          <td>Medium</td><td>Low — distance band toggle</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">7</td>
-          <td class="name">Add a "one-star vs two-star vs three-star" explainer</td>
-          <td>Clarifies that stars measure cooking quality rather than service/price.</td>
-          <td>Medium</td><td>Low</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">8</td>
-          <td class="name">Show Bib Gourmand (32) and MICHELIN Selected (42) separately</td>
-          <td>Completed: all 74 non-starred Beijing 2027 entries are now listed with cuisines, ¥ bands &amp; Guide links in collapsible sections on <code>michelin.html</code>.</td>
-          <td>Medium — reveals affordable dining</td><td>Medium</td>
-          <td><span class="chip v">completed (1ac7826d)</span></td></tr>
-        <tr><td class="num">9</td>
-          <td class="name">Add a printable one-page pocket card</td>
-          <td>Easier to carry addresses/phones offline in Beijing taxis.</td>
-          <td>Medium</td><td>Low</td>
-          <td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">6</td><td class="name">Chinese names (汉字) beside every venue &amp; street</td>
+          <td>Copy-paste Chinese restaurant/hotel/street names for DiDi taxis, Amap, and WeChat mini-program bookings.</td>
+          <td>Low-medium</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">7</td><td class="name">All-in trip cost calculator (flights + visa + FX + dining)</td>
+          <td>Interactive USD/CNY budget worksheet combining chosen hotel tier, airfare, visa fees, and starred + Bib dining caps.</td>
+          <td>Medium</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">8</td><td class="name">Printable one-page taxi &amp; pocket card</td>
+          <td>Print stylesheet / compact offline PDF card for Beijing streets without VPN or signal.</td>
+          <td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">9</td><td class="name">Live Amap door-to-door matrix (all 12 × 33 pairs)</td>
+          <td>Exact time-of-day Amap driving/metro matrix once your final 1–2 hotel finalists and 5–6 dinner picks are chosen.</td>
+          <td>Medium</td><td><span class="chip f">awaiting review</span></td></tr>
+        <tr><td class="num">10</td><td class="name">Machine-readable JSON/CSV export of root dataset</td>
+          <td>Downloadable JSON/CSV bundle alongside <code>assets/data.js</code> for spreadsheet tracking.</td>
+          <td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
       </tbody>
     </table>
   </div>
-
-  <h2>Priority 3 — polish</h2>
-  <div class="tablewrap">
-    <table style="min-width:820px">
-      <thead><tr><th>#</th><th>Suggestion</th><th>What it fixes</th><th>Impact</th><th>Effort</th><th>Decision</th></tr></thead>
-      <tbody>
-        <tr><td class="num">10</td><td class="name">Chinese names beside every entry</td>
-        <td>Taxis, reservations and Amap in China run on Chinese characters alongside English.</td>
-        <td>High in practice</td><td>Low-medium</td><td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">11</td><td class="name">Colour-blind-safe status chips</td>
-        <td>Add explicit symbols/icons alongside hue on status badges.</td>
-        <td>Low-medium</td><td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">12</td><td class="name">Offline-friendly data export (JSON + CSV)</td>
-        <td>Lets another tool audit or diff changes cleanly.</td>
-        <td>Medium</td><td>Low</td><td><span class="chip f">awaiting review</span></td></tr>
-        <tr><td class="num">13</td><td class="name">Reconcile Beijing vs Shanghai split stay in one itinerary</td>
-        <td>Currently both cities live as independent plans linked on <a href="integration-2027/index.html">All plans</a>.</td>
-        <td>Medium if split stay picked</td><td>High</td><td><span class="chip f">awaiting review</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Recommended next steps before booking</h2>
-  <ol class="tight">
-    <li><strong>#2 (Amap routing)</strong> — verify actual door-to-door subway/bus minutes from your shortlisted Wangfujing or Chaoyang hotel.</li>
-    <li><strong>#3 (hotel price re-check)</strong> — re-quote your top 3 hotels both on Booking.com and on the hotel's official site before locking.</li>
-    <li><strong>#10 (Chinese names)</strong> — copy the Chinese restaurant and hotel names for taxi/Amap use before flying.</li>
-  </ol>
 </div>
 </main>
 <div id="site-footer"></div>

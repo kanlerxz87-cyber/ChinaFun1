@@ -27,6 +27,11 @@ nav.nav::-webkit-scrollbar{display:none}
 nav.nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;white-space:nowrap}
 nav.nav a:hover{color:var(--ink);border-color:#33465d;text-decoration:none}
 nav.nav a.active{background:var(--accent);border-color:var(--accent);color:#171207;font-weight:600}
+.subnav{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:6px 0 8px;border-top:1px solid rgba(36,48,64,.65);scrollbar-width:none;font-size:12px}
+.subnav::-webkit-scrollbar{display:none}
+.subnav-label{color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:10.5px;white-space:nowrap}
+.subnav a{flex:0 0 auto;color:var(--blue);white-space:nowrap;padding:2px 8px;border-radius:999px;background:rgba(106,169,232,.09);border:1px solid rgba(106,169,232,.22)}
+.subnav a:hover{background:rgba(106,169,232,.18);text-decoration:none}
 
 /* layout */
 main{padding:22px 0 60px}
