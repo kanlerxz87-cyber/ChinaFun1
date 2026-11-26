@@ -651,3 +651,26 @@ subtrees remain additive and neither edits the other's data.
 - GitHub Pages deployment run [45881703663](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45881703663) completed successfully for that merge commit (`build`, `deploy`, and status-report jobs all passed). Pages API reports status `built`, publishing from `main` `/`.
 - Cache-busted live fetch `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=4262d82` confirms the root page now exposes the three Shanghai plans, comparison dashboard, and social-review register. The plain URL was cached by the fetch layer; the cache-busted URL showed the deployed version.
 - The PR adds navigation/documentation only. It does not revise the underlying trip datasets or supersede their source logs and flagged items.
+
+---
+
+# Session `f6189cca` — final verification, integration integrity, and publish pass
+
+**Branch:** `arena/f6189cca-chinafun1` (base `1c839f22c35ad39a1a9f900aa5f41ca6448d02b7`, fast-forwarded to `c7a3310`)
+**Claimed 2026-11-26 · Status:** in progress
+**File scope (non-overlapping):** this appended `COORDINATION.md` section only, plus repo-wide *read-only* verification.
+Any fix required inside another session's file scope will be **logged here first** and applied only as an explicit
+integration exception with the reason recorded. No dataset (`assets/data.js`, `data/*.json`, `*.csv`) will be
+rewritten by this session.
+
+| Task | Status | Scope | Verification rule |
+|---|---|---|---|
+| E1 Claim + board read | **in progress** | this section | Claim committed and pushed before any other work |
+| E2 Line-by-line integrity pass (all generators/checkers + repo-wide link scan) | unclaimed | read-only across repo | Every checker must pass; every failure logged here with the fix |
+| E3 Live GitHub Pages verification (all six entry points) | unclaimed | read-only | HTTP 200 + non-empty body for each published entry point |
+| E4 Official-source spot checks of headline published numbers | unclaimed | read-only | Fetched from the official domain only; a mismatch becomes a flag, never a silent edit |
+| E5 Fixes, PR to `main`, merge, Pages deploy confirmation | unclaimed | as scoped above | PR merged only after E2–E4 pass; Pages status `built` for the merge commit |
+| E6 Record PR + deploy result here | unclaimed | this section | Follow-up commit after merge, same pattern as sessions `013c9819` / `33a259ca` / `60e8d054` |
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note
+the handoff here. Requests to change another session's data are logged here, not applied.
