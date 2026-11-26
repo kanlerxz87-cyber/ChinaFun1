@@ -557,8 +557,16 @@ subtrees remain additive and neither edits the other's data.
 
 | Task | Status | Scope | Verification |
 |---|---|---|---|
-| D1 Claim + scope | in progress | this section | Read shared task board and checked existing ownership before claiming |
-| D2 Make the consolidated decision layer discoverable from the root | unclaimed | `index.html`, `assets/app.js` | Add one clearly labeled link to `integration-2027/`; preserve the Beijing planner and its existing navigation |
-| D3 Verify build and links | unclaimed | read-only checks | Run root and integration validators and check the generated root page's link |
-| D4 Record result | unclaimed | this section | Append exact verification and note that research/prices remain owned by prior plans |
+| D1 Claim + scope | done | this section | Read shared task board and checked existing ownership before claiming |
+| D2 Make the consolidated decision layer discoverable from the root | done | `index.html`, `assets/app.js` | Added a clearly labeled All plans nav link and comparison card; Beijing remains the root page's primary plan |
+| D3 Verify build and links | done | read-only checks | `python3 check.py`, `python3 integration-2027/tools/check.py`, `python3 social-2027/tools/check.py`, `python3 build.py`, `git diff --check`: all pass; the target `integration-2027/index.html` exists |
+| D4 Record result | done | this section | No datasets or existing research claims changed; prior data/source ownership retained |
+
+### Verification and handoff
+
+- Root checker: 11 generated docs pages, 187 table rows, zero broken internal links or empty hrefs; title and viewport checks pass.
+- Integration checker: 7 pages, 0 errors. Social registry checker: 43 venues, 58 videos, 8 pages; all sourcing/link consistency checks pass.
+- Shanghai docs rebuilt with `python3 build.py`; regeneration succeeds. `git diff --check` is clean.
+- The new comparison link targets the existing local `integration-2027/index.html` landing page. The link addition itself introduces no new factual trip claims; all inherited prices, restaurant statuses, and verification caveats remain owned by their original source logs.
+- Published content remains a set of independent plans; do not treat the comparison layer as a single agreed recommendation. No hotel quote was re-priced in this navigation-only task.
 
