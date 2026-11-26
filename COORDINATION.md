@@ -581,22 +581,22 @@ subtrees remain additive and neither edits the other's data.
 
 **Branch:** `arena/24fa9b09-chinafun1` (branched from `main` @ `1c839f2`, PR #18 merge)
 **Claimed:** 2026-11-26 · **Status:** in progress
-**File scope (non-overlapping):** `COORDINATION.md` (this section only), `README.md`, `index.html` (root landing — additive "All plans" section only), `assets/app.js` (nav — additive link only). No data file (`assets/data.js`, `data/*.json`, any plan's `data/`) and no other plan's pages are edited. If a change outside this scope is needed, it will be logged here as a request, not applied.
-**Intent:** Act as the final integration session named in the brief. Six sub-sites are live (root Beijing, `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`) but the root landing links to none of the other five and `README.md` documents only four. This session adds one unified entry point, re-verifies the load-bearing official sources, re-runs every build/link check, then opens and merges a PR and confirms the Pages deploy.
+**Claimed file scope:** `COORDINATION.md` (this section only), `README.md`, `index.html` (root landing — additive "All plans" section only), `assets/app.js` (root nav). No data file (`assets/data.js`, `data/*.json`, any plan's `data/`) and no other plan's pages are edited. Session `60e8d054` later completed overlapping root-nav and discovery-link work in PRs #19/#20; its work and publication record are preserved. This session adds the direct plan links and README inventory, and ensures there is only one root-nav All plans entry.
+**Intent:** Act as a final integration session named in the brief. Six sub-sites are live (root Beijing, `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`). After this claim, session `60e8d054` independently completed and merged PRs #19/#20 to add an initial root-to-dashboard link. This session preserved that work, added direct landing-page links to all plans/registers, updated README, re-verified official sources, reran checks, and will submit the remaining additive navigation/documentation changes by PR.
 
 | # | Task | Status | File scope | Verification rule |
 |---|------|--------|------------|-------------------|
-| F1 | Claim + repo audit | in progress | this section | Board read in full; claim committed and pushed before any other edit |
-| F2 | Re-verify load-bearing official sources | unclaimed | read-only + log here | MICHELIN Beijing 2027 release, MICHELIN Shanghai ceremony, Palace Museum visit page fetched and read this session; counts must match the published data or the mismatch is flagged |
-| F3 | Verify all six live Pages entry points | unclaimed | read-only + log here | Each entry URL fetched; HTTP 200 + non-empty body required |
-| F4 | Unified entry point (root landing + nav + README) | unclaimed | `index.html`, `assets/app.js`, `README.md` | Additive only; every new link must resolve; no existing row, price or claim changed |
-| F5 | Re-run all checks, PR, merge, Pages deploy | unclaimed | repo-wide verification only | `check.py` (docs), `integration-2027/tools/check.py`, `social-2027/tools/check.py`, repo-wide internal-link scan all pass; PR merged; Pages `built` for the merge commit |
+| F1 | Claim + repo audit | **done** | this section | Board read; initial claim pushed as `165cfea` before code edits; later rebase retained both this and session `60e8d054`'s logs |
+| F2 | Re-verify load-bearing official sources | **done** | read-only + log here | MICHELIN Beijing 2027, Shanghai 2026, Palace Museum sources recorded below |
+| F3 | Verify all six live Pages entry points | **done** | read-only + log here | All six fetched with non-empty content using the page fetch tool |
+| F4 | Unified entry point (root landing + nav + README) | **done** | `index.html`, `assets/app.js`, `README.md` | Direct links added to all three Shanghai plans and two registers; retained the single All plans nav entry from PR #20 and removed this branch's duplicate; no trip data changed |
+| F5 | Re-run all checks, PR, merge, Pages deploy | **in progress** | repo-wide verification only | Checks pass; PR, merge, and Pages confirmation remain |
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, another session may take it over after noting the handoff here.
 
 ### Final integration verification log (`24fa9b09`)
 
-**F1 — repo audit:** The inherited `COORDINATION.md` board and repository README were reviewed before claiming. The published repository contains four independently researched trip plans, plus `integration-2027/` and `social-2027/`; prior session scopes remain intact. Claim commit `165cfea` was pushed before code edits.
+**F1 — repo audit:** The inherited `COORDINATION.md` board and repository README were reviewed before claiming. The published repository contains four independently researched trip plans, plus `integration-2027/` and `social-2027/`; prior session scopes remain intact. Claim commit `165cfea` was pushed before code edits. While this branch was being prepared, session `60e8d054` completed overlapping root discovery-link work and merged PRs #19 and #20. The rebase conflict in `COORDINATION.md` was resolved by preserving both session records and the publication note; no other session's work was discarded.
 
 **F2 — official source re-checks (2026-11-26):**
 
@@ -608,7 +608,7 @@ subtrees remain additive and neither edits the other's data.
 
 **F3 — all six published entry points:** fetched successfully with non-empty page content through the Pages URL: root Beijing (`/`), `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`. (Sandbox Python HTTPS requests hit TLS EOF, so the Arena page fetch tool was used.)
 
-**F4 — unified entry:** completed additively. Root `index.html` links the three Shanghai plans and both supporting registers; root `assets/app.js` adds the All plans link; README now documents both added sub-sites. No data tables, prices, source links or existing claims were edited.
+**F4 — unified entry:** completed additively. Root `index.html` links the three Shanghai plans and both supporting registers; root navigation retains exactly one All plans link (already introduced in PR #20; this branch's duplicate was removed); README now documents both added sub-sites. No data tables, prices, source links or existing claims were edited.
 
 **F5 — build/link checks before PR:**
 
