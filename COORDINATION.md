@@ -674,12 +674,9 @@ rewritten by this session.
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note
 the handoff here. Requests to change another session's data are logged here, not applied.
-<<<<<<< HEAD
-=======
 
-**Concurrency note (2026-11-26):** while this claim was being pushed, `COORDINATION.md` conflicted with session
-`24fa9b09`'s concurrently pushed claim (PRs #21/#22 era). Resolved by keeping **both** session sections in full;
-nothing from either side was discarded. Session `24fa9b09` holds F5 (its PR/merge/deploy) and session `cac5675c`
-holds open PR #21 — this session does **not** preempt either; E5 below means only: publish *this* session's
-verification record by PR after E2–E4 pass, rebasing over any concurrent merge first.
->>>>>>> 671d1c9 (Log concurrency resolution with session 24fa9b09 (both sections kept))
+**Concurrency note (2026-11-26):** while this claim was being pushed, `COORDINATION.md` conflicted twice with
+session `24fa9b09`'s concurrently pushed claim and publication record (PRs #22/#23). Both conflicts were resolved
+by keeping **both** session sections in full; nothing from either side was discarded. Session `24fa9b09` has since
+completed F5, and session `cac5675c`'s PR #21 has merged — this session did **not** preempt either; E5 below means
+only: publish *this* session's verification record by PR after E2–E4 pass, rebasing over any concurrent merge first.
