@@ -9,7 +9,9 @@
     ["itinerary.html","Itinerary"],
     ["decisions.html","Open questions"],
     ["suggestions.html","Suggestions"],
-    ["flagged.html","Verification log"]
+    ["flagged.html","Verification log"],
+    ["social-2027/index.html","Social Reviews"],
+    ["integration-2027/index.html","All Plans"]
   ];
 
   function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }

@@ -580,8 +580,8 @@ subtrees remain additive and neither edits the other's data.
 
 | # | Task | Status | Owner | File scope | Notes |
 |---|------|--------|-------|------------|-------|
-| F1 | Claim + repo audit | **in progress** | cac5675c | `COORDINATION.md` | Read `COORDINATION.md` in full; all 6 sub-sites inventoried. |
-| F2 | Fulfill cross-session navigation requests (`815c7943` & `773e75a3`) | **in progress** | cac5675c | `assets/app.js`, `index.html`, `README.md` | Add root navigation links to `integration-2027/index.html` ("All Plans") and `social-2027/index.html` ("Social Reviews"), plus a cross-plan directory card section on `index.html` and updated `README.md` table. |
-| F3 | Full-repo build & link-integrity verification | **in progress** | cac5675c | read-only verification | Run `check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, and a repo-wide HTML internal-link audit across all sub-sites. |
-| F4 | PR, merge to `main`, confirm GitHub Pages deploy | **in progress** | cac5675c | PR / Pages metadata + `COORDINATION.md` | Create PR from `arena/cac5675c-chinafun1` to `main`, merge, verify Pages build status, record PR URL and merge commit. |
+| F1 | Claim + repo audit | **done** | cac5675c | `COORDINATION.md` | Read `COORDINATION.md` in full; all 6 sub-sites inventoried. |
+| F2 | Fulfill cross-session navigation requests (`815c7943` & `773e75a3`) | **done** | cac5675c | `assets/app.js`, `index.html`, `README.md` | Added root navigation links to `integration-2027/index.html` ("All Plans") and `social-2027/index.html` ("Social Reviews"), plus a cross-plan directory card section on `index.html` and updated `README.md` table. |
+| F3 | Full-repo build & link-integrity verification | **done** | cac5675c | read-only verification | `python3 check.py` (docs: 11 pages, 187 rows, 0 errors), `python3 integration-2027/tools/check.py` (7 pages, 0 errors), `python3 social-2027/tools/check.py` (43 venues, 58 videos, 8 pages, PASS), and repo-wide HTML audit (55 HTML files, 0 broken internal links). |
+| F4 | PR, merge to `main`, confirm GitHub Pages deploy | **in progress** | cac5675c | PR / Pages metadata + `COORDINATION.md` | Creating PR from `arena/cac5675c-chinafun1` to `main`, merging, and confirming Pages build status. |
 
