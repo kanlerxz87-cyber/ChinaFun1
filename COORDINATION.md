@@ -626,4 +626,11 @@ subtrees remain additive and neither edits the other's data.
 | F2 | Re-verify load-bearing official sources | **done** | read-only + log | Official MICHELIN and Palace Museum sources listed above |
 | F3 | Verify all six live Pages entry points | **done** | read-only + log | All six returned page content successfully |
 | F4 | Unified entry point | **done** | `index.html`, `assets/app.js`, `README.md` | Additive only; all relative references pass |
-| F5 | Checks, PR, merge, deploy | in progress | repo-wide verification / GitHub | Checks pass; PR and deploy confirmation to follow |
+| F5 | Checks, PR, merge, deploy | **done** | repo-wide verification / GitHub | PR #22 merged and Pages run 45881703663 succeeded for merge commit `4262d82`; cache-busted live root fetch displays the new plan links |
+
+#### Publication result — session `24fa9b09`
+
+- PR #22: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/22 — merged to `main` at 2026-11-26 19:10:59 UTC; merge commit `4262d82ac904c7b6a6db5de6ea4b7c6d2dfe86d4`.
+- GitHub Pages deployment run [45881703663](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45881703663) completed successfully for that merge commit (`build`, `deploy`, and status-report jobs all passed). Pages API reports status `built`, publishing from `main` `/`.
+- Cache-busted live fetch `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=4262d82` confirms the root page now exposes the three Shanghai plans, comparison dashboard, and social-review register. The plain URL was cached by the fetch layer; the cache-busted URL showed the deployed version.
+- The PR adds navigation/documentation only. It does not revise the underlying trip datasets or supersede their source logs and flagged items.
