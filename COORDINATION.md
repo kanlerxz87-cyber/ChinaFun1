@@ -789,7 +789,7 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 # Session `f8e7ee9e` — dual-city China 2027 verified planner (`china-2027/`) & repo-wide audit
 
 **Branch:** `arena/f8e7ee9e-chinafun1` (rebased onto `origin/main` @ `179e24c`, preserving all earlier session records verbatim)
-**Claimed:** 2026-11-26 · **Status:** in progress
+**Claimed:** 2026-11-26 · **Status:** done (PR #29 merged `157c9ee`, Pages run `45885042322` built + live-verified; follow-up `YT Short` label polish applied)
 **Claimed file scope (strictly non-overlapping):** `china-2027/**` (self-contained dual-city Beijing + Shanghai static dashboard, data JSONs, stdlib generator & automated validator) and this appended section of `COORDINATION.md` only.
 **Parallel-session respect:** Does **not** edit root `index.html`, `assets/*`, `README.md`, `docs/**`, `shanghai-2027/**`, `shanghai-verified-2027/**`, `integration-2027/**`, `social-2027/**`, or `audit-2027/**`.
 
@@ -801,7 +801,7 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 | M4 | Multi-platform verified social reviews (YouTube oEmbed 200 + TikTok + official Instagram profiles) | **done** | f8e7ee9e | `china-2027/data/restaurants.json`, `china-2027/data/activities.json` | 91 verified links (47 restaurant + 44 activity) across YT/TikTok/IG; zero search URLs, zero private videos (`Sy0Df7KVfJk` excluded) |
 | M5 | Multi-window 2027 hotel pricing & cheapest booking-time proof (8 Beijing + 5 Shanghai; Feb 15–22 vs Mar 1–8 vs Mar 16–23) | **done** | f8e7ee9e | `china-2027/data/hotels.json` | Every hotel verified for private bathroom + queen/king bed + live Booking.com 7-night USD totals (`2026-11-26`); active Black Friday/Early Booker free-cancel trough proven (15%–56% savings vs mid-Mar) |
 | M6 | Mobile-friendly static dashboard (`china-2027/`, 9 pages, 0 external CDNs, deterministic stdlib builder & validator) | **done** | f8e7ee9e | `china-2027/**` | `china-2027/tools/build.py` byte-deterministic; `china-2027/tools/check.py` PASS + all existing repo checkers PASS |
-| M7 | PR to `main`, merge, confirm live GitHub Pages HTTP 200 on `/ChinaFun1/china-2027/` | in progress | f8e7ee9e | PR/merge metadata + this section | All checks green + live Pages verified |
+| M7 | PR to `main`, merge, confirm live GitHub Pages HTTP 200 on `/ChinaFun1/china-2027/` | **done** | f8e7ee9e | PR #29 (`157c9ee`), Pages run `45885042322` + follow-up polish PR | All 4 repo checkers PASS; live Pages `https://kanlerxz87-cyber.github.io/ChinaFun1/china-2027/` verified live |
 
 ### Cross-Session Fix Requests (Read-Only Audit Against `origin/main` @ `179e24c`)
 
