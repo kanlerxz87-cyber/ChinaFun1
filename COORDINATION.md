@@ -556,3 +556,11 @@ subtrees remain additive and neither edits the other's data.
 | A1 | in progress | 59c8c8e1 | `audit-2027/**` and this appended board section; independent review of inherited published plans, verification limits and site checks |
 
 Existing sections and their scopes remain untouched. The earlier `815c7943` and `773e75a3` in-progress headers are historical; their logs report completion on 2026-11-25 and no work is being taken over.
+
+### Integration correction claim
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| A2 | in progress | 59c8c8e1 | root `index.html` only: correct unsupported live-pricing/whole-window and holiday certainty claims; add a link to the independent audit |
+
+Prior root work is completed; this is a narrowly scoped final integration correction, not a change to the underlying dataset or another plan's files. If this overlaps an active claim, stop and coordinate.
