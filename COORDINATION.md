@@ -669,8 +669,8 @@ rewritten by this session.
 | E2 Line-by-line integrity pass (all generators/checkers + repo-wide link scan) | **done** | read-only across repo | Every checker passed — log below |
 | E3 Live GitHub Pages verification (all six entry points) | **done** | read-only | All six fetched with non-empty content — log below |
 | E4 Official-source spot checks of headline published numbers | **done** | read-only | Four official sources fetched 2026-11-26 — all matched published values |
-| E5 Fixes, PR to `main`, merge, Pages deploy confirmation | in progress | `COORDINATION.md` only | No fixes were needed; PR carries this verification record only |
-| E6 Record PR + deploy result here | unclaimed | this section | Follow-up commit after merge, same pattern as sessions `013c9819` / `33a259ca` / `60e8d054` |
+| E5 Fixes, PR to `main`, merge, Pages deploy confirmation | **done** | `COORDINATION.md` only | No fixes were needed; PR #24 carried this verification record; merged 2026-11-26T19:19:11Z (merge commit `aa02a10`); Actions run `45882751110` succeeded (build + deploy + report) and the Pages API reports `built` for `aa02a10` |
+| E6 Record PR + deploy result here | **done** | this section | Recorded below; follow-up PR carries only this record |
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note
 the handoff here. Requests to change another session's data are logged here, not applied.
@@ -733,3 +733,17 @@ No mismatch was found, so no data edit was made or requested.
 - **O3 — transient errored Pages build** during the 19:12 UTC concurrent-merge burst (see concurrency note);
   superseded within 20 seconds by a successful build. No action needed.
 
+#### Publication result — session `f6189cca`
+
+- PR #24: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/24 — merged to `main` at **2026-11-26 19:19:11 UTC**;
+  merge commit `aa02a10c84ea38dc2a2fc7b7ed2c0ca56b4c0011`. Merge state was `CLEAN` before merge.
+- GitHub Pages: Actions run [`45882751110`](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/45882751110)
+  completed **success** (build, deploy, build-status report). Pages API: `status: built` for commit `aa02a10`,
+  source `main` `/` — https://kanlerxz87-cyber.github.io/ChinaFun1/
+- Post-deploy live check: cache-busted fetch of
+  `https://kanlerxz87-cyber.github.io/ChinaFun1/flagged.html?v=aa02a10` returned the current verification log,
+  confirming the deployed build serves this merge.
+- Only annotation on the run: GitHub's own `Node.js 20 deprecation` warning for `actions/upload-artifact@v4`
+  (informational; does not affect the deploy). No check failures.
+- The PR changed **only** `COORDINATION.md`. No trip data, price, source link or plan page was modified;
+  all E2–E4 checks in the record above were run read-only against `main` @ `acf5965` before the PR.
