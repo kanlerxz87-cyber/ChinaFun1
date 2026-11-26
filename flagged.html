@@ -14,7 +14,7 @@
 <div class="wrap">
   <p class="eyebrow">Verification log</p>
   <h1>What was checked, where, and what is still blank</h1>
-  <p class="lede">Every number on this site traces to one of the sources below, read on 25 November 2026. If a value could not be
+  <p class="lede">Every number on this site traces to one of the sources below, read on 25–26 November 2026. If a value could not be
   confirmed from an official source it was left blank and listed here — never filled with an estimate.</p>
 
   <h2>Source-by-source log</h2>
@@ -30,12 +30,14 @@
           <span class="meta"><a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred" target="_blank" rel="noopener">guide.michelin.com listing ↗</a></span></td>
           <td>The 33 names, star counts, cuisines and ¥ price bands used in the table; filter counts 3★ = 2, 2★ = 5, 1★ = 26, Bib Gourmand = 32, Selected = 42.</td>
           <td>Cross-checked against the press release totals</td><td><span class="chip v">verified</span></td></tr>
-        <tr><td class="name">MICHELIN — individual restaurant pages
-          <span class="meta"><a href="https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/king-s-joy" target="_blank" rel="noopener">King's Joy ↗</a> ·
-          <a href="https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/trb-hutong" target="_blank" rel="noopener">Trb Hutong ↗</a> ·
-          <a href="https://guide.michelin.com/en/beijing-municipality/beijing/restaurant/jingji" target="_blank" rel="noopener">Jingji ↗</a></span></td>
-          <td>Address, phone, per-day opening hours and official website for 10 restaurants.</td>
-          <td>Hours are published for only 2 of the 10 (King's Joy, Trb Hutong)</td><td><span class="chip v">partial</span></td></tr>
+        <tr><td class="name">MICHELIN — individual restaurant pages (re-read 2026-11-26)
+          <span class="meta"><a href="https://guide.michelin.com/us/en/beijing/restaurants/king-s-joy" target="_blank" rel="noopener">King's Joy ↗</a> ·
+          <a href="https://guide.michelin.com/us/en/beijing/restaurants/trb-hutong" target="_blank" rel="noopener">Trb Hutong ↗</a> ·
+          <a href="https://guide.michelin.com/us/en/beijing/restaurants/the-house-of-dynasties" target="_blank" rel="noopener">The House of Dynasties ↗</a> ·
+          <a href="https://guide.michelin.com/us/en/beijing/restaurants/zhiguan-courtyard" target="_blank" rel="noopener">Zhiguan Courtyard ↗</a> ·
+          <a href="https://guide.michelin.com/us/en/beijing/restaurants/zijin-mansion" target="_blank" rel="noopener">Zijin Mansion ↗</a></span></td>
+          <td>Address and phone for <strong>all 33</strong> starred restaurants (10 verified 25 Nov + 23 more re-read 26 Nov 2026 — see audit-2027/missing-fields-audit.md). Hours published on only 2 pages (Fu Chun Ju; Il Ristorante – Niko Romito) — both now recorded; Trb Hutong and King's Joy hours were recorded earlier.</td>
+          <td>23 remaining blanks filled from official pages; nothing inferred</td><td><span class="chip v">verified</span></td></tr>
         <tr><td class="name">Trb Hutong — own menu page
           <span class="meta"><a href="https://www.trbhutong.com/menu" target="_blank" rel="noopener">trbhutong.com/menu ↗</a></span></td>
           <td>¥788 weekday lunch / ¥1,688 seasonal / ¥2,288 signature per person, plus 15% service.</td>
@@ -85,10 +87,10 @@
     <table style="min-width:720px">
       <thead><tr><th>Field</th><th>How many rows</th><th>Reason</th><th>Resolution</th></tr></thead>
       <tbody>
-        <tr><td class="name">Restaurant street address</td><td>23 of 33</td><td>Address not yet read from the restaurant's MICHELIN page in this pass.</td><td>One page per restaurant; no inference.</td></tr>
-        <tr><td class="name">Restaurant open days / hours</td><td>27 of 33</td><td>MICHELIN publishes hours for only some entries; the rest do not state them anywhere official we read.</td><td>Read each restaurant's own website or booking page.</td></tr>
+        <tr><td class="name">Restaurant street address</td><td><s>23 of 33</s> 0 of 33</td><td>Closed 2026-11-26: the 23 missing addresses/phones were read directly from each restaurant's official MICHELIN guide page this session (see audit-2027/missing-fields-audit.md).</td><td>Done — complete.</td></tr>
+        <tr><td class="name">Restaurant open days / hours</td><td>29 of 33</td><td>MICHELIN publishes hours on only 4 of 33 starred pages (King's Joy, Trb Hutong, Fu Chun Ju, Il Ristorante – Niko Romito). No other official page read states hours.</td><td>Call the restaurant; record date and who was spoken to. 2 entries filled this pass.</td></tr>
         <tr><td class="name">Exact price for 2 adults</td><td>32 of 33</td><td>Only Trb Hutong publishes menu prices officially. MICHELIN gives a ¥ band, which is not a bill.</td><td>Restaurant websites / PDF menus; call to confirm set-menu price.</td></tr>
-        <tr><td class="name">Social / review link (direct, verified)</td><td>Most restaurants/activities have platform search links; direct verified review videos confirmed for a subset only</td><td>Session 33a259ca added YouTube/Instagram/TikTok search links for every listed restaurant and activity so each row has platform links. Direct review videos were kept only where already verified or clearly identified; search links are labeled as search. No fake review URLs were invented.</td><td>Replace search links with verified direct review URLs (YouTube/TikTok/Instagram) when confirmed; record platform and date.</td></tr>
+        <tr><td class="name">Social / review link (direct, verified)</td><td>25 of 43 venues (15 restaurants / 10 activities)</td><td>58 direct YouTube / Shorts links, all oEmbed-verified by session 773e75a3 (social-2027) on 2026-11-23/25, plus search links retained on every row. No Instagram or TikTok direct links were oEmbed-verified — those rows keep labeled search links only. King's Joy videos are 2024 uploads predating its current Two-Star status.</td><td>Done for YouTube; TikTok/Instagram direct links still need verification.</td></tr>
         <tr><td class="name">Activity hours &amp; ticket price</td><td>7 of 10 activities not fully verified</td><td>Temple of Heaven and National Museum of China verified by session 33a259ca from official pages; Palace Museum and Mutianyu already verified. Others still need official-source confirmation.</td><td>Attraction website, or the Beijing municipal site, with the URL recorded.</td></tr>
         <tr><td class="name">Transit time per hotel × restaurant</td><td>All pairs</td><td>Cannot be certified from a static page — needs a China routing engine (Amap) at the actual time of day.</td><td>Bulk route query; store screenshot + timestamp.</td></tr>
         <tr><td class="name">Mutianyu ticket &amp; cable-car price</td><td>1</td><td>Not shown on the English page read in this pass.</td><td>Read the official ticket page.</td></tr>
@@ -117,6 +119,10 @@
       February, and is labelled as such wherever it appears.</li>
     <li><strong>Members-only prices were excluded.</strong> New World Beijing showed $901 for signed-in members and $1,177 publicly;
       the public number is used so the comparison is like-for-like.</li>
+    <li><strong>Two price bands disagree between official reads.</strong> Poetry·Wine (Dongsanhuan Middle Road) and The Beijing Kitchen (Jianguo Road) show <em>¥¥</em> on their live MICHELIN guide pages (re-read 2026-11-26), while data.js carries <em>¥¥¥</em> from an earlier read of the same pages. The live pages are the fresher source; the change was not applied silently — it needs a decision (see suggestions page) or a one-line data fix. Flagged, not hidden.</li>
+    <li><strong>One phone number prints without an area code.</strong> Gastro Esthetics DaDong's official MICHELIN page publishes <code>+86 51690328</code>-style 8-digit local format; data.js records it as printed and notes the format in the row's fx field.</li>
+    <li><strong>Zhiguan Courtyard publishes no website.</strong> Its MICHELIN guide page lists Facilities &amp; Services as phone only; the site field is left blank rather than guessed.</li>
+    <li><strong>Il Ristorante hours depend on the day.</strong> Mon–Sat 12:00–14:30 &amp; 18:00–22:00 and Sun 12:00–15:00 &amp; 18:00–22:00 (lunch window extends 30 min on Sundays) — recorded as one string in data.js; confirm by phone before booking.</li>
   </ul>
 
   <h2>Repository review</h2>
@@ -139,8 +145,8 @@
   <div class="callout warn">
     <p><strong>Confidence statement.</strong> High confidence: the MICHELIN star counts and restaurant list, the two verified attraction
     timetables, the visa requirement, the 2027 holiday calendar, and the direction of the hotel prices. Medium confidence: the exact
-    hotel totals (a live snapshot), the district-level Michelin counts (a lower bound), and the "price is flat" conclusion (two hotels,
-    two windows — directional, not exhaustive). Low confidence: anything about transit times, the unverified attractions, and exact
+    hotel totals (a live snapshot), the district-level Michelin counts (now complete: Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1, recomputed 26 Nov 2026), the "price is flat" conclusion (two hotels,
+    two windows — directional, not exhaustive), and the district-level counts (all 33 addresses now assigned; counts verified by script 26 Nov 2026). Low confidence: anything about transit times, the unverified attractions, and exact
     restaurant bills. The last group is where the next session should spend its time.</p>
   </div>
 </div>
