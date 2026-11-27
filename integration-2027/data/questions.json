@@ -1,21 +1,141 @@
 {
-  "compiled": "2026-11-25",
+  "compiled": "2026-11-27",
   "note": "A decision cannot reasonably be made until items marked BLOCKING are answered. Known values come from the named plan's published page; nothing here was estimated by this session.",
   "questions": [
-    {"id": "Q01", "blocking": true, "q": "Beijing or Shanghai?", "known": "Beijing: 33 starred restaurants in the 2027 edition; Shanghai: 1 three-star and 11 two-star in the current 2026 regional guide. Four plans reach different cheapest totals.", "unknown": "The brief names no city, and the four plans optimise different things.", "action": "Pick the city before comparing hotels or restaurants.", "source": "../README.md"},
-    {"id": "Q02", "blocking": true, "q": "Which exact dates?", "known": "Preferred 15–18 Feb 2027 is only 3 nights; all four plans price 15–22 Feb 2027. The window extends to 23 Mar 2027.", "unknown": "Whether the couple will accept a 7-night trip starting 15 Feb.", "action": "Confirm 15–22 Feb, or specify another 7-night window inside the allowed range.", "source": "../README.md"},
-    {"id": "Q03", "blocking": true, "q": "Is one queen-or-larger bed mandatory at the quoted rate?", "known": "Beijing's cheapest $554 and Shanghai Atour's $652 are twin rooms. Compliant examples: Happy Dragon $1,075, Radisson Blu Junior Suite $1,116, Radisson Hyland $696 with a selectable king.", "unknown": "Whether a written bed request is acceptable.", "action": "Decide the rule, then cut the shortlist.", "source": "../hotels.html"},
-    {"id": "Q04", "blocking": true, "q": "Does the cheapest Shanghai room have a private bathroom?", "known": "The $696 Hyland rate says 'select your bed' but the fetched rate text did not state bathroom type.", "unknown": "Attached bathroom for that exact room category.", "action": "Ask the property in writing or re-read the room page before paying.", "source": "../shanghai-verified-2027/hotels.html"},
-    {"id": "Q05", "blocking": true, "q": "Are passports and Chinese visas valid for both travellers?", "known": "State Department page: visa generally required, passport valid 6+ months with blank pages; one study notes registration within 24 hours and at each new address.", "unknown": "Travellers' nationality, visa status and passport dates.", "action": "Check both passports and visa eligibility with the official consular source.", "source": "../shanghai-verified-2027/questions.html"},
-    {"id": "Q06", "blocking": true, "q": "What is the all-in trip budget ceiling?", "known": "7-night room totals span $554 to $2,414 across the plans. Airfare, visas, transit and most dinners are unpriced.", "unknown": "Affordable total for the whole trip.", "action": "Set a ceiling, then filter every table by it.", "source": "data/price_windows.json"},
-    {"id": "Q07", "blocking": false, "q": "How many starred meals, and at what spend?", "known": "Only Trb Hutong (Beijing) and T'ang Court (Shanghai) publish exact set-menu totals for two in these plans.", "unknown": "Per-meal ceiling and number of splurges.", "action": "Choose a ceiling and shortlist venues with published prices or call for menus.", "source": "social.html"},
-    {"id": "Q08", "blocking": false, "q": "What are the real opening hours and exceptions for each shortlisted venue?", "known": "A minority of rows have official hours; notably T'ang Court, Yu Garden, Palace Museum, Mutianyu and Trb Hutong.", "unknown": "Most restaurant hours, Monday closures and holiday exceptions for the exact week.", "action": "Call the restaurant or use the official WeChat account; record the answer with a date.", "source": "flagged.html"},
-    {"id": "Q09", "blocking": true, "q": "Can every selected activity and restaurant be reached within one hour by subway or bus?", "known": "One Shanghai plan publishes a modelled score with declared constants; the other plans refuse to model. No plan has routed door-to-door times.", "unknown": "Actual journey times on the travel dates.", "action": "Run a routing query for each selected pair from the final hotel and paste the result into the table.", "source": "../shanghai-2027/ranking.html"},
-    {"id": "Q10", "blocking": false, "q": "What are the official 2027 mainland holiday dates and make-up workdays?", "known": "Two secondary sources disagree; the plans use 5–13 Feb with a make-up day on 14 Feb, but no State Council notice was located.", "unknown": "Primary-source holiday calendar.", "action": "Locate the State Council notice and re-check Monday closure rules around 15 Feb.", "source": "../shanghai-verified-2027/dates.html"},
-    {"id": "Q11", "blocking": true, "q": "How will the couple pay and get connectivity in China?", "known": "Not verified by these plans.", "unknown": "Alipay/WeChat Pay setup, cards, eSIM/VPN availability.", "action": "Verify with the providers and the official bank/payment help pages before departure.", "source": "../decisions.html"},
-    {"id": "Q12", "blocking": false, "q": "Do hotel totals include tax and service?", "known": "One study says 10% service included and 6.6% VAT excluded; another says VAT and service excluded; a third says included service and excluded VAT but cannot confirm the base.", "unknown": "Final payable amount for each quoted room.", "action": "Ask for an all-in written quote for the exact dates.", "source": "data/price_windows.json"},
-    {"id": "Q13", "blocking": false, "q": "Any accessibility or dietary constraints?", "known": "Not captured. Hutong venues and the Great Wall have stairs and uneven ground; King's Joy offers vegan menus.", "unknown": "Step-free needs, allergies, vegetarian requirements.", "action": "Answer before choosing hotels and seats.", "source": "../index.html"},
-    {"id": "Q14", "blocking": false, "q": "Which MICHELIN edition governs the Shanghai star statuses?", "known": "The current Shanghai data is the 2026 regional edition. The 2027 Beijing/Tianjin edition is published; the 2027 Shanghai edition was not located.", "unknown": "Whether any Shanghai status changes before travel.", "action": "Re-check the official Guide before booking and record the edition date.", "source": "../michelin.html"},
-    {"id": "Q15", "blocking": false, "q": "Are the social links actually reviews of the exact listed branch?", "known": "This index verifies each video page and labels scope; several videos are about a different branch or the brand as a whole.", "unknown": "Branch for Da Dong; no Shanghai-specific T'ang Court video was found.", "action": "Use the links as atmosphere, not as proof of current hours, prices or star level.", "source": "social.html"}
+    {
+      "id": "Q01",
+      "blocking": true,
+      "q": "Beijing or Shanghai?",
+      "known": "The repository now includes four single-city studies plus one dual-city Beijing + Shanghai dashboard. Beijing has 33 starred venues in the 2027 edition; the dual-city study reports 50 Shanghai starred venues in the live 2026 regional guide.",
+      "unknown": "The brief does not choose Beijing, Shanghai, or a dual-city itinerary; the hotel and restaurant totals are not like-for-like.",
+      "action": "Choose one city or explicitly choose two; then compare only that city’s room and restaurant shortlist.",
+      "source": "../china-2027/index.html"
+    },
+    {
+      "id": "Q02",
+      "blocking": true,
+      "q": "Which exact dates?",
+      "known": "15–18 Feb 2027 is a three-night window, shorter than the requested 1–2 weeks. Current candidate dashboards price 15–22 Feb as a seven-night alternative.",
+      "unknown": "Whether the travellers accept a seven-night stay or select different exact dates.",
+      "action": "Choose a 7–14-night date range within 15 Feb–23 Mar before using any total.",
+      "source": "../china-2027/index.html"
+    },
+    {
+      "id": "Q03",
+      "blocking": true,
+      "q": "Is one queen-or-larger bed mandatory at the quoted rate?",
+      "known": "A 26 Nov dual-city snapshot lists compliant examples for 15–22 Feb: Beijing $425 queen with private bath; Shanghai $621 king with private bath (non-refundable; free-cancel option $707). Earlier studies quote different rooms and terms.",
+      "unknown": "Which city, cancellation policy, member-rate eligibility, and all-in tax amount apply.",
+      "action": "Select the city and exact room/refund terms, then re-quote before booking.",
+      "source": "../china-2027/hotels.html"
+    },
+    {
+      "id": "Q04",
+      "blocking": true,
+      "q": "Does the cheapest Shanghai room have a private bathroom?",
+      "known": "The $696 Hyland rate says 'select your bed' but the fetched rate text did not state bathroom type.",
+      "unknown": "Attached bathroom for that exact room category.",
+      "action": "Ask the property in writing or re-read the room page before paying.",
+      "source": "../shanghai-verified-2027/hotels.html"
+    },
+    {
+      "id": "Q05",
+      "blocking": true,
+      "q": "Are passports and Chinese visas valid for both travellers?",
+      "known": "State Department page: visa generally required, passport valid 6+ months with blank pages; one study notes registration within 24 hours and at each new address.",
+      "unknown": "Travellers' nationality, visa status and passport dates.",
+      "action": "Check both passports and visa eligibility with the official consular source.",
+      "source": "../shanghai-verified-2027/questions.html"
+    },
+    {
+      "id": "Q06",
+      "blocking": true,
+      "q": "What is the all-in trip budget ceiling?",
+      "known": "A later dual-city study lists 7-night room snapshots from $425 in Beijing and $621 in Shanghai, excluding VAT; earlier study totals differ by room type, capture date, and tax treatment. Airfare, visa, city transit and most dinners are not priced.",
+      "unknown": "Affordable total for the whole trip and whether member/non-refundable prices count.",
+      "action": "Set an all-in ceiling and compare a same-city shortlist on identical dates, room, cancellation and tax terms.",
+      "source": "../china-2027/hotels.html"
+    },
+    {
+      "id": "Q07",
+      "blocking": false,
+      "q": "How many starred meals, and at what spend?",
+      "known": "Only Trb Hutong (Beijing) and T'ang Court (Shanghai) publish exact set-menu totals for two in these plans.",
+      "unknown": "Per-meal ceiling and number of splurges.",
+      "action": "Choose a ceiling and shortlist venues with published prices or call for menus.",
+      "source": "social.html"
+    },
+    {
+      "id": "Q08",
+      "blocking": false,
+      "q": "What are the real opening hours and exceptions for each shortlisted venue?",
+      "known": "A minority of rows have official hours; notably T'ang Court, Yu Garden, Palace Museum, Mutianyu and Trb Hutong.",
+      "unknown": "Most restaurant hours, Monday closures and holiday exceptions for the exact week.",
+      "action": "Call the restaurant or use the official WeChat account; record the answer with a date.",
+      "source": "flagged.html"
+    },
+    {
+      "id": "Q09",
+      "blocking": true,
+      "q": "Can every selected activity and restaurant be reached within one hour by subway or bus?",
+      "known": "One Shanghai plan publishes a modelled score with declared constants; the other plans refuse to model. No plan has routed door-to-door times.",
+      "unknown": "Actual journey times on the travel dates.",
+      "action": "Run a routing query for each selected pair from the final hotel and paste the result into the table.",
+      "source": "../shanghai-2027/ranking.html"
+    },
+    {
+      "id": "Q10",
+      "blocking": false,
+      "q": "What are the official 2027 mainland holiday dates and make-up workdays?",
+      "known": "The official State Council English page lists the Spring Festival holiday as 5–13 Feb 2027.",
+      "unknown": "That page does not list the proposed 31 Jan and 14 Feb make-up workdays; those dates are not verified by the source cited here. Venue-specific hours and exceptions also remain open.",
+      "action": "Locate an official notice or authoritative translation that explicitly lists make-up workdays, then check each operator’s schedule for venue-specific exceptions.",
+      "source": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html"
+    },
+    {
+      "id": "Q11",
+      "blocking": true,
+      "q": "How will the couple pay and get connectivity in China?",
+      "known": "Not verified by these plans.",
+      "unknown": "Alipay/WeChat Pay setup, cards, eSIM/VPN availability.",
+      "action": "Verify with the providers and the official bank/payment help pages before departure.",
+      "source": "../decisions.html"
+    },
+    {
+      "id": "Q12",
+      "blocking": false,
+      "q": "Do hotel totals include tax and service?",
+      "known": "One study says 10% service included and 6.6% VAT excluded; another says VAT and service excluded; a third says included service and excluded VAT but cannot confirm the base.",
+      "unknown": "Final payable amount for each quoted room.",
+      "action": "Ask for an all-in written quote for the exact dates.",
+      "source": "data/price_windows.json"
+    },
+    {
+      "id": "Q13",
+      "blocking": false,
+      "q": "Any accessibility or dietary constraints?",
+      "known": "Not captured. Hutong venues and the Great Wall have stairs and uneven ground; King's Joy offers vegan menus.",
+      "unknown": "Step-free needs, allergies, vegetarian requirements.",
+      "action": "Answer before choosing hotels and seats.",
+      "source": "../index.html"
+    },
+    {
+      "id": "Q14",
+      "blocking": false,
+      "q": "Which MICHELIN edition governs the Shanghai star statuses?",
+      "known": "The current Shanghai data is the 2026 regional edition. The 2027 Beijing/Tianjin edition is published; the 2027 Shanghai edition was not located.",
+      "unknown": "Whether any Shanghai status changes before travel.",
+      "action": "Re-check the official Guide before booking and record the edition date.",
+      "source": "../michelin.html"
+    },
+    {
+      "id": "Q15",
+      "blocking": false,
+      "q": "Are the social links actually reviews of the exact listed branch?",
+      "known": "This index verifies each video page and labels scope; several videos are about a different branch or the brand as a whole.",
+      "unknown": "Branch for Da Dong; no Shanghai-specific T'ang Court video was found.",
+      "action": "Use the links as atmosphere, not as proof of current hours, prices or star level.",
+      "source": "social.html"
+    }
   ]
 }

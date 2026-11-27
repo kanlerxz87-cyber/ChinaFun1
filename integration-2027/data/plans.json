@@ -1,6 +1,6 @@
 {
-  "compiled": "2026-11-25",
-  "note": "Cross-plan figures are copied from each owning session's published data and are labelled with that session's dated source. They were NOT re-quoted or re-verified in this integration pass; Booking.com rates are dynamic snapshots.",
+  "compiled": "2026-11-27",
+  "note": "The four single-city studies are joined by a later dual-city study. Values are inherited from their named pages and captured on different dates; price and tax terms are not directly comparable. Booking.com rates are dynamic snapshots, not live quotes.",
   "plans": [
     {
       "id": "fac6d965",
@@ -69,6 +69,25 @@
       "rate_source": "https://www.booking.com/hotel/cn/hyland.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&sb_price_type=total&selected_currency=USD",
       "rate_note": "Booking.com snapshot read 25 Nov 2026 by session 16153d37; 10% service included, 6% VAT excluded.",
       "source_page": "../shanghai-verified-2027/index.html"
+    },
+    {
+      "id": "f8e7ee9e",
+      "city": "Beijing + Shanghai",
+      "site": "china-2027/index.html",
+      "path": "china-2027/",
+      "dates": "15–22 Feb 2027 (7-night alternatives per city; not a priced multi-city stay)",
+      "focus": "Dual-city verified dashboard; hotel, activity, Michelin, holiday and social sources in one place",
+      "starred": "Beijing 33 starred (2027); Shanghai 50 starred (2026 live guide counts)",
+      "hotel_headline": "Beijing: $425 queen / Shanghai: $621 king, each 7 nights; city alternatives, not combined",
+      "cheapest_compliant": "Beijing base-Beijing Wangfujing Serviced Apartment, queen + private bath, $425; Shanghai Pullman Shanghai Jing’an, king + private bath, $621 non-refundable (free-cancel $707).",
+      "social_in_this_index": "Separate dual-city register: 91 verified social links across restaurants and activities",
+      "decision": "Use this dashboard for a primary-source, dual-city view and direct bed/bath evidence. Compare the city-specific hotel alternatives only after choosing one city; the quoted totals exclude VAT and use different cancellation terms.",
+      "official_source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
+      "secondary_official_source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
+      "rate_source": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "secondary_rate_source": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+      "rate_note": "Both room and 7-night totals are dated Booking.com snapshots read 26 Nov 2026 by session f8e7ee9e. Beijing $425 and Shanghai $621 exclude 6% VAT; Shanghai $621 is non-refundable, $707 is the free-cancellation rate. Service-charge details are recorded in china-2027/data/hotels.json.",
+      "source_page": "../china-2027/index.html"
     }
   ]
 }

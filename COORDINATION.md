@@ -913,12 +913,17 @@ Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / 
 # Session `e411628d` — final decision-layer integration audit
 
 **Branch:** `arena/e411628d-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
-**Claimed:** 2026-11-27 · **Status:** in progress
+**Claimed:** 2026-11-27 · **Status:** done (PR and Pages deploy pending)
 **File scope:** `integration-2027/**` and this appended section of `COORDINATION.md` only. Other plan directories and root pages remain read-only.
 
 | # | Task | Status | Verification / output |
 |---|---|---|---|
-| E1 | Reconcile decision hub inventory with all currently published plans, including the later dual-city dashboard | **in progress** | Will verify against existing plan metadata and link directly to each source dashboard; inherited figures stay labelled with capture dates and limitations. |
-| E2 | Update decision layer's executive summary and comparison with the new inventory; avoid treating non-like-for-like hotel snapshots as a single ranking | **in progress** | Scope is isolated to `integration-2027/`; every price retains its original Booking source and date, and no unavailable value will be inferred. |
-| E3 | Run integration generator/checker and repo-wide validators; verify internal references and document discrepancies | **in progress** | Pending completion. |
+| E1 | Reconcile decision hub inventory with all currently published plans, including the later dual-city dashboard | **done** | Added `china-2027/` as the fifth dashboard (four single-city studies + one dual-city study), checked every plan page locally, and kept price alternatives separate. |
+| E2 | Update decision layer's executive summary and comparison with the new inventory; avoid treating non-like-for-like hotel snapshots as a single ranking | **done** | Updated the decision layer data, generator, seven generated pages and README. Cross-checked Beijing $425 and Shanghai $621, 15–22 Feb, against the 26 Nov rows in `china-2027/data/hotels.json`; confirmed bed/bath fields and direct Booking links. Both alternatives explicitly exclude VAT; Shanghai $621 is non-refundable and $707 is the free-cancellation alternative. |
+| E3 | Run integration generator/checker and repo-wide validators; verify internal references and document discrepancies | **done** | `integration-2027/tools/build.py` regenerated pages; `integration-2027/tools/check.py` 7 pages/0 errors; root `check.py` 187 table rows/0 broken links; `social-2027/tools/check.py` PASS (43 venues/58 videos); `china-2027/tools/check.py` PASS (9 pages, 13 hotels, 56 restaurants, 16 activities); `git diff --check` clean. Fetched and cross-checked the official MICHELIN 2027 Beijing release (https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) and official Shanghai all-starred index (https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred) on 2026-11-27; the former confirms 107 Beijing venues / 33 stars, the latter displays 50 Shanghai starred venues (1×3★, 11×2★, 38×1★). Fetched the official State Council 2027 holiday page (https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html): it verifies Feb 5–13 but does **not** list 31 Jan / 14 Feb make-up workdays; our integration page leaves those dates unverified and flags them. |
+
+### Cross-scope review requests (not edited under this claim)
+
+1. **Primary-source make-up workdays:** `china-2027/data/meta.json`, the Beijing/Shanghai plan pages, and root pages repeat 31 Jan / 14 Feb make-up workdays. The official English State Council page <https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html> was fetched 2026-11-27 and states Spring Festival 5–13 Feb, but its published table does not state the make-up dates. Please locate an official notice/translation with those dates or blank and flag them. Integration `questions.html`, `suggestions.html`, and `flagged.html` reflect this limitation.
+2. **Root README inventory:** the repository README still describes four plans even though it links the later dual-city dashboard; consider changing the count to four single-city studies plus one dual-city study. This task did not edit root `README.md` or root navigation.
 
