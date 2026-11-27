@@ -316,8 +316,8 @@ const MICHELIN = [
   {s:1, n:"Zijin Mansion", c:"Cantonese", p:"¥¥¥", d:"Dongcheng",
    a:"3F, Waldorf Astoria Hotel, 5-15 Jinyu Hutong, Dongcheng, Beijing", ph:"+86 10 8520 8989",
    w:"https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/",
-   h:"", p2:"",
-   note:"Inside Waldorf Astoria Beijing (Wangfujing). Hilton dining URL timed out / 500; hours/price unverified.",
+   h:"Lunch 11:30–14:30, Dinner 17:30–21:30 (Hilton official; days of week not stated)", p2:"",
+   note:"Inside Waldorf Astoria Beijing (Wangfujing). Hours from hilton.com dining page (verified 2026-11-27); price ¥¥¥ per MICHELIN.",
    soc:[
      {k:"YT search", u:"https://www.youtube.com/results?search_query=Zijin+Mansion+Waldorf+Astoria+Beijing"}
    ]}

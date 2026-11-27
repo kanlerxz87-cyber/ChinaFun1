@@ -837,3 +837,29 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 **Branch:** `arena/e46f5d6a-chinafun1` (from `main` @ `9e0f598`, after PR #31)
 **Claimed:** 2026-11-27 · **Status:** in progress
 **File scope (claimed):** `COORDINATION.md` (this section only), `assets/data.js` (`Zijin Mansion` row only), `flagged.html` (Zijin/Mio rows only). No other session's files are edited. Other sessions' CSV and sub-site defects are logged below as requests, not edited.
+
+## Session `e46f5d6a` — results
+
+**Status:** done · **Scope held:** `COORDINATION.md`, `assets/data.js` (Zijin Mansion row), `flagged.html` (one row).
+
+### Work performed
+| # | Item | Result |
+|---|---|---|
+| E1 | Baseline: run all four checkers on `main` @ `9e0f598` | `check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, `china-2027/tools/check.py` all **PASS**. |
+| E2 | Re-verify HIGH residuals from `1ac7826d` (Xin Rong Ji Xinyuan & Jinrong phone/hours) | Already corrected in `main`: Xinyuan `+86 10 6501 5501`, `Mon–Sun 11:30–14:00, 17:30–21:00`; Jinrong `+86 10 6618 0567`, `Mon–Sun 11:00–14:00, 17:00–21:30`, `¥¥¥`. Matches the MICHELIN pages in that log. No change needed. |
+| E3 | Zijin Mansion hours (was blank, "timeout/500") | Hilton official dining page now loads: **Lunch 11:30 am–2:30 pm, Dinner 5:30 pm–9:30 pm**. The page **does not state days of the week**, so the earlier "Mon–Sun" wording in `1ac7826d` was an inference and is removed. Row updated in `assets/data.js` and `flagged.html`. Source: https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/ · MICHELIN: https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion (address, ¥¥¥, phone +86 10 8520 8989 match). |
+| E4 | Mio (Four Seasons Beijing) closure conflict | Re-checked both sources. **Four Seasons official** (https://www.fourseasons.com/beijing/dining/restaurants/mio/): Lunch Tue–Sat 11:30–14:00; Dinner Tue–Sun 17:30–22:00; Sunday Table Sunday 11:30–14:00; **closed Mondays**. **MICHELIN** (https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mio) lists Mon–Sun and shows phone as `+86 56958522` (malformed; Four Seasons shows `+86 (10) 5695 8522`). The existing flag stands; the official source is the one to follow. Mio is not a starred entry, so no data row changed. |
+
+### Irregularities raised this session (requests, not edited — outside claimed scope)
+1. **CSV column mismatch (HIGH, still open):** `shanghai-verified-2027/data/` — `activities.csv` (4 of 5 data rows have 14 cols vs 15 header), `hotels.csv` (3 rows at 26 and 1 at 29 vs 25), `michelin.csv` (1 row at 17 vs 18), `social.csv` (1 row at 10 vs 9). Caused by unquoted commas. **Request to owner `16153d37`:** re-export with `csv.writer` (proper quoting) and re-run its checker. Verified by reading the files with Python's `csv` module on 2026-11-27.
+2. **Hilton day-of-week gap (LOW):** Zijin Mansion days of week are not stated on any official page checked; flagged in the row.
+3. **Earlier board claim corrected:** `1ac7826d` said Zijin Mansion was "Mon–Sun 11:30–14:30, 17:30–21:30 (Hilton/Waldorf official)". The Hilton page does not say Mon–Sun. Corrected here.
+
+### Verification sources checked this session (2026-11-27)
+- https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/ (hours, phone)
+- https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion (address, cuisine, price, phone)
+- https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mio (address, hours, phone as listed)
+- https://www.fourseasons.com/beijing/dining/restaurants/mio/ (official hours, phone)
+
+### Handoff
+Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. Merge result is recorded in the next commit.
