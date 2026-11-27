@@ -1,126 +1,325 @@
 {
-  "verified_on": "2026-11-26",
+  "verified_on": "2026-11-27",
   "knowns": [
     "Travel party: 2 adults sharing 1 room with private/attached bathroom and a queen bed or larger (king).",
-    "Overall travel window: 2027-02-15 through 2027-03-23 (36 days); preferred start around 2027-02-15 to 2027-02-18.",
-    "2027 PRC State Council Holiday Schedule (published 2026-11-06): Spring Festival runs 2027-02-05 to 2027-02-13 (CNY Feb 6; make-up workdays Jan 31 & Feb 14; Lantern Festival Sat Feb 20). Zero public holidays fall inside 2027-02-15 to 2027-03-23.",
-    "Cheapest stay dates verified live on Booking.com (2026-11-26): 2027-02-15 to 2027-02-22 beats mid-March (Mar 16–23) by 15% to 56.1% across Beijing & Shanghai hotels.",
-    "Cheapest booking window verified live: Active Black Friday / Early Booker deals (Nov 19–Dec 2026) offer up to 51% off WITH FREE CANCELLATION (e.g., base-Beijing Wangfujing $425/7N, Park Plaza $749/7N, Pullman Shanghai Jing'an $707/7N flex).",
+    "Traveler brief: travel may occur 2027-02-15 through 2027-03-23; the requested duration is 1–2 weeks. Current examples are 7 nights and 14 days / 13 nights. The Feb 15–18 preference is unresolved; if check-in Feb 15 and checkout Feb 18, it is 3 nights and conflicts with the 7-night minimum.",
+    "The 2027 State Council schedule lists Spring Festival Feb 5–13 and no statutory public-holiday dates from Feb 15 through Mar 23; the Beijing notice confirms makeup workdays Jan 31 and Feb 14. The Hong Kong Observatory conversion table identifies Feb 20 as lunar day 15 (Lantern Festival).",
+    "Booking.com stay-price snapshots were captured on 2026-11-25 or 2026-11-26 for selected 7-night room/date combinations. Prices differ by property and date: for example, Grand Millennium Beijing was captured at $783 for Mar 1–8 and $838 for Feb 15–22. These are dated stay-price comparisons, not a purchase-timing forecast.",
+    "Selected Booking.com room quotes captured 2026-11-26 displayed free-cancellation and/or Genius/promotional terms (see the hotel rows). Those terms are rate-specific and time-sensitive; current availability, total taxes, and cancellation conditions must be checked on the live quote.",
     "Beijing MICHELIN 2027 Guide: All 33/33 starred restaurants verified directly (2x3*, 5x2*, 26x1*); district split is Chaoyang 20 (60.6%), Dongcheng 9 (27.3%), Xicheng 3 (9.1%), Shunyi 1 (3.0%). 10/33 starred hours and 3 published 2-adult tasting/set totals verified.",
     "Shanghai live MICHELIN Guide: 153 venues total (1x3*, 11x2*, 38x1* = 50 starred; 33 Bib; 70 Selected). 15 top venues directly verified; Sir Elly's confirmed Selected (not starred).",
     "All 10 Beijing attractions and 6 Shanghai attractions verified against official municipal government or operator pages with exact winter hours, Monday/Tuesday closures, and CNY admission totals for 2 adults.",
     "Beijing <-> Shanghai Fuxing HSR verified via official shanghai.gov.cn (4.5–5.5 hr, 2nd class CNY 550–670/adult = CNY 1,100–1,340 for 2 one-way)."
   ],
   "unknowns": [
-    "Exact trip length and check-in/check-out dates: The brief cites 'Feb 15–18' (3 nights if literal) alongside both '1–2 weeks' and '2–4 weeks' itinerary options.",
-    "City mix: Beijing only, Shanghai only, Beijing + Shanghai dual-city, or adding a 3rd city (e.g. Xi'an, Suzhou, Hangzhou, Chengdu) for a 3–4 week trip.",
-    "Total trip budget & dining cadence: Hotel target tier ($425–$921/7N value/upscale vs $1,318–$3,813/7N luxury) and how many ¥¥¥¥ tasting menus vs ¥–¥¥ Bib Gourmand / dim sum lunches you want per week.",
-    "International flights & airport routing: Departure city (e.g. SFO/LAX/JFK), round-trip vs open-jaw (fly into PEK/PKX, return from PVG), and cabin class.",
-    "Passports & China entry rules: Citizenship determines whether 240-hour visa-free transit, unilateral visa-free entry, or an L-visa is required (must be confirmed via official PRC embassy/NIA rules for your nationality).",
-    "Dining restrictions & preferences: Vegetarian/pescatarian/shellfish/spicy/alcohol pairing preferences (crucial since Beijing has 2* vegetarian King's Joy & 2* vegan Lamdre and Shanghai has 2* vegetarian Fu He Hui).",
-    "Unpublished restaurant hours (23/33 Beijing starred; 11/15 verified Shanghai sample) and unpublished tasting menu prices (most Chinese fine-dining venues quote seasonal menus only by phone or WeChat).",
-    "Final 2027 Shanghai Metro fare table (pending outcome of Shanghai's Aug 2026 fare-adjustment hearing) and Mutianyu Great Wall cable car/toboggan 2027 bundle price.",
-    "Exact 2027 open-jaw flight prices (not queried until departure airport & exact trip length are confirmed)."
+    "Exact trip length and check-in/check-out dates: the brief allows a 1–2-week trip inside 2027-02-15–2027-03-23 and prefers Feb 15–18; a literal Feb 15 check-in / Feb 18 checkout is only 3 nights, below the minimum.",
+    "City mix within the 14-day cap: Beijing only, Shanghai only, or Beijing + Shanghai. A third city is outside the current brief and is not included in the recommended itineraries.",
+    "Best date to purchase a hotel booking: the available Booking.com snapshots from 2026-11-25–26 are not a historical booking-time series and cannot establish a past or future cheapest purchase date.",
+    "≤60-minute hotel-to-restaurant/activity transit reach: official route results for exact hotel/venue pairs have not been verified; district clusters are not journey times and no property is certified against the one-hour rule. This remains a research gap, not a trip-length assumption.",
+    "Total trip budget and dining cadence: hotel snapshots are hotel-only 7-night totals; flights, visa fees, most restaurant totals, local transfers, and meals are not complete.",
+    "International flights and airport routing: departure airport, round-trip vs open-jaw, and cabin class are not provided.",
+    "Passport nationality and China entry rules: eligibility must be checked against current official PRC rules for each traveler once nationality is known; no visa outcome is assumed.",
+    "Dining restrictions and preferences: vegetarian/pescatarian/shellfish/spicy/alcohol pairing needs are unknown.",
+    "Unpublished restaurant hours (23/33 Beijing starred; 11/15 verified Shanghai sample) and unpublished 2-adult menu totals remain blank.",
+    "Final 2027 Shanghai Metro fare table and Mutianyu Great Wall cable-car/toboggan 2027 bundle price remain to be checked before travel.",
+    "Exact 2027 flight prices are not available without departure airport, trip dates, and cabin class."
   ],
   "traveler_questions": [
     {
       "priority": "P1 — Unblocks Everything",
-      "question": "How many total nights are you taking, and does 'Feb 15–18' mean your flexible departure window rather than a 3-night stay?",
-      "why_it_matters": "Determines whether we lock Option A (7N Beijing), Option B (14D Beijing + Shanghai), or Option C (21D–28D multi-city) — and lets us lock exact refundable Black Friday/Genius hotel dates right now.",
-      "options": ["7–10 nights (1–2 weeks, single city or brisk dual-city)", "13–14 nights (2 weeks, Beijing 7N + Shanghai 6–7N)", "20–28 nights (3–4 weeks, Beijing + Shanghai + optional 3rd region)"]
+      "question": "What are the intended exact trip dates? The Feb 15–18 preference is unresolved: if check-in is Feb 15 and checkout Feb 18, that is 3 nights.",
+      "why_it_matters": "The requested trip length is 1–2 weeks. A literal three-night stay conflicts with the minimum; the planner does not infer whether Feb 15–18 describes the whole stay or a different date preference.",
+      "options": [
+        "7 nights: check in Feb 15 and check out Feb 22 (an in-scope example; continues after Feb 18).",
+        "14 days / 13 nights: check in Feb 15 and check out Feb 28 (a separate in-scope example; exact Shanghai six-night hotel total is not captured).",
+        "A different exact trip length and date set within the 1–2-week request and Feb 15–Mar 23 travel window (re-quote selected dates).",
+        "If Feb 15–18 must be the entire stay, revise that preference or the 7-night minimum before booking."
+      ]
     },
     {
       "priority": "P1 — Unblocks Hotel Lock",
-      "question": "Which hotel budget & neighborhood style fits you best?",
-      "why_it_matters": "Our audit proved Chaoyang hosts 60.6% (20/33) of Beijing's MICHELIN stars while Dongcheng is steps from imperial sights; in Shanghai, People's Square (Line 2 direct to airports/HSR) vs Jing'an saves $200–$300/week.",
-      "options": ["Smart Value ($425–$750/7N: base-Beijing w/ washer or Park Plaza + Pullman Shanghai Jing'an)", "Central 5-Star Balance ($750–$950/7N: Sunworld Dynasty / Grand Millennium + Radisson Blu / Grand Central Shanghai)", "Luxury Splurge ($1,300–$3,800/7N: China World / Waldorf Astoria Beijing + Waldorf / Peninsula Shanghai)"]
+      "question": "What is your hotel budget and preferred base style?",
+      "why_it_matters": "The 7-night Booking.com snapshots vary by property, room, and stay date; they are not neighborhood averages or guaranteed live rates. Exact hotel-to-venue journey times have not been verified, so the ≤60-minute requirement is not certified for any listed property.",
+      "options": [
+        "Value quote sample ($425–$749 per 7 nights): base-Beijing, Park Plaza, and Pullman Shanghai captures.",
+        "Central 5-star quote sample ($696–$921 per 7 nights): Sunworld Dynasty, Grand Millennium, Radisson Blu, and Grand Central captures.",
+        "Luxury quote sample ($1,318–$3,813 per 7 nights): China World, Waldorf Astoria, and Peninsula captures.",
+        "Different ceiling or hotel type (specify); compare exact-date rooms and terms before booking."
+      ],
+      "source_urls": [
+        "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/waldorf-astoria-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+      ]
     },
     {
       "priority": "P2 — Unblocks Dining Reservations",
       "question": "How many MICHELIN splurge meals (¥¥¥¥ tasting menus) vs value MICHELIN / Bib Gourmand meals do you want per week, and any dietary restrictions?",
-      "why_it_matters": "Top tables like 3* Taian Table, 3* Xin Rong Ji, 3* Chao Shang Chao, and 2* King's Joy require phone/concierge/WeChat reservations weeks ahead — and 23/33 Beijing starred venues require direct phone outreach for hours & seasonal menu pricing.",
-      "options": ["2–3 starred splurges/week + Bib Gourmand & dim sum", "Daily starred fine dining (concierge-assisted booking shortlist)", "Vegetarian/seafood-free/other dietary needs (please specify)"]
+      "why_it_matters": "Hours for 23 of 33 Beijing starred restaurants remain unpublished or unverified in the current audit, and most exact two-adult menu totals are not published. Confirm the chosen venue’s current hours, reservation policy, menu price, and dietary accommodations directly before booking.",
+      "options": [
+        "2–3 starred splurges/week + Bib Gourmand & dim sum",
+        "Daily starred fine dining (concierge-assisted booking shortlist)",
+        "Vegetarian/seafood-free/other dietary needs (please specify)"
+      ],
+      "source_urls": [
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+        "https://www.kingsjoy.com/",
+        "https://www.xinrongji.com/",
+        "https://sh.taian-table.cn/"
+      ]
     },
     {
       "priority": "P2 — Unblocks Flights & Visa Check",
       "question": "What is your departure airport and passport nationality?",
-      "why_it_matters": "Unlocks live open-jaw flight comparison (e.g. SFO -> PEK, PVG -> SFO) and exact China visa / 240-hour visa-free eligibility check.",
-      "options": ["US passport from SFO/Bay Area (open-jaw PEK in / PVG out)", "Other passport / departure city (please specify)"]
+      "why_it_matters": "Departure city and passport nationality determine which flight itineraries and entry rules apply. Eligibility must be checked against current official guidance once both travelers’ details are known; no visa outcome is assumed.",
+      "options": [
+        "U.S. passport from SFO/Bay Area (one possible open-jaw search: PEK in / PVG out).",
+        "Other passport and/or departure city (specify for an official eligibility and fare check)."
+      ],
+      "source_urls": [
+        "https://en.nia.gov.cn/n147418/n147463/c183412/content.html"
+      ]
     },
     {
-      "priority": "P3 — Optional 3rd Region",
-      "question": "If choosing a 2–4 week trip, do you want to stay slow in Beijing & Shanghai or add a verified 3rd destination (e.g. Suzhou/Hangzhou, Xi'an, or Chengdu)?",
-      "why_it_matters": "We keep unverified side-trip cities strictly separated as suggestions until you approve adding them to our verification queue.",
-      "options": ["Beijing + Shanghai only", "Add Suzhou/Hangzhou easy rail side trips", "Add Xi'an (Terracotta Warriors) or Chengdu (Sichuan MICHELIN + Pandas)"]
+      "priority": "P1 — Unblocks Itinerary Choice",
+      "question": "Which in-scope city plan should be used: Beijing, Shanghai, or both?",
+      "why_it_matters": "The city choice determines the hotel dates, activities, and transfer plan. The current researched options cover Beijing and Shanghai; adding another city would exceed the existing verified scope and require new source checks.",
+      "options": [
+        "Beijing only: the 7-night itinerary and hotel snapshots are available; recheck live rates.",
+        "Shanghai only: use a companion plan; recheck exact stay dates and room rates.",
+        "Beijing + Shanghai: 14 days / 13 nights; no quote was captured for the six-night Shanghai stay (check-in Feb 22, checkout Feb 28)."
+      ]
     }
   ],
   "discovery_plan": [
-    {"phase": "Step 1 — Immediately (Nov 26 – Dec 2, 2026)", "owner": "Traveler", "action": "Lock 100% free-cancellation hotel rooms on Booking.com during the active Black Friday / Early Booker window for 2027-02-15 -> 2027-02-22 (and Shanghai 2027-02-22 -> 2027-03-01 if dual-city). Zero financial risk; locks 15%–56% savings."},
-    {"phase": "Step 2 — 60 to 90 Days Out (Dec 2026)", "owner": "Traveler + Concierge", "action": "Confirm passport visa/entry rules; pick 4–8 priority MICHELIN restaurants; email/call hotel concierges (Park Plaza / Grand Millennium / Radisson Blu / Peninsula) to verify unpublished hours, seasonal RMB menu pricing, and booking opening dates for 3* Taian Table, 3* Xin Rong Ji, 3* Chao Shang Chao, 2* Canton 8, and 2* King's Joy."},
-    {"phase": "Step 3 — 30 to 45 Days Out (Jan 2027)", "owner": "Traveler", "action": "Set up Alipay & WeChat Pay linked to international Visa/Mastercard; verify final 2027 Shanghai Metro fare table (post-Aug 2026 hearing); confirm Mutianyu cable car/toboggan 2027 tariffs and Feb 20 Lantern Festival timed-entry rules at Yuyuan."},
-    {"phase": "Step 4 — 15 Days Before Travel (Late Jan / Early Feb 2027)", "owner": "Traveler", "action": "Book Beijing South -> Shanghai Hongqiao Fuxing G-train tickets on 12306.cn the morning tickets open (post-Spring Festival return demand can sell out prime trains)."},
-    {"phase": "Step 5 — 7 Days Before Each Attraction (Feb 2027)", "owner": "Traveler", "action": "At 20:00 Beijing Time sharp, 7 days before your date, reserve Forbidden City (bookingticket.dpm.org.cn), Tian'anmen Square, National Museum of China, and Shanghai Museum East/West using exact passport numbers."}
+    {
+      "phase": "Before booking — recheck the exact dates and room on the live rate page",
+      "owner": "Traveler",
+      "action": "The listed Booking.com amounts are captures from 2026-11-26, not a live guarantee or historical price series. Re-run the exact check-in/out and room search; verify queen/king allocation, attached bathroom, tax-inclusive total, payment timing, and cancellation deadline before paying. No best purchase date is proven.",
+      "source_urls": [
+        "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+      ]
+    },
+    {
+      "phase": "Step 2 — 60 to 90 Days Out (Dec 2026)",
+      "owner": "Traveler + Concierge",
+      "action": "Check each traveler’s passport/entry eligibility against the current National Immigration Administration guidance; pick 4–8 priority MICHELIN restaurants and confirm unpublished hours, seasonal menu prices, and reservation details directly with the venues or concierge. No visa eligibility or reservation availability is assumed.",
+      "source_urls": [
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+        "https://www.kingsjoy.com/",
+        "https://en.nia.gov.cn/n147418/n147463/c183412/content.html"
+      ]
+    },
+    {
+      "phase": "Step 3 — 30 to 45 Days Out (Jan 2027)",
+      "owner": "Traveler",
+      "action": "Review official Alipay / Weixin Pay and international-card guidance; confirm whether the selected card and account qualify. Recheck the final 2027 Shanghai Metro fare table, Mutianyu cable-car/toboggan tariffs, and Yuyuan event schedule before travel.",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260820/6676e7847de746e9aef956c40460bd84.html",
+        "https://en.mutianyugreatwall.com/",
+        "https://english.shanghai.gov.cn/en-Individuals-BankingandPayments-Payments/20260920/4fc94c2f0e6b47e7939969415e5feb04.html",
+        "https://english.shanghai.gov.cn/en-Individuals-BankingandPayments-Payments/20260921/c2c94d06a0454c8fa05386b80d0ae865.html"
+      ]
+    },
+    {
+      "phase": "Step 4 — 15 Days Before Travel (Late Jan / Early Feb 2027)",
+      "owner": "Traveler",
+      "action": "Book Beijing South -> Shanghai Hongqiao Fuxing G-train tickets on 12306.cn the morning tickets open (post-Spring Festival return demand can sell out prime trains).",
+      "source_urls": [
+        "https://www.12306.cn/en/index.html"
+      ]
+    },
+    {
+      "phase": "Step 5 — 7 Days Before Each Attraction (Feb 2027)",
+      "owner": "Traveler",
+      "action": "At 20:00 Beijing Time sharp, 7 days before your date, reserve Forbidden City (bookingticket.dpm.org.cn), Tian'anmen Square, National Museum of China, and Shanghai Museum East/West using exact passport numbers.",
+      "source_urls": [
+        "https://intl.dpm.org.cn/visit.html",
+        "https://en.chnmuseum.cn/visit_692/",
+        "https://www.shanghaimuseum.net/mu/frontend/pg/en/index"
+      ]
+    }
   ],
   "suggestions": [
     {
       "id": "SUG-01",
-      "category": "Booking Strategy (High Savings)",
-      "title": "Hold a Free-Cancellation Black Friday Room Right Now Before Rates Reset",
-      "idea": "Reserve base-Beijing Wangfujing ($425/7N, 51% off Black Friday, free cancel to Feb 14) OR Park Plaza Wangfujing ($749/7N Genius, free cancel to 2 PM Feb 15) plus Pullman Jing'an ($707/7N flex) or Radisson Blu Shanghai ($921/7N flex) immediately.",
-      "tradeoff": "Zero cancellation fee if your dates move; prevents losing $175–$517/week if rooms jump toward mid-March pricing."
+      "category": "Booking & Cancellation (Snapshot Only)",
+      "title": "Compare exact-date refundable rates; do not treat a snapshot as a booking-time forecast",
+      "idea": "Booking.com amounts shown on the Hotels page were captured on 2026-11-26 for specific dates and room types. Before booking, repeat the exact-date search and verify bed choice, attached bath, final tax-inclusive total, payment timing, and cancellation deadline. One capture cannot establish the cheapest day to purchase.",
+      "tradeoff": "A flexible rate may cost more, and the quoted amount may no longer be available. Neither a future price increase nor a saving is guaranteed.",
+      "source_urls": [
+        "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+      ]
     },
     {
       "id": "SUG-02",
       "category": "Route & Date Timing",
-      "title": "Tour Beijing FIRST (Feb 15–22) and Shanghai SECOND (Feb 22–Mar 1)",
-      "idea": "Doing Beijing in mid-February avoids early-March NPC/CPPCC ('Two Sessions') security closures around Tian'anmen Square, catches Lantern Festival (Sat Feb 20), and locks Beijing's lowest winter hotel rates.",
-      "tradeoff": "Beijing in mid-Feb is colder than mid-March (pack thermal layers & windproof coat), though indoor museums/subways are well heated and crowds are far thinner."
+      "title": "If choosing the 14-day / 13-night option, visit Beijing first and Shanghai second",
+      "idea": "The in-scope dual-city example is Beijing Feb 15–22 (7 nights), followed by Shanghai Feb 22–28 (6 nights). It includes Lantern Festival on Feb 20 during the Beijing week. This is a 14-day / 13-night planning option, not a claim that these are the cheapest dates; no quote was captured for the Shanghai six-night stay (check-in Feb 22, checkout Feb 28).",
+      "tradeoff": "This uses the full 14-day limit and adds a city transfer. Exact Shanghai six-night hotel rates and room availability must be re-quoted before choosing it.",
+      "source_urls": [
+        "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
+        "https://www.12306.cn/en/index.html",
+        "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt"
+      ]
     },
     {
       "id": "SUG-03",
-      "category": "Beijing Base Strategy",
-      "title": "Consider Splitting or Picking Chaoyang If Fine Dining Outweighs Imperial Sights",
-      "idea": "Because Chaoyang holds 20/33 (60.6%) of Beijing's MICHELIN stars vs Dongcheng's 9/33 (27.3%), Grand Millennium ($783–$838/7N) or Kempinski ($845/7N) puts you steps from 3* Chao Shang Chao, 3* Xin Rong Ji, 1* Cai Yi Xuan, and 1* GIADA Garden — while Park Plaza/base-Beijing maximizes Forbidden City/Wangfujing walkability.",
-      "tradeoff": "Chaoyang adds ~20–30 min subway ride to Forbidden City; Dongcheng adds ~20–30 min subway ride to Chaoyang CBD/Sanlitun dinners."
+      "category": "Beijing Base Strategy — Geography, Not Route-Time Advice",
+      "title": "Compare Dongcheng and Chaoyang if dining priorities differ",
+      "idea": "Chaoyang has 20 of Beijing’s 33 starred restaurants; Dongcheng has 9. Grand Millennium and Kempinski are listed in Chaoyang, while Park Plaza and base-Beijing are in Dongcheng. These are venue and hotel locations, not proof of hotel-to-venue journey times; the requested ≤60-minute route test remains unverified.",
+      "tradeoff": "The hotel order is provisional. Route times to central-axis museums, Sanlitun restaurants, or any finalist were not captured; verify exact official routes before selecting a base.",
+      "source_urls": [
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+        "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/kempinski-beijing-lufthansa-center.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+      ]
     },
     {
       "id": "SUG-04",
-      "category": "Long-Stay Comfort (2–4 Weeks)",
-      "title": "Use base-Beijing Wangfujing's In-Unit Washer & Kitchenette as Your Laundry Reset",
-      "idea": "At $425/7N with 570 ft², queen bed, full kitchenette, and private washing machine, base-Beijing lets a 2–4 week couple travel carry-on only and reset laundry before boarding the Shanghai HSR.",
-      "tradeoff": "Serviced apartment format (no swimming pool or 5-star concierge desk; exact metro walk distance should be confirmed on booking)."
+      "category": "13-Night Comfort (Optional)",
+      "title": "Use the serviced apartment’s laundry amenity during a two-city stay",
+      "idea": "The 2026-11-26 Booking.com listing for base-Beijing Wangfujing described a private washing machine and kitchenette in its quoted studio; this could help on the Beijing leg of a 13-night trip. Recheck the selected room’s amenities before booking.",
+      "tradeoff": "This is an amenity-based suggestion, not a reason to extend the trip. The serviced-apartment format has different services from a full-service hotel; confirm current room details directly on the listing.",
+      "source_urls": [
+        "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+      ]
     },
     {
       "id": "SUG-05",
       "category": "High-Value MICHELIN Hacks",
       "title": "Pair High-Value MICHELIN Lunches with 1–2 Signature Tasting Dinners",
       "idea": "Book 1* Yi Long Court's verified Dim Sum Lunch Set at The Peninsula Shanghai (CNY 596 base / CNY 694.94 all-in for 2), ¥¥ 2* Canton 8 in Shanghai, and ¥¥ 1* Poetry·Wine or The Beijing Kitchen in Beijing alongside your bucket-list 3* splurge.",
-      "tradeoff": "Preserves budget for 3* Xin Rong Ji / 3* Chao Shang Chao / 3* Taian Table without paying ¥¥¥¥ dinner tariffs every night."
+      "tradeoff": "Preserves budget for 3* Xin Rong Ji / 3* Chao Shang Chao / 3* Taian Table without paying ¥¥¥¥ dinner tariffs every night.",
+      "source_urls": [
+        "https://www.peninsula.com/en/shanghai/special-offers/dining/sumptuous-set-menus-at-yi-long-court",
+        "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/poetry%E2%80%A7wine",
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/the-beijing-kitchen",
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+      ]
     },
     {
       "id": "SUG-06",
       "category": "Shanghai Museum Scheduling Hack",
       "title": "Use Shanghai Museum East (OPEN Mondays!) + Met Jewelry Exhibition as Your Monday Arrival Anchor",
       "idea": "While Shanghai Museum West, Yu Garden, Da Vittorio, and Sir Elly's are closed Mondays, Shanghai Museum East in Pudong (Line 2) is OPEN Mondays and hosts the Met Museum co-curated 'Jewelry: The Body Transformed' show through 2027-05-05.",
-      "tradeoff": "Closes Tuesdays instead — keep Tuesday for People's Square West Museum & Yu Garden."
+      "tradeoff": "Closes Tuesdays instead — keep Tuesday for People's Square West Museum & Yu Garden.",
+      "source_urls": [
+        "https://www.shanghaimuseum.net/mu/frontend/pg/en/index",
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250911/9502fe30164546b2896987093911191d.html",
+        "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/da-vittorio-570570",
+        "https://www.peninsula.com/en/shanghai/hotel-fine-dining/sir-ellys-restaurant"
+      ]
     },
     {
       "id": "SUG-07",
-      "category": "Optional 3rd Region (2–4 Week Trips)",
-      "title": "Evaluate Suzhou/Hangzhou Day Trips or Xi'an/Chengdu Before Booking Open-Jaw Flights",
-      "idea": "For a 3–4 week trip, adding 1–2 rail day trips from Shanghai (Suzhou/Hangzhou) or a 4-night Xi'an/Chengdu loop adds huge geographic contrast without flying back and forth.",
-      "tradeoff": "IDEA ONLY — none of Suzhou, Hangzhou, Xi'an, or Chengdu have been verified yet; approve first before we run primary-source hotel/activity verification."
+      "category": "Out of Scope Unless It Fits the 1–2-Week Limit",
+      "title": "Keep any optional day trip inside the chosen 7–14-day itinerary",
+      "idea": "A third city or overnight regional extension is not part of the current recommendation. A future same-day side trip should be added only after official rail, attraction hours, fares, and travel times are verified and the selected plan still fits within 14 days / 13 nights.",
+      "tradeoff": "No Suzhou, Hangzhou, Xi’an, or Chengdu route is verified in this planner; no such trip is included or costed. Expanding to one would require a new research pass.",
+      "source_urls": []
     }
   ],
   "flagged_own_gaps": [
-    {"id": "GAP-01", "area": "Trip Dates", "item": "Brief states 'Feb 15–18' alongside '1–2 weeks' and '2–4 weeks'", "status": "Needs Traveler Clarification", "detail": "Treated Feb 15–18 as the preferred start window and modeled 7N, 14D, and 21D itineraries from Feb 15, 2027."},
-    {"id": "GAP-02", "area": "Beijing MICHELIN Hours", "item": "23 of 33 Beijing starred restaurants do not publish hours on MICHELIN or reachable official pages", "status": "Left Blank (Unverified)", "detail": "10/33 hours are verified (up from 2/33 in repo root!). Remaining 23 must be confirmed via phone/hotel concierge before locking reservations."},
-    {"id": "GAP-03", "area": "Restaurant Menu Totals", "item": "Only 5 verified restaurants publish exact 2-adult tasting/set menu totals online (Beijing: Cai Yi Xuan, GIADA Garden, Trb Hutong; Shanghai: Yi Long Court, Sir Elly's) plus Fu Chun Ju official à la carte PDF", "status": "Left Blank (Unverified)", "detail": "Chinese fine-dining kitchens rarely publish static tasting tariffs online; MICHELIN price bands (¥ to ¥¥¥¥) are shown instead of guessing USD totals."},
-    {"id": "GAP-04", "area": "Official Conflict — Mio (Beijing)", "item": "Four Seasons Beijing official site states Mio is CLOSED Mondays (Tue–Sun); MICHELIN Guide lists Mon–Sun", "status": "Official Conflict Flagged", "detail": "Never book Mio on a Monday without direct hotel confirmation."},
-    {"id": "GAP-05", "area": "Shanghai MICHELIN Coverage", "item": "15 of 153 live Shanghai MICHELIN venues directly verified (100% of 3*, 10/11 of 2*, key 1*/Selected/Bib)", "status": "Partial Sample (Clearly Scoped)", "detail": "Live total counts (1x3*, 11x2*, 38x1*, 33 Bib, 70 Selected) are verified directly on guide.michelin.com; remaining 38x1* entries can be expanded once you confirm Shanghai neighborhoods."},
-    {"id": "GAP-06", "area": "Social Media Gaps", "item": "34 of 56 restaurants do not yet have an independent verified YouTube/TikTok/Instagram review link (while 16/16 activities DO have verified links)", "status": "Left Blank (Never Fabricated)", "detail": "Rejected generic search links, mismatched TikTok hits, wrong-city branches (e.g. HK/Guangzhou Lei Garden), and private YouTube videos (Trb Hutong Sy0Df7KVfJk)."},
-    {"id": "GAP-07", "area": "Shanghai Metro 2027 Fares & Mutianyu Add-Ons", "item": "Shanghai held an Aug 2026 fare-adjustment hearing (~+CNY 1/ride); Mutianyu English ticket subpage blocked bots for cable car/toboggan add-ons", "status": "Re-verify Before Departure", "detail": "Official base admission (Mutianyu CNY 45) and current Shanghai Metro fares (CNY 3+) are verified; confirm add-ons & final 2027 metro tariff in Jan 2027."},
-    {"id": "GAP-08", "area": "Hotel Multi-Window Gaps & Exact Rail Timetables", "item": "Sunworld Dynasty, Kempinski, Regent, China World, Waldorf (BJ/SH) & Peninsula were captured on Feb 15–22 only; exact minute-by-minute door-to-door subway routing to every restaurant is not live-modeled", "status": "Transparently Disclosed", "detail": "Core winners (Park Plaza, base-Beijing, Grand Millennium, Pullman Jing'an, Grand Central, Radisson Blu) all have live multi-window Feb vs Mar verification."}
+    {
+      "id": "GAP-01",
+      "area": "Trip Dates",
+      "item": "The preferred Feb 15–18 dates are shorter than the 7-night minimum if treated as the entire stay.",
+      "status": "Needs Traveler Clarification",
+      "detail": "The user brief supplies a 1–2-week trip and the shorter preferred dates. No interpretation is inferred. The current plan shows a 7-night example and a separate 14-day / 13-night example; exact dates remain open.",
+      "source_note": "Source: traveler-provided requirements; no external official source applies.",
+      "source_urls": []
+    },
+    {
+      "id": "GAP-02",
+      "area": "Beijing MICHELIN Hours",
+      "item": "23 of 33 Beijing starred restaurants do not publish hours on MICHELIN or reachable official pages",
+      "status": "Left Blank (Unverified)",
+      "detail": "10/33 hours are verified (up from 2/33 in repo root!). Remaining 23 must be confirmed via phone/hotel concierge before locking reservations.",
+      "source_urls": [
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+      ]
+    },
+    {
+      "id": "GAP-03",
+      "area": "Restaurant Menu Totals",
+      "item": "Only 5 verified restaurants publish exact 2-adult tasting/set menu totals online (Beijing: Cai Yi Xuan, GIADA Garden, Trb Hutong; Shanghai: Yi Long Court, Sir Elly's) plus Fu Chun Ju official à la carte PDF",
+      "status": "Left Blank (Unverified)",
+      "detail": "Chinese fine-dining kitchens rarely publish static tasting tariffs online; MICHELIN price bands (¥ to ¥¥¥¥) are shown instead of guessing USD totals.",
+      "source_urls": [
+        "https://www.trbhutong.com/menu",
+        "https://www.peninsula.com/en/shanghai/special-offers/dining/sumptuous-set-menus-at-yi-long-court"
+      ]
+    },
+    {
+      "id": "GAP-04",
+      "area": "Official Conflict — Mio (Beijing)",
+      "item": "Four Seasons Beijing official site states Mio is CLOSED Mondays (Tue–Sun); MICHELIN Guide lists Mon–Sun",
+      "status": "Official Conflict Flagged",
+      "detail": "Never book Mio on a Monday without direct hotel confirmation.",
+      "source_urls": [
+        "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+      ]
+    },
+    {
+      "id": "GAP-05",
+      "area": "Shanghai MICHELIN Coverage",
+      "item": "15 of 153 live Shanghai MICHELIN venues directly verified (100% of 3*, 10/11 of 2*, key 1*/Selected/Bib)",
+      "status": "Partial Sample (Clearly Scoped)",
+      "detail": "Live total counts (1x3*, 11x2*, 38x1*, 33 Bib, 70 Selected) are verified directly on guide.michelin.com; remaining 38x1* entries can be expanded once you confirm Shanghai neighborhoods.",
+      "source_urls": [
+        "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred"
+      ]
+    },
+    {
+      "id": "GAP-06",
+      "area": "Social Media Gaps",
+      "item": "34 of 56 restaurants do not yet have an independent verified YouTube/TikTok/Instagram review link (while 16/16 activities DO have verified links)",
+      "status": "Left Blank (Never Fabricated)",
+      "detail": "Rejected generic search links, mismatched TikTok hits, wrong-city branches (e.g. HK/Guangzhou Lei Garden), and private YouTube videos (Trb Hutong Sy0Df7KVfJk).",
+      "source_urls": [],
+      "source_note": "No venue-specific social source was verified for this gap; it is left blank rather than replaced by a search URL."
+    },
+    {
+      "id": "GAP-07",
+      "area": "Shanghai Metro 2027 Fares & Mutianyu Add-Ons",
+      "item": "Shanghai held an Aug 2026 fare-adjustment hearing (~+CNY 1/ride); Mutianyu English ticket subpage blocked bots for cable car/toboggan add-ons",
+      "status": "Re-verify Before Departure",
+      "detail": "Official base admission (Mutianyu CNY 45) and current Shanghai Metro fares (CNY 3+) are verified; confirm add-ons & final 2027 metro tariff in Jan 2027.",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260820/6676e7847de746e9aef956c40460bd84.html",
+        "https://en.mutianyugreatwall.com/"
+      ]
+    },
+    {
+      "id": "GAP-08",
+      "area": "Hotel × Venue Transit Routing",
+      "item": "No official route matrix verifies whether hotel-to-MICHELIN/attraction journeys meet the requested ≤60-minute subway/bus limit.",
+      "status": "Unverified — no route time claimed",
+      "detail": "No complete, date-specific official route matrix for listed hotels and restaurant/activity destinations was captured. District counts and station proximity are not door-to-door travel times; the MICHELIN reach field is intentionally blank for every hotel. The current hotel order is provisional and does not certify the ≤60-minute requirement. Verify exact origin/destination pairs, transfers, service hours, and travel dates before choosing a base.",
+      "source_urls": [
+        "https://english.beijing.gov.cn/specials/beijinglifeonthesubway/noticeforpassengers/202504/t20250423_4072294.html",
+        "https://english.shanghai.gov.cn/en-TravelYourWay/20251010/6f1beb560360472b8edaffd6187f4988.html"
+      ]
+    },
+    {
+      "id": "GAP-09",
+      "area": "Hotel Purchase Timing",
+      "item": "The cheapest date to purchase a hotel booking is not established by the available dated snapshots.",
+      "status": "Unverified — dated quote only",
+      "detail": "Booking.com room quotes in this planner were captured on 2026-11-25 or 2026-11-26 for specified stay dates. The captures are a small sample, not a time series of booking dates; they do not prove a historical low, predict future prices, or verify that an offer remains available. Recheck exact dates, room, full taxes, payment terms, and cancellation deadline on the live page.",
+      "source_note": "Booking.com quote pages below are the source for their displayed rate and room terms, not a price-history record.",
+      "source_urls": [
+        "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
+        "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD"
+      ]
+    }
   ],
   "repo_audit_findings": [
     {
@@ -128,28 +327,43 @@
       "severity": "HIGH",
       "file": "shanghai-verified-2027/data/activities.csv, hotels.csv, michelin.csv, social.csv (ACTIVE on main @ 179e24c)",
       "finding": "All 4 CSV datasets in shanghai-verified-2027/ contain malformed column-count rows caused by unquoted commas (activities.csv: 4/5 rows have 14 vs 15 cols; hotels.csv: 4/5 rows have 26 or 29 vs 25 cols; michelin.csv: row 5 has 17 vs 18 cols; social.csv: row 15 has 10 vs 9 cols).",
-      "verified_truth": "Re-verified via Python csv.reader against origin/main @ 179e24c; logged in COORDINATION.md for the owning session to properly quote CSV fields."
+      "verified_truth": "Re-verified via Python csv.reader against origin/main @ 179e24c; logged in COORDINATION.md for the owning session to properly quote CSV fields.",
+      "source_urls": [
+        "https://github.com/kanlerxz87-cyber/ChinaFun1/tree/main/shanghai-verified-2027/data"
+      ]
     },
     {
       "id": "AUD-02",
       "severity": "HIGH",
       "file": "assets/data.js (repo root — ACTIVE discrepancies on main @ 179e24c)",
       "finding": "Even after PRs #26–#28 expanded root assets/data.js, three starred restaurants still carry missing hours and phone/price mismatches vs live guide.michelin.com: (1) Xin Rong Ji (Xinyuan South Rd) lists h:'' and phone +86 10 6501 5555; (2) Xin Rong Ji (Jinrong St) lists h:'', phone +86 10 6602 2288, and ¥¥¥¥; (3) Zijin Mansion lists h:''; (4) Mio does not flag the official Monday-closure conflict.",
-      "verified_truth": "Directly verified 2026-11-26 on guide.michelin.com & official hotel sites: Xin Rong Ji (Xinyuan South Rd) is +86 10 6501 5501 & Mon–Sun 11:30–14:00, 17:30–21:00; Xin Rong Ji (Jinrong St) is +86 10 6618 0567, ¥¥¥, & Mon–Sun 11:00–14:00, 17:00–21:30; Zijin Mansion is Mon–Sun 11:30–14:30, 17:30–21:30; Four Seasons Beijing officially closes Mio on Mondays (conflicting with MICHELIN's Mon–Sun listing)."
+      "verified_truth": "Directly verified 2026-11-26 on guide.michelin.com & official hotel sites: Xin Rong Ji (Xinyuan South Rd) is +86 10 6501 5501 & Mon–Sun 11:30–14:00, 17:30–21:00; Xin Rong Ji (Jinrong St) is +86 10 6618 0567, ¥¥¥, & Mon–Sun 11:00–14:00, 17:00–21:30; Zijin Mansion is Mon–Sun 11:30–14:30, 17:30–21:30; Four Seasons Beijing officially closes Mio on Mondays (conflicting with MICHELIN's Mon–Sun listing).",
+      "source_urls": [
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+        "https://www.fourseasons.com/beijing/dining/restaurants/mio/"
+      ]
     },
     {
       "id": "AUD-03",
       "severity": "MEDIUM",
       "file": "shanghai-2027/data/activities.json, michelin-restaurants.json & docs/ (ACTIVE on main @ 179e24c)",
       "finding": "shanghai-2027 marks The Bund as UNVERIFIED with a YouTube search query URL (results?search_query=), leaves Da Vittorio, Imperial Treasure, and The House of Rong without street addresses/phones/hours, and leaves social: [] empty for Shanghai restaurants. docs/ pages also retain YouTube search query URLs.",
-      "verified_truth": "china-2027/ verified The Bund winter lights (17:00–21:00 Nov–Apr) & CNY 2 ferry via official english.shanghai.gov.cn + direct YouTube review gjXwly03sW8; verified full addresses, phones & Da Vittorio Tue–Sun hours directly on individual guide.michelin.com pages; and verified Shanghai live guide counts (1x3*, 11x2*, 38x1* = 50 starred, 33 Bib, 70 Selected = 153 total; Sir Elly's confirmed Selected, matching shanghai-2027/data/hotels.json)."
+      "verified_truth": "china-2027/ verified The Bund winter lights (17:00–21:00 Nov–Apr) & CNY 2 ferry via official english.shanghai.gov.cn + direct YouTube review gjXwly03sW8; verified full addresses, phones & Da Vittorio Tue–Sun hours directly on individual guide.michelin.com pages; and verified Shanghai live guide counts (1x3*, 11x2*, 38x1* = 50 starred, 33 Bib, 70 Selected = 153 total; Sir Elly's confirmed Selected, matching shanghai-2027/data/hotels.json).",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251107/11c79bb6632944aea9814cee6ec823bb.html",
+        "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred"
+      ]
     },
     {
       "id": "AUD-04",
       "severity": "RESOLVED",
       "file": "assets/data.js & root *.html (RESOLVED on main by PRs #26–#28 @ 179e24c)",
       "finding": "Earlier commit 4262d82 had only 12/33 Beijing starred districts, guessed Dongcheng > Chaoyang in hotels.html, linked private YouTube video Sy0Df7KVfJk for Trb Hutong, and had prose-vs-data count mismatches.",
-      "verified_truth": "Credit to concurrent sessions 8f562229 & 1fa0d691 (PRs #26–#28): root assets/data.js now correctly reflects DISTRICT_STARS = {Chaoyang: 20, Dongcheng: 9, Xicheng: 3, Shunyi: 1}, 33/33 addresses, and removed Sy0Df7KVfJk. Independently corroborated by our 33/33 primary-source audit in china-2027/."
+      "verified_truth": "Credit to concurrent sessions 8f562229 & 1fa0d691 (PRs #26–#28): root assets/data.js now correctly reflects DISTRICT_STARS = {Chaoyang: 20, Dongcheng: 9, Xicheng: 3, Shunyi: 1}, 33/33 addresses, and removed Sy0Df7KVfJk. Independently corroborated by our 33/33 primary-source audit in china-2027/.",
+      "source_urls": [
+        "https://github.com/kanlerxz87-cyber/ChinaFun1/pull/26",
+        "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred"
+      ]
     }
   ]
 }

@@ -1024,3 +1024,22 @@ A required `git pull --rebase origin main` during this session encountered a `CO
 - GitHub Pages run [46061002550](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46061002550) completed successfully (build, deploy and status-report jobs); Pages API reports `built` at `f053c1d`. The only annotation is GitHub's informational Node.js 20 deprecation warning.
 - Cache-busted live fetches of the integration overview, four-row hotel price page, and Flagged for Review page returned the current deployment: `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=f053c1db64998d9e6d4b0496fed66e5dc34144d2`, `.../plans.html?v=f053c1db64998d9e6d4b0496fed66e5dc34144d2`, and `.../flagged.html?v=f053c1db64998d9e6d4b0496fed66e5dc34144d2`.
 - The initial PR #41 had no branch checks reported; all local validators listed above passed before merge. The deployment itself then completed successfully.
+
+---
+
+# Session `311cf896` — final integration: keep the consolidated plan inside the requested 1–2 week window
+
+**Branch:** `arena/311cf896-chinafun1` (fixed active Arena branch; base `9e0f598`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**File scope:** this appended `COORDINATION.md` section and `china-2027/**` only (data, deterministic generator/validator, README, and regenerated pages). The prior sessions are complete; this is the final integration pass. Root index/navigation and all other plan/data scopes remain untouched.
+
+| Task | Status | Verification rule |
+|---|---|---|
+| R1 Claim + board review | **done** | Expanded the active claim to `china-2027/**` in the pushed claim commits; confirmed the fixed branch and session scope. |
+| R2 Align consolidated decision paths with the user's 1–2 week limit and date window | **done** | The only examples are a 7-night Beijing plan and a 14-day / 13-night Beijing + Shanghai plan. Feb 15–18 remains unresolved; no flexible-start interpretation or 13-night Shanghai hotel price is inferred. |
+| R3 Rebuild and run all repo validators/link checks | **done (claimed scope)** | Rebuilt and passed all four repository checkers, `py_compile`, `git diff --check`, and the `china-2027/**` link/anchor checks. A 64-page repository-wide scan found one pre-existing defect outside the claim: 11 links in unchanged `docs/*.html` point to `docs/sources.html#method`, while the target is `#method-h`; recorded below, not modified. |
+| R4 Publish final integration via this fixed branch's PR and verify Pages | **in progress** | Push only `arena/311cf896-chinafun1`; open/merge its PR only after checks pass, then record the live Pages verification. |
+
+**Initial finding (resolved):** the consolidated planner previously surfaced options outside the 1–2-week request. They have been removed from the recommended paths and replaced with a 14-day / 13-night example (seven Beijing nights and six Shanghai nights). The preferred Feb 15–18 interval is still ambiguous; if literal check-in/check-out dates, it is three nights and conflicts with the seven-night minimum. No flexible-start interpretation is inferred, and no price is claimed for the uncaptured Feb 22 check-in / Feb 28 checkout Shanghai stay.
+
+**Progress update — 2026-11-27:** Option B dates, nights, departure day, README, generated copy, and validator now agree on Feb 15 check-in / Feb 28 checkout (13 hotel nights across 14 calendar days). The Shanghai six-night total remains explicitly unpriced. Official NIA entry-policy and Shanghai visitor-payment guidance were added as dated sources for the traveler’s open passport/payment checks. All four repository checkers and the claimed-scope link checks pass. A repository-wide scan of 64 HTML files found 11 pre-existing links in the untouched `docs/` plan pointing to missing `docs/sources.html#method` (the page’s current target ID is `method-h`); this sibling-plan repair is outside the active claim.

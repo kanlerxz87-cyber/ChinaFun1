@@ -10,6 +10,7 @@ import html
 import json
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -29,6 +30,25 @@ NAV_ITEMS = [
 
 def e(val: Any) -> str:
     return html.escape("" if val is None else str(val), quote=True)
+
+
+def booking_url_for_dates(base_url: str, check_in: str, check_out: str) -> str:
+    """Return the listed Booking.com property URL with the table row dates."""
+    parts = urlsplit(base_url)
+    query = dict(parse_qsl(parts.query, keep_blank_values=True))
+    query["checkin"] = check_in
+    query["checkout"] = check_out
+    query.setdefault("group_adults", "2")
+    query.setdefault("no_rooms", "1")
+    query.setdefault("selected_currency", "USD")
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
+
+
+def external_source_links(urls: list[str], label: str = "Source") -> str:
+    return "<br>".join(
+        f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(label)} {idx} ↗</a>'
+        for idx, url in enumerate(urls, 1)
+    )
 
 
 def load_json(name: str) -> Any:
@@ -59,7 +79,7 @@ def page_shell(filename: str, title: str, subtitle: str, meta: dict, body_html: 
         <span class="brand-mark">CN</span>
         <span>
           China 2027 Verified Planner
-          <span class="brand-sub">Beijing &amp; Shanghai · Verified {e(meta['last_verified'])}</span>
+          <span class="brand-sub">Beijing &amp; Shanghai · Sources checked {e(meta['source_check_window'])}</span>
         </span>
       </a>
       <button id="navToggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
@@ -75,7 +95,7 @@ def page_shell(filename: str, title: str, subtitle: str, meta: dict, body_html: 
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>China 2027 Verified Trip Planner</strong> · Primary-source verified {e(meta['last_verified'])} · Zero fabricated estimates · <a href="../index.html">Repo Root Dashboard</a></div>
+      <div><strong>China 2027 Verified Trip Planner</strong> · Dated source checks: {e(meta['source_check_window'])} · Individual rates and facts are dated by row · <a href="../index.html">Repo Root Dashboard</a></div>
       <div><a href="sources.html">Official Sources</a> · <a href="flagged.html">Audit &amp; Flagged Items</a> · <a href="questions.html">Open Decisions</a></div>
     </div>
   </footer>
@@ -146,39 +166,47 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
 
     bj_top = hotels["beijing"][:3]
     sh_top = hotels["shanghai"][:3]
+    hotel_capture_dates = sorted({
+        w["checked"] for city in ("beijing", "shanghai") for h in hotels[city] for w in h.get("windows", []) if w.get("checked")
+    })
+    hotel_capture_label = "–".join(hotel_capture_dates)
     hotel_rows = []
     for city_lbl, group in [("Beijing", bj_top), ("Shanghai", sh_top)]:
         for h in group:
             hotel_rows.append(
                 f"<tr>"
-                f"<td><strong>{e(city_lbl)} #{h['rank']}</strong></td>"
-                f"<td><a href=\"hotels.html#{e(h['id'])}\"><strong>{e(h['name'])}</strong></a><br><small>{e(h['district'])}</small></td>"
-                f"<td><strong style=\"color:var(--jade)\">${h['cheapest_7n_usd']:,}</strong><br><small>{e(h['cheapest_window'])}</small></td>"
-                f"<td><span class=\"badge badge-pass\">Queen/King + Private Bath</span></td>"
+                f"<td><strong>{e(city_lbl)} · Provisional #{h['rank']}</strong></td>"
+                f"<td><a href=\"hotels.html#{e(h['id'])}\"><strong>{e(h['name'])}</strong></a><br><small>{e(h['district'])}<br><a href=\"{e(h['booking_url'])}\" target=\"_blank\" rel=\"noopener noreferrer\">Booking.com quote source ↗</a></small></td>"
+                f"<td><strong style=\"color:var(--jade)\">${h['cheapest_7n_usd']:,}</strong><br><small>Lowest shown capture: {e(h['cheapest_window'])}</small></td>"
+                f"<td><span class=\"badge badge-pass\">Matched in dated capture: queen/king + private bath</span></td>"
                 f"<td>{e(h['tier'])}</td>"
                 f"</tr>"
             )
 
-    p1_qs = [q for q in audit["traveler_questions"][:4]]
+    p1_qs = [q for q in audit["traveler_questions"] if q.get("priority", "").startswith("P1")]
     q_cards = []
     for q in p1_qs:
+        reference_links = external_source_links(q.get("source_urls", []), "Reference")
+        reference_html = f'<p style="font-size:12px;margin:8px 0 0">{reference_links}</p>' if reference_links else ""
         q_cards.append(
             f'<div class="card">'
             f'<span class="badge badge-flag">{e(q["priority"])}</span>'
             f'<h3 style="margin-top:8px">{e(q["question"])}</h3>'
             f'<p style="margin:0;color:var(--muted);font-size:13.5px">{e(q["why_it_matters"])}</p>'
+            f"{reference_html}"
             f"</div>"
         )
 
     cal = meta["calendar_2027"]
+    transit = meta["transit_official"]
     body = f"""
     <section class="hero">
       <span class="hero-eyebrow">Executive Trip Brief · Dual-City Primary-Source Edition</span>
       <h1>China 2027 Verified Travel Dashboard: Beijing &amp; Shanghai</h1>
-      <p>Built for 2 adults traveling inside <strong>2027-02-15 to 2027-03-23</strong> (1–2 week &amp; 2–4 week options). Every hotel total, MICHELIN listing, museum schedule, rail fare, and social media link is directly verified from official primary sources on <strong>{e(meta['last_verified'])}</strong> — unpublished hours or prices are left explicitly blank rather than guessed.</p>
+      <p>For 2 adults, the requested trip length is <strong>1–2 weeks</strong> inside <strong>2027-02-15 to 2027-03-23</strong>. If Feb 15 is check-in and Feb 18 is checkout, that preferred interval is <strong>3 nights</strong> and conflicts with the minimum; whether it means a start preference or the whole trip remains unresolved, and no flexible-start interpretation is inferred. Hotel rates are dated Booking.com captures; unconfirmed values stay blank or flagged. <strong>No hotel is certified for the requested ≤60-minute hotel-to-venue transit limit.</strong></p>
       <div class="hero-meta">
         <span>2 Adults · 1 Room (Queen/King + Private Bath)</span>
-        <span>Zero Holidays Feb 15 – Mar 23, 2027</span>
+        <span>No statutory public holidays Feb 15 – Mar 23, 2027</span>
         <span>{len(bj_starred)}/33 Beijing Stars + {len(sh_verified)} Shanghai Venues Verified</span>
         <span>{len(activities['items'])} Gov-Verified Activities</span>
         <span>{social_total} Verified YT / TikTok / IG Links</span>
@@ -187,14 +215,14 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
 
     <section class="kpi-grid" aria-label="Headline Findings">
       <div class="kpi-card">
-        <div class="kpi-label">Cheapest Stay Window</div>
-        <div class="kpi-value">Feb 15–22, 2027</div>
-        <div class="kpi-sub">Immediately post-Spring Festival (ends Feb 13); saves <strong>15%–56%</strong> vs mid-March.</div>
+        <div class="kpi-label">Dated 7-Night Stay-Price Sample</div>
+        <div class="kpi-value">Varies by hotel</div>
+        <div class="kpi-sub">Selected stay dates only (captures {e(hotel_capture_label)}). Stay-date rates vary: Grand Millennium Beijing was captured at $783 for Mar 1–8 and $838 for Feb 15–22, while some Feb 15–22 quotes were below Mar 16–23 captures. This does not identify when to purchase.</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Cheapest Booking Window</div>
-        <div class="kpi-value">Nov 19 – Dec 2026</div>
-        <div class="kpi-sub">Active Black Friday / Genius free-cancel deals: <strong>$425–$749/7N</strong> Beijing · <strong>$621–$921/7N</strong> Shanghai.</div>
+        <div class="kpi-label">Best Time to Purchase</div>
+        <div class="kpi-value">Not established</div>
+        <div class="kpi-sub">One dated price capture cannot prove a historical low or forecast the cheapest booking date.</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">MICHELIN Coverage Verified</div>
@@ -209,19 +237,19 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
     </section>
 
     <section class="callout callout-jade">
-      <strong class="label">Key Breakthrough — Official 2027 PRC Holiday Calendar &amp; Optimal Timing</strong>
-      <p style="margin:4px 0 8px">The PRC State Council released the official 2027 public holiday schedule on 2026-11-06: <strong>Spring Festival runs Feb 5–13, 2027</strong> (CNY Sat Feb 6; make-up workdays Jan 31 &amp; Feb 14; Lantern Festival Sat Feb 20). <strong>Zero statutory public holidays fall between Feb 15 and Mar 23, 2027.</strong> Starting Mon <strong>Feb 15, 2027</strong> in Beijing captures winter low-season tickets, catches Lantern Festival (Feb 20), locks 15%–56% cheaper hotel rates, and avoids early-March NPC/CPPCC ("Two Sessions") security closures around Tian'anmen Square. <a href="{e(cal['source_url'])}" target="_blank" rel="noopener noreferrer">Official State Council Release &rarr;</a></p>
-      <a class="btn btn-primary" href="hotels.html">See Cheapest 7-Night Hotel Comparison</a>
-      <a class="btn" href="itineraries.html">Compare 7N / 14D / 21D Itineraries</a>
+      <strong class="label">Official 2027 Holidays &amp; Date-Window Context</strong>
+      <p style="margin:4px 0 8px">The official 2027 schedule lists Spring Festival from <strong>Feb 5–13</strong>; an official Beijing notice confirms makeup workdays Jan 31 and Feb 14. The Hong Kong Observatory's 2027 Gregorian–lunar table places the Lantern Festival (lunar day 15) on Sat Feb 20. No statutory public-holiday dates in the official schedule fall within Feb 15–Mar 23. Selected hotel snapshots vary by property and stay date; some Feb 15–22 quotes are below some mid-March quotes, while other sampled dates are not. That comparison does not establish the best date to purchase. <a href="{e(cal['source_url'])}" target="_blank" rel="noopener noreferrer">Official State Council Release &rarr;</a> · <a href="{e(cal['makeup_workdays_source_url'])}" target="_blank" rel="noopener noreferrer">Beijing holiday notice &rarr;</a> · <a href="{e(cal['lantern_festival_source_url'])}" target="_blank" rel="noopener noreferrer">Hong Kong Observatory lunar calendar &rarr;</a></p>
+      <a class="btn btn-primary" href="hotels.html">View Dated 7-Night Hotel Quotes</a>
+      <a class="btn" href="itineraries.html">Compare 7-night / 14-day options</a>
     </section>
 
     <section>
-      <h2>Top Ranked Hotels (Cheapest 7-Night Verified Totals, 2 Adults)</h2>
-      <p class="lead">Every hotel passes both non-negotiable filters (private/attached bathroom + queen or king bed) and was live-priced on Booking.com on {e(hotels['verified_on'])}. <a href="hotels.html">View all {len(hotels['beijing']) + len(hotels['shanghai'])} hotels &amp; multi-window Feb vs Mar table &rarr;</a></p>
+      <h2>Hotel Quote Shortlist (Provisional Order; Not Route-Validated)</h2>
+      <p class="lead">The dated room captures matched the private-bathroom and queen/king filters shown in each row; quote dates vary by property. Ordering is provisional and does not certify the requested ≤60-minute hotel-to-venue rule. <a href="hotels.html">View all {len(hotels['beijing']) + len(hotels['shanghai'])} hotel snapshots &amp; date comparisons &rarr;</a></p>
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Rank</th><th>Hotel &amp; District</th><th>Cheapest 7-Night USD</th><th>Room Check</th><th>Why It Wins</th></tr>
+            <tr><th>Provisional Position</th><th>Hotel &amp; District (Booking.com quote)</th><th>Lowest Listed 7-Night Capture</th><th>Room Check (at capture)</th><th>Snapshot Note</th></tr>
           </thead>
           <tbody>
             {''.join(hotel_rows)}
@@ -233,7 +261,7 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
     <section class="grid-2">
       <div class="card">
         <h3>Verified 33/33 Beijing MICHELIN Starred District Split</h3>
-        <p style="font-size:13.5px;color:var(--muted);margin-top:0">Direct 2026-11-26 verification of all 33/33 official MICHELIN 2027 Beijing pages proves <strong>Chaoyang holds 60.6%</strong> (independently matching PR #26's root recomputation):</p>
+        <p style="font-size:13.5px;color:var(--muted);margin-top:0">Direct 2026-11-26 verification of all 33/33 official MICHELIN 2027 Beijing pages shows <strong>Chaoyang has 20/33 stars (60.6%)</strong>. <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred" target="_blank" rel="noopener noreferrer">MICHELIN Guide source &rarr;</a></p>
         {''.join(bar_rows)}
         <p style="font-size:13px;margin:10px 0 0"><a href="restaurants.html">Explore all {len(r_items)} verified restaurants &amp; reviews &rarr;</a></p>
       </div>
@@ -241,24 +269,25 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
         <h3>Beijing &harr; Shanghai Rail &amp; Transit Snapshot</h3>
         <ul class="clean" style="font-size:13.5px">
           <li><strong>Fuxing High-Speed Rail (~1,300 km):</strong> 4.5–5.5 hr Beijing South &harr; Shanghai Hongqiao. Official 2nd Class <strong>CNY 550–670/adult</strong> (CNY 1,100–1,340 for 2 one-way); 1st Class ~CNY 1,035; Business ~CNY 2,318 (<a href="https://www.12306.cn/en/index.html" target="_blank" rel="noopener noreferrer">12306.cn</a>).</li>
-          <li><strong>Beijing Subway:</strong> Distance-based CNY 3 (&le;6 km) to CNY 6+ (22–32 km); Airport Express CNY 25. New Line 17 central section opened Dec 2025.</li>
-          <li><strong>Shanghai Metro:</strong> CNY 3 (&le;6 km) + CNY 1/10 km; 1-Day CNY 18 / 3-Day CNY 45; direct international Visa/MC/Amex/JCB tap-to-ride. <em>Flagged: re-verify post-Aug 2026 fare-hearing adjustments for 2027.</em></li>
-          <li><strong>Dual-City Synergy:</strong> Shanghai Museum East is <strong>OPEN Mondays</strong> (hosting the Met Museum's <em>Jewelry: The Body Transformed</em> show through May 2027!) — solving classic Monday museum closures.</li>
+          <li><strong>Beijing Subway:</strong> {transit['beijing_subway']['fares']}</li>
+          <li><strong>Shanghai Metro:</strong> {transit['shanghai_metro']['fares']} <em>Recheck the fare and contactless-card rules before travel; a final 2027 schedule is not established here.</em></li>
+          <li><strong>Visitor payments:</strong> Official Shanghai guidance describes international-card setup for Alipay / Weixin Pay and overseas-card acceptance at participating merchants; card, issuer, app, account limits, and fees vary. <a href="https://english.shanghai.gov.cn/en-Individuals-BankingandPayments-Payments/20260920/4fc94c2f0e6b47e7939969415e5feb04.html" target="_blank" rel="noopener noreferrer">Mobile payment guide</a> · <a href="https://english.shanghai.gov.cn/en-Individuals-BankingandPayments-Payments/20260921/c2c94d06a0454c8fa05386b80d0ae865.html" target="_blank" rel="noopener noreferrer">Overseas bank-card guide</a>.</li>
+          <li><strong>Dual-City Synergy:</strong> Shanghai Museum East is <strong>OPEN Mondays</strong> (hosting the Met Museum's <em>Jewelry: The Body Transformed</em> show through May 5, 2027!) — solving classic Monday museum closures.</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>Top Traveler Decisions Needed Next</h2>
-      <p class="lead">Nothing below has been assumed on your behalf — confirm these choices to lock reservations and flight routing. <a href="questions.html">See full Knowns/Unknowns &amp; Discovery Plan &rarr;</a></p>
+      <h2>Open Decisions &amp; Missing Information</h2>
+      <p class="lead">The examples stay within the 1–2-week request while trip dates, city mix, hotel budget, dining preferences, and flight/passport details remain open. Nothing is assumed; these questions do not block publication of the documented options. <a href="questions.html">See full Knowns/Unknowns &amp; Discovery Plan &rarr;</a></p>
       <div class="grid-2">
         {''.join(q_cards)}
       </div>
     </section>
 
     <section class="callout callout-navy">
-      <strong class="label">Repository Audit &amp; Cross-Directory Guide (Synced to main @ 179e24c)</strong>
-      <p style="margin:4px 0 8px;font-size:13.5px">We audited every directory across this repository line by line against live primary sources on <strong>{e(meta['last_verified'])}</strong> — logging active cross-session defects (malformed CSV column counts across all 4 files in <code>shanghai-verified-2027/data/</code>, missing hours &amp; phone/price discrepancies for <code>Xin Rong Ji</code> &amp; <code>Zijin Mansion</code> and unflagged <code>Mio</code> Monday-closure conflict in root <code>assets/data.js</code>, and <code>The Bund</code> / <code>Da Vittorio</code> gaps in <code>shanghai-2027/</code>) while crediting PRs #26–#28 for resolving earlier root district counts. All sibling directories remain untouched per non-overlapping coordination rules.</p>
+      <strong class="label">Historical Cross-Directory Audit (2026-11-26)</strong>
+      <p style="margin:4px 0 8px;font-size:13.5px">The linked audit is a dated read-only snapshot of repository files as they appeared on <code>main @ 179e24c</code>; it is not a current-status statement for later commits. Check the coordination log and each linked source before acting on historical findings.</p>
       <a class="btn" href="flagged.html">Read Full Line-by-Line Audit &amp; Flagged Items &rarr;</a>
       <a class="btn" href="suggestions.html">Review Optional Suggestions &rarr;</a>
     </section>
@@ -267,6 +296,11 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
 
 
 def build_hotels(meta: dict, hotels: dict) -> str:
+    hotel_capture_dates = sorted({
+        w["checked"] for city in ("beijing", "shanghai") for h in hotels[city] for w in h.get("windows", []) if w.get("checked")
+    })
+    hotel_capture_label = "–".join(hotel_capture_dates)
+
     def render_city_section(city_name: str, items: list[dict]) -> str:
         cards = []
         matrix_rows = []
@@ -276,32 +310,44 @@ def build_hotels(meta: dict, hotels: dict) -> str:
                 w = win_map.get(d)
                 if not w:
                     return '<span class="blank-cell">Not queried</span>'
-                return f"<strong>${w['total_usd']:,}</strong><br><small>${w['per_night_usd']}/nt · {e(w['terms'][:48])}</small>"
+                check_in, _, check_out = d.partition(" -> ")
+                source_url = booking_url_for_dates(h["booking_url"], check_in, check_out)
+                checked = e(w.get("checked", ""))
+                return (
+                    f"<strong>${w['total_usd']:,}</strong><br>"
+                    f"<small>${w['per_night_usd']}/nt · {e(w['terms'][:48])} · captured {checked}</small><br>"
+                    f'<a href="{e(source_url)}" target="_blank" rel="noopener noreferrer">Booking.com quote source ↗</a>'
+                )
 
             matrix_rows.append(
                 f"<tr>"
-                f"<td><strong>#{h['rank']}</strong> <a href=\"#{e(h['id'])}\">{e(h['name'])}</a><br><small>{e(h['district'])}</small></td>"
+                f"<td><strong>Provisional #{h['rank']}</strong> <a href=\"#{e(h['id'])}\">{e(h['name'])}</a><br><small>{e(h['district'])}</small></td>"
                 f"<td>{cell('2027-02-15 -> 2027-02-22')}</td>"
                 f"<td>{cell('2027-03-01 -> 2027-03-08')}</td>"
                 f"<td>{cell('2027-03-16 -> 2027-03-23')}</td>"
                 f"</tr>"
             )
             amen_html = "".join(f'<span class="badge badge-neutral">{e(a)}</span>' for a in h["amenities"])
+            reach_html = (
+                e(h["michelin_reach_summary"])
+                if h.get("michelin_reach_summary")
+                else '<span class="blank-cell">Not verified — no official ≤60-minute hotel-to-venue route result; see <a href="flagged.html#GAP-08">Flagged for Review</a>.</span>'
+            )
             flag_html = "".join(f'<div class="callout callout-amber" style="margin:10px 0 0;padding:10px 12px;font-size:13px"><strong>Flag:</strong> {e(fl)}</div>' for fl in h["flags"])
             cards.append(
                 f'<article class="card" id="{e(h["id"])}">'
                 f'<div class="card-header">'
-                f'<div><span class="badge badge-sel">Rank #{h["rank"]} · {e(h["tier"])}</span><h3 style="margin-top:6px">{e(h["name"])}</h3>'
+                f'<div><span class="badge badge-sel">Provisional shortlist #{h["rank"]} · {e(h["tier"])}</span><h3 style="margin-top:6px">{e(h["name"])}</h3>'
                 f'<div style="font-size:13px;color:var(--muted)">{e(h["district"])} · {e(h["address"])} · Rating: <strong>{e(h["rating"])}</strong> (Location: {e(h["location_score"])})</div></div>'
-                f'<div class="price-tag">${h["cheapest_7n_usd"]:,}<small>Cheapest 7N ({e(h["cheapest_window"])})</small></div>'
+                f'<div class="price-tag">${h["cheapest_7n_usd"]:,}<small>Lowest captured 7N ({e(h["cheapest_window"])})</small></div>'
                 f"</div>"
                 f'<div class="badges">'
                 f'<span class="badge badge-pass">{e(h["bed_verified"])}</span>'
                 f'<span class="badge badge-pass">{e(h["bathroom_verified"])}</span>'
                 f"</div>"
-                f'<p style="font-size:13.5px;margin:8px 0"><strong>Cheapest Rate Terms:</strong> {e(h["cheapest_note"])}</p>'
-                f'<p style="font-size:13.5px;margin:8px 0"><strong>Subway / Transit Access:</strong> {e(h["subway_access"])}</p>'
-                f'<p style="font-size:13.5px;margin:8px 0"><strong>MICHELIN Reach:</strong> {e(h["michelin_reach_summary"])}</p>'
+                f'<p style="font-size:13.5px;margin:8px 0"><strong>Captured Quote Terms:</strong> {e(h["cheapest_note"])}</p>'
+                f'<p style="font-size:13.5px;margin:8px 0"><strong>Reported station access:</strong> {e(h["subway_access"])}</p>'
+                f'<p style="font-size:13.5px;margin:8px 0"><strong>≤60-minute hotel-to-venue test:</strong> {reach_html}</p>'
                 f'<div class="badges" style="margin-top:8px">{amen_html}</div>'
                 f'{flag_html}'
                 f'<p style="margin:12px 0 0"><a class="btn btn-primary" href="{e(h["booking_url"])}" target="_blank" rel="noopener noreferrer">Check Live 2027 Booking.com Rate &rarr;</a></p>'
@@ -309,9 +355,9 @@ def build_hotels(meta: dict, hotels: dict) -> str:
             )
 
         return (
-            f"<section><h2>{e(city_name)} Multi-Window 7-Night Rate Matrix (USD, 2 Adults, 1 Room)</h2>"
+            f"<section><h2>{e(city_name)} Dated 7-Night Quote Matrix (USD, 2 Adults, 1 Room)</h2>"
             f'<div class="table-wrap"><table><thead><tr>'
-            f"<th>Ranked Hotel</th><th>Feb 15–22, 2027</th><th>Mar 1–8, 2027</th><th>Mar 16–23, 2027</th>"
+            f"<th>Provisional Shortlist</th><th>Feb 15–22, 2027</th><th>Mar 1–8, 2027</th><th>Mar 16–23, 2027</th>"
             f"</tr></thead><tbody>{''.join(matrix_rows)}</tbody></table></div>"
             f'<div class="grid-2">{"".join(cards)}</div></section>'
         )
@@ -320,20 +366,20 @@ def build_hotels(meta: dict, hotels: dict) -> str:
     ev_lis = "".join(f"<li>{e(x)}</li>" for x in bt["evidence"])
     body = f"""
     <section class="hero">
-      <span class="hero-eyebrow">Live Multi-Window Pricing · Verified {e(hotels['verified_on'])}</span>
-      <h1>Ranked Hotels &amp; Cheapest Booking Dates (Beijing &amp; Shanghai)</h1>
-      <p>Every hotel listed below strictly meets both mandatory traveler criteria (<strong>private/attached bathroom</strong> AND <strong>queen bed or larger</strong>) and shows real <strong>7-night totals for 2 adults</strong> across multiple 2027 date windows.</p>
+      <span class="hero-eyebrow">Booking.com Quote Snapshots · Captured {e(hotel_capture_label)}</span>
+      <h1>Hotel Price Snapshots &amp; Stay-Date Comparison (Beijing &amp; Shanghai)</h1>
+      <p>The listed room types matched the requested <strong>private/attached bathroom</strong> and <strong>queen/king bed</strong> filters in their dated Booking.com captures. These are selected <strong>7-night quotes for 2 adults</strong>, not guaranteed live offers. Some properties have only one captured date window; every quote row shows its capture date and Booking.com source.</p>
     </section>
 
     <section class="callout callout-jade">
-      <strong class="label">Cheapest Time to Book &amp; Stay — Live Price Proof</strong>
+      <strong class="label">Dated Stay-Price Comparison — Not a Booking-Time Forecast</strong>
       <h3 style="margin:4px 0 6px">{e(bt['headline'])}</h3>
       <ul class="clean" style="font-size:13.5px">{ev_lis}</ul>
       <p style="margin:10px 0 0;font-size:13.5px"><strong>Recommended Action:</strong> {e(bt['action'])}</p>
     </section>
 
     <section class="callout callout-navy">
-      <strong class="label">Pricing &amp; MICHELIN Proximity Methodology (Strict Honesty)</strong>
+      <strong class="label">Price Snapshot &amp; Requested ≤60-Minute Transit Test (Strict Honesty)</strong>
       <p style="margin:4px 0 6px;font-size:13.5px">{e(hotels['pricing_notes'])}</p>
       <p style="margin:0;font-size:13.5px">{e(hotels['proximity_methodology'])}</p>
     </section>
@@ -341,7 +387,7 @@ def build_hotels(meta: dict, hotels: dict) -> str:
     {render_city_section("Beijing", hotels["beijing"])}
     {render_city_section("Shanghai", hotels["shanghai"])}
     """
-    return page_shell("hotels.html", "Ranked Hotels & Cheapest Dates", "Verified multi-window 7-night hotel pricing in Beijing and Shanghai.", meta, body)
+    return page_shell("hotels.html", "Hotel Rate Snapshots & Stay Dates", "Dated 7-night Booking.com quotes for Beijing and Shanghai; hotel-to-venue route times remain unverified.", meta, body)
 
 
 def build_restaurants(meta: dict, restaurants: dict) -> str:
@@ -556,7 +602,7 @@ def build_itineraries(meta: dict, itineraries: dict) -> str:
     tab_btns = []
     tab_panels = []
     for idx, opt in enumerate(itineraries["options"]):
-        act = " active" if idx == 1 else ""  # default open Flagship 14-day Dual-City!
+        act = " active" if idx == 1 else ""  # default open the 14-day / 13-night dual-city option
         tab_btns.append(
             f'<button type="button" class="tab-btn{act}" data-tab-target="{e(opt["id"])}">{e(opt["duration_band"])}</button>'
         )
@@ -591,13 +637,13 @@ def build_itineraries(meta: dict, itineraries: dict) -> str:
 
     body = f"""
     <section class="hero">
-      <span class="hero-eyebrow">Zero-Conflict Day-by-Day Blueprints · 1–2 Weeks &amp; 2–4 Weeks</span>
+      <span class="hero-eyebrow">In-Scope Examples · 7 Nights or 14 Days / 13 Nights</span>
       <h1>Verified Itineraries (Starting Mon Feb 15, 2027)</h1>
-      <p>Switch tabs below to compare our <strong>7-Night Single-City Beijing</strong>, <strong>14-Day Flagship Dual-City (Beijing + HSR + Shanghai)</strong>, and <strong>21-Day Unhurried Deep Dive</strong> plans. Every day has been checked against official Monday/Tuesday museum and restaurant closures.</p>
+      <p>Compare a <strong>7-night Beijing plan</strong> with a <strong>14-day / 13-night Beijing + Shanghai plan</strong> (7 Beijing nights + 6 Shanghai nights). If Feb 15 is check-in and Feb 18 checkout, the preferred interval is only 3 nights; its meaning remains unresolved and is not treated as a flexible-start window. No quote was captured for the six-night Shanghai stay (check-in Feb 22, checkout Feb 28). Restaurant/attraction hours, prices, and source/social links are listed on the <a href="restaurants.html">MICHELIN</a> and <a href="activities.html">Activities</a> pages.</p>
     </section>
 
     <section class="callout callout-jade">
-      <strong class="label">Scheduling Rules Enforced Across All Three Itineraries</strong>
+      <strong class="label">Scheduling Rules Enforced Across Both In-Scope Itineraries</strong>
       <ul class="clean" style="font-size:13.5px">{rules_html}</ul>
     </section>
 
@@ -607,7 +653,7 @@ def build_itineraries(meta: dict, itineraries: dict) -> str:
 
     {''.join(tab_panels)}
     """
-    return page_shell("itineraries.html", "Itineraries (1-2 wk & 2-4 wk)", "Date-anchored Beijing and Shanghai itineraries with zero Monday/Tuesday closure clashes.", meta, body)
+    return page_shell("itineraries.html", "Itineraries (1–2 Weeks)", "A 7-night Beijing example and a 14-day / 13-night Beijing–Shanghai example.", meta, body)
 
 
 def build_questions(meta: dict, audit: dict) -> str:
@@ -616,6 +662,8 @@ def build_questions(meta: dict, audit: dict) -> str:
     q_cards = []
     for idx, q in enumerate(audit["traveler_questions"], 1):
         opts = "".join(f"<li>{e(o)}</li>" for o in q["options"])
+        reference_links = external_source_links(q.get("source_urls", []), "Reference")
+        reference_html = f'<p style="font-size:12px;margin:8px 0 0">{reference_links}</p>' if reference_links else ""
         q_cards.append(
             f'<div class="card">'
             f'<span class="badge badge-high">Q{idx} · {e(q["priority"])}</span>'
@@ -623,17 +671,19 @@ def build_questions(meta: dict, audit: dict) -> str:
             f'<p style="font-size:13.5px;color:var(--muted);margin:6px 0">{e(q["why_it_matters"])}</p>'
             f'<strong style="font-size:12.5px">Choices to confirm:</strong>'
             f'<ul class="clean" style="font-size:13.5px">{opts}</ul>'
+            f"{reference_html}"
             f"</div>"
         )
     step_rows = "".join(
-        f"<tr><td><strong>{e(s['phase'])}</strong></td><td>{e(s['owner'])}</td><td>{e(s['action'])}</td></tr>"
+        f"<tr><td><strong>{e(s['phase'])}</strong></td><td>{e(s['owner'])}</td><td>{e(s['action'])}</td>"
+        f"<td>{external_source_links(s.get('source_urls', []), 'Source') or 'No source link recorded'}</td></tr>"
         for s in audit["discovery_plan"]
     )
     body = f"""
     <section class="hero">
       <span class="hero-eyebrow">Decisions &amp; Research Roadmap</span>
       <h1>Traveler Questions, Knowns vs. Unknowns &amp; Discovery Plan</h1>
-      <p>Clear separation between primary-source facts already locked in, open decisions requiring traveler input, and our chronological execution timeline from today (Nov 2026) through arrival (Feb 2027).</p>
+      <p>Clear separation between source-backed facts, unknowns, and traveler decisions. Hotel quote captures span 2026-11-25–26; exact travel dates and live room terms still require a booking-time check. Hotel-to-venue ≤60-minute travel remains unverified.</p>
     </section>
 
     <section class="grid-2">
@@ -656,7 +706,7 @@ def build_questions(meta: dict, audit: dict) -> str:
       <h2>Chronological Discovery &amp; Booking Timeline</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Window</th><th>Owner</th><th>Concrete Action</th></tr></thead>
+          <thead><tr><th>Window</th><th>Owner</th><th>Concrete Action</th><th>Sources</th></tr></thead>
           <tbody>{step_rows}</tbody>
         </table>
       </div>
@@ -668,12 +718,15 @@ def build_questions(meta: dict, audit: dict) -> str:
 def build_suggestions(meta: dict, audit: dict) -> str:
     cards = []
     for s in audit["suggestions"]:
+        source_html = external_source_links(s.get("source_urls", []), "Source")
+        source_paragraph = f'<p style="font-size:12px;margin:8px 0 0">{source_html}</p>' if source_html else ""
         cards.append(
             f'<article class="card">'
             f'<div class="badges" style="margin:0 0 8px"><span class="badge badge-sel">{e(s["id"])}</span><span class="badge badge-neutral">{e(s["category"])}</span><span class="badge badge-flag">Optional Idea — Not Assumed</span></div>'
             f'<h3>{e(s["title"])}</h3>'
             f'<p style="font-size:13.5px;margin:6px 0"><strong>Idea:</strong> {e(s["idea"])}</p>'
             f'<p style="font-size:13.5px;margin:6px 0 0;color:var(--muted)"><strong>Trade-off:</strong> {e(s["tradeoff"])}</p>'
+            f"{source_paragraph}"
             f"</article>"
         )
     body = f"""
@@ -690,10 +743,11 @@ def build_suggestions(meta: dict, audit: dict) -> str:
 
 def build_flagged(meta: dict, audit: dict) -> str:
     gap_rows = "".join(
-        f"<tr><td><strong>{e(g['id'])}</strong><br><small>{e(g['area'])}</small></td>"
+        f"<tr id=\"{e(g['id'])}\"><td><strong>{e(g['id'])}</strong><br><small>{e(g['area'])}</small></td>"
         f"<td><strong>{e(g['item'])}</strong></td>"
         f"<td><span class=\"badge badge-flag\">{e(g['status'])}</span></td>"
-        f"<td>{e(g['detail'])}</td></tr>"
+        f"<td>{e(g['detail'])}</td>"
+        f"<td>{external_source_links(g.get('source_urls', []), 'Source') or e(g.get('source_note', 'No external source — remains unverified.'))}</td></tr>"
         for g in audit["flagged_own_gaps"]
     )
     aud_rows = []
@@ -709,6 +763,7 @@ def build_flagged(meta: dict, audit: dict) -> str:
             f"<td><code>{e(a['file'])}</code></td>"
             f"<td>{e(a['finding'])}</td>"
             f"<td>{e(a['verified_truth'])}</td>"
+            f"<td>{external_source_links(a.get('source_urls', []), 'Repository / official source') or 'No external source recorded'}</td>"
             f"</tr>"
         )
     body = f"""
@@ -723,7 +778,7 @@ def build_flagged(meta: dict, audit: dict) -> str:
       <p class="lead">Where primary sources omit hours, prices, or future 2027 policy outcomes, we leave cells blank and list them explicitly below rather than fabricating numbers.</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>ID &amp; Area</th><th>Item</th><th>Status</th><th>Verification Detail</th></tr></thead>
+          <thead><tr><th>ID &amp; Area</th><th>Item</th><th>Status</th><th>Verification Detail</th><th>Source / Note</th></tr></thead>
           <tbody>{gap_rows}</tbody>
         </table>
       </div>
@@ -731,10 +786,10 @@ def build_flagged(meta: dict, audit: dict) -> str:
 
     <section>
       <h2>2. Line-by-Line Audit of Pre-Existing Repository Files ({len(audit['repo_audit_findings'])})</h2>
-      <p class="lead">Because sibling directories are owned by concurrent sessions (per <code>COORDINATION.md</code>), we did NOT overwrite their files — instead, we corrected every item inside <code>china-2027/</code> and logged exact fix requests in <code>COORDINATION.md</code>.</p>
+      <p class="lead">The rows below preserve findings from a read-only audit snapshot of <code>main @ 179e24c</code> on 2026-11-26. They are historical, not a statement of current status after later merges; use the cited repository and official pages to review each item.</p>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Audit ID</th><th>Repo File(s)</th><th>Defect Found</th><th>Primary-Source Verified Truth</th></tr></thead>
+          <thead><tr><th>Audit ID</th><th>Repo File(s)</th><th>Defect Found</th><th>Audit Finding / Verified Truth</th><th>Source(s)</th></tr></thead>
           <tbody>{''.join(aud_rows)}</tbody>
         </table>
       </div>
@@ -753,18 +808,18 @@ def build_sources(meta: dict, sources: dict) -> str:
         )
         sections.append(
             f"<section><h2>{e(cat['name'])} ({len(cat['items'])})</h2>"
-            f'<div class="table-wrap"><table><thead><tr><th>Primary Source</th><th>Verified On</th></tr></thead>'
+            f'<div class="table-wrap"><table><thead><tr><th>Source</th><th>Checked On</th></tr></thead>'
             f"<tbody>{rows}</tbody></table></div></section>"
         )
     body = f"""
     <section class="hero">
-      <span class="hero-eyebrow">100% Primary-Source Grounded · Last Checked {e(sources['verified_on'])}</span>
-      <h1>Official Sources &amp; Verification Register</h1>
-      <p>Every factual figure, date, fare, operating schedule, and review link in <code>china-2027/</code> traces directly to the verified primary sources below (plus individual per-venue MICHELIN pages and verified social links shown in-row on the MICHELIN and Activities pages).</p>
+      <span class="hero-eyebrow">Source Register · Checked {e(meta['source_check_window'])}</span>
+      <h1>Sources &amp; Verification Register</h1>
+      <p>Official and primary sources are listed for government, museum, restaurant, and transit facts. Hotel prices are third-party Booking.com snapshots; review links are social-platform sources. Capture dates are shown per row, and venue-specific sources are linked on their MICHELIN and Activities rows.</p>
     </section>
     {''.join(sections)}
     """
-    return page_shell("sources.html", "Official Sources", "Complete categorized primary-source register verified 2026-11-26.", meta, body)
+    return page_shell("sources.html", "Sources & Verification Register", "Official sources, third-party hotel snapshots, and per-row verification dates.", meta, body)
 
 
 def main() -> None:

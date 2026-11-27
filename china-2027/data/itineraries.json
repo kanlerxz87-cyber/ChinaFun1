@@ -1,7 +1,7 @@
 {
-  "verified_on": "2026-11-26",
+  "verified_on": "2026-11-27",
   "scheduling_rules_enforced": [
-    "Anchored to start Monday 2027-02-15 (immediately after PRC Spring Festival holiday ends 2027-02-13 & make-up workday 2027-02-14), capturing the cheapest verified 7-night hotel window and avoiding early-March Beijing Two Sessions security controls.",
+    "The two in-scope examples are 7 nights and 14 days / 13 nights, begin Mon 2027-02-15, and remain inside the requested 2027-02-15 through 2027-03-23 travel window. The preferred Feb 15–18 interval is unresolved; if literal check-in/check-out dates it is only 3 nights, below the 7-night minimum.",
     "Zero Monday-closure conflicts in Beijing: Palace Museum, National Museum, Temple of Heaven interior halls, Summer Palace interior halls, and Mio are NEVER placed on Mondays (Feb 15, Feb 22, Mar 1).",
     "Zero Monday/Tuesday-closure conflicts in Shanghai: Shanghai Museum West, Yu Garden, Da Vittorio, and Sir Elly's (Mon–Tue) are NEVER placed on closed days; Monday Shanghai blocks use Shanghai Museum East (OPEN Mondays, closed Tuesdays) and The Bund (24/7).",
     "Lantern Festival (Saturday 2027-02-20) is highlighted as a special evening opportunity — while steering Yonghe Temple morning visits to a quieter weekday.",
@@ -10,55 +10,139 @@
   "options": [
     {
       "id": "ITIN-A",
-      "duration_band": "1–2 Weeks (7 Nights / 8 Days — Single-City Deep Dive)",
+      "duration_band": "1–2 Weeks (7 Nights — Single-City)",
       "title": "Option A: Beijing 7-Night Iconic Heritage & MICHELIN Week (Feb 15–22, 2027)",
-      "dates": "Mon 2027-02-15 -> Mon 2027-02-22 (exact cheapest verified 7-night hotel window)",
-      "recommended_base": "Park Plaza Beijing Wangfujing ($749/7N Genius flex) OR base-Beijing Wangfujing ($425/7N Black Friday flex) OR Grand Millennium Beijing ($838/7N Chaoyang CBD)",
+      "dates": "Check-in Mon 2027-02-15 -> checkout Mon 2027-02-22 (7 nights).",
+      "recommended_base": "Park Plaza Beijing Wangfujing ($749/7N snapshot) OR base-Beijing Wangfujing ($425/7N snapshot) OR Grand Millennium Beijing ($838/7N snapshot); each quote was captured for Feb 15–22 on 2026-11-26 and must be rechecked live.",
       "verified_cost_summary": "Hotel (7N, 2 adults): $425–$838 USD (excl. 6%–6.6% VAT). Verified attraction entry subtotal (2 adults, all 10 sights incl. low-season combos): CNY 374 base (~$52 USD; excludes Mutianyu shuttle/cable car & optional special exhibitions). Dining & flights: variable by chosen tier (see published 2-adult set totals on Restaurants page).",
       "ideal_for": "Travelers wanting a single-base 1-week trip with zero hotel changes, maximum museum/Great Wall coverage, and 3–5 MICHELIN meals.",
       "days": [
-        {"day": "Day 1 · Mon Feb 15", "theme": "Arrival, Hutongs & Sunset Panorama (Zero Monday Closures)", "morning": "Arrive PEK/PKX -> check into Dongcheng/Chaoyang base (Airport Express CNY 25 + subway CNY 3–5).", "afternoon": "Stroll Nanluoguxiang & quiet side hutongs (open 24/7, free); late-afternoon climb at Jingshan Park (06:30–20:00, CNY 4 for 2) for golden-hour views over Forbidden City.", "evening": "Casual Bib Gourmand dinner at No. 69 Fangzhuanchang Zhajiangmian or splurge welcome dinner at 1* Zijin Mansion (17:30–21:30) / 1* Fu Chun Ju (17:30–21:30) — both verified open Mondays."},
-        {"day": "Day 2 · Tue Feb 16", "theme": "Imperial Central Axis (Book 7 Days Ahead!)", "morning": "Tian'anmen Square (free w/ advance passport reservation) -> Forbidden City / Palace Museum (Tue–Sun 08:30–16:30, CNY 80–120 for 2; reserve Feb 9 at 20:00 BJT).", "afternoon": "Exit North Gate -> unwind near Wangfujing / Donghuamen or visit National Museum of China (Tue–Sun 09:00–17:00, free w/ 7-day reservation) if splitting into two museum days.", "evening": "1* Trb Hutong (verified Mon–Sun 17:30–22:00; Seasonal menu CNY 3,376 + 15% for 2) OR Peking duck across from Park Plaza at MICHELIN Selected 1949 Duck de Chine."},
-        {"day": "Day 3 · Wed Feb 17", "theme": "Mutianyu Great Wall Day Trip", "morning": "Depart 07:30 via direct tourist bus or private car to Mutianyu Great Wall (off-peak 08:00–17:30, base admission CNY 90 for 2; cable car/toboggan extra).", "afternoon": "Hike towers 14–20 (quietest winter scenery), descend via toboggan/cable car, return to central Beijing by ~16:00.", "evening": "Restorative Cantonese dinner in Chaoyang at 1* Cai Yi Xuan (Four Seasons, verified 17:30–22:00; Set for Two CNY 1,688 + 10% + 6%) OR 3* Xin Rong Ji (Xinyuan South Rd, verified 17:30–21:00)."},
-        {"day": "Day 4 · Thu Feb 18", "theme": "Temple of Heaven & Chaoyang CBD Fine Dining", "morning": "Direct Line 5 ride to Temple of Heaven (buy low-season Combo CNY 56 for 2 to enter Hall of Prayer, Tue–Sun 08:00–17:00/18:00).", "afternoon": "National Museum of China (if not visited Day 2; Tue–Sun 09:00–17:00) OR Qianmen historic street.", "evening": "Chaoyang CBD MICHELIN highlight: 3* Chao Shang Chao (CP Center), 1* GIADA Garden (China World, Degustation CNY 3,976 for 2), or ¥¥ value 1* The Beijing Kitchen (SKP) / Poetry·Wine (confirm hours by phone)."},
-        {"day": "Day 5 · Fri Feb 19", "theme": "Yonghe Lama Temple & Vegetarian Gastronomy", "morning": "Arrive 09:00 sharp at Yonghe Temple (daily 09:00–16:30, CNY 50 for 2) on a quieter weekday (avoiding Sat Feb 20 Lantern Festival queues).", "afternoon": "Walk across street to Wudaoying Hutong cafes; MICHELIN lunch at 2* King's Joy (verified Mon–Sun 11:00–22:00, 2 Wudaoying Hutong) -> afternoon stroll at nearby Confucius Temple.", "evening": "Relaxed Bib Gourmand dinner at Bao Du Jin Sheng Long (verified 17:00–21:30) or Lao Chuan Ban (Sichuan)."},
-        {"day": "Day 6 · Sat Feb 20 (Lantern Festival!)", "theme": "Summer Palace & Lantern Festival Evening", "morning": "Subway Line 4 to Summer Palace North Gate (06:30–19:00, low-season Combo CNY 100 for 2; allow 3.5–4 hr).", "afternoon": "Return mid-afternoon -> explore 798 Art District (free entry; galleries Tue–Sun 10:00–18:00) in Chaoyang.", "evening": "Lantern Festival night stroll around Qianmen/Shichahai (verify 2027 lantern schedules locally) + dinner at 1* The House of Dynasties (Rosewood, verified 17:30–22:00) or 1* Il Ristorante – Niko Romito (Bvlgari, verified 18:00–22:00)."},
-        {"day": "Day 7 · Sun Feb 21", "theme": "Sanlitun, Financial Street & Farewell Feast", "morning": "Late morning dim sum or dumplings (Bib Gourmand Bao Yuan in Chaoyang) + TaiKoo Li Sanlitun / shopping.", "afternoon": "Flex slot for any missed museum gallery or tea ceremony; souvenir packing.", "evening": "Farewell dinner: 1* Trb Hutong lunch/dinner, 1* Lei Garden (Jinbao Tower), or 2* Lamdre (confirm hours/booking in advance)."},
-        {"day": "Day 8 · Mon Feb 22", "theme": "Departure (or Connect to Shanghai HSR!)", "morning": "Check out of Beijing hotel; Capital Airport Express (CNY 25) to PEK or subway to Beijing South Railway Station for Option B."}
-      ]
+        {
+          "day": "Day 1 · Mon Feb 15",
+          "theme": "Arrival, Hutongs & Sunset Panorama (Zero Monday Closures)",
+          "morning": "Arrive PEK/PKX -> check into Dongcheng/Chaoyang base (Airport Express CNY 25 + subway CNY 3–5).",
+          "afternoon": "Stroll Nanluoguxiang & quiet side hutongs (open 24/7, free); late-afternoon climb at Jingshan Park (06:30–20:00, CNY 4 for 2) for golden-hour views over Forbidden City.",
+          "evening": "Casual Bib Gourmand dinner at No. 69 Fangzhuanchang Zhajiangmian or splurge welcome dinner at 1* Zijin Mansion (17:30–21:30) / 1* Fu Chun Ju (17:30–21:30) — both verified open Mondays."
+        },
+        {
+          "day": "Day 2 · Tue Feb 16",
+          "theme": "Imperial Central Axis (Book 7 Days Ahead!)",
+          "morning": "Tian'anmen Square (free w/ advance passport reservation) -> Forbidden City / Palace Museum (Tue–Sun 08:30–16:30, CNY 80–120 for 2; reserve Feb 9 at 20:00 BJT).",
+          "afternoon": "Exit North Gate -> unwind near Wangfujing / Donghuamen or visit National Museum of China (Tue–Sun 09:00–17:00, free w/ 7-day reservation) if splitting into two museum days.",
+          "evening": "1* Trb Hutong (verified Mon–Sun 17:30–22:00; Seasonal menu CNY 3,376 + 15% for 2) OR Peking duck across from Park Plaza at MICHELIN Selected 1949 Duck de Chine."
+        },
+        {
+          "day": "Day 3 · Wed Feb 17",
+          "theme": "Mutianyu Great Wall Day Trip",
+          "morning": "Depart 07:30 via direct tourist bus or private car to Mutianyu Great Wall (off-peak 08:00–17:30, base admission CNY 90 for 2; cable car/toboggan extra).",
+          "afternoon": "Hike towers 14–20 (quietest winter scenery), descend via toboggan/cable car, return to central Beijing by ~16:00.",
+          "evening": "Restorative Cantonese dinner in Chaoyang at 1* Cai Yi Xuan (Four Seasons, verified 17:30–22:00; Set for Two CNY 1,688 + 10% + 6%) OR 3* Xin Rong Ji (Xinyuan South Rd, verified 17:30–21:00)."
+        },
+        {
+          "day": "Day 4 · Thu Feb 18",
+          "theme": "Temple of Heaven & Chaoyang CBD Fine Dining",
+          "morning": "Direct Line 5 ride to Temple of Heaven (buy low-season Combo CNY 56 for 2 to enter Hall of Prayer, Tue–Sun 08:00–17:00/18:00).",
+          "afternoon": "National Museum of China (if not visited Day 2; Tue–Sun 09:00–17:00) OR Qianmen historic street.",
+          "evening": "Chaoyang CBD MICHELIN highlight: 3* Chao Shang Chao (CP Center), 1* GIADA Garden (China World, Degustation CNY 3,976 for 2), or ¥¥ value 1* The Beijing Kitchen (SKP) / Poetry·Wine (confirm hours by phone)."
+        },
+        {
+          "day": "Day 5 · Fri Feb 19",
+          "theme": "Yonghe Lama Temple & Vegetarian Gastronomy",
+          "morning": "Arrive 09:00 sharp at Yonghe Temple (daily 09:00–16:30, CNY 50 for 2) on a quieter weekday (avoiding Sat Feb 20 Lantern Festival queues).",
+          "afternoon": "Walk across street to Wudaoying Hutong cafes; MICHELIN lunch at 2* King's Joy (verified Mon–Sun 11:00–22:00, 2 Wudaoying Hutong) -> afternoon stroll at nearby Confucius Temple.",
+          "evening": "Relaxed Bib Gourmand dinner at Bao Du Jin Sheng Long (verified 17:00–21:30) or Lao Chuan Ban (Sichuan)."
+        },
+        {
+          "day": "Day 6 · Sat Feb 20 (Lantern Festival!)",
+          "theme": "Summer Palace & Lantern Festival Evening",
+          "morning": "Subway Line 4 to Summer Palace North Gate (06:30–19:00, low-season Combo CNY 100 for 2; allow 3.5–4 hr).",
+          "afternoon": "Return mid-afternoon -> explore 798 Art District (free entry; galleries Tue–Sun 10:00–18:00) in Chaoyang.",
+          "evening": "Lantern Festival night stroll around Qianmen/Shichahai (verify 2027 lantern schedules locally) + dinner at 1* The House of Dynasties (Rosewood, verified 17:30–22:00) or 1* Il Ristorante – Niko Romito (Bvlgari, verified 18:00–22:00)."
+        },
+        {
+          "day": "Day 7 · Sun Feb 21",
+          "theme": "Sanlitun, Financial Street & Farewell Feast",
+          "morning": "Late morning dim sum or dumplings (Bib Gourmand Bao Yuan in Chaoyang) + TaiKoo Li Sanlitun / shopping.",
+          "afternoon": "Flex slot for any missed museum gallery or tea ceremony; souvenir packing.",
+          "evening": "Farewell dinner: 1* Trb Hutong lunch/dinner, 1* Lei Garden (Jinbao Tower), or 2* Lamdre (confirm hours/booking in advance)."
+        },
+        {
+          "day": "Day 8 · Mon Feb 22",
+          "theme": "Departure (or Connect to Shanghai HSR!)",
+          "morning": "Check out of Beijing hotel; Capital Airport Express (CNY 25) to PEK or subway to Beijing South Railway Station for Option B."
+        }
+      ],
+      "nights": 7,
+      "check_in": "2027-02-15",
+      "check_out": "2027-02-22"
     },
     {
       "id": "ITIN-B",
-      "duration_band": "1–2 Weeks (14 Days / 13 Nights — Flagship Dual-City)",
-      "title": "Option B: Beijing (7N) + High-Speed Rail + Shanghai (6N) Dual-City Signature (Feb 15–28, 2027)",
-      "dates": "Mon 2027-02-15 -> Sun 2027-02-28 (or Mon Mar 1 for 7N+7N = 14N)",
-      "recommended_base": "Beijing 7N: Park Plaza Wangfujing ($749) or base-Beijing ($425) -> Fuxing G-Train (4.5–5.5 hr, CNY 1,100–1,340 for 2) -> Shanghai 6–7N: Radisson Blu New World (~$921/7N), Grand Central ($901/7N), or Pullman Jing'an ($621–$707/7N).",
-      "verified_cost_summary": "Hotels (14N across both cities, 2 adults): ~$1,046–$1,759 USD (based on verified Feb 15–22 7N troughs; re-quote exact Shanghai Feb 22–Mar 1 dates before finalizing). HSR 2nd Class (2 adults, 1-way): CNY 1,100–1,340 (~$155–$190 USD). Verified attractions in both cities: Beijing CNY 374 + Shanghai CNY 424 (Yu Garden daytime CNY 60 + Bund ferry CNY 4 + Shanghai Tower 118F CNY 360; both Shanghai Museums free permanent galleries).",
-      "ideal_for": "Our flagship 2-week recommendation: imperial history + Great Wall in Beijing paired seamlessly via bullet train with Shanghai's art deco Bund, Met jewelry exhibition, and 50-star culinary powerhouse.",
+      "duration_band": "1–2 Weeks (14 Days / 13 Nights — Dual-City)",
+      "title": "Option B: Beijing (7N) + High-Speed Rail + Shanghai (6N) — 14-Day / 13-Night Dual-City Plan (Feb 15–28, 2027)",
+      "dates": "Check-in Mon 2027-02-15 -> checkout Sun 2027-02-28 (13 nights: Beijing Feb 15–22, 7N; Shanghai Feb 22–28, 6N). This is a separate 14-day proposal; the meaning of the preferred Feb 15–18 interval remains unresolved.",
+      "recommended_base": "Beijing 7N (Option A shortlist) -> Fuxing G-Train -> Shanghai 6N. Exact Shanghai hotel totals for 2027-02-22 -> 2027-02-28 were not captured; do not substitute a different week, a 7-night reference rate, or a prorated total. Re-quote exact dates before booking.",
+      "verified_cost_summary": "Hotel total for all 13 nights: NOT VERIFIED — no exact Shanghai 6-night total for 2027-02-22 -> 2027-02-28 was captured, so no combined total is inferred. One-way Beijing–Shanghai 2nd-class HSR: CNY 1,100–1,340 for 2 adults (official source). Published attraction admission references: Beijing CNY 374 + Shanghai CNY 424 for 2; excludes unpriced Mutianyu cable-car/toboggan add-ons and any special exhibitions.",
+      "ideal_for": "Couples choosing the full 14-day / 13-night two-city example: seven nights in Beijing and six in Shanghai. Exact Shanghai hotel rates for the six-night stay and hotel-to-venue route times remain unverified.",
       "days": [
-        {"day": "Days 1–7 · Mon Feb 15 – Sun Feb 21", "theme": "Full Beijing Week (Same Zero-Conflict Core as Option A)", "morning": "Complete Forbidden City, Tian'anmen, Temple of Heaven, Mutianyu Great Wall, Yonghe Temple, Summer Palace, 798 Art District, and Beijing Lantern Festival (Sat Feb 20).", "afternoon": "Enjoy Beijing's 33-star MICHELIN landscape across Dongcheng & Chaoyang (e.g., 3* Xin Rong Ji, 2* King's Joy, 1* Cai Yi Xuan, 1* Trb Hutong, 1* Fu Chun Ju).", "evening": "Pack Sunday night for smooth Monday morning high-speed rail departure."},
-        {"day": "Day 8 · Mon Feb 22", "theme": "Fuxing Bullet Train Beijing -> Shanghai + Bund Lights (Zero Monday Closures!)", "morning": "Depart Beijing South Railway Station on Fuxing G-train (~08:00–09:00; 4.5–5.5 hr; CNY 550–670/pp 2nd class; book 15 days ahead on 12306.cn).", "afternoon": "Arrive Shanghai Hongqiao -> direct Metro Line 2 to People's Square / Huangpu hotel! Afternoon visit to Shanghai Museum East (Pudong, Line 2 — OPEN MONDAYS 10:00–18:00, free permanent galleries + Met Museum 'Jewelry: The Body Transformed' special exhibition running Nov 2026–May 2027!).", "evening": "Sunset walk on The Bund (winter lights 17:00–21:00 sharp, free) -> dinner at 2* Fu He Hui (verified Mon–Sun 17:30–21:00) or Bib Gourmand Rongjia Yellow Croaker Noodles (confirm hours)."},
-        {"day": "Day 9 · Tue Feb 23", "theme": "People's Square Museum, Yu Garden & Bund Michelin Dining", "morning": "Shanghai Museum on People's Square (West, Tue–Sun 09:00–17:00, free; across from Radisson Blu).", "afternoon": "Metro Line 10 to Yu Garden (Tue–Sun 09:00–16:30, off-season CNY 60 for 2) + Yuyuan Bazaar Nine-Turn Bridge & xiaolongbao snacks.", "evening": "Bund dining: 2* Da Vittorio (BFC, verified Tue–Sun 18:00–21:30), 2* Imperial Treasure (Yi Feng Galleria), or 1* Yi Long Court (Peninsula Shanghai, Chef's Tasting CNY 1,976 + 16.6% for 2)."},
-        {"day": "Day 10 · Wed Feb 24", "theme": "Former French Concession, Canton 8 Value 2-Star & Peninsula Skyline", "morning": "Walk Former French Concession tree-lined streets (Wukang Rd, Anfu Rd, Sinan Mansions); coffee & local breakfast.", "afternoon": "Book lunch at famous ¥¥ 2* Canton 8 (Huangpu) OR Peninsula 1* Yi Long Court Dim Sum Lunch Set (CNY 596 base / CNY 694.94 all-in for 2 — incredible Michelin lunch value!).", "evening": "Evening fine dining with Bund terrace views at MICHELIN Selected Sir Elly's (Peninsula 13F, verified Wed–Sun 18:00–22:30; 5-Course CNY 2,576 + 16.6% for 2)."},
-        {"day": "Day 11 · Thu Feb 25", "theme": "Huangpu CNY 2 Ferry, Pudong Lujiazui & Shanghai Tower (Weather-Flex Day)", "morning": "Take the CNY 2 public Huangpu River Ferry from East Jinling Rd to Dongchang Rd (CNY 4 round-trip for 2) into Lujiazui.", "afternoon": "Ascend Shanghai Tower 118F Observatory (CNY 360 for 2; pick clearest day of Days 10–13!) + riverside promenade walk.", "evening": "Highlight culinary splurge: Shanghai's sole 3* Taian Table (Changning; reserve weeks ahead via sh.taian-table.cn) OR 2* The House of Rong (I.M. Pei mansion, Jing'an)."},
-        {"day": "Day 12 · Fri Feb 26", "theme": "Jing'an Temple, Bib Gourmand Noodle Crawl & Optional Yuyuan Night Tour", "morning": "Jing'an district exploration + Bib Gourmand lunch at Lao Di Fang Mian Guan (107 Sinan Rd) or Rongjia Yellow Croaker Noodles (688 W Nanjing Rd).", "afternoon": "Xintiandi shikumen architecture, shopping, or optional afternoon tea.", "evening": "Optional Yu Garden Night Tour (verified winter/spring Fri–Sun 18:00–21:20, CNY 300–436 for 2) followed by 2* T'ang Court (Langham Xintiandi) or 2* Bao Li Xuan (Bvlgari)."},
-        {"day": "Day 13 · Sat Feb 27", "theme": "Flex Culture, Last-Minute Shopping & Farewell Dinner", "morning": "Revisit favorite neighborhood (Rockbund art galleries, Tianzifang, or M50 — verify specific gallery hours before going).", "afternoon": "Packing & souvenir shopping on Nanjing Rd / Xintiandi.", "evening": "Farewell Shanghai celebration: 2* 8 ½ Otto e Mezzo Bombana (Rockbund) or 2* Ji Pin Court (Xuhui)."},
-        {"day": "Day 14 · Sun Feb 28 (or Mon Mar 1)", "theme": "Departure from Shanghai Pudong (PVG) or Hongqiao (SHA)", "morning": "Direct Metro Line 2 or Maglev+Metro pass (CNY 55/pp) or Airport Link Line (CNY 26/pp) to PVG/SHA for flight home."}
-      ]
-    },
-    {
-      "id": "ITIN-C",
-      "duration_band": "2–4 Weeks (21 Days / 20 Nights — Unhurried Deep Dive + Flex Week)",
-      "title": "Option C: 3-Week Grand China Itinerary — Beijing (7N) + Shanghai (7N) + Optional Regional Extension (6N)",
-      "dates": "Mon 2027-02-15 -> Mon 2027-03-08 (fits squarely inside 2027-02-15 to 2027-03-23 window)",
-      "recommended_base": "Beijing 7N (base-Beijing $425 w/ in-unit washer is a huge win for a 3-week trip!) + Shanghai 7N (Pullman Jing'an $707 flex or Radisson Blu $921 flex) + 6N Optional Extension (ONLY after traveler chooses city!).",
-      "verified_cost_summary": "Verified Beijing (7N) + Shanghai (7N) core hotels: ~$1,046–$1,759 USD. Week 3 regional extension hotels, rail fares & attraction hours are NOT YET VERIFIED and explicitly flagged pending traveler city selection.",
-      "ideal_for": "Travelers taking 2–4 weeks who want slow pacing, rest days between big tasting menus, in-unit laundry, and an optional third cultural or scenic region.",
-      "days": [
-        {"day": "Week 1 · Feb 15–22 (7 Nights)", "theme": "Beijing at an Unhurried Pace", "morning": "All 10 Beijing attractions spread gently across 7 full days — never stacking two giant palaces on one day, adding extra hutong coffee/tea mornings and a built-in rest day after Mutianyu.", "afternoon": "Space out 3–5 MICHELIN meals (3* Xin Rong Ji / Chao Shang Chao, 2* King's Joy, 1* Cai Yi Xuan, 1* Trb Hutong) so palate fatigue never sets in.", "evening": "In-unit laundry at base-Beijing Wangfujing ($425/7N) keeps luggage light before Week 2."},
-        {"day": "Week 2 · Feb 22–Mar 1 (7 Nights)", "theme": "Shanghai Culinary, Museum & Architecture Deep Dive", "morning": "HSR Beijing -> Shanghai Mon Feb 22; full 7 nights to enjoy BOTH Shanghai Museum West & East (Met jewelry show), Yu Garden daytime + Fri/Sat Night Tour, Bund + Shanghai Tower on the clearest day, and Former French Concession.", "afternoon": "Room for 1–2 easy HSR day trips from Shanghai (OPTIONAL IDEAS — NOT YET VERIFIED: Suzhou classical gardens ~30 min HSR, or Hangzhou West Lake ~45–60 min HSR; request verification before locking).", "evening": "Experience Shanghai's full spectrum from ¥ Bib Gourmand noodles to ¥¥ 2* Canton 8, 1* Yi Long Court dim sum, 2* Da Vittorio, and 3* Taian Table."},
-        {"day": "Week 3 · Mar 1–8 (6–7 Nights — OPTIONAL EXTENSION)", "theme": "Traveler Choice Module (Flagged for Decision Before Verification)", "morning": "OPTION 1 (History): Xi'an (Terracotta Warriors, Ancient City Wall, Muslim Quarter — overnight sleeper or HSR from Beijing BEFORE Shanghai).", "afternoon": "OPTION 2 (Food & Pandas): Chengdu & Chongqing (Sichuan MICHELIN Guide + Giant Panda Base — direct HSR/flight).", "evening": "OPTION 3 (Stay Slow in Beijing/Shanghai): Extend 10N Beijing + 10N Shanghai using only verified properties & zero extra domestic flights."}
-      ]
+        {
+          "day": "Days 1–7 · Mon Feb 15 – Sun Feb 21",
+          "theme": "Full Beijing Week (Same Zero-Conflict Core as Option A)",
+          "morning": "Complete Forbidden City, Tian'anmen, Temple of Heaven, Mutianyu Great Wall, Yonghe Temple, Summer Palace, 798 Art District, and Beijing Lantern Festival (Sat Feb 20).",
+          "afternoon": "Enjoy Beijing's 33-star MICHELIN landscape across Dongcheng & Chaoyang (e.g., 3* Xin Rong Ji, 2* King's Joy, 1* Cai Yi Xuan, 1* Trb Hutong, 1* Fu Chun Ju).",
+          "evening": "Pack Sunday night for smooth Monday morning high-speed rail departure."
+        },
+        {
+          "day": "Day 8 · Mon Feb 22",
+          "theme": "Fuxing Bullet Train Beijing -> Shanghai + Bund Lights (Zero Monday Closures!)",
+          "morning": "Depart Beijing South Railway Station on Fuxing G-train (~08:00–09:00; 4.5–5.5 hr; CNY 550–670/pp 2nd class; book 15 days ahead on 12306.cn).",
+          "afternoon": "Arrive Shanghai Hongqiao -> direct Metro Line 2 to People's Square / Huangpu hotel! Afternoon visit to Shanghai Museum East (Pudong, Line 2 — OPEN MONDAYS 10:00–18:00, free permanent galleries + Met Museum 'Jewelry: The Body Transformed' special exhibition running Nov 2026–May 2027!).",
+          "evening": "Sunset walk on The Bund (winter lights 17:00–21:00 sharp, free) -> dinner at 2* Fu He Hui (verified Mon–Sun 17:30–21:00) or Bib Gourmand Rongjia Yellow Croaker Noodles (confirm hours)."
+        },
+        {
+          "day": "Day 9 · Tue Feb 23",
+          "theme": "People's Square Museum, Yu Garden & Bund Michelin Dining",
+          "morning": "Shanghai Museum on People's Square (West, Tue–Sun 09:00–17:00, free; across from Radisson Blu).",
+          "afternoon": "Metro Line 10 to Yu Garden (Tue–Sun 09:00–16:30, off-season CNY 60 for 2) + Yuyuan Bazaar Nine-Turn Bridge & xiaolongbao snacks.",
+          "evening": "Bund dining: 2* Da Vittorio (BFC, verified Tue–Sun 18:00–21:30), 2* Imperial Treasure (Yi Feng Galleria), or 1* Yi Long Court (Peninsula Shanghai, Chef's Tasting CNY 1,976 + 16.6% for 2)."
+        },
+        {
+          "day": "Day 10 · Wed Feb 24",
+          "theme": "Former French Concession, Canton 8 Value 2-Star & Peninsula Skyline",
+          "morning": "Walk Former French Concession tree-lined streets (Wukang Rd, Anfu Rd, Sinan Mansions); coffee & local breakfast.",
+          "afternoon": "Book lunch at famous ¥¥ 2* Canton 8 (Huangpu) OR Peninsula 1* Yi Long Court Dim Sum Lunch Set (CNY 596 base / CNY 694.94 all-in for 2 — incredible Michelin lunch value!).",
+          "evening": "Evening fine dining with Bund terrace views at MICHELIN Selected Sir Elly's (Peninsula 13F, verified Wed–Sun 18:00–22:30; 5-Course CNY 2,576 + 16.6% for 2)."
+        },
+        {
+          "day": "Day 11 · Thu Feb 25",
+          "theme": "Huangpu CNY 2 Ferry, Pudong Lujiazui & Shanghai Tower (Weather-Flex Day)",
+          "morning": "Take the CNY 2 public Huangpu River Ferry from East Jinling Rd to Dongchang Rd (CNY 4 round-trip for 2) into Lujiazui.",
+          "afternoon": "Ascend Shanghai Tower 118F Observatory (CNY 360 for 2; pick clearest day of Days 10–13!) + riverside promenade walk.",
+          "evening": "Highlight culinary splurge: Shanghai's sole 3* Taian Table (Changning; reserve weeks ahead via sh.taian-table.cn) OR 2* The House of Rong (I.M. Pei mansion, Jing'an)."
+        },
+        {
+          "day": "Day 12 · Fri Feb 26",
+          "theme": "Jing'an Temple, Bib Gourmand Noodle Crawl & Optional Yuyuan Night Tour",
+          "morning": "Jing'an district exploration + Bib Gourmand lunch at Lao Di Fang Mian Guan (107 Sinan Rd) or Rongjia Yellow Croaker Noodles (688 W Nanjing Rd).",
+          "afternoon": "Xintiandi shikumen architecture, shopping, or optional afternoon tea.",
+          "evening": "Optional Yu Garden Night Tour (verified winter/spring Fri–Sun 18:00–21:20, CNY 300–436 for 2) followed by 2* T'ang Court (Langham Xintiandi) or 2* Bao Li Xuan (Bvlgari)."
+        },
+        {
+          "day": "Day 13 · Sat Feb 27",
+          "theme": "Flex Culture, Last-Minute Shopping & Farewell Dinner",
+          "morning": "Revisit favorite neighborhood (Rockbund art galleries, Tianzifang, or M50 — verify specific gallery hours before going).",
+          "afternoon": "Packing & souvenir shopping on Nanjing Rd / Xintiandi.",
+          "evening": "Farewell Shanghai celebration: 2* 8 ½ Otto e Mezzo Bombana (Rockbund) or 2* Ji Pin Court (Xuhui)."
+        },
+        {
+          "day": "Day 14 · Sun Feb 28",
+          "theme": "Check out and depart Shanghai (airport / flight time unconfirmed)",
+          "morning": "Check out of the Shanghai hotel and travel to the confirmed departure airport. The airport, flight time, and exact transfer are not provided; verify the current official route and fare after flight details are known."
+        }
+      ],
+      "nights": 13,
+      "check_in": "2027-02-15",
+      "check_out": "2027-02-28"
     }
   ]
 }
