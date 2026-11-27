@@ -968,3 +968,18 @@ A required `git pull --rebase origin main` during this session encountered a `CO
 - GitHub Pages: **built**, source `main` / root, https://kanlerxz87-cyber.github.io/ChinaFun1/ — live before and after this session (no build step; `.nojekyll` present).
 - Root pages: 8 HTML pages, 0 broken internal links, all with `<title>` + viewport (local check, 2026-11-27).
 - Irregularities carried forward unchanged from `1ac7826d` and `e46f5d6a` (see `flagged.html`); no new irregularities found in this review.
+
+---
+
+# Session `e88a0fd1` — PR #36 merge & Pages deploy record
+
+**Branch:** `arena/e88a0fd1-chinafun1` (fast-forwarded to `main` @ `d16c103`)
+**Claimed:** 2026-11-27 · **Status:** done
+
+| Item | Result |
+|---|---|
+| Pull request | https://github.com/kanlerxz87-cyber/ChinaFun1/pull/36 — `arena/e88a0fd1-chinafun1` → `main`, merged 2026-11-27 via `gh pr merge 36 --merge`, merge commit `d16c103` |
+| Contents | Session e88a0fd1 root Beijing planner review: COORDINATION.md session record appended (audit of 33/33 starred, 32 Bib Gourmand + 42 MICHELIN Selected, 13/33 verified starred hours, 4/33 official 2-adult menu prices, 18/33 starred restaurants with ≥1 direct verified YouTube link; all 10 activities with verified video links); T9/T10/T11 retained as needs review. No data values inferred or filled; all blanks stay blank and flagged. |
+| Sources re-verified (2026-11-27) | MICHELIN Guide 2027 Beijing & Tianjin release — https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection ; Palace Museum visit page — https://intl.dpm.org.cn/visit.html. Both match repo data exactly. |
+| GitHub Pages | source `main` / root — https://kanlerxz87-cyber.github.io/ChinaFun1/ ; Pages build for `d16c103` completed `built`; live cache-busted fetch of `/` returned HTTP 200 with the merged executive summary; 8 root pages, 0 broken internal links, `<title>` + viewport on all |
+| Irregularities | None new; all flagged items remain published on `flagged.html` and do not block the merge |
