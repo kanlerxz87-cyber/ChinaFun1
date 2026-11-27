@@ -1,26 +1,26 @@
 {
-  "compiled": "2026-11-25",
+  "compiled": "2026-11-27",
   "flags": [
     {
       "id": "I-01",
-      "severity": "high",
-      "item": "Four plans, two cities",
-      "detail": "Beijing (root) and three Shanghai plans reach different cheapest totals; the brief never named a city. No integration may present one as 'the' answer.",
-      "source": "../README.md"
+      "severity": "low",
+      "item": "Decision-hub inventory was stale (resolved)",
+      "detail": "The previous decision layer listed four single-city studies and omitted the later dual-city Beijing + Shanghai dashboard. This integration update adds it as a fifth research dashboard; the source studies remain separate and their rates are not merged.",
+      "source": "../china-2027/index.html"
     },
     {
       "id": "I-02",
       "severity": "high",
       "item": "Preferred window is 3 nights",
-      "detail": "15–18 Feb 2027 conflicts with the requested 1–2 week trip; all plans silently extended it to 15–22 Feb.",
+      "detail": "15–18 Feb 2027 is only three nights and cannot meet the requested 1–2-week duration. Candidate dashboards instead price 15–22 Feb (seven nights), and explicitly flag this as an alternative rather than a fit to the preferred window.",
       "source": "../README.md"
     },
     {
       "id": "I-03",
       "severity": "high",
-      "item": "No live re-pricing in this pass",
-      "detail": "Every hotel figure here is a 25 Nov 2026 snapshot owned by an earlier session. This session did not quote a new rate and must not be read as confirming one.",
-      "source": "data/price_windows.json"
+      "item": "Hotel prices are dated OTA snapshots",
+      "detail": "Prices in this decision layer were captured across 25–26 Nov 2026 by different research sessions, not re-quoted live on 27 Nov. Room types, promotion eligibility, cancellation terms, and tax/service treatment differ; use each source link and re-check the exact rate before booking.",
+      "source": "../china-2027/hotels.html"
     },
     {
       "id": "I-04",
@@ -81,9 +81,9 @@
     {
       "id": "I-12",
       "severity": "high",
-      "item": "Holiday calendar unsourced at primary level",
-      "detail": "All plans rely on secondary sources for the 5–13 Feb 2027 break and a 14 Feb make-up workday; the State Council notice was not located.",
-      "source": "../shanghai-verified-2027/flagged.html"
+      "item": "Make-up workdays are not stated on the cited official holiday page",
+      "detail": "The official State Council English page verifies the Spring Festival holiday as 5–13 Feb 2027, but it does not list make-up workdays. The proposed 31 Jan and 14 Feb make-up dates remain unverified by this cited page; older sibling pages repeat them and need a primary-source check.",
+      "source": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html"
     },
     {
       "id": "I-13",
