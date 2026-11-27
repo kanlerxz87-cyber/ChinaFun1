@@ -913,7 +913,7 @@ Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / 
 # Session `e411628d` — final decision-layer integration audit
 
 **Branch:** `arena/e411628d-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
-**Claimed:** 2026-11-27 · **Status:** done (PR #37 open; merge and Pages deploy pending)
+**Claimed:** 2026-11-27 · **Status:** done (PR #37 merged; Pages built and live)
 **File scope:** `integration-2027/**` and this appended section of `COORDINATION.md` only. Other plan directories and root pages remain read-only.
 
 | # | Task | Status | Verification / output |
@@ -924,7 +924,8 @@ Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / 
 
 ### Publication
 
-- PR #37: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/37 — open, mergeable; `gh pr checks 37` reports no checks on the branch. Local validators above all pass. Merge and GitHub Pages build result will be added after publication.
+- PR #37: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/37 — merged 2026-11-27T19:55:20Z with merge commit `f9f2fa39965c4632d7e02d0a31f00810b8f91d9f` (`gh pr merge 37 --merge`). No branch checks were reported; all local validators passed.
+- GitHub Pages run [46060046575](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46060046575) completed successfully; Pages API reports `built` at the same merge commit. Cache-busted live page check at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=f9f2fa39965c4632d7e02d0a31f00810b8f91d9f showed the five-dashboard update. The workflow emitted only the informational Node.js 20 deprecation annotation.
 
 ### Cross-scope review requests (not edited under this claim)
 
