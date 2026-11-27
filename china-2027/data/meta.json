@@ -1,23 +1,26 @@
 {
   "title": "China 2027 Verified Trip Planner — Beijing & Shanghai",
   "subtitle": "Primary-Source Verified Hotels, MICHELIN Dining, Activities, Multi-Platform Reviews & Itineraries for Two Adults",
-  "last_verified": "2026-11-26",
-  "session_id": "f8e7ee9e",
-  "branch": "arena/f8e7ee9e-chinafun1",
+  "last_verified": "2026-11-27",
+  "session_id": "311cf896",
+  "branch": "arena/311cf896-chinafun1",
   "scope_note": "Self-contained dual-city verified study published under china-2027/ alongside sibling single-city and social-audit directories in this repository.",
   "trip_brief": {
     "travelers": "2 adults",
-    "travel_window": "2027-02-15 to 2027-03-23 (36 days)",
-    "preferred_start": "2027-02-15 to 2027-02-18 (flagged: 3 nights as a literal window vs 1-2 week / 2-4 week trip options)",
+    "travel_window": "2027-02-15 to 2027-03-23",
+    "preferred_start": "2027-02-15 to 2027-02-18; meaning unresolved. If interpreted as check-in Feb 15 and checkout Feb 18, that is 3 nights, shorter than the requested 7-night minimum. No interpretation is assumed.",
     "target_durations": [
-      "1-2 weeks (7 to 14 nights)",
-      "2-4 weeks (15 to 28 nights)"
+      "1–2 weeks (7–14 days; current examples: 7 nights and 14 days / 13 nights)"
     ],
-    "hotel_requirements": "Private/attached bathroom; queen bed or larger (king); ranked by price, location, amenities, and proximity to MICHELIN restaurants by subway/bus; 7-night total price shown for cheapest upcoming dates.",
+    "hotel_requirements": "Requested: private/attached bathroom and a queen or king bed; target hotel-to-restaurant/activity journeys of 60 minutes or less by subway/bus. No exact hotel-to-venue routes have been verified, so no property is certified for the time limit and the displayed order is provisional. Prices are dated Booking.com 7-night quote snapshots for specified stay dates; the 13-night total and cheapest date to purchase are not established.",
     "cities_covered": [
-      "Beijing (33/33 MICHELIN 2027 starred directly verified + 8 Bib Gourmand/Selected + 10 gov-verified activities + 8 multi-window hotels)",
-      "Shanghai (live MICHELIN guide counts 1x3*, 11x2*, 38x1* = 50 starred + 15 directly verified restaurants + 6 gov/operator-verified activities + 5 multi-window hotels)"
-    ]
+      "Beijing (33/33 MICHELIN 2027 starred directly verified + 8 Bib Gourmand/Selected + 10 government-verified activities + 8 hotel quote listings)",
+      "Shanghai (live MICHELIN guide counts 1x3*, 11x2*, 38x1* = 50 starred + 15 directly verified restaurants + 6 government/operator-verified activities + 5 hotel quote listings)"
+    ],
+    "travel_window_start": "2027-02-15",
+    "travel_window_end": "2027-03-23",
+    "minimum_nights": 7,
+    "maximum_nights": 13
   },
   "calendar_2027": {
     "source_title": "State Council General Office — 2027 Public Holiday Schedule (published 2026-11-06)",
@@ -28,11 +31,15 @@
     "makeup_workdays": "2027-01-31 (Sun) and 2027-02-14 (Sun)",
     "lantern_festival": "2027-02-20 (Sat) — 15th day of Lunar Month 1 (festive evening lanterns in Beijing & Shanghai Yuyuan; not a statutory bank holiday)",
     "qingming_holiday": "2027-04-03 (Sat) to 2027-04-05 (Mon)",
-    "key_implication": "Zero PRC statutory holidays fall inside 2027-02-15 to 2027-03-23. Starting 2027-02-15 or 2027-02-18 arrives right after the 9-day Spring Festival break ends (Feb 13) and catches Lantern Festival (Feb 20) while capturing the lowest verified Feb hotel rates before mid-March price spikes (+15% to +56%).",
+    "key_implication": "The official Spring Festival public holiday ended Feb 13; the Hong Kong Observatory calendar places Lantern Festival on Feb 20. If the stated preferred Feb 15–18 interval means check-in Feb 15 and checkout Feb 18, it is 3 nights and below the 7-night minimum; its meaning remains unresolved. The 7-night and 14-day / 13-night examples include Feb 20, but that does not imply a flexible-start interpretation. Hotel stay-date comparisons vary: Grand Millennium Beijing was captured at $783 for Mar 1–8 and $838 for Feb 15–22. No purchase date is recommended.",
     "calendar_risks": [
       "Post-Chunyun return travel (Feb 14-21): High-speed rail tickets on Beijing-Shanghai corridors can sell quickly right after Spring Festival; book on 12306 the day tickets release (typically 15 days before departure — confirm exact 2027 window on 12306.cn).",
       "Early March NPC/CPPCC ('Two Sessions') in Beijing: Annual parliamentary meetings typically convene in early March, creating heightened security checks around Tian'anmen Square, Great Hall of the People, and Chang'an Avenue. Touring central Beijing in Feb 15-22 avoids early-March central-axis disruptions."
-    ]
+    ],
+    "makeup_workdays_source_url": "https://english.beijing.gov.cn/latest/news/202611/t20261109_4937887.html",
+    "makeup_workdays_verified_on": "2026-11-27",
+    "lantern_festival_source_url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
+    "lantern_festival_verified_on": "2026-11-27"
   },
   "transit_official": {
     "hsr_beijing_shanghai": {
@@ -101,5 +108,10 @@
       "verified_price_totals_2_adults": 2,
       "source_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred"
     }
-  }
+  },
+  "source_check_window": "2026-11-25–27; individual source and quote dates apply.",
+  "cities_covered": [
+    "Beijing (33/33 MICHELIN 2027 starred directly verified + 8 Bib Gourmand/Selected + 10 government-verified activities + 8 hotel quote snapshots)",
+    "Shanghai (live MICHELIN guide counts 1x3*, 11x2*, 38x1* = 50 starred + 15 directly verified restaurants + 6 government/operator-verified activities + 5 hotel quote snapshots)"
+  ]
 }
