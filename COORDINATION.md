@@ -829,3 +829,20 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 | A3 | Fix broken activity URLs, Temple of Heaven hours, State Council 2027 holiday source, Rome2rio times & hotel Booking/VAT caveats | **done** | `assets/data.js`, `activities.html`, `hotels.html`, `itinerary.html`, `flagged.html` | Replaced failing `/visitingbeijing/touristattractions/` & `/visit/tickets_reservation/` URLs with working `english.beijing.gov.cn`, `en.chnmuseum.cn/visit_692/`, `en.mutianyugreatwall.com`; verified State Council 2027 holiday decree (`english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html`: Feb 5–13 Spring Festival); corrected Temple of Heaven low-season inner-hall hours (`08:00–17:00, last 16:30`); corrected Rome2rio legs (`51m`, `54m`, `58m`); fixed `assets/app.js` Xicheng hotel filter (`startsWith`); recorded live Booking queen/king totals (`XinQiao $568`, `HI Express $536`, `Sunworld $502` selectable bed note, `Park Hyatt $2,297`, `Orchid $1,194/$1,327` vs `$1,025` full-bed Courtyard), VAT exclusions, and `Four Seasons` marble bath. |
 | A4 | Clean & expand social links + link `china-2027/` | **done** | `assets/data.js`, `assets/app.js`, `index.html`, `README.md`, `decisions.html`, `michelin.html` | Removed unrelated Palace Museum IG post (`CvC7yL1yQx7`, lotus flower photo) and off-city Chao Shang Chao video (`tIBbLQB8Ueo`); added watch/oEmbed-verified YT links (`Yok9qkb4bKw`, `I9xaH24FLnc`, `jaZr6qWh0s0`, `9wni9YGzaTg`, `lC4m_VLOdCY`, `rj5Erb_3gIo`) and kept verified IG (`@chef1996restaurant`, `@oldtower_beijing`, `Cq2w9ssgcDW`) & TikTok (`@wadeandtaylor/video/7429005950222257454`). Added `china-2027/index.html` (`China 2027 Dual-City`) to Companion Plans nav, root overview, and `README.md`. Displayed `r.note` flags inside MICHELIN table rows. |
 | A5 | Final repo-wide check, PR, merge & Pages verification | **done** | `README.md`, `COORDINATION.md`, PR/Pages | Verified all 4 repo checkers (`check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, `china-2027/tools/check.py`), Node syntax & simulated DOM render across all 8 root pages, full HTML link scan (`broken=0`), `git diff --check`, PR merge to `main`, and live Pages check. |
+
+---
+
+# Session `311cf896` — final integration: keep the consolidated plan inside the requested 1–2 week window
+
+**Branch:** `arena/311cf896-chinafun1` (fixed active Arena branch; base `9e0f598`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**File scope:** this appended `COORDINATION.md` section; `china-2027/data/audit_and_planning.json`, `china-2027/data/itineraries.json`, `china-2027/README.md`, and the generated `china-2027/index.html`, `china-2027/questions.html`, `china-2027/itineraries.html` only. The prior sessions are complete; this is the final integration pass. Root index/navigation and all other plan/data scopes remain untouched.
+
+| Task | Status | Verification rule |
+|---|---|---|
+| R1 Claim + board review | **in progress** | Read `COORDINATION.md`; confirmed no active claim on `china-2027/**`. |
+| R2 Align consolidated decision paths with the user's 1–2 week limit and date window | unclaimed | Use only the user's stated constraints and existing official-source-backed itinerary facts; remove or clearly mark longer options as out of scope, not as recommended choices. |
+| R3 Rebuild and run all repo validators/link checks | unclaimed | Deterministic generator output; all existing checkers and full local-reference scan pass. |
+| R4 Publish final integration via this fixed branch's PR and verify Pages | unclaimed | PR merged only after checks pass; confirm successful Pages deploy and record links/results. |
+
+**Initial finding (not yet corrected):** the consolidated planner currently offers 20–28-day / 2–4-week options and a 21-day itinerary, although the request caps the trip at 1–2 weeks. The preferred dates, 15–18 Feb 2027, are three nights if interpreted literally; this conflicts with the minimum one-week duration. No duration/date choice is being inferred. This pass will surface that conflict and limit the recommended paths to the user's stated range.
