@@ -925,7 +925,11 @@ Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / 
 ### Publication
 
 - PR #37: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/37 — merged 2026-11-27T19:55:20Z with merge commit `f9f2fa39965c4632d7e02d0a31f00810b8f91d9f` (`gh pr merge 37 --merge`). No branch checks were reported; all local validators passed.
-- GitHub Pages run [46060046575](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46060046575) completed successfully; Pages API reports `built` at the same merge commit. Cache-busted live page check at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=f9f2fa39965c4632d7e02d0a31f00810b8f91d9f showed the five-dashboard update. The workflow emitted only the informational Node.js 20 deprecation annotation.
+- GitHub Pages run [46060046575](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46060046575) completed successfully; Pages API reports `built` at the same merge commit. Cache-busted live page check at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=f9f2fa39965c4632d7e02d0a31f00810b8f91d9f showed the five-dashboard update. The follow-up record-only PR #38 (https://github.com/kanlerxz87-cyber/ChinaFun1/pull/38) merged 2026-11-27T19:56:21Z at `08ee85546cce1626faa5cfc67a8d6ed6f8aa8788`; Pages run [46060161914](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46060161914) also completed successfully. A cache-busted fetch at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=08ee85546cce1626faa5cfc67a8d6ed6f8aa8788 served the final five-dashboard page. The workflow emitted only the informational Node.js 20 deprecation annotation.
+
+### Coordination note
+
+A required `git pull --rebase origin main` during this session encountered a `COORDINATION.md` append conflict after session `e46f5d6a` merged PR #32. Resolution retained the complete `e46f5d6a` record and this session's section; no other session's changes were discarded. Rebase then completed, followed by PR #37 and the documentation-only PR #38.
 
 ### Cross-scope review requests (not edited under this claim)
 
