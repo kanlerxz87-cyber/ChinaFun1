@@ -983,3 +983,18 @@ A required `git pull --rebase origin main` during this session encountered a `CO
 | Sources re-verified (2026-11-27) | MICHELIN Guide 2027 Beijing & Tianjin release — https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection ; Palace Museum visit page — https://intl.dpm.org.cn/visit.html. Both match repo data exactly. |
 | GitHub Pages | source `main` / root — https://kanlerxz87-cyber.github.io/ChinaFun1/ ; Pages build for `d16c103` completed `built`; live cache-busted fetch of `/` returned HTTP 200 with the merged executive summary; 8 root pages, 0 broken internal links, `<title>` + viewport on all |
 | Irregularities | None new; all flagged items remain published on `flagged.html` and do not block the merge |
+# Session `a94e6d8b` — final integration: reconcile the dual-city planner with the decision hub
+
+**Branch:** `arena/a94e6d8b-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**Claimed file scope:** this appended section of `COORDINATION.md`, `README.md`, and `integration-2027/**` only. The work is an additive final-integration update: existing research data and all five trip-planning directories remain untouched; root `index.html` already links to the dual-city planner.
+
+| # | Task | Status | Scope | Verification rule |
+|---|---|---|---|---|
+| I1 | Read the coordination board and claim this non-overlapping final-integration task | **in progress** | this section | Current branch `arena/a94e6d8b-chinafun1`; older integration and dual-city work is marked done; no edits to their research data |
+| I2 | Reconcile the hub/README directory inventory with the published repo | unclaimed | `README.md`, `integration-2027/**` | Count local entry points and compare with existing source pages; distinguish single-city studies, the dual-city study, and supporting registers |
+| I3 | Update the cross-plan decision hub to include the dual-city study without inventing a combined hotel quote | unclaimed | `integration-2027/**` | Include a dated snapshot note, direct entry link, official-source links, and explicit blank for a combined two-city hotel total |
+| I4 | Run site generators, validators, internal-link scan, and diff checks | unclaimed | read-only checks | All existing studies remain byte/data unchanged; report any inherited issues without silently fixing other sessions' scopes |
+| I5 | Publish the additive final-integration update | unclaimed | current branch PR / Pages status | Only after I2–I4 pass; PR and deploy outcome recorded here |
+
+**Handoff / ownership note:** all source-plan sessions referenced above are marked done in the inherited board. The current task is limited to the README inventory and the already-published integration hub; it does not edit `china-2027/`, `assets/data.js`, any plan's data, or another plan's pages. If an inherited issue requires those files, log a request/flag rather than editing them.
