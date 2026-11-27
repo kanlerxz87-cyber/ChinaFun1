@@ -750,6 +750,44 @@ No mismatch was found, so no data edit was made or requested.
 
 ---
 
+# Session `e3029032` — final verification, republishing & Pages deploy confirmation
+
+**Branch:** `arena/e3029032-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**Claimed file scope (read-only verification + build/publish only):** root `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/data.js`, `assets/app.js`, `assets/style.css`, `data/*.json`, `build.py`, `check.py`, `COORDINATION.md` (this section only). All other sub-sites (`docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`, `china-2027/`, `audit-2027/`) preserved read-only; their checkers are re-run as part of repo-wide verification.
+
+| # | Task | Status | Scope | Verification rule | Result |
+|---|------|--------|-------|-------------------|--------|
+| E3029032-1 | Claim + board read | **done** | this section | Claim committed & pushed before any code change | Claim section written 2026-11-27 |
+| E3029032-2 | Re-run all repo validators + repo-wide HTML/DOM link scan | **done** | read-only across repo | Every checker PASS; 0 broken links, 0 empty hrefs, title+viewport everywhere | `check.py` (docs): PASS — 10 pages, 187 table rows, 0 problems; `integration-2027/tools/check.py`: 7 pages, 0 errors; `social-2027/tools/check.py`: 43 venues, 58 videos, PASS; `china-2027/tools/check.py`: 9 pages, 13 hotels, 56 restaurants, 16 activities, 0 broken links; no code changes needed |
+| E3029032-3 | Live GitHub Pages verification of all published entry points | **done** | read-only | All entry points return 200 + non-empty content via page fetch | Root `/` and `/michelin.html` fetched 200 with full rendered content (cache-busted). Remaining entry points previously confirmed 200 by sessions `24fa9b09`/`f6189cca`: `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/` |
+| E3029032-4 | Official-source spot re-check of headline published numbers | **done** | read-only | MICHELIN release/list, Palace Museum, Mutianyu, timeanddate holidays 2027, travel.state.gov | All match: MICHELIN 2027 Beijing release (107 venues; 3★ Chao Shang Chao + Xin Rong Ji; 2★ Black Swan/Jingji/King's Joy/Lamdre/Lu Shang Lu; 26×1★; Chef 1996 promoted; Old Tower new; 32 Bib; 42 Selected; Tianjin 27; 135 total) ✔; all-starred list filter "3 Stars 2 / 2 Stars 5 / 1 Star 26 / Bib 32 / Selected 42 / 1-33 of 33" ✔; Palace Museum Tue–Sun, closed Mon except national holidays, Nov–Mar 8:30–16:30 last 15:30, ¥40 low season, ¥10 galleries, 40k cap ✔; Mutianyu 8:00–17:30, sales end 16:30, off-season Nov 16–Mar 15 ✔; timeanddate China 2027: CNY Feb 6, holiday Feb 5–13, make-up workday Feb 14, Lantern Festival Feb 20 ✔; travel.state.gov Level 2 issued Oct 19, 2026 ✔ |
+| E3029032-5 | Fix any defect found; keep blank/flag discipline (no inferred values) | **done** | as needed, logged here | Any fix cited to its official source | No defects found; zero values inferred or filled; all remaining blanks (hours for 20/33 starred, menu prices for 29/33, Courtyard 7 rate, door-to-door Amap routing) already flagged on `flagged.html` with next actions |
+| E3029032-6 | PR `arena/e3029032-chinafun1` → `main`, merge, confirm Pages deploy | **in progress** | GitHub PR/merge metadata | Clean merge; Pages `built`; live fetch confirms | PR created; merge + Pages confirmation pending |
+
+## E3029032 verification log (2026-11-27)
+
+| Check | Tool / method | Result |
+|---|---|---|
+| Root static checks | `python3 check.py` | PASS — 10 pages, 187 rows, 0 broken internal links, 0 empty hrefs, title + viewport on all |
+| Integration sub-site | `python3 integration-2027/tools/check.py` | PASS — 7 pages, 0 errors |
+| Social registry | `python3 social-2027/tools/check.py` | PASS — 43 venues, 58 videos, 8 pages, data/row-sourcing/internal links consistent |
+| Dual-city sub-site | `python3 china-2027/tools/check.py` | PASS — 9 pages, 0 broken links, 0 external CDNs |
+| Live entry point `/` | `fetch_page https://kanlerxz87-cyber.github.io/ChinaFun1/` | 200, full executive summary rendered |
+| Live entry point `/michelin.html` | `fetch_page https://kanlerxz87-cyber.github.io/ChinaFun1/michelin.html` | 200, all 33 starred tables rendered with source links |
+| MICHELIN 2027 release | fetch_page michelin.com press release | Matches published counts (2/5/26 stars; 32 Bib; 42 Selected; 107 Beijing; 135 total) |
+| MICHELIN all-starred list | fetch_page guide.michelin.com all-starred | Filter shows 2/5/26/32/42, "1-33 of 33 restaurants" |
+| Palace Museum | fetch_page intl.dpm.org.cn/visit.html | Tue–Sun, closed Mon except national holidays; Nov–Mar 8:30–16:30, last 15:30; ¥40/¥60; ¥10 galleries; 40k cap; no same-day tickets |
+| Mutianyu | fetch_page en.mutianyugreatwall.com | 8:00–17:30, sales end 16:30, check-in 8:00–17:00; off-season Nov 16–Mar 15 |
+| China holidays 2027 | fetch_page timeanddate.com/holidays/china/2027 | CNY Sat 6 Feb; holiday 5–13 Feb; make-up workday Sun 14 Feb; Lantern Festival Sat 20 Feb |
+| US travel advisory | fetch_page travel.state.gov .../china.html | Level 2 – Exercise increased caution; issued Oct 19, 2026 |
+
+**Irregularities:** none new. All pre-existing irregularities remain published on `flagged.html` and the sub-site flagged pages; none were silently corrected.
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note the handoff here.
+
+---\n
+
 # Session `8f562229` — independent line-by-line audit + spot re-verification + publish pass
 
 **Branch:** `arena/8f562229-chinafun1` (branched from `main` @ `1c839f22`, rebased onto `origin/main` @ `49a2646` before work)
