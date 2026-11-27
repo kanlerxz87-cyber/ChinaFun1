@@ -840,7 +840,7 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 
 ## Session `e46f5d6a` — results
 
-**Status:** done · **Scope held:** `COORDINATION.md`, `assets/data.js` (Zijin Mansion row), `flagged.html` (one row).
+**Status:** done (merged via PR #32) · **Scope held:** `COORDINATION.md`, `assets/data.js` (Zijin Mansion row), `flagged.html` (one row).
 
 ### Work performed
 | # | Item | Result |
@@ -862,4 +862,5 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 - https://www.fourseasons.com/beijing/dining/restaurants/mio/ (official hours, phone)
 
 ### Handoff
-Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. Merge result is recorded in the next commit.
+Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. **PR:** https://github.com/kanlerxz87-cyber/ChinaFun1/pull/32 · **Merged** 2026-11-27T19:52:02Z (merge commit `2022cb5`, `gh pr merge --merge`).
+**Pages:** `gh api repos/kanlerxz87-cyber/ChinaFun1/pages/builds/latest` → `built` at `2022cb5`. Live URL https://kanlerxz87-cyber.github.io/ChinaFun1/ (the sandbox cannot reach `github.io` directly, so the live HTTP check was not run from here; build status is from the Pages API).
