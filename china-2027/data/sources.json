@@ -4,70 +4,454 @@
     {
       "name": "Official PRC Government, Calendar & Transit Portals",
       "items": [
-        {"title": "PRC State Council — 2027 Public Holiday Schedule (Spring Festival Feb 5–13, published 2026-11-06)", "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html", "checked": "2026-11-26"},
-        {"title": "Beijing Municipal Government — Subway Fare Schedule & Passenger Guide", "url": "https://english.beijing.gov.cn/specials/beijinglifeonthesubway/noticeforpassengers/202504/t20250423_4072294.html", "checked": "2026-11-26"},
-        {"title": "Beijing Municipal Government — Line 17 Central Section, Line 18 & Line 6 Extension Opening (Dec 2025)", "url": "https://english.beijing.gov.cn/latest/news/202512/t20251227_4368231.html", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — Beijing–Shanghai Fuxing High-Speed Rail & Premium Seat Fares", "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250409/e516dc4cc2e04aceb2e1719e1175f552.html", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — Beijing–Shanghai HSR Dynamic Ticket Fares", "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20240618/b4e2376a85f34b75aab1de70cb566001.html", "checked": "2026-11-26"},
-        {"title": "China Railway Official English Booking Portal (12306.cn)", "url": "https://www.12306.cn/en/index.html", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — Shanghai Metro International Tap-to-Ride & Passes", "url": "https://english.shanghai.gov.cn/en-TravelYourWay/20251010/6f1beb560360472b8edaffd6187f4988.html", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — Aug 2026 Metro Fare-Adjustment Public Hearing Notice", "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260820/6676e7847de746e9aef956c40460bd84.html", "checked": "2026-11-26"}
+        {
+          "title": "PRC State Council — 2027 Public Holiday Schedule (Spring Festival Feb 5–13, published 2026-11-06)",
+          "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Beijing Municipal Government — Subway Fare Schedule & Passenger Guide",
+          "url": "https://english.beijing.gov.cn/specials/beijinglifeonthesubway/noticeforpassengers/202504/t20250423_4072294.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Beijing Municipal Government — Line 17 Central Section, Line 18 & Line 6 Extension Opening (Dec 2025)",
+          "url": "https://english.beijing.gov.cn/latest/news/202512/t20251227_4368231.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — Beijing–Shanghai Fuxing High-Speed Rail & Premium Seat Fares",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250409/e516dc4cc2e04aceb2e1719e1175f552.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — Beijing–Shanghai HSR Dynamic Ticket Fares",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20240618/b4e2376a85f34b75aab1de70cb566001.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "China Railway Official English Booking Portal (12306.cn)",
+          "url": "https://www.12306.cn/en/index.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — Shanghai Metro International Tap-to-Ride & Passes",
+          "url": "https://english.shanghai.gov.cn/en-TravelYourWay/20251010/6f1beb560360472b8edaffd6187f4988.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — Aug 2026 Metro Fare-Adjustment Public Hearing Notice",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20260820/6676e7847de746e9aef956c40460bd84.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Hong Kong Observatory — 2027 Gregorian/Lunar Calendar (Feb 5 is Friday; Feb 20 is lunar day 15)",
+          "url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "State Council Gazette copy — weekday discrepancy for the Spring Festival start date (lists Feb 5 as Sunday)",
+          "url": "https://www.gov.cn/gongbao/2026/issue_13106/202611/content_7086651.html",
+          "checked": "2026-11-27"
+        }
       ]
     },
     {
       "name": "Official MICHELIN Guide & Restaurant Primary Sources",
       "items": [
-        {"title": "MICHELIN Guide Beijing 2027 — All Starred Restaurants Index (33/33 individually verified)", "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred", "checked": "2026-11-26"},
-        {"title": "MICHELIN Guide Shanghai — All Starred Restaurants Index (1x3*, 11x2*, 38x1* = 50 starred)", "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred", "checked": "2026-11-26"},
-        {"title": "MICHELIN Guide Shanghai — Bib Gourmand Index (33 venues)", "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/bib-gourmand", "checked": "2026-11-26"},
-        {"title": "Four Seasons Beijing — Cai Yi Xuan Official Hours & Set Menu for Two (CNY 1,688+)", "url": "https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan/menus/taste-of-cai-yi-xuan/", "checked": "2026-11-26"},
-        {"title": "Four Seasons Beijing — Mio Official Hours (Closed Mon — Conflict Flagged vs MICHELIN)", "url": "https://www.fourseasons.com/beijing/dining/restaurants/mio/", "checked": "2026-11-26"},
-        {"title": "The PuXuan Hotel — Fu Chun Ju Official Hours & À La Carte PDF", "url": "https://thepuxuan.com/en/dining/fu-chun-ju/", "checked": "2026-11-26"},
-        {"title": "China World Hotel / Shangri-La — GIADA Garden Official Hours & Degustation PDF (CNY 1,988/pp)", "url": "https://www.shangri-la.com/beijing/chinaworld/dining/restaurants/giada-garden/", "checked": "2026-11-26"},
-        {"title": "TRB Hutong — Official Menu & Pricing (Lunch CNY 788 / Seasonal 1,688 / Premium 2,288 +15%)", "url": "https://www.trbhutong.com/menu", "checked": "2026-11-26"},
-        {"title": "Bvlgari Hotel Beijing — Il Ristorante Niko Romito Official Hours", "url": "https://www.bulgarihotels.com/en_US/beijing/dining/il-ristorante-niko-romito", "checked": "2026-11-26"},
-        {"title": "Rosewood Beijing — The House of Dynasties Official Hours", "url": "https://www.rosewoodhotels.com/en/beijing/dining/the-house-of-dynasties", "checked": "2026-11-26"},
-        {"title": "Waldorf Astoria Beijing — Zijin Mansion Official Hours", "url": "https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/", "checked": "2026-11-26"},
-        {"title": "The Peninsula Shanghai — Yi Long Court Official Set Menus (Dim Sum CNY 298 / Tasting CNY 988 +16.6%)", "url": "https://www.peninsula.com/en/shanghai/special-offers/dining/sumptuous-set-menus-at-yi-long-court", "checked": "2026-11-26"},
-        {"title": "The Peninsula Shanghai — Sir Elly's Official Hours & 5-Course Menu PDF (CNY 1,288 +16.6%)", "url": "https://www.peninsula.com/en/shanghai/hotel-fine-dining/sir-ellys-restaurant", "checked": "2026-11-26"}
+        {
+          "title": "MICHELIN Guide Beijing 2027 — All Starred Restaurants Index (33/33 individually verified)",
+          "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "MICHELIN Guide Shanghai — All Starred Restaurants Index (1x3*, 11x2*, 38x1* = 50 starred)",
+          "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "MICHELIN Guide Shanghai — Bib Gourmand Index (33 venues)",
+          "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/bib-gourmand",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Four Seasons Beijing — Cai Yi Xuan Official Hours & Set Menu for Two (CNY 1,688+)",
+          "url": "https://www.fourseasons.com/beijing/dining/restaurants/cai_yi_xuan/menus/taste-of-cai-yi-xuan/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Four Seasons Beijing — Mio Official Hours (Closed Mon — Conflict Flagged vs MICHELIN)",
+          "url": "https://www.fourseasons.com/beijing/dining/restaurants/mio/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "The PuXuan Hotel — Fu Chun Ju Official Hours & À La Carte PDF",
+          "url": "https://thepuxuan.com/en/dining/fu-chun-ju/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "China World Hotel / Shangri-La — GIADA Garden Official Hours & Degustation PDF (CNY 1,988/pp)",
+          "url": "https://www.shangri-la.com/beijing/chinaworld/dining/restaurants/giada-garden/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "TRB Hutong — Official Menu & Pricing (Lunch CNY 788 / Seasonal 1,688 / Premium 2,288 +15%)",
+          "url": "https://www.trbhutong.com/menu",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Bvlgari Hotel Beijing — Il Ristorante Niko Romito Official Hours",
+          "url": "https://www.bulgarihotels.com/en_US/beijing/dining/il-ristorante-niko-romito",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Rosewood Beijing — The House of Dynasties Official Hours",
+          "url": "https://www.rosewoodhotels.com/en/beijing/dining/the-house-of-dynasties",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Waldorf Astoria Beijing — Zijin Mansion Official Hours",
+          "url": "https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "The Peninsula Shanghai — Yi Long Court Official Set Menus (Dim Sum CNY 298 / Tasting CNY 988 +16.6%)",
+          "url": "https://www.peninsula.com/en/shanghai/special-offers/dining/sumptuous-set-menus-at-yi-long-court",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "The Peninsula Shanghai — Sir Elly's Official Hours & 5-Course Menu PDF (CNY 1,288 +16.6%)",
+          "url": "https://www.peninsula.com/en/shanghai/hotel-fine-dining/sir-ellys-restaurant",
+          "checked": "2026-11-26"
+        }
       ]
     },
     {
       "name": "Official Beijing & Shanghai Attraction Portals",
       "items": [
-        {"title": "Palace Museum (Forbidden City) — Official English Visit & Ticketing Rules", "url": "https://intl.dpm.org.cn/visit.html", "checked": "2026-11-26"},
-        {"title": "Beijing Municipal Government — Mutianyu Great Wall Official Guide (CNY 45 off-peak)", "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/greatwall/202006/t20200611_1922526.html", "checked": "2026-11-26"},
-        {"title": "Beijing Municipal Government — Temple of Heaven Official Hours & Ticket Tiers", "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915295.html", "checked": "2026-11-26"},
-        {"title": "Beijing Municipal Government — Summer Palace Official Hours & Ticket Tiers", "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915293.html", "checked": "2026-11-26"},
-        {"title": "Beijing Municipal Government — Yonghe Temple, Jingshan Park, Tian'anmen, National Museum, 798 & Nanluoguxiang", "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/", "checked": "2026-11-26"},
-        {"title": "Shanghai Museum (People's Square West & Pudong East) — Official English Portal & Met Exhibition", "url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/index", "checked": "2026-11-26"},
-        {"title": "Yu Garden Official Website (Daytime Hours & CNY 30 Off-Season Tariff)", "url": "https://www.yugarden.com.cn/", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — Yuyuan Garden Night Tour Schedule & Pricing", "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250911/9502fe30164546b2896987093911191d.html", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — The Bund Winter Illumination (17:00–21:00) & CNY 2 Ferry", "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251107/11c79bb6632944aea9814cee6ec823bb.html", "checked": "2026-11-26"},
-        {"title": "Shanghai Municipal Government — Shanghai Tower 118F Observatory Pricing (CNY 180 / 268)", "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250729/25cfb8bc82b64e5fa4e670079a64ff1a.html", "checked": "2026-11-26"}
+        {
+          "title": "Palace Museum (Forbidden City) — Official English Visit & Ticketing Rules",
+          "url": "https://intl.dpm.org.cn/visit.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Beijing Municipal Government — Mutianyu Great Wall Official Guide (CNY 45 off-peak)",
+          "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/greatwall/202006/t20200611_1922526.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Beijing Municipal Government — Temple of Heaven Official Hours & Ticket Tiers",
+          "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915295.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Beijing Municipal Government — Summer Palace Official Hours & Ticket Tiers",
+          "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/parksgardens/202006/t20200605_1915293.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Beijing Municipal Government — Yonghe Temple, Jingshan Park, Tian'anmen, National Museum, 798 & Nanluoguxiang",
+          "url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Museum (People's Square West & Pudong East) — Official English Portal & Met Exhibition",
+          "url": "https://www.shanghaimuseum.net/mu/frontend/pg/en/index",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Yu Garden Official Website (Daytime Hours & CNY 30 Off-Season Tariff)",
+          "url": "https://www.yugarden.com.cn/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — Yuyuan Garden Night Tour Schedule & Pricing",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250911/9502fe30164546b2896987093911191d.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — The Bund Winter Illumination (17:00–21:00) & CNY 2 Ferry",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251107/11c79bb6632944aea9814cee6ec823bb.html",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Shanghai Municipal Government — Shanghai Tower 118F Observatory Pricing (CNY 180 / 268)",
+          "url": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250729/25cfb8bc82b64e5fa4e670079a64ff1a.html",
+          "checked": "2026-11-26"
+        }
       ]
     },
     {
-      "name": "Live 2027 Hotel Pricing Captures (Booking.com — Checked 2026-11-26)",
+      "name": "Official Hotel & Operator Property Pages (Non-Pricing Facts)",
       "items": [
-        {"title": "Park Plaza Beijing Wangfujing (3 windows: Feb 15–22, Mar 1–8, Mar 16–23)", "url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "base-Beijing Wangfujing Serviced Apartment (3 windows — 51% Black Friday Deal)", "url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Sunworld Dynasty Hotel Beijing Wangfujing (Feb 15–22)", "url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Grand Millennium Beijing (3 windows: Feb 15–22, Mar 1–8, Mar 16–23)", "url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Kempinski Hotel Beijing Yansha Center (Feb 15–22)", "url": "https://www.booking.com/hotel/cn/kempinski-beijing-lufthansa-center.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Regent Beijing / China World Hotel / Waldorf Astoria Beijing (Feb 15–22)", "url": "https://www.booking.com/hotel/cn/china-world-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Radisson Blu Hotel Shanghai New World (2 windows: Feb 15–22 & Mar 16–23)", "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Pullman Shanghai Jing'an (2 windows: Feb 15–22 & Mar 16–23)", "url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"},
-        {"title": "Grand Central Hotel Shanghai (2 windows: Feb 15–22 & Mar 16–23)", "url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD", "checked": "2026-11-26"}
+        {
+          "title": "Park Plaza Beijing Wangfujing — Radisson Hotels official property page",
+          "url": "https://www.radissonhotels.com/en-us/hotels/park-plaza-beijing-wangfujing",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Sunworld Dynasty Hotel Beijing Wangfujing — official property page",
+          "url": "https://m.sunworlddynastyhotel.cn/en",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Millennium Beijing — Millennium Hotels official property page",
+          "url": "https://www.millenniumhotels.com/en/beijing/grand-millennium-beijing/",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Kempinski Hotel Beijing Yansha Center — official property information",
+          "url": "https://www.kempinski.com/en/hotel-yansha-center/overview/hotel-information/our-hotel",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Regent Beijing — IHG official property page",
+          "url": "https://www.ihg.com/regent/hotels/us/en/beijing/pekjb/hoteldetail",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "China World Hotel, Beijing — Shangri-La official property page",
+          "url": "https://www.shangri-la.com/beijing/chinaworld/",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Waldorf Astoria Beijing — Hilton official property page",
+          "url": "https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Radisson Blu Hotel Shanghai New World — official property page",
+          "url": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-shanghai-new-world",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Pullman Shanghai Jing'an — Accor official property page",
+          "url": "https://pullman.accor.com/en/hotels/shanghai/7598.html",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Waldorf Astoria Shanghai on the Bund — Hilton official property page",
+          "url": "https://www.hilton.com/en/hotels/shawawa-waldorf-astoria-shanghai-on-the-bund/",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "The Peninsula Shanghai — official hotel page",
+          "url": "https://www.peninsula.com/en/shanghai/5-star-luxury-hotel-bund",
+          "checked": "2026-11-27"
+        }
+      ]
+    },
+    {
+      "name": "Booking.com 2027 Hotel Rate Captures — Third-Party Listings (Checked 2026-11-27)",
+      "items": [
+        {
+          "title": "Park Plaza Beijing Wangfujing — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "base-Beijing Wangfujing Serviced Apartment — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Sunworld Dynasty Hotel Beijing Wangfujing — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Millennium Beijing — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Kempinski Hotel Beijing Yansha Center — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/kempinski-beijing-lufthansa-center.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Regent Beijing — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/the-regent-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "China World Hotel, Beijing — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/china-world-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Waldorf Astoria Beijing — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/waldorf-astoria-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Radisson Blu Hotel Shanghai New World — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Pullman Shanghai Jing'an — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Central Hotel Shanghai — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Waldorf Astoria Shanghai on the Bund — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "The Peninsula Shanghai — Booking.com 7-night rate capture (Feb 15–22, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Park Plaza Beijing Wangfujing — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "base-Beijing Wangfujing Serviced Apartment — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Sunworld Dynasty Hotel Beijing Wangfujing — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Millennium Beijing — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Radisson Blu Hotel Shanghai New World — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Pullman Shanghai Jing'an — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Central Hotel Shanghai — Booking.com 7-night rate capture (Feb 18–25, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Park Plaza Beijing Wangfujing — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "base-Beijing Wangfujing Serviced Apartment — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Sunworld Dynasty Hotel Beijing Wangfujing — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Millennium Beijing — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Radisson Blu Hotel Shanghai New World — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Pullman Shanghai Jing'an — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD); visible row was twin-only and excluded from queen/king comparison",
+          "url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Central Hotel Shanghai — Booking.com 7-night rate capture (Mar 1–8, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Park Plaza Beijing Wangfujing — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "base-Beijing Wangfujing Serviced Apartment — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Sunworld Dynasty Hotel Beijing Wangfujing — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Millennium Beijing — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Radisson Blu Hotel Shanghai New World — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Pullman Shanghai Jing'an — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Central Hotel Shanghai — Booking.com 7-night rate capture (Mar 16–23, 2027; 2 adults, 1 room, USD)",
+          "url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "checked": "2026-11-27"
+        }
+      ]
+    },
+    {
+      "name": "Third-Party Property Information (Not Official Hotel Sites)",
+      "items": [
+        {
+          "title": "base-Beijing Wangfujing property-information page — third-party tourism booking provider; not the official hotel site",
+          "url": "https://base-wangfujingservicedapartment.baseapartment.cn/",
+          "checked": "2026-11-27"
+        },
+        {
+          "title": "Grand Central Hotel Shanghai property-information page — third-party tourism booking provider; not the official hotel site",
+          "url": "https://grandcentralshanghai.cn/",
+          "checked": "2026-11-27"
+        }
       ]
     },
     {
       "name": "Multi-Platform Social Reviews Verification Methodology",
       "items": [
-        {"title": "58 Beijing YouTube venue reviews — cross-verified via YouTube oEmbed HTTP 200 (imported from social-2027 audit & merged with 2026-11-26 verifications)", "url": "https://www.youtube.com/", "checked": "2026-11-26"},
-        {"title": "Direct TikTok venue/city reviews (@thesamtyler, @wadeandtaylor, @visitbeijing, @eatplorer, @cornettomind, @mepanya, @im7md0) — mismatched search hits discarded", "url": "https://www.tiktok.com/", "checked": "2026-11-26"},
-        {"title": "Official Restaurant Instagram Profiles (@trb_cn, @kingsjoy_official, @giadagarden_restaurant, @stefan_stiller_taian_table, @sirellys.restaurant)", "url": "https://www.instagram.com/", "checked": "2026-11-26"}
+        {
+          "title": "58 Beijing YouTube venue reviews — cross-verified via YouTube oEmbed HTTP 200 (imported from social-2027 audit & merged with 2026-11-26 verifications)",
+          "url": "https://www.youtube.com/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Direct TikTok venue/city reviews (@thesamtyler, @wadeandtaylor, @visitbeijing, @eatplorer, @cornettomind, @mepanya, @im7md0) — mismatched search hits discarded",
+          "url": "https://www.tiktok.com/",
+          "checked": "2026-11-26"
+        },
+        {
+          "title": "Official Restaurant Instagram Profiles (@trb_cn, @kingsjoy_official, @giadagarden_restaurant, @stefan_stiller_taian_table, @sirellys.restaurant)",
+          "url": "https://www.instagram.com/",
+          "checked": "2026-11-26"
+        }
       ]
     }
-  ]
+  ],
+  "hotel_rate_captures_verified_on": "2026-11-27",
+  "source_register_updated_on": "2026-11-27"
 }

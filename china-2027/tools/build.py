@@ -31,6 +31,10 @@ def e(val: Any) -> str:
     return html.escape("" if val is None else str(val), quote=True)
 
 
+def money(value: float | int) -> str:
+    return f"${float(value):,.2f}"
+
+
 def load_json(name: str) -> Any:
     with (DATA_DIR / name).open(encoding="utf-8") as fh:
         return json.load(fh)
@@ -47,7 +51,7 @@ def page_shell(filename: str, title: str, subtitle: str, meta: dict, body_html: 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{e(title)} — China 2027 Verified Planner</title>
+  <title>{e(title)} — China 2027 Travel Planner</title>
   <meta name="description" content="{e(subtitle)}">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -58,8 +62,8 @@ def page_shell(filename: str, title: str, subtitle: str, meta: dict, body_html: 
       <a class="brand" href="index.html">
         <span class="brand-mark">CN</span>
         <span>
-          China 2027 Verified Planner
-          <span class="brand-sub">Beijing &amp; Shanghai · Verified {e(meta['last_verified'])}</span>
+          China 2027 Travel Planner
+          <span class="brand-sub">Beijing &amp; Shanghai · Core research {e(meta['last_verified'])} · Hotel rates {e(meta['hotel_rates_verified_on'])}</span>
         </span>
       </a>
       <button id="navToggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
@@ -75,8 +79,8 @@ def page_shell(filename: str, title: str, subtitle: str, meta: dict, body_html: 
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div><strong>China 2027 Verified Trip Planner</strong> · Primary-source verified {e(meta['last_verified'])} · Zero fabricated estimates · <a href="../index.html">Repo Root Dashboard</a></div>
-      <div><a href="sources.html">Official Sources</a> · <a href="flagged.html">Audit &amp; Flagged Items</a> · <a href="questions.html">Open Decisions</a></div>
+      <div><strong>China 2027 Travel Planner</strong> · Calendar, restaurant, activity &amp; transit sources checked {e(meta['last_verified'])} · Third-party Booking.com hotel snapshots checked {e(meta['hotel_rates_verified_on'])}; recheck rates and terms · <a href="../index.html">Repo Root Dashboard</a></div>
+      <div><a href="sources.html">Sources &amp; Verification</a> · <a href="flagged.html">Audit &amp; Flagged Items</a> · <a href="questions.html">Open Decisions</a></div>
     </div>
   </footer>
   <script src="assets/app.js"></script>
@@ -153,7 +157,7 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
                 f"<tr>"
                 f"<td><strong>{e(city_lbl)} #{h['rank']}</strong></td>"
                 f"<td><a href=\"hotels.html#{e(h['id'])}\"><strong>{e(h['name'])}</strong></a><br><small>{e(h['district'])}</small></td>"
-                f"<td><strong style=\"color:var(--jade)\">${h['cheapest_7n_usd']:,}</strong><br><small>{e(h['cheapest_window'])}</small></td>"
+                f"<td><strong style=\"color:var(--jade)\">{money(h['lowest_observed_7n_usd'])}</strong><br><small>{e(h['lowest_observed_window'])}</small></td>"
                 f"<td><span class=\"badge badge-pass\">Queen/King + Private Bath</span></td>"
                 f"<td>{e(h['tier'])}</td>"
                 f"</tr>"
@@ -173,9 +177,9 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
     cal = meta["calendar_2027"]
     body = f"""
     <section class="hero">
-      <span class="hero-eyebrow">Executive Trip Brief · Dual-City Primary-Source Edition</span>
-      <h1>China 2027 Verified Travel Dashboard: Beijing &amp; Shanghai</h1>
-      <p>Built for 2 adults traveling inside <strong>2027-02-15 to 2027-03-23</strong> (1–2 week &amp; 2–4 week options). Every hotel total, MICHELIN listing, museum schedule, rail fare, and social media link is directly verified from official primary sources on <strong>{e(meta['last_verified'])}</strong> — unpublished hours or prices are left explicitly blank rather than guessed.</p>
+      <span class="hero-eyebrow">Executive Trip Brief · Dual-City Source-Labeled Edition</span>
+      <h1>China 2027 Travel Dashboard: Beijing &amp; Shanghai</h1>
+      <p>Built for 2 adults considering travel inside <strong>2027-02-15 to 2027-03-23</strong> (1–2 week and 2–4 week options; exact duration and city split remain open). Restaurant, activity, calendar, and transit claims cite their listed sources. Hotel prices are third-party Booking.com rate snapshots captured on <strong>{e(hotels['verified_on'])}</strong> for specified seven-night dates; room, cancellation, payment, tax/fee, and member-rate conditions vary and must be rechecked at checkout.</p>
       <div class="hero-meta">
         <span>2 Adults · 1 Room (Queen/King + Private Bath)</span>
         <span>Zero Holidays Feb 15 – Mar 23, 2027</span>
@@ -187,14 +191,14 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
 
     <section class="kpi-grid" aria-label="Headline Findings">
       <div class="kpi-card">
-        <div class="kpi-label">Cheapest Stay Window</div>
-        <div class="kpi-value">Feb 15–22, 2027</div>
-        <div class="kpi-sub">Immediately post-Spring Festival (ends Feb 13); saves <strong>15%–56%</strong> vs mid-March.</div>
+        <div class="kpi-label">Hotel Rate Snapshot</div>
+        <div class="kpi-value">4 Selected Date Windows</div>
+        <div class="kpi-sub">Captured Nov 27 for 13 properties on Feb 15–22 and a seven-property subset on Feb 18–25, Mar 1–8, and Mar 16–23.</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-label">Cheapest Booking Window</div>
-        <div class="kpi-value">Nov 19 – Dec 2026</div>
-        <div class="kpi-sub">Active Black Friday / Genius free-cancel deals: <strong>$425–$749/7N</strong> Beijing · <strong>$621–$921/7N</strong> Shanghai.</div>
+        <div class="kpi-label">Rate-Plan Conditions</div>
+        <div class="kpi-value">Compare Before Booking</div>
+        <div class="kpi-sub">Snapshots mix nonrefundable, partially refundable, and free-cancellation offers; some prices require Genius/member eligibility. No universal cheapest date is established.</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-label">MICHELIN Coverage Verified</div>
@@ -209,19 +213,19 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
     </section>
 
     <section class="callout callout-jade">
-      <strong class="label">Key Breakthrough — Official 2027 PRC Holiday Calendar &amp; Optimal Timing</strong>
-      <p style="margin:4px 0 8px">The PRC State Council released the official 2027 public holiday schedule on 2026-11-06: <strong>Spring Festival runs Feb 5–13, 2027</strong> (CNY Sat Feb 6; make-up workdays Jan 31 &amp; Feb 14; Lantern Festival Sat Feb 20). <strong>Zero statutory public holidays fall between Feb 15 and Mar 23, 2027.</strong> Starting Mon <strong>Feb 15, 2027</strong> in Beijing captures winter low-season tickets, catches Lantern Festival (Feb 20), locks 15%–56% cheaper hotel rates, and avoids early-March NPC/CPPCC ("Two Sessions") security closures around Tian'anmen Square. <a href="{e(cal['source_url'])}" target="_blank" rel="noopener noreferrer">Official State Council Release &rarr;</a></p>
-      <a class="btn btn-primary" href="hotels.html">See Cheapest 7-Night Hotel Comparison</a>
-      <a class="btn" href="itineraries.html">Compare 7N / 14D / 21D Itineraries</a>
+      <strong class="label">2027 Calendar Context &amp; Hotel-Rate Caveat</strong>
+      <p style="margin:4px 0 8px">The PRC State Council schedule lists Spring Festival on Feb 5–13, 2027 (CNY Sat Feb 6; make-up workdays Jan 31 &amp; Feb 14; Lantern Festival Sat Feb 20). Feb 5 is Friday per the Hong Kong Observatory calendar; one Gazette copy conflicts on the weekday, so the discrepancy is flagged in the audit. <strong>Zero statutory public holidays fall between Feb 15 and Mar 23, 2027.</strong> Starting Feb 15 places a Beijing stay across Lantern Festival, but the sampled Booking.com prices do not establish that any stay date is universally cheapest. <a href="{e(cal['source_url'])}" target="_blank" rel="noopener noreferrer">Official State Council Release &rarr;</a></p>
+      <a class="btn btn-primary" href="hotels.html">Review 7-Night Rate Snapshots</a>
+      <a class="btn" href="itineraries.html">Compare 7N / 14D / 3-week Itineraries</a>
     </section>
 
     <section>
-      <h2>Top Ranked Hotels (Cheapest 7-Night Verified Totals, 2 Adults)</h2>
-      <p class="lead">Every hotel passes both non-negotiable filters (private/attached bathroom + queen or king bed) and was live-priced on Booking.com on {e(hotels['verified_on'])}. <a href="hotels.html">View all {len(hotels['beijing']) + len(hotels['shanghai'])} hotels &amp; multi-window Feb vs Mar table &rarr;</a></p>
+      <h2>Selected Hotels &amp; Lowest Captured 7-Night Totals</h2>
+      <p class="lead">The listed candidates meet the private-bathroom and queen/king filters based on the displayed room descriptions. Rank/“Why It Wins” order is a curated shortlist, not a calculated score or price sort; lowest observed rates are dated snapshots, while cancellation and member eligibility vary. <a href="hotels.html">View all {len(hotels['beijing']) + len(hotels['shanghai'])} hotels and exact-date rate plans &rarr;</a></p>
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Rank</th><th>Hotel &amp; District</th><th>Cheapest 7-Night USD</th><th>Room Check</th><th>Why It Wins</th></tr>
+            <tr><th>Rank</th><th>Hotel &amp; District</th><th>Lowest Observed 7-Night Total (USD)</th><th>Room Check</th><th>Why It Wins</th></tr>
           </thead>
           <tbody>
             {''.join(hotel_rows)}
@@ -267,51 +271,120 @@ def build_index(meta: dict, hotels: dict, restaurants: dict, activities: dict, a
 
 
 def build_hotels(meta: dict, hotels: dict) -> str:
+    comparison_windows = hotels["comparison_windows"]
+    date_labels = {w["dates"]: w["label"] for w in comparison_windows}
+
     def render_city_section(city_name: str, items: list[dict]) -> str:
         cards = []
         matrix_rows = []
         for h in items:
             win_map = {w["dates"]: w for w in h["windows"]}
+
             def cell(d: str) -> str:
                 w = win_map.get(d)
                 if not w:
                     return '<span class="blank-cell">Not queried</span>'
-                return f"<strong>${w['total_usd']:,}</strong><br><small>${w['per_night_usd']}/nt · {e(w['terms'][:48])}</small>"
+                source_link = (
+                    f'<a href="{e(w["source_url"])}" target="_blank" rel="noopener noreferrer">Capture</a>'
+                    if w.get("source_url") else ""
+                )
+                eligible_offers = [o for o in w.get("offers", []) if o.get("qualifies", True)]
+                if w.get("status") != "available" or not eligible_offers:
+                    note = w.get("note", "No qualifying queen/king rate was captured.")
+                    return f'<span class="blank-cell">Queried; no qualifying rate</span><br><small>{e(note)} {source_link}</small>'
+                low = min(eligible_offers, key=lambda o: float(o["total_usd"]))
+                nightly = float(low["total_usd"]) / 7
+                return (
+                    f"<strong>{money(low['total_usd'])}</strong><br>"
+                    f"<small>{e(low['rate_type'])} · {money(nightly)}/night avg. · {source_link}</small>"
+                )
 
+            cells = "".join(f"<td>{cell(w['dates'])}</td>" for w in comparison_windows)
             matrix_rows.append(
                 f"<tr>"
                 f"<td><strong>#{h['rank']}</strong> <a href=\"#{e(h['id'])}\">{e(h['name'])}</a><br><small>{e(h['district'])}</small></td>"
-                f"<td>{cell('2027-02-15 -> 2027-02-22')}</td>"
-                f"<td>{cell('2027-03-01 -> 2027-03-08')}</td>"
-                f"<td>{cell('2027-03-16 -> 2027-03-23')}</td>"
+                f"{cells}"
                 f"</tr>"
             )
+
             amen_html = "".join(f'<span class="badge badge-neutral">{e(a)}</span>' for a in h["amenities"])
-            flag_html = "".join(f'<div class="callout callout-amber" style="margin:10px 0 0;padding:10px 12px;font-size:13px"><strong>Flag:</strong> {e(fl)}</div>' for fl in h["flags"])
+            flag_html = "".join(
+                f'<div class="callout callout-amber" style="margin:10px 0 0;padding:10px 12px;font-size:13px"><strong>Flag:</strong> {e(fl)}</div>'
+                for fl in h["flags"]
+            )
+            rate_details = []
+            for w in h["windows"]:
+                label = date_labels.get(w["dates"], w["dates"])
+                if w.get("status") != "available" or not w.get("offers"):
+                    other = "".join(
+                        f'<li>{money(o["total_usd"])} — {e(o["rate_type"])}</li>'
+                        for o in w.get("other_observed_rates", [])
+                    )
+                    note = e(w.get("note", "No qualifying rate was captured."))
+                    rate_details.append(
+                        f'<li><strong>{e(label)}:</strong> {e(w.get("room", ""))}. {note}'
+                        f'{"<ul>" + other + "</ul>" if other else ""}'
+                        f' <a href="{e(w.get("source_url", ""))}" target="_blank" rel="noopener noreferrer">View capture</a></li>'
+                    )
+                    continue
+                offer_rows = []
+                for o in w["offers"]:
+                    room_note = f'Room: {e(o["room"])}. ' if o.get("room") else ""
+                    excluded_note = " Excluded from queen/king comparison." if o.get("qualifies") is False else ""
+                    offer_rows.append(
+                        f'<li><strong>{money(o["total_usd"])}</strong> — {room_note}'
+                        f'{e(o["rate_type"])}. {e(o["terms"])}{excluded_note}</li>'
+                    )
+                unattributed_rows = "".join(
+                    f'<li><strong>{money(o["total_usd"])}</strong> — {e(o["rate_type"])}. '
+                    f'{e(o.get("note", "Room attribution not verified; excluded from the qualifying-room comparison."))}</li>'
+                    for o in w.get("unattributed_observed_rates", [])
+                )
+                unresolved_note = (
+                    f'<p><strong>Unresolved terms:</strong> {e(w["note"])}</p>'
+                    if w.get("note") else ""
+                )
+                unattributed_html = (
+                    f'<li><strong>Other displayed offer(s), room not verified:</strong><ul>{unattributed_rows}</ul></li>'
+                    if unattributed_rows else ""
+                )
+                rate_details.append(
+                    f'<li><strong>{e(label)}:</strong> {e(w["room"])}'
+                    f'{unresolved_note}<ul>{"".join(offer_rows)}</ul>{unattributed_html}'
+                    f'<a href="{e(w["source_url"])}" target="_blank" rel="noopener noreferrer">View Booking.com capture</a></li>'
+                )
+            rate_details_html = (
+                '<details style="margin:10px 0;font-size:13px">'
+                '<summary><strong>All captured offers, cancellation/payment terms, and source links</strong></summary>'
+                f'<ul class="clean">{"".join(rate_details)}</ul></details>'
+            )
+            lowest_label = date_labels.get(h["lowest_observed_window"], h["lowest_observed_window"])
             cards.append(
                 f'<article class="card" id="{e(h["id"])}">'
                 f'<div class="card-header">'
                 f'<div><span class="badge badge-sel">Rank #{h["rank"]} · {e(h["tier"])}</span><h3 style="margin-top:6px">{e(h["name"])}</h3>'
                 f'<div style="font-size:13px;color:var(--muted)">{e(h["district"])} · {e(h["address"])} · Rating: <strong>{e(h["rating"])}</strong> (Location: {e(h["location_score"])})</div></div>'
-                f'<div class="price-tag">${h["cheapest_7n_usd"]:,}<small>Cheapest 7N ({e(h["cheapest_window"])})</small></div>'
+                f'<div class="price-tag">{money(h["lowest_observed_7n_usd"])}<small>Lowest captured 7N · {e(lowest_label)}</small></div>'
                 f"</div>"
                 f'<div class="badges">'
                 f'<span class="badge badge-pass">{e(h["bed_verified"])}</span>'
                 f'<span class="badge badge-pass">{e(h["bathroom_verified"])}</span>'
                 f"</div>"
-                f'<p style="font-size:13.5px;margin:8px 0"><strong>Cheapest Rate Terms:</strong> {e(h["cheapest_note"])}</p>'
+                f'<p style="font-size:13.5px;margin:8px 0"><strong>Lowest observed offer:</strong> {e(h["lowest_observed_note"])}</p>'
+                f'{rate_details_html}'
                 f'<p style="font-size:13.5px;margin:8px 0"><strong>Subway / Transit Access:</strong> {e(h["subway_access"])}</p>'
                 f'<p style="font-size:13.5px;margin:8px 0"><strong>MICHELIN Reach:</strong> {e(h["michelin_reach_summary"])}</p>'
                 f'<div class="badges" style="margin-top:8px">{amen_html}</div>'
                 f'{flag_html}'
-                f'<p style="margin:12px 0 0"><a class="btn btn-primary" href="{e(h["booking_url"])}" target="_blank" rel="noopener noreferrer">Check Live 2027 Booking.com Rate &rarr;</a></p>'
+                f'<p style="margin:12px 0 0"><a class="btn btn-primary" href="{e(h["booking_url"])}" target="_blank" rel="noopener noreferrer">Recheck Live Booking.com Rate &rarr;</a></p>'
                 f"</article>"
             )
 
+        header_cells = "".join(f"<th>{e(w['label'])}</th>" for w in comparison_windows)
         return (
-            f"<section><h2>{e(city_name)} Multi-Window 7-Night Rate Matrix (USD, 2 Adults, 1 Room)</h2>"
+            f"<section><h2>{e(city_name)} Date-Specific 7-Night Rate Snapshots (USD, 2 Adults, 1 Room)</h2>"
             f'<div class="table-wrap"><table><thead><tr>'
-            f"<th>Ranked Hotel</th><th>Feb 15–22, 2027</th><th>Mar 1–8, 2027</th><th>Mar 16–23, 2027</th>"
+            f"<th>Ranked Hotel</th>{header_cells}"
             f"</tr></thead><tbody>{''.join(matrix_rows)}</tbody></table></div>"
             f'<div class="grid-2">{"".join(cards)}</div></section>'
         )
@@ -320,28 +393,29 @@ def build_hotels(meta: dict, hotels: dict) -> str:
     ev_lis = "".join(f"<li>{e(x)}</li>" for x in bt["evidence"])
     body = f"""
     <section class="hero">
-      <span class="hero-eyebrow">Live Multi-Window Pricing · Verified {e(hotels['verified_on'])}</span>
-      <h1>Ranked Hotels &amp; Cheapest Booking Dates (Beijing &amp; Shanghai)</h1>
-      <p>Every hotel listed below strictly meets both mandatory traveler criteria (<strong>private/attached bathroom</strong> AND <strong>queen bed or larger</strong>) and shows real <strong>7-night totals for 2 adults</strong> across multiple 2027 date windows.</p>
+      <span class="hero-eyebrow">Booking.com Rate Captures · Checked {e(hotels['verified_on'])}</span>
+      <h1>Hotel Rate Snapshots &amp; Terms (Beijing &amp; Shanghai)</h1>
+      <p>Thirteen selected hotels are shown against up to four exact seven-night windows. Rates are displayed totals for <strong>2 adults, 1 room, USD</strong>; some comparison cells are intentionally blank or flagged where a qualifying queen/king offer was not captured.</p>
     </section>
 
     <section class="callout callout-jade">
-      <strong class="label">Cheapest Time to Book &amp; Stay — Live Price Proof</strong>
+      <strong class="label">What These Captures Establish — and What They Do Not</strong>
       <h3 style="margin:4px 0 6px">{e(bt['headline'])}</h3>
       <ul class="clean" style="font-size:13.5px">{ev_lis}</ul>
-      <p style="margin:10px 0 0;font-size:13.5px"><strong>Recommended Action:</strong> {e(bt['action'])}</p>
+      <p style="margin:10px 0 0;font-size:13.5px"><strong>Practical next step:</strong> {e(bt['action'])}</p>
     </section>
 
     <section class="callout callout-navy">
-      <strong class="label">Pricing &amp; MICHELIN Proximity Methodology (Strict Honesty)</strong>
+      <strong class="label">Rate &amp; MICHELIN-Proximity Methodology</strong>
       <p style="margin:4px 0 6px;font-size:13.5px">{e(hotels['pricing_notes'])}</p>
+      <p style="margin:0 0 6px;font-size:13.5px">{e(hotels['ranking_methodology_note'])}</p>
       <p style="margin:0;font-size:13.5px">{e(hotels['proximity_methodology'])}</p>
     </section>
 
     {render_city_section("Beijing", hotels["beijing"])}
     {render_city_section("Shanghai", hotels["shanghai"])}
     """
-    return page_shell("hotels.html", "Ranked Hotels & Cheapest Dates", "Verified multi-window 7-night hotel pricing in Beijing and Shanghai.", meta, body)
+    return page_shell("hotels.html", "Hotel Rate Snapshots & Terms", "Date-specific, third-party hotel rate snapshots with cancellation and payment terms.", meta, body)
 
 
 def build_restaurants(meta: dict, restaurants: dict) -> str:
@@ -593,7 +667,7 @@ def build_itineraries(meta: dict, itineraries: dict) -> str:
     <section class="hero">
       <span class="hero-eyebrow">Zero-Conflict Day-by-Day Blueprints · 1–2 Weeks &amp; 2–4 Weeks</span>
       <h1>Verified Itineraries (Starting Mon Feb 15, 2027)</h1>
-      <p>Switch tabs below to compare our <strong>7-Night Single-City Beijing</strong>, <strong>14-Day Flagship Dual-City (Beijing + HSR + Shanghai)</strong>, and <strong>21-Day Unhurried Deep Dive</strong> plans. Every day has been checked against official Monday/Tuesday museum and restaurant closures.</p>
+      <p>Switch tabs below to compare our <strong>7-Night Single-City Beijing</strong>, <strong>14-Day Flagship Dual-City (Beijing + HSR + Shanghai)</strong>, and <strong>3-Week Unhurried Deep Dive (21 nights)</strong> plans. Every day has been checked against official Monday/Tuesday museum and restaurant closures.</p>
     </section>
 
     <section class="callout callout-jade">
@@ -753,18 +827,18 @@ def build_sources(meta: dict, sources: dict) -> str:
         )
         sections.append(
             f"<section><h2>{e(cat['name'])} ({len(cat['items'])})</h2>"
-            f'<div class="table-wrap"><table><thead><tr><th>Primary Source</th><th>Verified On</th></tr></thead>'
+            f'<div class="table-wrap"><table><thead><tr><th>Source / Listing</th><th>Checked On</th></tr></thead>'
             f"<tbody>{rows}</tbody></table></div></section>"
         )
     body = f"""
     <section class="hero">
-      <span class="hero-eyebrow">100% Primary-Source Grounded · Last Checked {e(sources['verified_on'])}</span>
-      <h1>Official Sources &amp; Verification Register</h1>
-      <p>Every factual figure, date, fare, operating schedule, and review link in <code>china-2027/</code> traces directly to the verified primary sources below (plus individual per-venue MICHELIN pages and verified social links shown in-row on the MICHELIN and Activities pages).</p>
+      <span class="hero-eyebrow">Register updated {e(sources['source_register_updated_on'])} · Hotel rate pages checked {e(sources['hotel_rate_captures_verified_on'])} · Individual source dates shown below</span>
+      <h1>Sources &amp; Verification Register</h1>
+      <p>Official government, MICHELIN, venue, and operator pages support the calendar, transit, restaurant, and activity facts. Hotel prices are third-party Booking.com listing snapshots for exact date windows—not official hotel quotes or guaranteed future rates. Individual restaurant and activity source links also appear in their respective rows.</p>
     </section>
     {''.join(sections)}
     """
-    return page_shell("sources.html", "Official Sources", "Complete categorized primary-source register verified 2026-11-26.", meta, body)
+    return page_shell("sources.html", "Sources & Verification", "Official and operator sources plus third-party Booking.com rate captures with exact dates.", meta, body)
 
 
 def main() -> None:

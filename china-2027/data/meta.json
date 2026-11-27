@@ -1,22 +1,22 @@
 {
-  "title": "China 2027 Verified Trip Planner — Beijing & Shanghai",
-  "subtitle": "Primary-Source Verified Hotels, MICHELIN Dining, Activities, Multi-Platform Reviews & Itineraries for Two Adults",
+  "title": "China 2027 Travel Planner — Beijing & Shanghai",
+  "subtitle": "Official-source Calendar, MICHELIN Dining, Activities & Transit; Third-Party Hotel Rate Snapshots and Itineraries for Two Adults",
   "last_verified": "2026-11-26",
-  "session_id": "f8e7ee9e",
-  "branch": "arena/f8e7ee9e-chinafun1",
-  "scope_note": "Self-contained dual-city verified study published under china-2027/ alongside sibling single-city and social-audit directories in this repository.",
+  "session_id": "1cbee5b5",
+  "branch": "arena/1cbee5b5-chinafun1",
+  "scope_note": "Self-contained, source-labeled dual-city planner published under china-2027/ alongside sibling single-city and social-audit directories. Calendar, MICHELIN, activity, and transit research was checked 2026-11-26; third-party Booking.com hotel rate snapshots were refreshed 2026-11-27 and are scoped to exact dates and rate plans.",
   "trip_brief": {
     "travelers": "2 adults",
-    "travel_window": "2027-02-15 to 2027-03-23 (36 days)",
+    "travel_window": "2027-02-15 to 2027-03-23 (36-night date span; 37 calendar dates including both endpoints)",
     "preferred_start": "2027-02-15 to 2027-02-18 (flagged: 3 nights as a literal window vs 1-2 week / 2-4 week trip options)",
     "target_durations": [
       "1-2 weeks (7 to 14 nights)",
       "2-4 weeks (15 to 28 nights)"
     ],
-    "hotel_requirements": "Private/attached bathroom; queen bed or larger (king); ranked by price, location, amenities, and proximity to MICHELIN restaurants by subway/bus; 7-night total price shown for cheapest upcoming dates.",
+    "hotel_requirements": "Private/attached bathroom; queen bed or larger (king); shortlist ranked by stated location, amenities, and MICHELIN access. Hotel prices are seven-night Booking.com totals for 2 adults/1 room on exact sampled dates, with taxes/fees included where the listing says so; they are dynamic third-party offers, not guarantees. Refundability, member eligibility, payment terms, and breakfast vary by offer; no universal cheapest stay date is claimed.",
     "cities_covered": [
-      "Beijing (33/33 MICHELIN 2027 starred directly verified + 8 Bib Gourmand/Selected + 10 gov-verified activities + 8 multi-window hotels)",
-      "Shanghai (live MICHELIN guide counts 1x3*, 11x2*, 38x1* = 50 starred + 15 directly verified restaurants + 6 gov/operator-verified activities + 5 multi-window hotels)"
+      "Beijing (33/33 MICHELIN 2027 starred directly verified + 8 Bib Gourmand/Selected + 10 gov-verified activities + 8 hotel candidates; four core hotels have repeat rate captures, four are Feb 15–22 only)",
+      "Shanghai (live MICHELIN guide counts 1x3*, 11x2*, 38x1* = 50 starred + 15 directly verified restaurants + 6 gov/operator-verified activities + 5 hotel candidates; three core hotels have repeat captures, two are Feb 15–22 only)"
     ]
   },
   "calendar_2027": {
@@ -26,13 +26,14 @@
     "spring_festival_holiday": "2027-02-05 (Fri) to 2027-02-13 (Sat) — 9 consecutive days",
     "chinese_new_year_day": "2027-02-06 (Sat)",
     "makeup_workdays": "2027-01-31 (Sun) and 2027-02-14 (Sun)",
-    "lantern_festival": "2027-02-20 (Sat) — 15th day of Lunar Month 1 (festive evening lanterns in Beijing & Shanghai Yuyuan; not a statutory bank holiday)",
+    "lantern_festival": "2027-02-20 (Sat) — 15th day of Lunar Month 1; event/lantern schedules in Beijing and Shanghai Yuyuan are not verified here and need current official confirmation; not a statutory bank holiday",
     "qingming_holiday": "2027-04-03 (Sat) to 2027-04-05 (Mon)",
-    "key_implication": "Zero PRC statutory holidays fall inside 2027-02-15 to 2027-03-23. Starting 2027-02-15 or 2027-02-18 arrives right after the 9-day Spring Festival break ends (Feb 13) and catches Lantern Festival (Feb 20) while capturing the lowest verified Feb hotel rates before mid-March price spikes (+15% to +56%).",
+    "key_implication": "Zero PRC statutory holidays fall inside 2027-02-15 to 2027-03-23. Starting Feb 15 or Feb 18 places the Beijing stay after the Spring Festival break and can include Lantern Festival (Feb 20). The sampled hotel rates are date- and rate-plan-specific; they do not establish a universal cheapest stay date or a guaranteed saving.",
     "calendar_risks": [
-      "Post-Chunyun return travel (Feb 14-21): High-speed rail tickets on Beijing-Shanghai corridors can sell quickly right after Spring Festival; book on 12306 the day tickets release (typically 15 days before departure — confirm exact 2027 window on 12306.cn).",
-      "Early March NPC/CPPCC ('Two Sessions') in Beijing: Annual parliamentary meetings typically convene in early March, creating heightened security checks around Tian'anmen Square, Great Hall of the People, and Chang'an Avenue. Touring central Beijing in Feb 15-22 avoids early-March central-axis disruptions."
-    ]
+      "Potential post-Spring-Festival demand (Feb 14–21): rail availability and ticket-release rules are date/train-specific. Confirm the 2027 release window on 12306 and book promptly once tickets for the chosen train are available; no specific seat availability is guaranteed.",
+      "Potential early-March NPC/CPPCC (\"Two Sessions\") security restrictions: 2027 meeting dates and any specific Tian’anmen/Chang’an Avenue closures are not verified here. Check current official notices before scheduling central-axis visits; this is not evidence that a different hotel date is cheaper."
+    ],
+    "weekday_discrepancy": "Feb 5, 2027 is Friday according to the Hong Kong Observatory calendar; an Official Gazette copy labels it Sunday. The State Council notice supplies the holiday date range; this weekday discrepancy is preserved in the audit and Friday is used."
   },
   "transit_official": {
     "hsr_beijing_shanghai": {
@@ -101,5 +102,6 @@
       "verified_price_totals_2_adults": 2,
       "source_url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred"
     }
-  }
+  },
+  "hotel_rates_verified_on": "2026-11-27"
 }

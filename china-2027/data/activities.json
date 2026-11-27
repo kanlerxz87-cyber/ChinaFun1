@@ -239,16 +239,16 @@
       "district": "Dongcheng",
       "category": "Historic Civic Plaza",
       "hours": "Square: Daily 05:00–22:00 (flag-raising/lowering times follow sunrise/sunset). Tian'anmen Rostrum: Tue–Sun (closed Mon)",
-      "closed_days": "Square open daily (subject to state/Two Sessions security closures in early March); Rostrum CLOSED Mondays",
+      "closed_days": "Square ordinarily open daily but may be subject to temporary state/security closures; check current official notices. Tian’anmen Rostrum CLOSED Mondays.",
       "cost_1_adult": "Square FREE (mandatory advance real-name reservation 1–7 days ahead); Tian'anmen Rostrum CNY 15",
       "cost_2_adults": "CNY 0 (Square) / CNY 30 (Rostrum)",
-      "booking_rules": "Mandatory advance passport reservation (1–7 days prior) via Tian'anmen Square WeChat mini-program; strict security checkpoint. Avoid early-March Two Sessions.",
+      "booking_rules": "Mandatory advance passport reservation (1–7 days prior) via Tian’anmen Square WeChat mini-program; strict security checkpoint. Check official notices for temporary closures; no specific 2027 Two Sessions closure has been verified.",
       "transit": "Subway Line 1 (Tian'anmen East / West) or Line 2 (Qianmen).",
       "official_url": "https://english.beijing.gov.cn/travel/beijingguide/attractions/scenicarea/202006/t20200605_1915326.html",
       "booking_url": "",
       "source_note": "Beijing Municipal Government Portal (verified 2026-11-26)",
       "flags": [
-        "If visiting in early March during annual NPC/CPPCC Two Sessions, expect sudden Tian'anmen/Chang'an Ave closures."
+        "Monitor current official government and venue notices for event-related restrictions. The 2027 Two Sessions schedule and any specific Tian’anmen/Chang’an Avenue closures were not verified in this research; do not assume access without a current reservation/notice."
       ],
       "social": [
         {

@@ -7,6 +7,7 @@ import re
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import parse_qs, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -129,9 +130,11 @@ def main() -> int:
     if dist_hist != {"Chaoyang": 20, "Dongcheng": 9, "Xicheng": 3, "Shunyi": 1}:
         errors.append(f"Unexpected Beijing district distribution: {dist_hist}")
 
-    # 3. Validate hotels mandatory requirements
+    # 3. Validate hotel room filters, exact-date rate snapshots, and offer totals
     hotels = loaded["hotels.json"]
     seen_hids: set[str] = set()
+    expected_windows = {w["dates"] for w in hotels.get("comparison_windows", [])}
+    all_observed_dates: set[str] = set()
     for city_key in ("beijing", "shanghai"):
         for h in hotels[city_key]:
             hid = h["id"]
@@ -142,9 +145,69 @@ def main() -> int:
                 errors.append(f"Hotel {hid} failed bed_verified check")
             if not str(h.get("bathroom_verified", "")).startswith("PASS"):
                 errors.append(f"Hotel {hid} failed bathroom_verified check")
-            if not isinstance(h.get("cheapest_7n_usd"), int) or h["cheapest_7n_usd"] <= 0:
-                errors.append(f"Hotel {hid} invalid cheapest_7n_usd")
+            lowest = h.get("lowest_observed_7n_usd")
+            if isinstance(lowest, bool) or not isinstance(lowest, (int, float)) or lowest <= 0:
+                errors.append(f"Hotel {hid} invalid lowest_observed_7n_usd")
             check_url(h.get("booking_url", ""), f"hotel {hid}", errors)
+            observed = []
+            for w in h.get("windows", []):
+                all_observed_dates.add(w.get("dates"))
+                source_url = w.get("source_url", "")
+                check_url(source_url, f"hotel {hid} rate window {w.get('dates')}", errors)
+                try:
+                    checkin, checkout = w["dates"].split(" -> ")
+                    query = parse_qs(urlparse(source_url).query)
+                    if query.get("checkin") != [checkin] or query.get("checkout") != [checkout]:
+                        errors.append(f"Hotel {hid} rate URL does not match its stated dates {w.get('dates')}")
+                except (KeyError, ValueError):
+                    errors.append(f"Hotel {hid} rate window has malformed date range: {w.get('dates')}")
+                if w.get("checked") != hotels.get("verified_on"):
+                    errors.append(f"Hotel {hid} rate window {w.get('dates')} has stale/missing checked date")
+                if w.get("status") == "available":
+                    offers = w.get("offers", [])
+                    if not offers:
+                        errors.append(f"Hotel {hid} rate window {w.get('dates')} has no offers")
+                    qualifying = [o for o in offers if o.get("qualifies", True) is True]
+                    if not qualifying:
+                        errors.append(f"Hotel {hid} rate window {w.get('dates')} has no qualifying queen/king offer")
+                    for offer in offers:
+                        amount = offer.get("total_usd")
+                        if isinstance(amount, bool) or not isinstance(amount, (int, float)) or amount <= 0:
+                            errors.append(f"Hotel {hid} rate window {w.get('dates')} has invalid offer total")
+                        elif offer.get("qualifies", True) is True:
+                            observed.append((float(amount), w.get("dates")))
+                        if "qualifies" in offer and not isinstance(offer["qualifies"], bool):
+                            errors.append(f"Hotel {hid} rate window {w.get('dates')} has non-boolean qualifies flag")
+                        if offer.get("qualifies") is False and not offer.get("room"):
+                            errors.append(f"Hotel {hid} rate window {w.get('dates')} has an excluded offer without a room label")
+                elif w.get("status") != "no_qualifying_room_captured":
+                    errors.append(f"Hotel {hid} rate window {w.get('dates')} has unknown status {w.get('status')}")
+                for bucket in ("other_observed_rates", "unattributed_observed_rates"):
+                    for offer in w.get(bucket, []):
+                        amount = offer.get("total_usd")
+                        if isinstance(amount, bool) or not isinstance(amount, (int, float)) or amount <= 0:
+                            errors.append(f"Hotel {hid} rate window {w.get('dates')} has invalid {bucket} total")
+            if observed:
+                expected_low, expected_date = min(observed)
+                if (
+                    isinstance(lowest, bool)
+                    or not isinstance(lowest, (int, float))
+                    or abs(float(lowest) - expected_low) > 0.01
+                ):
+                    errors.append(f"Hotel {hid} lowest observed total does not match its offers")
+                if h.get("lowest_observed_window") != expected_date:
+                    errors.append(f"Hotel {hid} lowest observed window does not match its offers")
+                note_prefix = f"${expected_low:,.2f} total including taxes and fees on {expected_date}"
+                if not str(h.get("lowest_observed_note", "")).startswith(note_prefix):
+                    errors.append(f"Hotel {hid} lowest observed note does not match its total/window")
+                winning_window = next((w for w in h.get("windows", []) if w.get("dates") == expected_date), None)
+                if winning_window and h.get("booking_url") != winning_window.get("source_url"):
+                    errors.append(f"Hotel {hid} booking_url does not point to its lowest observed date capture")
+            elif lowest:
+                errors.append(f"Hotel {hid} has a lowest observed value but no qualifying offers")
+    if not expected_windows.issubset(all_observed_dates):
+        missing = sorted(expected_windows - all_observed_dates)
+        errors.append(f"Hotel dataset does not contain captures for comparison windows: {missing}")
 
     # 4. Validate activities
     acts = loaded["activities.json"]["items"]
@@ -158,10 +221,24 @@ def main() -> int:
         for s in a.get("social", []):
             check_url(s.get("url", ""), f"activity {a['id']} social", errors)
 
-    # 5. Validate sources
+    # 5. Validate sources and ensure every hotel capture is registered exactly
+    registered_rate_urls: set[str] = set()
     for cat in loaded["sources.json"]["categories"]:
         for it in cat["items"]:
             check_url(it.get("url", ""), f"source {it.get('title')}", errors)
+            if "Booking.com" in it.get("title", "") and "rate capture" in it.get("title", ""):
+                registered_rate_urls.add(it.get("url", ""))
+    hotel_rate_urls = {
+        w.get("source_url", "")
+        for city_key in ("beijing", "shanghai")
+        for h in hotels[city_key]
+        for w in h.get("windows", [])
+        if w.get("source_url")
+    }
+    if hotel_rate_urls != registered_rate_urls:
+        missing = sorted(hotel_rate_urls - registered_rate_urls)
+        extra = sorted(registered_rate_urls - hotel_rate_urls)
+        errors.append(f"Booking.com rate capture register mismatch (missing={missing}, extra={extra})")
 
     # 6. Validate all 9 HTML pages, local links, anchors, viewport, and zero external CDNs
     parsed_ids: dict[str, set[str]] = {}

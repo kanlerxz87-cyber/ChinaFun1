@@ -1,18 +1,16 @@
 {
-  "verified_on": "2026-11-26",
-  "pricing_notes": "All 7-night totals below were read directly from live Booking.com room-rate tables for 2 adults, 1 room, in USD on 2026-11-26 (plus two luxury Shanghai benchmarks verified 2026-11-25 in repo data/hotels.json and cross-checked). Rates are dynamic and exclude China VAT (6% or 6.6% as explicitly stated per listing); service charge inclusion is shown per property. Every ranked property passes both mandatory requirements: private/attached bathroom AND queen or king bed.",
+  "verified_on": "2026-11-27",
+  "pricing_notes": "Rate snapshots were captured directly from Booking.com property pages on 2026-11-27 for 2 adults, 1 room, 7 nights, in USD. The displayed totals state that taxes and fees are included; no separate VAT or service charge has been added or estimated. Booking.com is a third-party booking source, not an official hotel tariff. Prices and availability are dynamic; discounts may be date-, room-, payment-, or member-eligibility-specific (including Genius sign-in rates). Cancellation and prepayment rules are offer-specific and shown separately below. Breakfast is extra unless a particular offer says it is included. Recheck the exact room, bed, total, taxes/fees, cancellation cutoff, payment timing, and member eligibility in the live checkout before booking. These snapshots do not guarantee a future rate or establish a universally cheapest stay date.",
   "booking_timing_finding": {
-    "headline": "Book Refundable Rates During the Active Black Friday Window (Nov 19 – Dec 2, 2026) for 2027-02-15 to 2027-02-22",
+    "headline": "Selected live rate snapshots — no universal cheapest booking or stay date established",
     "evidence": [
-      "base-Beijing Wangfujing Serviced Apartment drops 51% from $866 to $425/7N on 2027-02-15 -> 2027-02-22 via an active Black Friday Deal (stays Nov 19, 2026 – Dec 31, 2027) + weekly rate + Booking.com Pays, with FREE cancellation until 2027-02-14.",
-      "Park Plaza Beijing Wangfujing is $749/7N (Genius) on Feb 15-22 and Mar 1-8, jumping +23.4% to $924/7N by Mar 16-23.",
-      "Radisson Blu Shanghai New World is $921/7N (Genius) on Feb 15-22, jumping +56.1% to $1,438/7N by Mar 16-23.",
-      "Pullman Shanghai Jing'an (Superior King) is $621 non-ref / $707 free-cancel on Feb 15-22, jumping +36.1% to $845 non-ref / $963 free-cancel by Mar 16-23.",
-      "Grand Central Hotel Shanghai (Superior King) is $901/7N on Feb 15-22 vs $974/7N (+8.1%) on Mar 16-23."
+      "All captures use Booking.com, USD, 2 adults, 1 room, 7 nights, and were checked 2026-11-27. Thirteen properties were captured for Feb 15–22; seven core listings were refreshed for Feb 18–25 and Mar 16–23. Seven Mar 1–8 pages were queried, but Pullman showed only a twin-bed offer in that capture, so it is not counted as a qualifying queen/king comparison.",
+      "The selected rates do not move uniformly: Park Plaza shows $795.13 on Feb 15–22, Feb 18–25, and Mar 1–8, versus $981.64 on Mar 16–23 (Genius/member rates with cancellation terms); Grand Millennium shows $880.19 nonrefundable / $890 free-cancellation on Feb 15–22 versus $880.81 / $897 on Mar 16–23.",
+      "The lowest displayed price may be nonrefundable while a higher offer is refundable; some listed prices require Genius/member sign-in or a booking-site discount. The totals shown by Booking.com include taxes and fees, while breakfast may be additional. Room and rate-plan conditions are not identical across every date."
     ],
-    "action": "Locking a free-cancellation, pay-at-property or pay-later rate for 2027-02-15 -> 2027-02-22 immediately captures post-Spring Festival trough pricing with zero downside if dates shift."
+    "action": "Choose dates only after the traveler confirms trip length and city split. At checkout, compare the same qualifying bed/room and cancellation terms, and confirm the final total, member eligibility, payment timing, and exact refund deadline. Do not describe these captures as a risk-free booking strategy or as proof that one date is cheapest for every hotel."
   },
-  "proximity_methodology": "We do NOT fabricate exact minute-by-minute subway counts for restaurants whose transit schedules were not queried via a live routing engine. Instead, we report: (1) verified hotel-to-subway walk distances stated on the property listing, (2) verified district/corridor counts of MICHELIN-starred restaurants (Beijing 33/33 audited: 20 Chaoyang, 9 Dongcheng, 3 Xicheng, 1 Shunyi; Shanghai live guide: 50 starred heavily concentrated in Huangpu, Jing'an, Xuhui & Changning), and (3) transparent '<=60 min transit reach' coverage ranges with explicit outliers flagged (e.g., Beijing 2* Blackswan in Shunyi Capital Airport corridor requires taxi/Airport Express + transfer; Xicheng/Chaoyang cross-city hops take 25-45 min on Lines 1/5/8/10/17).",
+  "proximity_methodology": "We do NOT fabricate exact minute-by-minute subway counts for restaurants whose transit schedules were not queried via a live routing engine. Instead, we report: (1) verified hotel-to-subway walk distances stated on the property listing, (2) verified district/corridor counts of MICHELIN-starred restaurants (Beijing 33/33 audited: 20 Chaoyang, 9 Dongcheng, 3 Xicheng, 1 Shunyi; Shanghai live guide: 50 starred heavily concentrated in Huangpu, Jing'an, Xuhui & Changning), and (3) transparent \"<=60 min transit reach\" coverage ranges with explicit outliers flagged (e.g., Beijing 2* Blackswan in Shunyi Capital Airport corridor requires taxi/Airport Express + transfer; Xicheng/Chaoyang cross-city hops take 25-45 min on Lines 1/5/8/10/17).",
   "beijing": [
     {
       "rank": 1,
@@ -26,24 +24,87 @@
       "subway_access": "Steps from Dengshikou Station (Line 5); 1 stop to Dongdan (Line 1 interchange to Chaoyang Guomao CBD & Tian'anmen).",
       "bed_verified": "PASS — 1 Queen Bed selectable (Deluxe Room, 323 ft²); King Bed in Deluxe Garden View (344 ft²)",
       "bathroom_verified": "PASS — Attached private bathroom with bath",
-      "amenities": ["Fitness center", "Spa & wellness center", "2 dining outlets & lounge bar", "24h room service", "Guest laundry", "Parking garage", "Wheelchair-accessible rooms"],
-      "michelin_reach_summary": "Walking distance to 1* Lei Garden (89 Jinbao St, next door), 1* Zijin Mansion (5-15 Jinyu Hutong), 1* Fu Chun Ju (1 Wangfujing St), 1* Zhiguan Courtyard, plus MICHELIN Selected 1949 Duck de Chine (98 Jinbao St, across street). 32 of 33 Beijing starred restaurants (all 32 urban Chaoyang/Dongcheng/Xicheng venues) are in central rail corridors reachable in <=60 min via Line 5 -> Line 1/10/2/17 (exact door-to-door timetables unmodelled; Shunyi 2* Blackswan is an outer-airport taxi/express outlier).",
-      "cheapest_window": "2027-02-15 -> 2027-02-22 (tie with Mar 1-8)",
-      "cheapest_7n_usd": 749,
-      "cheapest_note": "$749 Genius (free sign-in) / $832 list; 10% service incl., 6% VAT excl.; Free cancellation until 2:00 PM on check-in day; no prepayment.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 749, "list_usd": 832, "per_night_usd": 97, "room": "Deluxe Room (1 queen selectable)", "terms": "Genius 10% off; Free cancel before 2 PM Feb 15; no prepay; excl. 6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-01 -> 2027-03-08", "total_usd": 749, "list_usd": 832, "per_night_usd": 97, "room": "Deluxe Room (1 queen selectable)", "terms": "Genius 10% off; Free cancel before 2 PM Mar 1; no prepay; excl. 6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-16 -> 2027-03-23", "total_usd": 924, "list_usd": 1027, "per_night_usd": 120, "room": "Deluxe Room (1 queen selectable)", "terms": "+$175 (+23.4%) vs Feb 15-22; Free cancel before 2 PM Mar 16; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Fitness center",
+        "Spa & wellness center",
+        "2 dining outlets & lounge bar",
+        "24h room service",
+        "Guest laundry",
+        "Parking garage",
+        "Wheelchair-accessible rooms"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["No indoor swimming pool (fitness center & spa only)."]
+      "michelin_reach_summary": "Walking distance to 1* Lei Garden (89 Jinbao St, next door), 1* Zijin Mansion (5-15 Jinyu Hutong), 1* Fu Chun Ju (1 Wangfujing St), 1* Zhiguan Courtyard, plus MICHELIN Selected 1949 Duck de Chine (98 Jinbao St, across street). 32 of 33 Beijing starred restaurants (all 32 urban Chaoyang/Dongcheng/Xicheng venues) are in central rail corridors reachable in <=60 min via Line 5 -> Line 1/10/2/17 (exact door-to-door timetables unmodelled; Shunyi 2* Blackswan is an outer-airport taxi/express outlier).",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Room, 30 m²; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 795.13,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation until 2:00 PM on Feb 15; no prepayment; breakfast US$21/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Room, 30 m²; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 795.13,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation until 2:00 PM on Feb 18; no prepayment; breakfast US$21/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Room; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 795.13,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation was displayed; verify the exact cutoff and payment terms in the selected live rate."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Room; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 981.64,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation until 2:00 PM on Mar 16; no prepayment; breakfast US$21/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/park-plaza-beijing-wangfujing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "No indoor swimming pool (fitness center & spa only)."
+      ],
+      "lowest_observed_7n_usd": 795.13,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$795.13 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation until 2:00 PM on Feb 15; no prepayment; breakfast US$21/person/night extra. Sign-in/eligibility required for the displayed Genius price."
     },
     {
       "rank": 2,
       "id": "BJ-H02",
       "name": "base-Beijing Wangfujing Serviced Apartment",
-      "tier": "Cheapest Verified 7-Night Stay (Black Friday Deal)",
+      "tier": "Lowest Captured Beijing Snapshot (Serviced Apartment + Kitchen)",
       "district": "Dongcheng (Longfusi / Wangfujing)",
       "address": "Longfusi / Wangfujing Shopping Area, Dongcheng, Beijing",
       "rating": "9.0 / 10 (1,923 reviews)",
@@ -51,18 +112,87 @@
       "subway_access": "Central Dongcheng / Wangfujing (near Dongsi Lines 5 & 6 and China Art Museum Line 8 — exact station foot distance not stated on Booking snippet; verify walk).",
       "bed_verified": "PASS — 1 Queen Bed (Exquisite Studio, 570 ft²)",
       "bathroom_verified": "PASS — Private bathroom with shower",
-      "amenities": ["In-unit washing machine (huge win for 2-4 wk trips)", "Full private kitchenette (stovetop, fridge, microwave, toaster)", "24h front desk", "Daily housekeeping", "Coffee shop & lounge", "Aerobics studio", "Free WiFi", "Breakfast $7/pp"],
-      "michelin_reach_summary": "Same central Dongcheng core as Wangfujing/Jinbao St (9 Dongcheng starred venues nearby, incl. 1* Trb Hutong & 1* Fu Chun Ju; Line 5/6/8 connections to all 20 Chaoyang & 3 Xicheng venues). Exact walk time to station flagged for verification.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 425,
-      "cheapest_note": "$425 total ($61/night) via active 51% off Black Friday Deal ($866 original) + weekly discount + Booking pays; Free cancellation before Feb 14; pay nothing until Feb 12; excl. 6% VAT.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 425, "list_usd": 866, "per_night_usd": 61, "room": "Exquisite Studio (570 ft², 1 queen)", "terms": "Black Friday 51% off; Free cancel before Feb 14; pay nothing until Feb 12; excl. 6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-01 -> 2027-03-08", "total_usd": 449, "list_usd": 915, "per_night_usd": 64, "room": "Exquisite Studio (570 ft², 1 queen)", "terms": "Black Friday 51% off (+$24 vs Feb); Free cancel before Feb 28; excl. 6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-16 -> 2027-03-23", "total_usd": 489, "list_usd": 997, "per_night_usd": 70, "room": "Exquisite Studio (570 ft², 1 queen)", "terms": "Black Friday 51% off (+$64 / +15% vs Feb); Free cancel before Mar 15; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "In-unit washing machine (huge win for 2-4 wk trips)",
+        "Full private kitchenette (stovetop, fridge, microwave, toaster)",
+        "24h front desk",
+        "Daily housekeeping",
+        "Coffee shop & lounge",
+        "Aerobics studio",
+        "Free WiFi",
+        "Breakfast $7/pp"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Black Friday Deal is time-limited; exact street number and walking distance to Dongsi/Wangfujing Metro should be confirmed on booking confirmation."]
+      "michelin_reach_summary": "Same central Dongcheng core as Wangfujing/Jinbao St (9 Dongcheng starred venues nearby, incl. 1* Trb Hutong & 1* Fu Chun Ju; Line 5/6/8 connections to all 20 Chaoyang & 3 Xicheng venues). Exact walk time to station flagged for verification.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Exquisite Studio, 53 m²; 1 queen bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 453.2,
+              "rate_type": "Non-refundable",
+              "terms": "Displayed as non-refundable; price is a dated Booking.com offer, not a guaranteed future rate. Breakfast US$7/person/night extra."
+            },
+            {
+              "total_usd": 490.2,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; no prepayment. Breakfast US$7/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Exquisite Studio, 53 m²; 1 queen bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 453.2,
+              "rate_type": "Non-refundable; one reschedule",
+              "terms": "One reschedule permitted until Feb 13 for the same or a higher price; any price difference is payable. Pay online. Breakfast US$7/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Exquisite Studio; 1 queen bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 479.7,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable rate displayed. Recheck any reschedule or payment conditions at checkout."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Exquisite Studio, 53 m²; 1 queen bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 522.15,
+              "rate_type": "Non-refundable; one reschedule",
+              "terms": "One reschedule permitted until Mar 11 for the same or a higher price; any price difference is payable. Breakfast US$7/person/night extra."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Booking.com prices and promotional eligibility can change; the lowest captured rate is non-refundable. Confirm the exact address and walking distance to the nearest metro station before booking."
+      ],
+      "lowest_observed_7n_usd": 453.2,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$453.20 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Displayed as non-refundable; price is a dated Booking.com offer, not a guaranteed future rate. Breakfast US$7/person/night extra."
     },
     {
       "rank": 3,
@@ -76,16 +206,81 @@
       "subway_access": "2-minute walk to Jinyuhutong Subway Station (Line 8); 50 min by metro to Beijing South HSR Station.",
       "bed_verified": "PASS — 1 King Bed (Superior Room King Bed, 323 ft²)",
       "bathroom_verified": "PASS — Private attached bathroom with separate shower & bath",
-      "amenities": ["Heated indoor swimming pool", "Fitness center", "Spa, sauna & steam rooms", "3 restaurants", "24h room service", "Free WiFi", "On-site parking"],
-      "michelin_reach_summary": "Steps from 1* Zijin Mansion, 1* Zhiguan Courtyard, 1* Fu Chun Ju, and 1* Lei Garden; direct Line 8 rail to Nanluoguxiang/Wangfujing/Qianmen and fast interchange to Chaoyang's 20 starred venues.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22 (only window captured)",
-      "cheapest_7n_usd": 696,
-      "cheapest_note": "$696 Genius + Booking.com Pays ($834 original); 10% service incl., 6% VAT excl.; Free cancel before Feb 13; pay nothing until Feb 11.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 696, "list_usd": 834, "per_night_usd": 90, "room": "Superior Room King Bed (323 ft²)", "terms": "17% off (Genius + Booking pays); Free cancel before Feb 13; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Heated indoor swimming pool",
+        "Fitness center",
+        "Spa, sauna & steam rooms",
+        "3 restaurants",
+        "24h room service",
+        "Free WiFi",
+        "On-site parking"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured; re-check Mar dates if shifting trip."]
+      "michelin_reach_summary": "Steps from 1* Zijin Mansion, 1* Zhiguan Courtyard, 1* Fu Chun Ju, and 1* Lei Garden; direct Line 8 rail to Nanluoguxiang/Wangfujing/Qianmen and fast interchange to Chaoyang's 20 starred venues.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room King Bed, 30 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 793.57,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation before Feb 13; no prepayment; breakfast US$19/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room King Bed, 30 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 793.57,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation before Feb 16; no prepayment; breakfast US$19/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room King Bed; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 843.24,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation was displayed; verify the exact cutoff and payment terms in the selected live rate. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior King Room, 30 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 899.99,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation before Mar 14; no prepayment; breakfast US$19/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/sunworld-dynasty-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "The Feb 15–22, Feb 18–25, Mar 1–8, and Mar 16–23 rates are separate dynamic snapshots; Genius eligibility and cancellation cutoff vary by date."
+      ],
+      "lowest_observed_7n_usd": 793.57,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$793.57 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation before Feb 13; no prepayment; breakfast US$19/person/night extra. Sign-in/eligibility required for the displayed Genius price."
     },
     {
       "rank": 4,
@@ -99,18 +294,101 @@
       "subway_access": "1,750 ft walk (~6 min) to Jintaixizhao Station (Line 10 ring line); 1 stop to Guomao (Line 1) & 1 stop to Hujialou (Line 6).",
       "bed_verified": "PASS — 1 King Bed (Deluxe Double Room, 484 ft²)",
       "bathroom_verified": "PASS — Private extended bathroom with tub & separate shower",
-      "amenities": ["Indoor swimming pool", "Spa, sauna & massage", "Fitness center", "Multiple restaurants & bar", "484 ft² spacious rooms", "24h room service", "Parking garage"],
-      "michelin_reach_summary": "Sits directly inside Chaoyang's 20-restaurant MICHELIN core (60.6% of Beijing's starred guide): minutes on foot/1 stop from 3* Chao Shang Chao & 1* MO Jasmine (CP Center), 1* The House of Dynasties (Rosewood), 1* GIADA Garden (China World), 2* Lu Shang Lu, 2* Jingji, 1* Rong Pao, and 1* The Beijing Kitchen (SKP).",
-      "cheapest_window": "2027-03-01 -> 2027-03-08 ($783) / Feb 15-22 ($838)",
-      "cheapest_7n_usd": 783,
-      "cheapest_note": "$783 on Mar 1-8 (Booking pays 7% off $844, free cancel before Feb 28); $838 on Feb 15-22 (free cancel before Feb 14). 10% service incl., 6.6% VAT excl.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 838, "list_usd": 838, "per_night_usd": 109, "room": "Deluxe Double Room (484 ft², 1 king)", "terms": "Free cancel before Feb 14; no prepay; 10% svc incl., 6.6% VAT excl.", "checked": "2026-11-26"},
-        {"dates": "2027-03-01 -> 2027-03-08", "total_usd": 783, "list_usd": 844, "per_night_usd": 101, "room": "Deluxe Double Room (484 ft², 1 king)", "terms": "CHEAPEST (-$55 vs Feb via 7% Booking pays); Free cancel before Feb 28; excl. 6.6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-16 -> 2027-03-23", "total_usd": 845, "list_usd": 845, "per_night_usd": 110, "room": "Deluxe Double Room (484 ft², 1 king)", "terms": "Free cancel before Mar 15; no prepay; excl. 6.6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor swimming pool",
+        "Spa, sauna & massage",
+        "Fitness center",
+        "Multiple restaurants & bar",
+        "484 ft² spacious rooms",
+        "24h room service",
+        "Parking garage"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["WiFi rated 7.8/10 by guests; 6-min walk to metro is slightly longer than Wangfujing doorstep options."]
+      "michelin_reach_summary": "Sits directly inside Chaoyang's 20-restaurant MICHELIN core (60.6% of Beijing's starred guide): minutes on foot/1 stop from 3* Chao Shang Chao & 1* MO Jasmine (CP Center), 1* The House of Dynasties (Rosewood), 1* GIADA Garden (China World), 2* Lu Shang Lu, 2* Jingji, 1* Rong Pao, and 1* The Beijing Kitchen (SKP).",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Double Room, 45 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 880.19,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable; pay online. Breakfast US$30/person/night extra."
+            },
+            {
+              "total_usd": 890.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; no prepayment. Breakfast US$30/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Double Room, 45 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 880.19,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable; pay online. Breakfast US$30/person/night extra."
+            },
+            {
+              "total_usd": 890.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 17; no prepayment. Breakfast US$30/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Double Room, 45 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 880.63,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable rate displayed. Breakfast US$30/person/night extra."
+            },
+            {
+              "total_usd": 897.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation was displayed; verify the exact cutoff and payment terms in the selected live rate. Breakfast US$30/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Double Room, 45 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 880.81,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable rate displayed. Breakfast US$30/person/night extra."
+            },
+            {
+              "total_usd": 897.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Mar 15; no prepayment. Breakfast US$30/person/night extra."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/grand-millennium-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "WiFi rated 7.8/10 by guests; 6-min walk to metro is slightly longer than Wangfujing doorstep options."
+      ],
+      "lowest_observed_7n_usd": 880.19,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$880.19 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Non-refundable; pay online. Breakfast US$30/person/night extra."
     },
     {
       "rank": 5,
@@ -124,16 +402,38 @@
       "subway_access": "Adjacent to Liangmaqiao Station (Line 10 + Airport Express interchange — direct to Capital Airport & Chaoyang CBD).",
       "bed_verified": "PASS — 1 King Bed (Superior King Room, 388 ft², high floor)",
       "bathroom_verified": "PASS — Attached private bathroom",
-      "amenities": ["Indoor swimming pool", "Fitness center", "5 restaurants (incl. Paulaner Brauhaus)", "Complimentary minibar soft drinks/local beer", "Parking", "24h room service"],
-      "michelin_reach_summary": "Walkable to 3* Xin Rong Ji (Xinyuan South Rd), 1* Cai Yi Xuan (Four Seasons, 48 Liangmaqiao Rd — literally next door!), 1* Il Ristorante - Niko Romito (Bvlgari), and MICHELIN Selected Mio; 10-15 min on Line 10 to Sanlitun/Guomao Chaoyang cluster.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22 (only window captured)",
-      "cheapest_7n_usd": 845,
-      "cheapest_note": "$845 (7% Booking pays off $912); 10% service incl., 6% VAT excl.; Free cancel before Feb 14; pay nothing until Feb 12.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 845, "list_usd": 912, "per_night_usd": 109, "room": "Superior King Room (388 ft², 1 king)", "terms": "7% off Booking pays; Free cancel before Feb 14; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor swimming pool",
+        "Fitness center",
+        "5 restaurants (incl. Paulaner Brauhaus)",
+        "Complimentary minibar soft drinks/local beer",
+        "Parking",
+        "24h room service"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/kempinski-beijing-lufthansa-center.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured; ~25-35 min by subway from Forbidden City/Tian'anmen sightseeing core."]
+      "michelin_reach_summary": "Walkable to 3* Xin Rong Ji (Xinyuan South Rd), 1* Cai Yi Xuan (Four Seasons, 48 Liangmaqiao Rd — literally next door!), 1* Il Ristorante - Niko Romito (Bvlgari), and MICHELIN Selected Mio; 10-15 min on Line 10 to Sanlitun/Guomao Chaoyang cluster.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/kempinski-beijing-lufthansa-center.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior King Room; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 968.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; no prepayment."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/kempinski-beijing-lufthansa-center.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Only Feb 15–22 was captured for this property; recheck the exact dates before booking. It is about 25–35 minutes by subway from the Forbidden City/Tian'anmen sightseeing core."
+      ],
+      "lowest_observed_7n_usd": 968.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$968.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation before Feb 14; no prepayment."
     },
     {
       "rank": 6,
@@ -147,16 +447,41 @@
       "subway_access": "Steps from Dengshikou Station (Line 5), immediately beside Park Plaza Wangfujing.",
       "bed_verified": "PASS — 1 King Bed (Classic King Room High Floor, 484 ft²)",
       "bathroom_verified": "PASS — Attached private bathroom",
-      "amenities": ["484 ft² high-floor rooms", "Coffee machine", "Soundproofing", "Full-service 5-star Regent facilities & dining"],
-      "michelin_reach_summary": "Identical prime Jinbao St access to 1* Lei Garden, 1* Zijin Mansion, 1* Fu Chun Ju, and Line 5/1 rail reach across central Beijing.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 1101,
-      "cheapest_note": "$1,101 partially refundable (1st night fee if cancelled) OR $1,421 free cancel before 4 PM Feb 14; 10% svc incl., 6% VAT excl.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 1101, "list_usd": 1421, "per_night_usd": 143, "room": "Classic King Room High Floor (484 ft²)", "terms": "$1,101 partially refundable / $1,421 free cancel; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "484 ft² high-floor rooms",
+        "Coffee machine",
+        "Soundproofing",
+        "Full-service 5-star Regent facilities & dining"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/the-regent-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured; $1,101 rate is partially refundable (1-night penalty)."]
+      "michelin_reach_summary": "Identical prime Jinbao St access to 1* Lei Garden, 1* Zijin Mansion, 1* Fu Chun Ju, and Line 5/1 rail reach across central Beijing.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/the-regent-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Classic King Room High Floor, 45 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 1169.0,
+              "rate_type": "Partially refundable",
+              "terms": "Partially refundable; cancellation incurs a first-night penalty."
+            },
+            {
+              "total_usd": 1509.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before 4:00 PM on Feb 14."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/the-regent-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Only Feb 15–22 was captured for this property. The observed $1,169 rate is partially refundable with a first-night penalty; the separately displayed $1,509 offer was free-cancellation before 4 PM on Feb 14."
+      ],
+      "lowest_observed_7n_usd": 1169.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$1,169.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Partially refundable; cancellation incurs a first-night penalty."
     },
     {
       "rank": 7,
@@ -168,18 +493,39 @@
       "rating": "9.1 / 10 location (9.2 couples)",
       "location_score": "9.1 / 10",
       "subway_access": "Direct indoor link to Guomao Station (Line 1 + Line 10 — Beijing's strongest east-west & ring rail hub).",
-      "bed_verified": "PASS — 1 Queen/King Bed (Deluxe King Room, 431 ft²)",
+      "bed_verified": "PASS — Booking.com labels the room Deluxe King Room; the bed description lists 1 queen bed (meets the queen-or-larger requirement)",
       "bathroom_verified": "PASS — Private bathroom",
-      "amenities": ["Indoor heated swimming pool", "Indoor tennis & squash courts", "Spa & wellness center", "5 restaurants (houses 1* GIADA Garden on 3F)", "Direct China World Mall access"],
-      "michelin_reach_summary": "Houses 1* GIADA Garden inside the hotel; steps from 1* Xin Rong Ji (Yintai), 3* Chao Shang Chao, 1* MO Jasmine, 2* Lu Shang Lu; direct Line 1 ride to Tian'anmen/Wangfujing/Xicheng.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 1318,
-      "cheapest_note": "$1,318 free cancel before Feb 14; no prepayment; 10% svc incl., 6% VAT excl.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 1318, "list_usd": 1318, "per_night_usd": 171, "room": "Deluxe King Room (431 ft²)", "terms": "Free cancel before Feb 14; no prepay; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor heated swimming pool",
+        "Indoor tennis & squash courts",
+        "Spa & wellness center",
+        "5 restaurants (houses 1* GIADA Garden on 3F)",
+        "Direct China World Mall access"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/china-world-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured."]
+      "michelin_reach_summary": "Houses 1* GIADA Garden inside the hotel; steps from 1* Xin Rong Ji (Yintai), 3* Chao Shang Chao, 1* MO Jasmine, 2* Lu Shang Lu; direct Line 1 ride to Tian'anmen/Wangfujing/Xicheng.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/china-world-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe King Room; Booking.com bed description lists 1 queen; private bathroom",
+          "offers": [
+            {
+              "total_usd": 1383.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; no prepayment."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/china-world-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Only Feb 15–22 was captured for this property; recheck the exact dates and room description before booking."
+      ],
+      "lowest_observed_7n_usd": 1383.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$1,383.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation before Feb 14; no prepayment."
     },
     {
       "rank": 8,
@@ -193,16 +539,42 @@
       "subway_access": "722 ft walk (~3 min) to Dengshikou Station (Line 5); 0.6 mi to Dongdan Station (Line 1).",
       "bed_verified": "PASS — 1 King Bed (Deluxe King Room, 484 ft²)",
       "bathroom_verified": "PASS — Marble private bathroom with Aesop toiletries & tub",
-      "amenities": ["Indoor swimming pool", "Waldorf Spa & wellness center", "Fitness center", "Houses 1* Zijin Mansion & MICHELIN Selected Brasserie 1893", "Peacock Alley cocktail bar", "15% F&B discount on flex rate"],
-      "michelin_reach_summary": "Elevator-ride dining to 1* Zijin Mansion & Brasserie 1893; steps from 1* Zhiguan Courtyard, 1* Fu Chun Ju, 1* Lei Garden, and 5-min walk to Wangfujing.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 2243,
-      "cheapest_note": "$2,243 non-refundable OR $2,582 free cancel before Feb 13 (includes 15% off on-property F&B); 10% svc incl., 6% VAT excl.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 2243, "list_usd": 2582, "per_night_usd": 291, "room": "Deluxe King Room (484 ft², 1 king)", "terms": "$2,243 non-ref / $2,582 free cancel + 15% F&B off; excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor swimming pool",
+        "Waldorf Spa & wellness center",
+        "Fitness center",
+        "Houses 1* Zijin Mansion & MICHELIN Selected Brasserie 1893",
+        "Peacock Alley cocktail bar"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/waldorf-astoria-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured; splurge pricing (~3x Park Plaza next door)."]
+      "michelin_reach_summary": "Elevator-ride dining to 1* Zijin Mansion & Brasserie 1893; steps from 1* Zhiguan Courtyard, 1* Fu Chun Ju, 1* Lei Garden, and 5-min walk to Wangfujing.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/waldorf-astoria-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe King Room, 45 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 2382.0,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable rate."
+            },
+            {
+              "total_usd": 2760.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 13."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/waldorf-astoria-beijing.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Only Feb 15–22 was captured for this property; recheck the exact dates before booking. The observed rate is in the ultra-luxury tier."
+      ],
+      "lowest_observed_7n_usd": 2382.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$2,382.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Non-refundable rate."
     }
   ],
   "shanghai": [
@@ -218,23 +590,86 @@
       "subway_access": "~1-minute walk to People's Square Station (Lines 1, 2 & 8) — direct single-seat Line 2 to Hongqiao HSR & Pudong Airport!",
       "bed_verified": "PASS — 1 Queen Bed selectable (Superior Room, 323 ft²)",
       "bathroom_verified": "PASS — Attached private bathroom with bath & shower",
-      "amenities": ["Indoor swimming pool", "Fitness center & yoga room", "Sauna", "5 dining outlets + 47F Sky Dome Bar", "Breakfast rated 9.1/10", "Direct across from Shanghai Museum"],
-      "michelin_reach_summary": "Central 3-line People's Square hub: direct Line 2/1/8/10 access across Huangpu, Jing'an, Xuhui, Changning & Pudong Lujiazui (covers all 50 live Shanghai starred venues — 1x3*, 11x2*, 38x1* — within central metro corridors; exact door-to-door timetables unmodelled).",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 921,
-      "cheapest_note": "$921 Genius (free sign-in) / $1,024 list on Feb 15-22; jumps +56.1% to $1,438 on Mar 16-23! Free cancel before Feb 14; 10% svc incl., 6.6% VAT excl.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 921, "list_usd": 1024, "per_night_usd": 120, "room": "Superior Room (323 ft², 1 queen selectable)", "terms": "Genius 10% off; Free cancel before Feb 14; no prepay; excl. 6.6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-16 -> 2027-03-23", "total_usd": 1438, "list_usd": 1438, "per_night_usd": 187, "room": "Superior Room (323 ft², 1 queen selectable)", "terms": "+$517 (+56.1%) vs Feb 15-22; Free cancel before Mar 15; excl. 6.6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor swimming pool",
+        "Fitness center & yoga room",
+        "Sauna",
+        "5 dining outlets + 47F Sky Dome Bar",
+        "Breakfast rated 9.1/10",
+        "Direct across from Shanghai Museum"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Booking.com notes the hotel spa & wellness center is temporarily closed (indoor pool, gym & sauna remain listed)."]
+      "michelin_reach_summary": "Central 3-line People's Square hub: direct Line 2/1/8/10 access across Huangpu, Jing'an, Xuhui, Changning & Pudong Lujiazui (covers all 50 live Shanghai starred venues — 1x3*, 11x2*, 38x1* — within central metro corridors; exact door-to-door timetables unmodelled).",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room, 30 m²; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 1087.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; no prepayment; breakfast US$34/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room, 30 m²; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 1193.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 17; no prepayment; breakfast US$34/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 1474.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation was displayed; verify the exact cutoff and payment terms in the selected live rate. Breakfast US$34/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Room, 30 m²; 1 queen bed selectable; private bathroom",
+          "offers": [
+            {
+              "total_usd": 1385.81,
+              "rate_type": "Genius/member rate",
+              "terms": "Free cancellation before Mar 15; no prepayment; breakfast US$34/person/night extra. Sign-in/eligibility required for the displayed Genius price."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/radisson-new-world-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Booking.com notes the hotel spa & wellness center is temporarily closed (indoor pool, gym & sauna remain listed)."
+      ],
+      "lowest_observed_7n_usd": 1087.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$1,087.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation before Feb 14; no prepayment; breakfast US$34/person/night extra."
     },
     {
       "rank": 2,
       "id": "SH-H02",
       "name": "Pullman Shanghai Jing'an",
-      "tier": "Cheapest Verified 5-Star Shanghai King Room",
+      "tier": "Lowest Captured Shanghai Snapshot (King Room; Terms Vary)",
       "district": "Jing'an (Shanghai Railway Station Hub)",
       "address": "Jing'an District, 2-min walk to Shanghai Railway Station (Lines 1, 3 & 4), Shanghai",
       "rating": "8.9 / 10 (1,097 reviews; 9.2 couples location)",
@@ -242,17 +677,115 @@
       "subway_access": "2-minute walk to Shanghai Railway Station Subway Hub (Lines 1, 3 & 4); 3 stops on Line 1 to People's Square.",
       "bed_verified": "PASS — 1 King Bed (Superior King Room, 334 ft², floors 7-16)",
       "bathroom_verified": "PASS — Private attached bathroom with rainshower",
-      "amenities": ["Indoor swimming pool", "Spa & wellness center", "Modern fitness center", "Wonderful breakfast (9.0/10, $21/pp)", "400-thread-count linens", "Private parking"],
-      "michelin_reach_summary": "3 stops on Line 1 to People's Square / Huangpu Bund & Xintiandi, direct access to Jing'an's 2* Bao Li Xuan, 2* Tou Zao, 2* The House of Rong, and Bib Gourmand Rongjia Yellow Croaker Noodles.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 621,
-      "cheapest_note": "$621 non-refundable OR $707 free cancel before Feb 14 (Early Booker 8% off $768, pay nothing until Feb 12); jumps +36.1% to $845/$963 in Mar 16-23! 10% svc incl., 6% VAT excl.",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 621, "list_usd": 707, "per_night_usd": 81, "room": "Superior King Room (334 ft², 1 king)", "terms": "$621 non-ref / $707 free cancel before Feb 14 (Early Booker); excl. 6% VAT", "checked": "2026-11-26"},
-        {"dates": "2027-03-16 -> 2027-03-23", "total_usd": 845, "list_usd": 963, "per_night_usd": 110, "room": "Superior King Room (334 ft², 1 king)", "terms": "+$224 (+36.1%) vs Feb 15-22 ($845 non-ref / $963 free cancel); excl. 6% VAT", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor swimming pool",
+        "Spa & wellness center",
+        "Modern fitness center",
+        "Wonderful breakfast (9.0/10, $21/pp)",
+        "400-thread-count linens",
+        "Private parking"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Located at Shanghai Railway Station (not Shanghai Hongqiao HSR — transfer via Line 1+2 takes ~40 min); less scenic streetscape than People's Square or The Bund."]
+      "michelin_reach_summary": "3 stops on Line 1 to People's Square / Huangpu Bund & Xintiandi, direct access to Jing'an's 2* Bao Li Xuan, 2* Tou Zao, 2* The House of Rong, and Bib Gourmand Rongjia Yellow Croaker Noodles.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior King Room, 31 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 659.0,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable; pay online. Breakfast US$21/person/night extra."
+            },
+            {
+              "total_usd": 750.89,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14. Breakfast US$21/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior King Room, 31 m²; 1 king bed; private bathroom (qualifying offer listed separately from Twin offers)",
+          "offers": [
+            {
+              "total_usd": 707.0,
+              "room": "Superior King Room, 31 m²; 1 king bed; private bathroom",
+              "qualifies": true,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable; pay online. Breakfast US$21/person/night extra."
+            },
+            {
+              "total_usd": 707.0,
+              "room": "Superior Twin Room, 31 m²; 2 twin beds; private bathroom",
+              "qualifies": false,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable offer; no additional rate-specific payment term retained in the capture. Breakfast US$21/person/night extra."
+            },
+            {
+              "total_usd": 805.25,
+              "room": "Superior Twin Room, 31 m²; 2 twin beds; private bathroom",
+              "qualifies": false,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 17; pay nothing until Feb 15. Breakfast US$21/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "no_qualifying_room_captured",
+          "room": "The visible rate row was for a Superior Twin Room with 2 twin beds; it does not meet the queen/king filter.",
+          "other_observed_rates": [
+            {
+              "total_usd": 898.0,
+              "rate_type": "Non-refundable; twin room only"
+            },
+            {
+              "total_usd": 1022.83,
+              "rate_type": "Free-cancellation; twin room only"
+            }
+          ],
+          "note": "No qualifying queen/king rate was verified in the Mar 1–8 capture; excluded from eligible price comparisons."
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior King Room, 31 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 898.0,
+              "room": "Superior King Room, 31 m²; 1 king bed; private bathroom",
+              "qualifies": true,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable; pay online. Breakfast US$21/person/night extra."
+            }
+          ],
+          "unattributed_observed_rates": [
+            {
+              "total_usd": 1022.83,
+              "rate_type": "Displayed flexible offer; room attribution not verified",
+              "note": "Not included in the King-room comparison; the capture does not unambiguously associate this offer with the Superior King."
+            }
+          ],
+          "note": "Flexible King-room rate and cancellation/payment terms remain unverified; other displayed offers are not confidently attributable to this room."
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Feb 18–25: the $805.25 free-cancellation offer belongs to a Superior Twin room and is excluded from queen/king comparison; the Superior King capture is $707 non-refundable, with its flexible terms unconfirmed. Mar 16–23: only the $898 non-refundable Superior King offer is confidently attributable; displayed flexible offer(s) are not confidently tied to that room. Recheck the live rate and exact terms."
+      ],
+      "lowest_observed_7n_usd": 659.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$659.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Non-refundable; pay online. Breakfast US$21/person/night extra."
     },
     {
       "rank": 3,
@@ -266,17 +799,80 @@
       "subway_access": "Central Huangpu between People's Square (Lines 1/2/8) & East Nanjing Road (Lines 2/10) — exact foot distance not stated on Booking snippet; verify station exit.",
       "bed_verified": "PASS — 1 King Bed (Superior Double Room, 334 ft²)",
       "bathroom_verified": "PASS — Private attached bathroom with bath, shower & bidet",
-      "amenities": ["Indoor swimming pool", "Spa & wellness center", "Fitness center", "Cantonese & Western restaurants + bar", "24h room service", "Parking"],
-      "michelin_reach_summary": "Walkable to The Bund, 1* Yi Long Court, Selected Sir Elly's, 2* 8 1/2 Otto e Mezzo Bombana, 2* Imperial Treasure, and 2* Da Vittorio (BFC); quick metro to 2* Canton 8 & 3* Taian Table.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 901,
-      "cheapest_note": "$901 on Feb 15-22 (cheaper than Radisson Blu's $921 list/Genius!) vs $974 (+8.1%) on Mar 16-23; Free cancellation before Feb 14 (1-night refundable prepayment).",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 901, "list_usd": 901, "per_night_usd": 129, "room": "Superior Double Room (334 ft², 1 king)", "terms": "Free cancel before Feb 14; 1st-night refundable prepayment", "checked": "2026-11-26"},
-        {"dates": "2027-03-16 -> 2027-03-23", "total_usd": 974, "list_usd": 974, "per_night_usd": 139, "room": "Superior Double Room (334 ft², 1 king)", "terms": "+$73 (+8.1%) vs Feb 15-22; Free cancel before Mar 15", "checked": "2026-11-26"}
+      "amenities": [
+        "Indoor swimming pool",
+        "Spa & wellness center",
+        "Fitness center",
+        "Cantonese & Western restaurants + bar",
+        "24h room service",
+        "Parking"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Breakfast rated lower (7.6/10) than Radisson Blu (9.1) or Pullman (9.0); skip hotel breakfast and eat local/dim sum."]
+      "michelin_reach_summary": "Walkable to The Bund, 1* Yi Long Court, Selected Sir Elly's, 2* 8 1/2 Otto e Mezzo Bombana, 2* Imperial Treasure, and 2* Da Vittorio (BFC); quick metro to 2* Canton 8 & 3* Taian Table.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Double Room, 31 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 903.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; first-night prepayment applies. Breakfast US$27/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-02-18 -> 2027-02-25",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-18&checkout=2027-02-25&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Double Room, 31 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 903.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 17; first-night prepayment applies. Breakfast US$27/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-01 -> 2027-03-08",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-03-01&checkout=2027-03-08&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Double Room, 31 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 976.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation was displayed; verify the exact cancellation cutoff and payment timing in the selected live rate. Breakfast US$27/person/night extra."
+            }
+          ]
+        },
+        {
+          "dates": "2027-03-16 -> 2027-03-23",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-03-16&checkout=2027-03-23&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Superior Double Room, 31 m²; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 976.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Mar 15; first-night prepayment applies. Breakfast US$27/person/night extra."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/grand-central-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Breakfast rated lower (7.6/10) than Radisson Blu (9.1) or Pullman (9.0); skip hotel breakfast and eat local/dim sum."
+      ],
+      "lowest_observed_7n_usd": 903.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$903.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation before Feb 14; first-night prepayment applies. Breakfast US$27/person/night extra."
     },
     {
       "rank": 4,
@@ -288,18 +884,44 @@
       "rating": "9.1 / 10 (569 reviews)",
       "location_score": "9.7 / 10",
       "subway_access": "Prime Bund waterfront (Huangpu); nearest metro stations East Nanjing Rd (Lines 2/10) & Yuyuan Garden (Lines 10/14) — exact walk not stated on Booking snippet.",
-      "bed_verified": "PASS — 2 Queen Beds (Deluxe Queen Room, 646 ft²)",
+      "bed_verified": "PASS — Booking.com Feb 15–22 capture lists 1 king bed and a private bathroom; verify the assigned room/bed in the live checkout",
       "bathroom_verified": "PASS — Marble private bathroom with double vanities, tub & shower",
-      "amenities": ["Indoor heated swimming pool", "Spa & wellness center", "Fitness center", "Historic Bund heritage wing", "Parking garage"],
-      "michelin_reach_summary": "Walkable along The Bund to 2* Da Vittorio, 2* 8 1/2 Otto e Mezzo Bombana, 2* Imperial Treasure, 1* Yi Long Court, and Selected Sir Elly's.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 2414,
-      "cheapest_note": "$2,414 non-refundable OR $3,018 free cancel (verified 2026-11-25 in repo data/hotels.json).",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 2414, "list_usd": 3018, "per_night_usd": 345, "room": "Deluxe Queen Room (646 ft², 2 queens)", "terms": "$2,414 non-ref / $3,018 flex (verified 2026-11-25)", "checked": "2026-11-25"}
+      "amenities": [
+        "Indoor heated swimming pool",
+        "Spa & wellness center",
+        "Fitness center",
+        "Historic Bund heritage wing",
+        "Parking garage"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured; carried from repo 2026-11-25 verified capture."]
+      "michelin_reach_summary": "Walkable along The Bund to 2* Da Vittorio, 2* 8 1/2 Otto e Mezzo Bombana, 2* Imperial Treasure, 1* Yi Long Court, and Selected Sir Elly's.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "King room; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 2504.0,
+              "rate_type": "Non-refundable",
+              "terms": "Non-refundable rate."
+            },
+            {
+              "total_usd": 3130.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation through the arrival day; confirm the precise cutoff shown at checkout."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/waldorf-astoria-shanghai-on-the-bund.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Only Feb 15–22 was captured for this property in the Nov 27 refresh; recheck the current room/bed designation and rate before booking."
+      ],
+      "lowest_observed_7n_usd": 2504.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$2,504.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Non-refundable rate."
     },
     {
       "rank": 5,
@@ -313,16 +935,55 @@
       "subway_access": "The Bund / East Nanjing Rd corridor (Lines 2/10/12).",
       "bed_verified": "PASS — 1 King Bed (Deluxe Room, 581 ft²)",
       "bathroom_verified": "PASS — Private spa bathtub, separate shower, mirror TV",
-      "amenities": ["Houses 1* Yi Long Court (2F) & MICHELIN Selected Sir Elly's (13F)", "Peninsula Spa & indoor pool", "Soundproofed 581 ft² rooms", "Nespresso machine"],
-      "michelin_reach_summary": "In-hotel access to 1* Yi Long Court (CNY 596 dim sum lunch / CNY 1,976 tasting for 2 + 16.6%) and Selected Sir Elly's (CNY 2,576 5-course for 2 + 16.6%); walkable to 2* Bombana & 2* Imperial Treasure.",
-      "cheapest_window": "2027-02-15 -> 2027-02-22",
-      "cheapest_7n_usd": 3813,
-      "cheapest_note": "$3,813 free cancel before Feb 14 (excl. 6% VAT; verified 2026-11-25 in repo data/hotels.json).",
-      "windows": [
-        {"dates": "2027-02-15 -> 2027-02-22", "total_usd": 3813, "list_usd": 3813, "per_night_usd": 545, "room": "Deluxe Room (581 ft², 1 king)", "terms": "Free cancel before Feb 14; excl. 6% VAT (verified 2026-11-25)", "checked": "2026-11-25"}
+      "amenities": [
+        "Houses 1* Yi Long Court (2F) & MICHELIN Selected Sir Elly's (13F)",
+        "Peninsula Spa & indoor pool",
+        "Soundproofed 581 ft² rooms",
+        "Nespresso machine"
       ],
-      "booking_url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "flags": ["Only Feb 15-22 window captured; ultra-luxury tier."]
+      "michelin_reach_summary": "In-hotel access to 1* Yi Long Court (CNY 596 dim sum lunch / CNY 1,976 tasting for 2 + 16.6%) and Selected Sir Elly's (CNY 2,576 5-course for 2 + 16.6%); walkable to 2* Bombana & 2* Imperial Treasure.",
+      "windows": [
+        {
+          "dates": "2027-02-15 -> 2027-02-22",
+          "checked": "2026-11-27",
+          "source_url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+          "status": "available",
+          "room": "Deluxe Room; 1 king bed; private bathroom",
+          "offers": [
+            {
+              "total_usd": 3554.0,
+              "rate_type": "Free cancellation",
+              "terms": "Free cancellation before Feb 14; first-night prepayment is charged within a day of arrival."
+            }
+          ]
+        }
+      ],
+      "booking_url": "https://www.booking.com/hotel/cn/the-peninsula-shanghai.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD&lang=en-us",
+      "flags": [
+        "Only Feb 15–22 was captured for this property in the Nov 27 refresh; ultra-luxury tier. Recheck the exact room and cancellation/payment terms before booking."
+      ],
+      "lowest_observed_7n_usd": 3554.0,
+      "lowest_observed_window": "2027-02-15 -> 2027-02-22",
+      "lowest_observed_note": "$3,554.00 total including taxes and fees on 2027-02-15 -> 2027-02-22 — Free cancellation before Feb 14; first-night prepayment is charged within a day of arrival."
     }
-  ]
+  ],
+  "comparison_windows": [
+    {
+      "dates": "2027-02-15 -> 2027-02-22",
+      "label": "Feb 15–22, 2027"
+    },
+    {
+      "dates": "2027-02-18 -> 2027-02-25",
+      "label": "Feb 18–25, 2027"
+    },
+    {
+      "dates": "2027-03-01 -> 2027-03-08",
+      "label": "Mar 1–8, 2027"
+    },
+    {
+      "dates": "2027-03-16 -> 2027-03-23",
+      "label": "Mar 16–23, 2027"
+    }
+  ],
+  "ranking_methodology_note": "Rank numbers preserve the curated shortlist order and qualitative \"Why It Wins\" labels; they are not a price-sorted list or a computed score. No composite weighting formula is claimed. The lowest observed rate is reported separately and does not by itself determine rank."
 }

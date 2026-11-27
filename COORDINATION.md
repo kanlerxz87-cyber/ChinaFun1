@@ -840,8 +840,23 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 
 | # | Task | Status | Owner | File scope | Verification rule |
 |---|---|---|---|---|---|
-| I1 | Audit the currently published dual-city planner against the exact user brief and identify claims that exceed it | **in progress** | `1cbee5b5` | `china-2027/**`, `README.md`, `COORDINATION.md` | Reconcile time-window/duration language, cost semantics, hotel ranking, MICHELIN status, and disclosed unknowns; do not invent values. |
-| I2 | Correct verified brief mismatch and ensure the decision/questions/suggestions/flags pages expose unresolved choices | **in progress** | `1cbee5b5` | `china-2027/**` | Every data correction must be traceable to a primary source; every unresolved value remains blank and visibly flagged. |
-| I3 | Run validators/build/link checks, record results, and prepare current-branch publication | **unclaimed** | — | `china-2027/**`, `README.md`, `COORDINATION.md` | Build deterministically, run all applicable checkers, and verify GitHub Pages deployment after integration. |
+| I1 | Audit the currently published dual-city planner against the exact user brief and identify claims that exceed it | **done** | `1cbee5b5` | `china-2027/**`, `README.md`, `COORDINATION.md` | Reconciled date-window and duration language, price semantics, ranking, and source dates; removed unsupported universal-cheapest/Black-Friday claims and softened unverified 2027 event/security and side-trip assertions. |
+| I2 | Correct verified brief mismatch and ensure the decision/questions/suggestions/flags pages expose unresolved choices | **done** | `1cbee5b5` | `china-2027/**` | Refreshed 34 exact-date Booking.com links/rates and 7-night offer terms; Pullman Feb/Mar room attribution and flexible King unknowns are explicit; sources and traveler re-quote steps documented. |
+| I3 | Run validators/build/link checks, record results, and prepare current-branch publication | **validated; PR pending** | `1cbee5b5` | `china-2027/**`, `README.md`, `COORDINATION.md` | Two consecutive builds produced identical HTML; China checker passed (9 pages, 13 hotels, 56 venues, 16 activities, 0 broken links/CDNs); root, integration, social, Node syntax, and diff checks passed. PR preparation is now unblocked; Pages deployment awaits integration/merge. |
 
 This claim is the final integration pass because all earlier board tasks in the current tree are marked done. Existing unresolved constraints (especially the three-night preferred window versus a 7–14-night trip and unrouteable transit data) remain explicit questions/flags; they are not silently guessed or “resolved” without traveler input.
+
+### Final compliance findings (2026-11-27)
+
+- This audit **supersedes the hotel-timing conclusion in session `f8e7ee9e` M5**: the claimed Black Friday/Early Booker trough and 15%–56% savings are not established by the selected captures. Feb 15–22 is a sampled window, not a universal cheapest stay date or booking date. The planner now reports the observed, exact-date offer totals and conditions without extrapolating.
+- Hotel totals are third-party Booking.com snapshots for 2 adults / 1 room / 7 nights; pages state taxes/fees are included. Membership, refundability, cancellation cutoff, payment timing, room, and breakfast vary by offer and must be rechecked live.
+- Pullman Shanghai Jing’an: Feb 18–25 $805.25 free-cancellation offer is **Superior Twin**, not King; King capture is $707 non-refundable. Mar 16–23 only the $898 non-refundable Superior King was confidently attributed; flexible King rate/terms remain unresolved. Mar 1–8 visible Twin-only offer remains excluded from queen/king comparison.
+- The 34 dated Booking.com links in `sources.json` match the hotel-window links one-for-one. The base-Beijing slug `basebai-she-fu-wu-shi-gong-yu...` was confirmed against the live listing; operator/property links are separately labeled and not presented as booking sources.
+- Option C is 21 nights / 22 calendar days. Option B is 13 nights / 14 days, with an optional 14-night variant. Exact-date hotel totals for Shanghai Feb 22–Mar 1 and any optional week-three destination remain unquoted pending traveler decisions.
+
+### Final validation (2026-11-27)
+
+- `python3 -m py_compile china-2027/tools/build.py china-2027/tools/check.py`; all `china-2027/data/*.json` parsed; two consecutive `build.py` runs produced identical HTML.
+- `python3 china-2027/tools/check.py` — PASS: 9 pages, 13 hotels, 56 restaurants (33/33 Beijing starred), 16 activities, 0 broken links, 0 external CDNs.
+- `python3 check.py` — PASS: 187 table rows, no broken/empty internal links; `python3 integration-2027/tools/check.py` — 7 pages, 0 errors; `python3 social-2027/tools/check.py` — PASS (43 venues / 58 videos); `node -c assets/app.js` and `git diff --check` — PASS.
+- Manual output checks confirmed the Pullman Twin/King attribution, unresolved King terms, 21N/22-day Option C, date-labeled rate-source page, and absence of old headline rates/discount claims. GitHub Pages is not yet deployed; this branch still requires PR integration/merge.
