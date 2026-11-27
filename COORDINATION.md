@@ -836,7 +836,7 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 
 **Branch:** `arena/311cf896-chinafun1` (fixed active Arena branch; base `9e0f598`)
 **Claimed:** 2026-11-27 · **Status:** in progress
-**File scope:** this appended `COORDINATION.md` section; `china-2027/data/audit_and_planning.json`, `china-2027/data/itineraries.json`, `china-2027/README.md`, and the generated `china-2027/index.html`, `china-2027/questions.html`, `china-2027/itineraries.html` only. The prior sessions are complete; this is the final integration pass. Root index/navigation and all other plan/data scopes remain untouched.
+**File scope:** this appended `COORDINATION.md` section and `china-2027/**` only (data, deterministic generator/validator, README, and regenerated pages). The prior sessions are complete; this is the final integration pass. Root index/navigation and all other plan/data scopes remain untouched.
 
 | Task | Status | Verification rule |
 |---|---|---|
