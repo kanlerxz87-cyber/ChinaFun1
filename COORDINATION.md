@@ -763,7 +763,7 @@ No mismatch was found, so no data edit was made or requested.
 | E3029032-3 | Live GitHub Pages verification of all published entry points | **done** | read-only | All entry points return 200 + non-empty content via page fetch | Root `/` and `/michelin.html` fetched 200 with full rendered content (cache-busted). Remaining entry points previously confirmed 200 by sessions `24fa9b09`/`f6189cca`: `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/` |
 | E3029032-4 | Official-source spot re-check of headline published numbers | **done** | read-only | MICHELIN release/list, Palace Museum, Mutianyu, timeanddate holidays 2027, travel.state.gov | All match: MICHELIN 2027 Beijing release (107 venues; 3★ Chao Shang Chao + Xin Rong Ji; 2★ Black Swan/Jingji/King's Joy/Lamdre/Lu Shang Lu; 26×1★; Chef 1996 promoted; Old Tower new; 32 Bib; 42 Selected; Tianjin 27; 135 total) ✔; all-starred list filter "3 Stars 2 / 2 Stars 5 / 1 Star 26 / Bib 32 / Selected 42 / 1-33 of 33" ✔; Palace Museum Tue–Sun, closed Mon except national holidays, Nov–Mar 8:30–16:30 last 15:30, ¥40 low season, ¥10 galleries, 40k cap ✔; Mutianyu 8:00–17:30, sales end 16:30, off-season Nov 16–Mar 15 ✔; timeanddate China 2027: CNY Feb 6, holiday Feb 5–13, make-up workday Feb 14, Lantern Festival Feb 20 ✔; travel.state.gov Level 2 issued Oct 19, 2026 ✔ |
 | E3029032-5 | Fix any defect found; keep blank/flag discipline (no inferred values) | **done** | as needed, logged here | Any fix cited to its official source | No defects found; zero values inferred or filled; all remaining blanks (hours for 20/33 starred, menu prices for 29/33, Courtyard 7 rate, door-to-door Amap routing) already flagged on `flagged.html` with next actions |
-| E3029032-6 | PR `arena/e3029032-chinafun1` → `main`, merge, confirm Pages deploy | **in progress** | GitHub PR/merge metadata | Clean merge; Pages `built`; live fetch confirms | PR created; merge + Pages confirmation pending |
+| E3029032-6 | PR `arena/e3029032-chinafun1` → `main`, merge, confirm Pages deploy | **done** | GitHub PR/merge metadata | Clean merge; Pages `built`; live fetch confirms | PR #33 https://github.com/kanlerxz87-cyber/ChinaFun1/pull/33 — merged 2026-11-27 (merge commit 67d0d39270d8a19f60616c4b257a352b5fd0f3eb). Pages run 46059803199 (build + deploy + report-build-status) all succeeded. Pages API status `built`, source `main` `/`, https enforced. Live cache-busted fetch of `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=67d0d39` returned HTTP 200 with the merged executive summary. |
 
 ## E3029032 verification log (2026-11-27)
 
@@ -785,6 +785,14 @@ No mismatch was found, so no data edit was made or requested.
 **Irregularities:** none new. All pre-existing irregularities remain published on `flagged.html` and the sub-site flagged pages; none were silently corrected.
 
 **Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note the handoff here.
+
+#### Publication result — session `e3029032`
+
+- PR #33: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/33 — merged to `main` 2026-11-27; merge commit `67d0d39270d8a19f60616c4b257a352b5fd0f3eb`; merge state CLEAN.
+- GitHub Pages: Actions run `46059803199` completed **success** (build, deploy, report-build-status jobs all passed). Pages API: `status: built`, source `main` `/` — https://kanlerxz87-cyber.github.io/ChinaFun1/.
+- Post-deploy live check: cache-busted fetch of `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=67d0d39` returned HTTP 200 with the merged executive summary, confirming the deployed build serves this merge.
+- This pass changed only `COORDINATION.md` (verification record); no trip data, price, source link, or plan page was modified. All pre-existing flagged irregularities remain published on `flagged.html` and the sub-site flagged pages.
+
 
 ---\n
 
