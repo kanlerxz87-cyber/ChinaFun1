@@ -1,31 +1,38 @@
-# ChinaFun1 — four China 2027 trip planners
+# ChinaFun1 — five China 2027 planning studies + two support dashboards
 
-This repository holds **four independent, source-verified trip plans** for the same brief (2 adults, 7 nights,
-15 Feb – 23 Mar 2027), plus a cross-plan decision dashboard and a verified social-review register. Six published entry points are connected from the root landing page. The trip plans were produced by parallel sessions and are kept in separate directories rather than merged, because they disagree with each other and merging them would hide that:
+This repository contains **five source-linked planning studies** for the same two-adult travel brief: four single-city 7-night comparisons
+(one Beijing and three Shanghai) plus one separate Beijing + Shanghai planner. The allowed travel window is 15 Feb–23 Mar 2027; the
+preferred 15–18 Feb window is only three nights, so the requested 1–2-week duration still needs a decision. Two additional sites provide
+a cross-plan decision layer and a social-review register. There are **seven published entry points** in total: the root Beijing dashboard
+and six companion directories. The studies remain separate because their scopes, room types, tax treatment and verification dates differ.
 
-| Plan | City | Where it lives | Entry point |
-|---|---|---|---|
-| `fac6d965` / `33a259ca` / `1ac7826d` | **Beijing** | repo root | [`index.html`](index.html) |
-| `68e13071` | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
-| `3b27db6c` | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
-| `16153d37` | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
-| `815c7943` | **Cross-plan integration** | `integration-2027/` | [`integration-2027/index.html`](integration-2027/index.html) |
-| `773e75a3` | **Beijing social-review registry** | `social-2027/` | [`social-2027/index.html`](social-2027/index.html) |
-| `f8e7ee9e` | **Dual-city Beijing + Shanghai planner** | `china-2027/` | [`china-2027/index.html`](china-2027/index.html) |
+| Study / site | Type | City | Where it lives | Entry point |
+|---|---|---|---|---|
+| `fac6d965` / `33a259ca` / `1ac7826d` | Single-city plan | **Beijing** | repo root | [`index.html`](index.html) |
+| `68e13071` | Single-city plan | **Shanghai** | `docs/` | [`docs/index.html`](docs/index.html) |
+| `3b27db6c` | Single-city plan | **Shanghai** | `shanghai-2027/` | [`shanghai-2027/index.html`](shanghai-2027/index.html) |
+| `16153d37` | Single-city plan | **Shanghai** | `shanghai-verified-2027/` | [`shanghai-verified-2027/index.html`](shanghai-verified-2027/index.html) |
+| `f8e7ee9e` | Dual-city plan | **Beijing + Shanghai** | `china-2027/` | [`china-2027/index.html`](china-2027/index.html) |
+| `815c7943` | Comparison support | **Cross-plan** | `integration-2027/` | [`integration-2027/index.html`](integration-2027/index.html) |
+| `773e75a3` | Social-review support | **Beijing video registry** | `social-2027/` | [`social-2027/index.html`](social-2027/index.html) |
 
-All four plans follow the same rules: every row links to the official source it came from, unconfirmed values are left
-blank and flagged, hotels are priced as a 7-night total for two, and MICHELIN "starred" is never confused with
-"listed". Read all four before deciding — the honest answer to "which city" is that the brief did not say, and the
-plans optimise different things (Beijing: 33 starred restaurants and a capital-city itinerary; Shanghai:
-three independent studies, compared below).
+The four single-city plans price a 7-night stay. The dual-city study offers 7-night, 14-day and 21-day routes; the 21-day option is outside
+the requested 1–2-week duration and is not treated as a recommendation. No single-city or dual-city route is a universal winner: the brief
+does not specify a city, hotel budget, dietary needs or whether travel time means door-to-door. Use the decision hub to compare and the owning
+plan's source and Flagged for Review pages to inspect exact evidence.
+
+Each study cites its own source pages; official MICHELIN, government, attraction and hotel/operator pages are used where they publish the
+relevant fact, while Booking.com is the recorded price source and social links point to their platform pages. Unconfirmed values stay blank
+and are flagged. Hotel totals are dated snapshots, not guaranteed future rates, and MICHELIN "starred" is kept distinct from Guide-selected
+or Bib Gourmand status.
 
 ## Unified dashboard and social-review register
 
-- [All plans: comparison, questions and flagged items](integration-2027/index.html) — cross-plan decision layer; it preserves disagreement instead of silently choosing one study.
+- [All plans: comparison, questions and flagged items](integration-2027/index.html) — the four 25 Nov single-city price snapshots plus a separate dual-city option; it preserves differing scopes and does not invent a combined total.
 - [Social reviews: verified video register](social-2027/index.html) — 58 YouTube URLs confirmed against YouTube's oEmbed endpoint; 15/33 starred restaurants and all 10 listed activities have at least one match. TikTok and Instagram remain blank where not verified.
-- The root [Beijing landing page](index.html) now links directly to every plan and register. The root navigation includes **All plans** from each Beijing page.
+- The root [Beijing landing page](index.html) links to all six companions in its navigation. Its three companion cards highlight the dual-city planner, comparison hub and social registry.
 
-The integration layer reports differing hotel snapshots and room categories as captured by their owning sessions; these are not live quotes. Read the corresponding plan's source register and flagged page before relying on a value.
+The integration price page preserves 25 Nov snapshots; the root Beijing hotel page and the dual-city study contain later 26 Nov captures. These rates were not re-quoted in the integration update. Always read the owning plan's source register and flags before relying on a value.
 
 ## The Shanghai plans disagree, and that is worth knowing
 
