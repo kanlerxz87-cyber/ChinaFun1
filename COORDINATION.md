@@ -936,3 +936,35 @@ A required `git pull --rebase origin main` during this session encountered a `CO
 1. **Primary-source make-up workdays:** `china-2027/data/meta.json`, the Beijing/Shanghai plan pages, and root pages repeat 31 Jan / 14 Feb make-up workdays. The official English State Council page <https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html> was fetched 2026-11-27 and states Spring Festival 5–13 Feb, but its published table does not state the make-up dates. Please locate an official notice/translation with those dates or blank and flag them. Integration `questions.html`, `suggestions.html`, and `flagged.html` reflect this limitation.
 2. **Root README inventory:** the repository README still describes four plans even though it links the later dual-city dashboard; consider changing the count to four single-city studies plus one dual-city study. This task did not edit root `README.md` or root navigation.
 
+
+---
+
+# Session `e88a0fd1` — root Beijing planner line-by-line review & source re-verification
+
+**Branch:** `arena/e88a0fd1-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** done (PR/merge to `main` completes the session)
+**File scope:** `COORDINATION.md` (this session record only). No root data files changed: the published counts were confirmed correct after session `e46f5d6a` verified Zijin Mansion hours on hilton.com (partial hours, days of week not stated), bringing verified starred hours to 13/33 (11 official + 2 press) with 20 of 33 starred without full hours — matching `index.html`, `decisions.html` and `flagged.html`. No other session's files touched; sub-sites preserved intact per the claim rules.
+
+| # | Task | Status | File scope | Verification & corrections applied |
+|---|---|---|---|---|
+| R1 | Claim + root data line-by-line audit | **done** | `assets/data.js` (read-only audit) | Re-derived all counts from `assets/data.js`: 33/33 starred entries (2×3★ Chao Shang Chao Chaoyang + Xin Rong Ji Xinyuan South Rd; 5×2★ Blackswan, Jingji, King's Joy, Lamdre, Lu Shang Lu; 26×1★), districts Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1; all 33 starred addresses + phones non-blank; GUIDE_SLUG 33/33; MICHELIN_LISTED 32 Bib + 42 Selected = 74; 13/33 starred rows carry verified hours after session `e46f5d6a` added Zijin Mansion (hilton.com, partial hours; days of week not stated — flagged); 4/33 official p2 prices; 18/33 restaurants carry ≥1 direct verified YouTube link (39 direct links total); all 10 activities carry verified YT/IG/TikTok links. Counts match the MICHELIN 2027 release exactly. No published count needed correction. |
+| R2 | Primary-source re-check (2026-11-27) | **done** | n/a | [MICHELIN Guide 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) (28 Oct 2026): Beijing 107 venues, Chao Shang Chao & Xin Rong Ji retain 3★, Black Swan/Jingji/King's Joy/Lamdre/Lu Shang Lu hold 2★, Chef 1996 promoted to 1★, Old Tower debuts at 1★ — matches `assets/data.js` and `META.guideEdition`. [Palace Museum visit page](https://intl.dpm.org.cn/visit.html): Tue–Sun, closed Mon (except national holidays), Nov 1–Mar 31 08:30–16:30, last entry 15:30, ¥40 low season / ¥60 high, Treasure & Clock galleries +¥10 each, 40,000 daily cap, no same-day tickets — matches `ACTIVITIES` row exactly. |
+
+### Tasks retained as "needs review" (no estimates permitted under repo rules)
+
+| Task | Status | Owner | File scope | Notes |
+| T9 | **needs review** | e88a0fd1 | new `data/transit.*` | Hotel × restaurant ≤1h Amap matrix not produced: no routing API reachable from this session and repo rules prohibit estimates. Rome2rio station-to-station legs (Wangfujing↔Guomao 8m, Summer Palace 51m, 798 54m, Guomao↔Summer Palace 58m) remain the published transit basis; door-to-door verification remains open as suggestion #9 on `suggestions.html`. |
+| T10 | **needs review** | e88a0fd1 | new `data/prices-history.*` | Weekly price tracker not produced: a historical price series cannot be reconstructed from a single verified snapshot without fabrication. Multi-week Feb vs Mar snapshot remains in `assets/data.js` (`mar1`/`mar15`); open as suggestion #3/#10. |
+| T11 | **needs review** | e88a0fd1 | `assets/data.js` (`p2` field) | Exact 2-adult menu totals confirmed for only 4/33 starred kitchens (Fu Chun Ju, Cai Yi Xuan, Trb Hutong, Giada Garden); 29 rows intentionally blank with MICHELIN ¥ band only, flagged on `michelin.html`. Open as suggestion #4/#11. |
+
+### Verification log additions
+
+| Source | Verified | Date |
+| [MICHELIN Guide 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Beijing 107 venues; 33 starred (2/5/26); counts & debuts match `assets/data.js` | 2026-11-27 |
+| [Palace Museum visit page](https://intl.dpm.org.cn/visit.html) | Low-season hours, Monday closure, ¥40/¥60, +¥10 galleries, 40,000 cap, no same-day tickets | 2026-11-27 |
+
+### Site status
+
+- GitHub Pages: **built**, source `main` / root, https://kanlerxz87-cyber.github.io/ChinaFun1/ — live before and after this session (no build step; `.nojekyll` present).
+- Root pages: 8 HTML pages, 0 broken internal links, all with `<title>` + viewport (local check, 2026-11-27).
+- Irregularities carried forward unchanged from `1ac7826d` and `e46f5d6a` (see `flagged.html`); no new irregularities found in this review.
