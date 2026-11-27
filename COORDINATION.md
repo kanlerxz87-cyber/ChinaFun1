@@ -750,6 +750,52 @@ No mismatch was found, so no data edit was made or requested.
 
 ---
 
+# Session `e3029032` — final verification, republishing & Pages deploy confirmation
+
+**Branch:** `arena/e3029032-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**Claimed file scope (read-only verification + build/publish only):** root `index.html`, `hotels.html`, `michelin.html`, `activities.html`, `itinerary.html`, `decisions.html`, `suggestions.html`, `flagged.html`, `assets/data.js`, `assets/app.js`, `assets/style.css`, `data/*.json`, `build.py`, `check.py`, `COORDINATION.md` (this section only). All other sub-sites (`docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/`, `china-2027/`, `audit-2027/`) preserved read-only; their checkers are re-run as part of repo-wide verification.
+
+| # | Task | Status | Scope | Verification rule | Result |
+|---|------|--------|-------|-------------------|--------|
+| E3029032-1 | Claim + board read | **done** | this section | Claim committed & pushed before any code change | Claim section written 2026-11-27 |
+| E3029032-2 | Re-run all repo validators + repo-wide HTML/DOM link scan | **done** | read-only across repo | Every checker PASS; 0 broken links, 0 empty hrefs, title+viewport everywhere | `check.py` (docs): PASS — 10 pages, 187 table rows, 0 problems; `integration-2027/tools/check.py`: 7 pages, 0 errors; `social-2027/tools/check.py`: 43 venues, 58 videos, PASS; `china-2027/tools/check.py`: 9 pages, 13 hotels, 56 restaurants, 16 activities, 0 broken links; no code changes needed |
+| E3029032-3 | Live GitHub Pages verification of all published entry points | **done** | read-only | All entry points return 200 + non-empty content via page fetch | Root `/` and `/michelin.html` fetched 200 with full rendered content (cache-busted). Remaining entry points previously confirmed 200 by sessions `24fa9b09`/`f6189cca`: `docs/`, `shanghai-2027/`, `shanghai-verified-2027/`, `integration-2027/`, `social-2027/` |
+| E3029032-4 | Official-source spot re-check of headline published numbers | **done** | read-only | MICHELIN release/list, Palace Museum, Mutianyu, timeanddate holidays 2027, travel.state.gov | All match: MICHELIN 2027 Beijing release (107 venues; 3★ Chao Shang Chao + Xin Rong Ji; 2★ Black Swan/Jingji/King's Joy/Lamdre/Lu Shang Lu; 26×1★; Chef 1996 promoted; Old Tower new; 32 Bib; 42 Selected; Tianjin 27; 135 total) ✔; all-starred list filter "3 Stars 2 / 2 Stars 5 / 1 Star 26 / Bib 32 / Selected 42 / 1-33 of 33" ✔; Palace Museum Tue–Sun, closed Mon except national holidays, Nov–Mar 8:30–16:30 last 15:30, ¥40 low season, ¥10 galleries, 40k cap ✔; Mutianyu 8:00–17:30, sales end 16:30, off-season Nov 16–Mar 15 ✔; timeanddate China 2027: CNY Feb 6, holiday Feb 5–13, make-up workday Feb 14, Lantern Festival Feb 20 ✔; travel.state.gov Level 2 issued Oct 19, 2026 ✔ |
+| E3029032-5 | Fix any defect found; keep blank/flag discipline (no inferred values) | **done** | as needed, logged here | Any fix cited to its official source | No defects found; zero values inferred or filled; all remaining blanks (hours for 20/33 starred, menu prices for 29/33, Courtyard 7 rate, door-to-door Amap routing) already flagged on `flagged.html` with next actions |
+| E3029032-6 | PR `arena/e3029032-chinafun1` → `main`, merge, confirm Pages deploy | **done** | GitHub PR/merge metadata | Clean merge; Pages `built`; live fetch confirms | PR #33 https://github.com/kanlerxz87-cyber/ChinaFun1/pull/33 — merged 2026-11-27 (merge commit 67d0d39270d8a19f60616c4b257a352b5fd0f3eb). Pages run 46059803199 (build + deploy + report-build-status) all succeeded. Pages API status `built`, source `main` `/`, https enforced. Live cache-busted fetch of `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=67d0d39` returned HTTP 200 with the merged executive summary. |
+
+## E3029032 verification log (2026-11-27)
+
+| Check | Tool / method | Result |
+|---|---|---|
+| Root static checks | `python3 check.py` | PASS — 10 pages, 187 rows, 0 broken internal links, 0 empty hrefs, title + viewport on all |
+| Integration sub-site | `python3 integration-2027/tools/check.py` | PASS — 7 pages, 0 errors |
+| Social registry | `python3 social-2027/tools/check.py` | PASS — 43 venues, 58 videos, 8 pages, data/row-sourcing/internal links consistent |
+| Dual-city sub-site | `python3 china-2027/tools/check.py` | PASS — 9 pages, 0 broken links, 0 external CDNs |
+| Live entry point `/` | `fetch_page https://kanlerxz87-cyber.github.io/ChinaFun1/` | 200, full executive summary rendered |
+| Live entry point `/michelin.html` | `fetch_page https://kanlerxz87-cyber.github.io/ChinaFun1/michelin.html` | 200, all 33 starred tables rendered with source links |
+| MICHELIN 2027 release | fetch_page michelin.com press release | Matches published counts (2/5/26 stars; 32 Bib; 42 Selected; 107 Beijing; 135 total) |
+| MICHELIN all-starred list | fetch_page guide.michelin.com all-starred | Filter shows 2/5/26/32/42, "1-33 of 33 restaurants" |
+| Palace Museum | fetch_page intl.dpm.org.cn/visit.html | Tue–Sun, closed Mon except national holidays; Nov–Mar 8:30–16:30, last 15:30; ¥40/¥60; ¥10 galleries; 40k cap; no same-day tickets |
+| Mutianyu | fetch_page en.mutianyugreatwall.com | 8:00–17:30, sales end 16:30, check-in 8:00–17:00; off-season Nov 16–Mar 15 |
+| China holidays 2027 | fetch_page timeanddate.com/holidays/china/2027 | CNY Sat 6 Feb; holiday 5–13 Feb; make-up workday Sun 14 Feb; Lantern Festival Sat 20 Feb |
+| US travel advisory | fetch_page travel.state.gov .../china.html | Level 2 – Exercise increased caution; issued Oct 19, 2026 |
+
+**Irregularities:** none new. All pre-existing irregularities remain published on `flagged.html` and the sub-site flagged pages; none were silently corrected.
+
+**Handoff rule:** if this claim is older than 60 minutes with no commit, any session may take it over and note the handoff here.
+
+#### Publication result — session `e3029032`
+
+- PR #33: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/33 — merged to `main` 2026-11-27; merge commit `67d0d39270d8a19f60616c4b257a352b5fd0f3eb`; merge state CLEAN.
+- GitHub Pages: Actions run `46059803199` completed **success** (build, deploy, report-build-status jobs all passed). Pages API: `status: built`, source `main` `/` — https://kanlerxz87-cyber.github.io/ChinaFun1/.
+- Post-deploy live check: cache-busted fetch of `https://kanlerxz87-cyber.github.io/ChinaFun1/?v=67d0d39` returned HTTP 200 with the merged executive summary, confirming the deployed build serves this merge.
+- This pass changed only `COORDINATION.md` (verification record); no trip data, price, source link, or plan page was modified. All pre-existing flagged irregularities remain published on `flagged.html` and the sub-site flagged pages.
+
+
+---\n
+
 # Session `8f562229` — independent line-by-line audit + spot re-verification + publish pass
 
 **Branch:** `arena/8f562229-chinafun1` (branched from `main` @ `1c839f22`, rebased onto `origin/main` @ `49a2646` before work)
@@ -829,6 +875,155 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 | A3 | Fix broken activity URLs, Temple of Heaven hours, State Council 2027 holiday source, Rome2rio times & hotel Booking/VAT caveats | **done** | `assets/data.js`, `activities.html`, `hotels.html`, `itinerary.html`, `flagged.html` | Replaced failing `/visitingbeijing/touristattractions/` & `/visit/tickets_reservation/` URLs with working `english.beijing.gov.cn`, `en.chnmuseum.cn/visit_692/`, `en.mutianyugreatwall.com`; verified State Council 2027 holiday decree (`english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html`: Feb 5–13 Spring Festival); corrected Temple of Heaven low-season inner-hall hours (`08:00–17:00, last 16:30`); corrected Rome2rio legs (`51m`, `54m`, `58m`); fixed `assets/app.js` Xicheng hotel filter (`startsWith`); recorded live Booking queen/king totals (`XinQiao $568`, `HI Express $536`, `Sunworld $502` selectable bed note, `Park Hyatt $2,297`, `Orchid $1,194/$1,327` vs `$1,025` full-bed Courtyard), VAT exclusions, and `Four Seasons` marble bath. |
 | A4 | Clean & expand social links + link `china-2027/` | **done** | `assets/data.js`, `assets/app.js`, `index.html`, `README.md`, `decisions.html`, `michelin.html` | Removed unrelated Palace Museum IG post (`CvC7yL1yQx7`, lotus flower photo) and off-city Chao Shang Chao video (`tIBbLQB8Ueo`); added watch/oEmbed-verified YT links (`Yok9qkb4bKw`, `I9xaH24FLnc`, `jaZr6qWh0s0`, `9wni9YGzaTg`, `lC4m_VLOdCY`, `rj5Erb_3gIo`) and kept verified IG (`@chef1996restaurant`, `@oldtower_beijing`, `Cq2w9ssgcDW`) & TikTok (`@wadeandtaylor/video/7429005950222257454`). Added `china-2027/index.html` (`China 2027 Dual-City`) to Companion Plans nav, root overview, and `README.md`. Displayed `r.note` flags inside MICHELIN table rows. |
 | A5 | Final repo-wide check, PR, merge & Pages verification | **done** | `README.md`, `COORDINATION.md`, PR/Pages | Verified all 4 repo checkers (`check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, `china-2027/tools/check.py`), Node syntax & simulated DOM render across all 8 root pages, full HTML link scan (`broken=0`), `git diff --check`, PR merge to `main`, and live Pages check. |
+
+---
+
+# Session `e46f5d6a` — repo review, residual-verification fix & integration/publish pass
+
+**Branch:** `arena/e46f5d6a-chinafun1` (from `main` @ `9e0f598`, after PR #31)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**File scope (claimed):** `COORDINATION.md` (this section only), `assets/data.js` (`Zijin Mansion` row only), `flagged.html` (Zijin/Mio rows only). No other session's files are edited. Other sessions' CSV and sub-site defects are logged below as requests, not edited.
+
+## Session `e46f5d6a` — results
+
+**Status:** done (merged via PR #32) · **Scope held:** `COORDINATION.md`, `assets/data.js` (Zijin Mansion row), `flagged.html` (one row).
+
+### Work performed
+| # | Item | Result |
+|---|---|---|
+| E1 | Baseline: run all four checkers on `main` @ `9e0f598` | `check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, `china-2027/tools/check.py` all **PASS**. |
+| E2 | Re-verify HIGH residuals from `1ac7826d` (Xin Rong Ji Xinyuan & Jinrong phone/hours) | Already corrected in `main`: Xinyuan `+86 10 6501 5501`, `Mon–Sun 11:30–14:00, 17:30–21:00`; Jinrong `+86 10 6618 0567`, `Mon–Sun 11:00–14:00, 17:00–21:30`, `¥¥¥`. Matches the MICHELIN pages in that log. No change needed. |
+| E3 | Zijin Mansion hours (was blank, "timeout/500") | Hilton official dining page now loads: **Lunch 11:30 am–2:30 pm, Dinner 5:30 pm–9:30 pm**. The page **does not state days of the week**, so the earlier "Mon–Sun" wording in `1ac7826d` was an inference and is removed. Row updated in `assets/data.js` and `flagged.html`. Source: https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/ · MICHELIN: https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion (address, ¥¥¥, phone +86 10 8520 8989 match). |
+| E4 | Mio (Four Seasons Beijing) closure conflict | Re-checked both sources. **Four Seasons official** (https://www.fourseasons.com/beijing/dining/restaurants/mio/): Lunch Tue–Sat 11:30–14:00; Dinner Tue–Sun 17:30–22:00; Sunday Table Sunday 11:30–14:00; **closed Mondays**. **MICHELIN** (https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mio) lists Mon–Sun and shows phone as `+86 56958522` (malformed; Four Seasons shows `+86 (10) 5695 8522`). The existing flag stands; the official source is the one to follow. Mio is not a starred entry, so no data row changed. |
+
+### Irregularities raised this session (requests, not edited — outside claimed scope)
+1. **CSV column mismatch (HIGH, still open):** `shanghai-verified-2027/data/` — `activities.csv` (4 of 5 data rows have 14 cols vs 15 header), `hotels.csv` (3 rows at 26 and 1 at 29 vs 25), `michelin.csv` (1 row at 17 vs 18), `social.csv` (1 row at 10 vs 9). Caused by unquoted commas. **Request to owner `16153d37`:** re-export with `csv.writer` (proper quoting) and re-run its checker. Verified by reading the files with Python's `csv` module on 2026-11-27.
+2. **Hilton day-of-week gap (LOW):** Zijin Mansion days of week are not stated on any official page checked; flagged in the row.
+3. **Earlier board claim corrected:** `1ac7826d` said Zijin Mansion was "Mon–Sun 11:30–14:30, 17:30–21:30 (Hilton/Waldorf official)". The Hilton page does not say Mon–Sun. Corrected here.
+
+### Verification sources checked this session (2026-11-27)
+- https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/ (hours, phone)
+- https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion (address, cuisine, price, phone)
+- https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mio (address, hours, phone as listed)
+- https://www.fourseasons.com/beijing/dining/restaurants/mio/ (official hours, phone)
+
+### Handoff
+Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. **PR:** https://github.com/kanlerxz87-cyber/ChinaFun1/pull/32 · **Merged** 2026-11-27T19:52:02Z (merge commit `2022cb5`, `gh pr merge --merge`).
+**Pages:** `gh api repos/kanlerxz87-cyber/ChinaFun1/pages/builds/latest` → `built` at `2022cb5`. Live URL https://kanlerxz87-cyber.github.io/ChinaFun1/ (the sandbox cannot reach `github.io` directly, so the live HTTP check was not run from here; build status is from the Pages API).
+# Session `e411628d` — final decision-layer integration audit
+
+**Branch:** `arena/e411628d-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** done (PR #37 merged; Pages built and live)
+**File scope:** `integration-2027/**` and this appended section of `COORDINATION.md` only. Other plan directories and root pages remain read-only.
+
+| # | Task | Status | Verification / output |
+|---|---|---|---|
+| E1 | Reconcile decision hub inventory with all currently published plans, including the later dual-city dashboard | **done** | Added `china-2027/` as the fifth dashboard (four single-city studies + one dual-city study), checked every plan page locally, and kept price alternatives separate. |
+| E2 | Update decision layer's executive summary and comparison with the new inventory; avoid treating non-like-for-like hotel snapshots as a single ranking | **done** | Updated the decision layer data, generator, seven generated pages and README. Cross-checked Beijing $425 and Shanghai $621, 15–22 Feb, against the 26 Nov rows in `china-2027/data/hotels.json`; confirmed bed/bath fields and direct Booking links. Both alternatives explicitly exclude VAT; Shanghai $621 is non-refundable and $707 is the free-cancellation alternative. |
+| E3 | Run integration generator/checker and repo-wide validators; verify internal references and document discrepancies | **done** | `integration-2027/tools/build.py` regenerated pages; `integration-2027/tools/check.py` 7 pages/0 errors; root `check.py` 187 table rows/0 broken links; `social-2027/tools/check.py` PASS (43 venues/58 videos); `china-2027/tools/check.py` PASS (9 pages, 13 hotels, 56 restaurants, 16 activities); `git diff --check` clean. Fetched and cross-checked the official MICHELIN 2027 Beijing release (https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) and official Shanghai all-starred index (https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred) on 2026-11-27; the former confirms 107 Beijing venues / 33 stars, the latter displays 50 Shanghai starred venues (1×3★, 11×2★, 38×1★). Fetched the official State Council 2027 holiday page (https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html): it verifies Feb 5–13 but does **not** list 31 Jan / 14 Feb make-up workdays; our integration page leaves those dates unverified and flags them. |
+
+### Publication
+
+- PR #37: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/37 — merged 2026-11-27T19:55:20Z with merge commit `f9f2fa39965c4632d7e02d0a31f00810b8f91d9f` (`gh pr merge 37 --merge`). No branch checks were reported; all local validators passed.
+- GitHub Pages run [46060046575](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46060046575) completed successfully; Pages API reports `built` at the same merge commit. Cache-busted live page check at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=f9f2fa39965c4632d7e02d0a31f00810b8f91d9f showed the five-dashboard update. The follow-up record-only PR #38 (https://github.com/kanlerxz87-cyber/ChinaFun1/pull/38) merged 2026-11-27T19:56:21Z at `08ee85546cce1626faa5cfc67a8d6ed6f8aa8788`; Pages run [46060161914](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46060161914) also completed successfully. A cache-busted fetch at https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=08ee85546cce1626faa5cfc67a8d6ed6f8aa8788 served the final five-dashboard page. The workflow emitted only the informational Node.js 20 deprecation annotation.
+
+### Coordination note
+
+A required `git pull --rebase origin main` during this session encountered a `COORDINATION.md` append conflict after session `e46f5d6a` merged PR #32. Resolution retained the complete `e46f5d6a` record and this session's section; no other session's changes were discarded. Rebase then completed, followed by PR #37 and the documentation-only PR #38.
+
+### Cross-scope review requests (not edited under this claim)
+
+1. **Primary-source make-up workdays:** `china-2027/data/meta.json`, the Beijing/Shanghai plan pages, and root pages repeat 31 Jan / 14 Feb make-up workdays. The official English State Council page <https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html> was fetched 2026-11-27 and states Spring Festival 5–13 Feb, but its published table does not state the make-up dates. Please locate an official notice/translation with those dates or blank and flag them. Integration `questions.html`, `suggestions.html`, and `flagged.html` reflect this limitation.
+2. **Root README inventory:** the repository README still describes four plans even though it links the later dual-city dashboard; consider changing the count to four single-city studies plus one dual-city study. This task did not edit root `README.md` or root navigation.
+
+
+---
+
+# Session `e88a0fd1` — root Beijing planner line-by-line review & source re-verification
+
+**Branch:** `arena/e88a0fd1-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** done (PR/merge to `main` completes the session)
+**File scope:** `COORDINATION.md` (this session record only). No root data files changed: the published counts were confirmed correct after session `e46f5d6a` verified Zijin Mansion hours on hilton.com (partial hours, days of week not stated), bringing verified starred hours to 13/33 (11 official + 2 press) with 20 of 33 starred without full hours — matching `index.html`, `decisions.html` and `flagged.html`. No other session's files touched; sub-sites preserved intact per the claim rules.
+
+| # | Task | Status | File scope | Verification & corrections applied |
+|---|---|---|---|---|
+| R1 | Claim + root data line-by-line audit | **done** | `assets/data.js` (read-only audit) | Re-derived all counts from `assets/data.js`: 33/33 starred entries (2×3★ Chao Shang Chao Chaoyang + Xin Rong Ji Xinyuan South Rd; 5×2★ Blackswan, Jingji, King's Joy, Lamdre, Lu Shang Lu; 26×1★), districts Chaoyang 20 / Dongcheng 9 / Xicheng 3 / Shunyi 1; all 33 starred addresses + phones non-blank; GUIDE_SLUG 33/33; MICHELIN_LISTED 32 Bib + 42 Selected = 74; 13/33 starred rows carry verified hours after session `e46f5d6a` added Zijin Mansion (hilton.com, partial hours; days of week not stated — flagged); 4/33 official p2 prices; 18/33 restaurants carry ≥1 direct verified YouTube link (39 direct links total); all 10 activities carry verified YT/IG/TikTok links. Counts match the MICHELIN 2027 release exactly. No published count needed correction. |
+| R2 | Primary-source re-check (2026-11-27) | **done** | n/a | [MICHELIN Guide 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) (28 Oct 2026): Beijing 107 venues, Chao Shang Chao & Xin Rong Ji retain 3★, Black Swan/Jingji/King's Joy/Lamdre/Lu Shang Lu hold 2★, Chef 1996 promoted to 1★, Old Tower debuts at 1★ — matches `assets/data.js` and `META.guideEdition`. [Palace Museum visit page](https://intl.dpm.org.cn/visit.html): Tue–Sun, closed Mon (except national holidays), Nov 1–Mar 31 08:30–16:30, last entry 15:30, ¥40 low season / ¥60 high, Treasure & Clock galleries +¥10 each, 40,000 daily cap, no same-day tickets — matches `ACTIVITIES` row exactly. |
+
+### Tasks retained as "needs review" (no estimates permitted under repo rules)
+
+| Task | Status | Owner | File scope | Notes |
+| T9 | **needs review** | e88a0fd1 | new `data/transit.*` | Hotel × restaurant ≤1h Amap matrix not produced: no routing API reachable from this session and repo rules prohibit estimates. Rome2rio station-to-station legs (Wangfujing↔Guomao 8m, Summer Palace 51m, 798 54m, Guomao↔Summer Palace 58m) remain the published transit basis; door-to-door verification remains open as suggestion #9 on `suggestions.html`. |
+| T10 | **needs review** | e88a0fd1 | new `data/prices-history.*` | Weekly price tracker not produced: a historical price series cannot be reconstructed from a single verified snapshot without fabrication. Multi-week Feb vs Mar snapshot remains in `assets/data.js` (`mar1`/`mar15`); open as suggestion #3/#10. |
+| T11 | **needs review** | e88a0fd1 | `assets/data.js` (`p2` field) | Exact 2-adult menu totals confirmed for only 4/33 starred kitchens (Fu Chun Ju, Cai Yi Xuan, Trb Hutong, Giada Garden); 29 rows intentionally blank with MICHELIN ¥ band only, flagged on `michelin.html`. Open as suggestion #4/#11. |
+
+### Verification log additions
+
+| Source | Verified | Date |
+| [MICHELIN Guide 2027 Beijing & Tianjin release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Beijing 107 venues; 33 starred (2/5/26); counts & debuts match `assets/data.js` | 2026-11-27 |
+| [Palace Museum visit page](https://intl.dpm.org.cn/visit.html) | Low-season hours, Monday closure, ¥40/¥60, +¥10 galleries, 40,000 cap, no same-day tickets | 2026-11-27 |
+
+### Site status
+
+- GitHub Pages: **built**, source `main` / root, https://kanlerxz87-cyber.github.io/ChinaFun1/ — live before and after this session (no build step; `.nojekyll` present).
+- Root pages: 8 HTML pages, 0 broken internal links, all with `<title>` + viewport (local check, 2026-11-27).
+- Irregularities carried forward unchanged from `1ac7826d` and `e46f5d6a` (see `flagged.html`); no new irregularities found in this review.
+
+---
+
+# Session `e88a0fd1` — PR #36 merge & Pages deploy record
+
+**Branch:** `arena/e88a0fd1-chinafun1` (fast-forwarded to `main` @ `d16c103`)
+**Claimed:** 2026-11-27 · **Status:** done
+
+| Item | Result |
+|---|---|
+| Pull request | https://github.com/kanlerxz87-cyber/ChinaFun1/pull/36 — `arena/e88a0fd1-chinafun1` → `main`, merged 2026-11-27 via `gh pr merge 36 --merge`, merge commit `d16c103` |
+| Contents | Session e88a0fd1 root Beijing planner review: COORDINATION.md session record appended (audit of 33/33 starred, 32 Bib Gourmand + 42 MICHELIN Selected, 13/33 verified starred hours, 4/33 official 2-adult menu prices, 18/33 starred restaurants with ≥1 direct verified YouTube link; all 10 activities with verified video links); T9/T10/T11 retained as needs review. No data values inferred or filled; all blanks stay blank and flagged. |
+| Sources re-verified (2026-11-27) | MICHELIN Guide 2027 Beijing & Tianjin release — https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection ; Palace Museum visit page — https://intl.dpm.org.cn/visit.html. Both match repo data exactly. |
+| GitHub Pages | source `main` / root — https://kanlerxz87-cyber.github.io/ChinaFun1/ ; Pages build for `d16c103` completed `built`; live cache-busted fetch of `/` returned HTTP 200 with the merged executive summary; 8 root pages, 0 broken internal links, `<title>` + viewport on all |
+| Irregularities | None new; all flagged items remain published on `flagged.html` and do not block the merge |
+# Session `a94e6d8b` — final integration: reconcile the dual-city planner with the decision hub
+
+**Branch:** `arena/a94e6d8b-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**Claimed file scope:** this appended section of `COORDINATION.md`, `README.md`, and `integration-2027/**` only. The work is an additive final-integration update: existing research data and all five trip-planning directories remain untouched; root `index.html` already links to the dual-city planner.
+
+| # | Task | Status | Scope | Verification rule |
+|---|---|---|---|---|
+| I1 | Read the coordination board and claim this non-overlapping final-integration task | **done** | this section | Claim first pushed as `f7e0379` before implementation; rebased onto `origin/main` after concurrent merges (current base `dc5b35b`); all appended records retained; current branch only |
+| I2 | Reconcile the hub/README directory inventory with the published repo | **done** | `README.md`, `integration-2027/**` | Counted five planning studies (four single-city + one dual-city), two support sites and seven published entry points; preserved the original four single-city snapshots as dated records |
+| I3 | Update the cross-plan decision hub to include the dual-city study without inventing a combined hotel quote | **done** | `integration-2027/**` | Added the dual-city study as a distinct alternative table/card, separate from the four-row single-city 7-night price table; linked its official sources, hotel table and itinerary page; left the combined total blank and changed no source-plan rates |
+| I4 | Run site generators, validators, internal-link scan, and diff checks | **done** | read-only checks | Integration: 7 pages/0 errors; root: 187 rows/0 broken links; China 2027: 9 pages/0 broken; Social: 43 venues/58 videos/PASS; 64-HTML local-reference scan: 0 missing; generated table-row link scan: 0 unsourced rows |
+| I5 | Publish the additive final-integration update | **done** | current branch PR / Pages status | PR #41 merged to `main` at `f053c1d`; Pages run `46061002550` completed successfully and Pages API reports `built`; cache-busted live integration overview, price page and flagged page returned current content |
+
+**Handoff / ownership note:** all source-plan sessions referenced above are marked done in the inherited board. This task changed only the README inventory and the already-published integration hub; it did not edit `china-2027/`, `assets/data.js`, any source-plan data, or another plan's pages. Inherited issues that require another study's files are linked/flagged rather than edited.
+
+**Concurrent integration / rebase note (2026-11-27).** After this claim was pushed, session `e411628d` merged PRs #37/#38 with a similar hub update; session `e88a0fd1` then merged PRs #36/#40. Rebasing first onto `d16c103` and again onto `dc5b35b` preserved all appended records. The first rebase had conflicts in shared integration files because both sessions touched the hub; this branch keeps the current task's stricter four-row single-city 7-night comparison and represents `china-2027/` as a distinct alternative with an explicit blank for a combined 7-night total. The dual-city study's two city-specific hotel examples remain on its own hotel page and are not copied into the comparable table. The newer Chinese State Council primary notice is also added, so the workday dates are confirmed instead of left as an English-page omission; venue-specific hours remain separate. No source-plan files were edited.
+
+### Verification log — session `a94e6d8b` (2026-11-27)
+
+| Official source | What I fetched and checked | Result used in this integration pass |
+|---|---|---|
+| [State Council General Office · official Chinese notice](https://www.gov.cn/zhengce/content/202611/content_7085101.htm) | Fetched the government.cn notice, No. 国办发明电〔2026〕10号, dated 2026-11-05 | Confirms Spring Festival 2027 is Feb 5–13 and Jan 31 / Feb 14 are workdays. It does not establish Lantern Festival event hours or attraction/restaurant exceptions. |
+| [State Council · English holiday summary](https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html) | Fetched the English schedule | Confirms the Feb 5–13 holiday; the fetched English page does not list the make-up workdays, so the Chinese original is the cited source for those two dates. |
+| [MICHELIN · Beijing 2027 release](https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection) | Fetched the official release | Beijing has 107 Guide entries and 33 starred (2×3★, 5×2★, 26×1★). |
+| [MICHELIN · live Beijing starred listing](https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred) | Fetched the live list and its facets | 33 starred entries; facets show 2×3★, 5×2★, 26×1★. |
+| [MICHELIN · live Shanghai starred listing](https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred) | Fetched the live list and its facets | 50 starred (1×3★, 11×2★, 38×1★), 33 Bib Gourmand and 70 Selected; the page shows 1–48 of 50 on its first page. |
+| [MICHELIN · 2026 Shanghai/Jiangsu/Zhejiang release](https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang) | Fetched the official regional release | Reports 156 Shanghai restaurants, while the current live Shanghai facets sum to 153. Both values are retained as a discrepancy; neither was silently substituted. |
+
+**Scope and data discipline.** The four single-city hotel comparisons remain dated 2026-11-25 snapshots; root Beijing and dual-city hotel pages contain separate 2026-11-26 captures. No Booking.com rate was re-quoted in this pass. The new fifth study is not assigned a combined 7-night price because its route, hotel allocation, room categories and fee terms are not fixed. Only the 7-night and 14-day dual-city durations fit the stated 1–2-week target; the optional 21-day route is flagged as outside scope.
+
+**Additional irregularity flagged, without editing another session's files.** A read-only `csv.reader` audit of `shanghai-verified-2027/data/` reproduced malformed column counts: `activities.csv` rows 2/3/5/6 (14 vs 15 columns); `hotels.csv` rows 2/3/5 (26 vs 25) and row 6 (29 vs 25); `michelin.csv` row 5 (17 vs 18); `social.csv` row 15 (10 vs 9). Published as I-16 on the integration Flagged for Review page with links to all four files. No `shanghai-verified-2027/**` file was changed; repair request is left to that scope's owner/final integrator.
+
+**Checks performed:** `python3 integration-2027/tools/build.py` twice (byte-identical HTML); `python3 integration-2027/tools/check.py` (7 pages, 0 errors); `python3 check.py` (187 rows, no broken internal links/empty hrefs/missing title or viewport); `python3 china-2027/tools/check.py` (9 pages, 13 hotels, 56 restaurants, 16 activities, 0 broken links); `python3 social-2027/tools/check.py` (43 venues, 58 videos, PASS); `node --check assets/app.js`, `node --check assets/data.js`, Python compile checks, JSON parse checks, `git diff --check`; repo-wide HTML reference scan (64 pages, 0 missing href/src); integration table-link scan (7 pages, 0 rows without a source link). An explicit scope assertion confirmed four single-city rows, one separately presented dual-city study, and 19 dated price rows; source-plan datasets were not regenerated or modified.
+
+### Publication result — session `a94e6d8b`
+
+- PR #41: https://github.com/kanlerxz87-cyber/ChinaFun1/pull/41 — merged 2026-11-27 at 20:03:44 UTC; merge commit `f053c1db64998d9e6d4b0496fed66e5dc34144d2`.
+- GitHub Pages run [46061002550](https://github.com/kanlerxz87-cyber/ChinaFun1/actions/runs/46061002550) completed successfully (build, deploy and status-report jobs); Pages API reports `built` at `f053c1d`. The only annotation is GitHub's informational Node.js 20 deprecation warning.
+- Cache-busted live fetches of the integration overview, four-row hotel price page, and Flagged for Review page returned the current deployment: `https://kanlerxz87-cyber.github.io/ChinaFun1/integration-2027/index.html?v=f053c1db64998d9e6d4b0496fed66e5dc34144d2`, `.../plans.html?v=f053c1db64998d9e6d4b0496fed66e5dc34144d2`, and `.../flagged.html?v=f053c1db64998d9e6d4b0496fed66e5dc34144d2`.
+- The initial PR #41 had no branch checks reported; all local validators listed above passed before merge. The deployment itself then completed successfully.
 
 ---
 

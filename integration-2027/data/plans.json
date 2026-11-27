@@ -1,6 +1,6 @@
 {
-  "compiled": "2026-11-25",
-  "note": "Cross-plan figures are copied from each owning session's published data and are labelled with that session's dated source. They were NOT re-quoted or re-verified in this integration pass; Booking.com rates are dynamic snapshots.",
+  "compiled": "2026-11-27",
+  "note": "This is a dated comparison, not a live quote: the four single-city rows below preserve 25 Nov 2026 snapshots. The root Beijing hotel table and the separate dual-city planner contain later 26 Nov captures; use each owning page for its own date-stamped rates. No prices were refreshed in this integration pass. The dual-city planner is kept outside the four-row, single-city 7-night comparison because it has no one combined 7-night hotel total.",
   "plans": [
     {
       "id": "fac6d965",
@@ -70,5 +70,51 @@
       "rate_note": "Booking.com snapshot read 25 Nov 2026 by session 16153d37; 10% service included, 6% VAT excluded.",
       "source_page": "../shanghai-verified-2027/index.html"
     }
-  ]
+  ],
+  "additional_study": {
+    "id": "f8e7ee9e",
+    "title": "China 2027 Verified Planner — Beijing + Shanghai",
+    "city": "Beijing + Shanghai",
+    "updated": "2026-11-26",
+    "source_page": "../china-2027/index.html",
+    "hotel_page": "../china-2027/hotels.html",
+    "itinerary_page": "../china-2027/itineraries.html",
+    "sources_page": "../china-2027/sources.html",
+    "itinerary_options": "7-night Beijing, 14-day Beijing + Shanghai, and 21-day multi-city options",
+    "duration_note": "The 21-day option is outside the requested 1–2-week duration; the 7-night and 14-day options fit that duration range.",
+    "price_note": "No combined 7-night total is published; select the route, hotels, room types and fee treatment before calculating one.",
+    "scope_note": "A separate planning study, not an update to the four older single-city price snapshots.",
+    "official_sources": [
+      {
+        "label": "State Council · 2027 public holidays (English)",
+        "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
+        "what": "Official English schedule lists Spring Festival 2027 as Feb 5–13; the fetched English page omits makeup-day dates."
+      },
+      {
+        "label": "State Council · 2027 holiday notice (Chinese original)",
+        "url": "https://www.gov.cn/zhengce/content/202611/content_7085101.htm",
+        "what": "State Council General Office notice 国办发明电〔2026〕10号 confirms the Spring Festival break Feb 5–13 and workdays Jan 31 and Feb 14."
+      },
+      {
+        "label": "MICHELIN · Beijing 2027 release",
+        "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
+        "what": "Beijing has 107 selected restaurants and 33 starred (2 three-star, 5 two-star, 26 one-star)."
+      },
+      {
+        "label": "MICHELIN · Beijing live starred list",
+        "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+        "what": "Current live listing for the 33 Beijing starred restaurants."
+      },
+      {
+        "label": "MICHELIN · Shanghai live starred list",
+        "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
+        "what": "Current live list shows 50 starred (1 three-star, 11 two-star, 38 one-star), 33 Bib Gourmand and 70 Selected."
+      },
+      {
+        "label": "MICHELIN · Shanghai regional 2026 release",
+        "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang",
+        "what": "Official release says 156 Shanghai selections; current live category facets sum to 153, a discrepancy kept flagged."
+      }
+    ]
+  }
 }
