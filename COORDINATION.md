@@ -864,3 +864,23 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 ### Handoff
 Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. **PR:** https://github.com/kanlerxz87-cyber/ChinaFun1/pull/32 · **Merged** 2026-11-27T19:52:02Z (merge commit `2022cb5`, `gh pr merge --merge`).
 **Pages:** `gh api repos/kanlerxz87-cyber/ChinaFun1/pages/builds/latest` → `built` at `2022cb5`. Live URL https://kanlerxz87-cyber.github.io/ChinaFun1/ (the sandbox cannot reach `github.io` directly, so the live HTTP check was not run from here; build status is from the Pages API).
+
+---
+
+# Session `7a4d80a8` — current-date compliance audit & decision-quality integration
+
+**Claimed:** 2026-11-27 · **Status:** in progress  
+**Branch:** `arena/7a4d80a8-chinafun1` (fixed by Arena; no branch switch or side branch)  
+**File scope:** `COORDINATION.md`, `README.md`, root `index.html`, `hotels.html`, `decisions.html`, `flagged.html`, `suggestions.html`, `assets/data.js`, `assets/app.js`; `china-2027/data/hotels.json`, `china-2027/data/audit_and_planning.json`, `china-2027/tools/build.py`, and the generated `china-2027/` pages; new `review-2027/**`. No other session is active; this is the requested final integration/reverification pass after completed plans.
+
+| Task | Status | Owner | Scope | Verification rule |
+|---|---|---|---|---|
+| D1 Claim + current-date source check | **in progress** | 7a4d80a8 | this section | Read shared board first; verify each changed claim on an official primary page; cite exact URL/date. |
+| D2 Fix overclaims in hotel-booking timing | unclaimed by owner → claimed | 7a4d80a8 | `china-2027/data/hotels.json`, `china-2027/tools/build.py`, generated hotel/overview pages, root summaries | Separate observed stay-date price snapshots from booking-date claims; no “cheapest booking time” claim without time-series evidence. |
+| D3 Correct transit-proximity ranking disclosure | unclaimed by owner → claimed | 7a4d80a8 | `assets/data.js`, `assets/app.js`, root `hotels.html`, `index.html`, `decisions.html`, `flagged.html`, `README.md`, China planner pages | Do not publish a ≤60-minute restaurant count/rank unless hotel-to-venue transit routes are individually verified; retain only linked route examples and flag gaps. |
+| D4 Publish dated audit + decision-ready entry point | unclaimed by owner → claimed | 7a4d80a8 | new `review-2027/**`, root landing/nav, `COORDINATION.md` | Every audit row links to the primary source or to the item being flagged; blank/unavailable values remain blank. |
+| D5 Full integrity/build/deploy check, PR & Pages confirmation | unclaimed by owner → claimed | repo-wide read-only + current branch PR | Run all validators, build output, internal-link/row-source audit, PR checks, then merge only if checks and Pages deploy pass. |
+
+### Coordination conflict / resolution
+
+Before the required claim push, `git pull --rebase origin main` fetched `8736fb7` (PR #32 from `e46f5d6a`) while this branch was still at `9e0f598`. Both sessions appended independent sections to `COORDINATION.md`, causing an add-at-end conflict. Kept the complete upstream `e46f5d6a` section (including its sources, audit findings, PR #32 and deploy record), re-appended this claim, and did not edit or discard its files. Rebase resolution recorded here; further `pull --rebase` is required before each push.
