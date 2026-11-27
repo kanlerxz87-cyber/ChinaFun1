@@ -910,3 +910,15 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 ### Handoff
 Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. **PR:** https://github.com/kanlerxz87-cyber/ChinaFun1/pull/32 · **Merged** 2026-11-27T19:52:02Z (merge commit `2022cb5`, `gh pr merge --merge`).
 **Pages:** `gh api repos/kanlerxz87-cyber/ChinaFun1/pages/builds/latest` → `built` at `2022cb5`. Live URL https://kanlerxz87-cyber.github.io/ChinaFun1/ (the sandbox cannot reach `github.io` directly, so the live HTTP check was not run from here; build status is from the Pages API).
+# Session `e411628d` — final decision-layer integration audit
+
+**Branch:** `arena/e411628d-chinafun1` (branched from `main` @ `9e0f5980c64c9f277d0279b974c3b9c75a0a9e31`)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**File scope:** `integration-2027/**` and this appended section of `COORDINATION.md` only. Other plan directories and root pages remain read-only.
+
+| # | Task | Status | Verification / output |
+|---|---|---|---|
+| E1 | Reconcile decision hub inventory with all currently published plans, including the later dual-city dashboard | **in progress** | Will verify against existing plan metadata and link directly to each source dashboard; inherited figures stay labelled with capture dates and limitations. |
+| E2 | Update decision layer's executive summary and comparison with the new inventory; avoid treating non-like-for-like hotel snapshots as a single ranking | **in progress** | Scope is isolated to `integration-2027/`; every price retains its original Booking source and date, and no unavailable value will be inferred. |
+| E3 | Run integration generator/checker and repo-wide validators; verify internal references and document discrepancies | **in progress** | Pending completion. |
+
