@@ -1,6 +1,6 @@
 {
   "compiled": "2026-11-27",
-  "note": "The four single-city studies are joined by a later dual-city study. Values are inherited from their named pages and captured on different dates; price and tax terms are not directly comparable. Booking.com rates are dynamic snapshots, not live quotes.",
+  "note": "This is a dated comparison, not a live quote: the four single-city rows below preserve 25 Nov 2026 snapshots. The root Beijing hotel table and the separate dual-city planner contain later 26 Nov captures; use each owning page for its own date-stamped rates. No prices were refreshed in this integration pass. The dual-city planner is kept outside the four-row, single-city 7-night comparison because it has no one combined 7-night hotel total.",
   "plans": [
     {
       "id": "fac6d965",
@@ -69,25 +69,52 @@
       "rate_source": "https://www.booking.com/hotel/cn/hyland.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&sb_price_type=total&selected_currency=USD",
       "rate_note": "Booking.com snapshot read 25 Nov 2026 by session 16153d37; 10% service included, 6% VAT excluded.",
       "source_page": "../shanghai-verified-2027/index.html"
-    },
-    {
-      "id": "f8e7ee9e",
-      "city": "Beijing + Shanghai",
-      "site": "china-2027/index.html",
-      "path": "china-2027/",
-      "dates": "15–22 Feb 2027 (7-night alternatives per city; not a priced multi-city stay)",
-      "focus": "Dual-city verified dashboard; hotel, activity, Michelin, holiday and social sources in one place",
-      "starred": "Beijing 33 starred (2027); Shanghai 50 starred (2026 live guide counts)",
-      "hotel_headline": "Beijing: $425 queen / Shanghai: $621 king, each 7 nights; city alternatives, not combined",
-      "cheapest_compliant": "Beijing base-Beijing Wangfujing Serviced Apartment, queen + private bath, $425; Shanghai Pullman Shanghai Jing’an, king + private bath, $621 non-refundable (free-cancel $707).",
-      "social_in_this_index": "Separate dual-city register: 91 verified social links across restaurants and activities",
-      "decision": "Use this dashboard for a primary-source, dual-city view and direct bed/bath evidence. Compare the city-specific hotel alternatives only after choosing one city; the quoted totals exclude VAT and use different cancellation terms.",
-      "official_source": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
-      "secondary_official_source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
-      "rate_source": "https://www.booking.com/hotel/cn/basebai-she-fu-wu-shi-gong-yu-bei-jing-long-fu-si-dian.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "secondary_rate_source": "https://www.booking.com/hotel/cn/grand-mercure-shanghai-zhongya.html?checkin=2027-02-15&checkout=2027-02-22&group_adults=2&no_rooms=1&selected_currency=USD",
-      "rate_note": "Both room and 7-night totals are dated Booking.com snapshots read 26 Nov 2026 by session f8e7ee9e. Beijing $425 and Shanghai $621 exclude 6% VAT; Shanghai $621 is non-refundable, $707 is the free-cancellation rate. Service-charge details are recorded in china-2027/data/hotels.json.",
-      "source_page": "../china-2027/index.html"
     }
-  ]
+  ],
+  "additional_study": {
+    "id": "f8e7ee9e",
+    "title": "China 2027 Verified Planner — Beijing + Shanghai",
+    "city": "Beijing + Shanghai",
+    "updated": "2026-11-26",
+    "source_page": "../china-2027/index.html",
+    "hotel_page": "../china-2027/hotels.html",
+    "itinerary_page": "../china-2027/itineraries.html",
+    "sources_page": "../china-2027/sources.html",
+    "itinerary_options": "7-night Beijing, 14-day Beijing + Shanghai, and 21-day multi-city options",
+    "duration_note": "The 21-day option is outside the requested 1–2-week duration; the 7-night and 14-day options fit that duration range.",
+    "price_note": "No combined 7-night total is published; select the route, hotels, room types and fee treatment before calculating one.",
+    "scope_note": "A separate planning study, not an update to the four older single-city price snapshots.",
+    "official_sources": [
+      {
+        "label": "State Council · 2027 public holidays (English)",
+        "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
+        "what": "Official English schedule lists Spring Festival 2027 as Feb 5–13; the fetched English page omits makeup-day dates."
+      },
+      {
+        "label": "State Council · 2027 holiday notice (Chinese original)",
+        "url": "https://www.gov.cn/zhengce/content/202611/content_7085101.htm",
+        "what": "State Council General Office notice 国办发明电〔2026〕10号 confirms the Spring Festival break Feb 5–13 and workdays Jan 31 and Feb 14."
+      },
+      {
+        "label": "MICHELIN · Beijing 2027 release",
+        "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
+        "what": "Beijing has 107 selected restaurants and 33 starred (2 three-star, 5 two-star, 26 one-star)."
+      },
+      {
+        "label": "MICHELIN · Beijing live starred list",
+        "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+        "what": "Current live listing for the 33 Beijing starred restaurants."
+      },
+      {
+        "label": "MICHELIN · Shanghai live starred list",
+        "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
+        "what": "Current live list shows 50 starred (1 three-star, 11 two-star, 38 one-star), 33 Bib Gourmand and 70 Selected."
+      },
+      {
+        "label": "MICHELIN · Shanghai regional 2026 release",
+        "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang",
+        "what": "Official release says 156 Shanghai selections; current live category facets sum to 153, a discrepancy kept flagged."
+      }
+    ]
+  }
 }

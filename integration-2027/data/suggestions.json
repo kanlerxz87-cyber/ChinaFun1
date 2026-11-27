@@ -1,6 +1,6 @@
 {
   "compiled": "2026-11-27",
-  "note": "Proposals only. The suggestion register is a decision aid: completed facts are called out separately; changes outside this integration scope are requests, not silently applied.",
+  "note": "Proposals only. None has been implemented in the five planning studies; choose a path before spending development or research time on it.",
   "suggestions": [
     {
       "id": "P01",
@@ -15,19 +15,19 @@
       "id": "P02",
       "title": "Re-quote the shortlist on each hotel's own booking engine",
       "priority": 2,
-      "why": "Hotel prices across the five dashboards are OTA snapshots captured on 25–26 Nov 2026 with different room categories, member rates, cancellation terms and tax treatment.",
+      "why": "The four-plan comparison uses 25 Nov 2026 OTA snapshots; later root Beijing and dual-city pages contain separate 26 Nov snapshots. No hotel-direct re-quote was made here, and tax treatments differ.",
       "how": "Use the exact dates and room category, save an all-in screenshot/PDF per hotel, and compare against these dated rows.",
       "review_first": "Agree whether Genius/member rates are eligible.",
       "source": "../shanghai-verified-2027/costs.html"
     },
     {
       "id": "P03",
-      "title": "Normalize the Shanghai Radisson comparison",
+      "title": "Resolve the $922 vs $1,116 Radisson gap",
       "priority": 3,
-      "why": "25 Nov studies quoted the same hotel/week at $922 (Genius Superior queen) and $1,116 (Junior Suite); the 26 Nov dashboard captured a separate $921 Genius quote / $1,024 list rate. Room type, sign-in and capture date differ, so none is a direct like-for-like winner.",
-      "how": "Re-quote one exact room category, dates, bed, bathroom, member state, cancellation terms and tax treatment, then update the dated comparison.",
-      "review_first": "Choose Superior queen or Junior Suite and whether Genius rates count.",
-      "source": "../china-2027/hotels.html"
+      "why": "Same hotel, same week, different room category and sign-in state; the difference is not a data error but it blocks a like-for-like recommendation.",
+      "how": "Hold the room type and sign-in state constant, re-quote both, and record bed and bathroom wording.",
+      "review_first": "Decide whether a Junior Suite is required.",
+      "source": "../README.md"
     },
     {
       "id": "P04",
@@ -49,18 +49,18 @@
     },
     {
       "id": "P06",
-      "title": "Verify make-up workdays against a primary notice",
+      "title": "Verify venue-specific holiday hours and closure notices",
       "priority": 6,
-      "why": "The official English State Council page confirms Spring Festival break dates (5–13 Feb 2027) but does not list the 31 Jan and 14 Feb make-up workdays repeated by some dashboards.",
-      "how": "Locate the official notice or authoritative translation that explicitly states make-up workdays; until then, leave those dates unverified and correct sibling pages only within their approved scope.",
-      "review_first": "Confirm an official source that states the workday dates, not just the holiday interval.",
-      "source": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html"
+      "why": "The State Council holiday and makeup-workday dates are now confirmed from the Chinese official notice. Restaurant and attraction opening exceptions for the selected dates remain venue-specific and may change.",
+      "how": "Once city, dates and attractions are chosen, consult each official operator page or dated notice and record the source plus the date checked.",
+      "review_first": "Choose the city, exact stay dates and priority venues.",
+      "source": "../shanghai-verified-2027/dates.html"
     },
     {
       "id": "P07",
       "title": "Re-check the Guide edition immediately before booking",
       "priority": 7,
-      "why": "Beijing uses the 2027 edition, Shanghai the 2026 regional edition; star status is time-sensitive and one earlier session found conflicting official counts.",
+      "why": "The live Shanghai filter currently lists 50 starred venues, while the 2026 regional release says 156 Shanghai selections; the 2027 Shanghai edition was not located in this pass.",
       "how": "Fetch the live filtered lists, record the edition year and counts, and only then enter a restaurant's status.",
       "review_first": "Decide whether a 2027 Shanghai release would trigger a new plan.",
       "source": "../michelin.html"
@@ -87,7 +87,7 @@
       "id": "P10",
       "title": "Choose one weighted decision rule",
       "priority": 10,
-      "why": "Five dashboards (four single-city studies and one dual-city study) use different selection criteria and snapshots; “best” is not a common weighted result.",
+      "why": "Four single-city snapshots plus a separate dual-city planner use different scopes and ranking criteria; only the four 7-night single-city rows are comparable in this price table.",
       "how": "Agree weights for price, bed compliance, star count, verified hours and travel time; apply the same weights to all plans and publish the arithmetic.",
       "review_first": "Set weights before seeing which plan wins.",
       "source": "index.html"

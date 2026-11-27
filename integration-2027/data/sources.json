@@ -1,30 +1,156 @@
 {
-  "compiled": "2026-11-25",
-  "note": "URLs actually fetched and read during session 815c7943. Inherited values point to the owning session's source register, which is linked from their own sites.",
+  "compiled": "2026-11-27",
+  "note": "Pages actually fetched by the original integration session or re-fetched for the 27 Nov 2026 final-integration update; each row states what it established and its read date. Inherited source detail remains in the owning plan registers.",
   "sources": [
-    {"url": "https://www.youtube.com/watch?v=SQ9JzAqNpjY", "what": "Chao Shang Chao chef interview, title/channel/date/description verified", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=tIBbLQB8Ueo", "what": "Chao Shang Chao Beijing visit review; description verified, title says Shanghai", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=6SvqIT2SW7M", "what": "Xin Rong Ji Beijing review, description and viewer reservation note verified", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=iKhz-w8cPY8", "what": "Xin Rong Ji Beijing full-meal review; transcript names Beijing", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=T-vm41LO6AA", "what": "Xin Rong Ji group feature; Taizhou location verified, not a Beijing branch review", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=zbi8tSPRDvs", "what": "King's Joy review with address and set-menu discussion; star count in video is 2024-era", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=2Rsj9Q81qAE", "what": "Lamdre interview by the official 50 Best channel", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=rj5Erb_3gIo", "what": "Lamdre single-dish feature by the official 50 Best channel", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=RYsEUZJSrN8", "what": "Taian Table in-depth review; chapter 'Dinner at Taian Table' verified", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=YyhXAggluco", "what": "Taian Table vlog with Zhenning Road address", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=TFhzGhR9RNw", "what": "Fu 1088 Shanghai on-site review with dish prices in transcript", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=Hlnav3Bwktg", "what": "Da Dong Shanghai roast-duck review; branch not named", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=yHYT3_xpOSU", "what": "Forbidden City 4K walk with ticket/hours chapter", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=3HJkn0BRHlk", "what": "Mutianyu planning guide and visit report", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=ozIZAd5YZuA", "what": "Mutianyu full tour review, July 2025 filming noted", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=z49wo_Zki4U", "what": "Mutianyu toboggan ride with #Mutianyu and description", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=ItLhW3AWPps", "what": "Summer Palace on-site tour; transcript names Beijing location", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=mPh-XrrIjMo", "what": "Yu Garden Shanghai walk-through", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=6ssEi4Esd7s", "what": "Shanghai Tower 118th-floor observatory visit", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=Sy0Df7KVfJk", "what": "Excluded: resolves to a private YouTube video", "date": "2026-11-25"},
-    {"url": "https://www.youtube.com/watch?v=B7XJ3HERW2k", "what": "Excluded as evidence: T'ang Court video does not identify Shanghai; other results point to Hong Kong", "date": "2026-11-25"},
-    {"url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/king-s-joy", "what": "MICHELIN entry: two stars, Wudaoying Hutong address, no hours block found in fetched chunks", "date": "2026-11-25"},
-    {"url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/index", "what": "Official museum homepage: People's Square 09:00–17:00 last entry 15:00 closed Monday; East 10:00–18:00 last entry 17:00 closed Tuesday; both except public holidays", "date": "2026-11-25"},
-    {"url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/3-stars-michelin", "what": "Live filter check: this /en/ URL returned a 404/empty listing through the text proxy; the /us/en/ listing is used by the owning plans. Not treated as evidence against Taian Table's status.", "date": "2026-11-25"}
+    {
+      "url": "https://www.youtube.com/watch?v=SQ9JzAqNpjY",
+      "what": "Chao Shang Chao chef interview, title/channel/date/description verified",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=tIBbLQB8Ueo",
+      "what": "Chao Shang Chao Beijing visit review; description verified, title says Shanghai",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6SvqIT2SW7M",
+      "what": "Xin Rong Ji Beijing review, description and viewer reservation note verified",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iKhz-w8cPY8",
+      "what": "Xin Rong Ji Beijing full-meal review; transcript names Beijing",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=T-vm41LO6AA",
+      "what": "Xin Rong Ji group feature; Taizhou location verified, not a Beijing branch review",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zbi8tSPRDvs",
+      "what": "King's Joy review with address and set-menu discussion; star count in video is 2024-era",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2Rsj9Q81qAE",
+      "what": "Lamdre interview by the official 50 Best channel",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rj5Erb_3gIo",
+      "what": "Lamdre single-dish feature by the official 50 Best channel",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RYsEUZJSrN8",
+      "what": "Taian Table in-depth review; chapter 'Dinner at Taian Table' verified",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=YyhXAggluco",
+      "what": "Taian Table vlog with Zhenning Road address",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TFhzGhR9RNw",
+      "what": "Fu 1088 Shanghai on-site review with dish prices in transcript",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Hlnav3Bwktg",
+      "what": "Da Dong Shanghai roast-duck review; branch not named",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=yHYT3_xpOSU",
+      "what": "Forbidden City 4K walk with ticket/hours chapter",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3HJkn0BRHlk",
+      "what": "Mutianyu planning guide and visit report",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ozIZAd5YZuA",
+      "what": "Mutianyu full tour review, July 2025 filming noted",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=z49wo_Zki4U",
+      "what": "Mutianyu toboggan ride with #Mutianyu and description",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ItLhW3AWPps",
+      "what": "Summer Palace on-site tour; transcript names Beijing location",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mPh-XrrIjMo",
+      "what": "Yu Garden Shanghai walk-through",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6ssEi4Esd7s",
+      "what": "Shanghai Tower 118th-floor observatory visit",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Sy0Df7KVfJk",
+      "what": "Excluded: resolves to a private YouTube video",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=B7XJ3HERW2k",
+      "what": "Excluded as evidence: T'ang Court video does not identify Shanghai; other results point to Hong Kong",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/king-s-joy",
+      "what": "MICHELIN entry: two stars, Wudaoying Hutong address, no hours block found in fetched chunks",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/index",
+      "what": "Official museum homepage: People's Square 09:00–17:00 last entry 15:00 closed Monday; East 10:00–18:00 last entry 17:00 closed Tuesday; both except public holidays",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurants/3-stars-michelin",
+      "what": "Live filter check: this /en/ URL returned a 404/empty listing through the text proxy; the /us/en/ listing is used by the owning plans. Not treated as evidence against Taian Table's status.",
+      "date": "2026-11-25"
+    },
+    {
+      "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html",
+      "what": "State Council English 2027 public-holiday schedule: Spring Festival Feb 5–13. The fetched page does not list make-up workday dates.",
+      "date": "2026-11-27"
+    },
+    {
+      "url": "https://www.michelin.com/en/publications/products-and-services/michelin-guide-unveils-the-2027-beijing-tianjin-selection",
+      "what": "Official MICHELIN 2027 Beijing & Tianjin release: Beijing has 107 selected establishments and 33 starred (2×3★, 5×2★, 26×1★).",
+      "date": "2026-11-27"
+    },
+    {
+      "url": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "what": "Live MICHELIN Beijing all-starred filter: 33 entries with star facets 2×3★, 5×2★, 26×1★.",
+      "date": "2026-11-27"
+    },
+    {
+      "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
+      "what": "Live MICHELIN Shanghai all-starred page: facets show 50 starred (1×3★, 11×2★, 38×1★), 33 Bib Gourmand and 70 Selected; first page says 1–48 of 50.",
+      "date": "2026-11-27"
+    },
+    {
+      "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang",
+      "what": "Official 2026 regional release: 409 restaurants across Shanghai/Jiangsu/Zhejiang and 156 in Shanghai; retained as a separate count from the current Shanghai live-filter sum of 153.",
+      "date": "2026-11-27"
+    },
+    {
+      "url": "https://www.gov.cn/zhengce/content/202611/content_7085101.htm",
+      "what": "State Council General Office primary notice (No. 国办发明电〔2026〕10号): Spring Festival holiday Feb 5–13, 2027; Jan 31 and Feb 14 are workdays.",
+      "date": "2026-11-27"
+    }
   ]
 }

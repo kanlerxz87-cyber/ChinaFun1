@@ -36,6 +36,34 @@ for name in ("plans.json", "price_windows.json", "social.json", "questions.json"
         elif all(not row.get(k) for k in keys):
             errors.append(f"{name}: row with empty source: {row.get('id', row.get('q', '?'))}")
 
+plan_data = json.loads((ROOT / "data" / "plans.json").read_text(encoding="utf-8"))
+additional = plan_data.get("additional_study")
+if not additional:
+    errors.append("plans.json: missing separately scoped dual-city study")
+else:
+    for key in ("source_page", "hotel_page", "itinerary_page", "sources_page"):
+        target = (ROOT / additional.get(key, "")).resolve()
+        if not additional.get(key) or not target.exists():
+            errors.append(f"plans.json: additional_study has missing local {key}: {additional.get(key, '')}")
+    official = additional.get("official_sources", [])
+    if not official:
+        errors.append("plans.json: additional_study has no official source URLs")
+    for source in official:
+        if not source.get("url", "").startswith("https://"):
+            errors.append(f"plans.json: additional_study source is not HTTPS: {source.get('url', '')}")
+
+for name in ("flags.json", "questions.json"):
+    data = json.loads((ROOT / "data" / name).read_text(encoding="utf-8"))
+    rows = data.get("flags", data.get("questions", []))
+    for row in rows:
+        for source in row.get("additional_sources", []) + row.get("official_sources", []):
+            url = source.get("url", "")
+            if url.startswith(("http://", "https://")):
+                continue
+            target = (ROOT / url.split("#")[0]).resolve()
+            if not target.exists():
+                errors.append(f"{name}: broken additional source {url}")
+
 social = json.loads((ROOT / "data" / "social.json").read_text(encoding="utf-8"))
 sources = {s["url"] for s in json.loads((ROOT / "data" / "sources.json").read_text(encoding="utf-8"))["sources"]}
 for row in social["rows"]:
