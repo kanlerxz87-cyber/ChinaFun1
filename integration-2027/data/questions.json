@@ -6,28 +6,40 @@
       "id": "Q01",
       "blocking": true,
       "q": "Beijing or Shanghai?",
-      "known": "The repository now includes four single-city studies plus one dual-city Beijing + Shanghai dashboard. Beijing has 33 starred venues in the 2027 edition; the dual-city study reports 50 Shanghai starred venues in the live 2026 regional guide.",
-      "unknown": "The brief does not choose Beijing, Shanghai, or a dual-city itinerary; the hotel and restaurant totals are not like-for-like.",
-      "action": "Choose one city or explicitly choose two; then compare only that city’s room and restaurant shortlist.",
-      "source": "../china-2027/index.html"
+      "known": "Four dated single-city 7-night comparisons are represented (one Beijing and three Shanghai); a separate planner offers Beijing + Shanghai options. Current official MICHELIN pages give the city-specific guide context, but the user has not chosen one city or a split stay.",
+      "unknown": "Whether the couple wants Beijing, Shanghai, or a two-city itinerary, and what matters most when ranking them.",
+      "action": "Choose one city or a two-city route before comparing hotel locations, restaurant clusters or a combined budget.",
+      "source": "https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred",
+      "official_sources": [
+        {
+          "label": "Shanghai MICHELIN live list ↗",
+          "url": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred"
+        }
+      ]
     },
     {
       "id": "Q02",
       "blocking": true,
       "q": "Which exact dates?",
-      "known": "15–18 Feb 2027 is a three-night window, shorter than the requested 1–2 weeks. Current candidate dashboards price 15–22 Feb as a seven-night alternative.",
-      "unknown": "Whether the travellers accept a seven-night stay or select different exact dates.",
-      "action": "Choose a 7–14-night date range within 15 Feb–23 Mar before using any total.",
-      "source": "../china-2027/index.html"
+      "known": "The literal preferred window 15–18 Feb 2027 is three nights. The four single-city price snapshots cover 15–22 Feb (seven nights); the separate dual-city planner has 7-night, 14-day and 21-day options.",
+      "unknown": "Whether the couple will accept a 7-night stay starting 15 Feb, choose a different 7–14-night window, or extend to two cities.",
+      "action": "Select the exact arrival/departure dates and number of nights; do not treat 15–22 Feb as a confirmed preference.",
+      "source": "../china-2027/itineraries.html",
+      "official_sources": [
+        {
+          "label": "State Council · 2027 public holidays ↗",
+          "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html"
+        }
+      ]
     },
     {
       "id": "Q03",
       "blocking": true,
       "q": "Is one queen-or-larger bed mandatory at the quoted rate?",
-      "known": "A 26 Nov dual-city snapshot lists compliant examples for 15–22 Feb: Beijing $425 queen with private bath; Shanghai $621 king with private bath (non-refundable; free-cancel option $707). Earlier studies quote different rooms and terms.",
-      "unknown": "Which city, cancellation policy, member-rate eligibility, and all-in tax amount apply.",
-      "action": "Select the city and exact room/refund terms, then re-quote before booking.",
-      "source": "../china-2027/hotels.html"
+      "known": "The 25 Nov cross-plan snapshot includes twin or selectable-bed rates that may not meet the queen/king requirement; later hotel tables have separate 26 Nov captures. Check the exact room-category bed wording, not just the property name.",
+      "unknown": "Whether a written bed request is acceptable.",
+      "action": "Decide the rule, then cut the shortlist.",
+      "source": "../hotels.html"
     },
     {
       "id": "Q04",
@@ -51,10 +63,10 @@
       "id": "Q06",
       "blocking": true,
       "q": "What is the all-in trip budget ceiling?",
-      "known": "A later dual-city study lists 7-night room snapshots from $425 in Beijing and $621 in Shanghai, excluding VAT; earlier study totals differ by room type, capture date, and tax treatment. Airfare, visa, city transit and most dinners are not priced.",
-      "unknown": "Affordable total for the whole trip and whether member/non-refundable prices count.",
-      "action": "Set an all-in ceiling and compare a same-city shortlist on identical dates, room, cancellation and tax terms.",
-      "source": "../china-2027/hotels.html"
+      "known": "The four-plan price table is a set of 25 Nov 2026 snapshots across different cities, room categories and tax terms. Later Beijing and dual-city plan pages contain separate 26 Nov snapshots. Airfare, visa fees, transit and most dinners remain unpriced.",
+      "unknown": "Affordable total for the whole trip.",
+      "action": "Set a ceiling, then filter every table by it.",
+      "source": "data/price_windows.json"
     },
     {
       "id": "Q07",
@@ -86,11 +98,17 @@
     {
       "id": "Q10",
       "blocking": false,
-      "q": "What are the official 2027 mainland holiday dates and make-up workdays?",
-      "known": "The official State Council English page lists the Spring Festival holiday as 5–13 Feb 2027.",
-      "unknown": "That page does not list the proposed 31 Jan and 14 Feb make-up workdays; those dates are not verified by the source cited here. Venue-specific hours and exceptions also remain open.",
-      "action": "Locate an official notice or authoritative translation that explicitly lists make-up workdays, then check each operator’s schedule for venue-specific exceptions.",
-      "source": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html"
+      "q": "What venue-specific holiday hours and closures apply to the chosen dates?",
+      "known": "The State Council General Office notice No. 国办发明电〔2026〕10号 confirms Spring Festival is Feb 5–13, 2027 and Jan 31 / Feb 14 are workdays. The fetched English schedule omits the makeup days; the official Chinese notice confirms them.",
+      "unknown": "Restaurant and attraction-specific opening hours, temporary closures, and Lantern Festival event schedules for the exact trip dates.",
+      "action": "After choosing a city and dates, check each operator’s official notice for the exact week and record the date; do not infer venue hours from the public-holiday calendar.",
+      "source": "https://www.gov.cn/zhengce/content/202611/content_7085101.htm",
+      "official_sources": [
+        {
+          "label": "State Council · English holiday schedule ↗",
+          "url": "https://english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html"
+        }
+      ]
     },
     {
       "id": "Q11",
@@ -123,10 +141,16 @@
       "id": "Q14",
       "blocking": false,
       "q": "Which MICHELIN edition governs the Shanghai star statuses?",
-      "known": "The current Shanghai data is the 2026 regional edition. The 2027 Beijing/Tianjin edition is published; the 2027 Shanghai edition was not located.",
-      "unknown": "Whether any Shanghai status changes before travel.",
-      "action": "Re-check the official Guide before booking and record the edition date.",
-      "source": "../michelin.html"
+      "known": "The live Shanghai MICHELIN list currently shows 50 starred, 33 Bib Gourmand and 70 Selected. The official 2026 regional release reports 156 Shanghai restaurants across the combined regional edition; the 2027 Shanghai edition was not found in this pass.",
+      "unknown": "Whether any Shanghai star/status changes before travel, and why the live category sum (153) differs from the release count (156).",
+      "action": "Use the live official listing for current venue status; preserve the release/list count discrepancy and re-check the Guide before booking.",
+      "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred",
+      "official_sources": [
+        {
+          "label": "2026 regional MICHELIN release ↗",
+          "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/michelin-guide-shanghai-jiangsu-zhejiang"
+        }
+      ]
     },
     {
       "id": "Q15",

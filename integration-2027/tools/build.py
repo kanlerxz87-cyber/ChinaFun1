@@ -41,16 +41,40 @@ def ext(url, label="source ↗"):
     return f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(label)}</a>'
 
 
+def citations(record, default_label="source ↗"):
+    """Render a record's own source plus any additional/official source links."""
+    links = []
+    if record.get("source"):
+        links.append(ext(record["source"], record.get("source_label", default_label)))
+    for source in record.get("additional_sources", []):
+        links.append(ext(source.get("url", ""), source.get("label", default_label)))
+    for source in record.get("official_sources", []):
+        links.append(ext(source.get("url", ""), source.get("label", "official source ↗")))
+    return " · ".join(link for link in links if link) or blank("", "no source supplied")
+
+
+def source_link_list(sources):
+    return " · ".join(
+        ext(source.get("url", ""), source.get("label", "official source ↗"))
+        for source in sources or [] if source.get("url")
+    )
+
+
 def nav(active):
     links = "".join(
         f'<a href="{h}" class="{"active" if h == active else ""}">{e(label)}</a>'
         for h, label in PAGES
     )
+    companions = (
+        '<a href="../china-2027/index.html">Dual-city planner ↗</a>'
+        '<a href="../index.html">Beijing plan ↗</a>'
+    )
+    updated = e(load("plans.json").get("compiled", "date not recorded"))
     return (
         '<header class="top"><div class="wrap brandbar">'
-        '<div class="brand"><span class="dot"></span><span>China 2027<small>Decision layer · 5 research dashboards</small></span></div>'
-        '<span class="chip">Updated 2026-11-27</span></div>'
-        f'<nav class="nav wrap">{links}</nav></header>'
+        '<div class="brand"><span class="dot"></span><span>China 2027<small>4 single-city snapshots + dual-city option</small></span></div>'
+        f'<span class="chip">Hub updated {updated} · source dates vary</span></div>'
+        f'<nav class="nav wrap" aria-label="Decision hub">{links}{companions}</nav></header>'
     )
 
 
@@ -65,9 +89,11 @@ def shell(title, active, body, description=""):
 {nav(active)}
 <main class="wrap">{body}</main>
 <footer class="wrap">
-<p><strong>Method.</strong> This is a decision layer, not a new trip plan. It links four single-city studies and one dual-city dashboard; dated values remain attributed to their source sessions and are not blended into a like-for-like ranking. Unconfirmed values remain blank or flagged. Third-party videos are not affiliated with any listed venue.</p>
+<p><strong>Method.</strong> This is a comparison layer, not a trip plan. It preserves the four dated single-city price snapshots
+and links to the separate Beijing + Shanghai planner without combining unlike hotel totals. Re-open each owning page for its
+source dates, room terms and flags; OTA rates are dynamic. Third-party videos are not affiliated with any listed venue.</p>
 <p><a href="sources.html">Source register</a> · <a href="flagged.html">Flags and blanks</a> ·
-<a href="../README.md">Repository README</a> · Integration update e411628d · 27 Nov 2026</p>
+<a href="../china-2027/index.html">Dual-city planner</a> · <a href="../README.md">Repository README</a></p>
 </footer>
 <script src="assets/app.js"></script>
 </body></html>
@@ -87,15 +113,25 @@ def filter_input(target):
 def build_index(plans, social, flags):
     videos = sum(len(r["social"]) for r in social["rows"])
     venues = sum(1 for r in social["rows"] if r["social"])
+    additional = plans.get("additional_study", {})
     cards = "".join(
         f'<tr><td class="name">{e(p["city"])}<span class="meta">{e(p["id"])}</span></td>'
         f'<td>{e(p["dates"])}</td><td>{e(p["starred"])}</td><td>{e(p["hotel_headline"])}</td>'
         f'<td>{e(p["social_in_this_index"])}</td>'
-        f'<td class="nowrap"><a href="{e(p["source_page"])}">plan ↗</a> · {ext(p["official_source"], "Guide ↗")} · {ext(p["rate_source"], "rate ↗")}'
-        f'{(" · " + ext(p["secondary_official_source"], "second Guide ↗")) if p.get("secondary_official_source") else ""}'
-        f'{(" · " + ext(p["secondary_rate_source"], "second rate ↗")) if p.get("secondary_rate_source") else ""}</td></tr>'
+        f'<td class="nowrap"><a href="{e(p["source_page"])}">plan ↗</a> · {ext(p["official_source"], "MICHELIN ↗")} · {ext(p["rate_source"], "rate ↗")}</td></tr>'
         for p in plans["plans"]
     )
+    official_links = source_link_list(additional.get("official_sources", []))
+    additional_row = (
+        f'<tr><td class="name"><a href="{e(additional.get("source_page", ""))}">{e(additional.get("title", "Dual-city study"))} ↗</a>'
+        f'<span class="meta">Session {e(additional.get("id", ""))} · updated {e(additional.get("updated", ""))}</span>'
+        f'<span class="meta"><a href="{e(additional.get("hotel_page", ""))}">hotel table</a> · '
+        f'<a href="{e(additional.get("itinerary_page", ""))}">itineraries</a></span></td>'
+        f'<td>{e(additional.get("city", ""))}</td>'
+        f'<td>{e(additional.get("itinerary_options", ""))}<span class="meta">{e(additional.get("duration_note", ""))}</span></td>'
+        f'<td>{blank("", "not comparable — no combined 7-night total")}<span class="meta">{e(additional.get("price_note", ""))}</span></td>'
+        f'<td>{official_links}</td></tr>'
+    ) if additional else ""
     paths = "".join(
         f'<div class="card"><h3>{e(p["title"])}</h3>'
         f'<p class="meta">Priority {p["priority"]} · proposed, not implemented</p>'
@@ -103,33 +139,36 @@ def build_index(plans, social, flags):
         for p in load("suggestions.json")["suggestions"][:3]
     )
     body = f"""
-<p class="eyebrow">Executive summary</p>
-<h1>Five research dashboards, one decision layer</h1>
-<p class="lede">This repository contains four independent single-city studies (one Beijing and three Shanghai) plus a later
-Beijing–Shanghai dual-city dashboard. They were produced separately and are deliberately <strong>not merged</strong>;
-this hub now links all five and keeps their dated findings distinct. Choose a city and exact dates before comparing hotels.</p>
+<p class="eyebrow">Executive summary · inventory updated 27 Nov 2026</p>
+<h1>Four single-city snapshots + a dual-city option</h1>
+<p class="lede">The repository contains four independently researched single-city 7-night comparisons (one Beijing, three Shanghai)
+plus a separate Beijing + Shanghai planner. They have different scopes, dates and hotel-room assumptions, so the dual-city study
+is not blended into the single-city price ranking. This layer shows what is comparable, what is not, and what still blocks a decision.</p>
 
 <div class="grid g4">
-  <div class="card kpi"><div class="big">5</div><div class="sub">research dashboards: 4 single-city + 1 dual-city</div></div>
-  <div class="card kpi"><div class="big">{videos}</div><div class="sub">social pages fetched and read this session</div></div>
-  <div class="card kpi"><div class="big">{venues}</div><div class="sub">venues with at least one verified link</div></div>
-  <div class="card kpi"><div class="big">{len(flags['flags'])}</div><div class="sub">issues logged; resolved entries are identified on the flags page</div></div>
+  <div class="card kpi"><div class="big">{len(plans["plans"])} + {1 if additional else 0}</div><div class="sub">single-city snapshot studies + separate dual-city option</div></div>
+  <div class="card kpi"><div class="big">{videos}</div><div class="sub">video links in this original cross-plan index (captured 25 Nov)</div></div>
+  <div class="card kpi"><div class="big">{venues}</div><div class="sub">venues with a verified link in this index</div></div>
+  <div class="card kpi"><div class="big">{len(flags['flags'])}</div><div class="sub">flagged irregularities, none hidden</div></div>
 </div>
 
 <h2>What can be decided today</h2>
 <div class="grid g2">
-  <div class="card"><h3>1 · Choose the city first</h3><p>The later dual-city study verifies 33 starred Beijing restaurants (2027 edition) and reports 50 starred Shanghai restaurants (2026 live guide). It compares separate city alternatives, not one combined itinerary. Hotel access and the restaurant shortlist depend on this choice.</p></div>
-  <div class="card"><h3>2 · The preferred window does not fit</h3><p>15–18 Feb 2027 is three nights, shorter than the requested 1–2 weeks. The current comparable candidate window is 15–22 Feb (7 nights); no 3-night rates are shown here.</p></div>
-  <div class="card"><h3>3 · Compare compliant rooms only</h3><p>The 26 Nov dual-city snapshot lists 15–22 Feb examples: Beijing $425 for a queen room with private bath, and Shanghai $621 for a king room with private bath (non-refundable; $707 free cancellation). Both exclude VAT; these city alternatives are not a combined price, and earlier study snapshots differ.</p></div>
-  <div class="card"><h3>4 · Rates are snapshots, not live quotes</h3><p>Hotel totals were captured on 25–26 Nov 2026. Room type, promotions, cancellation and tax/service terms differ by listing; use the dated Booking.com source and re-check the exact rate before booking.</p></div>
+  <div class="card"><h3>1 · Choose a city or a two-city route</h3><p>Beijing's 2027 live MICHELIN list shows 33 starred restaurants; Shanghai's live 2026 list shows 50. The official Shanghai regional release gives a different total selection count, retained as a flag. <a href="https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Beijing starred list ↗</a> · <a href="https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurants/all-starred" target="_blank" rel="noopener noreferrer">Shanghai starred list ↗</a></p></div>
+  <div class="card"><h3>2 · The preferred window does not fit a week-long booking</h3><p>15–18 Feb 2027 is three nights, while the four single-city price rows cover 15–22 Feb (seven nights). Choose exact travel dates before using any total.</p></div>
+  <div class="card"><h3>3 · Match room terms before ranking price</h3><p>The four 25 Nov snapshots mix different room categories, member rates, bed options and tax treatment. Later Beijing and dual-city pages have their own dated captures; the cheapest displayed number is not automatically a queen/king + private-bath match.</p></div>
+  <div class="card"><h3>4 · A sampled stay date is not a booking-time forecast</h3><p>The historical comparisons sample stay dates, not a complete booking-lead-time curve. A displayed promotion is evidence of that dated offer only, not proof of the cheapest future day to book.</p></div>
 </div>
 
-<h2>The five research dashboards at a glance</h2>
+<h2>Four single-city 7-night snapshots (captured 25 Nov 2026)</h2>
 <div class="tablewrap"><table id="plan-table"><thead><tr><th>City / session</th><th>Dates</th><th>MICHELIN scope</th>
 <th>Headline 7-night total</th><th>Social coverage here</th><th>Sources</th></tr></thead>
 <tbody>{cards}</tbody></table></div>
-<p class="meta">Hotel figures are Booking.com snapshots captured 25–26 Nov 2026 by the named sessions, not live prices.
-Tax treatment differs between studies and is shown on the <a href="plans.html">price page</a>; the dual-city row links the two separate city rates.</p>
+<p class="meta">{e(plans.get('note', 'Rates are dated snapshots, not live quotes.'))} See the later <a href="../hotels.html">Beijing hotel page</a> and <a href="../china-2027/hotels.html">dual-city hotel page</a> for their own captured rates.</p>
+
+<h2>Separate dual-city alternative</h2>
+<p class="lede">This is a fifth planning study, not a fifth comparable single-city quote. Its 21-day option is outside the requested 1–2-week duration; the table intentionally leaves the combined 7-night total blank.</p>
+<div class="tablewrap"><table id="additional-study"><thead><tr><th>Study / detail</th><th>Cities</th><th>Itinerary options</th><th>Combined 7-night hotel total</th><th>Official primary sources</th></tr></thead><tbody>{additional_row}</tbody></table></div>
 
 <h2>First three paths to review</h2>
 <div class="grid g3">{paths}</div>
@@ -139,7 +178,7 @@ especially city, dates, bed rule, visa, all-in budget and the unverified ≤60-m
 Every blank is listed on <a href="flagged.html">Flagged for review</a>; none was filled by inference.</div>
 """
     write("index.html", "Overview", "index.html", body,
-          "Overview of four single-city China 2027 studies plus one dual-city dashboard, with the decisions that block booking.")
+          "Decision summary for four dated single-city comparisons and a separately sourced Beijing + Shanghai planner.")
 
 
 def build_plans(plans, price):
@@ -157,28 +196,38 @@ def build_plans(plans, price):
         f'<p><strong>Star scope:</strong> {e(p["starred"])}</p>'
         f'<p><strong>Compliant room:</strong> {e(p["cheapest_compliant"])}</p>'
         f'<p><strong>Decision use:</strong> {e(p["decision"])}</p>'
-        f'<p>{ext(p["official_source"], "official Guide/release ↗")}'
-        f'{(" · " + ext(p["secondary_official_source"], "second official Guide ↗")) if p.get("secondary_official_source") else ""}'
-        f' · {ext(p["rate_source"], "dated rate ↗")}'
-        f'{(" · " + ext(p["secondary_rate_source"], "second-city rate ↗")) if p.get("secondary_rate_source") else ""}</p>'
+        f'<p>{ext(p["official_source"], "official Guide/release ↗")} · {ext(p["rate_source"], "dated rate ↗")}</p>'
         f'<p class="meta">{e(p["rate_note"])}</p></div>'
         for p in plans["plans"]
     )
+    additional = plans.get("additional_study", {})
+    extra_sources = source_link_list(additional.get("official_sources", []))
+    extra_card = (
+        f'<div class="card"><h3><a href="{e(additional.get("source_page", ""))}">{e(additional.get("title", "Dual-city planner"))} ↗</a></h3>'
+        f'<p><strong>Cities:</strong> {e(additional.get("city", ""))} · <strong>Updated:</strong> {e(additional.get("updated", ""))}</p>'
+        f'<p><strong>Options:</strong> {e(additional.get("itinerary_options", ""))}. {e(additional.get("duration_note", ""))}</p>'
+        f'<p><strong>Hotel-cost caveat:</strong> {e(additional.get("price_note", ""))}</p>'
+        f'<p><a href="{e(additional.get("hotel_page", ""))}">Hotel table ↗</a> · '
+        f'<a href="{e(additional.get("itinerary_page", ""))}">Itineraries ↗</a> · '
+        f'<a href="{e(additional.get("sources_page", ""))}">Full source register ↗</a></p>'
+        f'<p><strong>Official sources:</strong> {extra_sources}</p></div>'
+    ) if additional else ""
     body = f"""
-<p class="eyebrow">Comparison</p><h1>Plans and dated prices</h1>
-<p class="lede">This comparison links four single-city studies and a dual-city Beijing + Shanghai dashboard. Values below
-are dated snapshots carried forward from their owning studies, not live quotes. The dual-city dashboard lists separate
-city options, not one combined hotel price; the snapshots use different room types, promotions and tax terms.</p>
+<p class="eyebrow">Comparison · four single-city snapshots + one separate dual-city study</p><h1>Plans and dated prices</h1>
+<p class="lede">The table below preserves four single-city, seven-night Booking.com snapshots captured on 25 Nov 2026. Each source row is recorded as a USD total for two adults in one room; bed, tax, service and cancellation terms differ. This is a historical comparison, not a current quote, a full hotel inventory or a claim that one plan is best.</p>
+<div class="callout warn"><strong>Refresh before using a price:</strong> {e(plans.get('note', 'Rates are dynamic snapshots.'))}</div>
 {filter_input('price-table')}
 <div class="tablewrap"><table id="price-table"><thead><tr><th>Plan</th><th>Room</th><th>Window</th>
 <th>7-night total</th><th>Terms / caveat</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>
-<div class="callout"><strong>Finding:</strong> {e(price['finding'])}</div>
-<h2>What each plan is good for</h2><div class="grid g2">{detail}</div>
-<p class="meta">No plan quotes airfare, visa fees or a complete dinner total. One plan's published proximity minutes
-are modelled from coordinates, not routed; they must not be read as measured journey times.</p>
+<div class="callout"><strong>Finding within the sampled rows only:</strong> {e(price['finding'])}</div>
+<h2>Four single-city studies</h2><div class="grid g2">{detail}</div>
+<h2>Separate dual-city alternative</h2>
+<div class="callout">The dual-city study offers itinerary options across Beijing and Shanghai. Its 21-day option exceeds the requested 1–2-week duration; no combined 7-night total is stated or inferred.</div>
+<div class="grid g2">{extra_card}</div>
+<p class="meta">No plan quotes airfare, visa fees or a complete dinner total. Transit evidence differs: some pages use modelled or station-to-station times, not routed door-to-door journeys. See each study's own Flagged for Review page.</p>
 """
     write("plans.html", "Plans & prices", "plans.html", body,
-          "Cross-plan comparison of dated seven-night hotel totals for China 2027.")
+          "Dated seven-night single-city hotel snapshots plus a separately linked dual-city alternative for China 2027.")
 
 
 def build_social(social):
@@ -236,7 +285,7 @@ def build_questions(questions):
         f'<p><strong>What we know:</strong> {e(q["known"])}</p>'
         f'<p><strong>What we do not know:</strong> {e(q["unknown"])}</p>'
         f'<p><strong>Action to close it:</strong> {e(q["action"])}</p>'
-        f'<p><a href="{e(q["source"])}" target="_blank" rel="noopener">source page ↗</a></p></article>'
+        f'<p>{citations(q, "source page ↗")}</p></article>'
         for q in questions["questions"]
     )
     body = f"""
@@ -264,7 +313,8 @@ def build_suggestions(suggestions):
 {filter_input('suggestion-table')}
 <div class="tablewrap"><table id="suggestion-table"><thead><tr><th>#</th><th>Proposal</th><th>Why it matters</th>
 <th>How to do it without guessing</th><th>Decide first</th><th>Context</th></tr></thead><tbody>{rows}</tbody></table></div>
-<div class="callout">Proposals do not automatically change any of the five source dashboards. In particular, propagate the verified State Council holiday notice to older pages only through their approved integration scope; choose priorities before additional research or edits.</div>
+<div class="callout">No source-plan data is changed by the proposals on this page. Pick a priority order before
+committing research time or editing any shared data file.</div>
 """
     write("suggestions.html", "Suggestions", "suggestions.html", body,
           "Prioritised, unimplemented suggestions to improve the trip decision process.")
@@ -274,7 +324,7 @@ def build_flags(flags, social):
     rows = "".join(
         f'<tr data-f="{e((f["id"]+" "+f["item"]+" "+f["detail"]).lower())}">'
         f'<td>{e(f["id"])}</td><td>{e(f["severity"])}</td><td class="name">{e(f["item"])}</td>'
-        f'<td>{e(f["detail"])}</td><td class="nowrap">{ext(f["source"], "source ↗")}</td></tr>'
+        f'<td>{e(f["detail"])}</td><td class="nowrap">{citations(f, "source ↗")}</td></tr>'
         for f in flags["flags"]
     )
     blanks = []
@@ -293,7 +343,8 @@ def build_flags(flags, social):
             )
     body = f"""
 <p class="eyebrow">Verification</p><h1>Flagged for review</h1>
-<p class="lede">Irregularities inherited from the five research dashboards plus integration findings. Some rows record issues now resolved (their detail says so); unresolved items remain flagged and do not block the site. Do not use unverified values without the stated check.</p>
+<p class="lede">Flags cover inherited findings from the four single-city studies, the separate dual-city planner, and this integration audit.
+A status of <em>needs review</em> blocks nothing; it means the value is not safe to use without the stated check.</p>
 {filter_input('flag-table')}
 <div class="tablewrap"><table id="flag-table"><thead><tr><th>ID</th><th>Severity</th><th>Issue</th>
 <th>Detail</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>

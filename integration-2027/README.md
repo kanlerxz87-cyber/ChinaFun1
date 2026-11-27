@@ -1,18 +1,18 @@
-# China 2027 decision layer (original research session `815c7943`; final integration update `e411628d`)
+# China 2027 decision layer (original site: session `815c7943`; inventory update: `a94e6d8b`)
 
-A static, dependency-free comparison site at `integration-2027/`. It does **not** replace any source trip plan. The current hub links five research dashboards: four single-city studies (one Beijing, three Shanghai) and one later dual-city Beijing + Shanghai study.
+A static, dependency-free comparison site at `integration-2027/`. It preserves four single-city, seven-night hotel snapshots captured on 25 Nov 2026 and links separately to the Beijing + Shanghai planner. The dual-city study is not folded into the one-city price table because it has no single combined seven-night hotel total. Rates on every plan are dated snapshots, not live quotes.
 
-- `index.html` — executive summary and inventory of all five dashboards
-- `plans.html` — dated seven-night hotel snapshots with source links and room/tax/cancellation caveats; values are not live quotes or directly comparable
-- `social.html` — cross-plan social register with official venue sources and blank hours/costs flagged
-- `questions.html`, `suggestions.html`, `flagged.html`, `sources.html` — decision register, proposals, irregularities and audit trail
-- `data/*.json` — page data
-- `tools/build.py` — regenerates all pages; `tools/check.py` — local-link and source-field checks
+- `index.html` — executive summary, four single-city rows and a separate dual-city option
+- `plans.html` — 25 Nov seven-night price snapshots, source dates, tax/room caveats and the separate multi-city path
+- `social.html` — original cross-plan video index with official venue links; blank hours/costs remain flagged
+- `questions.html`, `suggestions.html`, `flagged.html`, `sources.html` — open decisions, proposals, irregularities and source audit
+- `data/*.json` — single source for each generated page, including the dual-city study and official-source links
+- `tools/build.py` — regenerates the pages; `tools/check.py` — checks local links, source fields and dual-city references
+
+The 2026-11-27 integration pass re-read the State Council holiday notice and the live MICHELIN lists; source dates are recorded per row. It did not re-price hotels. The official State Council Chinese notice confirms the Spring Festival break (Feb 5–13, 2027) and workdays Jan 31 / Feb 14; the English schedule omits the workday detail. The Shanghai 2026 regional release's count of 156 Shanghai restaurants remains distinct from the live MICHELIN filter's 153 category sum, and is flagged rather than reconciled by inference.
 
 ```bash
 python3 integration-2027/tools/build.py && python3 integration-2027/tools/check.py
 ```
 
-The final integration update added the later dual-city planner (`china-2027/`) and corrected stale inventory and holiday-source statements. The dual-city page's $425 Beijing and $621 Shanghai examples are **separate 7-night city alternatives**, not a combined multi-city trip price; each is a dated Booking.com snapshot, excludes VAT, and has different cancellation terms. The State Council holiday notice is linked directly on the questions/flagged pages. This update did not re-quote prices, edit source-plan datasets, or certify that inherited external pages remain unchanged.
-
-Verification rule: videos enter the cross-plan index only after the linked watch page was read; venue hours, meal costs and other values are blank unless an official source is provided. Inherited source-plan data stays attributed to its original page and date.
+Verification rule: a video enters the social index only after its watch page was read; restaurant/activity hours and menu values remain blank unless the linked official source establishes them. Inherited hotel quotes retain the owning session's dated Booking.com source and caveats.
