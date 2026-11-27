@@ -829,3 +829,37 @@ Known discrepancies surfaced, not silently fixed: **Poetry·Wine** and **The Bei
 | A3 | Fix broken activity URLs, Temple of Heaven hours, State Council 2027 holiday source, Rome2rio times & hotel Booking/VAT caveats | **done** | `assets/data.js`, `activities.html`, `hotels.html`, `itinerary.html`, `flagged.html` | Replaced failing `/visitingbeijing/touristattractions/` & `/visit/tickets_reservation/` URLs with working `english.beijing.gov.cn`, `en.chnmuseum.cn/visit_692/`, `en.mutianyugreatwall.com`; verified State Council 2027 holiday decree (`english.www.gov.cn/policies/latestreleases/202611/06/content_WS6aed74dcc6d00ca5f9a0e22e.html`: Feb 5–13 Spring Festival); corrected Temple of Heaven low-season inner-hall hours (`08:00–17:00, last 16:30`); corrected Rome2rio legs (`51m`, `54m`, `58m`); fixed `assets/app.js` Xicheng hotel filter (`startsWith`); recorded live Booking queen/king totals (`XinQiao $568`, `HI Express $536`, `Sunworld $502` selectable bed note, `Park Hyatt $2,297`, `Orchid $1,194/$1,327` vs `$1,025` full-bed Courtyard), VAT exclusions, and `Four Seasons` marble bath. |
 | A4 | Clean & expand social links + link `china-2027/` | **done** | `assets/data.js`, `assets/app.js`, `index.html`, `README.md`, `decisions.html`, `michelin.html` | Removed unrelated Palace Museum IG post (`CvC7yL1yQx7`, lotus flower photo) and off-city Chao Shang Chao video (`tIBbLQB8Ueo`); added watch/oEmbed-verified YT links (`Yok9qkb4bKw`, `I9xaH24FLnc`, `jaZr6qWh0s0`, `9wni9YGzaTg`, `lC4m_VLOdCY`, `rj5Erb_3gIo`) and kept verified IG (`@chef1996restaurant`, `@oldtower_beijing`, `Cq2w9ssgcDW`) & TikTok (`@wadeandtaylor/video/7429005950222257454`). Added `china-2027/index.html` (`China 2027 Dual-City`) to Companion Plans nav, root overview, and `README.md`. Displayed `r.note` flags inside MICHELIN table rows. |
 | A5 | Final repo-wide check, PR, merge & Pages verification | **done** | `README.md`, `COORDINATION.md`, PR/Pages | Verified all 4 repo checkers (`check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, `china-2027/tools/check.py`), Node syntax & simulated DOM render across all 8 root pages, full HTML link scan (`broken=0`), `git diff --check`, PR merge to `main`, and live Pages check. |
+
+---
+
+# Session `e46f5d6a` — repo review, residual-verification fix & integration/publish pass
+
+**Branch:** `arena/e46f5d6a-chinafun1` (from `main` @ `9e0f598`, after PR #31)
+**Claimed:** 2026-11-27 · **Status:** in progress
+**File scope (claimed):** `COORDINATION.md` (this section only), `assets/data.js` (`Zijin Mansion` row only), `flagged.html` (Zijin/Mio rows only). No other session's files are edited. Other sessions' CSV and sub-site defects are logged below as requests, not edited.
+
+## Session `e46f5d6a` — results
+
+**Status:** done · **Scope held:** `COORDINATION.md`, `assets/data.js` (Zijin Mansion row), `flagged.html` (one row).
+
+### Work performed
+| # | Item | Result |
+|---|---|---|
+| E1 | Baseline: run all four checkers on `main` @ `9e0f598` | `check.py`, `integration-2027/tools/check.py`, `social-2027/tools/check.py`, `china-2027/tools/check.py` all **PASS**. |
+| E2 | Re-verify HIGH residuals from `1ac7826d` (Xin Rong Ji Xinyuan & Jinrong phone/hours) | Already corrected in `main`: Xinyuan `+86 10 6501 5501`, `Mon–Sun 11:30–14:00, 17:30–21:00`; Jinrong `+86 10 6618 0567`, `Mon–Sun 11:00–14:00, 17:00–21:30`, `¥¥¥`. Matches the MICHELIN pages in that log. No change needed. |
+| E3 | Zijin Mansion hours (was blank, "timeout/500") | Hilton official dining page now loads: **Lunch 11:30 am–2:30 pm, Dinner 5:30 pm–9:30 pm**. The page **does not state days of the week**, so the earlier "Mon–Sun" wording in `1ac7826d` was an inference and is removed. Row updated in `assets/data.js` and `flagged.html`. Source: https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/ · MICHELIN: https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion (address, ¥¥¥, phone +86 10 8520 8989 match). |
+| E4 | Mio (Four Seasons Beijing) closure conflict | Re-checked both sources. **Four Seasons official** (https://www.fourseasons.com/beijing/dining/restaurants/mio/): Lunch Tue–Sat 11:30–14:00; Dinner Tue–Sun 17:30–22:00; Sunday Table Sunday 11:30–14:00; **closed Mondays**. **MICHELIN** (https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mio) lists Mon–Sun and shows phone as `+86 56958522` (malformed; Four Seasons shows `+86 (10) 5695 8522`). The existing flag stands; the official source is the one to follow. Mio is not a starred entry, so no data row changed. |
+
+### Irregularities raised this session (requests, not edited — outside claimed scope)
+1. **CSV column mismatch (HIGH, still open):** `shanghai-verified-2027/data/` — `activities.csv` (4 of 5 data rows have 14 cols vs 15 header), `hotels.csv` (3 rows at 26 and 1 at 29 vs 25), `michelin.csv` (1 row at 17 vs 18), `social.csv` (1 row at 10 vs 9). Caused by unquoted commas. **Request to owner `16153d37`:** re-export with `csv.writer` (proper quoting) and re-run its checker. Verified by reading the files with Python's `csv` module on 2026-11-27.
+2. **Hilton day-of-week gap (LOW):** Zijin Mansion days of week are not stated on any official page checked; flagged in the row.
+3. **Earlier board claim corrected:** `1ac7826d` said Zijin Mansion was "Mon–Sun 11:30–14:30, 17:30–21:30 (Hilton/Waldorf official)". The Hilton page does not say Mon–Sun. Corrected here.
+
+### Verification sources checked this session (2026-11-27)
+- https://www.hilton.com/en/hotels/bjswawa-waldorf-astoria-beijing/dining/zijin-mansion/ (hours, phone)
+- https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/zijin-mansion (address, cuisine, price, phone)
+- https://guide.michelin.com/us/en/beijing-municipality/beijing/restaurant/mio (address, hours, phone as listed)
+- https://www.fourseasons.com/beijing/dining/restaurants/mio/ (official hours, phone)
+
+### Handoff
+Integration pass for this branch: re-ran checkers, confirmed Pages is `legacy / main / built`, opened PR from `arena/e46f5d6a-chinafun1` to `main`. Merge result is recorded in the next commit.
